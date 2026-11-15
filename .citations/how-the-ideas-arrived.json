@@ -1,0 +1,437 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://arxiv.org/abs/1706.03762",
+      "title": "Vaswani et al., Attention Is All You Need (arXiv 1706.03762)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "based solely on attention mechanisms",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://arxiv.org/abs/2005.11401",
+      "title": "Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (arXiv 2005.11401)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://arxiv.org/abs/2005.14165",
+      "title": "Brown et al., Language Models are Few-Shot Learners (arXiv 2005.14165)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "specified purely via text interaction with the model",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://arxiv.org/pdf/2107.13586v1",
+      "title": "Pengfei Liu et al., Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (arXiv 2107.13586v1)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Prompt engineering is the process of creating a prompting function fprompt(x) that results in the most effective performance on the downstream task.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://arxiv.org/abs/2201.11903v6",
+      "title": "Wei et al., Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (arXiv 2201.11903v6)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "we show how such reasoning abilities emerge naturally in sufficiently large language models via a simple method called chain of thought prompting, where a few chain of thought demonstrations are provided as exemplars in prompting.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://simonwillison.net/2022/Sep/12/prompt-injection",
+      "title": "Simon Willison, Prompt injection attacks against GPT-3",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "This isn’t just an interesting academic trick: it’s a form of security exploit. I propose that the obvious name for this should be prompt injection.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://simonwillison.net/2025/Aug/9/bay-area-ai",
+      "title": "Simon Willison, My Lethal Trifecta talk at the Bay Area AI Security Meetup",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "I coined the term prompt injection nearly three years ago, in September 2022. It’s important to note that I did not discover the vulnerability.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://arxiv.org/abs/2210.03629",
+      "title": "Yao et al., ReAct: Synergizing Reasoning and Acting in Language Models (arXiv 2210.03629)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "reasoning traces and task-specific actions",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://openai.com/index/chatgpt",
+      "title": "OpenAI, Introducing ChatGPT",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/abs/2306.05685v4",
+      "title": "Zheng et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv 2306.05685v4)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "position, verbosity, and self-enhancement biases",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://arxiv.org/abs/2310.06770v3",
+      "title": "Jimenez et al., SWE-bench: Can Language Models Resolve Real-World GitHub Issues? (arXiv 2310.06770v3)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "software engineering problems drawn from real GitHub issues",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://openai.com/index/introducing-structured-outputs-in-the-api",
+      "title": "OpenAI, Introducing Structured Outputs in the API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "now reliably adhere to developer-supplied JSON Schemas",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://www.anthropic.com/news/model-context-protocol",
+      "title": "Anthropic, Introducing the Model Context Protocol",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a new standard for connecting AI assistants to the systems where data lives",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://github.com/MadcowD/ell/blob/0e2759ca95ddb07ae0d0f360e739a5e8500a68c0/docs/src/core_concepts/evaluations.rst",
+      "title": "ell, Evaluations documentation, commit of 16 December 2024 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "what we call eval engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Anthropic, Building effective agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "dynamically direct their own processes and tool usage",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://x.com/karpathy/status/1886192184808149383",
+      "title": "Andrej Karpathy, post on X on vibe coding (2 February 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "forget that the code even exists",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://www.anthropic.com/news/claude-3-7-sonnet",
+      "title": "Anthropic, Claude 3.7 Sonnet and Claude Code",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a command line tool for agentic coding",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://arxiv.org/abs/2503.18813",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design (arXiv 2503.18813)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "can never impact the program flow",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://github.com/humanlayer/12-factor-agents/blob/bc4fa56e5645a8c5a81c89cbedd9d569ae7a6d51/12-factor-agents-2.md",
+      "title": "Dex Horthy (HumanLayer), 12-factor agents draft, commit of 31 March 2025 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "AI engineering is all about Context Engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://openai.com/index/introducing-codex",
+      "title": "OpenAI, Introducing Codex",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Codex can be guided by AGENTS.md files",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://cognition.ai/blog/dont-build-multi-agents",
+      "title": "Walden Yan (Cognition), Don't Build Multi-Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a single-threaded linear agent",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "title": "Anthropic, How we built our multi-agent research system",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Our Research system uses a multi-agent architecture with an orchestrator-worker pattern, where a lead agent coordinates the process while delegating to specialized subagents that operate in parallel.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://x.com/tobi/status/1935533422589399127",
+      "title": "Tobi Lütke, post on X on context engineering (19 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "I really like the term “context engineering” over prompt engineering. It describes the core skill better: the art of providing all the context for the task to be plausibly solvable by the LLM.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "url": "https://simonwillison.net/2025/Jun/27/context-engineering",
+      "title": "Simon Willison, Context engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "gain traction as a better alternative to prompt engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "url": "https://x.com/karpathy/status/1937902205765607626",
+      "title": "Andrej Karpathy, post on X on context engineering (25 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "context engineering is the delicate art and science of filling the context window with just the right information for the next step.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "url": "https://arxiv.org/html/2608.21884v3",
+      "title": "Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "with a fresh context in every iteration",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "was coined in early June 2026",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Inner and outer harness",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "We call these the inner and outer harness",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "title": "Anthropic, Demystifying evals for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a test for an AI system",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "title": "Mitchell Hashimoto, My AI Adoption Journey",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "grown to calling",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "url": "https://openai.com/index/harness-engineering",
+      "title": "Ryan Lopopolo (OpenAI), Harness engineering: leveraging Codex in an agent-first world",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "design environments, specify intent, and build feedback loops",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "url": "https://martinfowler.com/articles/harness-engineering.html",
+      "title": "Birgitta Böckeler, Harness engineering for coding agent users (martinfowler.com)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "guides, sensors, computational and inferential elements, and harness templates",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "url": "https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html",
+      "title": "Birgitta Böckeler, Harness Engineering - first thoughts (martinfowler.com, 17 February 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "only 2 weeks old",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "url": "https://addyosmani.com/blog/loop-engineering",
+      "title": "Addy Osmani, Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Loop engineering is replacing yourself as the person who prompts the agent. You design the system that does it instead.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+      "title": "Sydney Runkle (LangChain), The Art of Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "This is what loop engineering — or loopcraft, as swyx puts it — actually looks like in practice.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "url": "https://x.com/AndrewYNg/status/2071988145667928442",
+      "title": "Andrew Ng, post on X on loop engineering (30 June 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a hot buzzphrase",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "url": "https://x.com/HamelHusain/article/2078346425621237935",
+      "title": "Hamel Husain, Loop Engineering Is Dead. Enter Graph Engineering (article on X)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Loop Engineering Is Dead. Enter Graph Engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}
