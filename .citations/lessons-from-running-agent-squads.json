@@ -3,62 +3,6 @@
   "sources": [
     {
       "id": 1,
-      "url": "https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/02-context-engineering.md",
-      "title": "Anil Kerai, hermes-squad, docs/02-context-engineering.md, commit of 12 November 2026 (GitHub)",
-      "accessed": "2026-11-15",
-      "quotes": [
-        {
-          "text": "Every Kanban worker is a new process with an empty window.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "The card body is the prompt.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Ambiguity left in a card gets resolved by a guess, which copies into every child, or by a block.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "The reviewer re-runs the Verify commands; the engineer never marks its own homework.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Prefer a mechanism to a sentence.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Context size costs more than model tier.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "A handoff summary is a compression boundary.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "three roles started with a stale copy of the default's memory",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Set each per role and clear inherited memory.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Create a new profile when a role needs different tools, credentials, model or risk rules. Use a skill when only the knowledge differs",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "AGENTS.md is a pointer, so workers get \"read CLAUDE.md\", not the rules",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Agents propose, humans promote.",
-          "added": "2026-11-15"
-        }
-      ]
-    },
-    {
-      "id": 2,
       "url": "https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md",
       "title": "Anil Kerai, hermes-squad, docs/05-metrics.md, commit of 12 November 2026 (GitHub)",
       "accessed": "2026-11-15",
@@ -94,7 +38,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 2,
       "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
       "title": "Anthropic, When to fold subagents into your main agent loop",
       "accessed": "2026-11-15",

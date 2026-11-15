@@ -12,6 +12,6 @@ Read in this order:
 6. **[Multi-agent orchestration](multi-agent-orchestration.md)** (4 min): How several agents are connected and coordinated, and the principles for when and how to do it.
 7. **[Lessons from my harness](lessons-from-my-harness.md)** (5 min): First-person lessons from building an agent harness: what held up, what didn't, and why.
 8. **[Lessons from my evals framework](lessons-from-my-evals-framework.md)** (5 min): First-person lessons from building an evals framework, written as general principles.
-9. **[Lessons from running agent squads](lessons-from-running-agent-squads.md)** (5 min): First-person lessons from running a squad of AI agents that work together on real tasks.
+9. **[Lessons from running agent squads](lessons-from-running-agent-squads.md)** (5 min): First-person lessons from running teams of AI agents that work together on real tasks.
 
 [Back to the handbook home](../README.md)
