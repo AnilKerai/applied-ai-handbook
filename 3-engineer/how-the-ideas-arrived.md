@@ -102,13 +102,13 @@ More on each discipline:
 ### 2022
 
 - **Chain-of-thought prompting, published January 2022.** Wei et al. reported that worked examples of step-by-step reasoning improve reasoning in sufficiently large models.[5]
-- **"Prompt injection", coined September 2022.** Simon Willison named the attack, though he later said he did not discover it.[6][7]
+- **"Prompt injection", coined September 2022.** Simon Willison named the attack, though he later said he didn't discover it.[6][7]
 - **ReAct, published October 2022.** Yao et al. had models interleave "reasoning traces and task-specific actions".[8]
 - **ChatGPT, released November 2022.** OpenAI released it as a free research preview.[9]
 
 ### 2023
 
-- **LLM-as-a-judge, published June 2023.** Zheng et al. studied strong models as judges, and named their "position, verbosity, and self-enhancement biases".[10]
+- **LLM-as-a-judge, published June 2023.** Zheng et al. studied strong models as judges, and examined their "position, verbosity, and self-enhancement biases".[10]
 - **SWE-bench, published October 2023.** Jimenez et al. built a test set of "2,294 software engineering problems drawn from real GitHub issues".[11]
 
 ### 2024
@@ -134,7 +134,7 @@ More on each discipline:
 - **Anthropic's evals guide, published January 2026.** It defines an eval as "a test for an AI system".[27]
 - **"Harness engineering", first seen February 2026.** On 5 February Mitchell Hashimoto had "grown to calling" his practice harness engineering, while unsure there was an accepted term.[28]
 - **OpenAI's harness engineering post, published February 2026.** Six days later, OpenAI's Ryan Lopopolo described engineers who "design environments, specify intent, and build feedback loops" for agents (OpenAI's account).[29]
-- **Guides and sensors, published April 2026.** Birgitta Böckeler's article introduced "guides, sensors, computational and inferential elements, and harness templates".[30] She did not coin the term: in February she had called it "only 2 weeks old".[31]
+- **Guides and sensors, published April 2026.** Birgitta Böckeler's article introduced, in her words, "guides, sensors, computational and inferential elements, and harness templates".[30] She didn't coin the term: in February she called it "only 2 weeks old".[31]
 - **"Loop engineering", first seen June 2026.** Addy Osmani's post of 7 June is the earliest dated use found.[32] Lulla et al. say the term "was coined in early June 2026".[26]
 - **LangChain's four loops, published June 2026.** Sydney Runkle stacked agent, verification, event-driven and hill-climbing loops.[33]
 - **"Loop engineering", popularised June 2026.** On 30 June Andrew Ng called it "a hot buzzphrase".[34]

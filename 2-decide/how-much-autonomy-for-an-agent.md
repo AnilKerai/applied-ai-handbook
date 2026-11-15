@@ -109,7 +109,6 @@ flowchart TD
 ## Related
 
 - [Should this task use AI, and which kind?](should-this-task-use-ai.md): whether an agent is the right tool in the first place.
-- agentic verification, harness engineering, evidence gated authority, dreaming.
 
 **Read next:** [The big picture](../3-engineer/the-big-picture.md), or go back to the [handbook home](../README.md).
 

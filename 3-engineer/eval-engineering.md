@@ -33,7 +33,7 @@ The grading itself is done by graders, and, Anthropic says, "Agent evaluations t
 ## When it arrived
 
 The practice is older than the label.
-Zheng et al. (June 2023) studied using strong models as judges, known as LLM-as-a-judge, and named their biases.[3]
+Zheng et al. (June 2023) studied using strong models as judges, known as LLM-as-a-judge, and examined their biases.[3]
 SWE-bench (Jimenez et al., October 2023) introduced an evaluation framework of "2,294 software engineering problems drawn from real GitHub issues and corresponding pull requests across 12 popular Python repositories".[4]
 The best model in that paper, Claude 2, solved 1.96% of the issues (the authors' measurement).[4]
 τ-bench (Yao et al., June 2024) tested agents in simulated conversations with users and proposed "a new metric (pass^k) to evaluate the reliability of agent behavior over multiple trials".[5]

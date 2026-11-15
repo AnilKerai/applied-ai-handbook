@@ -20,7 +20,7 @@ Newest first. Every correction lists what changed and the evidence.
   the new numbers, and the root README lists the new section. Links from outside the repo need the new
   folder number.
 - **Glossary:** new entries for prompt engineering, loop engineering, eval engineering and
-  orchestration, each with its source. The context engineering and harness entries now link to their
+  orchestration, each cited. The context engineering and harness entries now link to their
   pages in the new section.
 - **Reading routes:** the map is now second in the "New to AI" route, and the engineer route starts
   with the map and harness engineering. The root README now says that the Engineer section includes the

@@ -14,7 +14,7 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 4. [AI intake checklist](2-decide/ai-intake-checklist.md)
 5. [AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)
 
-Skim the questions you care about and the map of how an AI system fits together, then the two tools you'll use most. Keep the glossary open.
+Skim the questions you care about and the map of how an AI system fits together, then the tools you'll use most. Keep the glossary open.
 
 **Engineer building AI features or using coding agents** (about 85 minutes)
 

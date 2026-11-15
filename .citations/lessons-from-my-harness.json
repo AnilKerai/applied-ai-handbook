@@ -8,10 +8,6 @@
       "accessed": "2026-11-15",
       "quotes": [
         {
-          "text": "These are teaching notes.",
-          "added": "2026-11-15"
-        },
-        {
           "text": "a budget can't be talked out of stopping. Pair every model judge with a hard cap.",
           "added": "2026-11-15"
         },
@@ -22,16 +18,9 @@
         {
           "text": "because marking a task stopped in a queue does not stop a worker already executing it",
           "added": "2026-11-15"
-        },
-        {
-          "text": "Any data that originates from an untrusted external source is marked tainted.",
-          "added": "2026-11-15"
-        },
-        {
-          "text": "Taint propagates forward: any computation that uses tainted data produces tainted output.",
-          "added": "2026-11-15"
         }
-      ]
+      ],
+      "anchor": "loop-engineering"
     },
     {
       "id": 2,

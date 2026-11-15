@@ -6,3 +6,4 @@
 # Private patterns for the leak check (never commit)
 .leakcheck.local
 __pycache__/
+.superpowers/

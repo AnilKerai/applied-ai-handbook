@@ -48,7 +48,7 @@ Wei et al. reported that giving a few worked examples of intermediate reasoning 
 
 **Let the model act, and show it what happened.**
 ReAct had models generate "reasoning traces and task-specific actions in an interleaved manner", such as calls to a Wikipedia API between steps of thought.[5]
-The same cycle of thinking, acting and reading the result describes today's agents, which Anthropic defines as "LLMs autonomously using tools in a loop".[3]
+Today's agents work in a cycle that resembles ReAct's: Anthropic defines them as "LLMs autonomously using tools in a loop".[3]
 
 **Judge a prompt by its results.**
 Liu et al.'s definition measures a prompt by its performance on the downstream task.[2]

@@ -88,7 +88,7 @@ When a long run nears the limit of its context window (the text a model can see 
 
 **The evidence.**
 Anthropic defines compaction as "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary".[1]
-Anthropic's context editing, launched in public beta on 29 September 2025, clears content instead of summarising it: Anthropic says it "automatically clears stale tool calls and results from within the context window when approaching token limits".[14]
+Anthropic's context editing, launched in public beta on 29 September 2025 and still in beta as of November 2026, clears content instead of summarising it: Anthropic says it "automatically clears stale tool calls and results from within the context window when approaching token limits".[14][27]
 As of November 2026, Anthropic's API docs describe server-side compaction, which "replaces the older turns of a conversation with a summary that Claude writes on the server".[15]
 Anthropic's docs say that both of its modes, on demand and at a token threshold, "are in beta".[15]
 A preprint of 25 October 2026 (Busch et al.) studies an alternative to compacting at a token threshold, in which the model "decides when to compact, what to keep and what to write as the hand-off", given two tools.[16]
@@ -197,3 +197,4 @@ The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff
 [24] https://arxiv.org/abs/2503.18813 — Debenedetti et al., Defeating Prompt Injections by Design (arXiv 2503.18813)
 [25] https://arxiv.org/html/2503.18813v2 — Debenedetti et al., Defeating Prompt Injections by Design, HTML of version 2 (arXiv 2503.18813v2)
 [26] https://arxiv.org/abs/2503.18813v2 — Debenedetti et al., Defeating Prompt Injections by Design, version 2 (arXiv 2503.18813v2)
+[27] https://platform.claude.com/docs/en/build-with-claude/context-editing — Anthropic, Context editing (Claude API docs)

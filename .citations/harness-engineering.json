@@ -444,6 +444,18 @@
           "added": "2026-11-15"
         }
       ]
+    },
+    {
+      "id": 27,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/context-editing",
+      "title": "Anthropic, Context editing (Claude API docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Context editing Status Beta",
+          "added": "2026-11-15"
+        }
+      ]
     }
   ]
 }

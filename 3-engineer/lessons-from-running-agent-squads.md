@@ -39,9 +39,9 @@ In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic
 
 ## Enforce rules in the system, not in prose
 
-**What happened.** Every agent shared my real home directory, so my cloud sign-in was reachable by every role, the researcher included. Later, when I let the lead publish its own pull requests, I found that blocking command patterns wasn't enough: a push to the main branch could be typed in ways the patterns didn't match.
+**What happened.** Every agent shares my real home directory, so my cloud sign-in was reachable by every role, the researcher included. Later, when I let the lead publish its own pull requests, I found that blocking command patterns wasn't enough: a push to the main branch could be typed in ways the patterns didn't match.
 
-**What I changed.** Each role now has its own deny rules. Ops and the reviewer can only read and validate, and the other roles have no cloud command-line tools. Publishing goes through one script, the only way out, which refuses the default branch and force-pushes, opens one pull request and never merges.
+**What I changed.** Each role now has its own deny rules: ops and the reviewer are limited to reading and validating, and the other roles are denied cloud command-line tools. The rules only see the shell commands an agent runs, so code that starts a process directly can still get round them. Publishing goes through one script, the only way out, which refuses the default branch and force-pushes, opens one pull request and never merges.
 
 **The principle.** A check the machine runs beats an instruction the model may not follow ([Guides and sensors](harness-engineering.md#guides-and-sensors)).
 
@@ -81,7 +81,7 @@ In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic
 
 **What happened.** In that first snapshot, 53 of 65 cards were done, and none had crashed.[1] But lessons stayed where they were learnt. Only the lead had real lessons in its memory, and my own review of the squad missed its biggest gap, which the research team had already found: in 14 of 16 repos the agents' instruction file was only a pointer, so workers never got the repo's rules.
 
-**What I changed.** Now I read the existing research before I review anything. Agents propose lessons and I decide which to keep: a lesson becomes a change to a role's instructions, a skill or a repo's instruction file only after I've reviewed it. I can't yet tell whether such a change helped, because there's no regression set, and runs don't record which version of the context they used.[1]
+**What I changed.** Now I read the existing research before I review anything. The rule I set is that agents suggest lessons and I decide which to keep: a lesson should become a change to a role's instructions, a skill or a repo's instruction file only after I've reviewed it. But agents can still write their own skills without my review, so it's a rule I'm still enforcing by hand. I can't yet tell whether such a change helped, because there's no regression set, and runs don't record which version of the context they used.[1]
 
 **The principle.** Measure an improvement before you automate it ([Loop engineering principles](loop-engineering.md#core-principles), and [Eval engineering](eval-engineering.md#core-principles)).
 

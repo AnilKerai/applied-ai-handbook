@@ -25,7 +25,7 @@ In May 2026 I started model-harness, an open-source agent harness for .NET. This
 
 **What happened.** I wanted to learn how agents actually work by implementing the loop, not by reading about it. I also wanted something to teach my team with.
 
-**What I changed.** I implemented the loop myself, made every control point a named, swappable part, and wrote a primer alongside the code. As I wrote at the top of it, "These are teaching notes."[1] I also built it on a bet I haven't measured yet: that a well-structured harness closes much of the gap between a large model and a smaller, cheaper one.
+**What I changed.** I implemented the loop myself, made every control point a named, swappable part, and wrote a primer alongside the code as teaching notes. I also built it on a bet I haven't measured yet: that a well-structured harness closes much of the gap between a large model and a smaller, cheaper one.
 
 **The principle.** Naming each part gives every new concern an obvious home ([What it is](harness-engineering.md#what-it-is)).
 
@@ -39,9 +39,9 @@ In May 2026 I started model-harness, an open-source agent harness for .NET. This
 
 ## Compaction costs more each turn unless you fold
 
-**What happened.** Near the limit of the context window, my harness drops the oldest steps and puts a summary in their place. My first version re-summarised every dropped step from scratch, every turn. As I wrote in the decision record, "On a long-horizon run the compaction spend outgrew the saving it existed to produce".[3] No budget counted that spend, and the compaction trigger shared a setting with the run's total token cap, so compacted runs stopped at about one window. Later I found the summary was being sent as an extra system message that the adapters dropped, so I was paying for summaries the model never saw.[3]
+**What happened.** Near the limit of the context window, my harness drops the oldest steps and puts a summary in their place. My first version re-summarised every dropped step from scratch, every turn. As I wrote in the decision record, "On a long-horizon run the compaction spend outgrew the saving it existed to produce".[3] No budget counted that spend, and the compaction trigger shared a setting with the run's total token cap, so compacted runs stopped at about one window.[3]
 
-**What I changed.** Compaction is now an incremental fold: it summarises only the newly dropped steps on top of the previous summary, so the cost per turn stays flat. The trigger is separate from the run's cap, compaction spend counts against the budget, and one definition serves both what is counted and what is sent.[3]
+**What I changed.** Compaction is now an incremental fold: it summarises only the newly dropped steps on top of the previous summary, so the cost per turn stays flat. The trigger is separate from the run's cap, and compaction spend counts against the budget.[3] After the fold shipped, I found its summary was being sent as an extra system message that the adapters dropped, so I was paying for summaries the model never saw. Now the summary goes into the single system message, and one definition serves both what is counted and what is sent.[3]
 
 **The principle.** Treat a summary as lossy and paid for: budget it, and keep the goal and any output contract out of the part that gets summarised. Anthropic warns that "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later".[4] I still don't know whether dropping the oldest steps beats dropping the middle ones ([Compaction](harness-engineering.md#compaction)).
 
@@ -71,7 +71,7 @@ In May 2026 I started model-harness, an open-source agent harness for .NET. This
 
 ## Taint is my label, not CaMeL's, and the tracking lives outside the model
 
-**What happened.** I wanted text from tool results, web pages and documents to be unable to trigger an action with real-world side effects. In my harness I call data from an untrusted source "tainted", and anything computed from it is tainted too.[1] The research I drew on, CaMeL, doesn't use that word: it attaches capabilities to each value, which "track the sources and allowed recipients of each value".[10]
+**What happened.** I wanted text from tool results, web pages and documents to be unable to trigger an action with real-world side effects. In my harness I call data from an untrusted source *tainted*, and anything computed from it is tainted too. The research I drew on, CaMeL, doesn't use that word: it attaches capabilities to each value, which "track the sources and allowed recipients of each value".[10]
 
 **What I changed.** I can't see inside the model's reasoning to track which output came from which input, so my approximation is conservative: the gate blocks a privileged action while tainted content sits in the context, and it fails closed.[2] CaMeL goes further, extracting the control and data flow from the trusted request so that untrusted data can never change the program's path.[11] Doing that in a free-form agent is still an open problem for me.
 
@@ -81,7 +81,7 @@ In May 2026 I started model-harness, an open-source agent harness for .NET. This
 
 ## Sources
 
-[1] https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md — Anil Kerai, model-harness, docs/PRIMER.md, commit of 1 November 2026 (GitHub)
+[1] https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering — Anil Kerai, model-harness, docs/PRIMER.md, commit of 1 November 2026 (GitHub)
 [2] https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/001-collaborator-timeout-is-not-a-cancelled-run.md — Anil Kerai, model-harness, ADR-001: A collaborator's own timeout is not a cancelled run, commit of 1 November 2026 (GitHub)
 [3] https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md — Anil Kerai, model-harness, ADR-002: Trajectory compaction is an incremental fold, executed in the guide, commit of 1 November 2026 (GitHub)
 [4] https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents — Anthropic, Effective context engineering for AI agents

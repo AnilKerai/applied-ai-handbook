@@ -172,7 +172,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 ## P
 
 **Prompt engineering**
-- Writing the text an AI model is given, such as its instructions, worked examples and the task itself, so that it does the job well. Anthropic describes its main focus as "how to write effective prompts, particularly system prompts", the standing instructions behind every request.[7] The term was in academic use by 2021, but no source found shows who coined it.[41]
+- Writing the text an AI model is given, such as its instructions, worked examples and the task itself, so that it does the job well. Anthropic describes the main focus of prompt engineering as "how to write effective prompts, particularly system prompts", the standing instructions behind every request.[7] The term was in academic use by 2021, but no source found shows who coined it.[41]
 - *Why it matters:* a good prompt still matters, but an agent working over many steps depends more on everything else it is given; Anthropic calls context engineering "the natural progression of prompt engineering".[7] See [Prompt engineering](../3-engineer/prompt-engineering.md).
 
 **Prompt injection**

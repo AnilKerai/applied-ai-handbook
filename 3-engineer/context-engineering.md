@@ -53,7 +53,7 @@ Rather than loading everything up front, Anthropic describes agents that keep "l
 **Compress with care.**
 Anthropic defines compaction as "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary".[2]
 Anthropic warns that overly aggressive compaction can lose "subtle but critical context whose importance only becomes apparent later".[2]
-Its context editing, launched on 29 September 2025, instead clears stale tool calls and results as the window nears its limit.[15]
+Its context editing, launched in public beta on 29 September 2025 and still in beta as of November 2026, instead clears stale tool calls and results as the window nears its limit.[15][16]
 
 **Isolate work, and hand back summaries.**
 In Anthropic's account, a subagent (a helper agent given one sub-task) may use "tens of thousands of tokens or more" exploring, but returns only "a condensed, distilled summary of its work (often 1,000-2,000 tokens)".[2]
@@ -90,3 +90,4 @@ Its [decision record on compaction](https://github.com/AnilKerai/model-harness/b
 [13] https://www.langchain.com/blog/context-engineering-for-agents — LangChain, Context Engineering for Agents
 [14] https://arxiv.org/abs/2005.11401 — Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (arXiv 2005.11401)
 [15] https://www.anthropic.com/news/context-management — Anthropic, Managing context on the Claude Developer Platform
+[16] https://platform.claude.com/docs/en/build-with-claude/context-editing — Anthropic, Context editing (Claude API docs)
