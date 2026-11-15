@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md",
+      "title": "Anil Kerai, model-harness, docs/PRIMER.md, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "These are teaching notes.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "a budget can't be talked out of stopping. Pair every model judge with a hard cap.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "turns, tokens, cost, and wall-clock are hard limits checked at the top of every turn; exhaustion returns a PartialResult, never an exception.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "because marking a task stopped in a queue does not stop a worker already executing it",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Any data that originates from an untrusted external source is marked tainted.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Taint propagates forward: any computation that uses tainted data produces tainted output.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/001-collaborator-timeout-is-not-a-cancelled-run.md",
+      "title": "Anil Kerai, model-harness, ADR-001: A collaborator's own timeout is not a cancelled run, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The two are the same exception type and mean opposite things",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Catching OperationCanceledException without distinguishing them produced four separate bugs",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The guard is on the harness token, never on the exception type.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Fail-open would let a privileged action through while tainted content sits in context",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "A sensor must not catch its own failure and return Pass.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md",
+      "title": "Anil Kerai, model-harness, ADR-002: Trajectory compaction is an incremental fold, executed in the guide, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "On a long-horizon run the compaction spend outgrew the saving it existed to produce",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "so the enforcer hard-stopped compacted runs at roughly one window",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "so a fold paid for a summary that was thrown away",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "summarises only the newly evicted slice on top of the prior summary, so per-turn cost stays flat however long the run gets.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/003-structured-output-as-a-prereturn-validator.md",
+      "title": "Anil Kerai, model-harness, ADR-003: Structured output is a PreReturn validator, not a generator constraint, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "A validator only needs to know after the call.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "A \"final answer\" tool. This was the first design and it lost.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The intervention cap allows two repairs; a third challenge triggers one forced finalisation call and returns PartialResult.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/004-response-is-final-only-when-it-ended-normally.md",
+      "title": "Anil Kerai, model-harness, ADR-004: A response is a final answer only when it ended normally, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "A denylist of N fails open on reason N+1.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "A refusal came back as a successful answer.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "EndTurn, StopSequence and ToolUse are the only normal endings.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+      "title": "Anthropic, Stop reasons and fallback (Claude API docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The stop_reason field is part of every successful Messages API response. Unlike errors, which indicate failures in processing your request, stop_reason tells you why Claude completed its response generation.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/FAQ.md",
+      "title": "Anil Kerai, model-harness, docs/FAQ.md, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The loop does budget check → sensors, in that order.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "If cost throttling were the only enforcement mechanism, a misconfigured agent with no sensors would have no hard ceiling.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://platform.claude.com/docs/en/agent-sdk/agent-loop",
+      "title": "Anthropic, How the agent loop works (Claude Agent SDK docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Setting a budget is a good default for production agents.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/html/2503.18813v2",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design, HTML of version 2 (arXiv 2503.18813v2)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Capabilities are metadata assigned to each value passed to a tool that track the sources and allowed recipients of each value.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://arxiv.org/abs/2503.18813",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design (arXiv 2503.18813)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "CaMeL explicitly extracts the control and data flows from the (trusted) query; therefore, the untrusted data retrieved by the LLM can never impact the program flow.",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

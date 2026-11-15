@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/02-context-engineering.md",
+      "title": "Anil Kerai, hermes-squad, docs/02-context-engineering.md, commit of 12 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Every Kanban worker is a new process with an empty window.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The card body is the prompt.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Ambiguity left in a card gets resolved by a guess, which copies into every child, or by a block.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The reviewer re-runs the Verify commands; the engineer never marks its own homework.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Prefer a mechanism to a sentence.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Context size costs more than model tier.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "A handoff summary is a compression boundary.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "three roles started with a stale copy of the default's memory",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Set each per role and clear inherited memory.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Create a new profile when a role needs different tools, credentials, model or risk rules. Use a skill when only the knowledge differs",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "AGENTS.md is a pointer, so workers get \"read CLAUDE.md\", not the rules",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Agents propose, humans promote.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md",
+      "title": "Anil Kerai, hermes-squad, docs/05-metrics.md, commit of 12 November 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "20; 19 approved first time, 1 sent back for a real defect (fixed in round 2)",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Approvals citing checks the reviewer ran | 19/19",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "researcher $72.18 · default (chat) $53.71",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Average context per call | researcher 233K",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "65 (53 done, 9 parked in Triage",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "0 crashed, 0 given up",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Whether a SOUL/skill change helped: no regression set; context versions not recorded against runs.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+      "title": "Anthropic, When to fold subagents into your main agent loop",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "In our comparisons across several enterprise deployments, a single agent with skills frequently outperformed both the one-prompt-for-everything design and the subagent design on quality",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}
