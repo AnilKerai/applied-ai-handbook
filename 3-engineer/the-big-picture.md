@@ -36,7 +36,8 @@ flowchart LR
                 subgraph HARNESS["Harness engineering"]
                     RUN["One reliable run"]
                     subgraph CTX["Context engineering"]
-                        PROMPT["Prompt engineering"]
+                        SEES["What the model sees"]
+                        PROMPT["Prompts (prompt engineering)"]
                         MODEL(("Model"))
                     end
                 end
@@ -71,7 +72,7 @@ Anthropic has gravitated towards a simple definition of an agent, "LLMs autonomo
 
 The first layer decides what the model sees at each step.
 Anthropic defines context engineering as "the set of strategies for curating and maintaining the optimal set of tokens (information) during LLM inference, including all the other information that may land there outside of the prompts".[2]
-Prompt engineering sits inside this layer: Anthropic describes its focus as "how to write effective prompts, particularly system prompts", and calls context engineering its "natural progression".[2]
+Prompt engineering stays inside this layer rather than being replaced by it: Anthropic describes its focus as "how to write effective prompts, particularly system prompts", and counts system prompts among the components of context.[2]
 LangChain groups the strategies into four: "write, select, compress, and isolate".[3]
 
 ### Harness engineering
@@ -98,7 +99,8 @@ The hill-climbing loop is where measurement feeds back: in LangChain's account i
 
 Orchestration connects several agents, or fixed steps, on one job.
 In Anthropic's orchestrator-workers workflow, "a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results".[8]
-A DZone article calls the design of those connections graph engineering: "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs".[9]
+That pattern can also sit inside a single run, as part of the harness; the map's Orchestration layer is about connecting agents and loops across runs.
+A DZone article frames this as the layer after loop engineering, and calls the design of those connections graph engineering: "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs".[9]
 
 ### Organisation and governance
 

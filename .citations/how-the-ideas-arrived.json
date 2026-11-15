@@ -238,6 +238,10 @@
         {
           "text": "Codex can be guided by AGENTS.md files",
           "added": "2026-11-15"
+        },
+        {
+          "text": "We’re releasing Codex as a research preview",
+          "added": "2026-11-15"
         }
       ]
     },
@@ -369,6 +373,10 @@
       "quotes": [
         {
           "text": "guides, sensors, computational and inferential elements, and harness templates",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "an outer harness specifically for our use case and system",
           "added": "2026-11-15"
         }
       ]

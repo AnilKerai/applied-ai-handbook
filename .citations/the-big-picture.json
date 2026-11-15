@@ -30,6 +30,10 @@
         {
           "text": "how to write effective prompts, particularly system prompts",
           "added": "2026-11-15"
+        },
+        {
+          "text": "Our overall guidance across the different components of context (system prompts, tools, examples, message history, etc)",
+          "added": "2026-11-15"
         }
       ]
     },

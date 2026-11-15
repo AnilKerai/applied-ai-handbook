@@ -13,16 +13,16 @@ as_of: "November 2026"
 > **In one minute**
 > - The ideas arrived in a rough order: writing prompts, then choosing what the model sees, then the code around it, then loops that run it many times.
 > - Testing AI output and connecting several agents grew up alongside them.
-> - Many names came after the practice they describe, so each entry says whether a name was coined, first seen or caught on.
-> - The author's own projects are marked on the timeline, so it also reads as one engineer's path through the field.
+> - Many names came after the practice they describe, so each naming entry says whether a name was coined, first seen or caught on.
+> - The author's own projects are marked on the timeline, so it also reads as one engineer's path.
 
 *Reading time: about 5 minutes · Best for: anyone wanting the history*
 
-Field events are plain text; the handbook author's own projects are marked as his path.
-Each field event uses the strongest verb its evidence supports:
+The author's own projects are marked as his path.
+Each field event uses one verb, never a stronger verb than its evidence supports:
 
 - **coined:** a source shows the naming, or a credible source says so;
-- **first seen:** the earliest use found, not proof that it was the first;
+- **first seen:** the earliest use found, not proof it was the first;
 - **popularised:** the term was spreading at that date;
 - **published** or **released:** a paper, post or product came out.
 
@@ -56,7 +56,7 @@ timeline
                    : Claude Code released (Feb)
                    : CaMeL published (Mar)
                    : Context engineering first seen (Mar)
-                   : Codex released, guided by AGENTS.md (May)
+                   : OpenAI's Codex agent released - research preview (May)
                    : Multi-agent trade-offs published (Jun)
                    : Context engineering popularised (Jun)
                    : Ralph Wiggum technique published (Jul)
@@ -73,7 +73,7 @@ timeline
                    : My path - started an AI tutor app (Jun)
                    : Loop engineering popularised (Jun)
                    : Graph engineering first seen (Jul)
-                   : Inner and outer harness first seen (Aug)
+                   : Inner and outer harness first seen as a pair (Aug)
                    : My path - started hermes-squad (Oct)
                    : My path - started this handbook (Nov)
 ```
@@ -97,12 +97,12 @@ More on each discipline:
 
 ### 2021
 
-- **Prompt engineering survey, published July 2021.** Liu et al. gave an early academic definition of prompt engineering.[4] No source found shows who first used the term, so it has no coining date here.
+- **Prompt engineering survey, published July 2021.** Liu et al. gave an early academic definition of prompt engineering.[4] No source found shows who first used the term, so it has no coining date.
 
 ### 2022
 
 - **Chain-of-thought prompting, published January 2022.** Wei et al. reported that worked examples of step-by-step reasoning improve reasoning in sufficiently large models.[5]
-- **"Prompt injection", coined September 2022.** Simon Willison named the attack, though, as he later said, he did not discover it.[6][7]
+- **"Prompt injection", coined September 2022.** Simon Willison named the attack, though he later said he did not discover it.[6][7]
 - **ReAct, published October 2022.** Yao et al. had models interleave "reasoning traces and task-specific actions".[8]
 - **ChatGPT, released November 2022.** OpenAI released it as a free research preview.[9]
 
@@ -124,9 +124,9 @@ More on each discipline:
 - **Claude Code, released February 2025.** Anthropic released it as a limited research preview: "a command line tool for agentic coding".[17]
 - **CaMeL, published March 2025.** Debenedetti et al. designed a layer around the model so that untrusted data "can never impact the program flow".[18]
 - **"Context engineering", first seen March 2025.** The earliest use found is in a draft of Dex Horthy's *12-factor agents*: "AI engineering is all about Context Engineering".[19]
-- **Codex, released May 2025.** OpenAI's launch post said that "Codex can be guided by AGENTS.md files".[20]
+- **OpenAI's Codex agent, released May 2025.** OpenAI released it as a research preview, and "Codex can be guided by AGENTS.md files".[20]
 - **Multi-agent trade-offs, published June 2025.** A day apart, Cognition recommended "a single-threaded linear agent", and Anthropic described its multi-agent research system.[21][22]
-- **"Context engineering", popularised June 2025.** Tobi Lütke backed the term on 19 June (UTC), and by 27 June Simon Willison saw it "gain traction as a better alternative to prompt engineering".[23][24] Andrej Karpathy published his definition in between, on 25 June.[25]
+- **"Context engineering", popularised June 2025.** Tobi Lütke backed the term on 19 June (UTC), and by 27 June Simon Willison saw it "gain traction as a better alternative to prompt engineering".[23][24] Andrej Karpathy published his definition on 25 June.[25]
 - **Ralph Wiggum technique, published July 2025.** Lulla et al. trace loops across runs to Geoffrey Huntley's technique, which restarts the agent "with a fresh context in every iteration".[26]
 
 ### 2026
@@ -139,21 +139,21 @@ More on each discipline:
 - **LangChain's four loops, published June 2026.** Sydney Runkle stacked agent, verification, event-driven and hill-climbing loops.[33]
 - **"Loop engineering", popularised June 2026.** On 30 June Andrew Ng called it "a hot buzzphrase".[34]
 - **"Graph engineering", first seen July 2026.** Hamel Husain's article "Loop Engineering Is Dead. Enter Graph Engineering" is the earliest use found in the agent sense.[35]
-- **"Inner and outer harness", first seen August 2026.** Lulla et al. named a split they attribute to Böckeler: "We call these the inner and outer harness".[26]
+- **"Inner and outer harness", first seen as a pair August 2026.** In April Böckeler had written of "an outer harness specifically for our use case and system".[30] Lulla et al. named the pair, crediting the split to her: "We call these the inner and outer harness".[26]
 
 ## My path
 
-**September 2025: vibes-asb-manager.** On 6 September 2025 I made the first commit to vibes-asb-manager, a Blazor Server tool for managing Azure Service Bus. As its [README](https://github.com/AnilKerai/vibes-asb-manager/blob/ddc450456e05b33d58e1a36eea12bdf33f3bc50f/README.md) says, I built it with AI-assisted code while experimenting with AI code assistants.
+**September 2025: vibes-asb-manager.** On 6 September 2025 I made the first commit to vibes-asb-manager, a Blazor Server tool for managing Azure Service Bus. As its [README](https://github.com/AnilKerai/vibes-asb-manager/blob/ddc450456e05b33d58e1a36eea12bdf33f3bc50f/README.md) says, I built it while experimenting with AI code assistants.
 
 **May 2026: an evals framework.** On 6 May 2026 I made the first commit to an evals framework, built to show with repeatable evidence that an agent works before it reaches its users. It's private, so it isn't named or linked. [Lessons from my evals framework](lessons-from-my-evals-framework.md) has what it taught me.
 
-**May 2026: model-harness.** On 20 May 2026 I made the first commit to model-harness, an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what building it taught me.
+**May 2026: model-harness.** On 20 May 2026 I made the first commit to model-harness, an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what it taught me.
 
-**June 2026: an AI tutor app.** On 22 June 2026 I made the first commit to an AI tutor app. It's private, so it isn't named or linked.
+**June 2026: an AI tutor app.** On 22 June 2026 I made the first commit to an AI tutor app, also private and unlinked.
 
-**October 2026: hermes-squad.** On 15 October 2026 I made the first commit to hermes-squad, the public record of two teams of AI agents I run on Hermes Agent. Its [metrics snapshot](https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md) has the first numbers, and [Lessons from running agent squads](lessons-from-running-agent-squads.md) has what running them taught me.
+**October 2026: hermes-squad.** On 15 October 2026 I made the first commit to hermes-squad, the public record of two teams of AI agents I run on Hermes Agent. Its [metrics snapshot](https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md) has the first numbers, and [Lessons from running agent squads](lessons-from-running-agent-squads.md) has what they taught me.
 
-**November 2026: this handbook.** On 15 November 2026 I made the first commit to the [Applied AI Handbook](../README.md), and added this Engineer section the same month.
+**November 2026: this handbook.** On 15 November 2026 I made the first commit to the [Applied AI Handbook](../README.md).
 
 **Read next:** [Prompt engineering](prompt-engineering.md), or go back to the [handbook home](../README.md).
 
