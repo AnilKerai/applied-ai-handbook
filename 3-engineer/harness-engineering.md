@@ -14,18 +14,18 @@ as_of: "November 2026"
 > - The harness is everything around the model that turns it into a working agent. Harness engineering makes one run reliable.
 > - Steer the agent before it acts and check its work afterwards, preferring fast, predictable checks to slower AI ones.
 > - Give every run hard limits, and check why the model stopped: a run that hit a limit or was cut off has not finished.
-> - Summarising old steps keeps a long run going but loses detail. Check answers a program will read against their expected shape.
-> - Text from tools and documents can carry hostile instructions, so the harness, not the model, decides where untrusted data may flow.
+> - Summarising old steps keeps a long run going but loses detail.
+> - Text from tools and documents can carry hostile instructions, so the harness, not the model, should decide where untrusted data may flow.
 
 *Reading time: about 10 minutes · Best for: engineers building agents*
 
 ## What it is
 
-Anthropic's simple definition of an agent is "LLMs autonomously using tools in a loop", LLMs being large language models and tools being functions a model can call, such as a search.[1]
+The simple definition of an agent that Anthropic has adopted is "LLMs autonomously using tools in a loop", LLMs being large language models and tools being functions a model can call, such as a search.[1]
 LangChain's Vivek Trivedy (March 2026) defines the harness around it widely: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[2]
 Anthropic's own definition is about what the harness does: an agent harness "is the system that enables a model to act as an agent: it processes inputs, orchestrates tool calls, and returns results."[3]
 
-Harness engineering is the work of building that code.
+On this page, harness engineering means building that code.
 Mitchell Hashimoto describes it as the idea that "anytime you find an agent makes a mistake, you take the time to engineer a solution such that the agent never makes that mistake again."[4]
 OpenAI's Ryan Lopopolo describes a team, working with the Codex coding agent, whose primary job "is no longer to write code, but to design environments, specify intent, and build feedback loops that allow Codex agents to do reliable work" (OpenAI's account).[5]
 
@@ -75,8 +75,8 @@ As of November 2026, Anthropic's Agent SDK docs advise: "Setting a budget is a g
 Anthropic's SDK docs say that when the turn or spend limit is hit, the SDK returns a result "with a corresponding error subtype (error_max_turns or error_max_budget_usd)" in place of a normal finish.[12]
 
 **What can go wrong.**
-Anthropic's SDK docs warn that "Without limits, the loop runs until Claude finishes on its own", which "can run long on open-ended prompts".[12]
-Every extra turn costs tokens: Anthropic reports that agents typically use about 4× the tokens of a chat, and multi-agent systems about 15× (Anthropic's claim).[13]
+Anthropic's SDK docs warn that "Without limits, the loop runs until Claude finishes on its own", which "is fine for well-scoped tasks but can run long on open-ended prompts".[12]
+Agents cost more to run: Anthropic reports that agents typically use about 4× the tokens of a chat, and multi-agent systems about 15× (Anthropic's claim).[13]
 We recommend checking every limit before each model call, and counting the harness's own model calls, such as summaries and AI checks, against the same budget.
 We recommend reporting a hit limit as its own outcome, never as a finished answer.
 We also recommend backing any stop condition that a model judges, such as whether the goal is met, with a hard limit.
@@ -88,7 +88,7 @@ When a long run nears the limit of its context window (the text a model can see 
 
 **The evidence.**
 Anthropic defines compaction as "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary".[1]
-Anthropic's context editing, launched on 29 September 2025, works by rule instead of by summary: it "automatically clears stale tool calls and results from within the context window when approaching token limits".[14]
+Anthropic's context editing, launched in public beta on 29 September 2025, clears content instead of summarising it: Anthropic says it "automatically clears stale tool calls and results from within the context window when approaching token limits".[14]
 As of November 2026, Anthropic's API docs describe server-side compaction, which "replaces the older turns of a conversation with a summary that Claude writes on the server".[15]
 Anthropic's docs say that both of its modes, on demand and at a token threshold, "are in beta".[15]
 A preprint of 25 October 2026 (Busch et al.) studies an alternative to compacting at a token threshold, in which the model "decides when to compact, what to keep and what to write as the hand-off", given two tools.[16]
@@ -122,10 +122,10 @@ Treat a response as a final answer only when the model ended normally, and read 
 As of November 2026, Anthropic's API docs say that "The stop_reason field is part of every successful Messages API response" and, "Unlike errors, which indicate failures in processing your request, stop_reason tells you why Claude completed its response generation."[19]
 In Anthropic's docs, `max_tokens` means "The response reached your max_tokens limit."[19]
 Anthropic's `model_context_window_exceeded` value means "Claude stopped because it reached the model’s context window limit."[19]
-OpenAI's Python SDK, at a September 2026 commit, documents the equivalent `finish_reason` as "stop if the model hit a natural stop point or a provided stop sequence, length if the maximum number of tokens specified in the request was reached", and lists `tool_calls`, `content_filter` and a deprecated `function_call` as the other values.[20]
+OpenAI's Python SDK, at a September 2026 commit, documents a similar field, `finish_reason`, as "stop if the model hit a natural stop point or a provided stop sequence, length if the maximum number of tokens specified in the request was reached", and lists `tool_calls`, `content_filter` and a deprecated `function_call` as the other values.[20]
 
 **What can go wrong.**
-In Anthropic's API a truncated response therefore arrives as a successful response, not as an error.[19]
+Anthropic's docs class stop reasons, `max_tokens` included, as successful responses, not errors.[19]
 Anthropic's docs advise: "When a response is truncated because of token limits or the context window, append a notice so the reader knows the output is incomplete."[19]
 We recommend going further inside a harness: treat a short list of normal endings as final, and every other value, including any the provider adds later, as incomplete.
 We also recommend never running tool calls from a response that was cut off, because the last call may carry partial arguments.
@@ -145,7 +145,7 @@ Debenedetti et al.'s CaMeL tracks where each value came from and who may receive
 In version 2 of the CaMeL paper, Debenedetti et al. report "solving 77% of tasks with provable security (compared to 84% with an undefended system) in AgentDojo", a benchmark of agent tasks (the authors' claim).[26]
 
 **What can go wrong.**
-By the CaMeL authors' own figures, provable security costs seven points of solved tasks against an undefended system.[26]
+By the authors' own figures, CaMeL solved seven percentage points fewer tasks than the undefended system.[26]
 We recommend removing one leg of the trifecta wherever possible, and gating each action that has side effects on where its arguments came from.
 We also recommend making that gate fail closed, so that an error in the check blocks the action instead of letting it through.
 
