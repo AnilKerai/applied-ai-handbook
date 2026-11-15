@@ -97,7 +97,7 @@ More on each discipline:
 
 ### 2021
 
-- **Prompt engineering survey, published July 2021.** Liu et al. gave an early academic definition of prompt engineering.[4] No source found shows who first used the term, so it has no coining date.
+- **Prompt engineering survey, published July 2021.** Liu et al. gave an early academic definition of prompt engineering.[4] No source found shows who first used the term, so no coining date is given.
 
 ### 2022
 
@@ -113,7 +113,7 @@ More on each discipline:
 
 ### 2024
 
-- **Structured Outputs, released August 2024.** OpenAI said that model outputs "now reliably adhere to developer-supplied JSON Schemas" (OpenAI's claim).[12]
+- **Structured Outputs, released August 2024.** OpenAI said model outputs "now reliably adhere to developer-supplied JSON Schemas" (OpenAI's claim).[12]
 - **MCP, released November 2024.** Anthropic open-sourced the Model Context Protocol, "a new standard for connecting AI assistants to the systems where data lives".[13]
 - **"Eval engineering", first seen December 2024.** The ell library's docs called refining an eval as you learn "what we call eval engineering".[14] No source found coins the term.
 - **Building effective agents, published December 2024.** Anthropic separated fixed workflows from agents that "dynamically direct their own processes and tool usage".[15]
@@ -147,11 +147,11 @@ More on each discipline:
 
 **May 2026: an evals framework.** On 6 May 2026 I made the first commit to an evals framework, built to show with repeatable evidence that an agent works before it reaches its users. It's private, so it isn't named or linked. [Lessons from my evals framework](lessons-from-my-evals-framework.md) has what it taught me.
 
-**May 2026: model-harness.** On 20 May 2026 I made the first commit to model-harness, an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what it taught me.
+**May 2026: model-harness.** On 20 May 2026 I made the first commit to model-harness, an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what building it taught me.
 
 **June 2026: an AI tutor app.** On 22 June 2026 I made the first commit to an AI tutor app, also private and unlinked.
 
-**October 2026: hermes-squad.** On 15 October 2026 I made the first commit to hermes-squad, the public record of two teams of AI agents I run on Hermes Agent. Its [metrics snapshot](https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md) has the first numbers, and [Lessons from running agent squads](lessons-from-running-agent-squads.md) has what they taught me.
+**October 2026: hermes-squad.** On 15 October 2026 I made the first commit to hermes-squad, the public record of two teams of AI agents I run on Hermes Agent. Its [metrics snapshot](https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md) has the first numbers, and [Lessons from running agent squads](lessons-from-running-agent-squads.md) has what running them taught me.
 
 **November 2026: this handbook.** On 15 November 2026 I made the first commit to the [Applied AI Handbook](../README.md).
 
