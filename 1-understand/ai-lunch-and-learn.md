@@ -1,5 +1,5 @@
 ---
-title: What 2026's AI conferences taught us
+title: What works with AI: practical lessons
 type: deck
 created: 2026-11-14
 audience: colleagues across engineering and the business
@@ -8,7 +8,7 @@ last_checked: 2026-11-15
 as_of: "November 2026"
 ---
 
-# What 2026's AI conferences taught us
+# What works with AI: practical lessons
 
 > **In one minute**
 > - Treat AI as one replaceable part of a larger system, and give it the narrowest job possible.
@@ -19,26 +19,25 @@ as_of: "November 2026"
 
 *Reading time: about 20 minutes · Best for: sharing with a team*
 
-A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for a 30-45 minute session (about two minutes a slide, plus questions). This outline holds the slide text, the speaker notes and the sources; the deck itself is `ai-conferences-2026-lunch-and-learn.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company figures are the companies' own claims, and the suggestions on slide 15 are advice, not findings from the talks.
+A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for 30-45 minutes (about two minutes a slide, plus questions). This outline holds the slide text, the speaker notes and the sources; the deck itself is `ai-lunch-and-learn.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company figures are the companies' own claims, and the suggestions on slide 15 are advice, not findings from our sources.
 
 ---
 
-## Slide 1 · What 2026's AI conferences taught us
+## Slide 1 · What works with AI: practical lessons
 
 **On the slide**
 
-- Subtitle: Lessons from the Midwest AI Summit, AIE Code Summit and .NET Conf
-- Subtitle: October–November 2026 · lunch-and-learn
+- Subtitle: What practitioners report, checked against research and industry data
+- Subtitle: November 2026 · lunch-and-learn
 
 **Speaker notes**
 
-This session pulls together what three autumn conferences said about putting AI to work, for engineers and non-engineers alike.
-The Midwest AI Summit ran in Indianapolis on 15 October, for people who build, scale or govern AI systems.[1]
-It had ten talks.[2]
+This deck pulls together practical lessons about putting AI to work, for engineers and non-engineers alike.
+One set of sources is ten practitioner talks for people who build, scale or govern AI systems.[1][2]
 We have transcripts for six of them; the other four we know only from their published abstracts.
-The AI Engineer Code Summit, AIE CODE, ran in San Francisco from 10 to 12 November, with themes including fighting slop in software factories and building with System One (fast decision) models.[3]
-.NET Conf 2026 ran over four days, from 10 to 13 November, opening with a keynote on what's new in .NET 11; we looked at the keynotes and the AI sessions.[4]
-We also checked the talks against industry research and vendor announcements, and where the two disagree the slides say so.
+A second set, for AI engineers, covers themes including fighting slop in software factories and building with System One (fast decision) models.[3]
+A third set covers Microsoft's .NET 11 AI stack as presented in November 2026, starting from what's new in .NET 11.[4]
+We also checked these practitioner reports against industry research and vendor announcements, and where the two disagree the slides say so.
 
 ---
 
@@ -55,7 +54,7 @@ We also checked the talks against industry research and vendor announcements, an
 If you remember nothing else from today, remember these three.
 First, the strongest case studies treated the model as a component: Heidi Porter called it "the replaceable part, not the center of the system".[5]
 Second, what you check matters more than what you ask for: a rule in a prompt isn't enforced, and an agent without evals is still a proof of concept.[5]
-Several speakers also named verification, not code generation, as the real limit on coding agents.[27][28]
+Several practitioners also named verification, not code generation, as the real limit on coding agents.[27][28]
 Third, trust is built step by step: with the people who will use the tool, one kind of action at a time, and with a person who stays accountable.[5][6][32]
 The next ten slides unpack these, and the last three turn them into things we can use.
 
@@ -78,8 +77,8 @@ Heidi Porter's case studies, all in production, make the point.[5]
 Stanford's surgical co-management tool benchmarked five LLMs against consensus chart review and chose a cheaper model that performed competitively.[5]
 Syngenta built its seed-selection assistant so the model and the knowledge bases can both be swapped out, with a re-evaluation afterwards.[5]
 Mark Lay of Noblis described the opposite: a vendor moved its tool to a new version and none of the old apps converted.[6]
-At .NET Conf, Luis Quintanilla said the .NET AI abstractions give you the contracts while the implementations are up to you, and Bruno Capuano compared three models on the same code.[7][8]
-Industry update: the best-value model keeps changing, too; Anthropic claims its Fable 5.2 model, released on 9 November, matched Opus 5.5's best score on one coding benchmark for roughly half the cost per task.[9]
+Luis Quintanilla of Microsoft said the .NET AI abstractions give you the contracts while the implementations are up to you, and Bruno Capuano of GitHub compared three models on the same code.[7][8]
+Newer evidence: the best-value model keeps changing, too; Anthropic claims its Fable 5.2 model, released on 9 November, matched Opus 5.5's best score on one coding benchmark for roughly half the cost per task.[9]
 Ishaan Dey of Google DeepMind warned that decisions made for weaker models go out of date.[10]
 
 ---
@@ -103,7 +102,7 @@ Darren Taillie kept simplifying AeroCore's work-order prompt until it was "Compa
 Chinmay Goyal of Glean said "most AI product steps are bounded decisions and not generation problems", and uses decision models that return choices with probabilities instead of text.[11]
 UiPath keeps control flow deterministic; its fraud demo called in an agent only when evidence was missing.[12]
 Caveat: those results came mostly from customers of one product, Jev.[11][12]
-Industry update: Amazon engineers say a decision model replaced Sonnet 4.6 for ticket labelling at about 98% less cost, but the SO-Arena benchmark ranked the best-performing decision model only seventh for reliability.[13][14]
+Newer evidence: Amazon engineers say a decision model replaced Sonnet 4.6 for ticket labelling at about 98% less cost, but the SO-Arena benchmark ranked the best-performing decision model only seventh for reliability.[13][14]
 
 ---
 
@@ -125,8 +124,8 @@ A guardrail is actual machinery: a gate, a check, a human or a limit in code.[5]
 Cam Soper said "a rule in an agent's instructions is just a suggestion" after an agent ignored one; he puts rules that must hold into types the compiler checks.[15]
 Lauren Tan's advice: whenever you correct your agent, make it a deterministic check rather than another line in the rules file.[16]
 Yvonne Carlson's eight *leash* principles include least privilege, default-deny boundaries, sandboxes and human approval before anything destructive (from her abstract).[17]
-Microsoft's Azure speakers showed guardrails running in gateway hooks outside the agent's reach, and Justin Yoo separates permission to run from permission to reach.[18][19]
-Industry update: Anthropic reported its own model working around restrictions instead of stopping, which backs the same rule.[20]
+Matt Soucoup and Paul Yuknewicz of Microsoft showed guardrails running in gateway hooks outside the agent's reach, and Justin Yoo separates permission to run from permission to reach.[18][19]
+Newer evidence: Anthropic reported its own model working around restrictions instead of stopping, which backs the same rule.[20]
 
 ---
 
@@ -166,7 +165,7 @@ If the evals aren't passing, the system doesn't get promoted.[5]
 
 **Speaker notes**
 
-Several speakers warned that a human reviewer is a weak guardrail at volume.[5][6]
+Several practitioners warned that a human reviewer is a weak guardrail at volume.[5][6]
 Heidi Porter, building on Jeff Schreiner's talk, said people facing thousands of items to review get tired and fall into "rubber stamping fatigue".[5]
 Don Barger gets alerts on Faithbot's critical conversations and can take over, which was possible at 5,000 users but not at 2,500,000.[6]
 Lydia Hallie cited an Anthropic study in which about 14% of people caught a clearly dangerous command, while the automatic classifier blocked 89%; these are Anthropic's figures.[23]
@@ -238,7 +237,7 @@ Jarred Sumner chose a project he could check against test suites that predate it
 McKenna Barlow showed that an agent writing both code and tests can repeat one misunderstanding in both, so tests should be anchored to written requirements.[29]
 Gerald Versluis's advice was "for every session, start from a running app, ask for proof".[30]
 Lauren Tan warned that "if your inner coding loop produces slop, then automating that loop just produces more slop".[16]
-Industry update: AWS says its agents built its emulator against fidelity tests that were first corrected until real AWS passed them (AWS's own account).[31]
+Newer evidence: AWS says its agents built its emulator against fidelity tests that were first corrected until real AWS passed them (AWS's own account).[31]
 
 ---
 
@@ -300,11 +299,11 @@ DORA's 2025 report, one of the studies SEP cited, calls AI an amplifier of an or
 
 **Speaker notes**
 
-The independent counterweight to the conference stories is a Harvard study by Fiona Chen and James Stratton of engineering data from 655 firms, January 2021 to August 2026, in its November 2026 revision.[37]
+The independent counterweight to the practitioners' stories is a Harvard study by Fiona Chen and James Stratton of engineering data from 655 firms, January 2021 to August 2026, in its November 2026 revision.[37]
 Coding agents raised output: 35.7% more pull requests and 44.0% more lines of code, though the lines estimate falls just short of statistical significance.[37]
 But resolved issues rose by only 13.7%, a borderline-significant effect, while time from review submission to approval rose 56.1% and review comments per pull request rose 38.6%.[37]
 That supports SEP and Andrew Finch on review becoming the bottleneck.[5][34]
-It also cautions against reading the boldest talk figures as typical, such as Cognition's report of merged PRs up 40 times in about a year.[39]
+It also cautions against reading the boldest reported figures as typical, such as Cognition's report of merged PRs up 40 times in about a year.[39]
 On the producing side, Anthropic says its Claude Code team more than doubled merged PRs while the revert share fell by over 40%, using machine review and human approval by risk; these are vendor figures.[38]
 The study is observational, and its data ends in August 2026.[37]
 
@@ -348,7 +347,7 @@ Whatever comes out, set who acts by the cost of a mistake, and don't ship withou
 
 **Speaker notes**
 
-These are suggestions for us, not findings from the talks, so they carry no citations.
+These are suggestions for us, not findings from our sources, so they carry no citations.
 We could start small: pick one workflow step someone has already proposed and walk it through the intake checklist together, in about fifteen minutes.
 In parallel, a few of us could draft a one-page charter, saying what we will use AI for and what we never will, so later decisions are quick.
 For any AI feature already in flight, we should agree who owns its eval set and sit with the people who do the job to build it from real cases.
@@ -364,16 +363,16 @@ Finally, we should measure review time and reverts now, so any decision to give 
 **On the slide**
 
 - The outline that goes with this deck: every claim cited, with links
-- Midwest AI Summit: Practical AI transcripts, episodes 378 and 379 [5][6]
-- AIE CODE talk pages (ai.engineer/code) · .NET Conf sessions (dotnetconf.com) [3][4]
+- Case-study transcripts: Practical AI podcast, episodes 378 and 379 [5][6]
+- Talk pages and agenda: ai.engineer/code · dotnetconf.com/agenda [3][4]
 - Industry: Chen & Stratton (Harvard, 2026) · DORA 2025 · Anthropic on code review [37][36][38]
 - Our toolkit: intake checklist, decision trees, agent PR policy, evals playbook
 
 **Speaker notes**
 
 Everything on these slides is cited in the outline that goes with the deck, which lists all 39 sources with links.
-Six of the Midwest AI Summit talks come from the Practical AI podcast's official transcripts.[5][6]
-Each AIE CODE talk has its own page on the AI Engineer site, and the .NET Conf sessions are listed on the event's agenda.[3][4]
+Six of the case-study talks come from the Practical AI podcast's official transcripts.[5][6]
+The AI-engineering talks each have their own page under ai.engineer/code, and Microsoft's .NET 11 talks are listed on the agenda at dotnetconf.com.[3][4]
 For the independent view, start with the Harvard study and DORA's 2025 report.[37][36]
 Anthropic's write-up on how its Claude Code team reviews code describes a full review pipeline, though its numbers are its own.[38]
 Our toolkit has the longer versions: the intake checklist, the two decision trees, the agent PR policy and the evals playbook.

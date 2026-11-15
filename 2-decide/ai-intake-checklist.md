@@ -55,7 +55,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** The International Mission Board (Don Barger) wrote its AI charter "before we ever write one line of code". Its never list includes AI posing as a human, AI-only final decisions about people, covert monitoring and counselling.[2]
 - **Red flags:** No list exists. *Something is better than nothing*; Barger's reply: "something can be worse than nothing if you're doing the wrong things".[2]
-- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] An update since the talk: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute, so we should keep the list in policy and hard controls, not prompts.[12]
+- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] A more recent update: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute, so we should keep the list in policy and hard controls, not prompts.[12]
 
 ### 2. Will AI make the result better or the work more efficient?
 
@@ -91,7 +91,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** If we do, a fixed workflow with the LLM in one narrow job is enough; Darren Taillie's photo check at AeroCore ended with the prompt "Compare and flag".[2] In UiPath's fraud demo, the decision model escalates to a slower agent only when the evidence is missing.[3]
 - **Red flags:** *An agent will work out the process.* Nobody can describe how the job is done today.
-- **What a good answer looks like (industry practice):** For unknown steps, use one agent loop that loads tools on demand, not a team of agents; Anthropic reports it often won on quality, cost and latency.[19] Newer practice goes further than the talks: once a repeated job settles, a cheaper model runs its path as a workflow and sends hard cases back; AgentRun reports $0.89 falling to $0.12 per record.[20]
+- **What a good answer looks like (industry practice):** For unknown steps, use one agent loop that loads tools on demand, not a team of agents; Anthropic reports it often won on quality, cost and latency.[19] Newer practice goes further: once a repeated job settles, a cheaper model runs its path as a workflow and sends hard cases back; AgentRun reports $0.89 falling to $0.12 per record.[20]
 
 ### 8. What does a mistake cost, and how would we undo it?
 
@@ -125,7 +125,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 ## Outcomes
 
-These are our recommendations, following [Should this task use AI, and which kind?](should-this-task-use-ai.md), not findings from the talks.
+These are our recommendations, following [Should this task use AI, and which kind?](should-this-task-use-ai.md), not findings from our sources.
 
 **Recommendation**
 

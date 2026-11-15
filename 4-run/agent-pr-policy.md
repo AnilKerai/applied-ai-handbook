@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering leads*
 
-*Draft standard for discussion.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are our recommendations; Basis and Industry practice notes give the evidence. Company figures are their own claims.
+*Draft standard for discussion.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are our recommendations; Basis and Current practice notes give the evidence. Company figures are their own claims.
 
 ## 1. Purpose and scope
 
@@ -53,7 +53,7 @@ Basis:
 - Ayush Bhardwaj made a flag do nothing, yet agents passed it in 95 of 95 searches because a skill said to.[11]
 - Zenity treats skills as dependencies: "Everything that comes into the context is under risk."[12]
 
-**Industry practice notes.**
+**Current practice notes.**
 An ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[31]
 A separate study of skill revisions found added rules helped mainly when they named a command or path, refining the advice to trim.[32]
 Anthropic warns that cautious rules piling up in memory and instruction files can make its Claude Fable 5.2 model seek needless approvals; it advises replacing absolute never rules with scoped ones (vendor guidance).[27]
@@ -74,7 +74,7 @@ Basis:
 - Yvonne Carlson's principles include least privilege, time-bound credentials, default-deny boundaries, logging and sandboxes.[13]
 - The NuGet team: "every package that you restore is code that you choose to trust."[14]
 
-**Industry practice notes.**
+**Current practice notes.**
 The controls have bugs: one Claude Code release fixed deny rules missing `cp` or `mv` into a directory, and a read-only shell command running outside the sandbox.[30]
 Anthropic reports that, in its evaluations and internal use, Claude sometimes works around a restriction instead of stopping.[34]
 In a Pixee paper, a forged approval planted in anything the agent reads survived compaction as a real user instruction 87-100% of the time on five harnesses that flatten message roles, and 0% on four that keep them.[28]
@@ -101,7 +101,7 @@ Basis:
 - Duolingo closes test-writing agent PRs touching any file that "isn't a test, a mock, a fake, or a stub", because "agents sometimes take the shortest paths to green CI."[16]
 - McKenna Barlow (Microsoft) warns that a misread requirement can "show up in both places", code and tests.[17]
 
-**Industry practice notes.**
+**Current practice notes.**
 AWS's emulator agents build against fidelity tests verified on real AWS, and deterministic checks stop them touching code they shouldn't (vendor account).[24]
 Google's /teamwork checks results with *falsifiers* such as unmodified test suites.[25]
 The tool agent-roast blocks commits that weaken tests, but a quarter to seven in eight of its blocks on untuned repositories were false alarms, varying by sample, and AI-signed commits weakened checks no more often than others (author's counts).[26]
@@ -130,7 +130,7 @@ Basis:
 - Factory's risk judge "reads its policy from our mainline branch so that the change can't rewrite the rules that it's being judged by."[20]
 - Brian Douglas's agent-written Rust scored five out of five in AI review, then drew heavy pushback from human reviewers; when his colleague Matt pushes back, he "has knowledge that the agent does not."[21]
 
-**Industry practice notes.**
+**Current practice notes.**
 A 2026 paper let reviewers overrule only with a mechanically valid violation and a compliant repair, sharply cutting wrongly replaced correct proposals; it used two locally run open-weight models on non-coding tasks, hence a SHOULD.[33]
 
 ## 7. Autonomy levels
@@ -169,7 +169,7 @@ Basis:
 - Harvey's advice is to "build the follow-up loop" above all; its automations switch off after five straight failures and can carry a budget or expiry "because when no one's watching, an agent can start thousands of tasks too."[18]
 - Duolingo: "We cap that whole loop at five attempts, past that we close the PR rather than trying to fix it forever." It closes PRs with a merge conflict, or open about three weeks, as stale.[16]
 - Uber reports AI-driven volume pushed P95 time to land from 30 minutes to three to four hours; with relaxed guarantees, "main can now be broken".[22]
-- The Undo talk: "A timeout tells us that the response didn't arrive, not that the operation failed."[23]
+- Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[23]
 
 ## 9. Metrics
 
@@ -194,7 +194,7 @@ Basis: SEP's principles include "verification before velocity", deliberate itera
 
 ## 11. Rationale and sources
 
-In several talks, writing code with agents is no longer the hard part and checking it is the bottleneck.[1][16]
+Several practitioners report that writing code with agents is no longer the hard part and checking it is the bottleneck.[1][16]
 Instructions are suggestions, so the safeguards that held lived in the environment and the gates.[8][7]
 Checks worked best when grounded in the real system and out of the agent's reach.[24][25]
 Autonomy rose per action or workstream, on measured results.[4][20]

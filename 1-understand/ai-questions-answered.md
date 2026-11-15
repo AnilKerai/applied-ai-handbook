@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: everyone*
 
-Short answers to the questions an in-house AI adviser hears most. They draw on talks at three autumn 2026 conferences (Midwest AI Summit, AI Engineer Code Summit and .NET Conf) and on industry developments, mostly from October and November 2026. Each short answer is our recommendation; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
+Short answers to the questions an in-house AI adviser hears most. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. Each short answer is our recommendation; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
 
 ## Strategy
 
@@ -30,7 +30,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Heidi Porter (Moyer Group AI) chooses a mechanism per task (rules, machine learning, a decision model or an LLM) and says data quality sets the ceiling.[1]
 - Mark Lay (Noblis): if AI gives neither a better nor a more efficient result, don't use it. Don Barger's organisation wrote its AI charter "before we ever write one line of code".[2]
-- Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3] The trends agree: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results; with a spec and a test environment it took about two hours (AWS's account).[4]
+- Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3] Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results; with a spec and a test environment it took about two hours (AWS's account).[4]
 
 **Confidence:** medium. Several independent practitioners agree, but it rests on their experience and nobody compared starting points.
 
@@ -87,7 +87,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
 - In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
-- A trend caveat to the summit message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
+- Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
 
 **Confidence:** medium. The direction is consistent, but the figures are single studies or vendor claims.
 
@@ -100,7 +100,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 - Brian Douglas, on training a specialised reviewer model: "My recommendation is probably write a skill first."[22] Glean re-prompts its decision model, rather than retraining it, when labels change.[23]
 - Anthropic reports that a maintained wiki plus search beat search alone, 61% against 53%, on 25 questions (Anthropic's claim).[24]
 
-**Confidence:** low-medium. No talk compared fine-tuning with retrieval directly.
+**Confidence:** low-medium. No practitioner compared fine-tuning with retrieval directly.
 
 ### Q: When should we use a decision model instead of an LLM?
 
@@ -109,8 +109,8 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Chinmay Goyal (Glean) asks "can the output be listed in advance?" If so, a decision model returns choices with probabilities instead of text.[23]
 - ZoomInfo ran a decision model asking seven yes/no questions in shadow mode beside its LLM judge; it caught 623 of 728 clearly failed steps against the judge's 294 (ZoomInfo's figures).[25]
-- The trends broaden what was largely one vendor's theme at the summit: a Strands case study says Amazon cut ticket-labelling costs by about 98% (its claim),[26] and OpenAI and Google have released decision-model APIs.[27][28]
-- They also add a caution: in a benchmark of 21 models, the best-performing decision model ranked only seventh for reliability, meaning answers that hold when options change and saying when none fits.[29]
+- Newer evidence broadens what was largely one vendor's theme among practitioners: a Strands case study says Amazon cut ticket-labelling costs by about 98% (its claim),[26] and OpenAI and Google have released decision-model APIs.[27][28]
+- It also adds a caution: in a benchmark of 21 models, the best-performing decision model ranked only seventh for reliability, meaning answers that hold when options change and saying when none fits.[29]
 
 **Confidence:** medium. Strong results, but mostly from one vendor's customers, and newer figures are vendors' own.
 
@@ -157,7 +157,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 - Lydia Hallie: the file "should only include the things the Claude cannot see from your code".[39] Nikolay Petrov found models already knew about 70% of skills' general content but only 22% of the specific details.[41]
 - A study of 3,159 skill files found added rules helped mainly when they named a command or path the file didn't already mention; unrelated text had no detectable effect, and deleting a rule lowered compliance with it, so check a rule is obsolete before cutting it.[42]
 - Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules or your agents.md".[43] Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion."[44]
-- An update from the trends: Anthropic warns that cautious instructions piling up through memory and instruction files can make its newest model ask for approvals it doesn't need; its advice includes removing outdated notes and naming the routine steps that need no approval.[45]
+- A newer update: Anthropic warns that cautious instructions piling up through memory and instruction files can make its newest model ask for approvals it doesn't need; its advice includes removing outdated notes and naming the routine steps that need no approval.[45]
 
 **Confidence:** medium-high. Practitioners and one large preprint study agree; the newest-model guidance is one vendor's.
 
@@ -168,9 +168,9 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Yvonne Carlson's eight principles include least privilege, short-lived credentials, approval before anything destructive, default-deny boundaries and sandboxes (abstract only).[46] Justin Yoo (Microsoft) separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side".[47]
 - Heidi Porter automates outright "only what is cheap to undo".[1] Meta asks "How costly is a mistake and how easy is it to catch?"[10] Tanmay and Dolly Sah found only 47% of normally successful agent runs recovered from an injected failure.[48]
-- The trends add a reason to enforce limits in code: Anthropic reported its model working around restrictions instead of stopping,[49] and agent hooks can now block when they fail instead of being skipped.[50]
+- Newer evidence adds a reason to enforce limits in code: Anthropic reported its model working around restrictions instead of stopping,[49] and agent hooks can now block when they fail instead of being skipped.[50]
 
-**Confidence:** high. The talks and trends agree; the failure rates come from single studies.
+**Confidence:** high. Practitioners and newer evidence agree; the failure rates come from single studies.
 
 ### Q: How do we keep costs under control?
 
@@ -179,7 +179,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16] SEP's client prototype stalled partly because the token budget covered only a couple of days' work.[1]
 - A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
-- This updates the many-agent designs shown at the summits. Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
+- This updates the many-agent designs practitioners showed. Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
 - Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
 
 **Confidence:** medium. The direction is consistent, but most savings figures are vendors' own.
@@ -216,9 +216,9 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 **Why:**
 - Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
 - Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
-- The UK's NCSC says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards that constrain what the system can do.[63] New in the trends: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
+- The UK's NCSC says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards that constrain what the system can do.[63] Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
 
-**Confidence:** medium-high. Consistent across talks, a government agency and papers; attack rates come from single studies.
+**Confidence:** medium-high. Consistent across practitioners, a government agency and papers; attack rates come from single studies.
 
 ### Q: Who is accountable when AI gets it wrong?
 
@@ -236,10 +236,10 @@ Short answers to the questions an in-house AI adviser hears most. They draw on t
 - **What will it cost in total, and when does it pay back?** The sources give per-task savings, mostly vendors' own, but no total cost of ownership.
 - **Which vendor, on what terms?** Nothing compared providers on data handling, sub-processors or international transfers.
 - **What does regulation require of us?** Not covered beyond practical UK GDPR guidance, which is not legal advice.
-- **How do we train our people, and how do junior roles change?** The talks covered adoption and culture, not training or career paths.
+- **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
 - **Are local, open-weight models good enough?** A few demos ran local models, but nobody measured them against hosted models on business tasks.
 
-**Read next:** [What 2026's AI conferences taught us](ai-conferences-2026-lunch-and-learn.md), or go back to the [handbook home](../README.md).
+**Read next:** [What works with AI: practical lessons](ai-lunch-and-learn.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

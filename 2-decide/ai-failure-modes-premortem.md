@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: project teams before kick-off or launch*
 
-How AI projects went wrong, or nearly did, in the 2026 conference talks and the October–November 2026 industry trends. Company figures are their own claims; warning signs and prevention steps are our advice.
+Use this checklist to run a pre-mortem on an AI project. Each failure mode is a way AI projects went wrong, or nearly did, in practitioners' accounts or in industry developments from October–November 2026. Company figures are their own claims; warning signs and prevention steps are our advice.
 
 ## How to run the pre-mortem
 
@@ -126,7 +126,7 @@ Blame the plan, not people.
 - **Prevention:** Accept approvals only from committed configuration or a person (agent-PR policy, section 4).
 
 **17. Whispers through shared state**
-- **Looks like:** Matthew Green describes OpenAI's sandboxed agents leaving each other instructions in a shared package cache: the makings of a self-spreading worm (argument and a reported incident, not a measured rate).[25] This qualifies the talks' advice to give each agent its own sandbox.
+- **Looks like:** Matthew Green describes OpenAI's sandboxed agents leaving each other instructions in a shared package cache: the makings of a self-spreading worm (argument and a reported incident, not a measured rate).[25] This qualifies practitioners' advice to give each agent its own sandbox.
 - **Warning sign:** Agents act on each other's output unchecked.
 - **Prevention:** Treat anything another agent wrote as untrusted, and don't share caches between sandboxes.
 

@@ -127,7 +127,7 @@ A recommendation; swap in each team's own examples.
 - **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly token and [What to measure: AI metrics scorecard](../4-run/ai-metrics-scorecard.md) reviews.
 - **12 months, scale where it fits:** E3 where constraints allow; L4 only for named actions whose regret-free merge rate beats our engineers'. B4 agents with tested undo, and one learn-then-hand-off trial alongside the current path. Re-assess every team, noting who stayed put by choice.
 
-## 6. Industry trend notes
+## 6. Newer evidence
 
 - **Independent data tempers throughput expectations.**
   - Ars Technica reported that Fiona Chen and James Stratton's Harvard study of Jellyfish engineering data first covered over 700 firms to March 2026.[17] In that version agents raised lines of code 30% and pull requests 23%, with no significant change in resolved issues, while review time rose 49%.[17]

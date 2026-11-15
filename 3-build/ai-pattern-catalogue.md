@@ -44,7 +44,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Seen at:**
   - Chinmay Goyal (Glean) asks "can the output be listed in advance?" Glean reports zero invalid outputs on one ranker, against about 90% valid for the LLM.[3]
   - In an illustrative demo, Michelle Chen (Cloudflare) had decision models prune an agent's 40 tools to 10 first, and reports one LLM call instead of six.[5]
-  - Industry trend: Amazon replaced an LLM for ticket labelling after running both on live traffic, about 98% cheaper by Strands' account.[6]
+  - Newer evidence: Amazon replaced an LLM for ticket labelling after running both on live traffic, about 98% cheaper by Strands' account.[6]
 
 ### 3. A bounded agent inside deterministic orchestration
 
@@ -88,7 +88,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Pitfalls:** stale data fails quietly;[1] pasting manuals into prompts instead of serving them through tools.
 - **Seen at:**
   - Porter: "you need to ground it in your data at runtime". In a defect-line study she cited, the LLM got only the evidence, "Not the whole knowledge base".[1]
-  - Industry trend: in one single-author preprint, knowledge served through lookup tools beat the same text pasted into the prompt on all four models (68.4% against 23.8% on hard tasks for one), though pasting still helped three of them.[15]
+  - Newer evidence: in one single-author preprint, knowledge served through lookup tools beat the same text pasted into the prompt on all four models (68.4% against 23.8% on hard tasks for one), though pasting still helped three of them.[15]
 
 ### 7. Governed query access to structured data (graph evidence contested)
 
@@ -99,7 +99,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Seen at:**
   - AeroCore's analysts had answered "how many washes did we do in Atlanta last night" 55 times. Its agent queries over MCP through a platform that "provides those guardrails", and shows "the actual query".[13]
   - dbt Labs (vendor): its semantic layer beat text-to-SQL 72.7 to 64.5 on 11 questions, but scored 0 on those needing too many hops.[16]
-  - The peer-reviewed defect-line study Porter presented retrieves evidence from a knowledge graph.[1]
+  - The peer-reviewed defect-line study Porter cited retrieves evidence from a knowledge graph.[1]
   - Graphs, for: a vendor benchmark scored a graph with an ontology 54% against 16% for SQL, but gave the SQL arm only the bare schema.[17]
   - Graphs, against: an independent study over structured health records found SQL ahead except on time-based questions, with the graph agent costing about 3.5 times one without retrieval.[18] Unaided, a strong model's graph queries failed on 28% of one benchmark's questions, and about 5% even after automatic repair (single study).[19]
   - Our reading: content explains most gains; no study here shows a graph store beating well-built SQL on a current frontier model.
@@ -126,7 +126,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
   - Porter: "a rule written in a prompt is not deterministically enforced".[1]
   - Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion." He moved deploy policy into C# types and checks, so breaches fail before deployment.[20]
   - Microsoft's AI Gateway applies per-client budgets, policies and hooks outside the agent's reach.[14] Nick Kuhn's (VMware Tanzu) abstract binds agents to tools through a governed MCP gateway.[21]
-  - Industry trend: Claude Code hooks can now fail closed.[22]
+  - Newer evidence: Claude Code hooks can now fail closed.[22]
 
 ### 10. The execution dial, with staged actions
 
@@ -148,7 +148,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Seen at:**
   - Justin Yoo (Microsoft) separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". His sandbox saw only a proxied token.[25]
   - Paul Yuknewicz (Microsoft): "I'm actually going to sandbox the tool because the tool is dangerous."[26]
-  - Industry trend, qualifying the talks: Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache,[27] and a Claude Code release fixed a sandbox bypass.[28]
+  - Newer evidence qualifies this: Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache,[27] and a Claude Code release fixed a sandbox bypass.[28]
 
 ## D. Reliability
 
@@ -211,7 +211,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Pitfalls:** treating the solver as the oracle, when only the user knows what they meant. No results were given for the tool.[33]
 - **Seen at:**
   - Rajath Kotyal (AWS): "The LLM translates the solver checks and the human decides." His example was two order rules, fine alone, that conflict together.[33]
-  - Industry trend: DeepMind reports agents proving code in Lean against human-approved specs, with a checker gating every proof (its claims).[34]
+  - Newer evidence: DeepMind reports agents proving code in Lean against human-approved specs, with a checker gating every proof (its claims).[34]
 
 ### 18. Memory as proposals, consolidated offline
 
@@ -222,7 +222,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
 - **Seen at:**
   - Mathur: agents propose memories on a branch that merges back only when needed, since a memory may not generalise, and a job "dreams overnight" to flag conflicts.[32]
   - Meta scores and retires memory: "Teach it once, the next on call gets it."[31]
-  - Industry trend (vendor claims): Anthropic saw 41 of 57 facts survive with several writers per page, and all 57 with one.[35] GitHub's Copilot dreaming proposes changes to checked-in skills and instructions as pull requests.[36]
+  - Newer evidence (vendor claims): Anthropic saw 41 of 57 facts survive with several writers per page, and all 57 with one.[35] GitHub's Copilot dreaming proposes changes to checked-in skills and instructions as pull requests.[36]
 
 **Read next:** [Evals playbook](evals-playbook.md), or go back to the [handbook home](../README.md).
 

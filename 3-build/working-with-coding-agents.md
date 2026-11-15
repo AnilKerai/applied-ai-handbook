@@ -190,7 +190,7 @@ Ronacher: "human attention is for me at least the limiting factor."[16]
 Clauson found parallel sessions top out at two or three while you are the feedback loop: "if you make yourself the feedback loop, you are now the bottleneck."[31]
 Yegge runs about 50 agents and found "the more agents I deploy, the more humans I need."[23]
 
-Industry trends since then temper the many-agent setups shown on stage.
+Newer evidence tempers these many-agent setups.
 Across enterprise deployments, Anthropic found one agent loop with skills often beat subagents on quality, cost and latency, keeping subagents for context bloat or parallel throwaway work (vendor guidance).[33]
 A Cohere study found agent teams beat solo agents but cost three to seven times as much.[32]
 Warp says tuning models and removing redundant subagents cut its cost from about $80 to $15-20 per PR (Warp's claim).[34]

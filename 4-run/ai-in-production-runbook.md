@@ -44,7 +44,7 @@ Tick every item before the first production run, and file the evidence with the 
 - **Keep sensitive data out of logs.**
   - Iyer keeps telemetry (where the time went) apart from the business audit (what was committed), protecting each for its purpose.[1]
   - Paul Yuknewicz's (Microsoft) sandboxed tool redacted social security numbers before the model saw them.[8] Gutsch: "the LLM should not know any credentials".[7]
-  - *Industry trend:* one coding agent started logging response text on upgrade wherever prompt logging was on, and a later release fixed telemetry recording a background agent's reply with response logging off.[3] Apiiro found passwords in 1,122 public GitHub files where saved permission rules stored whole commands (its count; the file was meant to stay local).[9]
+  - *Newer evidence:* one coding agent started logging response text on upgrade wherever prompt logging was on, and a later release fixed telemetry recording a background agent's reply with response logging off.[3] Apiiro found passwords in 1,122 public GitHub files where saved permission rules stored whole commands (its count; the file was meant to stay local).[9]
   - We should test redaction after every upgrade, and scan logs, traces and agent settings for secrets.
 
 ## 3. Ongoing quality
@@ -66,9 +66,9 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 - **Rate and cost caps.**
   - Joey Wang (Harvey) advises capping what an agent or a person can start.[12] One engineer's ~950 tasks stalled everyone within about three hours, which led to a fair launch queue.[12]
   - Gateway budgets change without redeploys: "I'll never redeploy my back ends or my front ends to do it."[5]
-  - *Industry trend:* Simon Willison argues for hard caps that cut a service off, not warning emails, because coding agents make it easy to spin up services that cost money.[13]
+  - *Newer evidence:* Simon Willison argues for hard caps that cut a service off, not warning emails, because coding agents make it easy to spin up services that cost money.[13]
 - **Fall back to rules or a person.** The gateway routes model aliases with priority fallback.[5] In Porter's production-line case, "The system withholds the answer and escalates."[10] We should keep the pre-AI path (rules or a manual queue) working and staffed.
-- **Make guardrails fail closed.** Microsoft's Azure session runs guardrails in gateway hooks outside the agent's reach.[5] *Industry trend:* a coding-agent release added an option that makes a hook block the action when it can't start, times out or exits unexpectedly.[14] That sharpens the advice: a check that errors must stop the action.
+- **Make guardrails fail closed.** Matt Soucoup and Paul Yuknewicz (Microsoft) run guardrails in gateway hooks outside the agent's reach.[5] *Newer evidence:* a coding-agent release added an option that makes a hook block the action when it can't start, times out or exits unexpectedly.[14] That sharpens the advice: a check that errors must stop the action.
 - **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident we should drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
 
 ## 5. Incident response for AI
@@ -102,13 +102,13 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 **After the incident**
 
 - Turn every incident into an eval case or a deterministic check via Solorio's annotation-to-dataset loop.[10] Meta: "Teach it once, the next on call gets it."[15]
-- *Industry trend:* NVIDIA's tooling ranks failures in stored traces, with trace IDs, and drafts evals from them (vendor tutorial).[23]
+- *Newer evidence:* NVIDIA's tooling ranks failures in stored traces, with trace IDs, and drafts evals from them (vendor tutorial).[23]
 - Hold a blameless review and add the failure to [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md).
 
 ## 6. Change management
 
 - **Model upgrades and swaps are releases.**
-  - Porter makes the model the easiest part to replace, then re-evaluates after a swap.[10] *Industry trend:* HarnessDev found harness gains depend strongly on the model running them; one harness fell from 69.3 to 33.0 under a different model (the paper's numbers).[24] So the model is replaceable in the architecture, but prompts, skills and tools tuned to it may not transfer.
+  - Porter makes the model the easiest part to replace, then re-evaluates after a swap.[10] *Newer evidence:* HarnessDev found harness gains depend strongly on the model running them; one harness fell from 69.3 to 33.0 under a different model (the paper's numbers).[24] So the model is replaceable in the architecture, but prompts, skills and tools tuned to it may not transfer.
   - Vendors retire modes at short notice: one fast mode was deprecated on 30 October 2026 for removal on 30 November, with no fallback.[25]
   - We should pin model versions, track retirement dates, and test a new model on the eval set and shadow live traffic before switching.
 - **Prompts and skills are code.** They live in version control, take Risky-tier review under [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and ship through the normal pipeline.
@@ -129,7 +129,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
   - We should start any on-call agent at L1 and promote it per action.
 - **Human attention limits.**
   - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge: "the more agents I deploy, the more humans I need."[28]
-  - Porter warns of "rubber stamping fatigue".[10] *Industry trend:* Anthropic reports users accept 93% of permission prompts (vendor figure).[29]
+  - Porter warns of "rubber stamping fatigue".[10] *Newer evidence:* Anthropic reports users accept 93% of permission prompts (vendor figure).[29]
   - Harvey stopped alert storms by joining new alerts to the open investigation.[12]
   - We should cap review load per person and send digests, not pages, for routine items.
 
@@ -144,7 +144,7 @@ Andrew Finch (Sonar) says the factory "runs dim, not dark": people stay in it, a
 
 ## 9. Review cadence
 
-*Our recommendation, not drawn from the talks.*
+*Our recommendation, uncited.*
 
 - **Every shift:** on-call digest, open incidents, spend against caps.
 - **Weekly:** annotation queue, new eval cases, alert noise.

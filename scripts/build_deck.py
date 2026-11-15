@@ -35,8 +35,8 @@ def style_run(run, spec):
 
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MD = os.path.join(ROOT, "1-understand", "ai-conferences-2026-lunch-and-learn.md")
-OUT = os.path.join(ROOT, "1-understand", "ai-conferences-2026-lunch-and-learn.pptx")
+MD = os.path.join(ROOT, "1-understand", "ai-lunch-and-learn.md")
+OUT = os.path.join(ROOT, "1-understand", "ai-lunch-and-learn.pptx")
 
 FONT = "Arial"
 DARK = "1F2937"
@@ -244,7 +244,7 @@ def s_standard(prs, s, total):
     ids = cites(*s["bullets"], s["key"] or "", *s["notes"])
     label = None
     if s["n"] == 15:
-        label = "Suggestions for us, not findings from the talks \u00b7 links to the handbook in the outline"
+        label = "Suggestions for us, not findings from our sources \u00b7 links to the handbook in the outline"
     footer(sl, s["n"], ids, total, label)
     set_notes(sl, s["notes"])
 
@@ -332,7 +332,7 @@ def s_reading(prs, s, total):
     bullets_box(sl, s["bullets"], height=4.9, size=24, gap=16)
     footer(sl, s["n"], cites(*s["bullets"], *s["notes"]), total,
            label=f"All {SOURCE_COUNT} sources, with links, are listed in the outline: "
-                 "1-understand/ai-conferences-2026-lunch-and-learn.md")
+                 "1-understand/ai-lunch-and-learn.md")
     set_notes(sl, s["notes"])
 
 

@@ -2,7 +2,7 @@
 
 Practical, evidence-backed guidance for bringing AI into a business or an engineering team: when to use it, which kind, how to build and test it, how to run it safely, and how to lead the change.
 
-**As of November 2026.** Built from the talks at three conferences (Midwest AI Summit, AIE CODE Summit and .NET Conf, October–November 2026) and the industry research published around them. Every factual sentence cites a public source you can check: a talk page, a timestamped video, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles.
+**A living compendium, as of November 2026.** It separates three things: what practitioners report works, what published studies show, and our own recommendations. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged.
 
 ## Start here: pick a route
 
@@ -37,13 +37,13 @@ Add the .NET guide if you work in .NET.
 
 **Presenting to your team** (about 20 minutes)
 
-1. [What 2026's AI conferences taught us](1-understand/ai-conferences-2026-lunch-and-learn.md)
+1. [What works with AI: practical lessons](1-understand/ai-lunch-and-learn.md)
 
-The slides are `1-understand/ai-conferences-2026-lunch-and-learn.pptx`; the outline has the speaker notes and sources.
+The slides are `1-understand/ai-lunch-and-learn.pptx`; the outline has the speaker notes and sources.
 
 ## The five sections
 
-- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, and a talk you can give to your team.
+- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, and a lunch-and-learn you can give to your team.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
 - **[3. Build](3-build/README.md)**: How to build AI features well: proven patterns, how to test them, and how developers should work with coding agents.
 - **[4. Run](4-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.

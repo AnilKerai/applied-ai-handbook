@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Check the handbook before publishing.
 
-Runs four checks over every Markdown document in the numbered folders:
+Runs five checks over every Markdown document in the numbered folders:
 
 1. Citations. Every [n] in the body has an entry in the document's Sources block, and every
    Sources entry is cited at least once.
@@ -11,6 +11,8 @@ Runs four checks over every Markdown document in the numbered folders:
    names of employers and clients in that local file only, so the check never publishes them.
 4. Structure. Every document has an "In one minute" box, a "Read next" line and a
    `last_checked` date in its frontmatter.
+5. Framing. The handbook is a compendium, not an event write-up: no conference or event names
+   above the Sources block (quotes, link URLs and the Sources block itself are exempt).
 
 Usage: python3 scripts/check.py        (exit code 1 if anything fails)
 """
@@ -23,6 +25,11 @@ FOLDERS = ["1-understand", "2-decide", "3-build", "4-run", "5-lead"]
 
 BUILTIN_PATTERNS = [
     r"/Users/", r"~/", r"\[\[", r"\bVault notes\b", r"talk-notes/",
+]
+
+FRAMING_PATTERNS = [
+    r"\bmidwest\b", r"\bsummits?\b", r"\.net conf\b", r"\bconferences?\b", r"\bkeynotes?\b",
+    r"\bon stage\b", r"\bthe talks\b", r"\bno talk\b",
 ]
 
 
@@ -80,6 +87,19 @@ def check_leaks(path, text, patterns):
     return problems
 
 
+def check_framing(path, text):
+    body, _ = split_sources(text)
+    body = re.sub(r"^---\n.*?\n---\n", "", body, flags=re.S)
+    problems = []
+    for i, line in enumerate(body.splitlines(), 1):
+        line = re.sub(r"\]\([^)]*\)", "]", line)          # link URLs
+        line = re.sub(r'"[^"]*"|“[^”]*”', "", line)       # verbatim quotes
+        for p in FRAMING_PATTERNS:
+            if re.search(p, line, re.I):
+                problems.append(f"line {i} uses event framing ({p})")
+    return problems
+
+
 def check_structure(path, text):
     problems = []
     if "**In one minute**" not in text:
@@ -99,7 +119,8 @@ def main():
         count += 1
         text = path.read_text(encoding="utf-8")
         problems = (check_citations(path, text) + check_links(path, text)
-                    + check_leaks(path, text, patterns) + check_structure(path, text))
+                    + check_leaks(path, text, patterns) + check_structure(path, text)
+                    + check_framing(path, text))
         rel = path.relative_to(ROOT)
         if problems:
             failures += 1
@@ -111,7 +132,8 @@ def main():
     for extra in ["README.md", *[f"{f}/README.md" for f in FOLDERS]]:
         p = ROOT / extra
         if p.exists():
-            probs = check_links(p, p.read_text(encoding="utf-8")) + check_leaks(p, p.read_text(encoding="utf-8"), patterns)
+            txt = p.read_text(encoding="utf-8")
+            probs = check_links(p, txt) + check_leaks(p, txt, patterns) + check_framing(p, txt)
             if probs:
                 failures += 1
                 print(f"FAIL {extra}")

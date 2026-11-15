@@ -94,11 +94,11 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Decision models as graders.**
 - ZoomInfo's typed decision model (Jev) was confident on about 7 in 10 of the same steps; among those, it caught 74 of the 82 bad steps the LLM judge had accepted. Uncertain cases still go to the LLM (ZoomInfo's figures).[13]
 - Glean says its citation-checking decision model was consistent enough that repeat runs weren't needed: only one run differed across about 30 use cases (Glean's claim).[19]
-- Industry trend, cutting the other way: in SO-Arena the best-performing decision model was only seventh for reliability.[10] A decision-model grader needs the same calibration, including cases where no option is right.
+- Newer evidence cuts the other way: in SO-Arena the best-performing decision model was only seventh for reliability.[10] A decision-model grader needs the same calibration, including cases where no option is right.
 
 ## 5. Measurement rigour
 
-The talks said little about statistics, so this section draws on published practice. A pass rate from a handful of runs can look far more precise than it is.
+Our practitioner sources say little about statistics, so this section draws on published practice. A pass rate from a handful of runs can look far more precise than it is.
 
 **Run each case several times.**
 - Model outputs vary between runs, so Anthropic runs several trials of each task and measures how often the agent succeeds.[32]
@@ -158,7 +158,7 @@ The talks said little about statistics, so this section draws on published pract
 - Robinhood collects reasoned human replies daily; misses become new rules, and false escalations reveal missing context.[15]
 - Ara Khan (Cline) treats each human correction as a capability gap to cover, and buckets eval failures by type before fixing the harness.[11]
 
-**Industry trend: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] We should let tooling fill the queue and keep people deciding what enters the set. Live operation is in [Running AI in production](../4-run/ai-in-production-runbook.md).
+**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] We should let tooling fill the queue and keep people deciding what enters the set. Live operation is in [Running AI in production](../4-run/ai-in-production-runbook.md).
 
 ## 7. Evals for coding agents and their context
 
@@ -179,7 +179,7 @@ The talks said little about statistics, so this section draws on published pract
 - Petrov runs each skill's tasks with and without it, comparing solves, tokens and time; larger models already knew about 70% of skills' general ideas but only 22% of the details.[17]
 - Microsoft scores each skill per model on activation, tokens, speed and pass rate with and without it, and runs its benchmark nightly, rotating through the five models users use most.[5]
 - The browser vendors' Modern Web Guidance skill uses evals to prune content models already know.[29]
-- Industry trend: an ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] Both support the talks: keep only lines an eval shows help.
+- Published studies agree: an ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] Both support the practitioners above: keep only lines an eval shows help.
 - Dmitry Buykin (Maersk) mutated sentences in his prose instructions and almost no tests went red, so he now checks that evals notice.[31]
 
 See also [Working with coding agents](working-with-coding-agents.md) and [Building AI features in .NET](dotnet-ai-engineering-guide.md).

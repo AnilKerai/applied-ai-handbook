@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: .NET teams*
 
-The stack and practices we recommend for AI work on .NET 11, drawn mainly from 27 sessions at .NET Conf 2026, the online .NET 11 launch on 10-13 November ([.NET Conf 2026](https://dotnetconf.com/agenda)),[1] plus October-November 2026 industry evidence. Status labels are as stated on stream; where an item has none, no status was stated. Our advice is uncited; company figures are their own claims.
+This guide sets out the stack and practices we recommend for AI work on .NET 11. Use section 1 to choose components, sections 2 to 5 to set team practice, and section 6 to run a first spike. It draws mainly on Microsoft's .NET 11 AI stack as presented at the online .NET 11 launch on 10-13 November 2026,[1] plus October-November 2026 industry evidence. Status labels are as stated at the launch; where an item has none, no status was stated. Our advice is uncited; company figures are their own claims.
 
 ## 1. The stack at a glance
 
@@ -81,7 +81,7 @@ See [Running AI in production](../4-run/ai-in-production-runbook.md) for operati
 ### Supply chain: cooldown, audit, skills as dependencies
 
 - Jon Douglas: "every package that you restore is code that you choose to trust."[30]
-- NuGet is adding a cooldown that makes newly published versions wait, in the CLI and Visual Studio 18.14, which will also stop install scripts running without approval.[30] The day-2 keynote named 18.12 as the latest release, so 18.14 is still to come.[38] nuget.org API keys now last at most 30 days.[30]
+- NuGet is adding a cooldown that makes newly published versions wait, in the CLI and Visual Studio 18.14, which will also stop install scripts running without approval.[30] Mads Kristensen (Microsoft) named 18.12 as the latest release, so 18.14 is still to come.[38] nuget.org API keys now last at most 30 days.[30]
 - Skills now ship inside NuGet packages, and `dotnet package skills` copies them to where agents look.[30][31] Roey Ben Chaim (Zenity) treats skills as dependencies: "Everything that comes into the context is under risk."[32]
 - *We recommend* cooldown in every repo, an install-script audit, and pinning reviewed skills, plugins and MCP servers like packages.
 
@@ -122,7 +122,7 @@ See [Running AI in production](../4-run/ai-in-production-runbook.md) for operati
 
 ## 6. Getting started: a two-week spike
 
-*Our recommendation, not from the talks.* One small, real feature and one team.
+*Our recommendation, uncited.* One small, real feature and one team.
 
 - **Days 1-3:** turn on NuGet cooldown, trim AGENTS.md, add one architecture test. Build a thin slice: an ASP.NET Core endpoint in Aspire, one `IChatClient` call, one tool wrapping existing code, the trace ID on the business record.
 - **Days 4-5:** write 20-30 eval cases from written requirements; run them against two models.
@@ -139,12 +139,12 @@ Exit criteria: evals pass an agreed bar, every request traces from business reco
   - The experimental Blazor AI components, the preview AG-UI adapter,[6] skills over MCP (beta),[7] and Go AppHosts in Aspire 17 (preview).[9]
   - Decision-model support, still in progress,[11] VS managed settings (Insiders),[43] and the Azure agent services, whose release status was not stated.[16]
 - **Vendor numbers lack baselines,** such as Visual Studio's harness resolving "up to 21 additional tasks" on the same model (Microsoft's claim).[43]
-- **Auto-captions:** versions heard on stream may be garbled, such as the cooldown's CLI version.[30]
-- **Mostly vendor voices.** Most sessions were Microsoft teams on their own products; community results are single-team reports.
+- **Auto-captions:** versions heard in the video recordings may be garbled, such as the cooldown's CLI version.[30]
+- **Mostly vendor voices.** Most sources are Microsoft teams describing their own products; community results are single-team reports.
 
 ## Related
 
-[.NET Conf 2026](https://dotnetconf.com/agenda), [AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
+[AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
 
 **Read next:** [Running AI in production](../4-run/ai-in-production-runbook.md), or go back to the [handbook home](../README.md).
 

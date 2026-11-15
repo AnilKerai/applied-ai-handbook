@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: everyone*
 
-Plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions, each with a talk or industry source that uses it. *Why it matters* lines are our advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
+Plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions, each with a practitioner or industry source that uses it. *Why it matters* lines are our advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
 
 ## A
 
@@ -149,7 +149,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Model swap**
 - Replacing the AI model inside a product with a newer, cheaper or different supplier's model, without rebuilding the rest. Syngenta built its system to survive a model change, though "you have to reevaluate afterwards".[8]
-- *Why it matters:* the trends sharpen this; in ByteDance Seed's HarnessDev study, one agent harness fell from 69.3 to 33.0 when a different model ran it (the paper's figures).[20]
+- *Why it matters:* newer evidence sharpens this; in ByteDance Seed's HarnessDev study, one agent harness fell from 69.3 to 33.0 when a different model ran it (the paper's figures).[20]
 
 ## O
 

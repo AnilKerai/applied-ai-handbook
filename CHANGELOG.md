@@ -2,6 +2,14 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-15: reframed as a compendium
+
+- Removed conference and event framing from the documents. The handbook now presents practitioners'
+  reports, published studies and our recommendations directly. Speaker attributions, every citation and
+  every quote are unchanged; the Sources lists still say where each talk was given.
+- The lunch-and-learn deck is renamed `1-understand/ai-lunch-and-learn` (outline and .pptx).
+- `scripts/check.py` gained a fifth check that flags event names above the Sources block.
+
 ## 2026-11-15: first public version
 
 - Published 19 documents in five sections (Understand, Decide, Build, Run, Lead), each with an
@@ -15,7 +23,8 @@ Newest first. Every correction lists what changed and the evidence.
     approval rose 56.1%. Earlier figures (718 firms, +23% PRs, +49% review time) came from the
     October version.
   - **AWS Emulator anecdote** re-attributed: Swami Sivasubramanian supervised an agent rebuilding a
-    replication engine for four nights; with a spec and a test environment it took about two hours.
+    replication engine for four nights before seeing it had no way to check its results; with a spec
+    and a test environment the rebuild took about two hours.
   - **CypherGuard:** a strong model goes from 71.76% unaided to 94.68% with repair (Table 7). The
     88.50% figure is a small model with repair.
   - **SO-Arena** tested 21 models, not 21 decision models. Its best-performing System One model ranked

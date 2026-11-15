@@ -51,7 +51,7 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 - **The furthest-ahead teams rebuilt around it.** Cognition runs its lifecycle on its own agent by default, escalating to people for judgement, after rebuilding its infrastructure and team shape. It reports merged PRs up 40x in about a year while headcount grew 2.7x.[11]
 - **People remain the limit.** Steve Yegge, running about 50 agents, found "the more agents I deploy, the more humans I need", and that after he yelled at his factory, its agents piled on so many rules that "nothing ever happened".[12] Armin Ronacher: "human attention is for me at least the limiting factor".[13]
 
-### Industry trend
+### Newer evidence
 
 - **Independent data tempers the throughput claims.** A Harvard study of engineering data from 655 firms (revised November 2026) found coding agents raised output (44.0% more lines of code, 35.7% more pull requests) but resolved issues by only 13.7%, a borderline-significant rise, while time from review submission to approval rose 56.1%.[14] This supports SEP and Finch on review as the bottleneck. It contradicts any reading of Cognition's or Kiro's figures as typical: on average, the extra code has not turned into proportional gains in shipped software. The data is observational and ends in August 2026.[14]
 - **Risk-tiered review is now documented practice.** Anthropic's Claude Code team moves most reading to machines and uses a risk classifier to set how many people must approve (none, one or two). It reports merged PRs more than doubling from June to September while the revert share fell by over 40%, but admits it has no automatic brake yet that tightens approval when reverts rise.[15] These are vendor figures, from a team with unusual tooling.

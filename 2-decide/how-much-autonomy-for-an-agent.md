@@ -20,9 +20,9 @@ as_of: "November 2026"
 *Reading time: about 4 minutes · Best for: anyone deploying agents*
 
 A decision tree for setting an agent's autonomy, **per kind of action** (open a PR, merge,
-deploy, page a human), not per agent. It is distilled from [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap),
-[AIE CODE Summit 2026](https://ai.engineer/code) and [.NET Conf 2026](https://dotnetconf.com/agenda). Every rule comes from practitioners'
-conference talks, and the company results are their own claims. The goal is the right fit for your
+deploy, page a human), not per agent. Start at the top for each kind of action, and come back to it before
+each promotion. Every rule cites a practitioner, and the company results are their own claims. The goal
+is the right fit for your
 constraints, not a "dark factory" (SEP). Companion page: [Should this task use AI, and which kind?](should-this-task-use-ai.md).
 
 ```mermaid
@@ -56,7 +56,7 @@ flowchart TD
   [Rethinking Claude Code Best Practices](https://ai.engineer/code/2026/talks/lydia-hallie)). SEP's rule is "verification before
   velocity". A client's two-day prototype stalled on the way to production, partly because
   millions of input parameters left no scalable way to verify every output
-  ([Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)). Tie tests to the written requirements, not
+  ([Not Every Team Needs a Dark Factory](https://midwestaisummit.com/2026-recap)). Tie tests to the written requirements, not
   the agent's own reading of them
   ([Test Smarter: AI-Assisted Testing for Modern .NET](https://www.youtube.com/watch?v=fKnZotxlEec&t=6)).
 - **Domain knowledge, budget, sponsor, goal, code oversight.** With verifiability these
@@ -67,7 +67,7 @@ flowchart TD
   the more individual the mode. One team deliberately stopped at a shared knowledge-base
   mode because verifiability mattered more: buildings must not fall down. Another, with no
   token limit and strong backing, ran an orchestrated agent team and reported a "six x
-  reduction of effort" ([Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)). Use
+  reduction of effort" ([Not Every Team Needs a Dark Factory](https://midwestaisummit.com/2026-recap)). Use
   factories on brownfield work that keeps existing "promises", not greenfield discovery
   ([Brownfield factories keep the promises you already made](https://ai.engineer/code/2026/talks/justin-mccarthy)).
 - **Enforce limits in the environment first.** Move each safeguard out of the prompt and

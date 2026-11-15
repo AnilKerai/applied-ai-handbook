@@ -19,10 +19,10 @@ as_of: "November 2026"
 
 *Reading time: about 4 minutes · Best for: anyone proposing AI work*
 
-A decision tree distilled from the Oct–Nov 2026 talk digests ([Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap),
-[AIE CODE Summit 2026](https://ai.engineer/code), [.NET Conf 2026](https://dotnetconf.com/agenda)). Run it **per task or workflow step, not per
-project** (Porter). The rules come from practitioners' conference talks; a few cite published studies, but none
-of the advice was tested as a whole, so treat the order as a strong default, not a law. Companion page:
+A decision tree for deciding whether a task should use AI and, if it should, which kind and how closely a
+person stays involved. Run it **per task or workflow step, not per project** (Porter). Every rule cites a
+practitioner, and a few also cite published studies, but none of the advice was tested as a whole, so treat
+the order as a strong default, not a law. Companion page:
 [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md).
 
 ```mermaid
@@ -57,9 +57,9 @@ flowchart TD
 - **'Never' list.** Write a charter of what AI will never do *before* any code. IMB's covers
   posing as a human, final decisions about people made solely by AI, monitoring people without
   their knowledge, autonomous action in high-stakes settings, and counselling. "Something can be worse than
-  nothing." Check trust as well as feasibility (Barger, [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)).
+  nothing." Check trust as well as feasibility (Barger, [Building AI Trust: What We Said Yes To, and What We Didn't](https://midwestaisummit.com/2026-recap)).
 - **Better or more efficient?** If AI gives neither a better outcome nor less effort, don't use it.
-  Then weigh the risk of error against the consequence (Lay, [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)).
+  Then weigh the risk of error against the consequence (Lay, [AI Moves Fast: Four Decisions You Own](https://midwestaisummit.com/2026-recap)).
 - **Data first.** It must be accurate, complete, consistent and fresh enough *for this task*.
   Stale data "quietly" gives wrong answers. Ground any LLM in the systems of record at
   runtime (Porter).
@@ -75,7 +75,7 @@ flowchart TD
   Vendor numbers are [vendor].
 - **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a
   narrow job: interface, router, explainer, "compare and flag" (Porter's Syngenta and
-  Stanford cases; Taillie, [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)). If you don't, use an agent bounded
+  Stanford cases; Taillie, [From Photos to Queries: Practical AI Agents for Real Workflows](https://midwestaisummit.com/2026-recap)). If you don't, use an agent bounded
   by cost and time. In UiPath's fraud demo, a decision model asks whether there is enough
   evidence and an agent starts only when there isn't
   ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath)). LLMs make good assistants but unreliable automators, because RLHF assumes a human in the loop
@@ -87,7 +87,7 @@ flowchart TD
   ones ([Less Chat, More Action: AI-Powered .NET MAUI Apps](https://www.youtube.com/watch?v=FYGBT08-N48&t=5)).
 - **Evals.** "An agent without evals is a proof of concept." Build the eval set *with* the
   people who do the job and keep the data flywheel running after release (Solorio,
-  [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap)). Look past averages to the worst cases (Porter).
+  [Building AI With Workers, Not For Them](https://midwestaisummit.com/2026-recap)). Look past averages to the worst cases (Porter).
 - **Ship.** A rule in a prompt isn't enforced. Put guardrails in code, types or a gateway
   outside the agent's reach (Porter;
   [Infrastructure as (Actual) Code with C# 15 and .NET 11](https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176),
