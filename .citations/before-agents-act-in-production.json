@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://midwestaisummit.com/yvonne-carlson",
+      "title": "Yvonne Carlson (ExploreGod), The Agent Needs a Leash, Not Just a Brain, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=24028",
+      "title": "Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 1), .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809",
+      "title": "Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 2), .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558",
+      "title": "Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/online-harvey-agent-platform",
+      "title": "Joey Wang (Harvey), The harness has to finish the job, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/online-undo-button",
+      "title": "Tanmay Sah & Dolly Sah, An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/online-zenity-skills",
+      "title": "Roey Ben Chaim (Zenity), A Skill's Instructions Are Not Its Behavior, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://www.youtube.com/watch?v=H54iAyM08VM&t=6",
+      "title": "Jon Douglas (Microsoft, NuGet team), Securing Your NuGet Dependencies in the Age of AI, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic, Investigating unintended model actions in our evaluations and internal use",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents",
+      "title": "Matthew Green (A Few Thoughts on Cryptographic Engineering), Is sandboxing sufficient to contain rogue agents?",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://arxiv.org/abs/2610.29869",
+      "title": "Arshan Dabirsiaghi (Pixee), Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents (arXiv 2610.29869)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2",
+      "title": "Anthropic, Prompting Claude Fable 5.2: keep caution from piling up",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=29691",
+      "title": "Michael Washington (Microsoft MVP, BlazorHelpWebsite.com), What NOT to AI: Hand-Crafting Your App's Core Foundation, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/doug-clauson",
+      "title": "Doug Clauson (AWS), Ship More as a Team of One with Kiro Crew, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://www.youtube.com/watch?v=fKnZotxlEec&t=6",
+      "title": "McKenna Barlow (Microsoft), Test Smarter: AI-Assisted Testing for Modern .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; and Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://midwestaisummit.com/yvonne-carlson",
+      "title": "Yvonne Carlson (ExploreGod), The Agent Needs a Leash, Not Just a Brain, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta",
+      "title": "Simon Willison, The lethal trifecta for AI agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/online-undo-button",
+      "title": "Tanmay Sah and Dolly Sah (organisation not stated), An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/online-harvey-agent-platform",
+      "title": "Joey Wang (Harvey), The harness has to finish the job, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps",
+      "title": "Simon Willison, Default hard budget caps",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://arxiv.org/abs/2609.01437",
+      "title": "ByteDance Seed, HarnessDev (arXiv 2609.01437)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/online-aws-specification-analyzer",
+      "title": "Rajath Kotyal (AWS), Specs have bugs too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

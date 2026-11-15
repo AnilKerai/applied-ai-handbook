@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+.obsidian/
+# Slide render-check images
+**/.render/
+# Private patterns for the leak check (never commit)
+.leakcheck.local
+__pycache__/

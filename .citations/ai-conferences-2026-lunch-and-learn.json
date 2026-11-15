@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://techpoint.org/digital-innovation/midwest-ai-summit-2026-indianapolis",
+      "title": "TechPoint, Midwest AI Summit returns to Indianapolis October 15",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://midwestaisummit.com/2026-recap",
+      "title": "Midwest AI Summit, 2026 Recap (speakers and talk titles)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code",
+      "title": "AI Engineer, AI Engineer Code Summit 2026 (AIE CODE) event page",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://dotnetconf.com/agenda",
+      "title": ".NET Conf, .NET Conf 2026 agenda (dotnetconf.com)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows; Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450",
+      "title": "Luis Quintanilla (Microsoft), The .NET AI Stack: What's New, What's Next, and How It Fits Together, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=29537",
+      "title": "Bruno Capuano (GitHub), .NET + Foundry: Better Together, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "title": "Anthropic, Claude Fable 5.2 and Mythos 5.2",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/ishaan-dey",
+      "title": "Ishaan Dey (Google DeepMind), Judgement is the last job, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
+      "title": "Strands Agents blog, Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://huggingface.co/papers/2611.15777",
+      "title": "SO-Arena authors (arXiv 2611.15777), SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://midwestaisummit.com/yvonne-carlson",
+      "title": "Yvonne Carlson (ExploreGod), The Agent Needs a Leash, Not Just a Brain, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809",
+      "title": "Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 2), .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic, Investigating unintended model actions in our evaluations and internal use",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 22,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=22243",
+      "title": "Wendy Breiding (Microsoft), Beyond Autocomplete: Getting the Most from GitHub Copilot for .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 23,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 24,
+      "url": "https://ai.engineer/code/2026/talks/online-robinhood-review",
+      "title": "Chetas Joshi (Robinhood), Who reviews the bots?, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 25,
+      "url": "https://ai.engineer/code/2026/talks/zach-bruggeman",
+      "title": "Zach Bruggeman (Ramp), How to build an agent that builds the culture, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 26,
+      "url": "https://midwestaisummit.com/jason-beutler",
+      "title": "Jason Beutler (Robosource), The Order Matters: Structuring AI Projects Around People, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 27,
+      "url": "https://ai.engineer/code/2026/talks/online-duolingo-tests",
+      "title": "Kush Agrawal (Duolingo), Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 28,
+      "url": "https://ai.engineer/code/2026/talks/jarred-sumner",
+      "title": "Jarred Sumner (Anthropic), Choose the project you can verify, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 29,
+      "url": "https://www.youtube.com/watch?v=fKnZotxlEec&t=6",
+      "title": "McKenna Barlow (Microsoft), Test Smarter: AI-Assisted Testing for Modern .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 30,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=20349",
+      "title": "Gerald Versluis (Microsoft), Beyond Code Generation: Give AI Eyes and Hands for .NET MAUI, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 31,
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "title": "Swami Sivasubramanian (AWS, All Things Distributed), AWS Emulator and the engineer's job when agents write the code",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 32,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 33,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 34,
+      "url": "https://ai.engineer/code/2026/talks/andrew-finch",
+      "title": "Andrew Finch (Sonar), Building a Safe Software Factory, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 35,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 36,
+      "url": "https://services.google.com/fh/files/misc/2025_state_of_ai_assisted_software_development.pdf",
+      "title": "DORA (Google Cloud), State of AI-assisted Software Development 2025",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 37,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Fiona Chen & James Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 38,
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+      "title": "Anthropic (Claude Code team), How the Claude Code team does code review",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 39,
+      "url": "https://ai.engineer/code/2026/talks/walden-yan",
+      "title": "Walden Yan (Cognition), A New Age of Software Engineering, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

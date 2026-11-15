@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents",
+      "title": "Matthew Green, Is sandboxing sufficient to contain rogue agents?",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://addyo.substack.com/p/agentic-verification",
+      "title": "Addy Osmani, Agentic Verification",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://arxiv.org/abs/2610.29869",
+      "title": "Pixee, Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents (arXiv 2610.29869)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; and Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram and Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan (organisation unconfirmed), All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558",
+      "title": "Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/online-brian-douglas",
+      "title": "Brian Douglas (organisation unconfirmed), If You Are Going to Verbally Abuse Your Agents, at Least Label the Outcome, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://martinfowler.com/articles/harness-engineering.html",
+      "title": "Birgitta Böckeler (Thoughtworks), Harness engineering, martinfowler.com",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/docs/tutorials/learn-then-hand-off.md",
+      "title": "AgentRun (Parcha), Learn-then-hand-off tutorial",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/docs/case-studies/merchant-classification.md",
+      "title": "AgentRun (Parcha), merchant-classification case study",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta",
+      "title": "Simon Willison, The lethal trifecta for AI agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=11360",
+      "title": "Stephen Halter (Microsoft), What's new in the MCP C# SDK, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://arxiv.org/abs/2609.01437",
+      "title": "ByteDance Seed, HarnessDev (arXiv 2609.01437)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://arxiv.org/abs/2405.11706",
+      "title": "Allemang and Sequeda, Increasing the LLM accuracy for question answering: ontologies to the rescue! (arXiv 2405.11706)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 22,
+      "url": "https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection",
+      "title": "NCSC, Prompt injection is not SQL injection (it may be worse)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 23,
+      "url": "https://ai.engineer/code/2026/talks/jeffrey-pinner",
+      "title": "Jeffrey Pinner (Exa), What Your AI Doesn't Know, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 24,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 25,
+      "url": "https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026",
+      "title": "dbt Labs, Semantic layer vs text-to-SQL (2026)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 26,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=20440",
+      "title": "Sam Basu (Uno Platform), Developer Workflows in AI Age - Local or Cloud, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 27,
+      "url": "https://ai.engineer/code/2026/talks/online-zenity-skills",
+      "title": "Roey Ben Chaim (Zenity), A Skill's Instructions Are Not Its Behavior, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 28,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=29691",
+      "title": "Michael Washington (Microsoft MVP, BlazorHelpWebsite.com), What NOT to AI: Hand-Crafting Your App's Core Foundation, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 29,
+      "url": "https://www.youtube.com/watch?v=H54iAyM08VM&t=6",
+      "title": "Jon Douglas (Microsoft), Securing Your NuGet Dependencies in the Age of AI, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 30,
+      "url": "https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing",
+      "title": "DORA, Finding balance in the era of tokenmaxxing",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 31,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 32,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=552",
+      "title": "Mads Kristensen (Microsoft), Keynote (day 2), .NET Conf 2026",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

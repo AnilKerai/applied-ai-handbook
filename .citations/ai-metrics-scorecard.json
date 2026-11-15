@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/online-duolingo-tests",
+      "title": "Kush Agrawal (Duolingo), Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+      "title": "Anthropic (Claude Code team), How the Claude Code team does code review",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Chen & Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing",
+      "title": "DORA (Evan Conaway), Finding balance in the era of tokenmaxxing",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/online-uber-merging",
+      "title": "Preetam Dwivedi & Manjari Akella (Uber), Green Pull Requests Can Still Break the Trunk, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=26062",
+      "title": "Jeffrey Palermo (Clear Measure), .NET AI Architecture and DevOps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (Independent), Software Factories: Escape from Trash Mountain, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; and Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/andrew-finch",
+      "title": "Andrew Finch (Sonar), Building a Safe Software Factory, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/online-robinhood-review",
+      "title": "Chetas Joshi (Robinhood), Who reviews the bots?, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/online-brian-douglas",
+      "title": "Brian Douglas (organisation unconfirmed), If You Are Going to Verbally Abuse Your Agents, at Least Label the Outcome, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://www.anthropic.com/engineering/claude-code-auto-mode",
+      "title": "Anthropic, How we built Claude Code auto mode",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://ai.engineer/code/2026/talks/philipp-schmid",
+      "title": "Philipp Schmid (Google DeepMind), I deleted 90% of my harness (And It Got Better), AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula & Vlad (Meta), From answering the page to sharing the on-call rotation, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://intelligentartifact.com/posts/practical-ai-midwest-summit-boundaries-and-accountability",
+      "title": "Intelligent Artifact, review of Practical AI's Midwest AI Summit Part 2",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

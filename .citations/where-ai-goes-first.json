@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows; Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/michelle-chen",
+      "title": "Michelle Chen (Cloudflare), cloudflare is a neolab, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450",
+      "title": "Luis Quintanilla (Microsoft), The .NET AI Stack: What's New, What's Next, and How It Fits Together, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://www.youtube.com/watch?v=FYGBT08-N48&t=5",
+      "title": "Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
+      "title": "Strands Agents blog, Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://huggingface.co/papers/2611.15777",
+      "title": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models (arXiv 2611.15777)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/docs/case-studies/merchant-classification.md",
+      "title": "AgentRun (Parcha), Opus learns the job, a cheap model runs it (merchant-classification case study)",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

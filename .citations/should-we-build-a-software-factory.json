@@ -1,0 +1,113 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/andrew-finch",
+      "title": "Andrew Finch (Sonar), Building a Safe Software Factory, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://ai.engineer/code/2026/talks/doug-clauson",
+      "title": "Doug Clauson (AWS, Kiro), Ship More as a Team of One with Kiro Crew, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/dexter-horthy",
+      "title": "Dexter Horthy (Factory), A software factory needs pressure in both directions, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/jarred-sumner",
+      "title": "Jarred Sumner (Anthropic), Choose the project you can verify, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/justin-mccarthy",
+      "title": "Justin McCarthy (Diffusion), Brownfield factories keep the promises you already made, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/walden-yan",
+      "title": "Walden Yan (Cognition), A New Age of Software Engineering, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/armin-ronacher",
+      "title": "Armin Ronacher (Earendil), The Software Atelier, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Fiona Chen & James Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+      "title": "Anthropic (Claude Code team), How the Claude Code team does code review",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "title": "Swami Sivasubramanian (AWS, All Things Distributed), AWS Emulator and the engineer's job when agents write the code",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+      "title": "Google DeepMind, Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature",
+      "title": "Google Research, Advancing science & engineering with Antigravity's /teamwork",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

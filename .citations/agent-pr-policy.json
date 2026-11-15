@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula & Vlad (Meta), From answering the page to sharing the on-call rotation, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/online-robinhood-review",
+      "title": "Chetas Joshi (Robinhood), Who reviews the bots?, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://ai.engineer/code/2026/talks/andrew-finch",
+      "title": "Andrew Finch (Sonar), Building a Safe Software Factory, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/online-skills-knowledge",
+      "title": "Nikolay Petrov, Your SKILL.md is 70% of Things the Model Already Knows, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=22243",
+      "title": "Wendy Breiding (Microsoft), Beyond Autocomplete: Getting the Most from GitHub Copilot for .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/online-ayush-cli",
+      "title": "Ayush Bhardwaj, Your agent hates your CLI, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/online-zenity-skills",
+      "title": "Roey Ben Chaim (Zenity), A Skill's Instructions Are Not Its Behavior, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://midwestaisummit.com/yvonne-carlson",
+      "title": "Yvonne Carlson (ExploreGod), The Agent Needs a Leash, Not Just a Brain, Midwest AI Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://www.youtube.com/watch?v=H54iAyM08VM&t=6",
+      "title": "Jon Douglas (Microsoft), Securing Your NuGet Dependencies in the Age of AI, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://ai.engineer/code/2026/talks/online-stephen-cassandra",
+      "title": "Stephen Chin (Neo4j) & Cassandra Chin, Give the PR writer an evidence packet, not another context dump, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/online-duolingo-tests",
+      "title": "Kush Agrawal (Duolingo), Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://www.youtube.com/watch?v=fKnZotxlEec&t=6",
+      "title": "McKenna Barlow (Microsoft), Test Smarter: AI-Assisted Testing for Modern .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://ai.engineer/code/2026/talks/online-harvey-agent-platform",
+      "title": "Joey Wang (Harvey), The harness has to finish the job, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://ai.engineer/code/2026/talks/online-brian-douglas",
+      "title": "Brian Douglas, If You Are Going to Verbally Abuse Your Agents, at Least Label the Outcome, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 22,
+      "url": "https://ai.engineer/code/2026/talks/online-uber-merging",
+      "title": "Preetam Dwivedi & Manjari Akella (Uber), Green Pull Requests Can Still Break the Trunk, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 23,
+      "url": "https://ai.engineer/code/2026/talks/online-undo-button",
+      "title": "Tanmay Sah & Dolly Sah, An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AIE CODE 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 24,
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "title": "Swami Sivasubramanian (AWS), AWS Emulator and the engineer's job when agents write the code",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 25,
+      "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature",
+      "title": "Google Research, Advancing science & engineering with Antigravity's /teamwork",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 26,
+      "url": "https://github.com/Nari-Ab/agent-roast",
+      "title": "Nari-Ab, agent-roast: stops AI coding agents making the build green by weakening tests (GitHub)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 27,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2",
+      "title": "Anthropic, Prompting Claude Fable 5.2: Keep caution from piling up",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 28,
+      "url": "https://arxiv.org/abs/2610.29869",
+      "title": "Pixee, Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents (arXiv 2610.29869)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 29,
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.323",
+      "title": "Anthropic, Claude Code release v2.1.323 (Code Mode)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 30,
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "title": "Anthropic, Claude Code release v2.1.321 (deny-rule and sandbox fixes)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 31,
+      "url": "https://arxiv.org/abs/2602.11988",
+      "title": "ETH Zurich, Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents? (arXiv 2602.11988)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 32,
+      "url": "https://arxiv.org/abs/2610.04832",
+      "title": "arXiv 2610.04832, Agent Skill Evolution: How Revisions Affect Coding Agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 33,
+      "url": "https://arxiv.org/abs/2611.05390",
+      "title": "arXiv 2611.05390, Who May Overrule the Agent? Evidence-Gated Authority in LLM Review Institutions",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 34,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic, Investigating unintended model actions in our evaluations and internal use",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 35,
+      "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
+      "title": "GitHub, GitHub intelligence puts your code, context, and history to work (changelog)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 36,
+      "url": "https://simonwillison.net/2026/Nov/9/details-summary",
+      "title": "Simon Willison, Hide your slop PR descriptions behind details/summary",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

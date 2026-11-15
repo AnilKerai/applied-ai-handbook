@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://ai.engineer/code/2026/talks/andrew-finch",
+      "title": "Andrew Finch (Sonar), Building a Safe Software Factory, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://ai.engineer/code/2026/talks/doug-clauson",
+      "title": "Doug Clauson (AWS, Kiro), Ship More as a Team of One with Kiro Crew, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/justin-mccarthy",
+      "title": "Justin McCarthy (Diffusion), Brownfield factories keep the promises you already made, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/jarred-sumner",
+      "title": "Jarred Sumner (Anthropic), Choose the project you can verify, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows; Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://midwestaisummit.com/jason-beutler",
+      "title": "Jason Beutler (Robosource), The Order Matters: Structuring AI Projects Around People, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/docs/case-studies/merchant-classification.md",
+      "title": "AgentRun (Parcha), Opus learns the job, a cheap model runs it (merchant-classification case study)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Fiona Chen & James Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production (revised Nov 2026; copy dated 14 Nov 2026, accessed 15 Nov)",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 17,
+      "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software",
+      "title": "Ars Technica, AI coding agents generate more code, but not more software",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+      "title": "Anthropic (Claude Code team), How the Claude Code team does code review",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://arxiv.org/abs/2610.17471",
+      "title": "arXiv 2610.17471, Scaling Inference-Time Compute with Teams of Coding Agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
+      "title": "Strands Agents blog, Amazon saves millions by replacing Sonnet 4.6 with Strands Decider",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://huggingface.co/papers/2611.15777",
+      "title": "SO-Arena: Benchmarking the Capability Spectrum and Reliability of System One Models (arXiv 2611.15777)",
+      "accessed": "2026-11-14"
+    }
+  ]
+}

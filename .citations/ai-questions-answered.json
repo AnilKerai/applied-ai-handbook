@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; and Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 2,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/jarred-sumner",
+      "title": "Jarred Sumner (Anthropic), Choose the project you can verify, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 4,
+      "url": "https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html",
+      "title": "Swami Sivasubramanian (AWS), AWS Emulator and the engineer's job when agents write the code",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/zach-bruggeman",
+      "title": "Zach Bruggeman (Ramp), How to build an agent that builds the culture, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 6,
+      "url": "https://midwestaisummit.com/jason-beutler",
+      "title": "Jason Beutler (Robosource), The Order Matters: Structuring AI Projects Around People, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/online-harvey-agent-platform",
+      "title": "Joey Wang (Harvey), The harness has to finish the job, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 8,
+      "url": "https://midwestaisummit.com/nick-kuhn",
+      "title": "Nick Kuhn (VMware Tanzu), Zero-Code Agents, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 9,
+      "url": "https://x.com/latentspacepod/status/2117721636195663898",
+      "title": "Latent Space, Zach Lloyd (Warp) on software factories, 3 Nov 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 11,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Chen & Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (Independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/walden-yan",
+      "title": "Walden Yan (Cognition), A New Age of Software Engineering, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 14,
+      "url": "https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing",
+      "title": "DORA, Finding balance in the era of tokenmaxxing",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 15,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/philipp-schmid",
+      "title": "Philipp Schmid (Google DeepMind), I deleted 90% of my harness (And It Got Better), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=22243",
+      "title": "Wendy Breiding (Microsoft), Beyond Autocomplete: Getting the Most from GitHub Copilot for .NET, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 18,
+      "url": "https://arxiv.org/abs/2610.17471",
+      "title": "Cohere authors (arXiv 2610.17471), Scaling Inference-Time Compute with Teams of Coding Agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://github.com/Parcha-ai/agentrun/blob/main/docs/case-studies/merchant-classification.md",
+      "title": "AgentRun (Parcha), merchant-classification case study",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 20,
+      "url": "https://arxiv.org/abs/2609.01437",
+      "title": "ByteDance Seed, HarnessDev (arXiv 2609.01437)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 21,
+      "url": "https://ai.engineer/code/2026/talks/jeffrey-pinner",
+      "title": "Jeffrey Pinner (Exa), What Your AI Doesn't Know, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 22,
+      "url": "https://ai.engineer/code/2026/talks/online-brian-douglas",
+      "title": "Brian Douglas (organisation unconfirmed), If You Are Going to Verbally Abuse Your Agents, at Least Label the Outcome, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 23,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 24,
+      "url": "https://www.anthropic.com/research/components-of-agent-memory",
+      "title": "Anthropic, The components of agent memory",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 25,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 26,
+      "url": "https://strandsagents.com/blog/amazon-saves-millions-replacing-sonnet-with-strands-decider",
+      "title": "Strands Agents, Amazon saves millions replacing Sonnet with Strands Decider",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 27,
+      "url": "https://developers.openai.com/api/docs/guides/decisions",
+      "title": "OpenAI, Decisions API guide",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 28,
+      "url": "https://simonwillison.net/2026/Nov/11",
+      "title": "Simon Willison, weblog for 11 Nov 2026 (Gemini Decision 1)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 29,
+      "url": "https://huggingface.co/papers/2611.15777",
+      "title": "Hugging Face Papers, SO-Arena (paper 2611.15777)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 30,
+      "url": "https://www.mdpi.com/1999-5903/18/7/365",
+      "title": "MDPI paper 1999-5903/18/7/365, knowledge graph vs SQL retrieval for LLM agents over structured health records (Jul 2026)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 31,
+      "url": "https://arxiv.org/abs/2506.05690",
+      "title": "arXiv 2506.05690, When to use Graphs in RAG (GraphRAG-Bench)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 32,
+      "url": "https://arxiv.org/abs/2610.41755",
+      "title": "arXiv 2610.41755, CypherGuard: detect-and-repair for text-to-Cypher queries",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 33,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=11360",
+      "title": "Stephen Halter (Microsoft), What's new in the MCP C# SDK, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 34,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=9595",
+      "title": "Juergen Gutsch (organisation not named), Building a multi agent solution using Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 35,
+      "url": "https://ai.engineer/code/2026/talks/thariq-shihipar",
+      "title": "Thariq Shihipar (Independent), Keep the human inside the creative loop, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 36,
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321",
+      "title": "Anthropic, Claude Code v2.1.321 release notes",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 37,
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic",
+      "title": "Anthropic (Claude Code team), How the Claude Code team does code review",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 38,
+      "url": "https://ai.engineer/code/2026/talks/online-robinhood-review",
+      "title": "Chetas Joshi (Robinhood), Who reviews the bots?, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 39,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 40,
+      "url": "https://arxiv.org/abs/2610.10961",
+      "title": "arXiv 2610.10961, cross-provider review as a runtime contract (pilot)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 41,
+      "url": "https://ai.engineer/code/2026/talks/online-skills-knowledge",
+      "title": "Nikolay Petrov (organisation not stated), Your SKILL.md is 70% of Things the Model Already Knows, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 42,
+      "url": "https://arxiv.org/abs/2610.04832",
+      "title": "Wang et al. (arXiv 2610.04832), Agent Skill Evolution: How Revisions Affect Coding Agents",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 43,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 44,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 45,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2",
+      "title": "Anthropic, Prompting Claude Fable 5.2: keep caution from piling up",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 46,
+      "url": "https://midwestaisummit.com/yvonne-carlson",
+      "title": "Yvonne Carlson (ExploreGod), The Agent Needs a Leash, Not Just a Brain, Midwest AI Summit 2026 (abstract)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 47,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 48,
+      "url": "https://ai.engineer/code/2026/talks/online-undo-button",
+      "title": "Tanmay Sah and Dolly Sah (organisation not stated), An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 49,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic, Investigating unintended model actions",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 50,
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.295",
+      "title": "Anthropic, Claude Code v2.1.295 release notes",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 51,
+      "url": "https://www.brianletort.ai/industry/agents/2026-W42",
+      "title": "Brian Letort, agents week 42 (summarising Neuralwatt production cache data)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 52,
+      "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+      "title": "Anthropic, When to fold subagents into your main agent loop",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 53,
+      "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps",
+      "title": "Simon Willison, Default hard budget caps",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 54,
+      "url": "https://ai.engineer/code/2026/talks/melvin-johnson",
+      "title": "Melvin Johnson (Google DeepMind), Train on the engineering work that still fails, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 55,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 56,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=2341",
+      "title": "Rachel Kang and Barbara (Microsoft), The State of AI in Visual Studio, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 57,
+      "url": "https://code.claude.com/docs/en/data-usage",
+      "title": "Anthropic, Claude Code docs: Data usage (as read 12 Oct 2026)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 58,
+      "url": "https://code.claude.com/docs/en/zero-data-retention",
+      "title": "Anthropic, Claude Code docs: Zero data retention (as read 12 Oct 2026)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 59,
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "title": "anthropics/claude-code issue 107757, harness put the account email in its web searches' User-Agent headers",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 60,
+      "url": "https://news.ycombinator.com/item?id=50407882",
+      "title": "Hacker News, discussion of Apiiro's finding that Claude Code allow rules stored secrets in settings files",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 61,
+      "url": "https://ai.engineer/code/2026/talks/online-zenity-skills",
+      "title": "Roey Ben Chaim (Zenity), A Skill's Instructions Are Not Its Behavior, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 62,
+      "url": "https://www.youtube.com/watch?v=H54iAyM08VM&t=6",
+      "title": "Jon Douglas (Microsoft), Securing Your NuGet Dependencies in the Age of AI, .NET Conf 2026",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 63,
+      "url": "https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection",
+      "title": "NCSC, Prompt injection is not SQL injection (it may be worse)",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 64,
+      "url": "https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents",
+      "title": "Matthew Green, Is sandboxing sufficient to contain rogue agents?",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 65,
+      "url": "https://arxiv.org/abs/2610.29869",
+      "title": "arXiv 2610.29869, compaction laundering: forged user turns survive context compaction",
+      "accessed": "2026-11-14"
+    },
+    {
+      "id": 66,
+      "url": "https://www.youtube.com/watch?v=LL0YmIyBKSU",
+      "title": "Latent Space, The 2026 Software Factory Infra Stack — Zach Lloyd (Warp), full episode video, 3 Nov 2026",
+      "accessed": "2026-11-15"
+    }
+  ]
+}
