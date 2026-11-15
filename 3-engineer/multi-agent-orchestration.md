@@ -24,7 +24,7 @@ An agent is a model using tools in a loop; orchestration connects several agents
 Anthropic's *Building effective agents* (December 2024) describes one shape, orchestrator-workers, in which "a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results".[1]
 The same post separates workflows, "orchestrated through predefined code paths", from agents, which "dynamically direct their own processes and tool usage".[1]
 Anthropic's own research system uses an orchestrator-worker pattern: "a lead agent coordinates the process while delegating to specialized subagents that operate in parallel", a subagent being a helper agent given one sub-task.[2]
-A DZone article of August 2026 names the design work graph engineering: "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs".[3]
+A DZone article of August 2026 defines graph engineering as "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs".[3]
 For agents built by different teams to talk to each other, Google positions its Agent2Agent (A2A) protocol as complementing Anthropic's Model Context Protocol (MCP), "which provides helpful tools and context to agents".[4]
 
 ## When it arrived
@@ -34,7 +34,7 @@ Two posts a day apart in June 2025 took contrasting positions: Cognition's Walde
 On 18 July 2026 (UTC) Peter Steinberger asked "Are we still talking loops or did we shift to graphs yet?"[6]
 Hamel Husain's article "Loop Engineering Is Dead. Enter Graph Engineering" followed within hours, by Lulla et al.'s account, and is the earliest use of "graph engineering" found in the agent sense.[7][8]
 DZone later wrote that within a couple of days the debate had a name: graph engineering.[3]
-Two findings covered below followed: a Microsoft Research preprint on orchestrator limits in September 2026, and Anthropic's Applied AI team on folding subagents back in October 2026.[9][10]
+Two later pieces are covered below: a Microsoft Research preprint on orchestrator limits in September 2026, and Anthropic's Applied AI team on folding subagents back in October 2026.[9][10]
 
 ## Core principles
 
@@ -58,7 +58,7 @@ Cognition's first principle is "Share context, and share full agent traces, not 
 In Anthropic's account, each subagent may use "tens of thousands of tokens or more" exploring, but returns only "a condensed, distilled summary of its work (often 1,000-2,000 tokens)".[11]
 
 **Watch the orchestrator.**
-The Agensh preprint argues that multi-agent harnesses are "often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers", and its answer is a harness with no central orchestrator.[9]
+The Agensh preprint argues that the scalability of current multi-agent harnesses is "often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers", and its answer is a harness with no central orchestrator.[9]
 MarkTechPost's coverage calls this "the orchestrator ceiling", a phrase the paper itself does not use.[12]
 
 ## Where it shows up in this handbook
@@ -71,7 +71,7 @@ MarkTechPost's coverage calls this "the orchestrator ceiling", a phrase the pape
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/PRIMER.md#agentic-primitives) describes sub-agents in one example implementation, the handbook author's open-source .NET agent harness: to the calling agent a sub-agent is just a tool, and each runs with its own model, checks and budget.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) describes sub-agents in one example implementation, the handbook author's open-source .NET agent harness: to the calling agent a sub-agent is just a tool, and each runs with its own model, checks and budget.
 
 **Read next:** [AI pattern catalogue](../4-build/ai-pattern-catalogue.md), or go back to the [handbook home](../README.md).
 

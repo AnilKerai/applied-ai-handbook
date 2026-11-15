@@ -24,7 +24,7 @@ as_of: "November 2026"
 A prompt is the text a language model (an AI model trained to predict text) is given: the task, any worked examples and the input to work on.
 Brown et al.'s GPT-3 paper (2020) applied its model to tasks "specified purely via text interaction with the model", with a few worked examples and "without any gradient updates or fine-tuning", meaning no further training.[1]
 Prompt engineering is the craft of writing that text well, and a 2021 survey of prompting methods by Pengfei Liu and colleagues gave an early academic definition: creating a prompting function "that results in the most effective performance on the downstream task".[2]
-Anthropic describes its focus as "how to write effective prompts, particularly system prompts", the standing instructions that frame every request.[3]
+Anthropic describes prompt engineering's primary focus as "how to write effective prompts, particularly system prompts", the standing instructions that frame every request.[3]
 
 ## When it arrived
 
@@ -73,7 +73,7 @@ That wider job is [context engineering](context-engineering.md).
 
 ## See it built
 
-The [primer for model-harness](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/PRIMER.md#agentic-primitives), the handbook author's open-source .NET agent harness, shows one example implementation: it assembles what the model sees before each call from a pipeline of small components called *guides*, one of which primes ReAct-style reasoning.
+The [primer for model-harness](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering), the handbook author's open-source .NET agent harness, shows one example implementation: it assembles what the model sees before each call from a pipeline of small components called *guides*, one of which primes ReAct-style reasoning.
 
 **Read next:** [Context engineering](context-engineering.md), or go back to the [handbook home](../README.md).
 

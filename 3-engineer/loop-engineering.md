@@ -54,8 +54,8 @@ In Lulla et al.'s description, the Ralph technique "works around the finite cont
 
 **Close the loop on the harness.**
 LangChain's fourth, hill-climbing loop takes traces (step-by-step records of past runs) and "uses the findings to rewrite the harness with improved configuration", the harness being the code and settings around the model.[4]
-Done by people, this is what Mitchell Hashimoto called harness engineering: whenever an agent makes a mistake, "engineer a solution such that the agent never makes that mistake again".[9]
-A preprint of October 2026 (Wei et al.) formalises the automated version as harness self-evolution, which revises an agent's scaffolding "while keeping model weights fixed".[10]
+This resembles what Mitchell Hashimoto called harness engineering, done by hand: whenever an agent makes a mistake, "engineer a solution such that the agent never makes that mistake again".[9]
+A preprint of October 2026 (Wei et al.) formalises harness self-evolution, an automated counterpart, which revises an agent's scaffolding "while keeping model weights fixed".[10]
 
 **Treat the benefits as unproven.**
 Lulla et al. found that the practitioner sources on loop engineering "provide no systematic evidence of the claimed benefits".[3]
@@ -70,7 +70,7 @@ We recommend measuring each new loop against a baseline before scaling it up, an
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/PRIMER.md#loop-engineering) maps the four loops onto one example implementation, the handbook author's open-source .NET agent harness: the harness owns the agent loop and in-run checks, and leaves the outer loops to the system around it.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering) maps the four loops onto one example implementation, the handbook author's open-source .NET agent harness: the harness owns the agent loop and in-run checks, and leaves the outer loops to the system around it.
 
 **Read next:** [Eval engineering](eval-engineering.md), or go back to the [handbook home](../README.md).
 

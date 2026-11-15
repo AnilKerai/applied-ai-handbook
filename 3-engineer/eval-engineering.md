@@ -14,7 +14,7 @@ as_of: "November 2026"
 > - An eval is a repeatable test of an AI system: give it an input and grade what comes back.
 > - Eval engineering is a recent label for an established practice: building those tests, and refining them as you learn.
 > - Testing an agent means testing the model and the code around it together.
-> - Prefer fixed automatic checks, use AI markers with care, and run each case more than once.
+> - Prefer fixed automatic checks, use AI graders with care, and run each case more than once.
 > - The evals playbook in the Build section covers how to do it in practice.
 
 *Reading time: about 4 minutes · Best for: engineers and product owners*
@@ -26,9 +26,9 @@ as_of: "November 2026"
 Anthropic defines an eval as "a test for an AI system: give an AI an input, then apply grading logic to its output to measure success".[1]
 Eval engineering is the work of building and maintaining those tests, and the name is a label for an established practice rather than a coined discipline: its earliest use found is in the documentation of the ell library, which in December 2024 said "Updating and refining the eval in response to these insights is what we call eval engineering".[2]
 No source found coins the term.
-Two related terms come from Anthropic. An evaluation harness is "the infrastructure that runs evals end-to-end".[1]
+Anthropic defines two related terms. An evaluation harness is "the infrastructure that runs evals end-to-end".[1]
 An agent harness is the system that lets a model act as an agent, so when evaluating "an agent", Anthropic says, "we’re evaluating the harness and the model working together".[1]
-The grading itself is done by graders, and "Agent evaluations typically combine three types of graders: code-based, model-based, and human."[1]
+The grading itself is done by graders, and, Anthropic says, "Agent evaluations typically combine three types of graders: code-based, model-based, and human."[1]
 
 ## When it arrived
 
@@ -77,7 +77,7 @@ We recommend putting an eval gate in front of any such automatic change; [Loop e
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) shows where one example implementation, the handbook author's open-source .NET agent harness, draws the line: an eval scores runs without changing them, while a check inside a run feeds a failure back so the model can correct itself.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) shows where one example implementation, the handbook author's open-source .NET agent harness, draws the line: an eval scores runs without changing them, while a check inside a run feeds a failure back so the model can correct itself.
 
 **Read next:** [Multi-agent orchestration](multi-agent-orchestration.md), or go back to the [handbook home](../README.md).
 

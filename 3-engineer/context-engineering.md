@@ -47,11 +47,11 @@ Anthropic cites such studies under the name "context rot", and its guiding rule 
 Lance Martin groups the techniques into four buckets, in a post LangChain also published: writing context (saving it outside the window for later), selecting it (pulling it in when a step needs it), compressing it (keeping only the tokens the task requires) and isolating it (splitting it up).[12][13]
 
 **Select just in time.**
-Retrieval-augmented generation (RAG), which pairs a model with a searchable index of documents, was introduced by Lewis et al. in May 2020.[14]
+Lewis et al. published retrieval-augmented generation (RAG) models, which pair a model with a searchable index of documents, in May 2020.[14]
 Rather than loading everything up front, Anthropic describes agents that keep "lightweight identifiers (file paths, stored queries, web links, etc.)" and use them to load data at runtime.[2]
 
 **Compress with care.**
-Compaction is "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary".[2]
+Anthropic defines compaction as "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary".[2]
 Anthropic warns that overly aggressive compaction can lose "subtle but critical context whose importance only becomes apparent later".[2]
 Its context editing, launched on 29 September 2025, instead clears stale tool calls and results as the window nears its limit.[15]
 
@@ -68,8 +68,8 @@ In Anthropic's account, a subagent (a helper agent given one sub-task) may use "
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/PRIMER.md#context-engineering) maps the four buckets onto one example implementation, the handbook author's open-source .NET agent harness.
-Its [decision record on compaction](https://github.com/AnilKerai/model-harness/blob/7caff82/docs/decisions/002-incremental-fold-compaction.md) explains why it summarises only newly dropped steps on top of the previous summary.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) maps the four buckets onto one example implementation, the handbook author's open-source .NET agent harness.
+Its [decision record on compaction](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md) explains why it summarises only newly dropped steps on top of the previous summary.
 
 **Read next:** [Loop engineering](loop-engineering.md), or go back to the [handbook home](../README.md).
 
