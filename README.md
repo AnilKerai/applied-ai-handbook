@@ -50,7 +50,7 @@ The slides are `1-understand/ai-lunch-and-learn.pptx`; the outline has the speak
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 - **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
 
-Reading everything takes about 3 hours. Nobody needs to; pick a route.
+Reading everything takes about 4 hours. Nobody needs to; pick a route.
 
 ## How to read it
 

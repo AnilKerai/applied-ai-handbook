@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Anthropic, Building effective agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "orchestrated through predefined code paths",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "dynamically direct their own processes and tool usage",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "finding the simplest solution possible, and only increasing complexity when needed",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "title": "Anthropic, How we built our multi-agent research system",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a lead agent coordinates the process while delegating to specialized subagents that operate in parallel",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "most coding tasks involve fewer truly parallelizable tasks than research, and LLM agents are not yet great at coordinating and delegating to other agents in real time",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://dzone.com/articles/understanding-graph-engineering",
+      "title": "DZone, Graph Engineering: The Layer After Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://developers.googleblog.com/en/a2a-a-new-era-of-agent-interoperability",
+      "title": "Google, Announcing the Agent2Agent Protocol (A2A) (Google Developers Blog)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "which provides helpful tools and context to agents",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://cognition.ai/blog/dont-build-multi-agents",
+      "title": "Walden Yan (Cognition), Don't Build Multi-Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The simplest way to follow the principles is to just use a single-threaded linear agent",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Share context, and share full agent traces, not just individual messages",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Actions carry implicit decisions, and conflicting decisions carry bad results",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://x.com/steipete/status/2078277297791189132",
+      "title": "Peter Steinberger, post on X on loops and graphs (18 July 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Are we still talking loops or did we shift to graphs yet?",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://arxiv.org/html/2608.21884v3",
+      "title": "Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Loop Engineering Is Dead. Enter Graph Engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://x.com/HamelHusain/article/2078346425621237935",
+      "title": "Hamel Husain, Loop Engineering Is Dead. Enter Graph Engineering (article on X)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Loop Engineering Is Dead. Enter Graph Engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://arxiv.org/abs/2609.26781",
+      "title": "Microsoft Research, Agensh: Scaling Organizational Intelligence to 1,024 Agents (arXiv 2609.26781)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop",
+      "title": "Anthropic (Applied AI team), Building agents: When to fold subagents into your main agent loop",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "frequently outperformed both the one-prompt-for-everything design and the subagent design on quality",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "tens of thousands of tokens or more",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "a condensed, distilled summary of its work (often 1,000-2,000 tokens)",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents",
+      "title": "MarkTechPost, Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the orchestrator ceiling",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

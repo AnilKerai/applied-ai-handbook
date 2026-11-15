@@ -1,0 +1,217 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://blog.langchain.com/the-rise-of-context-engineering",
+      "title": "Harrison Chase (LangChain), The rise of \"context engineering\"",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "building dynamic systems to provide the right information and tools in the right format",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the set of strategies for curating and maintaining the optimal set of tokens (information) during LLM inference",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "the natural progression of prompt engineering",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "must be treated as a finite resource with diminishing marginal returns",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "lightweight identifiers (file paths, stored queries, web links, etc.)",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "subtle but critical context whose importance only becomes apparent later",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "tens of thousands of tokens or more",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "a condensed, distilled summary of its work (often 1,000-2,000 tokens)",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://x.com/karpathy/status/1937902205765607626",
+      "title": "Andrej Karpathy, post on X on context engineering (25 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the delicate art and science of filling the context window with just the right information for the next step",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://github.com/humanlayer/12-factor-agents/blob/bc4fa56e5645a8c5a81c89cbedd9d569ae7a6d51/12-factor-agents-2.md",
+      "title": "Dex Horthy (HumanLayer), 12-factor agents draft, commit of 31 March 2025 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "AI engineering is all about Context Engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://simonwillison.net/2025/Jun/27/context-engineering",
+      "title": "Simon Willison, Context engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "has recently started to gain traction as a better alternative to prompt engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://x.com/ankrgyl/status/1913766591910842619",
+      "title": "Ankur Goyal, post on X on context engineering (20 April 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the task of bringing the right information (in the right format) to the LLM",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://cognition.ai/blog/dont-build-multi-agents",
+      "title": "Walden Yan (Cognition), Don't Build Multi-Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "effectively the #1 job of engineers building AI agents",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://x.com/dexhorthy/status/1933283008863482067",
+      "title": "Dex Horthy, post on X: Everything is context engineering (12 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Everything is context engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://x.com/tobi/status/1935533422589399127",
+      "title": "Tobi Lütke, post on X on context engineering (19 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the art of providing all the context for the task to be plausibly solvable by the LLM",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://github.com/humanlayer/12-factor-agents/blob/d20c728368bf9c189d6d7aab704744decb6ec0cc/content/factor-03-own-your-context-window.md",
+      "title": "Dex Horthy (HumanLayer), 12-factor agents, Factor 3: Own your context window (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "started to become a pretty popular term",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://research.trychroma.com/context-rot",
+      "title": "Hong, Troynikov & Huber (Chroma), Context Rot: How Increasing Input Tokens Impacts LLM Performance",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "degrades as input length increases, often in surprising and non-uniform ways",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://rlancemartin.github.io/2025/06/23/context_engineering",
+      "title": "Lance Martin, Context Engineering for Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "I group approaches into 4 buckets — write, select, compress, and isolate — and give some examples of each one below.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://www.langchain.com/blog/context-engineering-for-agents",
+      "title": "LangChain, Context Engineering for Agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "In this post, we break down some common strategies — write, select, compress, and isolate — for context engineering by reviewing various popular agents and papers.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://arxiv.org/abs/2005.11401",
+      "title": "Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (arXiv 2005.11401)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) -- models which combine pre-trained parametric and non-parametric memory for language generation.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://www.anthropic.com/news/context-management",
+      "title": "Anthropic, Managing context on the Claude Developer Platform",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Context editing automatically clears stale tool calls and results from within the context window when approaching token limits.",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

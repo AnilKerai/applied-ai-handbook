@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "title": "Anthropic, Demystifying evals for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a test for an AI system: give an AI an input, then apply grading logic to its output to measure success",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "the infrastructure that runs evals end-to-end",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "we’re evaluating the harness and the model working together",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Agent evaluations typically combine three types of graders: code-based, model-based, and human.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "As k increases, pass^k falls since demanding consistency across more trials is a harder bar to clear.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/MadcowD/ell/blob/0e2759ca95ddb07ae0d0f360e739a5e8500a68c0/docs/src/core_concepts/evaluations.rst",
+      "title": "ell, Evaluations documentation, commit of 16 December 2024 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Updating and refining the eval in response to these insights is what we call eval engineering",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://arxiv.org/abs/2306.05685v4",
+      "title": "Zheng et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv 2306.05685v4)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "position, verbosity, and self-enhancement biases",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "limited reasoning ability",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://arxiv.org/abs/2310.06770v3",
+      "title": "Jimenez et al., SWE-bench: Can Language Models Resolve Real-World GitHub Issues? (arXiv 2310.06770v3)",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 5,
+      "url": "https://arxiv.org/abs/2406.12045",
+      "title": "Yao, Shinn, Razavi & Narasimhan (Sierra), τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains (arXiv 2406.12045)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a new metric (pass^k) to evaluate the reliability of agent behavior over multiple trials",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "succeed on <50% of the tasks, and are quite inconsistent",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://martinfowler.com/articles/harness-engineering.html",
+      "title": "Birgitta Böckeler, Harness engineering for coding agent users (martinfowler.com)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "deterministic and fast",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Slower and more expensive; results are more non-deterministic",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+      "title": "Sydney Runkle (LangChain), The Art of Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The hill climbing loop runs an analysis agent over those traces and uses the findings to rewrite the harness with improved configuration.",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

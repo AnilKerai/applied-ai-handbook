@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://platform.claude.com/docs/en/agent-sdk/agent-loop",
+      "title": "Anthropic, How the agent loop works (Claude Agent SDK docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "and repeats until the task is complete",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Setting a budget is a good default for production agents",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://addyosmani.com/blog/loop-engineering",
+      "title": "Addy Osmani, Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "replacing yourself as the person who prompts the agent. You design the system that does it instead.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://arxiv.org/html/2608.21884v3",
+      "title": "Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "designing automated control structures that repeatedly invoke coding agents, triggered on a schedule or by events, with each agent loop bounded by a machine-checkable stop condition",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "was coined in early June 2026",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "works around the finite context window by restarting the agent with a fresh context in every iteration while persisting progress to the file system",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "provide no systematic evidence of the claimed benefits",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://www.langchain.com/blog/the-art-of-loop-engineering",
+      "title": "Sydney Runkle (LangChain), The Art of Loop Engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a model calling tools in a loop until a task is complete",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "checks the output and sends feedback back to the model when it falls short",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "An event fires — a new document lands, a schedule triggers, a webhook arrives — and the agent runs.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "uses the findings to rewrite the harness with improved configuration",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://x.com/steipete/status/2063697162748260627",
+      "title": "Peter Steinberger, post on X on designing loops (7 June 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "You should be designing loops that prompt your agents",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://x.com/AndrewYNg/status/2071988145667928442",
+      "title": "Andrew Ng, post on X on loop engineering (30 June 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "is a hot buzzphrase",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://www.ibm.com/think/topics/loop-engineering",
+      "title": "IBM, What Is Loop Engineering?",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "with minimal human intervention",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Anthropic, Building effective agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "common to include stopping conditions (such as a maximum number of iterations) to maintain control",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "title": "Mitchell Hashimoto, My AI Adoption Journey",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "engineer a solution such that the agent never makes that mistake again",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/abs/2610.18813",
+      "title": "Wei et al., Self-Evolving Agent Harness (arXiv 2610.18813)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "while keeping model weights fixed",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

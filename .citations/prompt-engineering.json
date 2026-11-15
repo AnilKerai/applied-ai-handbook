@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://arxiv.org/abs/2005.14165",
+      "title": "Brown et al., Language Models are Few-Shot Learners (arXiv 2005.14165)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "specified purely via text interaction with the model",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "without any gradient updates or fine-tuning",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://arxiv.org/pdf/2107.13586v1",
+      "title": "Pengfei Liu et al., Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (arXiv 2107.13586v1)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "that results in the most effective performance on the downstream task",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "how to write effective prompts, particularly system prompts",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "the natural progression of prompt engineering",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "LLMs autonomously using tools in a loop",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "operate over multiple turns of inference and longer time horizons",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://arxiv.org/abs/2201.11903v6",
+      "title": "Wei et al., Chain-of-Thought Prompting Elicits Reasoning in Large Language Models (arXiv 2201.11903v6)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "sufficiently large language models",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://arxiv.org/abs/2210.03629",
+      "title": "Yao et al., ReAct: Synergizing Reasoning and Acting in Language Models (arXiv 2210.03629)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "reasoning traces and task-specific actions in an interleaved manner",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://simonwillison.net/2023/Feb/21/in-defense-of-prompt-engineering",
+      "title": "Simon Willison, In defense of prompt engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Prompt engineering as a discipline doesn’t get nearly the respect it deserves",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://x.com/karpathy/status/1937902205765607626",
+      "title": "Andrej Karpathy, post on X on context engineering (25 June 2025)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "People associate prompts with short task descriptions you'd give an LLM in your day-to-day use",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://simonwillison.net/2025/Jun/27/context-engineering",
+      "title": "Simon Willison, Context engineering",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a laughably pretentious term for typing things into a chatbot",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://simonwillison.net/2022/Sep/12/prompt-injection",
+      "title": "Simon Willison, Prompt injection attacks against GPT-3",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "a form of security exploit",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/abs/2503.18813",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design (arXiv 2503.18813)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "the untrusted data retrieved by the LLM can never impact the program flow",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}
