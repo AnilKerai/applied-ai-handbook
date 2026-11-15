@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "LLMs autonomously using tools in a loop",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://blog.langchain.com/the-anatomy-of-an-agent-harness",
+      "title": "Vivek Trivedy (LangChain), The Anatomy of an Agent Harness",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "A harness is every piece of code, configuration, and execution logic that isn't the model itself.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "title": "Anthropic, Demystifying evals for AI agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "is the system that enables a model to act as an agent: it processes inputs, orchestrates tool calls, and returns results.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "typically combine three types of graders: code-based, model-based, and human",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "title": "Mitchell Hashimoto, My AI Adoption Journey",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "anytime you find an agent makes a mistake, you take the time to engineer a solution such that the agent never makes that mistake again.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "grown to calling",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://openai.com/index/harness-engineering",
+      "title": "Ryan Lopopolo (OpenAI), Harness engineering: leveraging Codex in an agent-first world",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "is no longer to write code, but to design environments, specify intent, and build feedback loops that allow Codex agents to do reliable work",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "roughly 1,500 pull requests have been opened and merged with a small team of just three engineers driving Codex",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://martinfowler.com/articles/harness-engineering.html",
+      "title": "Birgitta Böckeler, Harness engineering for coding agent users (martinfowler.com)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "also provide us, their users, with many features to build an outer harness specifically for our use case and system",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "guides, sensors, computational and inferential elements, and harness templates",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "anticipate the agent's behaviour and aim to steer it before it acts",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "observe after the agent acts and help it self-correct",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "deterministic and fast, run by the CPU",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Tests, linters, type checkers, structural analysis",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "LLM as judge",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Slower and more expensive; results are more non-deterministic.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Separately, you get either an agent that keeps repeating the same mistakes (feedback-only) or an agent that encodes rules but never finds out whether they worked (feed-forward-only).",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://arxiv.org/html/2608.21884v3",
+      "title": "Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "only artifacts of the outer harness can appear in the repository of a project adopting loop engineering",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "until a stop condition ends it, such as a final response, an achieved goal, or a time limit",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://martinfowler.com/articles/exploring-gen-ai/harness-engineering-memo.html",
+      "title": "Birgitta Böckeler, Harness Engineering - first thoughts (martinfowler.com, 17 February 2026)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Though it’s only 2 weeks old",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "only mentions “harness” once in the text",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "an afterthought inspired by Mitchell Hashimoto’s recent blog post",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.softwareimprovementgroup.com/blog/what-is-harness-engineering",
+      "title": "Software Improvement Group, What is harness engineering?",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "coined by Mitchell Hashimoto in February 2026",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://arxiv.org/abs/2306.05685v4",
+      "title": "Zheng et al., Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena (arXiv 2306.05685v4)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "position, verbosity, and self-enhancement biases, as well as limited reasoning ability",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Anthropic, Building effective agents",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "it’s also common to include stopping conditions (such as a maximum number of iterations) to maintain control",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://platform.claude.com/docs/en/agent-sdk/agent-loop",
+      "title": "Anthropic, How the agent loop works (Claude Agent SDK docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Setting a budget is a good default for production agents.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "with a corresponding error subtype (error_max_turns or error_max_budget_usd)",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Without limits, the loop runs until Claude finishes on its own",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "can run long on open-ended prompts",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+      "title": "Anthropic, How we built our multi-agent research system",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "In our data, agents typically use about 4× more tokens than chat interactions, and multi-agent systems use about 15× more tokens than chats.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://www.anthropic.com/news/context-management",
+      "title": "Anthropic, Managing context on the Claude Developer Platform",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "automatically clears stale tool calls and results from within the context window when approaching token limits",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/compaction",
+      "title": "Anthropic, Compaction overview (Claude API docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "replaces the older turns of a conversation with a summary that Claude writes on the server",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "are in beta",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://arxiv.org/abs/2610.34425",
+      "title": "Busch et al., CTXAgent: Self-Controlled Context Management of LLM Agents (arXiv 2610.34425)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "decides when to compact, what to keep and what to write as the hand-off",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://openai.com/index/introducing-structured-outputs-in-the-api",
+      "title": "OpenAI, Introducing Structured Outputs in the API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "model outputs now reliably adhere to developer-supplied JSON Schemas",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "does not guarantee that the model’s response will conform to a particular schema",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/structured-outputs",
+      "title": "Anthropic, Structured outputs (Claude API docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "constrain Claude’s responses to follow a specific schema, ensuring valid, parseable output for downstream processing",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons",
+      "title": "Anthropic, Stop reasons and fallback (Claude API docs)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The stop_reason field is part of every successful Messages API response",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Unlike errors, which indicate failures in processing your request, stop_reason tells you why Claude completed its response generation.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The response reached your max_tokens limit.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Claude stopped because it reached the model’s context window limit.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "When a response is truncated because of token limits or the context window, append a notice so the reader knows the output is incomplete.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://github.com/openai/openai-python/blob/f348ec87b934c98889102668913e0a3ae7fc303d/src/openai/types/chat/chat_completion.py",
+      "title": "OpenAI, openai-python, src/openai/types/chat/chat_completion.py, commit of 9 September 2026 (GitHub)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "stop if the model hit a natural stop point or a provided stop sequence, length if the maximum number of tokens specified in the request was reached",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://simonwillison.net/2022/Sep/12/prompt-injection",
+      "title": "Simon Willison, Prompt injection attacks against GPT-3",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "it’s a form of security exploit",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://simonwillison.net/2025/Aug/9/bay-area-ai",
+      "title": "Simon Willison, My Lethal Trifecta talk at the Bay Area AI Security Meetup",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "I coined the term prompt injection nearly three years ago, in September 2022. It’s important to note that I did not discover the vulnerability.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "This time I’ve coined the term the lethal trifecta.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta",
+      "title": "Simon Willison, The lethal trifecta for AI agents: private data, untrusted content, and external communication",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "private data, untrusted content, and external communication",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "If your agent combines these three features, an attacker can easily trick it into accessing your private data and sending it to that attacker.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "url": "https://arxiv.org/abs/2503.18813",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design (arXiv 2503.18813)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "explicitly extracts the control and data flows from the (trusted) query; therefore, the untrusted data retrieved by the LLM can never impact the program flow.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "url": "https://arxiv.org/html/2503.18813v2",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design, HTML of version 2 (arXiv 2503.18813v2)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Capabilities are metadata assigned to each value passed to a tool that track the sources and allowed recipients of each value.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "url": "https://arxiv.org/abs/2503.18813v2",
+      "title": "Debenedetti et al., Defeating Prompt Injections by Design, version 2 (arXiv 2503.18813v2)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "of tasks with provable security (compared to",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

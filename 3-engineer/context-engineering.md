@@ -71,7 +71,7 @@ In Anthropic's account, a subagent (a helper agent given one sub-task) may use "
 The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) maps the four buckets onto one example implementation, the handbook author's open-source .NET agent harness.
 Its [decision record on compaction](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md) explains why it summarises only newly dropped steps on top of the previous summary.
 
-**Read next:** [Loop engineering](loop-engineering.md), or go back to the [handbook home](../README.md).
+**Read next:** [Harness engineering](harness-engineering.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 
