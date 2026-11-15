@@ -51,7 +51,7 @@ This guide sets out the stack and practices we recommend for AI work on .NET 11.
 5. **Guardrails and gateway.** Azure's AI Gateway fronts models and tools with fallbacks, per-client token budgets and hooks that run guardrails out of the agent's reach.[5] Simon Willison argues for hard budget caps on by default.[17]
 6. **Tracing, with the trace ID on the business record.** Persist `Activity.Current.TraceId` with the business records in one transaction, with an explicit final status.[8] In Iyer's failure demo, Foundry returned 200 while the transaction rolled back.[8]
 
-See [Running AI in production](../4-run/ai-in-production-runbook.md) for operations and [AI pattern catalogue](ai-pattern-catalogue.md) for patterns.
+See [Running AI in production](../5-run/ai-in-production-runbook.md) for operations and [AI pattern catalogue](ai-pattern-catalogue.md) for patterns.
 
 ## 3. Practices
 
@@ -76,7 +76,7 @@ See [Running AI in production](../4-run/ai-in-production-runbook.md) for operati
 - Justin Yoo separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". He starts from a cloned workspace with a proxied token; Azure Container Apps sandboxes allow all outbound traffic until a policy is set.[27]
 - Paul Yuknewicz sandboxes the tool, with egress and managed identity off by default in his demo,[16] unlike the allow-all default Yoo described,[27] so check the defaults before relying on either. Gutsch: "the LLM should not know any credentials".[4]
 - *Industry:* sandboxes have bugs; one coding-agent release fixed a shell case that skipped the sandbox.[28] Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache.[29]
-- *We recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) section 4.
+- *We recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) section 4.
 
 ### Supply chain: cooldown, audit, skills as dependencies
 
@@ -144,9 +144,9 @@ Exit criteria: evals pass an agreed bar, every request traces from business reco
 
 ## Related
 
-[AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
+[AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
 
-**Read next:** [Running AI in production](../4-run/ai-in-production-runbook.md), or go back to the [handbook home](../README.md).
+**Read next:** [Running AI in production](../5-run/ai-in-production-runbook.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

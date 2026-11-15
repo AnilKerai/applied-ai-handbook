@@ -2,6 +2,16 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-15: Engineer section
+
+- **New section, `3-engineer/`,** between Decide and Build: the engineering disciplines under every AI
+  system (prompt, context, harness, loop and eval engineering), how they fit together and when they
+  arrived. It comes before Build because Build applies these disciplines, so a reader meets them first.
+- **Later sections renumbered** to keep the folders in learning order: `3-build/` is now `4-build/`,
+  `4-run/` is now `5-run/` and `5-lead/` is now `6-lead/`. Every link between documents was updated;
+  no document's content changed. Links from outside the repo need the new folder number.
+- `scripts/check.py` now checks all six sections.
+
 ## 2026-11-15: reframed as a compendium
 
 - Removed conference and event framing from the documents. The handbook now presents practitioners'

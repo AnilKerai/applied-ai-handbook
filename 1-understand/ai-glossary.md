@@ -57,7 +57,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Dark factory**
 - A way of building software in which AI agents write, review, test and ship the code with no person involved, so the lights could be off.[8]
-- *Why it matters:* SEP argues that not every team needs one; the right level depends on constraints such as budget, domain knowledge and how easily output can be checked.[8] See [Should we aim for a fully automated software factory?](../5-lead/should-we-build-a-software-factory.md).
+- *Why it matters:* SEP argues that not every team needs one; the right level depends on constraints such as budget, domain knowledge and how easily output can be checked.[8] See [Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md).
 
 **Data flywheel**
 - A loop that keeps an AI feature improving: a sample of real use is scored, people review the failures, and those cases join the test set that the next version is measured against.[8]
@@ -79,7 +79,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Eval (eval set)**
 - A repeatable test of an AI feature: a set of real example cases with agreed right answers, scored every time anything changes. Kevin Solorio (Focused): "an agent without evals is a proof of concept".[8]
-- *Why it matters:* without evals nobody can show that a change made things better, or that a new model is safe to switch to. See [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md).
+- *Why it matters:* without evals nobody can show that a change made things better, or that a new model is safe to switch to. See [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md).
 
 **Execution dial**
 - Heidi Porter's (Moyer Group AI) four settings for who acts: a person approves first; the system acts when confident and passes the rest to a person; it acts but gives a person time to undo; or it acts alone.[8]
@@ -217,7 +217,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 ## Related
 
-[AI questions answered](ai-questions-answered.md) · [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) · [AI pattern catalogue](../3-build/ai-pattern-catalogue.md)
+[AI questions answered](ai-questions-answered.md) · [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) · [AI pattern catalogue](../4-build/ai-pattern-catalogue.md)
 
 **Read next:** [AI questions answered](ai-questions-answered.md), or go back to the [handbook home](../README.md).
 

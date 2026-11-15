@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering and operations*
 
-*Draft runbook* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../5-lead/before-agents-act-in-production.md). Steps are our recommendations; cited lines are the evidence. Company figures are the companies' own claims.
+*Draft runbook* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md). Steps are our recommendations; cited lines are the evidence. Company figures are the companies' own claims.
 
 ## 1. Go-live readiness check
 
@@ -56,7 +56,7 @@ Tick every item before the first production run, and file the evidence with the 
   - Porter's observability means "being able to recover and replay and catch drift before an incident"; one production-line system was monitored for 52 weeks.[10]
   - Stale data will "quietly give you the wrong answers".[10] Konda tags each fact with source version and time, and decisions use only facts within a freshness limit.[2]
   - We should alert when input mix, refusals or tool errors shift, and when a source goes stale.
-- **Re-run evals on every model or prompt change.** Armin Ronacher tracks corrections, aborts and 90th-percentile run time across model upgrades.[11] The method, including when to re-run, is in [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md) (sections 6 and 8).
+- **Re-run evals on every model or prompt change.** Armin Ronacher tracks corrections, aborts and 90th-percentile run time across model upgrades.[11] The method, including when to re-run, is in [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md) (sections 6 and 8).
 
 ## 4. Control levers
 

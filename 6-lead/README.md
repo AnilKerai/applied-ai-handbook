@@ -1,4 +1,4 @@
-# 5. Lead
+# 6. Lead
 
 For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
 

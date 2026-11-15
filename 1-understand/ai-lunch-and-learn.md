@@ -354,7 +354,7 @@ For any AI feature already in flight, we should agree who owns its eval set and 
 On the engineering side, the next time we correct a coding agent twice for the same thing, we should encode it as a check.
 Finally, we should measure review time and reverts now, so any decision to give agents more autonomy rests on our own numbers.
 
-**Links:** [AI intake checklist](../2-decide/ai-intake-checklist.md) · [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md) · [Working with coding agents](../3-build/working-with-coding-agents.md) · [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) · [What to measure: AI metrics scorecard](../4-run/ai-metrics-scorecard.md).
+**Links:** [AI intake checklist](../2-decide/ai-intake-checklist.md) · [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md) · [Working with coding agents](../4-build/working-with-coding-agents.md) · [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) · [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md).
 
 ---
 
@@ -382,8 +382,8 @@ Our toolkit has the longer versions: the intake checklist, the two decision tree
 ## Related
 
 - Decision trees: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md) and [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)
-- Leadership memos: [Should we aim for a fully automated software factory?](../5-lead/should-we-build-a-software-factory.md), [What must be true before AI agents can act in production?](../5-lead/before-agents-act-in-production.md), [Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)
-- Engineering: [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md), [Working with coding agents](../3-build/working-with-coding-agents.md), [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md)
+- Leadership memos: [Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md), [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md), [Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)
+- Engineering: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md), [Working with coding agents](../4-build/working-with-coding-agents.md), [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)
 - Questions: [AI questions answered](ai-questions-answered.md)
 
 **Read next:** [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md), or go back to the [handbook home](../README.md).

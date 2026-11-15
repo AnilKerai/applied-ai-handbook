@@ -25,7 +25,7 @@ Two ladders, for AI in engineering (coding agents) and AI in the business (featu
 
 - **Assess per team or per workflow, never company-wide.** For SEP, a team's constraints decide its mode: "The mode is your fit."[1]
 - **Aim for fit, not the top stage.** SEP, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] A team that stops at E2 on purpose is mature, not behind.
-- **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
+- **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
 - **Promote on exit criteria, demote when they lapse,** and re-assess quarterly.
 
 ## 2. Engineering track: coding agents
@@ -123,8 +123,8 @@ Answer per team or workflow; any no means stay.
 
 A recommendation; swap in each team's own examples.
 
-- **90 days, baseline:** place every team and two or three workflows, noting what blocks each. Agree the charter and owners ([AI intake checklist](../2-decide/ai-intake-checklist.md)). Engineering: shared repo context, [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) at L1–L2, and baselines for review time, reverts and regret-free merges. Business: one narrow, checkable step ([Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)) with user-built evals ([Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md)).
-- **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly token and [What to measure: AI metrics scorecard](../4-run/ai-metrics-scorecard.md) reviews.
+- **90 days, baseline:** place every team and two or three workflows, noting what blocks each. Agree the charter and owners ([AI intake checklist](../2-decide/ai-intake-checklist.md)). Engineering: shared repo context, [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) at L1–L2, and baselines for review time, reverts and regret-free merges. Business: one narrow, checkable step ([Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)) with user-built evals ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)).
+- **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly token and [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md) reviews.
 - **12 months, scale where it fits:** E3 where constraints allow; L4 only for named actions whose regret-free merge rate beats our engineers'. B4 agents with tested undo, and one learn-then-hand-off trial alongside the current path. Re-assess every team, noting who stayed put by choice.
 
 ## 6. Newer evidence

@@ -21,7 +21,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FOLDERS = ["1-understand", "2-decide", "3-build", "4-run", "5-lead"]
+FOLDERS = ["1-understand", "2-decide", "3-engineer", "4-build", "5-run", "6-lead"]
 
 BUILTIN_PATTERNS = [
     r"/Users/", r"~/", r"\[\[", r"\bVault notes\b", r"talk-notes/",

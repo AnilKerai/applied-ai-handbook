@@ -1,4 +1,4 @@
-# 4. Run
+# 5. Run
 
 Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 

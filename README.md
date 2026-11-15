@@ -18,21 +18,21 @@ Skim the questions you care about, then the two tools you'll use most. Keep the 
 **Engineer building AI features or using coding agents** (about 70 minutes)
 
 1. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
-2. [AI pattern catalogue](3-build/ai-pattern-catalogue.md)
-3. [Evals playbook](3-build/evals-playbook.md)
-4. [Working with coding agents](3-build/working-with-coding-agents.md)
-5. [Agent-written pull requests and agent autonomy](4-run/agent-pr-policy.md)
-6. [Running AI in production](4-run/ai-in-production-runbook.md)
+2. [AI pattern catalogue](4-build/ai-pattern-catalogue.md)
+3. [Evals playbook](4-build/evals-playbook.md)
+4. [Working with coding agents](4-build/working-with-coding-agents.md)
+5. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
+6. [Running AI in production](5-run/ai-in-production-runbook.md)
 
 Add the .NET guide if you work in .NET.
 
 **Leader planning AI adoption** (about 40 minutes)
 
 1. [Where should AI go in our product or operations first?](2-decide/where-ai-goes-first.md)
-2. [What must be true before AI agents can act in production?](5-lead/before-agents-act-in-production.md)
-3. [Should we aim for a fully automated software factory?](5-lead/should-we-build-a-software-factory.md)
-4. [AI maturity model and roadmap](5-lead/ai-maturity-model.md)
-5. [What to measure: AI metrics scorecard](4-run/ai-metrics-scorecard.md)
+2. [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md)
+3. [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md)
+4. [AI maturity model and roadmap](6-lead/ai-maturity-model.md)
+5. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
 6. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
 
 **Presenting to your team** (about 20 minutes)
@@ -41,13 +41,14 @@ Add the .NET guide if you work in .NET.
 
 The slides are `1-understand/ai-lunch-and-learn.pptx`; the outline has the speaker notes and sources.
 
-## The five sections
+## The six sections
 
 - **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, and a lunch-and-learn you can give to your team.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
-- **[3. Build](3-build/README.md)**: How to build AI features well: proven patterns, how to test them, and how developers should work with coding agents.
-- **[4. Run](4-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
-- **[5. Lead](5-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
+- **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: prompt, context, harness, loop and eval engineering, how they fit together, when they arrived, and first-hand lessons from building them.
+- **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, and how developers should work with coding agents.
+- **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
+- **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
 
 Reading everything takes about 3 hours. Nobody needs to; pick a route.
 

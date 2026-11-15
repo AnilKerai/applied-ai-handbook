@@ -1,4 +1,4 @@
-# 3. Build
+# 4. Build
 
 How to build AI features well: proven patterns, how to test them, and how developers should work with coding agents.
 

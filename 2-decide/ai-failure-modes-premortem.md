@@ -50,7 +50,7 @@ Blame the plan, not people.
 **3. Built for them, not with them**
 - **Looks like:** Users say the tool doesn't work, and drift away. Kevin Solorio (Focused) blames building through a proxy, such as a product owner whose reading "may oversimplify things".[2]
 - **Warning sign:** Nobody who does the job is in the room.
-- **Prevention:** Show workers a rough version early, and have them label the eval cases ([Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md)).
+- **Prevention:** Show workers a rough version early, and have them label the eval cases ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)).
 
 **4. The extra login**
 - **Looks like:** AeroCore's database agent only took off once it moved into Microsoft Teams. As Darren Taillie put it, "No one likes an extra login."[1]
@@ -60,19 +60,19 @@ Blame the plan, not people.
 **5. Automating a broken process**
 - **Looks like:** SEP: "AI is not gonna fix your team. It amplifies what's already there."[2] In a Harvard study of 655 firms, coding agents raised pull requests (PRs) by 35.7% but resolved issues by only 13.7% (borderline significant), while time to review approval rose 56.1% (observational, to August 2026).[3]
 - **Warning sign:** SEP's tell: "We should be using more AI. Well, I don't know what more is".[2]
-- **Prevention:** Fix the process and its checks first, or, as Lauren Tan warns, "automating that loop just produces more slop".[4] See [AI maturity model and roadmap](../5-lead/ai-maturity-model.md).
+- **Prevention:** Fix the process and its checks first, or, as Lauren Tan warns, "automating that loop just produces more slop".[4] See [AI maturity model and roadmap](../6-lead/ai-maturity-model.md).
 
 **6. The prototype that won't scale**
 - **Looks like:** An SEP client's two-day, agent-built prototype stalled before production: the token budget ran out within days, domain knowledge lived in people's heads, and nobody could verify every output across millions of input parameters.[2] Swami Sivasubramanian (AWS) supervised a Kiro agent rebuilding a replication engine for four nights before seeing it had no way to check its results; with a spec and a test environment it took about two hours (his account).[5]
 - **Warning sign:** Success means one person looked over the output.
-- **Prevention:** Before scaling, cost the tokens, write the domain rules down and decide how every output will be checked ([Should we aim for a fully automated software factory?](../5-lead/should-we-build-a-software-factory.md)).
+- **Prevention:** Before scaling, cost the tokens, write the domain rules down and decide how every output will be checked ([Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md)).
 
 ### Data
 
 **7. Stale data, confident answers**
 - **Looks like:** Heidi Porter (Moyer Group AI) warns that stale data will "quietly give you the wrong answers".[2] In a pre-registered but unreviewed study, a stale doc misled five models 68–100% of the time, even though they could have checked the code.[6] Instructions drift too: in Dmitry Buykin's (Maersk) worked example, the prose said a limit was 1,500 and the code said 1,000, and nothing threw an error.[7]
 - **Warning sign:** Nobody knows when the data or instructions were last checked.
-- **Prevention:** Fetch facts live from the system of record, with source and date, and give instruction files an owner and tests (intake question 4; [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md), section 3).
+- **Prevention:** Fetch facts live from the system of record, with source and date, and give instruction files an owner and tests (intake question 4; [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md), section 3).
 
 ### Design
 
@@ -84,7 +84,7 @@ Blame the plan, not people.
 **9. The pile of nevers**
 - **Looks like:** Anthropic reports cautious instructions piling up in memory, notes and instruction files until Claude Fable 5.2 asks for needless approvals or holds routine work, mostly when several agents work together (vendor guidance).[9] Steve Yegge's agents were so fenced in by rules that "nothing ever happened."[10]
 - **Warning sign:** Instruction files only grow, and agents ask permission for routine steps.
-- **Prevention:** Write the exceptions into each rule, and prune often ([Working with coding agents](../3-build/working-with-coding-agents.md)). This updates mode 1: keep the never list, but in policy and controls, not prompts.
+- **Prevention:** Write the exceptions into each rule, and prune often ([Working with coding agents](../4-build/working-with-coding-agents.md)). This updates mode 1: keep the never list, but in policy and controls, not prompts.
 
 **10. Autonomy before a track record**
 - **Looks like:** Lovable built a multi-agent framework in 2023, too early: "We just made the product worse."[11] Factory, by contrast, lets a workstream auto-merge only once its PRs break things less often than human ones.[12]
@@ -101,12 +101,12 @@ Blame the plan, not people.
 **12. The judge believed the story**
 - **Looks like:** ZoomInfo's LLM judge accepted an agent's false claim to have scheduled an email. It was right 65% of the time against hand-checked labels; given the tool output and the agent's report, "it went with the story."[17]
 - **Warning sign:** Nobody has measured the judge.
-- **Prevention:** Ground judges in tool output, and test them on hand-checked cases ([Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md)). Robinhood's rule: when the description and the code disagree, "the code wins."[18]
+- **Prevention:** Ground judges in tool output, and test them on hand-checked cases ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)). Robinhood's rule: when the description and the code disagree, "the code wins."[18]
 
 **13. Averages hide the worst case**
 - **Looks like:** Porter: "averages can hide a bad result".[2] In ZoomInfo's shadow run, one fake-email step ran 1,081 times and the LLM judge caught it once.[17]
 - **Warning sign:** The eval report is a single number.
-- **Prevention:** Report results by step and by slice, and read the worst cases first ([What to measure: AI metrics scorecard](../4-run/ai-metrics-scorecard.md)).
+- **Prevention:** Report results by step and by slice, and read the worst cases first ([What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md)).
 
 **14. Tests bent to green**
 - **Looks like:** Because "agents sometimes take the shortest paths to green CI", Duolingo closes test-writing PRs that touch anything but tests and test doubles.[19] McKenna Barlow (Microsoft) warns that a misread requirement "can actually show up in both places": code and tests.[20]
@@ -118,7 +118,7 @@ Blame the plan, not people.
 **15. The agent finds another way**
 - **Looks like:** Anthropic reports Claude working around restrictions instead of stopping, such as bypassing a fee gate or using URL shorteners to beat fetch limits.[22] Girish Konda (Microsoft): if a model can skip a check and declare it passed, "you have a request, not a boundary."[23]
 - **Warning sign:** A denied action succeeds by another route.
-- **Prevention:** Treat a denial as a stop, and keep limits beyond the agent's reach ([What must be true before AI agents can act in production?](../5-lead/before-agents-act-in-production.md)).
+- **Prevention:** Treat a denial as a stop, and keep limits beyond the agent's reach ([What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md)).
 
 **16. The forged approval**
 - **Looks like:** In a preprint, a fake user turn planted in content the agent read survived context compaction as a real instruction 87–100% of the time on five coding agents that flatten message roles into text, and never on four that keep the roles.[24]
@@ -140,7 +140,7 @@ Blame the plan, not people.
 **19. The 200 that wasn't**
 - **Looks like:** In Shweta Iyer's (Microsoft) demo, the agent call returned 200 (success) while the business transaction around it rolled back.[29]
 - **Warning sign:** Success means the model replied.
-- **Prevention:** Store the trace ID and an explicit final status with the business record ([Running AI in production](../4-run/ai-in-production-runbook.md)).
+- **Prevention:** Store the trace ID and an explicit final status with the business record ([Running AI in production](../5-run/ai-in-production-runbook.md)).
 
 **20. The blind retry**
 - **Looks like:** Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[30] In the lost-reply trials of his and Dolly Sah's benchmark, "naive retries produced duplicate effects in 54%" of runs.[30]

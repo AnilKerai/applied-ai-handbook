@@ -21,7 +21,7 @@ as_of: "November 2026"
 
 *Draft for discussion.* How to tell whether AI is working: (A) coding agents in engineering, (B) AI features and agents in the business. Formulas and template are our recommendations; Evidence lines report sources, and company figures are their own, mostly unbaselined, claims.
 
-It expands section 9 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and the measurement answer in [AI questions answered](../1-understand/ai-questions-answered.md); evals are in [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md).
+It expands section 9 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and the measurement answer in [AI questions answered](../1-understand/ai-questions-answered.md); evals are in [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md).
 
 ## Ground rules
 
@@ -167,9 +167,9 @@ B. Business
 Autonomy changes, evals added, decisions needed: <lines>
 ```
 
-Related: [Running AI in production](ai-in-production-runbook.md) · [AI maturity model and roadmap](../5-lead/ai-maturity-model.md) · [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)
+Related: [Running AI in production](ai-in-production-runbook.md) · [AI maturity model and roadmap](../6-lead/ai-maturity-model.md) · [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)
 
-**Read next:** [What must be true before AI agents can act in production?](../5-lead/before-agents-act-in-production.md), or go back to the [handbook home](../README.md).
+**Read next:** [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

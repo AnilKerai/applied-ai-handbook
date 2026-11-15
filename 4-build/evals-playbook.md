@@ -158,7 +158,7 @@ Our practitioner sources say little about statistics, so this section draws on p
 - Robinhood collects reasoned human replies daily; misses become new rules, and false escalations reveal missing context.[15]
 - Ara Khan (Cline) treats each human correction as a capability gap to cover, and buckets eval failures by type before fixing the harness.[11]
 
-**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] We should let tooling fill the queue and keep people deciding what enters the set. Live operation is in [Running AI in production](../4-run/ai-in-production-runbook.md).
+**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] We should let tooling fill the queue and keep people deciding what enters the set. Live operation is in [Running AI in production](../5-run/ai-in-production-runbook.md).
 
 ## 7. Evals for coding agents and their context
 
@@ -173,7 +173,7 @@ Our practitioner sources say little about statistics, so this section draws on p
 - Factory's risk judge "reads its policy from our mainline branch so that the change can't rewrite the rules that it's being judged by."[25]
 - Johnson's graders hide the tests and git history until the agent submits, because agents had peeked at tests and resubmitted.[7]
 - Google's /teamwork checks agents' results against unmodified test suites, with critics working from a clean context (Google's account).[24]
-- The [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) turns these into merge rules.
+- The [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) turns these into merge rules.
 
 **Test skills and AGENTS.md with and without, per model.**
 - Petrov runs each skill's tasks with and without it, comparing solves, tokens and time; larger models already knew about 70% of skills' general ideas but only 22% of the details.[17]
@@ -224,7 +224,7 @@ Week 2:
 7. **Day 9.** Shadow a sample of live traffic, set up the annotation queue, and book a weekly review slot.
 8. **Day 10.** Report pass^k with confidence intervals, worst-case failures, cost, latency and the judge's kappa, and record the re-run triggers in the [AI feature spec template](../2-decide/ai-feature-spec.md).
 
-Related: [What to measure: AI metrics scorecard](../4-run/ai-metrics-scorecard.md), [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md), [What must be true before AI agents can act in production?](../5-lead/before-agents-act-in-production.md), [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
+Related: [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md), [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md), [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md), [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
 
 **Read next:** [Working with coding agents](working-with-coding-agents.md), or go back to the [handbook home](../README.md).
 

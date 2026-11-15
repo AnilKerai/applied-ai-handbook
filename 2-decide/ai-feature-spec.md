@@ -118,8 +118,8 @@ A written spec matters more when AI does the building or the deciding. Michael W
 ## Related
 
 - Start with [AI intake checklist](ai-intake-checklist.md); [Should this task use AI, and which kind?](should-this-task-use-ai.md) and [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md) help with sections 6 and 8.
-- [Evals playbook: how to build and run evals for an AI feature or agent](../3-build/evals-playbook.md) helps with section 7 and [Running AI in production](../4-run/ai-in-production-runbook.md) with sections 11 to 13; use [AI failure modes: a pre-mortem checklist](ai-failure-modes-premortem.md) to test a finished spec.
-- [Agent-written pull requests and agent autonomy: draft engineering standard](../4-run/agent-pr-policy.md) if coding agents will build it; [AI glossary for leadership](../1-understand/ai-glossary.md) for terms.
+- [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md) helps with section 7 and [Running AI in production](../5-run/ai-in-production-runbook.md) with sections 11 to 13; use [AI failure modes: a pre-mortem checklist](ai-failure-modes-premortem.md) to test a finished spec.
+- [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) if coding agents will build it; [AI glossary for leadership](../1-understand/ai-glossary.md) for terms.
 
 **Read next:** [AI failure modes: a pre-mortem checklist](ai-failure-modes-premortem.md), or go back to the [handbook home](../README.md).
 
