@@ -1,0 +1,86 @@
+# AGENTS.md: Applied AI Handbook
+
+A public, CC BY 4.0 compendium of practical, evidence-cited knowledge about AI engineering and about
+bringing AI into a business or an engineering team. Readers are colleagues, engineering leads and senior
+leadership, many of them new to AI. Write for them.
+
+## Layout
+
+- `1-understand/`: the basics. Glossary, common questions answered, a lunch-and-learn deck.
+- `2-decide/`: is this a job for AI, and which kind? Decision trees, intake checklist, feature spec,
+  pre-mortem, where AI goes first.
+- `3-engineer/`: the engineering disciplines (prompt, context, harness, loop and eval engineering,
+  orchestration), the big-picture map, the timeline, and first-person lessons from the maintainer's own
+  builds.
+- `4-build/`: how to build it. Pattern catalogue, evals playbook, working with coding agents, .NET guide.
+- `5-run/`: how to run it. Production runbook, agent PR policy, metrics scorecard.
+- `6-lead/`: how to steer it. Leadership memos, maturity model.
+- `README.md` in the root and in each folder: reading routes and the folder's contents.
+- `.citations/<doc-slug>.json`: the citation ledger behind each document's Sources block.
+- `scripts/check.py`: the pre-publish check (citations, links, leaks, structure, framing).
+- `scripts/build_deck.py`: builds the pptx from its outline.
+- `CHANGELOG.md`: every correction and update, newest first.
+
+## Rules for every document
+
+1. **No employer or client details, ever.** Never name an employer or client, use their domain
+   vocabulary, or describe their internal systems, people or projects. The maintainer's own public
+   projects may be named, but only in the first-person material (rule 4). `scripts/check.py` enforces
+   the built-in patterns, plus a private, git-ignored `.leakcheck.local`. If that file is missing, ask
+   the maintainer before publishing.
+2. **Cite every factual sentence** with `[n]`, pointing at a public URL in the document's Sources block:
+   - a talk's page or timestamped video;
+   - a paper;
+   - an article or vendor documentation.
+
+   Label a company's or vendor's numbers as its own claim ("Glean reports…"). Phrase recommendations as
+   advice ("We recommend…") and leave them uncited. Link the maintainer's own repos only as files pinned
+   to a full commit SHA that pass the leak check: never a repo root, a commit page or a private repo.
+   Check what a linked file links on to as well. When the rest of a page is wrong, cite one section with
+   `sources.py anchor <id> <fragment>`.
+3. **Quotes are verbatim** from the transcript or article, attributed by name in the sentence.
+   Otherwise paraphrase without quote marks.
+4. **Plain British English, and two voices kept apart.**
+   - Concepts, principles and guidance are factual and impersonal (or "we" for recommendations).
+   - The maintainer's own experience is first person, and appears only in the
+     `3-engineer/lessons-from-my-*` pages and the *My path* entries on the timeline.
+   - Every first-person claim must be backed by the maintainer's files or git history.
+   - Keep sections short. No tables: they read badly on phones.
+5. **Every document has, in this order:**
+   - frontmatter, including `last_checked: YYYY-MM-DD` and `as_of`;
+   - the title;
+   - an `> **In one minute**` box of 3–5 plain-English bullets with no new facts or figures;
+   - a `*Reading time … · Best for …*` line;
+   - the body;
+   - a `**Read next:**` line;
+   - Sources.
+6. **A compendium, not an event write-up.** Attribute claims to people, organisations and studies,
+   never to the event where they were said. Event names belong only in Sources entries.
+7. **Links between documents** are relative Markdown links (`../4-build/evals-playbook.md`).
+   No `[[wikilinks]]`.
+8. **Timeline and origin verbs match the evidence.** Say "coined" only when the source shows a term's
+   first use. Otherwise say "first seen", "popularised", "published" or "released". Keep the source's
+   hedges, including when trimming to fit a word cap.
+
+## Changing a document
+
+- **Edit citations with the grounded-citations `sources.py` workflow.** Pass
+  `--ledger .citations/<slug>.json` before the subcommand. Render the Sources block with
+  `render --replace-in`, then run `verify --strict`.
+- **Re-fetch a study before reusing its figures.** Papers at the same URL get revised: the Harvard
+  firm study changed its firm count and effect sizes between October and November 2026.
+- **Update `last_checked`** on any document you verify, and add a `CHANGELOG.md` entry for every
+  correction (what changed, and the evidence).
+- **Run `python3 scripts/check.py`** before every commit. It must exit 0.
+- **The deck:** edit `1-understand/ai-lunch-and-learn.md` (the outline is the source of
+  truth), then run `scripts/build_deck.py`. It needs `python-pptx` and `pillow`.
+
+## Where updates come from
+
+The maintainer's private research (AI news briefings, and notes on talks and papers) feeds this
+handbook one way: when the evidence changes, a PR updates the affected documents here. Transcripts,
+notes and briefings themselves are never copied into this repo.
+
+## Keep this file current
+
+When the layout, rules or checks change, update this file in the same commit.
