@@ -73,7 +73,7 @@ That wider job is [context engineering](context-engineering.md).
 
 ## See it built
 
-The [primer for model-harness](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering), the handbook author's open-source .NET agent harness, shows one example implementation: it assembles what the model sees before each call from a pipeline of small components called *guides*, one of which primes ReAct-style reasoning.
+The [primer for model-harness](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering), the handbook author's open-source .NET agent harness, shows one example implementation: its *guide* pattern decides what goes into the model's context window at each step.
 
 **Read next:** [Context engineering](context-engineering.md), or go back to the [handbook home](../README.md).
 
