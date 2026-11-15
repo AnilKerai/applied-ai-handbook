@@ -7,9 +7,24 @@ Newest first. Every correction lists what changed and the evidence.
 - **New section, `3-engineer/`,** between Decide and Build: the engineering disciplines under every AI
   system (prompt, context, harness, loop and eval engineering), how they fit together and when they
   arrived. It comes before Build because Build applies these disciplines, so a reader meets them first.
+  Its 11 pages are:
+  - the big-picture map of the disciplines;
+  - a timeline of how the ideas arrived, with the author's own path alongside;
+  - six discipline pages: prompt, context, harness, loop and eval engineering, and multi-agent
+    orchestration;
+  - three pages of first-person lessons: from building an agent harness and an evals framework, and
+    from running agent squads.
 - **Later sections renumbered** to keep the folders in learning order: `3-build/` is now `4-build/`,
   `4-run/` is now `5-run/` and `5-lead/` is now `6-lead/`. Every link between documents was updated;
-  no document's content changed. Links from outside the repo need the new folder number.
+  the renumbering changed documents only in their links and section numbers. The folder READMEs carry
+  the new numbers, and the root README lists the new section. Links from outside the repo need the new
+  folder number.
+- **Glossary:** new entries for prompt engineering, loop engineering, eval engineering and
+  orchestration, each with its source. The context engineering and harness entries now link to their
+  pages in the new section.
+- **Reading routes:** the map is now second in the "New to AI" route, and the engineer route starts
+  with the map and harness engineering. The root README now says that the Engineer section includes the
+  author's own path and first-person lessons.
 - `scripts/check.py` now checks all six sections.
 
 ## 2026-11-15: reframed as a compendium

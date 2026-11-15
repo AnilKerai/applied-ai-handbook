@@ -2,29 +2,32 @@
 
 Practical, evidence-backed guidance for bringing AI into a business or an engineering team: when to use it, which kind, how to build and test it, how to run it safely, and how to lead the change.
 
-**A living compendium, as of November 2026.** It separates three things: what practitioners report works, what published studies show, and our own recommendations. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged.
+**A living compendium, as of November 2026.** It separates three things: what practitioners report works, what published studies show, and our own recommendations. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged. The Engineer section also includes the author's own path through these ideas and first-person lessons from his own builds, written as his experience rather than as findings.
 
 ## Start here: pick a route
 
-**New to AI** (about 40 minutes)
+**New to AI** (about 45 minutes)
 
 1. [AI questions answered](1-understand/ai-questions-answered.md)
-2. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
-3. [AI intake checklist](2-decide/ai-intake-checklist.md)
-4. [AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)
+2. [The big picture](3-engineer/the-big-picture.md)
+3. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
+4. [AI intake checklist](2-decide/ai-intake-checklist.md)
+5. [AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)
 
-Skim the questions you care about, then the two tools you'll use most. Keep the glossary open.
+Skim the questions you care about and the map of how an AI system fits together, then the two tools you'll use most. Keep the glossary open.
 
-**Engineer building AI features or using coding agents** (about 70 minutes)
+**Engineer building AI features or using coding agents** (about 85 minutes)
 
-1. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
-2. [AI pattern catalogue](4-build/ai-pattern-catalogue.md)
-3. [Evals playbook](4-build/evals-playbook.md)
-4. [Working with coding agents](4-build/working-with-coding-agents.md)
-5. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
-6. [Running AI in production](5-run/ai-in-production-runbook.md)
+1. [The big picture](3-engineer/the-big-picture.md)
+2. [Harness engineering](3-engineer/harness-engineering.md)
+3. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
+4. [AI pattern catalogue](4-build/ai-pattern-catalogue.md)
+5. [Evals playbook](4-build/evals-playbook.md)
+6. [Working with coding agents](4-build/working-with-coding-agents.md)
+7. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
+8. [Running AI in production](5-run/ai-in-production-runbook.md)
 
-Add the .NET guide if you work in .NET.
+Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth.
 
 **Leader planning AI adoption** (about 40 minutes)
 

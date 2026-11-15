@@ -51,7 +51,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Context engineering**
 - Deciding what information an AI model is given at each step (instructions, facts it has looked up, results from tools, the conversation so far) and what is left out, rather than polishing one perfect instruction.[7]
-- *Why it matters:* we should ask how a proposal gets the right information to the model, not only which model it uses.
+- *Why it matters:* we should ask how a proposal gets the right information to the model, not only which model it uses. See [Context engineering](../3-engineer/context-engineering.md).
 
 ## D
 
@@ -81,6 +81,10 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - A repeatable test of an AI feature: a set of real example cases with agreed right answers, scored every time anything changes. Kevin Solorio (Focused): "an agent without evals is a proof of concept".[8]
 - *Why it matters:* without evals nobody can show that a change made things better, or that a new model is safe to switch to. See [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md).
 
+**Eval engineering**
+- Building the evals that test an AI feature, and refining them as its failures show what else to check. The earliest use of the term found is in the ell library's documentation of December 2024: "Updating and refining the eval in response to these insights is what we call eval engineering."[33]
+- *Why it matters:* when an agent is tested, Anthropic says, "we’re evaluating the harness and the model working together", so the evals should be re-run whenever either changes.[34] See [Eval engineering](../3-engineer/eval-engineering.md).
+
 **Execution dial**
 - Heidi Porter's (Moyer Group AI) four settings for who acts: a person approves first; the system acts when confident and passes the rest to a person; it acts but gives a person time to undo; or it acts alone.[8]
 - *Why it matters:* the setting should follow the cost of a mistake; Porter automates outright "only what is cheap to undo".[8]
@@ -109,7 +113,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Harness**
 - All the software around an AI model that turns it into a working tool: its instructions, the tools it may use, its permissions, and the checks on its work.[14]
-- *Why it matters:* we usually buy the model; the harness is where our controls live and where our own effort should go.
+- *Why it matters:* we usually buy the model; the harness is where our controls live and where our own effort should go. See [Harness engineering](../3-engineer/harness-engineering.md).
 
 **Human in the loop**
 - A design in which a person checks or approves the AI's work before it takes effect.[8]
@@ -141,6 +145,10 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - The kind of AI model behind chat assistants and coding tools, trained on vast amounts of text to read and write language. Heidi Porter treats it as one option alongside rules, classic machine learning and decision models.[8]
 - *Why it matters:* we should give it the narrowest job we can; in Porter's Syngenta example it is "the interface, the router, and the explainer, not the agronomist".[8]
 
+**Loop engineering**
+- Designing the system that sets an AI coding agent to work again and again, on a schedule or when something happens, with an automatic check that ends each run, instead of a person prompting every run.[36] Addy Osmani's post of 7 June 2026 is the earliest dated use of the term found: "Loop engineering is replacing yourself as the person who prompts the agent."[35]
+- *Why it matters:* a loop repeats its mistakes with nobody watching, so each one needs a stop rule and checks on its results; Lulla et al.'s review of practitioners' writing on loop engineering found that these sources "provide no systematic evidence of the claimed benefits".[36] See [Loop engineering](../3-engineer/loop-engineering.md).
+
 ## M
 
 **MCP (Model Context Protocol)**
@@ -157,7 +165,15 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by an agent, which lets software catch an AI query that links them the wrong way round.[21]
 - *Why it matters:* we should write our business terms and rules down precisely before buying any product sold as an ontology.
 
+**Orchestration**
+- Connecting several AI agents, or fixed steps, so that they work on one job together. In what Anthropic calls the orchestrator-workers workflow, "a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results".[37] A newer name for designing how they connect is graph engineering, first seen in July 2026.[38][39]
+- *Why it matters:* more agents cost more and are harder to keep in step; in Anthropic's data, multi-agent systems use about 15 times the tokens of a chat (its own figure).[40] We should start with one agent and add more only when a test shows the split does better. See [Multi-agent orchestration](../3-engineer/multi-agent-orchestration.md).
+
 ## P
+
+**Prompt engineering**
+- Writing the text an AI model is given, such as its instructions, worked examples and the task itself, so that it does the job well. Anthropic describes its main focus as "how to write effective prompts, particularly system prompts", the standing instructions behind every request.[7] The term was in academic use by 2021, but no source found shows who coined it.[41]
+- *Why it matters:* a good prompt still matters, but an agent working over many steps depends more on everything else it is given; Anthropic calls context engineering "the natural progression of prompt engineering".[7] See [Prompt engineering](../3-engineer/prompt-engineering.md).
 
 **Prompt injection**
 - Hidden instructions placed in something an AI reads, such as a web page, email or document, that trick it into doing what its user did not ask for. The UK's National Cyber Security Centre warns that these models do not separate instructions from data.[22]
@@ -255,4 +271,12 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 [30] https://dora.dev/insights/finding-balance-in-the-era-of-tokenmaxxing — DORA, Finding balance in the era of tokenmaxxing
 [31] https://www.youtube.com/watch?v=TF6qzdKwl84&t=639 — Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026
 [32] https://www.youtube.com/watch?v=2UpjQ01cBGE&t=552 — Mads Kristensen (Microsoft), Keynote (day 2), .NET Conf 2026
-
+[33] https://github.com/MadcowD/ell/blob/0e2759ca95ddb07ae0d0f360e739a5e8500a68c0/docs/src/core_concepts/evaluations.rst — ell, Evaluations documentation, commit of 16 December 2024 (GitHub)
+[34] https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents — Anthropic, Demystifying evals for AI agents
+[35] https://addyosmani.com/blog/loop-engineering — Addy Osmani, Loop Engineering
+[36] https://arxiv.org/html/2608.21884v3 — Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)
+[37] https://www.anthropic.com/engineering/building-effective-agents — Anthropic, Building effective agents
+[38] https://x.com/HamelHusain/article/2078346425621237935 — Hamel Husain, Loop Engineering Is Dead. Enter Graph Engineering (article on X)
+[39] https://dzone.com/articles/understanding-graph-engineering — DZone, Graph Engineering: The Layer After Loop Engineering
+[40] https://www.anthropic.com/engineering/multi-agent-research-system — Anthropic, How we built our multi-agent research system
+[41] https://arxiv.org/pdf/2107.13586v1 — Pengfei Liu et al., Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (arXiv 2107.13586v1)
