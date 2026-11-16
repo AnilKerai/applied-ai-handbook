@@ -12,13 +12,14 @@ leadership, many of them new to AI. Write for them.
 - `3-engineer/`: the engineering disciplines (prompt, context, harness, loop and eval engineering,
   orchestration), the big-picture map, the timeline, and first-person lessons from the maintainer's own
   builds.
-- `4-build/`: how to build it. Pattern catalogue, evals playbook, working with coding agents, .NET guide.
+- `4-build/`: how to build it. Pattern catalogue, evals playbook, working with coding agents, .NET guide,
+  and two talks for engineers (`talk-*`: outline, speaker notes and pptx).
 - `5-run/`: how to run it. Production runbook, agent PR policy, metrics scorecard.
 - `6-lead/`: how to steer it. Leadership memos, maturity model.
 - `README.md` in the root and in each folder: reading routes and the folder's contents.
 - `.citations/<doc-slug>.json`: the citation ledger behind each document's Sources block.
 - `scripts/check.py`: the pre-publish check (citations, links, leaks, structure, framing).
-- `scripts/build_deck.py`: builds the pptx from its outline.
+- `scripts/build_deck.py`: builds a deck's pptx from its outline (see "Decks" below).
 - `CHANGELOG.md`: every correction and update, newest first.
 
 ## Rules for every document
@@ -42,8 +43,10 @@ leadership, many of them new to AI. Write for them.
    Otherwise paraphrase without quote marks.
 4. **Plain British English, and two voices kept apart.**
    - Concepts, principles and guidance are factual and impersonal (or "we" for recommendations).
-   - The maintainer's own experience is first person, and appears only in the
-     `3-engineer/lessons-from-my-*` pages and the *My path* entries on the timeline.
+   - The maintainer's own experience is first person. It appears only in:
+     - the `3-engineer/lessons-from-*` pages;
+     - the *My path* entries on the timeline;
+     - the slides labelled *From my own builds* in the `talk-*` decks, with their speaker notes.
    - Every first-person claim must be backed by the maintainer's files or git history.
    - Keep sections short. No tables: they read badly on phones.
 5. **Every document has, in this order:**
@@ -72,8 +75,28 @@ leadership, many of them new to AI. Write for them.
 - **Update `last_checked`** on any document you verify, and add a `CHANGELOG.md` entry for every
   correction (what changed, and the evidence).
 - **Run `python3 scripts/check.py`** before every commit. It must exit 0.
-- **The deck:** edit `1-understand/ai-lunch-and-learn.md` (the outline is the source of
-  truth), then run `scripts/build_deck.py`. It needs `python-pptx` and `pillow`.
+
+## Decks
+
+- **The outline is the source of truth.**
+  - Each slide is a `## Slide N · Title` section with **On the slide** bullets, an optional
+    **Key line** and **Speaker notes**.
+  - An optional `*Layout: …*` line under the heading picks a special layout. Without one, a slide
+    uses the standard layout.
+  - Slides titled `Basics · …` are optional basics. Slides titled `Series · …` only make sense after
+    the previous session.
+- **Edit the outline,** then run `python3 scripts/build_deck.py <outline.md>`.
+  - With no arguments, it builds `1-understand/ai-lunch-and-learn`.
+  - It needs `python-pptx` and `pillow`.
+- **Options:**
+  - `--out <pptx>` sets the output file.
+  - `--no-basics` drops the `Basics ·` slides.
+  - `--standalone` drops the `Series ·` slides.
+  - `--overlay <file>` builds a private local version. It adds local notes or slides on top of the
+    public outline.
+- **The committed pptx for each talk is the full version,** with its basics and series slides.
+- **Overlays and the local decks built from them live outside this repo and are never committed
+  here,** nor named in any file.
 
 ## Where updates come from
 
