@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://simonwillison.net/2025/Sep/18/agents",
+      "title": "Simon Willison, I think “agent” may finally have a widely enough agreed upon definition to be useful jargon now (18 September 2025)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "An LLM agent runs tools in a loop to achieve a goal.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://code.claude.com/docs/en/how-claude-code-works",
+      "title": "Anthropic, How Claude Code works (Claude Code docs)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "The agentic loop is powered by two components: models that reason and tools that act. Claude Code is the layer around the model that provides the tools and manages the context the model sees.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Claude uses tools throughout, whether searching files to understand your code, editing to make changes, or running tests to check its work.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Claude’s context window holds your conversation history, file contents, command outputs, CLAUDE.md, auto memory, loaded skills, and system instructions.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Each new session starts with a fresh context window, without the conversation history from previous sessions.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://platform.claude.com/docs/en/agent-sdk/agent-loop",
+      "title": "Anthropic, How the agent loop works (Claude Agent SDK docs)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Claude evaluates your prompt, calls tools to take action, receives the results, and repeats until the task is complete.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Without limits, the loop runs until Claude finishes on its own, which is fine for well-scoped tasks but can run long on open-ended prompts (“improve this codebase”).",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "title": "Anthropic, Best practices for Claude Code (Claude Code docs)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Claude stops when the work looks done. If it has nothing to run that tells it whether the work actually is done, “looks done” is all it has to go on.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "A good test before you write anything down for Claude: 1. Could it find this by reading the code? 2. Would it actually go and look? If both are yes, leave it out.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "If you keep adding emphasis to a CLAUDE.md line and Claude still misses it, that’s a sign the line belongs in a hook.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://code.claude.com/docs/en/memory",
+      "title": "Anthropic, How Claude remembers your project (Claude Code docs)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Each Claude Code session begins with a fresh context window. Two mechanisms carry knowledge across sessions",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "target under 200 lines per CLAUDE.md file. Longer files consume more context and reduce adherence.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Write instructions that are concrete enough to verify",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Review your CLAUDE.md files, nested CLAUDE.md files in subdirectories, and .claude/rules/ periodically to remove outdated or conflicting instructions.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "title": "Anthropic, Effective context engineering for AI agents",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Rather than pre-processing all relevant data up front, agents built with the “just in time” approach maintain lightweight identifiers (file paths, stored queries, web links, etc.) and use these references to dynamically load data into context at runtime",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/online-duolingo-tests",
+      "title": "Kush Agrawal (Duolingo), Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "writing code isn't the hard part anymore. Verifying it is.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://fion.ac/jellyfish.pdf",
+      "title": "Fiona Chen & James Stratton (Harvard), Artificial Intelligence in the Firm: Bottlenecks in Software Production (version of 14 November 2026)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Following agent adoption, pull requests opened increase by 35.7%, while Jira issues resolved increase by only 13.7%, and we can rule out increases larger than 30.7%.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Jira issues resolved increase by only 13.7%, and we can rule out increases larger than 30.7%.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "After agent adoption, the time from a pull request’s submission to its approval increases by 56.1%.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "AI substantially increases code output but has small effects on final software output and no detectable effect on employment. Code review becomes the bottleneck.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "655 firms, from January 2021 to August 2026.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/jarred-sumner",
+      "title": "Jarred Sumner (Anthropic), Choose the project you can verify, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "the approach you go with for how to build it is entirely driven by how do you verify that it actually is going to like work and not be buggy and that you can trust it.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "So we would have to port Cloud Code's test suite. And as soon as you're like rewriting the tests, then you can't really trust the tests anymore.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.youtube.com/watch?v=fKnZotxlEec&t=6",
+      "title": "McKenna Barlow (Microsoft), Test Smarter: AI-Assisted Testing for Modern .NET, .NET Conf 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "when an agent writes both the code and the tests because if it misunderstands a requirement, that same misunderstanding can actually show up in both places.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "So that 's why I pointed it at the README. I really want it to look at the code to understand how to use the calculator, but use the requirements to decide what the answer should be.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "maybe I want to just sanity check by deliberately breaking something. Uh you know, if I make a change that's obviously wrong, do the tests notice?",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://arxiv.org/abs/2602.11988",
+      "title": "Thibaud Gloaguen, Niels Mündler-Sasahara, Mark Niklas Müller, Veselin Raychev & Martin Vechev (ETH Zurich and LogicStar.ai), Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents? (arXiv 2602.11988, v3 of 29 September 2026)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Surprisingly, we find that providing context files does not generally improve task success rates, while increasing inference cost by over 20% on average.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Specifically, we find that while instructions in the context files are well followed by coding agents, repository overviews, although popular and recommended by model providers, are not helpful.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "We conclude that while context files are useful for specifying non-standard coding practices, any attempts to improve performance should be rigorously evaluated before deployment.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "a rule in an agent's instructions is just a suggestion. It might follow it, it might not.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "guess what happened? it it put CloudFront access in front of in front of um my MCP server.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "a rule in code thanks to a compiler is enforced and that's the whole point of the conversation.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "So whenever you're correcting your agent, think about how you can make that a deterministic check instead of adding another line to your rules",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "The first two layers are deterministic. So using your code itself. So things like good API design, architecture, refactoring or using lint rules, type systems, compilers or you know different kinds of testing.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "At level one, it investigates and tells you what it found. It changes nothing. At level two, it acts with approval. It drafts the fix, but nothing reaches production until a human approves.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "At level three, it clears lower criticality work on its own and only interrupts you for what matters. High criticality work stays with humans.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "How costly is a mistake and how easy is it to catch? So an action climbs only when mistakes are cheap. They're caught by tests, CI or review. and the agent already has a track record on that exact action.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "That's why the agent can close a noisy alert on its own while a production mitigation still waits for a human.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://github.com/AnilKerai/hermes-squad/blob/374995b71e7670bd974c27ae838641c2fe7b22b3/docs/05-metrics.md",
+      "title": "Anil Kerai, hermes-squad, docs/05-metrics.md, commit of 12 November 2026 (GitHub)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "20; 19 approved first time, 1 sent back for a real defect (fixed in round 2)",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://mitchellh.com/writing/my-ai-adoption-journey",
+      "title": "Mitchell Hashimoto, My AI Adoption Journey",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "It is the idea that anytime you find an agent makes a mistake, you take the time to engineer a solution such that the agent never makes that mistake again.",
+          "added": "2026-11-16"
+        }
+      ]
+    }
+  ]
+}
