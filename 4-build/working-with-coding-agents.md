@@ -231,7 +231,9 @@ Recommendations:
 - Two or three agents at most; track cost per task and set a cap.
 - What must hold before merge: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md).
 
-**Read next:** [Building AI features in .NET](dotnet-ai-engineering-guide.md), or go back to the [handbook home](../README.md).
+As a talk: [Talk: working with coding agents](talk-working-with-coding-agents.md), slides and speaker notes for presenting this guide's main ideas to engineers.
+
+**Read next:** [Talk: working with coding agents](talk-working-with-coding-agents.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

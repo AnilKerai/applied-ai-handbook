@@ -272,7 +272,7 @@ The hospital stories, the guardrail definition and the advice on building evals 
 - Engineering: [Harness engineering](../3-engineer/harness-engineering.md), [Eval engineering](../3-engineer/eval-engineering.md)
 - Deciding: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
 
-**Read next:** [Evals playbook: how to build and run evals for an AI feature or agent](evals-playbook.md), or go back to the [handbook home](../README.md).
+**Read next:** [Building AI features in .NET](dotnet-ai-engineering-guide.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

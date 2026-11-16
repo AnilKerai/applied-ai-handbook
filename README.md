@@ -16,7 +16,7 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 Skim the questions you care about and the map of how an AI system fits together, then the tools you'll use most. Keep the glossary open.
 
-**Engineer building AI features or using coding agents** (about 85 minutes)
+**Engineer building AI features or using coding agents** (about 105 minutes)
 
 1. [The big picture](3-engineer/the-big-picture.md)
 2. [Harness engineering](3-engineer/harness-engineering.md)
@@ -24,10 +24,12 @@ Skim the questions you care about and the map of how an AI system fits together,
 4. [AI pattern catalogue](4-build/ai-pattern-catalogue.md)
 5. [Evals playbook](4-build/evals-playbook.md)
 6. [Working with coding agents](4-build/working-with-coding-agents.md)
-7. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
-8. [Running AI in production](5-run/ai-in-production-runbook.md)
+7. [Talk: working with coding agents](4-build/talk-working-with-coding-agents.md)
+8. [Talk: building AI features](4-build/talk-building-ai-features.md)
+9. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
+10. [Running AI in production](5-run/ai-in-production-runbook.md)
 
-Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth.
+Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth. To give the two talks, the slides are `4-build/talk-working-with-coding-agents.pptx` and `4-build/talk-building-ai-features.pptx`; the outlines have the speaker notes and sources.
 
 **Leader planning AI adoption** (about 40 minutes)
 
@@ -49,7 +51,7 @@ The slides are `1-understand/ai-lunch-and-learn.pptx`; the outline has the speak
 - **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, and a lunch-and-learn you can give to your team.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
 - **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: prompt, context, harness, loop and eval engineering, how they fit together, when they arrived, and first-hand lessons from building them.
-- **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, and how developers should work with coding agents.
+- **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, how developers should work with coding agents, and two talks you can give to engineers.
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 - **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
 

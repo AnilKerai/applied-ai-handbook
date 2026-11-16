@@ -2,6 +2,39 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-16: two talks for engineers
+
+- **Two new talks in `4-build/`,** a two-session series for engineers. Each has an outline (slide
+  text, speaker notes and sources), a citation ledger and a committed pptx:
+  - `talk-working-with-coding-agents` (session 1, 11 slides): checking an agent's work, context
+    files, turning corrections into checks, and earning autonomy one action at a time.
+  - `talk-building-ai-features` (session 2, 12 slides): the model as a replaceable part, narrow jobs
+    with the control flow in code, guardrails in code rather than in prompts, evals before launch,
+    checking the grader, and review in production. It opens with a recap of session 1 and can also
+    be given on its own.
+  - Each talk has one slide labelled *From my own builds*, in the first person, linking the matching
+    first-person lessons in `3-engineer/`.
+  - The committed pptx for each talk is the full version, with its basics slides and, in session 2,
+    the recap slide.
+- **Reading path and routes:** both talks follow Working with coding agents in the reading path, in
+  series order, and join the engineer route on the home page. Working with coding agents and the
+  evals playbook each link the matching talk.
+- **`scripts/build_deck.py` takes an outline and options:**
+  `build_deck.py <outline> [--out <pptx>] [--no-basics] [--standalone] [--overlay <file>]`.
+  - With no arguments it still builds the lunch-and-learn deck, with the same slide text as before.
+  - A `*Layout: …*` line under a slide heading now picks a special layout, instead of the slide
+    number. The lunch-and-learn outline gained these lines for its six special slides. A new
+    `discussion` layout serves session 2's recap slide.
+  - `--no-basics` drops slides titled `Basics · …`, and `--standalone` drops slides titled
+    `Series · …`; the footers are renumbered.
+  - `--overlay` adds private local notes or slides on top of a public outline. Overlays and the decks
+    built from them stay outside this repo: an overlay build refuses to write inside it.
+  - Tests are in `scripts/test_build_deck.py`.
+- **AGENTS.md:** the `4-build/` layout line lists both talks. The first-person rule now covers every
+  `3-engineer/lessons-from-*` page (the old pattern missed one of them) and the
+  *From my own builds* slides with their speaker notes. A new Decks section describes the outline
+  format, the layout hints, the build options and the rule that overlays are never committed here.
+
 ## 2026-11-15: Engineer section
 
 - **New section, `3-engineer/`,** between Decide and Build: the engineering disciplines under every AI

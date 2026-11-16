@@ -226,6 +226,8 @@ Week 2:
 
 Related: [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md), [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md), [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md), [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
 
+As a talk: [Talk: building AI features](talk-building-ai-features.md), slides and speaker notes for engineers, ending with writing eval cases from real examples.
+
 **Read next:** [Working with coding agents](working-with-coding-agents.md), or go back to the [handbook home](../README.md).
 
 ## Sources
