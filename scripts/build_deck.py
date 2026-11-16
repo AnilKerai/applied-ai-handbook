@@ -1,10 +1,26 @@
 #!/usr/bin/env python3
-"""Build the lunch-and-learn deck from its cited markdown outline.
+"""Build a slide deck from its cited markdown outline.
 
 The outline (.md) is the source of truth: slide titles, bullets, key lines and
 speaker notes are parsed from it, so the deck and outline cannot drift apart.
 Needs python-pptx (pip install python-pptx pillow).
+
+Usage:
+    build_deck.py [outline] [--out deck.pptx] [--overlay local.md] [--no-basics] [--standalone]
+
+With no arguments it builds 1-understand/ai-lunch-and-learn.pptx.
+
+Outline conventions:
+    *Layout: name*        under a slide heading picks a layout (see LAYOUTS); default "standard".
+    ## Slide N · Basics · …   a basics slide: dropped by --no-basics, tagged "Basics".
+    ## Slide N · Series · …   a series recap: dropped by --standalone, tagged "Recap".
+
+Overlay (private, never committed to this repo):
+    ## After slide N · Title   inserts a local slide after outline slide N (same body format).
+    ## Notes for slide N       appends its lines to slide N's notes, prefixed "Local: ".
+    Overlays carry no citations; local slides get the footer "Local example".
 """
+import argparse
 import os
 import re
 import sys
@@ -36,7 +52,6 @@ def style_run(run, spec):
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MD = os.path.join(ROOT, "1-understand", "ai-lunch-and-learn.md")
-OUT = os.path.join(ROOT, "1-understand", "ai-lunch-and-learn.pptx")
 
 FONT = "Arial"
 DARK = "1F2937"
@@ -47,25 +62,109 @@ GREY = "6B7280"
 LIGHT = "F1F5F9"
 W, H = 13.333, 7.5
 CITE = re.compile(r"\s*\[(\d+)\]")
+LAYOUT = re.compile(r"^\*Layout:\s*([\w-]+)\s*\*\s*$", re.M)
+PREFIX = re.compile(r"^(Basics|Series) · (.+)$")
+SESSION = re.compile(r"^(Subtitle:\s*)Session \d+ of \d+:\s*(\S)")
+LOCAL_LABEL = "Local example"
+TAGS = {"basics": "Basics", "series": "Recap"}
+
+# Footer labels for particular slides, keyed by (outline path relative to the repo, outline slide number).
+FOOTER_LABELS = {
+    ("1-understand/ai-lunch-and-learn.md", 15):
+        "Suggestions for us, not findings from our sources \u00b7 links to the handbook in the outline",
+}
 
 LINK_NAMES = {}
 SOURCE_COUNT = 0
+OUTLINE_NAME = "1-understand/ai-lunch-and-learn.md"
 
 
 # ---------------------------------------------------------------- parsing
+def slide_body(sec):
+    """Bullets, key line, notes and layout from one slide section."""
+    on = re.search(r"\*\*On the slide\*\*\n(.*?)(?=\n\*\*|\Z)", sec, re.S)
+    bullets = [l[2:].strip() for l in on.group(1).splitlines() if l.startswith("- ")] if on else []
+    key = re.search(r"^\*\*Key line:\*\* (.+)$", sec, re.M)
+    notes = re.search(r"\*\*Speaker notes\*\*\n(.*?)(?=\n---|\n\*\*|\Z)", sec, re.S)
+    nl = [l.strip() for l in notes.group(1).splitlines()
+          if l.strip() and not LAYOUT.match(l.strip())] if notes else []
+    layout = LAYOUT.search(sec)
+    return dict(bullets=bullets, key=key.group(1).strip() if key else None, notes=nl,
+                layout=layout.group(1) if layout else "standard")
+
+
 def parse(md):
     body = md.split("\n## Related")[0]
     slides = []
     for m in re.finditer(r"^## Slide (\d+) · (.+?)\n(.*?)(?=^## |\Z)", body, re.S | re.M):
         n, title, sec = int(m.group(1)), m.group(2).strip(), m.group(3)
-        on = re.search(r"\*\*On the slide\*\*\n(.*?)(?=\n\*\*|\Z)", sec, re.S)
-        bullets = [l[2:].strip() for l in on.group(1).splitlines() if l.startswith("- ")] if on else []
-        key = re.search(r"^\*\*Key line:\*\* (.+)$", sec, re.M)
-        notes = re.search(r"\*\*Speaker notes\*\*\n(.*?)(?=\n---|\n\*\*|\Z)", sec, re.S)
-        nl = [l.strip() for l in notes.group(1).splitlines() if l.strip()] if notes else []
-        slides.append(dict(n=n, title=title, bullets=bullets,
-                           key=key.group(1).strip() if key else None, notes=nl))
+        s = dict(n=n, title=title, basics=False, series=False, **slide_body(sec))
+        pre = PREFIX.match(title)
+        if pre:
+            s[pre.group(1).lower()] = True
+            s["title"] = pre.group(2).strip()
+        if s["layout"] not in LAYOUTS:
+            raise SystemExit(f"unknown layout '{s['layout']}' on slide {n}")
+        slides.append(s)
     return slides
+
+
+def parse_overlay(md):
+    """Return ({N: [slides to insert after N]}, {N: [extra note lines for N]})."""
+    inserts, notes = {}, {}
+    for m in re.finditer(r"^(## .*?)\n(.*?)(?=^## |\Z)", md + "\n", re.S | re.M):
+        head, sec = m.group(1).strip(), m.group(2)
+        after = re.match(r"^## After slide (\d+) · (.+)$", head)
+        extra = re.match(r"^## Notes for slide (\d+)$", head)
+        if after:
+            n = int(after.group(1))
+            s = dict(n=None, title=after.group(2).strip(), basics=False, series=False,
+                     **slide_body(sec))
+            if s["layout"] not in LAYOUTS:
+                raise SystemExit(f"overlay: unknown layout '{s['layout']}' after slide {n}")
+            inserts.setdefault(n, []).append(s)
+        elif extra:
+            lines = [l.strip() for l in sec.splitlines() if l.strip() and l.strip() != "---"]
+            notes.setdefault(int(extra.group(1)), []).extend(
+                l[2:].strip() if l.startswith("- ") else l for l in lines)
+        else:
+            raise SystemExit(f"overlay: unrecognised heading '{head}'")
+    return inserts, notes
+
+
+def apply_overlay(slides, inserts, notes, outline_name):
+    """Insert local slides and append local note lines, anchored on the outline's slide numbers."""
+    known = {s["n"] for s in slides}
+    for n in sorted(set(inserts) | set(notes)):
+        if n not in known:
+            raise SystemExit(f"overlay: no slide {n} in {outline_name}")
+        texts = list(notes.get(n, []))
+        for s in inserts.get(n, []):
+            texts += [s["title"], *s["bullets"], s["key"] or "", *s["notes"]]
+        if any(CITE.search(t) for t in texts):
+            raise SystemExit(f"overlay: no citations in local material (slide {n})")
+    out = []
+    for s in slides:
+        s = dict(s)
+        if s["n"] in notes:
+            s["notes"] = s["notes"] + [f"Local: {l}" for l in notes[s["n"]]]
+        out.append(s)
+        out += [dict(i, local=True) for i in inserts.get(s["n"], [])]
+    return out
+
+
+def select(slides, no_basics, standalone):
+    """Drop basics and/or series slides, then renumber from 1."""
+    keep = [s for s in slides
+            if not (no_basics and s["basics"]) and not (standalone and s["series"])]
+    out = []
+    for i, s in enumerate(keep, 1):
+        s = dict(s, n=i)
+        if standalone and s["layout"] == "title":
+            s["bullets"] = [SESSION.sub(lambda m: m.group(1) + m.group(2).upper(), b)
+                            for b in s["bullets"]]
+        out.append(s)
+    return out
 
 
 def cites(*texts):
@@ -177,6 +276,18 @@ def footer(slide, n, ids, total, label=None, color=GREY):
     add_par(tf, f"{n} / {total}", 12, color, first=True, align=PP_ALIGN.RIGHT)
 
 
+def slide_footer(slide, s, ids, total, label=None, color=GREY):
+    """The footer, with local slides labelled as local and carrying no sources."""
+    if s.get("local"):
+        ids, label = [], LOCAL_LABEL
+    footer(slide, s["n"], ids, total, label, color)
+
+
+def corner_tag(slide, text):
+    _, tf = textbox(slide, 10.73, 0.12, 2.0, 0.36, anchor=MSO_ANCHOR.TOP)
+    add_par(tf, text, 14, GREY, first=True, align=PP_ALIGN.RIGHT)
+
+
 def key_band(slide, text, top=None, height=None, size=22):
     long = len(smart(text)) > 80
     top = top if top is not None else (5.72 if long else 5.92)
@@ -214,7 +325,7 @@ def s_title(prs, s, total):
         add_par(tf, smart(t), 26 if i == 0 else 22, "CBD5E1" if i == 0 else "94A3B8",
                 first=(i == 0), space_after=10)
     ids = cites(*s["notes"])
-    footer(sl, s["n"], ids, total, color="94A3B8")
+    slide_footer(sl, s, ids, total, color="94A3B8")
     set_notes(sl, s["notes"])
 
 
@@ -230,7 +341,7 @@ def s_three(prs, s, total):
         _, tf = textbox(sl, 1.85, top, 10.9, 1.3, anchor=MSO_ANCHOR.MIDDLE)
         add_par(tf, smart(head), 30, DARK, bold=True, first=True, space_after=4)
         add_par(tf, smart(rest.strip()[0].upper() + rest.strip()[1:]), 24, GREY)
-    footer(sl, s["n"], cites(*s["bullets"], *s["notes"]), total)
+    slide_footer(sl, s, cites(*s["bullets"], *s["notes"]), total)
     set_notes(sl, s["notes"])
 
 
@@ -242,10 +353,7 @@ def s_standard(prs, s, total):
     if s["key"]:
         key_band(sl, s["key"])
     ids = cites(*s["bullets"], s["key"] or "", *s["notes"])
-    label = None
-    if s["n"] == 15:
-        label = "Suggestions for us, not findings from our sources \u00b7 links to the handbook in the outline"
-    footer(sl, s["n"], ids, total, label)
+    slide_footer(sl, s, ids, total, s.get("label"))
     set_notes(sl, s["notes"])
 
 
@@ -268,7 +376,7 @@ def s_ladder(prs, s, total):
         add_par(tf, smart(b), 22, DARK, bold=True, first=(i == 0), space_after=8)
     add_par(tf, "L1\u2013L3: Meta\u2019s on-call agent \u00b7 L4: Factory\u2019s workstreams", 16, GREY)
     key_band(sl, s["key"], top=6.0, height=0.78)
-    footer(sl, s["n"], cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
+    slide_footer(sl, s, cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
     set_notes(sl, s["notes"])
 
 
@@ -289,7 +397,7 @@ def s_data(prs, s, total):
             16, GREY, italic=True, first=True)
     bullets_box(sl, s["bullets"][2:], top=4.05, height=1.8, size=22, gap=10)
     key_band(sl, s["key"])
-    footer(sl, s["n"], cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
+    slide_footer(sl, s, cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
     set_notes(sl, s["notes"])
 
 
@@ -322,7 +430,7 @@ def s_tree(prs, s, total):
     tf.vertical_anchor = MSO_ANCHOR.MIDDLE
     add_par(tf, "", 19, ACCENT_DARK, first=True,
             runs=[(head.strip() + " ", {"bold": True}), (smart(rest.strip()), {})])
-    footer(sl, s["n"], cites(*s["bullets"], *s["notes"]), total)
+    slide_footer(sl, s, cites(*s["bullets"], *s["notes"]), total)
     set_notes(sl, s["notes"])
 
 
@@ -330,28 +438,75 @@ def s_reading(prs, s, total):
     sl = prs.slides.add_slide(prs.slide_layouts[6])
     title(sl, s["title"])
     bullets_box(sl, s["bullets"], height=4.9, size=24, gap=16)
-    footer(sl, s["n"], cites(*s["bullets"], *s["notes"]), total,
-           label=f"All {SOURCE_COUNT} sources, with links, are listed in the outline: "
-                 "1-understand/ai-lunch-and-learn.md")
+    slide_footer(sl, s, cites(*s["bullets"], *s["notes"]), total,
+                 label=f"All {SOURCE_COUNT} sources, with links, are listed in the outline: "
+                       f"{OUTLINE_NAME}")
     set_notes(sl, s["notes"])
 
 
-def main():
-    global SOURCE_COUNT
-    _md = open(MD, encoding="utf-8").read()
+def s_discussion(prs, s, total):
+    """One large question (the first bullet) with open space under it for the room's answers."""
+    sl = prs.slides.add_slide(prs.slide_layouts[6])
+    title(sl, s["title"])
+    _, tf = textbox(sl, 0.6, 1.95, 12.13, 1.75)
+    add_par(tf, smart(s["bullets"][0]) if s["bullets"] else "", 36, ACCENT_DARK, bold=True, first=True)
+    if s["key"]:
+        key_band(sl, s["key"])
+    slide_footer(sl, s, cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
+    set_notes(sl, s["notes"])
+
+
+LAYOUTS = {
+    "title": s_title, "three": s_three, "ladder": s_ladder, "data": s_data,
+    "tree": s_tree, "reading": s_reading, "standard": s_standard, "discussion": s_discussion,
+}
+
+
+def rel_name(path):
+    """The path relative to the repo root, or just the file name if it lies outside the repo."""
+    rel = os.path.relpath(os.path.abspath(path), ROOT)
+    return os.path.basename(path) if rel.startswith("..") else rel.replace(os.sep, "/")
+
+
+def main(argv=None):
+    global SOURCE_COUNT, OUTLINE_NAME
+    ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    ap.add_argument("outline", nargs="?", default=MD, help="outline .md (default: the lunch-and-learn deck)")
+    ap.add_argument("--out", help="output .pptx (default: the outline path with .pptx)")
+    ap.add_argument("--overlay", help="private overlay .md with local slides and notes")
+    ap.add_argument("--no-basics", action="store_true", help="drop the 'Basics ·' slides")
+    ap.add_argument("--standalone", action="store_true",
+                    help="drop the 'Series ·' slides and the 'Session N of M: ' subtitle prefix")
+    args = ap.parse_args(argv)
+    out = args.out or os.path.splitext(args.outline)[0] + ".pptx"
+    OUTLINE_NAME = rel_name(args.outline)
+
+    with open(args.outline, encoding="utf-8") as f:
+        _md = f.read()
     SOURCE_COUNT = len(re.findall(r"^\[\d+\] ", _md.split("\n## Sources", 1)[-1], re.M))
     slides = parse(_md)
+    for s in slides:
+        s["label"] = FOOTER_LABELS.get((OUTLINE_NAME, s["n"]))
+    if args.overlay:
+        with open(args.overlay, encoding="utf-8") as f:
+            inserts, extra = parse_overlay(f.read())
+        slides = apply_overlay(slides, inserts, extra, OUTLINE_NAME)
+    slides = select(slides, args.no_basics, args.standalone)
+
     prs = Presentation()
     prs.slide_width, prs.slide_height = Inches(W), Inches(H)
     total = len(slides)
-    special = {1: s_title, 2: s_three, 11: s_ladder, 13: s_data, 14: s_tree, 16: s_reading}
     for s in slides:
-        special.get(s["n"], s_standard)(prs, s, total)
+        LAYOUTS[s["layout"]](prs, s, total)
+        for flag, tag in TAGS.items():
+            if s[flag]:
+                corner_tag(prs.slides[-1], tag)
     prs.core_properties.title = slides[0]["title"]
     prs.core_properties.author = ""
-    prs.save(OUT)
-    print({"ok": True, "output": OUT, "slides": total})
+    prs.save(out)
+    print({"ok": True, "output": out, "slides": total})
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

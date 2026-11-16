@@ -25,6 +25,8 @@ A lunch-and-learn for colleagues across engineering and the business: 16 slides,
 
 ## Slide 1 · What works with AI: practical lessons
 
+*Layout: title*
+
 **On the slide**
 
 - Subtitle: What practitioners report, checked against research and industry data
@@ -42,6 +44,8 @@ We also checked these practitioner reports against industry research and vendor 
 ---
 
 ## Slide 2 · Three things to remember
+
+*Layout: three*
 
 **On the slide**
 
@@ -243,6 +247,8 @@ Newer evidence: AWS says its agents built its emulator against fidelity tests th
 
 ## Slide 11 · Autonomy is earned per action
 
+*Layout: ladder*
+
 **On the slide**
 
 - L1 · Investigate and report; change nothing [32]
@@ -288,6 +294,8 @@ DORA's 2025 report, one of the studies SEP cited, calls AI an amplifier of an or
 
 ## Slide 13 · What the industry data says
 
+*Layout: data*
+
 **On the slide**
 
 - Harvard study of 655 firms: agents raised output (+44% lines, +36% PRs) [37]
@@ -310,6 +318,8 @@ The study is observational, and its data ends in August 2026.[37]
 ---
 
 ## Slide 14 · Should this task use AI?
+
+*Layout: tree*
 
 **On the slide**
 
@@ -359,6 +369,8 @@ Finally, we should measure review time and reverts now, so any decision to give 
 ---
 
 ## Slide 16 · Further reading and sources
+
+*Layout: reading*
 
 **On the slide**
 
