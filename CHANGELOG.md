@@ -2,6 +2,17 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-16: decks open in Keynote
+
+- **All three decks now open in Apple Keynote** (and Quick Look). The build script used python-pptx,
+  which adds a notes master when the first speaker note is written but never lists it in
+  `presentation.xml`; PowerPoint and Google Slides tolerate that, Keynote refuses the file
+  (python-pptx issue #1051). `scripts/build_deck.py` now registers the notes master before saving,
+  with a test, and the lunch-and-learn and both talk decks are rebuilt. Slides and notes are unchanged.
+- **Talk: working with coding agents, slide 2 notes:** "the definition Simon Willison adopted in
+  September 2025", not "his working definition". He adopts a definition already in use; the outline
+  had implied he originated it.
+
 ## 2026-11-16: corrections from the final review
 
 - **Cam Soper's CloudFront story** no longer says he told Claude the rule, or that the rule lived only

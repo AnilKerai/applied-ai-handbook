@@ -13,6 +13,8 @@ import tempfile
 import unittest
 
 from pptx import Presentation
+from pptx.opc.constants import RELATIONSHIP_TYPE as RT
+from pptx.oxml.ns import qn
 from pptx.util import Inches, Pt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -188,6 +190,19 @@ class BuildDeckTest(unittest.TestCase):
                        out_name="failed.pptx")
         self.assertEqual(str(cm.exception), message)
         self.assertFalse(os.path.exists(out), "a failed build must write no pptx")
+
+    # ------------------------------------------------------------ Keynote
+    def test_notes_master_is_registered_for_keynote(self):
+        # python-pptx creates the notes master part and its relationship but never lists it in
+        # presentation.xml; Keynote (and Quick Look) then refuse to open any deck with notes.
+        prs = self.build()
+        lst = prs.part._element.find(qn("p:notesMasterIdLst"))
+        self.assertIsNotNone(lst, "presentation.xml must register the notes master")
+        ids = [e.get(qn("r:id")) for e in lst]
+        self.assertEqual(len(ids), 1)
+        self.assertEqual(prs.part.rels[ids[0]].reltype, RT.NOTES_MASTER)
+        self.assertEqual(lst.getprevious().tag, qn("p:sldMasterIdLst"),
+                         "notesMasterIdLst must follow sldMasterIdLst (schema order)")
 
     # ------------------------------------------------------------ regression
     def test_regression_lunch_and_learn(self):

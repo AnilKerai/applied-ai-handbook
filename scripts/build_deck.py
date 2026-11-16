@@ -31,6 +31,8 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN, MSO_AUTO_SIZE
+from pptx.opc.constants import RELATIONSHIP_TYPE as RT
+from pptx.oxml.xmlchemy import OxmlElement
 from pptx.oxml.ns import qn
 from pptx.util import Inches, Pt, Emu
 
@@ -507,6 +509,26 @@ def inside_repo(path):
         d = parent
 
 
+def register_notes_master(prs):
+    """List the notes master in presentation.xml, which python-pptx forgets to do.
+
+    python-pptx adds the notes master part and its relationship when the first speaker note is
+    written, but never adds <p:notesMasterIdLst>. PowerPoint and Google Slides tolerate that;
+    Keynote and Quick Look refuse to open the file. See python-pptx issue #1051 / PR #1128.
+    """
+    pres = prs.part._element
+    if pres.find(qn("p:notesMasterIdLst")) is not None:
+        return
+    rid = next((r.rId for r in prs.part.rels.values() if r.reltype == RT.NOTES_MASTER), None)
+    if rid is None:
+        return
+    lst = OxmlElement("p:notesMasterIdLst")
+    entry = OxmlElement("p:notesMasterId")
+    entry.set(qn("r:id"), rid)
+    lst.append(entry)
+    pres.find(qn("p:sldMasterIdLst")).addnext(lst)
+
+
 def main(argv=None):
     global SOURCE_COUNT, OUTLINE_NAME
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
@@ -549,6 +571,7 @@ def main(argv=None):
                 corner_tag(prs.slides[-1], tag)
     prs.core_properties.title = slides[0]["title"]
     prs.core_properties.author = ""
+    register_notes_master(prs)
     prs.save(out)
     print({"ok": True, "output": out, "slides": total})
     return 0

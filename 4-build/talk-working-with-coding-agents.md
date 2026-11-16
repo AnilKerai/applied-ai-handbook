@@ -53,7 +53,7 @@ The aim is that you leave with one thing to try this week, and session 2 starts 
 
 **Speaker notes**
 
-Simon Willison's working definition is short: "An LLM agent runs tools in a loop to achieve a goal."[1]
+The definition Simon Willison adopted in September 2025 is short: "An LLM agent runs tools in a loop to achieve a goal."[1]
 Anthropic's Claude Code docs, as of November 2026, say the loop is powered by two components: models that reason and tools that act.[2]
 Throughout a task, Claude uses those tools: searching files to understand the code, editing to make changes and running tests to check its work.[2]
 Anthropic's Agent SDK docs describe the same loop: Claude calls tools, receives the results and repeats.[3]
