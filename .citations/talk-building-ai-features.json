@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "title": "Anthropic, Building effective agents",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "For many applications, however, optimizing single LLM calls with retrieval and in-context examples is usually enough.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Workflows are systems where LLMs and tools are orchestrated through predefined code paths.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Agents, on the other hand, are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "we recommend finding the simplest solution possible, and only increasing complexity when needed. This might mean not building agentic systems at all.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "they benchmarked five different LMs against consensus chart review and picked o three minutei because it performed competitively at a lower cost. The model is again the replaceable part, not the center of the system.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "You know, you have to reevaluate afterwards",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "a rule written in a prompt is not deterministically enforced.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "A guardrail is actual machinery, a gate, a check, a human, a limit in code.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "an agent without evals is a proof of concept. And this doesn't matter what infrastructure it's been deployed onto. If you do not have evaluations, you cannot confirm for sure that the agent is behaving as expected.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "So I really need to lean on them to help correct me where I'm wrong.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "if you have a dataset that you want them to label, give them a Google spreadsheet, they can go and label it on their own time",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "initially you might start with a handful of representatives that are going to showcase their knowledge and help you get on the right track, but they might not see every case.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "you can review and discover what went wrong on that particular case. You can then add that back to your offline dataset.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "So it overflags by design, and physicians declined about four in 10 flagged patients basically saying it wasn't complex enough.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "every case shows up in the EHR list, flagged or not, and the physician can, you know, look at all of them and confirm decline or override.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "the human can get tired. Right? They can just have rubber stamping fatigue, and, you know, that's not a good guardrail.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai",
+      "title": "Microsoft, Microsoft.Extensions.AI libraries (.NET documentation)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Use the abstractions to simplify integration into your apps. This enables portability across models and services",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "most AI product steps are bounded decisions and not generation problems",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "can the output be listed in advance if no then it's a free form gener generative text problem statement go back to something that can generate free form text if yes then use jev",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "So you have deterministic calls and clear cognitive decision points where you would use an LLM to control the control flow rather than leaving it all in the hands of an agent.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.anthropic.com/research/investigating-unintended-model-actions",
+      "title": "Anthropic, Investigating unintended model actions in our evaluations and internal use",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Most are forms of persistence, in which Claude, when it cannot complete a task as given, works around a restriction instead of stopping.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "This gave us a reference label for all 500 steps. And it turned out the judge was right 65% of the time. So more or less a coin flip. It accepted 118 steps that it should have sent back.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "We had trusted our judge until we measured it. Measure yours.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "title": "Anthropic, Demystifying evals for AI agents",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Because model outputs vary between runs, we run multiple trials to produce more consistent results.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "LLM-as-judge graders should be closely calibrated with human experts to gain confidence that there is little divergence between the human grading and model grading.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "In reality, 20-50 simple tasks drawn from real failures is a great start. After all, in early agent development, each change to the system often has a clear, noticeable impact, and this large effect size means small sample sizes suffice.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/004-response-is-final-only-when-it-ended-normally.md",
+      "title": "Anil Kerai, model-harness, ADR-004: A response is a final answer only when it ended normally, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "A response the provider cut off at `max_tokens` therefore returned `Done`, with a `FinalAnswer` ending mid-sentence",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md",
+      "title": "Anil Kerai, model-harness, docs/PRIMER.md, commit of 1 November 2026 (GitHub)",
+      "accessed": "2026-11-16",
+      "anchor": "loop-engineering",
+      "quotes": [
+        {
+          "text": "a budget can't be talked out of stopping. Pair every model judge with a hard cap.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "only about 14% of people caught a clearly dangerous command. Auto mode blocked 89% of them, so it is a lot better at it than we were. But about one in 10 of those commands still went through.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "And then how much we review ourselves just depends on the risk. So smaller changes like docs or copy, they don't need a person.",
+          "added": "2026-11-16"
+        }
+      ]
+    }
+  ]
+}
