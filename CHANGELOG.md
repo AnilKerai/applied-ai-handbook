@@ -16,7 +16,8 @@ Newest first. Every correction lists what changed and the evidence.
 - **Lunch-and-learn slide 13:** the +44% tile now reads "lines of code (not significant)", and the
   outline's first bullet keeps the paper's caveat. Of the 44.0% lines estimate, the Harvard study
   says "this estimate is also marginally insignificant"; the speaker notes already said so. The other
-  figures are unchanged.
+  figures are unchanged. *Should we build a software factory?* (Newer evidence) now carries the same
+  caveat on the 44.0% lines figure.
 - **Talk: building AI features.** The reading slide says the outline cites every *sourced* claim,
   matching session 1: the first-person lines and the advice are uncited by design. Slide 10 names
   Heidi Porter on the slide for her "rubber stamping fatigue" line, rather than attributing it only
