@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Keep sensitive information out of public AI tools, and use the tools your organisation has approved.
 > - Try one routine task with an approved tool this week, check the result, and share what you found.
 
-*Reading time: about 10 minutes · Best for: presenting to colleagues new to AI*
+*Reading time: about 15 minutes · Best for: presenting to colleagues new to AI*
 
 A talk for colleagues in any role who are new to using AI tools at work: 12 slides, 16:9, for about 25 minutes plus questions. It is about using the tools people already have, well and safely, not about building with AI, and the aim is that everyone leaves with one habit to try the following week. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-using-ai-at-work.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. OpenAI's explanation of why models make things up is OpenAI's own account, the NCSC's advice comes from a 2023 blog post, and the guidance for judges is quoted as it stood in its October 2025 update. The key lines, the three habits on slide 10, the action on slide 11 and the other uncited suggestions are advice, not findings from the sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 1-understand/talk-using-ai-at-work.md --no-basics --out <file>.pptx`, which leaves 10 slides.
 
@@ -280,7 +280,7 @@ Should this task use AI? is a short decision tree to walk through for any task b
 - Before handing a task to AI: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
 - A broader talk on what works with AI: [What works with AI: practical lessons](ai-lunch-and-learn.md)
 
-**Read next:** [AI glossary for leadership](ai-glossary.md), or go back to the [handbook home](../README.md).
+**Read next:** [What works with AI: practical lessons](ai-lunch-and-learn.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

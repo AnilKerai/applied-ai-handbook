@@ -40,22 +40,23 @@ Add the .NET guide if you work in .NET, and the rest of the Engineer section for
 5. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
 6. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
 
-**Presenting to your team** (about 20 minutes)
+**Presenting to your team** (about 35 minutes)
 
-1. [What works with AI: practical lessons](1-understand/ai-lunch-and-learn.md)
+1. [Talk: using AI well at work](1-understand/talk-using-ai-at-work.md)
+2. [What works with AI: practical lessons](1-understand/ai-lunch-and-learn.md)
 
-The slides are `1-understand/ai-lunch-and-learn.pptx`; the outline has the speaker notes and sources.
+For colleagues new to AI, the slides are `1-understand/talk-using-ai-at-work.pptx`; for a general lunch-and-learn, `1-understand/ai-lunch-and-learn.pptx`. Each outline has the speaker notes and sources.
 
 ## The six sections
 
-- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, and a lunch-and-learn you can give to your team.
+- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, a talk for colleagues new to using AI, and a lunch-and-learn on what works in practice.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
 - **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: prompt, context, harness, loop and eval engineering, how they fit together, when they arrived, and first-hand lessons from building them.
 - **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, how developers should work with coding agents, and two talks you can give to engineers.
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 - **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
 
-Reading everything takes about 4 hours. Nobody needs to; pick a route.
+Reading everything takes about 5 hours. Nobody needs to; pick a route.
 
 ## How to read it
 

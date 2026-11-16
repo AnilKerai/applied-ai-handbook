@@ -239,7 +239,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on p
 - **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
 - **Are local, open-weight models good enough?** A few demos ran local models, but nobody measured them against hosted models on business tasks.
 
-**Read next:** [What works with AI: practical lessons](ai-lunch-and-learn.md), or go back to the [handbook home](../README.md).
+**Read next:** [Talk: using AI well at work](talk-using-ai-at-work.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 
