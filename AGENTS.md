@@ -82,7 +82,9 @@ leadership, many of them new to AI. Write for them.
   - Each slide is a `## Slide N · Title` section with **On the slide** bullets, an optional
     **Key line** and **Speaker notes**.
   - An optional `*Layout: …*` line under the heading picks a special layout. Without one, a slide
-    uses the standard layout.
+    uses the standard layout. The general layouts are `title`, `three`, `standard`, `discussion`
+    and `reading`. `ladder`, `data` and `tree` hard-code the lunch-and-learn deck's own captions,
+    so use them only there.
   - Slides titled `Basics · …` are optional basics. Slides titled `Series · …` only make sense after
     the previous session.
 - **Edit the outline,** then run `python3 scripts/build_deck.py <outline.md>`.
@@ -91,7 +93,8 @@ leadership, many of them new to AI. Write for them.
 - **Options:**
   - `--out <pptx>` sets the output file.
   - `--no-basics` drops the `Basics ·` slides.
-  - `--standalone` drops the `Series ·` slides.
+  - `--standalone` drops the `Series ·` slides and the `Session N of M: ` prefix from the title
+    slide's subtitle.
   - `--overlay <file>` builds a private local version. It adds local notes or slides on top of the
     public outline.
 - **The committed pptx for each talk is the full version,** with its basics and series slides.
