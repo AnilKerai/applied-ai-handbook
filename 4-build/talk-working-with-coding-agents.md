@@ -47,7 +47,7 @@ The aim is that you leave with one thing to try this week, and session 2 starts 
 - Simon Willison: "An LLM agent runs tools in a loop…" [1]
 - A model reasons; its tools search files, edit code and run tests [2]
 - It calls tools, gets the results and repeats [3]
-- It stops when the work "looks done" [4]
+- Claude Code's docs: it stops when the work "looks done" [4]
 
 **Key line:** Give it something to run that tells it whether the work is done.
 
@@ -55,9 +55,9 @@ The aim is that you leave with one thing to try this week, and session 2 starts 
 
 Simon Willison's working definition is short: "An LLM agent runs tools in a loop to achieve a goal."[1]
 Anthropic's Claude Code docs, as of November 2026, say the loop is powered by two components: models that reason and tools that act.[2]
-Throughout a task it uses those tools: searching files to understand the code, editing to make changes and running tests to check its work.[2]
+Throughout a task, Claude uses those tools: searching files to understand the code, editing to make changes and running tests to check its work.[2]
 Anthropic's Agent SDK docs describe the same loop: Claude calls tools, receives the results and repeats.[3]
-And it stops when the work looks done: if it has nothing to run that tells it whether the work actually is done, "looks done" is all it has to go on.[4]
+Anthropic's best-practices page adds that it stops when the work looks done: if it has nothing to run that tells it whether the work actually is done, "looks done" is all it has to go on.[4]
 
 ---
 

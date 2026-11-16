@@ -77,7 +77,7 @@ Blame the plan, not people.
 ### Design
 
 **8. The prompt-only rule**
-- **Looks like:** Porter: "a rule written in a prompt is not deterministically enforced".[2] Cam Soper (Pulumi) kept a rule only in Claude's instructions, and Claude later broke it: "a rule in an agent's instructions is just a suggestion."[8]
+- **Looks like:** Porter: "a rule written in a prompt is not deterministically enforced".[2] Cam Soper (Pulumi) had a rule against putting CloudFront in front of one of his servers, and Claude put it there anyway: "a rule in an agent's instructions is just a suggestion."[8]
 - **Warning sign:** A safety rule lives only in a prompt or AGENTS.md.
 - **Prevention:** Make each rule a gate, test, type, deny rule or limit in code, and give the LLM only the fuzzy step (intake question 9; [Should this task use AI, and which kind?](should-this-task-use-ai.md)).
 

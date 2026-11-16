@@ -2,6 +2,30 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-16: corrections from the final review
+
+- **Cam Soper's CloudFront story** no longer says he told Claude the rule, or that the rule lived only
+  in agent instructions. His talk's captions say neither: "I didn't write that. Actually my claude
+  wrote that … I didn't read it". Each page now says he had a rule against putting CloudFront in front
+  of one of his servers, and Claude put it there anyway. Changed in Working with coding agents (§7),
+  the .NET guide, the pre-mortem (failure mode 8) and the lunch-and-learn speaker notes (slide 5).
+- **Lauren Tan's layers** (Working with coding agents, §7) are her inverse pyramid of where to spend
+  time on an agent's environment, not an order of strength. Her transcript says "this inverse pyramid
+  is how I think about where to spend time"; "strongest constraints" is a heading in the editorial
+  write-up of her talk, not her words.
+- **Lunch-and-learn slide 13:** the +44% tile now reads "lines of code (not significant)", and the
+  outline's first bullet keeps the paper's caveat. Of the 44.0% lines estimate, the Harvard study
+  says "this estimate is also marginally insignificant"; the speaker notes already said so. The other
+  figures are unchanged.
+- **Talk: building AI features.** The reading slide says the outline cites every *sourced* claim,
+  matching session 1: the first-person lines and the advice are uncited by design. Slide 10 names
+  Heidi Porter on the slide for her "rubber stamping fatigue" line, rather than attributing it only
+  through its citation.
+- **Talk: working with coding agents, slide 2.** The "looks done" line is attributed, on the slide and
+  in the notes, to Claude Code's best-practices page, which says it of Claude ("Claude stops when the
+  work looks done"), not of every coding agent. The notes' tool-use sentence names Claude as its
+  subject again.
+
 ## 2026-11-16: two talks for engineers
 
 - **Two new talks in `4-build/`,** a two-session series for engineers. Each has an outline (slide
@@ -26,9 +50,13 @@ Newest first. Every correction lists what changed and the evidence.
     number. The lunch-and-learn outline gained these lines for its six special slides. A new
     `discussion` layout serves session 2's recap slide.
   - `--no-basics` drops slides titled `Basics · …`, and `--standalone` drops slides titled
-    `Series · …`; the footers are renumbered.
+    `Series · …` and the `Session N of M: ` prefix from the title slide's subtitle; the footers are
+    renumbered.
   - `--overlay` adds private local notes or slides on top of a public outline. Overlays and the decks
-    built from them stay outside this repo: an overlay build refuses to write inside it.
+    built from them stay outside this repo: an overlay build refuses to write inside it, comparing
+    paths by file identity, so a differently cased spelling of the repo path is refused too.
+  - The `ladder`, `data` and `tree` layouts hard-code the lunch-and-learn deck's captions and tiles, so
+    only that deck uses them; the other layouts are generic.
   - Tests are in `scripts/test_build_deck.py`.
 - **AGENTS.md:** the `4-build/` layout line lists both talks. The first-person rule now covers every
   `3-engineer/lessons-from-*` page (the old pattern missed one of them) and the

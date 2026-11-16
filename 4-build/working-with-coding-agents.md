@@ -165,8 +165,8 @@ Anthropic's Claude Code team caps agent author-reviewer loops at three rounds, t
 ## 7. Turning corrections into checks
 
 Tan: "whenever you're correcting your agent, think about how you can make that a deterministic check instead of adding another line to your rules or your agents.md".[14]
-Her order of strength: the code itself (API design, architecture), then lint, types and tests, then runtime and formal verification, with a little prose last.[14]
-Cam Soper (Pulumi) told Claude never to put an access layer in front of one server; the rule lived only in agent instructions, and Claude later did it anyway.[24]
+In her inverse pyramid of where to spend time on an agent's environment, the first two layers are deterministic: the code itself (API design, architecture), then lint, types and tests; runtime and formal verification come next, with a little prose last.[14]
+Cam Soper (Pulumi) had a rule that one of his home-lab MCP servers be reached only through its own auth, with no CloudFront in front of it, and Claude put CloudFront in front of it anyway.[24]
 His conclusion: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not."[24]
 Geoffrey Huntley says editing AGENTS.md still leaves a gap that drifts, whereas a pre-commit hook that checks the diff and feeds back a correction took his agent to ten out of ten (one practitioner's experience).[30]
 

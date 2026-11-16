@@ -12,6 +12,8 @@ With no arguments it builds 1-understand/ai-lunch-and-learn.pptx.
 
 Outline conventions:
     *Layout: name*        under a slide heading picks a layout (see LAYOUTS); default "standard".
+    Generic layouts: title, three, standard, discussion, reading. ladder, data and tree hard-code
+    the lunch-and-learn deck's captions and tiles; use them only there.
     ## Slide N · Basics · …   a basics slide: dropped by --no-basics, tagged "Basics".
     ## Slide N · Series · …   a series recap: dropped by --standalone, tagged "Recap".
 
@@ -399,7 +401,7 @@ def s_ladder(prs, s, total):
 def s_data(prs, s, total):
     sl = prs.slides.add_slide(prs.slide_layouts[6])
     title(sl, s["title"])
-    tiles = [("+44%", "lines of code"), ("+36%", "pull requests"),
+    tiles = [("+44%", "lines of code (not significant)"), ("+36%", "pull requests"),
              ("Only +14%", "resolved issues (borderline)"), ("+56%", "time to review approval")]
     for i, (big, small) in enumerate(tiles):
         left = 0.6 + i * 3.08
@@ -485,6 +487,26 @@ def rel_name(path):
     return os.path.basename(path) if rel.startswith("..") else rel.replace(os.sep, "/")
 
 
+def inside_repo(path):
+    """True if path, existing or not, lies inside the repo.
+
+    Compares by file identity, not spelling, so a differently cased path on a
+    case-insensitive disk is still caught: it checks every existing ancestor of
+    the resolved path against ROOT with os.path.samefile.
+    """
+    d = os.path.realpath(path)
+    while True:
+        try:
+            if os.path.samefile(d, ROOT):
+                return True
+        except OSError:
+            pass  # this ancestor doesn't exist (yet); keep walking up
+        parent = os.path.dirname(d)
+        if parent == d:
+            return False
+        d = parent
+
+
 def main(argv=None):
     global SOURCE_COUNT, OUTLINE_NAME
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
@@ -500,8 +522,7 @@ def main(argv=None):
         # A deck with local content must never land in (or overwrite a deck in) the public repo.
         if not args.out:
             raise SystemExit("overlay: --out is required and must be outside the handbook repo")
-        root = os.path.realpath(ROOT)
-        if os.path.commonpath([os.path.realpath(args.out), root]) == root:
+        if inside_repo(args.out):
             raise SystemExit("overlay: --out must be outside the handbook repo")
     out = args.out or os.path.splitext(args.outline)[0] + ".pptx"
     OUTLINE_NAME = rel_name(args.outline)

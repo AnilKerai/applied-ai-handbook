@@ -207,7 +207,7 @@ The headline number is the difference between the two runs, because a score with
 **On the slide**
 
 - Anthropic's study: about 14% of people caught a clearly dangerous command [11]
-- Reviewing thousands of outputs can bring "rubber stamping fatigue" [2]
+- Heidi Porter: reviewing thousands of outputs can bring "rubber stamping fatigue" [2]
 - The same hospital's tool over-flags by design; the physician decides [2]
 - One Anthropic team: docs need no person; risky PRs might need two [11]
 
@@ -249,14 +249,14 @@ Then run the set before and after your next prompt or model change, and look at 
 
 **On the slide**
 
-- The outline for this deck: every claim cited, with links
+- The outline for this deck: every sourced claim cited, with links
 - In the handbook: evals playbook, pattern catalogue, .NET guide
 - Anthropic: Building effective agents · Demystifying evals for AI agents [1][8]
 - Case studies: the Practical AI podcast, episode 378 transcript [2]
 
 **Speaker notes**
 
-Everything on these slides is cited in the outline that goes with the deck, which lists all 11 sources with links.
+Every claim on these slides that comes from a source is cited in the outline that goes with the deck, which lists all 11 sources with links.
 In the handbook, the evals playbook is the longer version of the evals slides, the pattern catalogue covers narrow jobs and guardrails, and the .NET guide shows the abstractions in use.
 For the background, start with Anthropic's *Building effective agents* and *Demystifying evals for AI agents*.[1][8]
 The hospital stories, the guardrail definition and the advice on building evals with the people who do the job come from the Practical AI podcast's official transcript of episode 378.[2]

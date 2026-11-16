@@ -203,6 +203,15 @@ class BuildDeckTest(unittest.TestCase):
                 geom = lambda sl: [(sh.left, sh.top, sh.width, sh.height) for sh in sl.shapes]
                 self.assertEqual(geom(b), geom(c))
 
+    def test_lunch_data_tiles_keep_hedges(self):
+        """The Harvard tiles on slide 13 keep the paper's caveats: lines not significant, issues borderline."""
+        out = os.path.join(self.tmp, "lunch.pptx")
+        self.assertEqual(run_main(["--out", out]), 0)
+        for prs in (Presentation(out), Presentation(LUNCH_PPTX)):
+            tiles = frames(prs.slides[12])
+            self.assertIn("+44%\nlines of code (not significant)", tiles)
+            self.assertIn("Only +14%\nresolved issues (borderline)", tiles)
+
     # ------------------------------------------------------------ layouts
     def test_layout_hint(self):
         prs = self.build()
@@ -395,6 +404,15 @@ Second local line.
                                      "overlay: --out must be outside the handbook repo")
                     self.assertEqual(self.pptx_in(inside), [], "a failed build must write no pptx")
             self.assertEqual(self.pptx_in(self.tmp), [])
+
+    @unittest.skipUnless(os.path.exists(ROOT.swapcase()), "case-sensitive file system")
+    def test_overlay_out_case_variant_fails(self):
+        outline, overlay = self.overlay_paths()
+        out = os.path.join(ROOT.swapcase(), "probe.pptx")
+        with self.assertRaises(SystemExit) as cm:
+            run_main([outline, "--out", out, "--overlay", overlay])
+        self.assertEqual(str(cm.exception), "overlay: --out must be outside the handbook repo")
+        self.assertFalse(os.path.exists(os.path.join(ROOT, "probe.pptx")))
 
     def test_overlay_citation_fails(self):
         for overlay in ["## Notes for slide 4\n\n- A cited line.[1]\n",

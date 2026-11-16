@@ -57,7 +57,7 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 
 ### Rules in types, tests and CI, not instructions
 
-- Cam Soper: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not." A rule he gave an agent only in instructions was later ignored.[18]
+- Cam Soper: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not." He had a rule against putting CloudFront in front of one of his servers, and Claude put it there anyway.[18]
 - Lauren Tan: "think about how you can make that a deterministic check instead of adding another line to your rules".[19]
 - *Industry:* one study found instruction-file constraints were met 88.3% of the time as executable checks, against 67.0% in the prompt alone (single study, Python).[20]
 - *We recommend* turning every hard rule into an analyser, test, CI check or deny rule, with the instruction file naming the command that checks it.

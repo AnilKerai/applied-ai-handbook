@@ -125,7 +125,7 @@ Newer evidence: Amazon engineers say a decision model replaced Sonnet 4.6 for ti
 
 Heidi Porter put it plainly: "a rule written in a prompt is not deterministically enforced".[5]
 A guardrail is actual machinery: a gate, a check, a human or a limit in code.[5]
-Cam Soper said "a rule in an agent's instructions is just a suggestion" after an agent ignored one; he puts rules that must hold into types the compiler checks.[15]
+Cam Soper said "a rule in an agent's instructions is just a suggestion" after Claude put CloudFront in front of one of his servers despite a rule against it; he puts rules that must hold into types the compiler checks.[15]
 Lauren Tan's advice: whenever you correct your agent, make it a deterministic check rather than another line in the rules file.[16]
 Yvonne Carlson's eight *leash* principles include least privilege, default-deny boundaries, sandboxes and human approval before anything destructive (from her abstract).[17]
 Matt Soucoup and Paul Yuknewicz of Microsoft showed guardrails running in gateway hooks outside the agent's reach, and Justin Yoo separates permission to run from permission to reach.[18][19]
@@ -298,7 +298,7 @@ DORA's 2025 report, one of the studies SEP cited, calls AI an amplifier of an or
 
 **On the slide**
 
-- Harvard study of 655 firms: agents raised output (+44% lines, +36% PRs) [37]
+- Harvard study of 655 firms: agents raised PRs by 36%; lines +44% (marginally insignificant) [37]
 - …but resolved issues rose only 14% (borderline), and review time rose 56% [37]
 - Anthropic's Claude Code team: merged PRs more than doubled, revert share down over 40% (its own claim) [38]
 - So treat headline company numbers as claims, not norms [37][39]
