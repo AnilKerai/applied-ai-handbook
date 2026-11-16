@@ -34,9 +34,9 @@ The second of two talks for engineers who build AI features into a product, such
 
 **Speaker notes**
 
-This is the second of two sessions for engineers, and it is about building AI features into a product.
-It follows a session on working with coding agents, but it also stands on its own.
-The thread is the same: the model is one part of the system, and the checks around it decide whether the feature can be trusted.
+This session is for engineers building AI features into a product.
+It pairs with a session on working with coding agents, but it also stands on its own.
+Its thread: the model is one part of the system, and the checks around it decide whether the feature can be trusted.
 It ends with one thing to try: 20 eval cases, drawn from real examples, for one feature.
 
 ---
@@ -125,7 +125,7 @@ We recommend keeping the control flow in code, and calling a model at the points
 
 - Heidi Porter of Moyer Group AI: prompt rules are "not deterministically enforced" [2]
 - Guardrails are machinery: gates, checks, humans, limits in code [2]
-- Anthropic's report: most unintended actions were Claude working around a restriction [6]
+- Anthropic's report: most cases it describes were Claude working around a restriction [6]
 
 **Key line:** If it must never happen, enforce it outside the model's reach.
 
@@ -146,7 +146,7 @@ So we recommend putting anything that must never happen into code the model can'
 - Kevin Solorio of Focused: without evals, it's still "a proof of concept" [2]
 - He leans on the people who do the job to correct him [2]
 - Make labelling easy: a spreadsheet they label in their own time [2]
-- Once live, flagged cases go back into the offline dataset [2]
+- Once live, flagged cases are reviewed, then added to the offline dataset [2]
 
 **Key line:** No evals, no launch: build the cases with the people who do the job.
 
@@ -195,12 +195,10 @@ A judge is a model too, so we recommend checking it against cases a person has l
 **Speaker notes**
 
 My loop treated a turn with no tool calls as finished and never looked at why the model stopped, so a response cut off at the output-token limit came back as done, ending mid-sentence.[9]
-I replaced the list of bad reasons with a short list of good ones: a normal end of turn, a stop sequence and a tool call.
+I switched from listing bad stop reasons to a short list of good ones: a normal end of turn, a stop sequence and a tool call.
 Each run has several independent exits, and as I put it in the primer, "a budget can't be talked out of stopping. Pair every model judge with a hard cap."[10]
 In my evals framework, every case runs twice: once with the skill, and once with the skill withheld and everything else the same, tools included.
-The headline number is the difference between the two runs, because a score with no baseline can't separate what the skill adds from what the model could already do.
-
-**Links:** [Lessons from my harness](../3-engineer/lessons-from-my-harness.md) · [Lessons from my evals framework](../3-engineer/lessons-from-my-evals-framework.md)
+The headline number is the difference between the two runs, because a score with no baseline can't separate what the skill adds from what the model could already do; the rest is in [Lessons from my harness](../3-engineer/lessons-from-my-harness.md) and [Lessons from my evals framework](../3-engineer/lessons-from-my-evals-framework.md).
 
 ---
 
@@ -211,7 +209,7 @@ The headline number is the difference between the two runs, because a score with
 - Anthropic's study: about 14% of people caught a clearly dangerous command [11]
 - Reviewing thousands of outputs can bring "rubber stamping fatigue" [2]
 - The same hospital's tool over-flags by design; the physician decides [2]
-- Review by risk: docs need no person; risky PRs might need two [11]
+- One Anthropic team: docs need no person; risky PRs might need two [11]
 
 **Key line:** Over-flag, let a person decide, and match the review to the risk.
 
@@ -219,7 +217,7 @@ The headline number is the difference between the two runs, because a score with
 
 Lydia Hallie of Anthropic cited a study Anthropic published in August: only about 14% of people caught a clearly dangerous command, while Claude Code's auto mode blocked 89% and about one in ten still got through (Anthropic's figures).[11]
 Heidi Porter of Moyer Group AI warned that a person reviewing thousands of LLM outputs can tire into "rubber stamping fatigue", which is not a good guardrail.[2]
-She described the same hospital's screening tool, which over-flags by design while the clinician keeps the decision: every case appears in the record list, flagged or not, and the physician can confirm, decline or override.[2]
+She said the same tool over-flags by design, and the clinician keeps the decision: every case appears in the record list, flagged or not, and the physician can confirm, decline or override.[2]
 On Lydia Hallie's team at Anthropic, Claude reviews every PR first, and how much people review depends on the risk: docs or copy need no person, ordinary changes maybe one reviewer, risky ones might need two.[11]
 For an AI feature, we recommend the same shape: let the system flag generously, and spend people's attention where a mistake costs most.
 
@@ -269,7 +267,7 @@ The hospital stories, the guardrail definition and the advice on building evals 
 
 ## Related
 
-- The series: session 1 is *Talk: working with coding agents*, in this folder.
+- The series: session 1 is [Talk: working with coding agents](talk-working-with-coding-agents.md).
 - Building: [Evals playbook: how to build and run evals for an AI feature or agent](evals-playbook.md), [AI pattern catalogue](ai-pattern-catalogue.md), [Building AI features in .NET](dotnet-ai-engineering-guide.md)
 - Engineering: [Harness engineering](../3-engineer/harness-engineering.md), [Eval engineering](../3-engineer/eval-engineering.md)
 - Deciding: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
