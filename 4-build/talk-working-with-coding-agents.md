@@ -44,9 +44,9 @@ The aim is that you leave with one thing to try this week, and session 2 starts 
 
 **On the slide**
 
-- Simon Willison: "An LLM agent runs tools in a loop" [1]
+- Simon Willison: "An LLM agent runs tools in a loop…" [1]
 - A model reasons; its tools search files, edit code and run tests [2]
-- The loop repeats until the task is complete [3]
+- It calls tools, gets the results and repeats [3]
 - It stops when the work "looks done" [4]
 
 **Key line:** Give it something to run that tells it whether the work is done.
@@ -54,9 +54,9 @@ The aim is that you leave with one thing to try this week, and session 2 starts 
 **Speaker notes**
 
 Simon Willison's working definition is short: "An LLM agent runs tools in a loop to achieve a goal."[1]
-Anthropic's Claude Code docs, as of November 2026, say the loop is powered by two components, models that reason and tools that act, and that Claude Code is the layer around the model that provides the tools and manages what the model sees.[2]
+Anthropic's Claude Code docs, as of November 2026, say the loop is powered by two components: models that reason and tools that act.[2]
 Throughout a task it uses those tools: searching files to understand the code, editing to make changes and running tests to check its work.[2]
-Anthropic's Agent SDK docs say the loop repeats until the task is complete; without limits, it runs until Claude finishes on its own, which is fine for well-scoped tasks but can run long on open-ended prompts.[3]
+Anthropic's Agent SDK docs describe the same loop: Claude calls tools, receives the results and repeats.[3]
 And it stops when the work looks done: if it has nothing to run that tells it whether the work actually is done, "looks done" is all it has to go on.[4]
 
 ---
@@ -65,7 +65,7 @@ And it stops when the work looks done: if it has nothing to run that tells it wh
 
 **On the slide**
 
-- Claude Code's context: conversation, file contents, command output [2]
+- Claude Code's context includes conversation, files and command output [2]
 - Each new session starts with a fresh context window [2]
 - What carries over is written to files: CLAUDE.md and auto memory [5]
 
@@ -117,8 +117,8 @@ Their conclusion is that AI substantially raises code output but has small effec
 
 Jarred Sumner of Anthropic says the approach to a project built at agent scale is driven by how you will verify that it works.[9]
 His team decided against rewriting Claude Code in Rust because its test suite would have had to be ported too, and once you rewrite the tests, "you can't really trust the tests anymore."[9]
-McKenna Barlow of Microsoft warns that when an agent writes both the code and the tests, a misunderstood requirement "can actually show up in both places", so she pointed the testing agent at the README's written requirements: look at the code to understand how to use it, but "use the requirements to decide what the answer should be".[10]
-Before trusting a green suite, she also breaks something on purpose to see whether the tests notice.[10]
+McKenna Barlow of Microsoft warns that when an agent writes both the code and the tests, a misunderstood requirement "can actually show up in both places".[10]
+So she pointed the testing agent at the README's written requirements, and before trusting a green suite, she breaks something on purpose to see whether the tests notice.[10]
 The last bullet, proof from the running app, is our advice: passing tests are one piece of evidence, not all of it.
 
 ---
@@ -128,7 +128,7 @@ The last bullet, proof from the running app, is our advice: passing tests are on
 **On the slide**
 
 - ETH Zurich and LogicStar.ai study: no general gain in task success [11]
-- …while inference cost rose by over 20% on average [11]
+- But context files raised inference cost by over 20% on average [11]
 - Leave out what the agent would find by reading the code [4]
 - Make rules concrete enough to verify, and prune stale ones [5]
 
@@ -149,7 +149,7 @@ They also suggest targeting under 200 lines per CLAUDE.md file, since longer fil
 **On the slide**
 
 - Cam Soper: "a rule in an agent's instructions is just a suggestion" [12]
-- Rule: no CloudFront in front of his server. Claude added it anyway [12]
+- Rule: no CloudFront in front of one server. Claude added it anyway [12]
 - In code, the compiler enforces the rule [12]
 - Lauren Tan: make each correction a deterministic check if you can [13]
 
@@ -169,9 +169,9 @@ In her inverse pyramid of where to spend time on an agent's environment, the fir
 
 **On the slide**
 
-- Level 1: it investigates and reports; it changes nothing [14]
-- Level 2: it drafts the fix; a human approves before production [14]
-- Level 3: it clears lower-criticality work alone [14]
+- Meta's on-call agent, level 1: investigates and reports; changes nothing [14]
+- Level 2: drafts the fix; a human approves before production [14]
+- Level 3: clears lower-criticality work on its own [14]
 - To climb: how costly is a mistake, and how easy to catch? [14]
 
 **Key line:** Promote one kind of action at a time, on its track record.
@@ -192,15 +192,15 @@ We'd ask the same question of a coding agent, action by action: let it run the t
 
 - The card is the prompt: write the whole task into it
 - A separate reviewer re-runs the checks; the writer never grades itself
-- First five days: 19 of 20 reviewed cards approved first time [15]
+- First snapshot: 19 of 20 reviewed implementation cards approved first time [15]
 - Rules in the system: one publish script, the only way out
 
-**Key line:** Don't let the agent that did the work sign it off.
+**Key line:** Put the task, the checks and the rules in the system, not in the agent's head.
 
 **Speaker notes**
 
-In my agent squads, a worker can't see the cards beside its own, or the chat that produced its card, so the card body is its whole prompt.
-The reviewer re-runs a card's verify commands itself, so the engineer agent never grades its own work.
+My dev squad has a lead, an engineer, an ops role and a reviewer, and each task is a card that a worker picks up from a kanban board.
+A worker can't see the cards beside its own, or the chat that produced its card, so the card body is its whole prompt.
 In my first five-day snapshot, 19 of the 20 implementation cards reviewed were approved first time, one was sent back for a real defect, and every approval cited checks the reviewer had run.[15]
 When I let the lead publish its own pull requests, I found that blocking command patterns wasn't enough: a push to the main branch could be typed in ways the patterns didn't match.
 So publishing now goes through one script, the only way out, which refuses the default branch and force-pushes, opens one pull request and never merges; the rest is in [Lessons from running agent squads](../3-engineer/lessons-from-running-agent-squads.md).
@@ -235,14 +235,14 @@ Bring it to session 2: what you turned into a check, and whether the mistake sto
 
 **On the slide**
 
-- This outline: every claim cited, with links to all its sources
+- This outline: every sourced claim cited, with links to all its sources
 - The longer guide: Working with coding agents, in this handbook
 - The squad lessons: Lessons from running agent squads
 - Next time, session 2: Building AI features
 
 **Speaker notes**
 
-Everything on these slides is cited in the outline that goes with the deck, which lists all 16 sources with links.
+Every claim on these slides that comes from a source is cited in the outline that goes with the deck, which lists all 16 sources with links.
 The handbook's guide, Working with coding agents, covers the same ground in more depth, including what not to hand to an agent and how to review its output.
 The squad lessons page has the full story behind each lesson on the squads slide, with its evidence.
 Session 2 picks up from here with building AI features, and it opens with what you turned into a check.
