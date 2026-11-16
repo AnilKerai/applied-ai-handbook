@@ -105,6 +105,8 @@ def parse(md):
             s["title"] = pre.group(2).strip()
         if s["layout"] not in LAYOUTS:
             raise SystemExit(f"unknown layout '{s['layout']}' on slide {n}")
+        if s["layout"] == "discussion" and not s["bullets"]:
+            raise SystemExit(f"discussion layout needs a bullet on slide {n}")
         slides.append(s)
     return slides
 
@@ -122,6 +124,8 @@ def parse_overlay(md):
                      **slide_body(sec))
             if s["layout"] not in LAYOUTS:
                 raise SystemExit(f"overlay: unknown layout '{s['layout']}' after slide {n}")
+            if s["layout"] == "discussion" and not s["bullets"]:
+                raise SystemExit(f"overlay: discussion layout needs a bullet after slide {n}")
             inserts.setdefault(n, []).append(s)
         elif extra:
             lines = [l.strip() for l in sec.splitlines() if l.strip() and l.strip() != "---"]
@@ -154,9 +158,21 @@ def apply_overlay(slides, inserts, notes, outline_name):
 
 
 def select(slides, no_basics, standalone):
-    """Drop basics and/or series slides, then renumber from 1."""
-    keep = [s for s in slides
-            if not (no_basics and s["basics"]) and not (standalone and s["series"])]
+    """Drop basics and/or series slides, then renumber from 1.
+
+    Overlay note lines on a dropped slide go with it, so each loss is reported on stderr.
+    """
+    keep = []
+    for s in slides:
+        flag = ("--no-basics" if no_basics and s["basics"] else
+                "--standalone" if standalone and s["series"] else None)
+        if not flag:
+            keep.append(s)
+            continue
+        lost = sum(1 for l in s["notes"] if l.startswith("Local: "))
+        if lost:
+            print(f"warning: {flag} drops outline slide {s['n']} and its {lost} local note "
+                  f"line{'' if lost == 1 else 's'}", file=sys.stderr)
     out = []
     for i, s in enumerate(keep, 1):
         s = dict(s, n=i)
@@ -449,10 +465,11 @@ def s_discussion(prs, s, total):
     sl = prs.slides.add_slide(prs.slide_layouts[6])
     title(sl, s["title"])
     _, tf = textbox(sl, 0.6, 1.95, 12.13, 1.75)
-    add_par(tf, smart(s["bullets"][0]) if s["bullets"] else "", 36, ACCENT_DARK, bold=True, first=True)
+    add_par(tf, smart(s["bullets"][0]), 36, ACCENT_DARK, bold=True, first=True)
     if s["key"]:
         key_band(sl, s["key"])
-    slide_footer(sl, s, cites(*s["bullets"], s["key"] or "", *s["notes"]), total)
+    # Cite only what is shown: the question, the key line and the notes, not the hidden bullets.
+    slide_footer(sl, s, cites(s["bullets"][0], s["key"] or "", *s["notes"]), total)
     set_notes(sl, s["notes"])
 
 
@@ -472,12 +489,20 @@ def main(argv=None):
     global SOURCE_COUNT, OUTLINE_NAME
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("outline", nargs="?", default=MD, help="outline .md (default: the lunch-and-learn deck)")
-    ap.add_argument("--out", help="output .pptx (default: the outline path with .pptx)")
+    ap.add_argument("--out", help="output .pptx (default: the outline path with .pptx; "
+                                  "required with --overlay, and must then be outside this repo)")
     ap.add_argument("--overlay", help="private overlay .md with local slides and notes")
     ap.add_argument("--no-basics", action="store_true", help="drop the 'Basics ·' slides")
     ap.add_argument("--standalone", action="store_true",
                     help="drop the 'Series ·' slides and the 'Session N of M: ' subtitle prefix")
     args = ap.parse_args(argv)
+    if args.overlay:
+        # A deck with local content must never land in (or overwrite a deck in) the public repo.
+        if not args.out:
+            raise SystemExit("overlay: --out is required and must be outside the handbook repo")
+        root = os.path.realpath(ROOT)
+        if os.path.commonpath([os.path.realpath(args.out), root]) == root:
+            raise SystemExit("overlay: --out must be outside the handbook repo")
     out = args.out or os.path.splitext(args.outline)[0] + ".pptx"
     OUTLINE_NAME = rel_name(args.outline)
 

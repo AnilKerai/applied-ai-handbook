@@ -217,6 +217,25 @@ class BuildDeckTest(unittest.TestCase):
                            "## Slide 3 · Basics · What an agent is\n\n*Layout: bogus*\n")
         self.assertFails("unknown layout 'bogus' on slide 3", outline_text=bad)
 
+    def test_discussion_footer_cites_shown_bullet_only(self):
+        talk = (TALK.replace("- What did you turn into a check this week?\n",
+                             "- What did you turn into a check this week? [1]\n")
+                    .replace("- A second bullet the layout ignores\n",
+                             "- A second bullet the layout ignores [2]\n")
+                    .replace("Ask the room for one example.\n", "Ask the room for one example.[3]\n"))
+        prs = self.build(outline_text=talk)
+        self.assertIn("Sources [1] [3] \u00b7 full list and links in the outline",
+                      frames(prs.slides[1]))
+
+    def test_discussion_without_bullet_fails(self):
+        no_bullets = TALK.replace("**On the slide**\n\n- What did you turn into a check this week?\n"
+                                  "- A second bullet the layout ignores\n\n", "")
+        self.assertNotEqual(no_bullets, TALK)
+        self.assertFails("discussion layout needs a bullet on slide 2", outline_text=no_bullets)
+        self.assertFails("overlay: discussion layout needs a bullet after slide 4",
+                         overlay_text="## After slide 4 · Local question\n\n*Layout: discussion*\n\n"
+                                      "**Speaker notes**\n\nA local note.\n")
+
     def test_prefixes_dropped_and_corner_tags(self):
         prs = self.build()
         for idx, title, tag in [(1, "What did you turn into a check?", "Recap"),
@@ -330,6 +349,52 @@ Second local line.
         self.assertIn("Local thing", frames(prs.slides[2]))
         self.assertIn("Local example", frames(prs.slides[2]))
         self.assertIn("Evals gate production", frames(prs.slides[3]))
+
+    def test_dropped_slide_warns_about_local_notes(self):
+        overlay = "## Notes for slide 3\n\n- One local line.\n- Another.\n\n## Notes for slide 2\n\n- A recap line.\n"
+        no_basics = "warning: --no-basics drops outline slide 3 and its 2 local note lines\n"
+        standalone = "warning: --standalone drops outline slide 2 and its 1 local note line\n"
+        for flags, warning, count in [((), "", 4),
+                                      (("--no-basics",), no_basics, 3),
+                                      (("--standalone",), standalone, 3),
+                                      (("--no-basics", "--standalone"), standalone + no_basics, 2)]:
+            with self.subTest(flags=flags):
+                err = io.StringIO()
+                with contextlib.redirect_stderr(err):
+                    prs = self.build(*flags, overlay_text=overlay)
+                self.assertEqual(err.getvalue(), warning)
+                self.assertEqual(len(prs.slides), count, "the build still succeeds")
+
+    def overlay_paths(self):
+        return (self.write("talk.md", TALK),
+                self.write("talk.local.md", "## Notes for slide 4\n\n- A local line.\n"))
+
+    def pptx_in(self, folder):
+        return [f for f in os.listdir(folder) if f.endswith(".pptx")]
+
+    def test_overlay_without_out_fails(self):
+        outline, overlay = self.overlay_paths()
+        with self.assertRaises(SystemExit) as cm:
+            run_main([outline, "--overlay", overlay])
+        self.assertEqual(str(cm.exception),
+                         "overlay: --out is required and must be outside the handbook repo")
+        self.assertEqual(self.pptx_in(self.tmp), [], "a failed build must write no pptx")
+        # Without an overlay, the default output (the outline path with .pptx) still applies.
+        self.assertEqual(run_main([outline]), 0)
+        self.assertEqual(self.pptx_in(self.tmp), ["talk.pptx"])
+
+    def test_overlay_out_inside_repo_fails(self):
+        outline, overlay = self.overlay_paths()
+        with tempfile.TemporaryDirectory(dir=ROOT) as inside:
+            target = os.path.join(inside, "talk.pptx")
+            for out in [target, os.path.relpath(target)]:
+                with self.subTest(out=out):
+                    with self.assertRaises(SystemExit) as cm:
+                        run_main([outline, "--out", out, "--overlay", overlay])
+                    self.assertEqual(str(cm.exception),
+                                     "overlay: --out must be outside the handbook repo")
+                    self.assertEqual(self.pptx_in(inside), [], "a failed build must write no pptx")
+            self.assertEqual(self.pptx_in(self.tmp), [])
 
     def test_overlay_citation_fails(self):
         for overlay in ["## Notes for slide 4\n\n- A cited line.[1]\n",
