@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.judiciary.uk/wp-content/uploads/2025/10/Artificial-Intelligence-AI-Guidance-for-Judicial-Office-Holders-2.pdf",
+      "title": "Courts and Tribunals Judiciary (England and Wales), Artificial Intelligence (AI) Guidance for Judicial Office Holders (October 2025 update; this copy dated 31 October 2025)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Public AI chatbots do not provide answers from authoritative databases. They generate new text using an algorithm based on the prompts they receive and the data they have been trained upon.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "This means the output which AI chatbots generate is what the model predicts to be the most likely combination of words",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "An input or instruction given to an AI system which will generate a specific response or result.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Any information that you input into a public AI chatbot should be seen as being published to all the world.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "The quality of any answers you receive will depend on how you engage with the relevant AI tool, including the nature of the prompts you enter, and the quality of the underlying datasets.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "This includes cited source material which might also be hallucinated.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "AI tools are capable of summarising large bodies of text. As with any summary, care needs to be taken to ensure the summary is accurate.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.ncsc.gov.uk/blog-post/chatgpt-and-large-language-models-whats-the-risk",
+      "title": "National Cyber Security Centre (NCSC), ChatGPT and large language models: what's the risk? (blog, 14 March 2023)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "The algorithms analyse the relationships between different words and turn that into a probability model.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Typically, the data in its model is static after it has been trained, although it can be refined by 'fine-tuning' (which is training on additional data) and 'prompt augmentation' (which is providing context information about the question).",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "However, the query will be visible to the organisation providing the LLM (so in the case of ChatGPT, to OpenAI). Those queries are stored and will almost certainly be used for developing the LLM service or model at some point.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "A question might be sensitive because of data included in the query, or because who is asking the question (and when).",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "not to include sensitive information in queries to public LLMs",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://openai.com/index/why-language-models-hallucinate",
+      "title": "OpenAI, Why language models hallucinate (5 September 2025)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "By this we mean instances where a model confidently generates an answer that isn’t true.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "when we asked a widely used chatbot for the title of the PhD dissertation by Adam Tauman Kalai (an author of this paper), it confidently produced three different answers—none of them correct.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "argues that language models hallucinate because standard training and evaluation procedures reward guessing over acknowledging uncertainty.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Think about it like a multiple-choice test. If you do not know the answer but take a wild guess, you might get lucky and be right. Leaving it blank guarantees a zero.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Hallucinations remain a fundamental challenge for all large language models, but we are working hard to further reduce them.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "title": "Erik Brynjolfsson, Danielle Li & Lindsey Raymond (Stanford and MIT), Generative AI at Work, The Quarterly Journal of Economics 140(2), 2025",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "We study the staggered introduction of a generative AI–based conversational assistant using data from 5,172 customer-support agents.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Access to AI assistance increases worker productivity, as measured by issues resolved per hour, by 15% on average, with substantial heterogeneity across workers.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://www.science.org/doi/10.1126/science.adh2586",
+      "title": "Shakked Noy & Whitney Zhang, Experimental evidence on the productivity effects of generative artificial intelligence, Science 381 (2023)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "we assigned occupation-specific, incentivized writing tasks to 453 college-educated professionals and randomly exposed half of them to ChatGPT.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "The average time taken decreased by 40% and output quality rose by 18%. Inequality between workers decreased",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "in the context of midlevel professional writing tasks",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.hbs.edu/faculty/Pages/download.aspx?name=dell-acqua-et-al-2026-navigating-the-jagged-technological-frontier.pdf",
+      "title": "Fabrizio Dell’Acqua, Edward McFowland III, Ethan Mollick, Hila Lifshitz, Katherine C. Kellogg, Saran Rajendran, Lisa Krayer, François Candelon & Karim R. Lakhani (Harvard Business School, Wharton, Warwick Business School, MIT and Boston Consulting Group), Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality, Organization Science, published online 11 March 2026 (first a Harvard Business School working paper, 24-013)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "The study included 758 BCG consultants (~7% of their individual-contributor consulting workforce)",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "AI assistance improves performance for some tasks but worsens it for others, even within the same knowledge workflow and with a seemingly similar level of difficulty.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "subjects using AI outperformed those not using AI, completing 12.2% more tasks and completing them 25.1% more quickly on average while also delivering solutions of significantly improved quality.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Subjects in the control group were correct about this exercise about 84.5% of the time, but the AI conditions scored at 60% and 70.6%",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "AI-supported participants produced recommendations that were more coherent and persuasive, underscoring that AI improves presentation and argumentation even when the underlying analysis is flawed.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "subjects were randomly assigned to one of three conditions: no AI access, GPT-4 AI access, or GPT-4 AI access with a prompt engineering overview",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "These overview materials included instructional videos and documents that outlined and illustrated effective usage strategies.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "graders were not informed of the correct strategic solution",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Across both the “correct” and “incorrect” subgroups, AI-supported participants produced recommendations that were more coherent and persuasive",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2025/1383",
+      "title": "High Court of England and Wales (Divisional Court), R (Ayinde) v London Borough of Haringey [2025] EWHC 1383 (Admin), judgment of 6 June 2025 on two referred cases (Find Case Law, The National Archives)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "The referrals arise out of the actual or suspected use by lawyers of generative artificial intelligence tools to produce written legal arguments or witness statements which are not then checked",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "lists forty five citations that had been put before the court. In eighteen instances, the case cited does not exist.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "He says that the citations were generated using publicly available artificial intelligence tools, legal search engines and online sources. He had complete (but he accepts misplaced) confidence in the authenticity of the material that he put before the court.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Such tools can produce apparently coherent and plausible responses to prompts, but those coherent and plausible responses may turn out to be entirely incorrect. The responses may make confident assertions that are simply untrue.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "have a professional duty therefore to check the accuracy of such research by reference to authoritative sources, before using it in the course of their professional work",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "They may cite sources that do not exist.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+      "title": "Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "The chatbot suggested Mr. Moffatt could apply for bereavement fares retroactively.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "The webpage says, in part, the bereavement policy does not apply to requests for bereavement consideration after travel has been completed.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "In effect, Air Canada suggests the chatbot is a separate legal entity that is responsible for its own actions. This is a remarkable submission.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "It should be obvious to Air Canada that it is responsible for all the information on its website. It makes no difference whether the information comes from a static page or a chatbot.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "I order Air Canada to pay Mr. Moffatt a total of $812.02",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "I find Air Canada did not take reasonable care to ensure its chatbot was accurate.",
+          "added": "2026-11-16"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf",
+      "title": "Hao-Ping (Hank) Lee, Advait Sarkar, Lev Tankelevitch, Ian Drosos, Sean Rintel, Richard Banks & Nicholas Wilson (Carnegie Mellon University and Microsoft Research), The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers, CHI 2025 (authors' PDF)",
+      "accessed": "2026-11-16",
+      "quotes": [
+        {
+          "text": "Participants shared 936 first-hand examples of using GenAI in work tasks.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Specifically, higher confidence in GenAI is associated with less critical thinking, while higher self-confidence is associated with more critical thinking.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "GenAI shifts the nature of critical thinking toward information verification, response integration, and task stewardship.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "it may also reduce critical engagement, particularly in routine or lower-stakes tasks in which users simply rely on AI",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "our sample was biased towards younger, more technologically skilled participants who regularly use GenAI tools at work at least once per week.",
+          "added": "2026-11-16"
+        },
+        {
+          "text": "Our analysis does not establish causation.",
+          "added": "2026-11-16"
+        }
+      ]
+    }
+  ]
+}

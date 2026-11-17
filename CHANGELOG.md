@@ -2,6 +2,14 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-16: a talk for anyone new to using AI
+
+- **New: [Talk: using AI well at work](1-understand/talk-using-ai-at-work.md)**, with its slides
+  (`1-understand/talk-using-ai-at-work.pptx`). Twelve slides for colleagues in any role who are new
+  to AI tools: what the tools do, where they help, where they fail, what not to paste in, and three
+  habits, ending with one thing to try that week. Two basics slides can be dropped with
+  `--no-basics`. It is wired into the Understand section and the "Presenting to your team" route.
+
 ## 2026-11-16: decks open in Keynote
 
 - **All three decks now open in Apple Keynote** (and Quick Look). The build script used python-pptx,
