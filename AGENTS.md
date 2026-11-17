@@ -103,9 +103,9 @@ leadership, many of them new to AI. Write for them.
 
 ## Where updates come from
 
-The maintainer's private research (AI news briefings, and notes on talks and papers) feeds this
+The maintainer's private research (notes on talks, papers and research briefs) feeds this
 handbook one way: when the evidence changes, a PR updates the affected documents here. Transcripts,
-notes and briefings themselves are never copied into this repo.
+notes and briefs themselves are never copied into this repo.
 
 ## Keep this file current
 
