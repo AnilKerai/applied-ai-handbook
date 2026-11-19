@@ -213,12 +213,14 @@ Re-run the full set and compare against the last baseline whenever one of these 
 *Our recommendation, uncited.*
 
 Week 1:
+
 1. **Day 1.** Pick one feature or workflow step and name an owner. Write down what a correct result is, and the outcomes that must never happen.
 2. **Days 2-3.** With two or three people who do the job, collect 30-50 real cases, including past failures and at least ten worst cases, and have them label the expected results.
 3. **Day 4.** Write deterministic checks first: format, required fields, post-conditions on the business record.
 4. **Day 5.** Build a runner recording pass or fail, cost and latency per case across at least three runs, and baseline the current system or human process.
 
 Week 2:
+
 5. **Days 6-7.** Add an LLM judge only for what code cannot check. Phrase it as yes/no questions, feed it the tool output, and measure its agreement with people on the labelled cases.
 6. **Day 8.** Put the run in CI, with the set and judge prompts out of the agent's reach. For coding agents, run with and without each skill or context file, per model.
 7. **Day 9.** Shadow a sample of live traffic, set up the annotation queue, and book a weekly review slot.

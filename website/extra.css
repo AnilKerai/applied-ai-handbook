@@ -1,0 +1,20 @@
+/* Handbook website styles. The pages are plain GitHub markdown; this only dresses them up. */
+
+/* Quotes, including each page's "In one minute" box, read as a soft callout. */
+.md-typeset blockquote {
+  border-left: 0.25rem solid var(--md-accent-fg-color);
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset blockquote > p:first-child > strong:first-child {
+  color: var(--md-accent-fg-color);
+}
+
+/* Slightly roomier body text for long reading. */
+.md-typeset {
+  font-size: 0.82rem;
+  line-height: 1.65;
+}

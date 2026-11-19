@@ -2,6 +2,17 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-18: the handbook as a website
+
+- **New: the handbook is also a website,** at https://anilkerai.github.io/applied-ai-handbook/,
+  with search, a sidebar in reading order, next and previous links, and a layout that works on
+  phones. It is built from the same markdown by `scripts/build_site.py` (Zensical) and published by
+  the `Website` workflow on every push to main; the markdown here stays the source.
+- **Evals playbook, the ten-day plan:** Week 2's days showed as one run-on paragraph on GitHub,
+  because a numbered list that starts at 5 can't follow a line of text directly. A blank line now
+  separates them.
+- **What works with AI (lunch-and-learn):** its title metadata is now quoted, so it parses.
+
 ## 2026-11-16: a talk for anyone new to using AI
 
 - **New: [Talk: using AI well at work](1-understand/talk-using-ai-at-work.md)**, with its slides

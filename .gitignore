@@ -7,3 +7,5 @@
 .leakcheck.local
 __pycache__/
 .superpowers/
+# Website build output (scripts/build_site.py)
+.site-build/

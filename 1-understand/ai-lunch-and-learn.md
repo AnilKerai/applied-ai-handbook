@@ -1,5 +1,5 @@
 ---
-title: What works with AI: practical lessons
+title: "What works with AI: practical lessons"
 type: deck
 created: 2026-11-14
 audience: colleagues across engineering and the business

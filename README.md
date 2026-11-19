@@ -4,6 +4,8 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 **A living compendium, as of November 2026.** It separates three things: what practitioners report works, what published studies show, and our own recommendations. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged. The Engineer section also includes the author's own path through these ideas and first-person lessons from his own builds, written as his experience rather than as findings.
 
+**Read it as a website:** [anilkerai.github.io/applied-ai-handbook](https://anilkerai.github.io/applied-ai-handbook/) has search, a sidebar in reading order and a layout that works on phones. The same pages are markdown in [the GitHub repository](https://github.com/AnilKerai/applied-ai-handbook).
+
 ## Start here: pick a route
 
 **New to AI** (about 45 minutes)
