@@ -6,7 +6,8 @@ leadership, many of them new to AI. Write for them.
 
 ## Layout
 
-- `1-understand/`: the basics. Glossary, common questions answered, a lunch-and-learn deck.
+- `1-understand/`: the basics. Glossary, common questions answered, a talk for colleagues new to
+  using AI (`talk-using-ai-at-work`), and a lunch-and-learn deck.
 - `2-decide/`: is this a job for AI, and which kind? Decision trees, intake checklist, feature spec,
   pre-mortem, where AI goes first.
 - `3-engineer/`: the engineering disciplines (prompt, context, harness, loop and eval engineering,
@@ -20,6 +21,8 @@ leadership, many of them new to AI. Write for them.
 - `.citations/<doc-slug>.json`: the citation ledger behind each document's Sources block.
 - `scripts/check.py`: the pre-publish check (citations, links, leaks, structure, framing).
 - `scripts/build_deck.py`: builds a deck's pptx from its outline (see "Decks" below).
+- `scripts/build_site.py`, `website/` and `.github/workflows/site.yml`: the website (see "Website"
+  below).
 - `CHANGELOG.md`: every correction and update, newest first.
 
 ## Rules for every document
@@ -100,6 +103,30 @@ leadership, many of them new to AI. Write for them.
 - **The committed pptx for each talk is the full version,** with its basics and series slides.
 - **Overlays and the local decks built from them live outside this repo and are never committed
   here,** nor named in any file.
+
+## Website
+
+The handbook is also published as a website, https://anilkerai.github.io/applied-ai-handbook/, built
+with Zensical. The markdown in this repo stays the source of truth.
+
+- **Write for GitHub first.** Every page must read correctly on GitHub. Don't add site-only syntax
+  (admonitions, tabs, attribute lists, HTML).
+- **How it's built.** `scripts/build_site.py` copies the tracked pages into `.site-build/`, which is
+  git-ignored.
+  - It adapts the copies only where Python-Markdown differs from GitHub: nested lists indented by two
+    spaces, and a list straight after a line of text.
+  - It renames the frontmatter `status` key, which the theme would show as a badge.
+  - It writes the navigation from the root README's sections and each folder README's numbered
+    reading order. So a page appears on the site where the READMEs list it.
+- **Publishing.** The `Website` workflow runs `scripts/check.py`, builds the site and deploys it to
+  GitHub Pages on every push to `main`. A push that fails the check publishes nothing.
+- **Preview locally** with `python3 scripts/build_site.py --serve`. It needs `zensical==0.1.2`, or
+  `uv`, which the script uses to run that version.
+- **Settings.** The theme, features and markdown extensions are in `website/zensical.toml`; styles
+  are in `website/extra.css`. Keep off any extension that gives plain text a new meaning (math for
+  `$`, subscript for `~`, smart fractions and arrows), because the pages are written for GitHub.
+- **Only tracked files are published:** the root README, CHANGELOG and LICENSE, and the `.md` and
+  `.pptx` files in the numbered folders. Nothing git-ignored can reach the site.
 
 ## Where updates come from
 
