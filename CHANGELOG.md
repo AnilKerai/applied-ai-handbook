@@ -4,6 +4,10 @@ Newest first. Every correction lists what changed and the evidence.
 
 ## 2026-11-19: website links load as normal pages
 
+- **Faster page changes on the website.** Pages now use the device's own fonts rather than
+  downloading them from Google Fonts, so nothing waits on a third-party server. In Chrome and Edge,
+  resting the pointer on a link (or touching it) starts loading that handbook page, so it is often
+  ready when the click lands. Links are still ordinary links everywhere.
 - **Links on the website now load as ordinary pages,** so the phone's own loading indicator shows.
   Before, the site fetched the next page in the background and kept the old page on screen until it
   arrived: on a slow phone connection a tap seemed to do nothing for a few seconds. Its built-in

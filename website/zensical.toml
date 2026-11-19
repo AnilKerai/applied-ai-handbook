@@ -19,6 +19,10 @@ extra_css = ["assets/extra.css"]
 
 [project.theme]
 language = "en"
+custom_dir = "overrides"
+# System fonts: nothing is fetched from Google Fonts, so pages render without waiting on a
+# third-party server, and visitors' browsers don't contact Google.
+font = false
 features = [
   "content.action.edit",
   "content.action.view",

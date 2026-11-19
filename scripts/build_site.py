@@ -175,6 +175,7 @@ def main():
             shutil.copy2(src, dst)
     (DOCS / "assets").mkdir()
     shutil.copy2(ROOT / "website" / "extra.css", DOCS / "assets" / "extra.css")
+    shutil.copytree(ROOT / "website" / "overrides", BUILD / "overrides")
 
     config = (ROOT / "website" / "zensical.toml").read_text(encoding="utf-8")
     marker = "# @nav: written by scripts/build_site.py"

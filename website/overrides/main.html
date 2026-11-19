@@ -1,0 +1,21 @@
+{#- Site template override: everything in base.html, plus link prerendering. -#}
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {#- Links stay ordinary links. Browsers that support speculation rules (Chrome, Edge) start
+      loading a handbook page when the pointer rests on its link or the finger touches it, so the
+      page is often ready by the time the click lands. Other browsers ignore this block. -#}
+  <script type="speculationrules">
+  {
+    "prerender": [{
+      "where": {"and": [
+        {"href_matches": "/applied-ai-handbook/*"},
+        {"not": {"href_matches": "/applied-ai-handbook/*.pptx"}},
+        {"not": {"href_matches": "/applied-ai-handbook/LICENSE"}}
+      ]},
+      "eagerness": "moderate"
+    }]
+  }
+  </script>
+{% endblock %}
