@@ -2,11 +2,12 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
-## 2026-11-19: website loading bar
+## 2026-11-19: website links load as normal pages
 
-- **The website now shows a loading bar when a page takes more than a moment to load.** Links load
-  the next page in the background and swap it in. On a slow phone connection that took a few
-  seconds with nothing on screen to show a click had registered.
+- **Links on the website now load as ordinary pages,** so the phone's own loading indicator shows.
+  Before, the site fetched the next page in the background and kept the old page on screen until it
+  arrived: on a slow phone connection a tap seemed to do nothing for a few seconds. Its built-in
+  loading bar was tried first, but on GitHub Pages it disappeared long before the page arrived.
 
 ## 2026-11-18: the handbook as a website
 
