@@ -125,6 +125,10 @@ with Zensical. The markdown in this repo stays the source of truth.
 - **Settings.** The theme, features and markdown extensions are in `website/zensical.toml`; styles
   are in `website/extra.css`. Keep off any extension that gives plain text a new meaning (math for
   `$`, subscript for `~`, smart fractions and arrows), because the pages are written for GitHub.
+- **Keep it an ordinary website.** Links are plain page loads: keep `navigation.instant` off, as it
+  kept the old page on screen with no sign of loading. Keep `navigation.tracking` off, so the
+  address bar doesn't change on scroll. Fonts are the device's own (`font = false`), with no Google
+  Fonts.
 - **Only tracked files are published:** the root README, CHANGELOG and LICENSE, and the `.md` and
   `.pptx` files in the numbered folders. Nothing git-ignored can reach the site.
 
