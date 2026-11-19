@@ -2,6 +2,12 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-19: website loading bar
+
+- **The website now shows a loading bar when a page takes more than a moment to load.** Links load
+  the next page in the background and swap it in. On a slow phone connection that took a few
+  seconds with nothing on screen to show a click had registered.
+
 ## 2026-11-18: the handbook as a website
 
 - **New: the handbook is also a website,** at https://anilkerai.github.io/applied-ai-handbook/,
