@@ -19,9 +19,9 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: engineers and architects*
 
-One card per proven pattern, in design-patterns style. *Seen at* entries are cited, and company figures are their own claims unless marked independent. Everything uncited is our advice.
+One card per proven pattern, in design-patterns style. *Seen at* entries are cited, and company figures are their own claims unless marked independent. Everything uncited is my advice.
 
-**How to pick.** We should first run [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md) for each task or step; its outcomes map onto group A. Then take from B how the model gets its facts, C what it may do, D what must hold before it runs unattended, and E how it reaches people. Agents that act also need [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). See also [AI intake checklist](../2-decide/ai-intake-checklist.md), [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md) and [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md).
+**How to pick.** First run [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md) for each task or step; its outcomes map onto group A. Then take from B how the model gets its facts, C what it may do, D what must hold before it runs unattended, and E how it reaches people. Agents that act also need [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). See also [AI intake checklist](../2-decide/ai-intake-checklist.md), [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md) and [AI failure modes: a pre-mortem checklist](../2-decide/ai-failure-modes-premortem.md).
 
 ## A. Choosing the mechanism
 
@@ -102,7 +102,7 @@ One card per proven pattern, in design-patterns style. *Seen at* entries are cit
   - The peer-reviewed defect-line study Porter cited retrieves evidence from a knowledge graph.[1]
   - Graphs, for: a vendor benchmark scored a graph with an ontology 54% against 16% for SQL, but gave the SQL arm only the bare schema.[17]
   - Graphs, against: an independent study over structured health records found SQL ahead except on time-based questions, with the graph agent costing about 3.5 times one without retrieval.[18] Unaided, a strong model's graph queries failed on 28% of one benchmark's questions, and about 5% even after automatic repair (single study).[19]
-  - Our reading: content explains most gains; no study here shows a graph store beating well-built SQL on a current frontier model.
+  - My reading: content explains most gains; no study here shows a graph store beating well-built SQL on a current frontier model.
 
 ### 8. Compare and flag
 

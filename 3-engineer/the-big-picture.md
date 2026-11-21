@@ -20,7 +20,7 @@ as_of: "November 2026"
 *Reading time: about 5 minutes · Best for: engineers and architects*
 
 This page draws the engineering around a model as nested layers, from the model at the centre out to the organisation that decides what it may do.
-It is one useful way to divide the work, not an industry standard.
+In my view it is one useful way to divide the work; it is not an industry standard.
 It builds on public framings from Birgitta Böckeler, LangChain and Anthropic, cited layer by layer below, and it follows the division used across this section: harness engineering owns one run, loop engineering works across many runs, and eval engineering measures them.
 
 ## The map
@@ -104,7 +104,7 @@ A DZone article frames this as the layer after loop engineering, and calls the d
 
 ### Organisation and governance
 
-The outer layer is this handbook's addition to those public framings: the decisions an organisation makes around everything inside it.
+The outer layer is my addition to those public framings: the decisions an organisation makes around everything inside it.
 They include whether a task should use AI at all, how much an agent may do on its own, how a live system is run and measured, and how the change is led.
 Anthropic's advice belongs at this level: "we recommend finding the simplest solution possible, and only increasing complexity when needed. This might mean not building agentic systems at all."[8]
 

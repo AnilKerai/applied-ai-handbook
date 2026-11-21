@@ -41,7 +41,7 @@ In September 2025 Anthropic called context engineering "the natural progression 
 
 **Show the task as well as describing it.**
 GPT-3's tasks came with a few worked examples, known as few-shot demonstrations, inside the prompt itself.[1]
-We recommend a few real examples of input and wanted output, covering the awkward cases.
+I recommend a few real examples of input and wanted output, covering the awkward cases.
 
 **Ask for the reasoning, not only the answer.**
 Wei et al. reported that giving a few worked examples of intermediate reasoning steps, which they call chain-of-thought prompting, improves reasoning in "sufficiently large language models".[4]
@@ -52,12 +52,12 @@ Today's agents work in a cycle that resembles ReAct's: Anthropic defines them as
 
 **Judge a prompt by its results.**
 Liu et al.'s definition measures a prompt by its performance on the downstream task.[2]
-We recommend changing a prompt only against a fixed set of test cases; [Eval engineering](eval-engineering.md) covers how such tests are built.
+I recommend changing a prompt only against a fixed set of test cases; [Eval engineering](eval-engineering.md) covers how such tests are built.
 
 **Keep instructions and outside text apart.**
 Simon Willison named prompt injection, an attack in which text fed to the model overrides its instructions, in September 2022, after Riley Goodside's examples against GPT-3, and called it "a form of security exploit".[9]
 Research defences such as CaMeL (Debenedetti et al., 2025) work outside the prompt: it extracts the control and data flow from the trusted request, so that "the untrusted data retrieved by the LLM can never impact the program flow".[10]
-We recommend treating any outside text in a prompt as data that may be hostile, never as instructions.
+I recommend treating any outside text in a prompt as data that may be hostile, never as instructions.
 
 **Know where prompts stop.**
 Anthropic notes that agents "operate over multiple turns of inference and longer time horizons", so they need strategies for the whole context, not only well-written prompts.[3]

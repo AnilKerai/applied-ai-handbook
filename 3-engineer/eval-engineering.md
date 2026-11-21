@@ -44,15 +44,15 @@ Anthropic's guide *Demystifying evals for AI agents* followed on 9 January 2026.
 
 **Test the system, not just the model.**
 An agent's results come from the harness and the model together.[1]
-We recommend re-running the evals whenever either changes: the model, the instructions, the tools or the code around them.
+I recommend re-running the evals whenever either changes: the model, the instructions, the tools or the code around them.
 
 **Use deterministic checks first.**
 Birgitta Böckeler, writing about the controls around coding agents, contrasts computational checks, "deterministic and fast", such as tests, linters and type checkers, with inferential ones such as an LLM as judge, which are "Slower and more expensive; results are more non-deterministic".[6]
-We recommend code-based graders wherever the right answer can be checked mechanically, keeping model and human graders for the rest.
+I recommend code-based graders wherever the right answer can be checked mechanically, keeping model and human graders for the rest.
 
 **Check the judge.**
 Zheng et al. examine LLM-as-a-judge's "position, verbosity, and self-enhancement biases", and its "limited reasoning ability".[3]
-We recommend testing any model grader against cases a person has marked before trusting its scores.
+I recommend testing any model grader against cases a person has marked before trusting its scores.
 
 **One run is not evidence.**
 τ-bench's authors found that even state-of-the-art function-calling agents "succeed on <50% of the tasks, and are quite inconsistent" (the authors' claim).[5]
@@ -61,11 +61,11 @@ As Anthropic puts it, "As k increases, pass^k falls since demanding consistency 
 
 **Keep refining the eval.**
 The ell docs define eval engineering as updating and refining the eval in response to what it reveals.[2]
-We recommend adding each new failure from production to the set as a case, so the same mistake is caught next time.
+I recommend adding each new failure from production to the set as a case, so the same mistake is caught next time.
 
 **Let evals steer the loops.**
 LangChain's hill-climbing loop runs an analysis agent over traces and uses the findings to rewrite the harness configuration.[7]
-We recommend putting an eval gate in front of any such automatic change; [Loop engineering](loop-engineering.md) describes the loops.
+I recommend putting an eval gate in front of any such automatic change; [Loop engineering](loop-engineering.md) describes the loops.
 
 ## Where it shows up in this handbook
 

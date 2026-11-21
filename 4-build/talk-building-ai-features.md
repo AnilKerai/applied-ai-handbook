@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: presenting to engineers*
 
-The second of two talks for engineers who build AI features into a product, such as a .NET service: 12 slides, 16:9, for about 25 minutes plus questions. It opens with a three-minute recap of the first session and ends with one thing to try. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-building-ai-features.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company and vendor figures are the companies' own claims, and the key lines and the action on slide 11 are advice, not findings from our sources. Slide 9 is the maintainer's own experience, in the first person; its evidence is on the lessons pages it links. The committed deck is the series version, with the basics. To leave out slide 3, the basics slide, run `python3 scripts/build_deck.py 4-build/talk-building-ai-features.md --no-basics --out <file>`, giving `--out` a different path so the committed deck is not overwritten. To give this session on its own, add `--standalone`: it drops the recap slide and the session number from the subtitle. The two options combine.
+The second of two talks for engineers who build AI features into a product, such as a .NET service: 12 slides, 16:9, for about 25 minutes plus questions. It opens with a three-minute recap of the first session and ends with one thing to try. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-building-ai-features.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company and vendor figures are the companies' own claims, and the key lines and the action on slide 11 are advice, not findings from the sources. Slide 9 is the maintainer's own experience, in the first person; its evidence is on the lessons pages it links. The committed deck is the series version, with the basics. To leave out slide 3, the basics slide, run `python3 scripts/build_deck.py 4-build/talk-building-ai-features.md --no-basics --out <file>`, giving `--out` a different path so the committed deck is not overwritten. To give this session on its own, add `--standalone`: it drops the recap slide and the session number from the subtitle. The two options combine.
 
 ---
 
@@ -95,7 +95,7 @@ Heidi Porter of Moyer Group AI described one hospital's surgical co-management t
 In her words, "The model is again the replaceable part, not the center of the system".[2]
 After a swap, she says, "you have to reevaluate afterwards".[2]
 Microsoft's .NET docs for the Microsoft.Extensions.AI libraries (as of November 2026) say using the abstractions, rather than hard-coding one AI service, enables portability across models and services.[3]
-So we recommend writing the feature against the abstraction, keeping the model choice in configuration, and treating every swap as a change that needs its evals re-run.
+So write the feature against the abstraction, keep the model choice in configuration, and treat every swap as a change that needs its evals re-run.
 
 ---
 
@@ -115,7 +115,7 @@ Chinmay Goyal of Glean: "most AI product steps are bounded decisions and not gen
 Glean's rule asks whether the output can be listed in advance: if not, it is a free-form text problem for a model that generates text, and if so, Glean uses a decision model instead.[4]
 UiPath's speakers describe deterministic calls, with a model deciding at clear decision points, rather than leaving it all to an agent.[5]
 Both accounts come from work with one decision-model product, so weigh them with that in mind.[4][5]
-We recommend keeping the control flow in code, and calling a model at the points where a judgement is needed.
+Keep the control flow in code, and call a model at the points where a judgement is needed.
 
 ---
 
@@ -135,7 +135,7 @@ Heidi Porter of Moyer Group AI: "a rule written in a prompt is not deterministic
 In her words, "A guardrail is actual machinery, a gate, a check, a human, a limit in code."[2]
 Anthropic's report says most of the unintended actions it describes from its own evaluations and internal use were persistence: when Claude couldn't complete a task as given, it worked around a restriction instead of stopping.[6]
 The report adds that the cases identified to date had minimal real-world impact.[6]
-So we recommend putting anything that must never happen into code the model can't argue with: a permission check, a validator or an approval step.
+So put anything that must never happen into code the model can't argue with: a permission check, a validator or an approval step.
 
 ---
 
@@ -177,7 +177,7 @@ Brian Kennedy of ZoomInfo checked his team's LLM judge against reference labels 
 In his words: "We had trusted our judge until we measured it."[7]
 Anthropic says LLM-as-judge graders should be closely calibrated with human experts.[8]
 It also runs several trials of each eval task, because model outputs vary between runs.[8]
-A judge is a model too, so we recommend checking it against cases a person has labelled before trusting its scores, and running each case more than once.
+A judge is a model too, so check it against cases a person has labelled before trusting its scores, and run each case more than once.
 
 ---
 
@@ -219,7 +219,7 @@ Lydia Hallie of Anthropic cited a study Anthropic published in August: only abou
 Heidi Porter of Moyer Group AI warned that a person reviewing thousands of LLM outputs can tire into "rubber stamping fatigue", which is not a good guardrail.[2]
 She said the same tool over-flags by design, and the clinician keeps the decision: every case appears in the record list, flagged or not, and the physician can confirm, decline or override.[2]
 On Lydia Hallie's team at Anthropic, Claude reviews every PR first, and how much people review depends on the risk: docs or copy need no person, ordinary changes maybe one reviewer, risky ones might need two.[11]
-For an AI feature, we recommend the same shape: let the system flag generously, and spend people's attention where a mistake costs most.
+For an AI feature, use the same shape: let the system flag generously, and spend people's attention where a mistake costs most.
 
 ---
 

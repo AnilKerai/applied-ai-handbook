@@ -46,7 +46,7 @@ Across several enterprise deployments, Anthropic's Applied AI team found that a 
 **Split only work that is truly parallel.**
 Anthropic reports that its multi-agent research setup, with Claude Opus 4 leading Claude Sonnet 4 subagents, beat a single Claude Opus 4 agent by 90.2% on its internal research eval (Anthropic's claim).[2]
 In the same post it cautioned that "most coding tasks involve fewer truly parallelizable tasks than research, and LLM agents are not yet great at coordinating and delegating to other agents in real time".[2]
-We recommend keeping a second agent only if a test shows the split beats one agent on the same cases.
+I recommend keeping a second agent only if a test shows the split beats one agent on the same cases.
 
 **Budget for the tokens.**
 Anthropic reports that agents typically use about 4× the tokens of a chat, and multi-agent systems about 15× (Anthropic's claim).[2]

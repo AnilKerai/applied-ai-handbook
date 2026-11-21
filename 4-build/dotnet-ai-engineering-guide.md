@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: .NET teams*
 
-This guide sets out the stack and practices we recommend for AI work on .NET 11. Use section 1 to choose components, sections 2 to 5 to set team practice, and section 6 to run a first spike. It draws mainly on Microsoft's .NET 11 AI stack as presented at the online .NET 11 launch on 10-13 November 2026,[1] plus October-November 2026 industry evidence. Status labels are as stated at the launch; where an item has none, no status was stated. Our advice is uncited; company figures are their own claims.
+This guide sets out the stack and practices I recommend for AI work on .NET 11. Use section 1 to choose components, sections 2 to 5 to set team practice, and section 6 to run a first spike. It draws mainly on Microsoft's .NET 11 AI stack as presented at the online .NET 11 launch on 10-13 November 2026,[1] plus October-November 2026 industry evidence. Status labels are as stated at the launch; where an item has none, no status was stated. My advice is uncited; company figures are their own claims.
 
 ## 1. The stack at a glance
 
@@ -60,7 +60,7 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - Cam Soper: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not." He had a rule against putting CloudFront in front of one of his servers, and Claude put it there anyway.[18]
 - Lauren Tan: "think about how you can make that a deterministic check instead of adding another line to your rules".[19]
 - *Industry:* one study found instruction-file constraints were met 88.3% of the time as executable checks, against 67.0% in the prompt alone (single study, Python).[20]
-- *We recommend* turning every hard rule into an analyser, test, CI check or deny rule, with the instruction file naming the command that checks it.
+- *I recommend* turning every hard rule into an analyser, test, CI check or deny rule, with the instruction file naming the command that checks it.
 
 ### Testing AI code: written requirements and runtime proof
 
@@ -76,20 +76,20 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - Justin Yoo separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". He starts from a cloned workspace with a proxied token; Azure Container Apps sandboxes allow all outbound traffic until a policy is set.[27]
 - Paul Yuknewicz sandboxes the tool, with egress and managed identity off by default in his demo,[16] unlike the allow-all default Yoo described,[27] so check the defaults before relying on either. Gutsch: "the LLM should not know any credentials".[4]
 - *Industry:* sandboxes have bugs; one coding-agent release fixed a shell case that skipped the sandbox.[28] Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache.[29]
-- *We recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) section 4.
+- *I recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) section 4.
 
 ### Supply chain: cooldown, audit, skills as dependencies
 
 - Jon Douglas: "every package that you restore is code that you choose to trust."[30]
 - NuGet is adding a cooldown that makes newly published versions wait, in the CLI and Visual Studio 18.14, which will also stop install scripts running without approval.[30] Mads Kristensen (Microsoft) named 18.12 as the latest release, so 18.14 is still to come.[38] nuget.org API keys now last at most 30 days.[30]
 - Skills now ship inside NuGet packages, and `dotnet package skills` copies them to where agents look.[30][31] Roey Ben Chaim (Zenity) treats skills as dependencies: "Everything that comes into the context is under risk."[32]
-- *We recommend* cooldown in every repo, an install-script audit, and pinning reviewed skills, plugins and MCP servers like packages.
+- *I recommend* cooldown in every repo, an install-script audit, and pinning reviewed skills, plugins and MCP servers like packages.
 
 ### Infrastructure as actual code (C# 15)
 
 - Soper calls HCL-style tools "infrastructure as config with extra steps"; Pulumi's .NET SDK gives infrastructure a compiler, types and tests.[18]
 - His deployment stages are a C# 15 union, so adding a Preview stage broke the build until every policy handled it. Unions are GA with .NET 11.[18]
-- *We recommend* unions for closed sets (environments, statuses), so agent-written switches fail to compile when a case is added. On Bicep or Terraform, gate the plan output in CI.
+- *I recommend* unions for closed sets (environments, statuses), so agent-written switches fail to compile when a case is added. On Bicep or Terraform, gate the plan output in CI.
 
 ### Architecture tests and quality gates
 
@@ -111,18 +111,18 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - **Several agents per machine.** Roslyn's LSP daemon mode cuts memory by about 50% with several agents running (Microsoft's claim),[31] and .NET 11's opt-in multithreaded MSBuild speeds the build loop that agents repeat.[33]
 - **AGENTS.md for .NET repos.** Basu wants short instruction files with how-tos in skills, and Gutsch makes anything said twice a skill.[39][4] Mika Dumont said the upgrade agent respects custom skills placed in the repo.[40]
   - *Industry:* an ETH Zurich study found context files did not generally improve success but raised cost by over 20%.[41] Added skill rules helped mainly when they named a command or path.[42]
-  - *We recommend* a short AGENTS.md: exact `dotnet build`, `dotnet test` and `dotnet format` commands, solution layout, non-default conventions and where things live. Never-rules go into tests and gates. See [Working with coding agents](working-with-coding-agents.md).
+  - *I recommend* a short AGENTS.md: exact `dotnet build`, `dotnet test` and `dotnet format` commands, solution layout, non-default conventions and where things live. Never-rules go into tests and gates. See [Working with coding agents](working-with-coding-agents.md).
 - **Per-model skill evals.** The dotnet/skills dashboard compares each skill with and without it, per model, and says whether it is worth installing; a C# benchmark of about 170 scenarios runs nightly, rotating through the top five models.[31] Nikolay Petrov found larger frontier models knew about 70% of skills' general ideas but 22% of the details.[45]
 
 ## 5. Tooling note
 
 - Some announcements are Visual Studio only: its new agent harness (*generally available*) and managed settings (*in VS Insiders*),[43] the VS Test Agent,[22] and the in-IDE supply-chain agent.[30]
 - The CLI and library pieces work in any editor: the `dotnet` CLI (cooldown included),[30] `dotnet test`, Copilot CLI, dotnet/skills, Extensions.AI, Agent Framework, the MCP SDK and Aspire.
-- *We recommend* writing team practice in CLI and CI terms, so it holds in Visual Studio, Rider, VS Code or a terminal.
+- *I recommend* writing team practice in CLI and CI terms, so it holds in Visual Studio, Rider, VS Code or a terminal.
 
 ## 6. Getting started: a two-week spike
 
-*Our recommendation, uncited.* One small, real feature and one team.
+*My recommendation, uncited.* One small, real feature and one team.
 
 - **Days 1-3:** turn on NuGet cooldown, trim AGENTS.md, add one architecture test. Build a thin slice: an ASP.NET Core endpoint in Aspire, one `IChatClient` call, one tool wrapping existing code, the trace ID on the business record.
 - **Days 4-5:** write 20-30 eval cases from written requirements; run them against two models.

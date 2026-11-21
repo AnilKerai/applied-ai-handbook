@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: software engineers*
 
-*Draft guide.* The day-to-day companion to our [agent PR and autonomy policy](../5-run/agent-pr-policy.md): the policy says what must hold before agent work merges; this says how to work so that it does. It applies to any coding agent. Advice is ours and uncited; cited lines are the evidence. Company figures are their own claims.
+*Draft guide.* The day-to-day companion to the [agent PR and autonomy policy](../5-run/agent-pr-policy.md): the policy says what must hold before agent work merges; this says how to work so that it does. It applies to any coding agent. Advice is mine and uncited; cited lines are the evidence. Company figures are their own claims.
 
 ## 1. The mindset: you own the outcome
 
@@ -144,7 +144,7 @@ Depth follows risk.
 On Hallie's team Claude reviews every PR first; docs then need no person, ordinary changes maybe one reviewer, and risky ones might need two, much as the policy's section 6 sets out.[17]
 The busiest teams lean on evidence over line-reading: Tan reviews about 300 PRs a day, against 3 in 2024, with checks carrying the load.[14]
 Doug Clauson (AWS): "quality really becomes a testing problem."[31]
-Our policy still asks reviewers to read the diff and tool output first; we should relax that only area by area, on measured results.
+The policy still asks reviewers to read the diff and tool output first; I recommend relaxing that only area by area, on measured results.
 
 Know the pushback signals.
 Ronacher: "an agent is really rewarded in just completing a goal."[16]
@@ -175,7 +175,7 @@ Gutsch's rule is *tell it twice, make it a skill*.[6]
 Douglas: "My recommendation is probably write a skill first.", and "once you have skills you can create eval."[29]
 The Claude Code team fixes repeated review findings at the source: a skill, a lint rule, CLAUDE.md or a per-area review file (Anthropic's account).[13]
 
-A ladder for each correction (recommendation):
+A ladder for each correction (my recommendation):
 1. First time: fix it.
 2. Second time: a skill, or a context line naming the command or path.
 3. Keeps happening, or matters: a lint rule, analyser, type, test or API change that makes it impossible.
@@ -198,7 +198,7 @@ Warp says tuning models and removing redundant subagents cut its cost from about
 Watch tokens and cost per task.
 Philipp Schmid (Google DeepMind) found a single Bash tool roughly matched richer harnesses on accuracy with fewer tokens: "if your harness is more complex to use, the model will work around it, will find solutions around it, but needs more turns and more tokens".[35]
 He and Ronacher see *code mode*, where the model writes code that calls its tools, gaining ground, and Claude Code now offers it as an experimental opt-in.[35][16][36]
-Our policy advises leaving such modes off until deny rules and logs cover each call.
+The policy advises leaving such modes off until deny rules and logs cover each call.
 SEP asks how comfortable an organisation is "spending $10 a day for tokens?"; one client's budget covered only a couple of days' work.[1]
 Simon Willison argues pay-per-use services should ship with hard spending caps on.[37]
 

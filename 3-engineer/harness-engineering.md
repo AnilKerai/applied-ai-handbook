@@ -60,8 +60,8 @@ Böckeler's split resembles two of the grader types in Anthropic's account of ag
 **What can go wrong.**
 Böckeler argues that either half alone fails: "Separately, you get either an agent that keeps repeating the same mistakes (feedback-only) or an agent that encodes rules but never finds out whether they worked (feed-forward-only)."[6]
 Where a sensor is an LLM judge, Zheng et al.'s study of such judges names "position, verbosity, and self-enhancement biases, as well as limited reasoning ability".[10]
-We recommend a computational sensor wherever one can answer the question, and an inferential one only where judgement is needed.
-We also recommend turning each repeated mistake into a guide or a computational check, using the ladder in [Working with coding agents](../4-build/working-with-coding-agents.md), section 7.
+I recommend a computational sensor wherever one can answer the question, and an inferential one only where judgement is needed.
+I also recommend turning each repeated mistake into a guide or a computational check, using the ladder in [Working with coding agents](../4-build/working-with-coding-agents.md), section 7.
 
 ## Budgets and stopping
 
@@ -77,9 +77,9 @@ Anthropic's SDK docs say that when the turn or spend limit is hit, the SDK retur
 **What can go wrong.**
 Anthropic's SDK docs warn that "Without limits, the loop runs until Claude finishes on its own", which "is fine for well-scoped tasks but can run long on open-ended prompts".[12]
 Agents cost more to run: Anthropic reports that agents typically use about 4× the tokens of a chat, and multi-agent systems about 15× (Anthropic's claim).[13]
-We recommend checking every limit before each model call, and counting the harness's own model calls, such as summaries and AI checks, against the same budget.
-We recommend reporting a hit limit as its own outcome, never as a finished answer.
-We also recommend backing any stop condition that a model judges, such as whether the goal is met, with a hard limit.
+I recommend checking every limit before each model call, and counting the harness's own model calls, such as summaries and AI checks, against the same budget.
+I recommend reporting a hit limit as its own outcome, never as a finished answer.
+I also recommend backing any stop condition that a model judges, such as whether the goal is met, with a hard limit.
 
 ## Compaction
 
@@ -95,8 +95,8 @@ A preprint of 25 October 2026 (Busch et al.) studies an alternative to compactin
 
 **What can go wrong.**
 Anthropic warns that "overly aggressive compaction can result in the loss of subtle but critical context whose importance only becomes apparent later".[1]
-We recommend keeping the task's original goal and any output contract outside the part that gets summarised.
-We also recommend discarding a summary that was cut short (see [Stop reasons](#stop-reasons)), so that it never replaces history it did not cover.
+I recommend keeping the task's original goal and any output contract outside the part that gets summarised.
+I also recommend discarding a summary that was cut short (see [Stop reasons](#stop-reasons)), so that it never replaces history it did not cover.
 
 ## Structured output
 
@@ -110,8 +110,8 @@ As of November 2026, Anthropic's docs say that structured outputs "constrain Cla
 
 **What can go wrong.**
 OpenAI's account of JSON mode shows one trap: well-formed JSON can still miss the schema.[17]
-We recommend validating every structured answer where the program reads it, even when the provider constrains generation, and sending a failure back to the model for a small, fixed number of repairs.
-We also recommend treating a schema as a check of shape, not truth: pair it with the checks in [Guides and sensors](#guides-and-sensors), and read the [stop reason](#stop-reasons) first.
+I recommend validating every structured answer where the program reads it, even when the provider constrains generation, and sending a failure back to the model for a small, fixed number of repairs.
+I also recommend treating a schema as a check of shape, not truth: pair it with the checks in [Guides and sensors](#guides-and-sensors), and read the [stop reason](#stop-reasons) first.
 
 ## Stop reasons
 
@@ -127,8 +127,8 @@ OpenAI's Python SDK, at a September 2026 commit, documents a similar field, `fin
 **What can go wrong.**
 Anthropic's docs class stop reasons, `max_tokens` included, as successful responses, not errors.[19]
 Anthropic's docs advise: "When a response is truncated because of token limits or the context window, append a notice so the reader knows the output is incomplete."[19]
-We recommend going further inside a harness: treat a short list of normal endings as final, and every other value, including any the provider adds later, as incomplete.
-We also recommend never running tool calls from a response that was cut off, because the last call may carry partial arguments.
+I recommend going further inside a harness: treat a short list of normal endings as final, and every other value, including any the provider adds later, as incomplete.
+I also recommend never running tool calls from a response that was cut off, because the last call may carry partial arguments.
 
 ## Prompt injection and data-flow tracking
 
@@ -146,8 +146,8 @@ In version 2 of the CaMeL paper, Debenedetti et al. report "solving 77% of tasks
 
 **What can go wrong.**
 By the authors' own figures, CaMeL solved seven percentage points fewer tasks than the undefended system.[26]
-We recommend removing one leg of the trifecta wherever possible, and gating each action that has side effects on where its arguments came from.
-We also recommend making that gate fail closed, so that an error in the check blocks the action instead of letting it through.
+I recommend removing one leg of the trifecta wherever possible, and gating each action that has side effects on where its arguments came from.
+I also recommend making that gate fail closed, so that an error in the check blocks the action instead of letting it through.
 
 ## Where it shows up in this handbook
 

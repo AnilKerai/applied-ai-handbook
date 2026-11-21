@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: presenting to engineers*
 
-A talk for engineers who already use coding agents, and the first of two sessions: 11 slides, 16:9, for about 25 minutes plus questions. The aim is that everyone leaves with one thing to try before session 2, which opens with what people found. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-working-with-coding-agents.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Anthropic's documentation is quoted as it stood in November 2026, and Meta's ladder is Meta's own account. Slide 9 is the maintainer's own experience, in the first person. The key lines, the action on slide 10 and the other uncited suggestions are our advice, not findings from our sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 4-build/talk-working-with-coding-agents.md --no-basics --out <file>.pptx`, which leaves 9 slides.
+A talk for engineers who already use coding agents, and the first of two sessions: 11 slides, 16:9, for about 25 minutes plus questions. The aim is that everyone leaves with one thing to try before session 2, which opens with what people found. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-working-with-coding-agents.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Anthropic's documentation is quoted as it stood in November 2026, and Meta's ladder is Meta's own account. Slide 9 is the maintainer's own experience, in the first person. The key lines, the action on slide 10 and the other uncited suggestions are advice, not findings from the sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 4-build/talk-working-with-coding-agents.md --no-basics --out <file>.pptx`, which leaves 9 slides.
 
 ---
 
@@ -77,7 +77,7 @@ As of November 2026, Anthropic's Claude Code docs say its context window holds t
 Each new session starts with a fresh context window, without the conversation from earlier sessions.[2]
 Two things carry knowledge across sessions, and both are written to files: CLAUDE.md files that you write, and auto memory, notes Claude writes for itself.[5]
 Anthropic also describes agents that keep lightweight references, such as file paths, and load data into context with tools at runtime, instead of loading everything up front.[6]
-Those are one tool's documented details, so check how yours works; either way, we recommend writing down anything the agent will need next time.
+Those are one tool's documented details, so check how yours works; either way, write down anything the agent will need next time.
 
 ---
 
@@ -119,7 +119,7 @@ Jarred Sumner of Anthropic says the approach to a project built at agent scale i
 His team decided against rewriting Claude Code in Rust because its test suite would have had to be ported too, and once you rewrite the tests, "you can't really trust the tests anymore."[9]
 McKenna Barlow of Microsoft warns that when an agent writes both the code and the tests, a misunderstood requirement "can actually show up in both places".[10]
 So she pointed the testing agent at the README's written requirements, and before trusting a green suite, she breaks something on purpose to see whether the tests notice.[10]
-The last bullet, proof from the running app, is our advice: passing tests are one piece of evidence, not all of it.
+The last bullet, proof from the running app, is advice rather than a finding: passing tests are one piece of evidence, not all of it.
 
 ---
 
@@ -182,7 +182,7 @@ Meta gives its on-call agent the same ladder a new on-call engineer climbs, by M
 At level one it investigates and changes nothing, at level two it drafts the fix but nothing reaches production until a human approves, and at level three it clears lower-criticality work on its own while high-criticality work stays with humans.[14]
 Promotion turns on one question, "How costly is a mistake and how easy is it to catch?": an action climbs only when mistakes are cheap, they are caught by tests, CI or review, and the agent has a track record on that exact action.[14]
 That's why the agent can close a noisy alert on its own while a production mitigation still waits for a human.[14]
-We'd ask the same question of a coding agent, action by action: let it run the tests freely, say, long before it may push to the main branch.
+Ask the same question of a coding agent, action by action: let it run the tests freely, say, long before it may push to the main branch.
 
 ---
 

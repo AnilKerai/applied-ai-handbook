@@ -19,11 +19,11 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: engineers and product owners*
 
-*How to build and run evals for an AI feature or agent, end to end.* An eval is a repeatable test of whether the AI did the job. The [AI intake checklist](../2-decide/ai-intake-checklist.md) asks whether we have evals; this says how to build them. Rules are our recommendations; company and vendor figures are their own claims.
+*How to build and run evals for an AI feature or agent, end to end.* An eval is a repeatable test of whether the AI did the job. The [AI intake checklist](../2-decide/ai-intake-checklist.md) asks whether we have evals; this says how to build them. Rules are my recommendations; company and vendor figures are their own claims.
 
 ## 1. Why evals gate production
 
-Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of concept", however it is deployed.[1] Heidi Porter (Moyer Group AI) says evals tell us whether a system works and "they gate everything towards more autonomy", and SEP's matching principle is "verification before velocity".[1] So a passing eval run is the ticket into production and onto each rung of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). As Duolingo puts it, "writing code isn't the hard part anymore, verifying it is."[3]
+Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of concept", however it is deployed.[1] Heidi Porter (Moyer Group AI) says evals tell us whether a system works and "they gate everything towards more autonomy", and SEP's matching principle is "verification before velocity".[1] So, in my view, a passing eval run is the ticket into production and onto each rung of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). As Duolingo puts it, "writing code isn't the hard part anymore, verifying it is."[3]
 
 ## 2. Build the eval set
 
@@ -44,17 +44,17 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **How big to start.**
 - Solorio's sets are small and curated: "You're not gonna have millions of them."[1]
 - The examples run from about 100 cases (Syngenta) to about 170 (Microsoft), and ZoomInfo hand-checked 500 production steps to test one judge.[1][5][13]
-- We recommend starting with 30-50 real cases, at least a quarter of them edge or worst cases, then growing the set from real failures. Coverage matters more than count.
+- I recommend starting with 30-50 real cases, at least a quarter of them edge or worst cases, then growing the set from real failures. Coverage matters more than count.
 
 ## 3. What to score
 
-**Task success, defined per case.** Exa's benchmark counts a row as correct only if every field in it is right.[8] We should define "correct" per case before running anything.
+**Task success, defined per case.** Exa's benchmark counts a row as correct only if every field in it is right.[8] Define "correct" per case before running anything.
 
 **Worst cases, not averages.**
 - Porter: "averages can hide a bad result", and we need to know how bad the bad result is so we can fix it.[1]
 - Diogo Almeida (TypeSafe AI) puts the risk of automating with LLMs as "you get Einstein 95% of the time, but Mr. Bean 5% of the time."[9]
 - SO-Arena tested 21 models across 11 domains. The best-scoring decision model ranked only seventh for reliability, meaning answers that hold when the options change and noticing when no option is right.[10]
-- We recommend reporting the pass rate, worst-case failures and the single worst result separately. Any failure in a *must never happen* case blocks release.
+- I recommend reporting the pass rate, worst-case failures and the single worst result separately. Any failure in a *must never happen* case blocks release.
 
 **Cost and latency per case.**
 - Cline grades turns, tokens, latency, tool calls and the path taken separately, plus checks for reward hacking.[11]
@@ -65,7 +65,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Per step and end to end.**
 - ZoomInfo's judge decides after every agent step whether to accept, redo or stop. The team is adding per-tool post-condition checks, such as whether the message was delivered or the record exists.[13]
 - Shweta Iyer (Microsoft) showed an agent call succeeding while saving its results failed and rolled back, so she stores the trace ID with the business record: "the final takeaway was to make any completions explicit".[14]
-- We recommend scoring each step that can fail silently and the end-to-end outcome on the business record: one locates the fault, the other says whether the user got what they needed.
+- I recommend scoring each step that can fail silently and the end-to-end outcome on the business record: one locates the fault, the other says whether the user got what they needed.
 
 ## 4. Graders
 
@@ -89,7 +89,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 - Nikolay Petrov uses a judge or panel, ideally from a different model family, and checks that questions don't leak their answers.[17]
 - A small, agent-authored pilot of cross-provider review found a material finding in 8 of 20 coding turns (95% interval about 19-64%).[18]
 - It also found plumbing bugs: a false pass on truncated input, and a reviewer that exited with an error but a valid verdict counted as complete.[18]
-- We recommend hand-labelling at least 50 cases and measuring the judge's chance-corrected agreement with people (section 5) before it gates anything, then re-checking monthly and logging each grader's input size and exit status.
+- I recommend hand-labelling at least 50 cases and measuring the judge's chance-corrected agreement with people (section 5) before it gates anything, then re-checking monthly and logging each grader's input size and exit status.
 
 **Decision models as graders.**
 - ZoomInfo's typed decision model (Jev) was confident on about 7 in 10 of the same steps; among those, it caught 74 of the 82 bad steps the LLM judge had accepted. Uncertain cases still go to the LLM (ZoomInfo's figures).[13]
@@ -98,7 +98,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 
 ## 5. Measurement rigour
 
-Our practitioner sources say little about statistics, so this section draws on published practice. A pass rate from a handful of runs can look far more precise than it is.
+The practitioner sources in this playbook say little about statistics, so this section draws on published practice. A pass rate from a handful of runs can look far more precise than it is.
 
 **Run each case several times.**
 - Model outputs vary between runs, so Anthropic runs several trials of each task and measures how often the agent succeeds.[32]
@@ -107,18 +107,18 @@ Our practitioner sources say little about statistics, so this section draws on p
 - pass^k comes from τ-bench, where even strong function-calling agents succeeded on under half the tasks and passed all eight trials in the retail domain less than 25% of the time.[33]
 - Anthropic recommends pass^k where users expect the same behaviour every time, and pass@k where one success is enough.[32]
 - Capability and reliability rank models differently. A study of long-horizon agents found the two rankings diverging as tasks lengthened, with reliability falling fastest in software engineering and barely at all in document processing.[36] SO-Arena found the same split for decision models.[10]
-- We recommend at least three runs per case, with pass^k as the headline for anything customer-facing.
+- I recommend at least three runs per case, with pass^k as the headline for anything customer-facing.
 
 **Put error bars on every number.**
 - Evan Miller (Anthropic) argues that evals are experiments and should report standard errors, as other sciences do.[34]
 - When questions come in related groups, he recommends clustered standard errors.[34]
 - Anthropic also warns that trials which fail for the same shared cause are not independent.[32]
-- Repeated runs of one case, and several checks on one case, form such groups: if every check in every run counts as a separate observation, the interval comes out narrower than the evidence supports.[34] We recommend clustering by case, or computing intervals over cases rather than checks.
+- Repeated runs of one case, and several checks on one case, form such groups: if every check in every run counts as a separate observation, the interval comes out narrower than the evidence supports.[34] I recommend clustering by case, or computing intervals over cases rather than checks.
 
 **Compare like with like.**
 - When two configurations run on the same questions, Miller recommends analysing the per-question differences rather than comparing the two overall rates.[34]
 - Pairing reduces the variance whenever the two configurations agree on which questions are hard.[34]
-- We recommend this for every with-and-without comparison: with or without a skill, old model or new. Run both on the same cases and test the paired difference.
+- I recommend this for every with-and-without comparison: with or without a skill, old model or new. Run both on the same cases and test the paired difference.
 
 **Size the set for the question.**
 - Early on, 20-50 tasks drawn from real failures are a good start, because each change tends to have a large, visible effect.[32]
@@ -142,7 +142,7 @@ Our practitioner sources say little about statistics, so this section draws on p
 - Grade what the agent produced rather than one fixed sequence of steps, because agents find valid paths the designers didn't anticipate.[32]
 - Start each trial from a clean environment: shared state causes correlated failures, and in one internal eval Claude read git history left by earlier trials.[32]
 - Read the transcripts. Anthropic does not take a score at face value until someone has.[32]
-- The mutation check in section 7 and the break-it-on-purpose pitfall in section 9 test the same thing from the other side: an eval that never goes red is not measuring anything.
+- In my reading, the mutation check in section 7 and the break-it-on-purpose pitfall in section 9 test the same thing from the other side: an eval that never goes red is not measuring anything.
 
 ## 6. Offline and online
 
@@ -158,7 +158,7 @@ Our practitioner sources say little about statistics, so this section draws on p
 - Robinhood collects reasoned human replies daily; misses become new rules, and false escalations reveal missing context.[15]
 - Ara Khan (Cline) treats each human correction as a capability gap to cover, and buckets eval failures by type before fixing the harness.[11]
 
-**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] We should let tooling fill the queue and keep people deciding what enters the set. Live operation is in [Running AI in production](../5-run/ai-in-production-runbook.md).
+**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] I recommend letting tooling fill the queue and keeping people deciding what enters the set. Live operation is in [Running AI in production](../5-run/ai-in-production-runbook.md).
 
 ## 7. Evals for coding agents and their context
 
@@ -179,7 +179,7 @@ Our practitioner sources say little about statistics, so this section draws on p
 - Petrov runs each skill's tasks with and without it, comparing solves, tokens and time; larger models already knew about 70% of skills' general ideas but only 22% of the details.[17]
 - Microsoft scores each skill per model on activation, tokens, speed and pass rate with and without it, and runs its benchmark nightly, rotating through the five models users use most.[5]
 - The browser vendors' Modern Web Guidance skill uses evals to prune content models already know.[29]
-- Published studies agree: an ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] Both support the practitioners above: keep only lines an eval shows help.
+- Published studies agree: an ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] In my reading, both support the practitioners above: keep only lines an eval shows help.
 - Dmitry Buykin (Maersk) mutated sentences in his prose instructions and almost no tests went red, so he now checks that evals notice.[31]
 
 See also [Working with coding agents](working-with-coding-agents.md) and [Building AI features in .NET](dotnet-ai-engineering-guide.md).
@@ -191,7 +191,7 @@ Re-run the full set and compare against the last baseline whenever one of these 
 - **The model or platform.** Porter, on Syngenta's swappable models and knowledge bases: "you have to reevaluate afterwards".[1] In ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 when a different model ran it (the paper's numbers).[30] Mark Lay (Noblis) saw a vendor's new version where "none of the old apps converted".[2]
 - **A prompt, skill, context file or tool.** Warp replays a benchmark of its own tasks before switching model, harness or skill.[4] Petrov re-runs task evals after every trim, and Buykin replays frozen real tasks old against new.[17][31]
 - **The data.** Porter warns that stale data will "quietly give you the wrong answers", so a knowledge-base refresh is a trigger like a model swap.[1]
-- **The grader.** Recalibrate a new judge model or prompt against the hand-labelled cases before comparing scores (our recommendation).
+- **The grader.** Recalibrate a new judge model or prompt against the hand-labelled cases before comparing scores (my recommendation).
 - **The calendar.** Anthropic runs its incident set daily and Microsoft runs its benchmark nightly.[6][5]
 
 ## 9. Pitfalls
@@ -210,7 +210,7 @@ Re-run the full set and compare against the last baseline whenever one of these 
 
 ## 10. First two weeks: a starter plan
 
-*Our recommendation, uncited.*
+*My recommendation, uncited.*
 
 Week 1:
 

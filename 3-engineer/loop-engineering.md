@@ -44,7 +44,7 @@ Its Agent SDK docs add that "Setting a budget is a good default for production a
 
 **Wrap it in a verification loop.**
 LangChain's second loop "checks the output and sends feedback back to the model when it falls short".[4]
-We recommend making that check deterministic, such as tests, wherever the task allows; see [Eval engineering](eval-engineering.md).
+I recommend making that check deterministic, such as tests, wherever the task allows; see [Eval engineering](eval-engineering.md).
 
 **Start runs from events, not by hand.**
 In the third loop, "An event fires — a new document lands, a schedule triggers, a webhook arrives — and the agent runs."[4]
@@ -59,7 +59,7 @@ A preprint of October 2026 (Wei et al.) formalises harness self-evolution, an au
 
 **Treat the benefits as unproven.**
 Lulla et al. found that the practitioner sources on loop engineering "provide no systematic evidence of the claimed benefits".[3]
-We recommend measuring each new loop against a baseline before scaling it up, and gating any change a loop makes to its own harness on an eval.
+I recommend measuring each new loop against a baseline before scaling it up, and gating any change a loop makes to its own harness on an eval.
 
 ## Where it shows up in this handbook
 
