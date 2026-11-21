@@ -13,27 +13,33 @@ as_of: "November 2026"
 > **In one minute**
 > - Start small: one well-understood task with sound data and easy-to-check results, after agreeing what AI must never be used for.
 > - Use existing AI models and tools rather than making our own, and build what is ours: access to our data, tests and safety limits.
-> - Judge success by business results and failure rates on real cases, not by lines of code or volume of output.
+> - Decide what success means before you start, then measure it on real work: business results and failure rates, not volume of output or how fast it feels.
 > - Limit what AI agents (AI that takes actions) can reach, and require approval for anything that can't be undone.
 > - A named person is always accountable: AI can do the work, but people own the result.
 
 *Reading time: about 20 minutes · Best for: everyone*
 
-Short answers to the questions an in-house AI adviser hears most. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. Each short answer is my recommendation and each confidence level my assessment; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
+Short answers to the questions an in-house AI adviser hears most, for everyone at work: people using AI tools and teams building with them. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. **My recommendation** is my advice, in plain words. **How sure I am** is my judgement of how strong the evidence behind it is: very sure, fairly sure or not very sure. The *Why* bullets are what the sources say, and a final *For software teams* bullet holds any engineering detail. Questions only for teams building with AI are grouped [near the end](#for-teams-building-with-ai). Figures a company reports about its own work are marked as its claim, and the [AI glossary](ai-glossary.md) explains the terms.
 
 ## For everyone at work
 
 ### Q: Will AI replace my job?
 
-**Short answer:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. I recommend letting AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
+**My recommendation:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. Let AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
 
 **Why:**
-- A Stanford study of payroll data on millions of US workers, revised in August 2026 with data to June 2026, found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67] A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment".[68] Its analysis of exposure to AI also "does not yet clearly indicate an AI-related labor market footprint".[68]
-- The exception is young workers aged 22–25 in jobs exposed to AI: their employment is 19% lower than if it had kept pace with that of young people in less-exposed jobs (a gap between the two groups, not a 19% fall in jobs).[67] It comes mainly through "reduced hiring of young workers rather than increased separations": fewer being taken on, rather than more being let go.[67] The authors call their findings "early, descriptive indicators" rather than causal estimates: they show a pattern, not proof that AI caused it.[67]
-- The same study finds declines concentrated in jobs where AI mainly does tasks instead of people; where it mainly helps people with their work, "employment is flat or rising, especially for experienced workers".[67]
+- A Stanford study of payroll data on millions of US workers was revised in August 2026, with data to June 2026.[67]
+  It found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67]
+  A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment".[68]
+  Its analysis of exposure to AI also "does not yet clearly indicate an AI-related labor market footprint".[68]
+- The exception is young workers aged 22–25 in jobs exposed to AI.[67]
+  Their employment is 19% lower than if it had kept pace with that of young people in less-exposed jobs (a gap between the two groups, not a 19% fall in jobs).[67]
+  It comes mainly through "reduced hiring of young workers rather than increased separations": fewer being taken on, rather than more being let go.[67]
+  The authors call their findings "early, descriptive indicators" rather than causal estimates: they show a pattern, not proof that AI caused it.[67]
+- The same study finds declines concentrated in jobs where AI mainly does tasks instead of people.[67] Where it mainly helps people with their work, "employment is flat or rising, especially for experienced workers".[67]
 - Paula Goldman of Salesforce argues that "As AI gets more and more powerful, human leadership and judgment matter more, not less" (a vendor executive's view).[69]
 
-**Confidence:** medium. A large US payroll study and a separate tracker both find no clear economy-wide effect on jobs so far. But the study calls its findings descriptive rather than causal, its gap for young workers cuts the other way, and the last bullet is one vendor executive's opinion.
+**How sure I am:** Fairly sure. Two independent sources see no effect on jobs overall yet, but young workers fare worse. The main study shows a pattern, not proof, and one view is a vendor's.
 
 See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) for software teams, [Who is accountable when AI gets it wrong?](#q-who-is-accountable-when-ai-gets-it-wrong), and, for leaders, [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
 
@@ -41,89 +47,210 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Where do we start?
 
-**Short answer:** With one well-understood task where AI would make the result better or more efficient, the data is sound and the output is easy to check. Agree first what we will never use AI for.
+**My recommendation:** Start with one well-understood task where AI would make the result better or more efficient, the data is sound and the output is easy to check. Agree first what we will never use AI for.
 
 **Why:**
-- Heidi Porter (Moyer Group AI) chooses a mechanism per task (rules, machine learning, a decision model or an LLM) and says data quality sets the ceiling.[1]
+- Heidi Porter (Moyer Group AI) chooses a mechanism per task: rules, machine learning, a decision model (which picks from fixed answers) or an LLM (the AI behind chat assistants).[1]
+  She says data quality sets the ceiling.[1]
 - Mark Lay (Noblis): if AI gives neither a better nor a more efficient result, don't use it. Don Barger's organisation wrote its AI charter "before we ever write one line of code".[2]
-- Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3] Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results; with a spec and a test environment it took about two hours (AWS's account).[4]
+- **For software teams:** Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3]
+  Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results.[4]
+  With a spec and a test environment it took about two hours (AWS's account).[4]
 
-**Confidence:** medium. Several independent practitioners agree, but it rests on their experience and nobody compared starting points.
+**How sure I am:** Fairly sure. Several independent practitioners agree, but it rests on their experience, and nobody compared starting points.
 
 ### Q: How do we get people to actually use it?
 
-**Short answer:** Build it with the people who will use it, inside the tools they already use. A good shared default beats a mandate.
+**My recommendation:** Build it with the people who will use it, inside the tools they already use. Make a good shared tool the easy default, rather than ordering people to use it.
 
 **Why:**
 - Kevin Solorio (Focused) builds *with* frontline workers, not *for* them through proxies, and finds that people who helped build a tool become its champions.[1]
 - AeroCore's data agent took off once it moved into Microsoft Teams: "No one likes an extra login."[2]
 - Ramp says it never had to mandate use of its shared coding agent,[5] and Jason Beutler (Robosource) called team buy-in the hardest part of any AI project (abstract only).[6]
 
-**Confidence:** medium. Consistent practitioner stories, but no adoption figures.
+**How sure I am:** Fairly sure. The practitioners' stories agree, but none of them gives adoption figures.
 
 ### Q: Should we build or buy?
 
-**Short answer:** Use existing models and agent tooling rather than making our own, and build what is ours: data access, evals, checks and guardrails. Before building anything bespoke, ask what reversing it would cost and who will run it.
+**My recommendation:** Use existing models and agent tooling rather than making our own, and build what is ours: data access, evals (repeatable tests on our own examples), checks and guardrails. Before building anything bespoke, ask what reversing it would cost and who will run it.
 
 **Why:**
-- Harvey runs off-the-shelf coding agents and invests in the harness around them: "We don't compete with it. We run them."[7]
-- Nick Kuhn (VMware Tanzu) called bespoke agent plumbing a platform problem that platform engineering already solved for ordinary apps (abstract only).[8] Mark Lay saw one vendor upgrade break every app built on the old version.[2]
-- Warp's chief executive, whose company sells agent tooling, said a software factory is overkill for a team of a few people, and that companies should benchmark agents on their own tasks.[66]
+- Mark Lay saw one vendor upgrade break every app built on the old version.[2]
+- **For software teams:** Harvey runs off-the-shelf coding agents and invests in the harness around them: "We don't compete with it. We run them."[7]
+  Nick Kuhn (VMware Tanzu) called bespoke agent plumbing a platform problem that platform engineering already solved for ordinary apps (abstract only).[8]
+  Warp's chief executive, whose company sells agent tooling, said a software factory is overkill for a team of a few people, and that companies should benchmark agents on their own tasks.[66]
 
-**Confidence:** low-medium. The advice is consistent, but often comes from vendors with a stake, and nobody compared total costs.
+**How sure I am:** Not very sure. The advice is consistent, but it often comes from vendors with a stake, and nobody compared total costs.
 
 ### Q: Will AI replace our developers?
 
-**Short answer:** Not for developers as a whole on the evidence so far, though early-career employment in AI-exposed jobs, software development among them, is lagging. The work shifts from writing code to specifying, checking and owning it, and that still needs people.
+**My recommendation:** Not for developers as a whole on the evidence so far, though early-career employment in AI-exposed jobs, software development among them, is lagging. The work shifts from writing code to specifying, checking and owning it, and that still needs people.
 
 **Why:**
-- Meta says about three quarters of its new code is now written with AI, yet its on-call work did not get faster.[10]
-- Across 655 firms, coding agents raised pull requests opened by 35.7% but resolved issues by only 13.7% (borderline significant), while time from review submission to approval rose 56.1% (revised November 2026; data to August 2026).[11] It found no detectable effect on employment, though its model projects long-run declines.[11]
-- A Stanford study of US payroll data, revised in August 2026, finds that employment has "declined substantially for early-career workers in the occupations most exposed to AI, including but not limited to software development and customer support".[70] Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
-- Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
+- A Stanford study of US payroll data, revised in August 2026, finds that employment has "declined substantially for early-career workers in the occupations most exposed to AI, including but not limited to software development and customer support".[70]
+  Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
+- A study of 655 firms (revised November 2026; data to August 2026) found no detectable effect on employment, though its model projects long-run declines.[11]
+- Meta says about three quarters of its new code is now written with AI, yet its on-call work (responding to problems in live systems) did not get faster.[10]
+- Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests (accepted code changes) up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
+- **For software teams:** in the 655-firm study, coding agents raised pull requests opened by 35.7% but resolved issues by only 13.7% (borderline significant).[11]
+  Time from review submission to approval rose 56.1%.[11]
 
-**Confidence:** medium. One large independent study finds no employment effect so far, but its model projects long-run declines and its data predate the newest models. A payroll study finds early-career employment lagging, which its authors call descriptive, not causal, and practitioners point both ways.
+**How sure I am:** Fairly sure. One large independent study sees no effect on jobs yet, but projects long-run declines, and its data predate the newest models. Early-career jobs lag (a pattern, not proof), and practitioners disagree.
 
 ### Q: How do we know it's working, and what should we measure?
 
-**Short answer:** Business outcomes and failure rates on real cases, with cost per task alongside. Lines of code, pull-request counts and tokens are not measures of success.
+**My recommendation:** Decide what *better* means before you start: for example, time saved, fewer mistakes or better results for customers. Then check it on real work, with what each task costs alongside. Judge the outcome, not how much AI was used or how much it produced. Don't trust the feeling that it's faster: measure it.
 
 **Why:**
+- METR, a non-profit, ran one randomised trial of experienced open-source developers in early 2025: 16 of them, from large projects they had contributed to for years.[76]
+  They brought 246 real tasks, such as bug fixes and new features, averaging two hours each, and each task was randomly assigned to allow or disallow AI.[76]
+  METR found that "When developers are allowed to use AI tools, they take 19% longer to complete issues".[76]
+  Yet "developers expected AI to speed them up by 24%, and even after experiencing the slowdown, they still believed AI had sped them up by 20%."[76]
+- METR sets out the limits itself: "We do not claim that our developers or repositories represent a majority or plurality of software development work", and "We only study software development".[76]
+  Its page on the trial now says: "These results are out of date."[76]
+  In a follow-up begun in August 2025, with 57 developers, 143 repositories and more than 800 tasks, METR's raw results "show some evidence for speedup".[77]
+  But METR calls that data "an unreliable signal".[77]
+  More developers declined to take part because they did not want to work without AI.[77]
+  And 30% to 50% of those surveyed said they held back some tasks for the same reason.[77]
+  A lower pay rate also affected who took part, and its timings are unreliable for developers who run several AI agents at once.[77]
+  METR believes developers are likely "more sped up from AI tools now" than its early-2025 estimates, but calls its data "only very weak evidence for the size of this increase".[77]
+  It adds that developers' own estimates of their speed-up "can be quite unreliable", as its earlier study showed.[77]
 - Kevin Solorio: "an agent without evals is a proof of concept". Heidi Porter warns that "averages can hide a bad result".[1]
-- DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14] The 655-firm study shows output rising far faster than completed work.[11]
-- Factory tracks a *regret-free merge rate*, the share of changes that never need a revert or follow-up fix,[15] and Philipp Schmid (Google DeepMind) tells teams to report cost per task next to accuracy.[16]
+- The 655-firm study shows output rising far faster than completed work.[11]
+- **For software teams:** I'd track failure rates on real cases and cost per task, not lines of code, pull-request counts or tokens: those are not measures of success.
+  DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14]
+  Factory tracks a *regret-free merge rate*, the share of changes that never need a revert or follow-up fix,[15] and Philipp Schmid (Google DeepMind) tells teams to report cost per task next to accuracy.[16]
 
-**Confidence:** medium-high. An independent study and DORA show that output counts mislead; what to measure instead rests on practitioner practice.
+**How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial shows that people's sense of speed does too. What to measure instead rests on practitioners' practice.
+
+### Q: How do we keep costs under control?
+
+**My recommendation:** Track cost per task and cap spending. Cut usage with simpler set-ups, fewer agents and cheaper models for routine steps.
+
+**Why:**
+- Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
+- SEP's client prototype stalled partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
+- One newer study found that teams of AI agents scored higher but cost 3-7 times as much as a single agent.[18]
+- **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done.
+  Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16]
+  A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
+  Newer evidence tempers the many-agent designs practitioners showed: Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] and Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim).[9]
+
+**How sure I am:** Fairly sure. The advice points the same way, but most savings figures are vendors' own.
 
 ## Choosing technology
 
 ### Q: Which model should we use, and do we need the biggest one?
 
-**Short answer:** Treat the model as a replaceable part, chosen by testing on our own tasks. I recommend defaulting, for domain agents especially, to open-weight models we can run ourselves, behind a good harness and evals, and moving a step up to a frontier model only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
+**My recommendation:** Treat the model as a replaceable part, chosen by testing on our own tasks. By default, for domain agents (agents for one area of our work) especially, use open-weight models we can run ourselves, behind a good harness and evals. Open-weight models are published for anyone to download and run; the harness is the software around a model that makes it a working tool. Move a step up to a frontier model, one of the most capable, only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
 
 **Why:**
-- Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
-- In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
-- Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
-- Open-weight models trail the best closed ones by months, not years: Epoch AI finds that the most capable open-weight models have lagged frontier closed models by an average of four months on its composite capabilities index since January 2026.[71] On narrow tasks, small models can catch up: in a peer-reviewed study of text classification, specialised small models often needed only about 100 labelled examples on average to match or beat general large models, though the number depended strongly on the task and rose by 100–200% once variance in performance was allowed for.[72]
-- Against that, frontier models lead clearly on harder tests: when Artificial Analysis rebuilt its index in October 2026 with harder tests, 60% of it now private or held out, the gap between the leader and the best open-weight model widened from 3 points to 12, and to 26 among models whose weights had been released, with the widest gaps on hard reasoning and knowledge questions and on agentic science tasks.[73] Running a model ourselves has its own costs: Australia's cyber security centre says self-hosting may cut usage costs at scale, but that organisations should assess the total cost of running it securely, including monitoring, maintenance and skilled staff,[74] and in one developer's coding comparison over two four-week periods (a preprint), a self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%), though it still cost less in total on shared GPUs, and more on dedicated ones.[75]
+- Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
+- Open-weight models trail the best closed ones by months, not years.[71]
+  Epoch AI finds that since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months, on its composite capabilities index.[71]
+  On narrow tasks, small models can catch up.[72]
+  In a peer-reviewed study of text classification (sorting text into categories), specialised small models often needed only about 100 labelled examples on average to match or beat general large models.[72]
+  The number depended strongly on the task, and rose by 100–200% once variance in performance was allowed for.[72]
+- Against that, frontier models lead clearly on harder tests.[73]
+  Artificial Analysis rebuilt its index in October 2026 with harder tests, 60% of it now private or held out.[73]
+  The gap between the leader and the best open-weight model widened from 3 points to 12, and to 26 among models whose weights had been released.[73]
+  The gaps were widest on hard reasoning and knowledge questions and on science tasks carried out by AI agents.[73]
+- Running a model ourselves has its own costs.[74]
+  Australia's cyber security centre says self-hosting may cut usage costs at scale, but that organisations should assess the total cost of running it securely.[74]
+  That includes monitoring, maintenance and skilled staff.[74]
+- **For software teams:** Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
+  In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18]
+  Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
+  One developer compared two coding set-ups over two four-week periods (a preprint).[75]
+  A self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%).[75]
+  Even so, it still cost less in total on shared GPUs, and more on dedicated ones.[75]
 
-**Confidence:** medium for testing on our own tasks, low-medium for the open-weight default. An independent benchmark puts open-weight models months behind and a peer-reviewed study favours small tuned models on a narrow task, but the gap widens on harder tests, the cost evidence is one developer's case study and guidance that lists costs without pricing them, and the comparison that matters, on business agent tasks, is still missing (see the open questions).
+**How sure I am:** Fairly sure about testing on our own tasks, not very sure about the open-weight default. Open models lag more on harder tests, the cost evidence is thin, and a comparison on business tasks is still missing (see the open questions).
 
 ### Q: Should we fine-tune a model, use retrieval (RAG), or neither?
 
-**Short answer:** Usually neither at first. Supply current facts through search or tools over good data and write procedures down as skills. Fine-tune only if evals show a gap those can't close.
+**My recommendation:** Usually neither at first. Supply current facts through search or tools over good data, and write procedures down as skills (written instructions an AI can follow). Fine-tune, which means training the model further on our own examples, only if evals show a gap those can't close.
 
 **Why:**
 - Jeffrey Pinner (Exa, which sells search): "frontier models no matter how capable they are are always out of date."[21]
-- Brian Douglas, on training a specialised reviewer model: "My recommendation is probably write a skill first."[22] Glean re-prompts its decision model, rather than retraining it, when labels change.[23]
+- Brian Douglas, on training a specialised reviewer model: "My recommendation is probably write a skill first."[22]
 - Anthropic reports that a maintained wiki plus search beat search alone, 61% against 53%, on 25 questions (Anthropic's claim).[24]
+- **For software teams:** Glean re-prompts its decision model, rather than retraining it, when labels change.[23]
 
-**Confidence:** low-medium. No practitioner compared fine-tuning with retrieval directly.
+**How sure I am:** Not very sure. No practitioner compared fine-tuning with retrieval directly.
+
+### Q: Do we need a knowledge graph?
+
+**My recommendation:** A knowledge graph stores facts as things and the links between them, such as customers and their contracts. Probably not as a starting point. For records kept in tables, well-written database queries (SQL) behind fixed tools are the baseline to beat. Test a graph only on relationship-heavy questions we can't answer today.
+
+**Why:**
+- In a peer-reviewed study Heidi Porter cited, of a hose production line, a vision model (AI that reads camera images) detected the defects.[1]
+  The system drew evidence from a knowledge graph and separately searched procedures and maintenance history.[1]
+  Rule checks tested whether the LLM's explanation stayed within the evidence.[1]
+- The closest independent study (synthetic health records) found SQL ahead on lookup, multi-hop (chained) and reasoning questions, and a graph ahead only on time-based ones.[30]
+  The graph agent cost about 3.5 times one with no retrieval.[30]
+- Graph retrieval over text has been reported to underperform plain retrieval on many real tasks.[31]
+- **For software teams:** model-written graph queries need checking: on one benchmark a strong model's were right about 72% of the time unaided and about 95% with automatic repair.[32]
+
+**How sure I am:** Fairly sure. There is little research, and most of it uses made-up (synthetic) data.
+
+## Risk
+
+### Q: How do we stop hallucinations?
+
+**My recommendation:** We can't eliminate them: AI will sometimes state false or made-up things with confidence. We can give the model less to invent, and check its output against the evidence it actually looked up. Where possible, check with code rather than another model's opinion.
+
+**Why:**
+- In Heidi Porter's case studies the LLM in a seed-selection tool is "the interface, the router, and the explainer, not the agronomist".[1] On a hose production line, rule checks test whether each draft stayed within its evidence.[1]
+- Brian Kennedy (ZoomInfo) warns that AI judges, models that mark other models' work, hallucinate too: "The agent made it up and the judge approved it."[25] Melvin Johnson (Google DeepMind) says a final summary "needs to be grounded in the actions that were taken."[54]
+- AgentRun's judge checks that the quote behind each answer is on a page the agent actually read, and hands unsupported answers to the expensive model (AgentRun's account).[19]
+- **For software teams:** in Shweta Iyer's demo the agent call reported success while the request as a whole failed and its output was rolled back.[55]
+
+**How sure I am:** Very sure. Many independent teams use the same pattern, though most of the measurements are their own.
+
+### Q: Is our data safe?
+
+**My recommendation:** Only as safe as what the AI can reach and what our contract says. Keep secrets, such as passwords and keys, and sensitive data out of what the AI is given to read. Keep data in-house where it must not leave, and confirm the provider's retention terms (what it keeps, and for how long) in writing.
+
+**Why:**
+- Juergen Gutsch: "the LLM should not know any credentials".[34] Noblis narrowed over 1,000 datasets to about 115-120 critical ones, with about 30 named data stewards.[2]
+- Terms vary by plan. As read in October 2026, Anthropic's docs said commercial data isn't used for training without opt-in, and that retention is 30 days.[57][58]
+  They said zero retention covers only qualifying enterprise accounts and excludes MCP (a standard way to connect AI to other tools).[57][58]
+- Tools leak too: a user reported a coding agent putting their email address in the headers of its web requests.[59] A security firm found passwords in 1,122 public agent settings files (the firm's count).[60]
+- **For software teams:** in regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
+
+**How sure I am:** Fairly sure. The engineering advice is consistent, but providers' terms change and need checking against our contract.
+
+### Q: What about prompt injection and supply-chain risk?
+
+**My recommendation:** Assume anything an AI agent reads could carry hidden instructions: that is prompt injection. Treat skills, plugins and packages like any other software we depend on, because they can carry harmful code too (supply-chain risk). Vet them, pin them to a known version, and sandbox them: run them where they can't reach our real systems.
+
+**Why:**
+- The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards that constrain what the system can do.[63]
+- **For software teams:** Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
+  Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
+  Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
+
+**How sure I am:** Very sure. Practitioners, a government agency and research papers agree, though the attack rates come from single studies.
+
+### Q: Who is accountable when AI gets it wrong?
+
+**My recommendation:** A named person, always. AI can do the work, but the person who asked for it and the person who approved it own the result.
+
+**Why:**
+- Mark Lay: "accountability can't be delegated" to AI, so the accountable role in a RACI chart (which records who is responsible, accountable, consulted and informed) is always a person. He adds that someone must own the tools staff build outside IT.[2]
+- Juergen Gutsch: "Errors agents do are my errors".[34] Robinhood: "Scripts prove what can be proven. An agent judges what needs context and people own the calls only they should make."[38]
+- **For software teams:** Anthropic's Claude Code team counts the person prompting an agent as a required reviewer (Anthropic's account).[37]
+
+**How sure I am:** Very sure as a principle, though it is a stance on how to govern AI rather than a measured finding.
+
+## For teams building with AI
+
+These questions are for teams building AI features or working with coding agents.
 
 ### Q: When should we use a decision model instead of an LLM?
 
-**Short answer:** When the possible answers can be listed in advance (route, label, approve or reject), use a decision model or plain code, and keep the LLM for open-ended work. Test reliability, not only accuracy.
+**My recommendation:** A decision model is an AI model that picks an answer from a fixed list and says how sure it is, instead of writing text. When the possible answers can be listed in advance (route, label, approve or reject), use a decision model or plain code, and keep the LLM for open-ended work. Test reliability, not only accuracy.
 
 **Why:**
 - Chinmay Goyal (Glean) asks "can the output be listed in advance?" If so, a decision model returns choices with probabilities instead of text.[23]
@@ -131,46 +258,33 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Newer evidence broadens what was largely one vendor's theme among practitioners: a Strands case study says Amazon cut ticket-labelling costs by about 98% (its claim),[26] and OpenAI and Google have released decision-model APIs.[27][28]
 - It also adds a caution: in a benchmark of 21 models, the best-performing decision model ranked only seventh for reliability, meaning answers that hold when options change and saying when none fits.[29]
 
-**Confidence:** medium. Strong results, but mostly from one vendor's customers, and newer figures are vendors' own.
-
-### Q: Do we need a knowledge graph?
-
-**Short answer:** Probably not as a starting point. For structured records, well-written SQL behind fixed tools is the baseline to beat. Test a graph only on relationship-heavy questions we can't answer today.
-
-**Why:**
-- In a peer-reviewed study Heidi Porter cited, of a hose production line, a vision model detected the defects, the system drew evidence from a knowledge graph and separately searched procedures and maintenance history, and rule checks tested whether the LLM's explanation stayed within the evidence.[1]
-- The closest independent study (synthetic health records) found SQL ahead on lookup, multi-hop and reasoning questions and a graph ahead only on time-based ones; the graph agent cost about 3.5 times one with no retrieval.[30]
-- Graph retrieval over text has been reported to underperform plain retrieval on many real tasks,[31] and model-written graph queries need checking: on one benchmark a strong model's were right about 72% of the time unaided and about 95% with automatic repair.[32]
-
-**Confidence:** medium. The literature is thin and mostly synthetic.
+**How sure I am:** Fairly sure. The results are strong, but mostly from one vendor's customers, and the newer figures are vendors' own.
 
 ### Q: What is MCP, and do we need it?
 
-**Short answer:** MCP (Model Context Protocol) is an open standard for giving agents tools, data and prompts. We need it when several agents must reach the same systems under managed access; for a one-off job, a skill or command-line tool is often simpler.
+**My recommendation:** MCP (Model Context Protocol) is an open standard for giving agents tools, data and prompts. We need it when several agents must reach the same systems under managed access. For a one-off job, a skill or command-line tool is often simpler.
 
 **Why:**
 - Stephen Halter (Microsoft) described its building blocks as tools, resources and prompts, with the C# SDK owned by a Linux Foundation body. One benefit: "you don't need to put tokens inside of your environment and stuff and give access to secrets to the agent."[33]
 - AeroCore's text-to-SQL agent reaches its database over MCP,[2] and Nick Kuhn's talk abstract describes binding an agent to its tools through a governed MCP gateway (no recording is available).[8]
 - Practitioners disagree: Juergen Gutsch prefers skills as faster, cheaper and safer,[34] while Thariq Shihipar said "Like I actually prefer MCP to CLI now".[35] A November coding-agent release fixed leaking MCP sign-in tokens.[36]
 
-**Confidence:** medium. Well described, but when it beats simpler options is opinion.
-
-## Engineering practice
+**How sure I am:** Fairly sure. MCP is well described, but when it beats simpler options is a matter of opinion.
 
 ### Q: How do we review all this AI-written code?
 
-**Short answer:** We can't read every line, so machines should do most of the checking (tests, analysers, AI reviewers grounded in evidence) and people should review by risk.
+**My recommendation:** We can't read every line, so let machines do most of the checking (tests, analysers, AI reviewers grounded in evidence), and have people review by risk.
 
 **Why:**
 - In the 655-firm study, time from review submission to approval rose 56.1%.[11] Anthropic's Claude Code team sets human approval by risk tier, and after three rounds of agent review the reviewer asks the author to rethink the approach (Anthropic's account).[37]
 - ZoomInfo measured its LLM judge at 65% correct; given both receipts and the agent's report, "it went with the story."[25] Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[38]
 - On Lydia Hallie's team (Anthropic) an AI reviews every PR first; docs then need no person, ordinary changes perhaps one reviewer and risky ones might need two.[39] In a small pilot, a reviewer from a different model provider made a material finding on 8 of 20 coding turns.[40]
 
-**Confidence:** medium. Several teams converge, but two of the accounts are Anthropic's own and the figures are the teams' own; the independent study shows only where the bottleneck is.
+**How sure I am:** Fairly sure. Several teams agree, but two accounts are Anthropic's own and the figures are the teams' own. The independent study shows only where the bottleneck is.
 
 ### Q: What should go in AGENTS.md and similar instruction files?
 
-**Short answer:** Keep them short: exact commands, paths and facts the agent can't see in the code. Anything that must always hold belongs in a test, analyser or hook.
+**My recommendation:** Keep them short: exact commands, paths and facts the agent can't see in the code. Anything that must always hold belongs in a test, analyser or hook.
 
 **Why:**
 - Lydia Hallie: the file "should only include the things the Claude cannot see from your code".[39] Nikolay Petrov found models already knew about 70% of skills' general content but only 22% of the specific details.[41]
@@ -178,77 +292,18 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules or your agents.md".[43] Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion."[44]
 - A newer update: Anthropic warns that cautious instructions piling up through memory and instruction files can make its newest model ask for approvals it doesn't need; its advice includes removing outdated notes and naming the routine steps that need no approval.[45]
 
-**Confidence:** medium-high. Practitioners and one large preprint study agree; the newest-model guidance is one vendor's.
+**How sure I am:** Very sure. Practitioners and one large study, not yet peer-reviewed, agree. The advice on the newest model is one vendor's.
 
 ### Q: How do we stop agents breaking things?
 
-**Short answer:** Limit what agents can reach, not just what they may run. Require approval for anything that can't be undone, and test the undo.
+**My recommendation:** Limit what agents can reach, not just what they may run. Require approval for anything that can't be undone, and test the undo.
 
 **Why:**
 - Yvonne Carlson's eight principles include least privilege, short-lived credentials, approval before anything destructive, default-deny boundaries and sandboxes (abstract only).[46] Justin Yoo (Microsoft) separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side".[47]
 - Heidi Porter automates outright "only what is cheap to undo".[1] Meta asks "How costly is a mistake and how easy is it to catch?"[10] Tanmay and Dolly Sah found only 47% of normally successful agent runs recovered from an injected failure.[48]
 - Newer evidence adds a reason to enforce limits in code: Anthropic reported its model working around restrictions instead of stopping,[49] and agent hooks can now block when they fail instead of being skipped.[50]
 
-**Confidence:** high. Practitioners and newer evidence agree; the failure rates come from single studies.
-
-### Q: How do we keep costs under control?
-
-**Short answer:** Track cost per task, cap spending, and cut tokens with simpler set-ups, cache-friendly prompts, fewer agents and cheaper models for routine steps.
-
-**Why:**
-- Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16] SEP's client prototype stalled partly because the token budget covered only a couple of days' work.[1]
-- A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
-- Newer evidence tempers the many-agent designs practitioners showed: Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
-- Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
-
-**Confidence:** medium. The direction is consistent, but most savings figures are vendors' own.
-
-## Risk
-
-### Q: How do we stop hallucinations?
-
-**Short answer:** We can't eliminate them. We can give the model less to invent and check its output against evidence it actually retrieved, with code where possible rather than another model's opinion.
-
-**Why:**
-- In Heidi Porter's case studies the LLM in a seed-selection tool is "the interface, the router, and the explainer, not the agronomist", and on a hose production line rule checks test whether each draft stayed within its evidence.[1]
-- Judges hallucinate too: "The agent made it up and the judge approved it."[25] Melvin Johnson (Google DeepMind) says a final summary "needs to be grounded in the actions that were taken."[54]
-- In Shweta Iyer's demo the agent call reported success while the request as a whole failed and its output was rolled back.[55] AgentRun's judge checks that the quote behind each answer is on a page the agent actually read, and hands unsupported answers to the expensive model (AgentRun's account).[19]
-
-**Confidence:** medium-high. Many independent teams use the same pattern, but most of the measurements are the teams' own.
-
-### Q: Is our data safe?
-
-**Short answer:** Only as safe as what the agent can reach and what our contract says. Keep secrets and sensitive data out of the model's context, keep data in-house where it must not leave, and confirm retention terms in writing.
-
-**Why:**
-- Juergen Gutsch: "the LLM should not know any credentials".[34] Noblis narrowed over 1,000 datasets to about 115-120 critical ones, with about 30 named data stewards.[2]
-- In regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
-- Terms vary by plan. As read in October 2026, Anthropic's docs said commercial data isn't used for training without opt-in, retention is 30 days, and zero retention covers only qualifying enterprise accounts and excludes MCP.[57][58]
-- Tools leak too: a user reported a coding agent putting their email address in the headers of its web requests,[59] and a security firm found passwords in 1,122 public agent settings files (the firm's count).[60]
-
-**Confidence:** medium. Consistent engineering advice, but vendor terms change and need checking against our contract.
-
-### Q: What about prompt injection and supply-chain risk?
-
-**Short answer:** Assume anything entering an agent's context could carry instructions, and vet, pin and sandbox skills, plugins and packages like any other dependency.
-
-**Why:**
-- Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
-- Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
-- The UK's NCSC says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards that constrain what the system can do.[63] Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
-
-**Confidence:** medium-high. Consistent across practitioners, a government agency and papers; attack rates come from single studies.
-
-### Q: Who is accountable when AI gets it wrong?
-
-**Short answer:** A named person, always. AI can do the work, but the person who asked for it and the person who approved it own the result.
-
-**Why:**
-- Mark Lay: "accountability can't be delegated" to AI, so the accountable role in a RACI chart is always a person. He adds that someone must own the tools staff build outside IT.[2]
-- Juergen Gutsch: "Errors agents do are my errors".[34] Robinhood: "Scripts prove what can be proven. An agent judges what needs context and people own the calls only they should make."[38]
-- Anthropic's Claude Code team counts the person prompting an agent as a required reviewer (Anthropic's account).[37]
-
-**Confidence:** high as a principle, but a governance stance rather than a measured finding.
+**How sure I am:** Very sure. Practitioners and newer evidence agree, though the failure rates come from single studies.
 
 ## Open questions (evidence thin)
 
@@ -337,3 +392,5 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 [73] https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5 — Artificial Analysis, Announcing Artificial Analysis Intelligence Index v5 (27 October 2026)
 [74] https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf — ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)
 [75] https://arxiv.org/abs/2607.13080 — Sheng-Wei Peng, Yi-Hsun Lin & Yi-Pei Lee (arXiv 2607.13080, preprint), Inference Economics of Enterprise Coding Agents: A Case Study of Cloud vs. On-Premise LLMs
+[76] https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study — METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (blog post, 10 July 2025; since marked out of date by METR)
+[77] https://metr.org/blog/2026-02-24-uplift-update — METR, We are Changing our Developer Productivity Experiment Design (blog post, 24 February 2026)

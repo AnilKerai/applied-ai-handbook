@@ -572,6 +572,114 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 76,
+      "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study",
+      "title": "METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (blog post, 10 July 2025; since marked out of date by METR)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "These results are out of date.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We believe these historical results no longer reflect the current impact of AI models on open-source developer productivity.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we recruited 16 experienced developers from large open-source repositories (averaging 22k+ stars and 1M+ lines of code) that they’ve contributed to for multiple years",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Developers provide lists of real issues (246 total) that would be valuable to the repository—bug fixes, features, and refactors that would normally be part of their regular work.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we randomly assign each issue to either allow or disallow use of AI while working on the issue",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Developers complete these tasks (which average two hours each) while recording their screens, then self-report the total implementation time they needed.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "primarily Cursor Pro with Claude 3.5/3.7 Sonnet—frontier models at the time of the study",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "When developers are allowed to use AI tools, they take 19% longer to complete issues",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "developers expected AI to speed them up by 24%, and even after experiencing the slowdown, they still believed AI had sped them up by 20%.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We do not claim that our developers or repositories represent a majority or plurality of software development work",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We only study software development",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "METR is a non-profit (funded by donations)",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "url": "https://metr.org/blog/2026-02-24-uplift-update",
+      "title": "METR, We are Changing our Developer Productivity Experiment Design (blog post, 24 February 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "using data from February to June 2025",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we started a new experiment in August 2025 with a larger pool of developers using the latest AI tools",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We have data from 57 developers, across 143 repos, and 800+ tasks.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Our raw results show some evidence for speedup.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we believe that the data from our new experiment gives us an unreliable signal of the current productivity effect of AI tools",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we have observed a significant increase in developers choosing not to participate in the study because they do not wish to work without AI",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "30% to 50% of developers told us that they were choosing not to submit some tasks because they did not want to do them without AI",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we believe it is likely that developers are more sped up from AI tools now — in early 2026 — compared to our estimates from early 2025",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "our data is only very weak evidence for the size of this increase",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Some developers self-report very high speedups, though as we documented in our earlier study those estimates can be quite unreliable.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we believe it is likely a bad proxy for the real productivity impact of AI tools on these developers",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }
