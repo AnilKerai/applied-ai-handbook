@@ -71,7 +71,7 @@ MarkTechPost's coverage calls this "the orchestrator ceiling", a phrase the pape
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) shows how one example implementation, the handbook author's open-source .NET agent harness, keeps each subagent's context separate (its *isolate* operation).
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) shows how one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness), keeps each subagent's context separate (its *isolate* operation).
 
 **Read next:** [Lessons from my harness](lessons-from-my-harness.md), or go back to the [handbook home](../README.md).
 

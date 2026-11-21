@@ -2,6 +2,13 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-21: links to my harness
+
+- **[model-harness](https://github.com/AnilKerai/model-harness), my open-source .NET agent
+  harness, is now linked** from the README, the *See it built* pointers on the Engineer pages and
+  the first-person lessons. Citations still point at files pinned to one commit, so they don't
+  change when the code does.
+
 ## 2026-11-21: written from my point of view
 
 - **The handbook now says whose view it is.** It is written from my point of view and backed by

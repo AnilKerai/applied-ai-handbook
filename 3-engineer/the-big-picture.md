@@ -119,7 +119,7 @@ Anthropic's advice belongs at this level: "we recommend finding the simplest sol
 
 ## See it built
 
-The handbook author's open-source .NET agent harness, model-harness, is built on the same split.
+My open-source .NET agent harness, [model-harness](https://github.com/AnilKerai/model-harness), is built on the same split.
 Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) divides the work three ways: the harness runs one episode, an eval measures it, and a loop acts on the measurement. The harness itself owns the single run, and leaves offline evals and the outer loops to the system around it.
 
 **Read next:** [How the ideas arrived](how-the-ideas-arrived.md), or go back to the [handbook home](../README.md).

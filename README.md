@@ -6,6 +6,8 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 **Read it as a website:** [anilkerai.github.io/applied-ai-handbook](https://anilkerai.github.io/applied-ai-handbook/) has search, a sidebar in reading order and a layout that works on phones. The same pages are markdown in [the GitHub repository](https://github.com/AnilKerai/applied-ai-handbook).
 
+**My own code:** [model-harness](https://github.com/AnilKerai/model-harness), my open-source .NET agent harness, is where the Engineer section's first-person lessons come from.
+
 ## Start here: pick a route
 
 **New to AI** (about 50 minutes)

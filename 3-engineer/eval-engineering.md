@@ -77,7 +77,7 @@ I recommend putting an eval gate in front of any such automatic change; [Loop en
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) shows where one example implementation, the handbook author's open-source .NET agent harness, draws the line: an eval scores runs without changing them, while a check inside a run feeds a failure back so the model can correct itself.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) shows where one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness), draws the line: an eval scores runs without changing them, while a check inside a run feeds a failure back so the model can correct itself.
 
 **Read next:** [Multi-agent orchestration](multi-agent-orchestration.md), or go back to the [handbook home](../README.md).
 

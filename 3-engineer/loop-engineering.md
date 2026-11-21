@@ -70,7 +70,7 @@ I recommend measuring each new loop against a baseline before scaling it up, and
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering) maps the four loops onto one example implementation, the handbook author's open-source .NET agent harness: the harness owns the agent loop and in-run checks, and leaves the outer loops to the system around it.
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering) maps the four loops onto one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness): the harness owns the agent loop and in-run checks, and leaves the outer loops to the system around it.
 
 **Read next:** [Eval engineering](eval-engineering.md), or go back to the [handbook home](../README.md).
 

@@ -29,7 +29,8 @@ leadership, many of them new to AI. Write for them.
 
 1. **No employer or client details, ever.** Never name an employer or client, use their domain
    vocabulary, or describe their internal systems, people or projects. The maintainer's own public
-   projects may be named, but only in the first-person experience material (rule 4).
+   projects may be named only in the first-person experience material (rule 4), the README, and the
+   *See it built* pointers to model-harness on the Engineer pages.
    `scripts/check.py` enforces the built-in patterns, plus a private, git-ignored `.leakcheck.local`.
    If that file is missing, ask the maintainer before publishing.
 2. **Cite every factual sentence** with `[n]`, pointing at a public URL in the document's Sources block:
@@ -39,8 +40,13 @@ leadership, many of them new to AI. Write for them.
 
    Label a company's or vendor's numbers as its own claim ("Glean reports…"). Phrase recommendations as
    the maintainer's advice ("I recommend…") and leave them uncited, next to the cited evidence they
-   rest on. Link the maintainer's own repos only as files pinned to a full commit SHA that pass the
-   leak check: never a repo root, a commit page or a private repo.
+   rest on. Cite the maintainer's own repos only as files pinned to a full commit SHA that pass the
+   leak check. Never link a commit page or a private repo.
+   - **Link a repo root only with the maintainer's approval,** after a leak check of its files,
+     history, commit authors, branch names, PRs, issues, comments and release notes.
+   - model-harness is approved (21 November 2026). No other repo root is approved yet.
+   - A pinned file page links to its repo root in GitHub's header, so a pinned link is only as safe
+     as the repo.
    Check what a linked file links on to as well. When the rest of a page is wrong, cite one section with
    `sources.py anchor <id> <fragment>`.
 3. **Quotes are verbatim** from the transcript or article, attributed by name in the sentence.

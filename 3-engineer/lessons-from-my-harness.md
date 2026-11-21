@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 5 minutes · Best for: engineers building agents*
 
-In May 2026 I started model-harness, an open-source agent harness for .NET. This page is what building it taught me. Each lesson links to the matching principle on the [Harness engineering](harness-engineering.md) page, which carries the field's evidence.
+In May 2026 I started [model-harness](https://github.com/AnilKerai/model-harness), an open-source agent harness for .NET. This page is what building it taught me. Each lesson links to the matching principle on the [Harness engineering](harness-engineering.md) page, which carries the field's evidence.
 
 ## Build it to learn it
 

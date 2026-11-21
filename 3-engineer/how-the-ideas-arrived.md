@@ -147,7 +147,7 @@ More on each discipline:
 
 **May 2026: an evals framework.** On 6 May 2026 I made the first commit to an evals framework, built to show with repeatable evidence that an agent works before it reaches its users. It's private, so it isn't named or linked. [Lessons from my evals framework](lessons-from-my-evals-framework.md) has what it taught me.
 
-**May 2026: model-harness.** On 20 May 2026 I made the first commit to model-harness, an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what building it taught me.
+**May 2026: model-harness.** On 20 May 2026 I made the first commit to [model-harness](https://github.com/AnilKerai/model-harness), an open-source agent harness for .NET, to learn how agents work by building the loop myself. Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) sets out the split this section uses, and [Lessons from my harness](lessons-from-my-harness.md) has what building it taught me.
 
 **June 2026: an AI tutor app.** On 22 June 2026 I made the first commit to an AI tutor app, also private and unlinked.
 
