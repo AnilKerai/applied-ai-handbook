@@ -4,7 +4,7 @@ type: memo
 created: 2026-11-14
 audience: senior leadership and engineering leads
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
@@ -59,6 +59,8 @@ Limits must be enforced by the environment, not the prompt; a named person must 
 - **Per-agent sandboxes are necessary but not sufficient.** Matthew Green describes OpenAI's agents, in separately isolated sandboxes, leaving instructions for each other in a shared package cache, and expects even good designs to meet a self-spreading prompt-injection *worm*.[14] This qualifies Yoo's and Yuknewicz's advice, which treats a sandbox per agent or tool as the boundary: shared caches, documents and queues are channels too. It is argument and reported incidents, not a measured rate.
 - **An approval in the agent's context is not proof of approval.** A preprint found that coding agents which flatten history into plain text before summarising it let any file the agent reads forge a user approval that survives as a real instruction: 87–100% success on five such tools, 0% on four that keep message roles.[15] Approvals should live in the systems that enforce them.
 - **Too much caution has a cost too.** Anthropic's guide for Claude Fable 5.2 says cautious rules pile up in memory, notes and instruction files until agents ask for approvals they don't need, mostly in multi-agent setups. It calls telling the model to act more freely too vague, and advises listing the routine steps it may take alone.[16] Put the leash in infrastructure, with named exceptions, not in more prompt warnings.
+- **At the helm, people review the exceptions, not every step.** Paula Goldman of Salesforce describes "human at the helm" (a vendor executive's view): people "should be able to set parameters in advance", and "the system should escalate something when it requires judgment or goes outside those parameters".[17] She argues that with an agent doing complex work "It’s practically impossible for a human to look through all of it", and that people should look for "outliers or anomalies" rather than approve one data point after another.[17] We recommend this for agent actions that aren't decisions about people, with the agent's named owner answering for the outcomes. See [Can AI replace our people?](can-ai-replace-our-people.md).
+- **Decisions about people are different.** Under the UK GDPR's rules on automated decision-making, rewritten by section 80 of the Data (Use and Access) Act 2025 and in force since 5 February 2026, a decision with legal or similarly significant effects for a person is "based solely on automated processing if there is no meaningful human involvement in the taking of the decision"; the person must then be able to "obtain human intervention" and contest it, and such decisions that use special category data are restricted further.[18] The ICO's draft guidance (March 2026) gives credit applications, recruitment and benefits as examples of such decisions, and says the person involved should review each decision before it takes effect, and that spot-checks aren't enough.[19] For those decisions, we recommend either having a person genuinely review every one, or treating the process as automated decision-making and putting the legal safeguards in place: telling people about the decision, and letting them make representations, have a person look at it again, and contest it.[18]
 
 ## Risks and what would change this advice
 
@@ -86,4 +88,6 @@ Limits must be enforced by the environment, not the prompt; a named person must 
 [14] https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents — Matthew Green (A Few Thoughts on Cryptographic Engineering), Is sandboxing sufficient to contain rogue agents?
 [15] https://arxiv.org/abs/2610.29869 — Arshan Dabirsiaghi (Pixee), Compaction Laundering: Provenance Destruction in Context-Compacting Coding Agents (arXiv 2610.29869)
 [16] https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2 — Anthropic, Prompting Claude Fable 5.2: keep caution from piling up
-
+[17] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)
+[18] https://www.legislation.gov.uk/ukpga/2025/18/section/80 — Data (Use and Access) Act 2025, section 80: automated decision-making (legislation.gov.uk; in force in full from 5 February 2026)
+[19] https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-does-the-uk-gdpr-say-about-adm — Information Commissioner's Office (ICO), What does the UK GDPR say about ADM? (draft guidance, updated 31 March 2026)

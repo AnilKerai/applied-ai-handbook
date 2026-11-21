@@ -96,6 +96,102 @@
       "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2",
       "title": "Anthropic, Prompting Claude Fable 5.2: keep caution from piling up",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman",
+      "title": "Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "What we need is something better, and that’s what we’re calling “human at the helm.” First, you should be able to set parameters in advance",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Second, the system should escalate something when it requires judgment or goes outside those parameters.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "If an agent is doing complex work on your behalf, you’re delegating tasks with many intermediate steps that touch lots of data. It’s practically impossible for a human to look through all of it.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "You should be looking at how testing is going, whether the system is meeting a quality bar and whether there are outliers or anomalies.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "That’s very different from approving one data point after another.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+      "title": "Data (Use and Access) Act 2025, section 80: automated decision-making (legislation.gov.uk; in force in full from 5 February 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "a decision is based solely on automated processing if there is no meaningful human involvement in the taking of the decision",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "it has a similarly significant effect for the data subject.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "A significant decision based entirely or partly on processing described in Article 9(1) (processing of special categories of personal data) may not be taken based solely on automated processing, unless one of the following conditions is met.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "enable the data subject to obtain human intervention on the part of the controller in relation to such decisions;",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "enable the data subject to contest such decisions.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "in force at 5.2.2026 in so far as not already in force",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-does-the-uk-gdpr-say-about-adm",
+      "title": "Information Commissioner's Office (ICO), What does the UK GDPR say about ADM? (draft guidance, updated 31 March 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "We have updated this draft guidance to reflect changes to the UK GDPR following the Data (Use and Access) Act 2025 (DUAA).",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "approving or refusing access to a public service, benefit or licence",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "automatic refusal of an online credit application",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "e-recruiting practices without meaningful human involvement",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The human involved in the decisions **should** apply these non-exhaustive criteria every time they make a decision about a person.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Using ad hoc spot-checking isn’t sufficient because some automated decisions won’t receive a check and therefore don’t have meaningful human involvement.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "ensure that the involvement comes before you apply the decision to a person",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }

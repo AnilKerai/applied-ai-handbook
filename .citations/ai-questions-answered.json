@@ -396,6 +396,74 @@
       "url": "https://www.youtube.com/watch?v=LL0YmIyBKSU",
       "title": "Latent Space, The 2026 Software Factory Infra Stack — Zach Lloyd (Warp), full episode video, 3 Nov 2026",
       "accessed": "2026-11-15"
+    },
+    {
+      "id": 67,
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence",
+      "title": "Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised 12 August 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Using a sample of high-frequency administrative payroll data from ADP covering millions of U.S. workers through June 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We find no evidence of widespread, economy-wide job displacement.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "However, employment of young workers (ages 22–25) in AI-exposed occupations now stands 19% below where it would be had it kept pace with that of their less-exposed peers; experienced workers show no comparable gap.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "This divergence has widened steadily since we first documented it in August 2025.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "It operates primarily through reduced hiring of young workers rather than increased separations.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Declines are concentrated in occupations where AI usage primarily substitutes for human tasks; where usage primarily complements workers, employment is flat or rising, especially for experienced workers",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We interpret these facts as early, descriptive indicators—canaries in the coal mine—rather than causal estimates",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "title": "The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market (14 October 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Measures of AI usage show no connection to changes in employment or unemployment.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "A synthetic differences-in-differences analysis of AI exposure does not yet clearly indicate an AI-related labor market footprint.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "url": "https://paulagoldman.ai",
+      "title": "Paula Goldman, Manage the Machine (author's book site)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "As AI gets more and more powerful, human leadership and judgment matter more, not less.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Paula Goldman, chief ethical and humane use officer at Salesforce",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }

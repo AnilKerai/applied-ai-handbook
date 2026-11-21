@@ -4,7 +4,7 @@ type: faq
 created: 2026-11-14
 audience: colleagues, engineering leads, senior leadership
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
@@ -20,6 +20,22 @@ as_of: "November 2026"
 *Reading time: about 15 minutes · Best for: everyone*
 
 Short answers to the questions an in-house AI adviser hears most. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. Each short answer is our recommendation; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
+
+## For everyone at work
+
+### Q: Will AI replace my job?
+
+**Short answer:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. We recommend letting AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
+
+**Why:**
+- A Stanford study of payroll data on millions of US workers, revised in August 2026 with data to June 2026, found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67] A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment", and that its analysis "does not yet clearly indicate an AI-related labor market footprint".[68]
+- The exception is young workers aged 22–25 in jobs exposed to AI: their employment is 19% below where it would be had it kept pace with that of young people in less-exposed jobs, a gap measured against them, not a 19% fall in jobs.[67] It comes mainly through "reduced hiring of young workers rather than increased separations": fewer being taken on, rather than more being let go.[67] The authors call their findings "early, descriptive indicators" rather than causal estimates: they show a pattern, not proof that AI caused it.[67]
+- The same study finds declines concentrated in jobs where AI mainly does tasks instead of people; where it mainly helps people with their work, "employment is flat or rising, especially for experienced workers".[67]
+- Paula Goldman of Salesforce argues that "As AI gets more and more powerful, human leadership and judgment matter more, not less" (a vendor executive's view).[69]
+
+**Confidence:** medium. A large US payroll study and a separate tracker agree there is no economy-wide effect so far, but the study calls its findings descriptive rather than causal, its gap for young workers cuts the other way, and the last bullet is one vendor executive's opinion.
+
+See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) for software teams, [Who is accountable when AI gets it wrong?](#q-who-is-accountable-when-ai-gets-it-wrong), and, for leaders, [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
 
 ## Strategy
 
@@ -309,4 +325,6 @@ Short answers to the questions an in-house AI adviser hears most. They draw on p
 [64] https://blog.cryptographyengineering.com/2026/09/30/is-sandboxing-sufficient-to-contain-rogue-agents — Matthew Green, Is sandboxing sufficient to contain rogue agents?
 [65] https://arxiv.org/abs/2610.29869 — arXiv 2610.29869, compaction laundering: forged user turns survive context compaction
 [66] https://www.youtube.com/watch?v=LL0YmIyBKSU — Latent Space, The 2026 Software Factory Infra Stack — Zach Lloyd (Warp), full episode video, 3 Nov 2026
-
+[67] https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence — Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised 12 August 2026)
+[68] https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market — The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market (14 October 2026)
+[69] https://paulagoldman.ai — Paula Goldman, Manage the Machine (author's book site)

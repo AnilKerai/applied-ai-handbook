@@ -4,7 +4,7 @@ type: deck
 created: 2026-11-16
 audience: anyone new to using AI at work
 status: checked
-last_checked: 2026-11-16
+last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: presenting to colleagues new to AI*
 
-A talk for colleagues in any role who are new to using AI tools at work: 12 slides, 16:9, for about 25 minutes plus questions. It is about using the tools people already have, well and safely, not about building with AI, and the aim is that everyone leaves with one habit to try the following week. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-using-ai-at-work.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. OpenAI's explanation of why models make things up is OpenAI's own account, the NCSC's advice comes from a 2023 blog post, and the guidance for judges is quoted as it stood in its October 2025 update. The key lines, the three habits on slide 10, the action on slide 11 and the other uncited suggestions are advice, not findings from the sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 1-understand/talk-using-ai-at-work.md --no-basics --out <file>.pptx`, which leaves 10 slides.
+A talk for colleagues in any role who are new to using AI tools at work: 12 slides, 16:9, for about 25 minutes plus questions. It is about using the tools people already have, well and safely, not about building with AI, and the aim is that everyone leaves with one habit to try the following week. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-using-ai-at-work.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. OpenAI's explanation of why models make things up is OpenAI's own account, the NCSC's advice comes from a 2023 blog post, and the guidance for judges is quoted as it stood in its October 2025 update. Paula Goldman's description of being at the helm, on slide 10, is a vendor executive's view. The key lines, the three habits on slide 10, the action on slide 11 and the other uncited suggestions are advice, not findings from the sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 1-understand/talk-using-ai-at-work.md --no-basics --out <file>.pptx`, which leaves 10 slides.
 
 ---
 
@@ -207,24 +207,25 @@ These are self-reports, and the authors note that their sample leaned towards yo
 
 ---
 
-## Slide 10 · Three habits that work
+## Slide 10 · Three habits that keep you at the helm
 
 *Layout: three*
 
 **On the slide**
 
-- Brief it: the purpose, the audience and the facts it needs
+- Brief it: the purpose, the audience, the facts and where to stop
 - Check it: open its sources; check harder when more is at stake
 - Own it: if it goes out under your name, it's yours
 
 **Speaker notes**
 
-These three habits are advice, not findings from any one study.
-Brief it as you would a capable new colleague: what the work is for, who will read it, and the facts it needs, taken from approved sources.
+These three habits are advice, not findings from any one study, and together they keep you at the helm of your own work: the AI does the task, while you set its limits, make the judgement calls and own the result.
+Paula Goldman of Salesforce describes being at the helm in similar terms: you "should be able to set parameters in advance", and the system "should escalate something when it requires judgment or goes outside those parameters" (a vendor executive's view).[10]
+Brief it as you would a capable new colleague: what the work is for, who will read it, the facts it needs from approved sources, and where its job stops.
 Check in proportion to the stakes, and open every source it cites: the High Court warned that freely available AI tools "may cite sources that do not exist".[7]
-Own it: whatever drafted the work, the person who sends it answers for it.
+Own it: whatever drafted the work, the person who sends it answers for it, or as Goldman puts it, "At the individual level, you’re still responsible for your work, whether or not you’re using AI."[10]
 
-**Links:** matching the checking to the cost of a mistake, in [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md) · who is accountable, in [AI questions answered](ai-questions-answered.md#q-who-is-accountable-when-ai-gets-it-wrong).
+**Links:** matching the checking to the cost of a mistake, in [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md) · who is accountable, in [AI questions answered](ai-questions-answered.md#q-who-is-accountable-when-ai-gets-it-wrong) · being at the helm, in the [AI glossary](ai-glossary.md) and [Will AI replace my job?](ai-questions-answered.md#q-will-ai-replace-my-job).
 
 ---
 
@@ -259,14 +260,14 @@ Then tell your team what worked and what it got wrong, so everyone learns from i
 
 - This outline: every sourced claim cited, with links to all its sources
 - AI glossary: plain meanings of the terms you'll hear
-- AI questions answered: short answers on data, mistakes and accountability
+- AI questions answered: whether AI will replace your job, and more
 - Should this task use AI? A short decision tree, task by task
 
 **Speaker notes**
 
-Every claim on these slides that comes from a source is cited in the outline that goes with the deck, which lists all 9 sources with links.
+Every claim on these slides that comes from a source is cited in the outline that goes with the deck, which lists all 10 sources with links.
 The handbook's AI glossary gives plain-English meanings of the terms you'll hear, such as hallucination.
-AI questions answered has short answers to common questions, including how safe data is and who is accountable when AI gets it wrong.
+AI questions answered has short answers to common questions, including how safe data is, who is accountable when AI gets it wrong, and whether AI will replace your job.
 Should this task use AI? is a short decision tree to walk through for any task before handing it to AI.
 
 **Links:** [AI glossary for leadership](ai-glossary.md) · [AI questions answered](ai-questions-answered.md) · [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
@@ -293,3 +294,4 @@ Should this task use AI? is a short decision tree to walk through for any task b
 [7] https://caselaw.nationalarchives.gov.uk/ewhc/admin/2025/1383 — High Court of England and Wales (Divisional Court), R (Ayinde) v London Borough of Haringey [2025] EWHC 1383 (Admin), judgment of 6 June 2025 on two referred cases (Find Case Law, The National Archives)
 [8] https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do — Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)
 [9] https://www.microsoft.com/en-us/research/wp-content/uploads/2025/01/lee_2025_ai_critical_thinking_survey.pdf — Hao-Ping (Hank) Lee, Advait Sarkar, Lev Tankelevitch, Ian Drosos, Sean Rintel, Richard Banks & Nicholas Wilson (Carnegie Mellon University and Microsoft Research), The Impact of Generative AI on Critical Thinking: Self-Reported Reductions in Cognitive Effort and Confidence Effects From a Survey of Knowledge Workers, CHI 2025 (authors' PDF)
+[10] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)

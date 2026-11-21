@@ -4,7 +4,7 @@ type: glossary
 created: 2026-11-14
 audience: Senior leadership and non-specialist colleagues
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
@@ -115,9 +115,13 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - All the software around an AI model that turns it into a working tool: its instructions, the tools it may use, its permissions, and the checks on its work.[14]
 - *Why it matters:* we usually buy the model; the harness is where our controls live and where our own effort should go. See [Harness engineering](../3-engineer/harness-engineering.md).
 
+**Human at the helm**
+- A way of working with AI in which people set its limits in advance, the system hands a person anything that needs judgement or goes beyond those limits, and AI extends people's judgement instead of a person approving every output. Paula Goldman of Salesforce gives one definition in three parts (a vendor executive's view): people "should be able to set parameters in advance"; "the system should escalate something when it requires judgment or goes outside those parameters"; and it should be "extending your agency, creativity and judgment".[42] Others used the phrase earlier, among them Cécile Paris of CSIRO, whom Cosmos magazine quoted in January 2022 saying "I want the human at the helm",[43] and a Salesforce research blog in December 2023.[44]
+- *Why it matters:* we recommend it as the way to work with AI: let AI take over tasks, keep the accountability, judgement and trust with people, and name the person who owns each outcome. Mark Lay (Noblis) argues that "accountability can't be delegated" to AI.[1] See [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
+
 **Human in the loop**
 - A design in which a person checks or approves the AI's work before it takes effect.[8]
-- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items fall into "rubber stamping fatigue".[8]
+- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items fall into "rubber stamping fatigue".[8] Approving each output can turn into a rubber stamp: Paula Goldman of Salesforce warns that "simply having a human in the loop can create false confidence" (a vendor executive's view).[42] For agents doing many steps, see **Human at the helm**, above.
 
 ## J
 
@@ -280,3 +284,6 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 [39] https://dzone.com/articles/understanding-graph-engineering — DZone, Graph Engineering: The Layer After Loop Engineering
 [40] https://www.anthropic.com/engineering/multi-agent-research-system — Anthropic, How we built our multi-agent research system
 [41] https://arxiv.org/pdf/2107.13586v1 — Pengfei Liu et al., Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (arXiv 2107.13586v1)
+[42] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)
+[43] https://web.archive.org/web/20220114032036/https://cosmosmagazine.com/technology/ai/ai-in-the-workplace — Deborah Devis (Cosmos), Could AI in the workplace be good for humanity? (14 January 2022; Wayback Machine copy of that day)
+[44] https://www.salesforce.com/blog/ai-and-human-touch — Holly Prouty (Salesforce), Building Trust in AI Needs a Human Touch (Salesforce research blog, 13 December 2023)

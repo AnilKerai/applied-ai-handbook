@@ -272,6 +272,26 @@
           "added": "2026-11-16"
         }
       ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman",
+      "title": "Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "What we need is something better, and that’s what we’re calling “human at the helm.” First, you should be able to set parameters in advance",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Second, the system should escalate something when it requires judgment or goes outside those parameters.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "At the individual level, you’re still responsible for your work, whether or not you’re using AI.",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }

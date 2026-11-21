@@ -5,7 +5,13 @@
       "id": 1,
       "url": "https://practicalai.show/379/transcript",
       "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "the first premise is that accountability can't be delegated. I mean, humans can delegate accountability to other humans. But with AI, we should not be delegating accountability.",
+          "added": "2026-11-21"
+        }
+      ]
     },
     {
       "id": 2,
@@ -246,6 +252,58 @@
       "url": "https://arxiv.org/pdf/2107.13586v1",
       "title": "Pengfei Liu et al., Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing (arXiv 2107.13586v1)",
       "accessed": "2026-11-15"
+    },
+    {
+      "id": 42,
+      "url": "https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman",
+      "title": "Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "What we need is something better, and that’s what we’re calling “human at the helm.” First, you should be able to set parameters in advance",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Second, the system should escalate something when it requires judgment or goes outside those parameters.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Third, you want a system that increases what you’re capable of at work, extending your agency, creativity and judgment.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "And yes, simply having a human in the loop can create false confidence.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Today, “human in the loop” is widely understood to mean AI drafts something and you approve it or hit send.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "url": "https://web.archive.org/web/20220114032036/https://cosmosmagazine.com/technology/ai/ai-in-the-workplace",
+      "title": "Deborah Devis (Cosmos), Could AI in the workplace be good for humanity? (14 January 2022; Wayback Machine copy of that day)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "“I want the human at the helm,” explains Dr Cecile Paris, chief research scientist at CSIRO Data61 and leader of CINTEL.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "url": "https://www.salesforce.com/blog/ai-and-human-touch",
+      "title": "Holly Prouty (Salesforce), Building Trust in AI Needs a Human Touch (Salesforce research blog, 13 December 2023)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "humans — employees at your organization or business — should be even more thoughtfully and meaningfully embedded into the process as the “human-at-the-helm.”",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }
