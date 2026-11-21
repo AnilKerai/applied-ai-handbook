@@ -54,8 +54,8 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   She says data quality sets the ceiling.[1]
 - Mark Lay (Noblis): if AI gives neither a better nor a more efficient result, don't use it. Don Barger's organisation wrote its AI charter "before we ever write one line of code".[2]
 - **For software teams:** Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3]
-  Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results.[4]
-  With a spec and a test environment it took about two hours (AWS's account).[4]
+  Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results (AWS's account).[4]
+  With a spec and a test environment it took about two hours.[4]
 
 **How sure I am:** Fairly sure. Several independent practitioners agree, but it rests on their experience, and nobody compared starting points.
 
