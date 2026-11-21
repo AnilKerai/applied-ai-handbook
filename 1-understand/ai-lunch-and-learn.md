@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 20 minutes · Best for: sharing with a team*
 
-A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for 30-45 minutes (about two minutes a slide, plus questions). This outline holds the slide text, the speaker notes and the sources; the deck itself is `ai-lunch-and-learn.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company figures are the companies' own claims, and the suggestions on slide 15 are advice, not findings from the sources.
+A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for 30-45 minutes (about two minutes a slide, plus questions).
 
 ---
 

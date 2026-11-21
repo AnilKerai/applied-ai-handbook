@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: presenting to engineers*
 
-The second of two talks for engineers who build AI features into a product, such as a .NET service: 12 slides, 16:9, for about 25 minutes plus questions. It opens with a three-minute recap of the first session and ends with one thing to try. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-building-ai-features.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company and vendor figures are the companies' own claims, and the key lines and the action on slide 11 are advice, not findings from the sources. Slide 9 is the maintainer's own experience, in the first person; its evidence is on the lessons pages it links. The committed deck is the series version, with the basics. To leave out slide 3, the basics slide, run `python3 scripts/build_deck.py 4-build/talk-building-ai-features.md --no-basics --out <file>`, giving `--out` a different path so the committed deck is not overwritten. To give this session on its own, add `--standalone`: it drops the recap slide and the session number from the subtitle. The two options combine.
+The second of two talks for engineers who build AI features into a product, such as a .NET service: 12 slides, 16:9, for about 25 minutes plus questions. It opens with a three-minute recap of the first session and ends with one thing to try.
 
 ---
 

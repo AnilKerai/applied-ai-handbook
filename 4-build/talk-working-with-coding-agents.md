@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: presenting to engineers*
 
-A talk for engineers who already use coding agents, and the first of two sessions: 11 slides, 16:9, for about 25 minutes plus questions. The aim is that everyone leaves with one thing to try before session 2, which opens with what people found. This outline holds the slide text, the speaker notes and the sources; the deck itself is `talk-working-with-coding-agents.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Anthropic's documentation is quoted as it stood in November 2026, and Meta's ladder is Meta's own account. Slide 9 is the maintainer's own experience, in the first person. The key lines, the action on slide 10 and the other uncited suggestions are advice, not findings from the sources. Slides 2 and 3 are basics, tagged in the corner; to build the deck without them, run `python3 scripts/build_deck.py 4-build/talk-working-with-coding-agents.md --no-basics --out <file>.pptx`, which leaves 9 slides.
+A talk for engineers who already use coding agents, and the first of two sessions: 11 slides, 16:9, for about 25 minutes plus questions. The aim is that everyone leaves with one thing to try before session 2, which opens with what people found.
 
 ---
 
