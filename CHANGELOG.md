@@ -6,29 +6,40 @@ Newest first. Every correction lists what changed and the evidence.
 
 - **New: [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)**, a leadership memo.
   - It sets out the evidence on both sides:
-    - payroll and administrative studies of jobs;
-    - rulings on who answers for AI's mistakes;
+    - studies and working papers on jobs, from payroll, administrative and résumé data;
+    - two rulings, on an airline's responsibility for its chatbot's answers and on lawyers' duty to
+      check AI legal research;
     - studies of people working with AI;
     - a meta-analysis in which people and AI together did worse on average than the better of the
-      two alone;
-    - leaders' own words claiming AI can do people's jobs.
+      two alone, though better than people alone;
+    - chief executives' own words: one of the opinion that AI can already do people's jobs, another
+      expecting it to shrink his company's corporate workforce.
   - It recommends a human at the helm: people set the limits, the system hands them the judgement
     calls, and a named person owns every outcome.
 - **New question for everyone at work:**
   [Will AI replace my job?](1-understand/ai-questions-answered.md#q-will-ai-replace-my-job),
   in a new first section of *AI questions answered*.
-- **Glossary:** a new entry, *Human at the helm*. *Human in the loop* now explains how per-item
-  approval turns into rubber-stamping.
+- **Glossary:** a new entry, *Human at the helm*, which also says where checking each result still
+  applies. *Human in the loop* now warns that approving each output can turn into a rubber stamp.
 - **[Talk: using AI well at work](1-understand/talk-using-ai-at-work.md):** slide 10 is now "Three
   habits that keep you at the helm", and the reading slide adds the new question. The slides are
   rebuilt.
 - **[How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
   and [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md):**
-  - Each gains a helm point: limits set in advance, escalation, and review of the exceptions.
-  - Each adds that decisions about people are different. Under UK law, a decision with legal or
-    similarly significant effects on a person, made without meaningful human involvement, needs
-    the legal safeguards. The ICO's draft guidance (March 2026) says meaningful involvement means
-    a person reviewing each decision.
+  - Each gains a helm point for agent actions that aren't decisions about people: limits set in
+    advance, escalation, and review of the exceptions. The decision tree allows this once results
+    can be checked automatically, and the production memo once its safeguards are in place.
+  - Each adds that decisions about people are different. Under the UK GDPR's rules on automated
+    decision-making, as rewritten by section 80 of the Data (Use and Access) Act 2025, a decision
+    with legal or similarly significant effects on a person, taken without meaningful human
+    involvement, needs safeguards, including a way for the person to obtain human intervention and
+    to contest it; if it uses special category data, it is allowed only in limited cases. The ICO's
+    draft guidance (March 2026) says that, for involvement to count as meaningful, a person should
+    review each decision, the review must come before the decision takes effect, and spot-checks
+    aren't enough.
+- **Correction, glossary (*Human in the loop*):** Heidi Porter's warning now says that reviewers
+  facing thousands of items can fall into rubber-stamping fatigue; it had said they do. Her talk's
+  transcript says "They can just have rubber stamping fatigue".
 
 ## 2026-11-19: website links load as normal pages
 
