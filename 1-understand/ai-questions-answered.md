@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Limit what AI agents (AI that takes actions) can reach, and require approval for anything that can't be undone.
 > - A named person is always accountable: AI can do the work, but people own the result.
 
-*Reading time: about 20 minutes · Best for: everyone*
+*Reading time: about 25 minutes · Best for: everyone*
 
 Short answers to the questions an in-house AI adviser hears most, for everyone at work: people using AI tools and teams building with them. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. **My recommendation** is my advice, in plain words. **How sure I am** is my judgement of how strong the evidence behind it is: very sure, fairly sure or not very sure. The *Why* bullets are what the sources say, and a final *For software teams* bullet holds any engineering detail. Questions only for teams building with AI are grouped [near the end](#for-teams-building-with-ai). Figures a company reports about its own work are marked as its claim, and the [AI glossary](ai-glossary.md) explains the terms.
 

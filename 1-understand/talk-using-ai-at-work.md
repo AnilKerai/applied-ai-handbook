@@ -277,7 +277,7 @@ Should this task use AI? is a short decision tree to walk through for any task b
 ## Related
 
 - Plain meanings of the terms: [AI glossary for leadership](ai-glossary.md)
-- Common questions, with confidence levels: [AI questions answered](ai-questions-answered.md)
+- Common questions, answered with the evidence: [AI questions answered](ai-questions-answered.md)
 - Before handing a task to AI: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
 - A broader talk on what works with AI: [What works with AI: practical lessons](ai-lunch-and-learn.md)
 

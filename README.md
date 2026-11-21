@@ -10,7 +10,7 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 ## Start here: pick a route
 
-**New to AI** (about 50 minutes)
+**New to AI** (about 55 minutes)
 
 1. [AI questions answered](1-understand/ai-questions-answered.md)
 2. [The big picture](3-engineer/the-big-picture.md)
