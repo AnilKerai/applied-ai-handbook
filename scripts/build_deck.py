@@ -75,7 +75,7 @@ TAGS = {"basics": "Basics", "series": "Recap"}
 # Footer labels for particular slides, keyed by (outline path relative to the repo, outline slide number).
 FOOTER_LABELS = {
     ("1-understand/ai-lunch-and-learn.md", 15):
-        "Suggestions for us, not findings from our sources \u00b7 links to the handbook in the outline",
+        "Suggestions for us, not findings from the sources \u00b7 links to the handbook in the outline",
 }
 
 LINK_NAMES = {}

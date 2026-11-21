@@ -36,7 +36,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 ## Options considered
 
 - **Replace roles where AI matches people.** Fastest savings, but in my view it risks ownerless outcomes and a thinner junior pipeline.
-- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] Significant decisions about people are the exception.
+- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] I'd keep it only for significant decisions about people.
 - **A human at the helm (my recommendation).** Needs up-front work on limits and roles.
 
 ## What the evidence says

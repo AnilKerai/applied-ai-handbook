@@ -2,6 +2,18 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-21: written from my point of view
+
+- **The handbook now says whose view it is.** It is written from my point of view and backed by
+  evidence. The evidence stays impersonal and cited, and my judgement is first person: "I
+  recommend", "My reasoning", "in my view". The recommendations are my own view, not my
+  employer's.
+  - Where a page stated a judgement as if it were a finding, it is now marked as mine.
+  - Templates, checklists, decision trees, the runbook, the PR policy, the scorecard and the talks
+    stay neutral, so anyone can adopt or present them.
+  - "We" now means the reader's own team.
+  - No claim, figure, quote or citation changed.
+
 ## 2026-11-21: humans at the helm
 
 - **New: [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)**, a leadership memo.
