@@ -29,28 +29,40 @@ leadership, many of them new to AI. Write for them.
 
 1. **No employer or client details, ever.** Never name an employer or client, use their domain
    vocabulary, or describe their internal systems, people or projects. The maintainer's own public
-   projects may be named, but only in the first-person material (rule 4). `scripts/check.py` enforces
-   the built-in patterns, plus a private, git-ignored `.leakcheck.local`. If that file is missing, ask
-   the maintainer before publishing.
+   projects may be named, but only in the first-person experience material (rule 4).
+   `scripts/check.py` enforces the built-in patterns, plus a private, git-ignored `.leakcheck.local`.
+   If that file is missing, ask the maintainer before publishing.
 2. **Cite every factual sentence** with `[n]`, pointing at a public URL in the document's Sources block:
    - a talk's page or timestamped video;
    - a paper;
    - an article or vendor documentation.
 
    Label a company's or vendor's numbers as its own claim ("Glean reports…"). Phrase recommendations as
-   advice ("We recommend…") and leave them uncited. Link the maintainer's own repos only as files pinned
-   to a full commit SHA that pass the leak check: never a repo root, a commit page or a private repo.
+   the maintainer's advice ("I recommend…") and leave them uncited, next to the cited evidence they
+   rest on. Link the maintainer's own repos only as files pinned to a full commit SHA that pass the
+   leak check: never a repo root, a commit page or a private repo.
    Check what a linked file links on to as well. When the rest of a page is wrong, cite one section with
    `sources.py anchor <id> <fragment>`.
 3. **Quotes are verbatim** from the transcript or article, attributed by name in the sentence.
    Otherwise paraphrase without quote marks.
-4. **Plain British English, and two voices kept apart.**
-   - Concepts, principles and guidance are factual and impersonal (or "we" for recommendations).
-   - The maintainer's own experience is first person. It appears only in:
+4. **Plain British English. The handbook is the maintainer's point of view, backed by evidence, so
+   keep its voices apart.**
+   - **Evidence is impersonal and cited:** findings, figures, definitions, and what named people and
+     organisations say or do. Never put a source's finding in the first person ("I found that…").
+   - **The maintainer's judgement is first person:** recommendations ("I recommend…"), which option
+     to choose, and inferences no source makes ("My reasoning: …", "my reading"). Keep each uncited
+     and next to the evidence it rests on, and never word it as a finding. Don't name the
+     maintainer's own projects here (rule 1).
+   - **Tools stay neutral,** so anyone can adopt or present them: templates, checklists, decision
+     trees, the pre-mortem, the runbook, policy drafts, scorecards, and every talk's slides and
+     speaker notes. Use plain imperatives there ("Set limits in advance"), not "I" or "we".
+   - **"We" means the reader's own team or organisation** ("Where do we start?"), never the
+     maintainer.
+   - **The maintainer's own experience is first person.** It appears only in:
      - the `3-engineer/lessons-from-*` pages;
      - the *My path* entries on the timeline;
      - the slides labelled *From my own builds* in the `talk-*` decks, with their speaker notes.
-   - Every first-person claim must be backed by the maintainer's files or git history.
+   - Every first-person experience claim must be backed by the maintainer's files or git history.
    - Keep sections short. No tables: they read badly on phones.
 5. **Every document has, in this order:**
    - frontmatter, including `last_checked: YYYY-MM-DD` and `as_of`;

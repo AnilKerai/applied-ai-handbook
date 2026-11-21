@@ -2,13 +2,13 @@
 
 Practical, evidence-backed guidance for bringing AI into a business or an engineering team: when to use it, which kind, how to build and test it, how to run it safely, and how to lead the change.
 
-**A living compendium, as of November 2026.** It separates three things: what practitioners report works, what published studies show, and our own recommendations. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged. The Engineer section also includes the author's own path through these ideas and first-person lessons from his own builds, written as his experience rather than as findings.
+**A living compendium by Anil Kerai, as of November 2026, written from my point of view and backed by evidence.** It separates three things: what practitioners report works, what published studies show, and my own recommendations. The evidence is cited so you can check it; the recommendations are my own view, not my employer's. Every factual sentence cites a public source you can check: a talk, a paper or an article. Before publishing, every cited claim was re-checked against the original transcripts, papers and articles, and every correction is logged. The Engineer section also includes my own path through these ideas and lessons from my own builds, written as experience rather than as findings. Templates, checklists and talks are written neutrally, so anyone can adopt or present them.
 
 **Read it as a website:** [anilkerai.github.io/applied-ai-handbook](https://anilkerai.github.io/applied-ai-handbook/) has search, a sidebar in reading order and a layout that works on phones. The same pages are markdown in [the GitHub repository](https://github.com/AnilKerai/applied-ai-handbook).
 
 ## Start here: pick a route
 
-**New to AI** (about 45 minutes)
+**New to AI** (about 50 minutes)
 
 1. [AI questions answered](1-understand/ai-questions-answered.md)
 2. [The big picture](3-engineer/the-big-picture.md)
@@ -66,7 +66,7 @@ Reading everything takes about 5 hours. Nobody needs to; pick a route.
 - Each document opens with an **In one minute** box, so you can stop there.
 - **[n]** points to the numbered Sources list at the bottom of that document.
 - **"X reports…"** or **"(X's claim)"** means the figure is that company's own, not independently checked.
-- **"We recommend…"** is our advice, not a finding from a source.
+- **"I recommend…"** and **"My reasoning"** are my own judgement, not a finding from a source.
 - Each document has a `last_checked` date. This field moves fast, so check the date before relying on a figure.
 
 ## Corrections and updates
