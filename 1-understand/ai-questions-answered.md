@@ -139,7 +139,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Which model should we use, and do we need the biggest one?
 
-**My recommendation:** Treat the model as a replaceable part, chosen by testing on our own tasks. By default, for domain agents (agents for one area of our work) especially, use open-weight models we can run ourselves, behind a good harness and evals. Open-weight models are published for anyone to download and run; the harness is the software around a model that makes it a working tool. Move a step up to a frontier model, one of the most capable, only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
+**My recommendation:** Treat the model as a replaceable part, chosen by testing on our own tasks. By default, especially for [domain agents](ai-glossary.md), use [open-weight models](ai-glossary.md) we can run ourselves, behind a good [harness](ai-glossary.md) and evals. Move a step up to a [frontier model](ai-glossary.md) only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
 
 **Why:**
 - Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]

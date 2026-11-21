@@ -71,6 +71,10 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - A check made by ordinary software that gives the same answer every time, such as a test, a type check or a rule in the build, rather than an AI model's opinion. Lauren Tan advises making each correction to an agent "a deterministic check instead of adding another line to your rules".[11]
 - *Why it matters:* an instruction can be ignored, but a failing check blocks the change.
 
+**Domain agent**
+- As used here: an agent built for one area of an organisation's work, such as answering one kind of customer request or checking one kind of document, rather than a general-purpose assistant.
+- *Why it matters:* its job is narrow enough to test on our own real cases, so evals can show whether a smaller or open-weight model is good enough. See [Which model should we use?](ai-questions-answered.md#q-which-model-should-we-use-and-do-we-need-the-biggest-one).
+
 **Durable execution**
 - Running a long, multi-step job so that its progress is saved after every step, and it resumes from where it stopped after a crash or restart instead of starting again.[12]
 - *Why it matters:* AI jobs often fail part-way; as Cecil Phillip (Temporal) put it, "The last thing you want to do is to reissue that prompt and use those tokens again."[12]
@@ -96,6 +100,10 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - *Why it matters:* cheaper options usually come first; on training a specialist reviewer model, Brian Douglas says "My recommendation is probably write a skill first."[13]
 
 ## G
+
+**Frontier model**
+- As used here: one of the most capable AI models available at the time. Epoch AI reports that since January 2026 the most capable open-weight models "have lagged frontier closed models by an average of four months" on its measure of capability.[46]
+- *Why it matters:* the most capable model isn't always needed. I recommend stepping up to one only where our evals show an open-weight model failing and the step is worth the cost.
 
 **Grounding**
 - Making an AI model answer from facts fetched from our own systems at the time of the question, with their sources shown, rather than from what it remembers.[8]
@@ -168,6 +176,10 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 **Ontology**
 - A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by an agent, which lets software catch an AI query that links them the wrong way round.[21]
 - *Why it matters:* we should write our business terms and rules down precisely before buying any product sold as an ontology.
+
+**Open-weight model**
+- An AI model whose "underlying parameters, or ‘weights’, are publicly released", so organisations can download, change and run it on their own infrastructure, as Australia's cyber security centre (ASD's ACSC) puts it.[45]
+- *Why it matters:* ASD's ACSC says it gives organisations "greater control over model deployment, operation and lifecycle", but also more responsibility for "security, safeguards, monitoring, updates and potential incident response".[45] See [Which model should we use?](ai-questions-answered.md#q-which-model-should-we-use-and-do-we-need-the-biggest-one).
 
 **Orchestration**
 - Connecting several AI agents, or fixed steps, so that they work on one job together. In what Anthropic calls the orchestrator-workers workflow, "a central LLM dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results".[37] A newer name for designing how they connect is graph engineering, first seen in July 2026.[38][39]
@@ -287,3 +299,5 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 [42] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)
 [43] https://web.archive.org/web/20220114032036/https://cosmosmagazine.com/technology/ai/ai-in-the-workplace — Deborah Devis (Cosmos), Could AI in the workplace be good for humanity? (14 January 2022; Wayback Machine copy of that day)
 [44] https://www.salesforce.com/blog/ai-and-human-touch — Holly Prouty (Salesforce), Building Trust in AI Needs a Human Touch (Salesforce research blog, 13 December 2023)
+[45] https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf — ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)
+[46] https://epoch.ai/data-insights/open-closed-eci-gap — Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)

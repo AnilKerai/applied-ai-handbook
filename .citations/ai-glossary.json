@@ -310,6 +310,38 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 45,
+      "url": "https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf",
+      "title": "ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Open-weight models are AI models whose underlying parameters, or ‘weights’, are publicly released which allows organisations to download, modify and operate them on their own infrastructure.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Adopting open-weight models gives organisations greater control over model deployment, operation and lifecycle.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "It also places greater responsibility on the organisation for security, safeguards, monitoring, updates and",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "url": "https://epoch.ai/data-insights/open-closed-eci-gap",
+      "title": "Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }

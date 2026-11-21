@@ -27,6 +27,8 @@ Newest first. Every correction lists what changed and the evidence.
     harder tests, how small tuned models did on one narrow task, and the costs of running a model
     yourself.
   - The same line is in the [.NET guide](4-build/dotnet-ai-engineering-guide.md).
+- **Glossary:** new entries for *domain agent*, *frontier model* and *open-weight model*. The model
+  recommendation now links to them instead of explaining each term in place.
 - **"Buy the models" now reads "use existing models rather than making our own",** because
   open-weight models are free to download. This covers the FAQ and the glossary.
 - **The four talk outlines** lose their boilerplate introductions. The slides are unchanged.
