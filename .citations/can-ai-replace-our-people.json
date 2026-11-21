@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.youtube.com/watch?v=qItG8Cqs5ug&t=16s",
+      "title": "Sebastian Siemiatkowski (Klarna), interview with Bloomberg Television, 12 December 2024 (Bloomberg Tech on YouTube, Klarna CEO Says AI Is Replacing Workers)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "I am of the opinion that AI can already do all of the jobs that we as humans do it's just a question of how we apply it and use it",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we stopped hiring about a year ago so we were 4,500 now we're 3,500",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "by not hiring we're simply shrinking",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-on-generative-ai",
+      "title": "Andy Jassy (Amazon), Message from CEO Andy Jassy: Some thoughts on Generative AI (message to Amazon employees, 17 June 2025)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "We will need fewer people doing some of the jobs that are being done today, and more people doing other types of jobs.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "It’s hard to know exactly where this nets out over time, but in the next few years, we expect that this will reduce our total corporate workforce as we get efficiency gains from using AI extensively across the company.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The message below was shared with Amazon employees earlier today.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence",
+      "title": "Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised 12 August 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Revised August 12 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Using a sample of high-frequency administrative payroll data from ADP covering millions of U.S. workers through June 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We find no evidence of widespread, economy-wide job displacement.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "employment of young workers (ages 22–25) in AI-exposed occupations now stands 19% below where it would be had it kept pace with that of their less-exposed peers; experienced workers show no comparable gap.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "It operates primarily through reduced hiring of young workers rather than increased separations.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "These patterns attenuate when controlling for education, show some divergent trends predating generative AI, and are more pronounced in the ADP analysis sample than in national survey benchmarks",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "We interpret these facts as early, descriptive indicators—canaries in the coal mine—rather than causal estimates",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+      "title": "Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "It should be obvious to Air Canada that it is responsible for all the information on its website. It makes no difference whether the information comes from a static page or a chatbot.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2025/1383",
+      "title": "High Court of England and Wales (Divisional Court), R (Ayinde) v London Borough of Haringey [2025] EWHC 1383 (Admin), judgment of 6 June 2025 on two referred cases (Find Case Law, The National Archives)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "have a professional duty therefore to check the accuracy of such research by reference to authoritative sources",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "This duty rests on lawyers who use artificial intelligence to conduct research themselves or rely on the work of others who have done so.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.nature.com/articles/s41562-024-02024-1",
+      "title": "Michelle Vaccaro, Abdullah Almaatouq & Thomas Malone (MIT Center for Collective Intelligence), When combinations of humans and AI are useful: A systematic review and meta-analysis, Nature Human Behaviour 8, 2293–2303 (2024)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "First, we found that, on average, human–AI combinations performed significantly worse than the best of humans or AI alone (Hedges’ g = −0.23; 95% confidence interval, −0.39 to −0.07).",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Second, we found performance losses in tasks that involved making decisions and significantly greater gains in tasks that involved creating content.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Finally, when humans outperformed AI alone, we found performance gains in the combination, but when AI outperformed humans alone, we found losses.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The human–AI systems performed significantly better than humans alone",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "370 unique effect sizes from 106 different experiments",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Most (>95%) of the human–AI systems in our dataset involved humans making the final decisions after receiving input from AI algorithms",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "if we consider only the performance dimensions the researchers studied",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Even though our main result suggests that—on average—combining humans and AI leads to performance losses, we do not think this means that combining humans and AI is a bad idea.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Our results suggest that with these decision tasks, better results might have been obtained if the experimenters had designed processes in which the AI systems did only the parts of the task for which they were clearly better than humans.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Only 3 of the 100+ experiments in our analysis explore such processes with a predetermined delegation of separate subtasks to humans and AI.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+      "title": "The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market (14 October 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Measures of AI usage show no connection to changes in employment or unemployment.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.nber.org/system/files/working_papers/w33777/w33777.pdf",
+      "title": "Anders Humlum (University of Chicago) & Emilie Vestergaard (University of Copenhagen), Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI, NBER Working Paper 33777 (May 2025, revised March 2026; a working paper, not peer-reviewed)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "May 2025, Revised March 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "we estimate precise null effects on earnings and recorded hours at both the worker and workplace levels, ruling out effects larger than 2% two years after the launch of ChatGPT.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "While we replicate the pattern of declining early-career employment in exposed occupations in Denmark, our difference-in-differences analysis reveals that the declines are not driven by firms adopting AI chatbots.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5425555",
+      "title": "Seyed M. Hosseini & Guy Lichtinger (Harvard), Generative AI as Seniority-Biased Technological Change: Evidence from U.S. Résumé and Job Posting Data (SSRN working paper, last revised 6 June 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Last revised: 6 Jun 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "GenAI adoption is identified through text analysis that detects ‘GenAI integrator’ job postings, signaling active GenAI implementation by firms.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Following adoption, junior employment declines in adopting firms relative to non-adopters, while senior employment trends remain largely unchanged.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "is driven primarily by slower hiring rather than increased separations",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://raw.githubusercontent.com/s-mahdihosseini/Website/f767bddd6f25f38ff2439342d0d9dd17b90448c3/GenAI_Senbias_5_25_2026.pdf",
+      "title": "Seyed M. Hosseini & Guy Lichtinger, Generative AI as Seniority-Biased Technological Change (authors' PDF, version of 25 May 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "This Version: May 25, 2026",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "These findings should be interpreted with caution.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://academic.oup.com/qje/article/140/2/889/7990658",
+      "title": "Erik Brynjolfsson, Danielle Li & Lindsey Raymond (Stanford and MIT), Generative AI at Work, The Quarterly Journal of Economics 140(2), 2025",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Less experienced and lower-skilled workers improve both the speed and quality of their output, while the most experienced and highest-skilled workers see small gains in speed and small declines in quality.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.hbs.edu/faculty/Pages/download.aspx?name=dell-acqua-et-al-2026-navigating-the-jagged-technological-frontier.pdf",
+      "title": "Fabrizio Dell’Acqua, Edward McFowland III, Ethan Mollick, Hila Lifshitz, Katherine C. Kellogg, Saran Rajendran, Lisa Krayer, François Candelon & Karim R. Lakhani (Harvard Business School, Wharton, Warwick Business School, MIT and Boston Consulting Group), Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality, Organization Science, published online 11 March 2026 (first a Harvard Business School working paper, 24-013)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "subjects using AI outperformed those not using AI, completing 12.2% more tasks and completing them 25.1% more quickly on average while also delivering solutions of significantly improved quality.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "for a complex managerial task selected to be outside the frontier, subjects using AI were 19% less likely to produce correct solutions compared with those without AI",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://arxiv.org/html/2610.42001v1",
+      "title": "Michelle Vaccaro, Abdullah Almaatouq & Thomas W. Malone, AutoAnalysis: An automated, self-updating meta-analysis of human-AI collaboration (arXiv 2610.42001v1, 30 October 2026; a preprint, not peer-reviewed)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Across this body of work, we found that, on average, human-AI combinations performed significantly better than humans alone, but they performed significantly worse than the better of humans or AI alone.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "a human and a generative AI system worked together",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "replicating the pattern we reported for earlier human-AI systems",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "may change as AutoAnalysis ingests new papers",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://www.pewresearch.org/science/2026/10/29/americans-are-open-to-ai-in-healthcare-but-want-humans-making-final-calls",
+      "title": "Pew Research Center, Americans Are Open to AI in Healthcare, but Want Humans Making Final Calls (29 October 2026; survey of 3,488 US adults, 22–28 June 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "And just 5% are open to AI making these calls on its own, with no human review.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "For this report, we surveyed 3,488 U.S. adults from June 22 to 28, 2026.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "url": "https://www.legislation.gov.uk/ukpga/2025/18/section/80",
+      "title": "Data (Use and Access) Act 2025, section 80: automated decision-making (legislation.gov.uk; in force in full from 5 February 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "a decision is based solely on automated processing if there is no meaningful human involvement in the taking of the decision",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "it has a similarly significant effect for the data subject.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "enable the data subject to obtain human intervention on the part of the controller in relation to such decisions;",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "enable the data subject to contest such decisions.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "in force at 5.2.2026 in so far as not already in force",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-does-the-uk-gdpr-say-about-adm",
+      "title": "Information Commissioner's Office (ICO), What does the UK GDPR say about ADM? (draft guidance, updated 31 March 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "We have updated this draft guidance to reflect changes to the UK GDPR following the Data (Use and Access) Act 2025 (DUAA).",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Using ad hoc spot-checking isn’t sufficient because some automated decisions won’t receive a check and therefore don’t have meaningful human involvement.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month",
+      "title": "Klarna, Klarna AI assistant handles two-thirds of customer service chats in its first month (press release, 27 February 2024)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "New York, NY – February 27, 2024 – Klarna today announced its AI assistant powered by OpenAI.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "It is doing the equivalent work of 700 full-time agents",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://x.com/klarnaseb/status/1876093526280171699",
+      "title": "Sebastian Siemiatkowski (@klarnaseb), post on X, 6 January 2025",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "So to me AI is capable of doing all our jobs, my own included. Because our work is simply reasoning combined with knowledge/experience.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "However, how exactly we will combine those building blocks of reason and knowledge to replicate the work we do today is not yet entirely solved.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://www.bloomberg.com/news/articles/2025-05-08/klarna-turns-from-ai-to-real-person-customer-service",
+      "title": "Charles Daly (Bloomberg), Klarna Slows AI-Driven Job Cuts With Call for Real People (8 May 2025; paywalled, read through its Wayback Machine copy of 20 November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Klarna Group Plc’s chief executive says his pursuit of cost-cutting in customer service, fueled by advancements in artificial intelligence, has gone too far.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "As cost unfortunately seems to have been a too predominant evaluation factor when organizing this, what you end up having is lower quality",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Speaking at the company’s headquarters in Stockholm, co-founder Siemiatkowski said the firm is piloting a new cohort of employees “in an Uber type of setup” where they can log in and work remotely, with a view to eventually replacing “the few thousand human agents” that Klarna currently outsources.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "In a year’s time he expects the natural attrition rate of 20% to continue, taking the workforce down to about 2,500 from the current level of 3,000.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman",
+      "title": "Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Paula Goldman, Salesforce’s Chief Ethical and Humane Use Officer",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "What we need is something better, and that’s what we’re calling “human at the helm.” First, you should be able to set parameters in advance",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Second, the system should escalate something when it requires judgment or goes outside those parameters.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Even judgment is a little blurry.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://practicalai.show/381/transcript",
+      "title": "Gautham Pallapa (Scotiabank) with Chris Benson, Building Human-Centered AI (Practical AI E381 transcript, 19 November 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Principal Director for AI and Innovation at Scotiabank",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "And so having these conversations very openly with my teams and with other teams and telling them, like, we're not here to replace people.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "the first premise is that accountability can't be delegated. I mean, humans can delegate accountability to other humans. But with AI, we should not be delegating accountability.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://ai.engineer/code/2026/talks/steve-yegge",
+      "title": "Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "the more agents I deploy, the more humans I need.",
+          "added": "2026-11-21"
+        }
+      ]
+    }
+  ]
+}
