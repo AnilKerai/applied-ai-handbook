@@ -78,8 +78,7 @@ Anthropic's SDK docs say that when the turn or spend limit is hit, the SDK retur
 Anthropic's SDK docs warn that "Without limits, the loop runs until Claude finishes on its own", which "is fine for well-scoped tasks but can run long on open-ended prompts".[12]
 Agents cost more to run: Anthropic reports that agents typically use about 4× the tokens of a chat, and multi-agent systems about 15× (Anthropic's claim).[13]
 I recommend checking every limit before each model call, and counting the harness's own model calls, such as summaries and AI checks, against the same budget.
-I recommend reporting a hit limit as its own outcome, never as a finished answer.
-I also recommend backing any stop condition that a model judges, such as whether the goal is met, with a hard limit.
+I also recommend reporting a hit limit as its own outcome, never as a finished answer, and backing any stop condition that a model judges, such as whether the goal is met, with a hard limit.
 
 ## Compaction
 

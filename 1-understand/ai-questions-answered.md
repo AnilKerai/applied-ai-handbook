@@ -196,7 +196,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **Why:**
 - Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16] SEP's client prototype stalled partly because the token budget covered only a couple of days' work.[1]
 - A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
-- In my reading, this updates the many-agent designs practitioners showed. Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
+- Newer evidence tempers the many-agent designs practitioners showed: Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
 - Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
 
 **Confidence:** medium. The direction is consistent, but most savings figures are vendors' own.

@@ -94,7 +94,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Decision models as graders.**
 - ZoomInfo's typed decision model (Jev) was confident on about 7 in 10 of the same steps; among those, it caught 74 of the 82 bad steps the LLM judge had accepted. Uncertain cases still go to the LLM (ZoomInfo's figures).[13]
 - Glean says its citation-checking decision model was consistent enough that repeat runs weren't needed: only one run differed across about 30 use cases (Glean's claim).[19]
-- Newer evidence cuts the other way: in SO-Arena the best-performing decision model was only seventh for reliability.[10] A decision-model grader needs the same calibration, including cases where no option is right.
+- Newer evidence cuts the other way: in SO-Arena the best-performing decision model was only seventh for reliability.[10] I'd give a decision-model grader the same calibration, including cases where no option is right.
 
 ## 5. Measurement rigour
 
@@ -127,7 +127,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 
 **Calibrate judges with chance-corrected agreement.**
 - The Judge's Verdict benchmark found that correlation alone is not enough to evaluate a judge, and measured agreement with humans using Cohen's kappa; 27 of 54 judge models reached its top tier.[35]
-- Kappa discounts the agreement a judge would get by chance, such as by always answering pass on a set that is mostly passes.[35] A calibration set labelled entirely pass cannot measure a judge at all.
+- Kappa discounts the agreement a judge would get by chance, such as by always answering pass on a set that is mostly passes.[35] A calibration set labelled entirely pass cannot show whether a judge catches failures: there are none to catch, and kappa comes out at zero or undefined whatever the judge does.
 - Anthropic builds balanced sets, covering cases where a behaviour should happen and cases where it shouldn't.[32]
 - It also recommends giving judges a way out, such as answering Unknown when the evidence is missing, and grading each dimension with a separate judge.[32]
 
@@ -142,7 +142,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 - Grade what the agent produced rather than one fixed sequence of steps, because agents find valid paths the designers didn't anticipate.[32]
 - Start each trial from a clean environment: shared state causes correlated failures, and in one internal eval Claude read git history left by earlier trials.[32]
 - Read the transcripts. Anthropic does not take a score at face value until someone has.[32]
-- In my reading, the mutation check in section 7 and the break-it-on-purpose pitfall in section 9 test the same thing from the other side: an eval that never goes red is not measuring anything.
+- The mutation check in section 7 and the break-it-on-purpose pitfall in section 9 test the same thing from the other side: an eval that never goes red is not measuring anything.
 
 ## 6. Offline and online
 
@@ -179,7 +179,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 - Petrov runs each skill's tasks with and without it, comparing solves, tokens and time; larger models already knew about 70% of skills' general ideas but only 22% of the details.[17]
 - Microsoft scores each skill per model on activation, tokens, speed and pass rate with and without it, and runs its benchmark nightly, rotating through the five models users use most.[5]
 - The browser vendors' Modern Web Guidance skill uses evals to prune content models already know.[29]
-- Published studies agree: an ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] In my reading, both support the practitioners above: keep only lines an eval shows help.
+- An ETH Zurich study found context files did not generally improve task success but raised inference cost by over 20%.[27] A study of skill revisions found added rules helped mainly when they named a command or path the skill had not mentioned.[28] In my reading, both support the practitioners above: keep only lines an eval shows help.
 - Dmitry Buykin (Maersk) mutated sentences in his prose instructions and almost no tests went red, so he now checks that evals notice.[31]
 
 See also [Working with coding agents](working-with-coding-agents.md) and [Building AI features in .NET](dotnet-ai-engineering-guide.md).

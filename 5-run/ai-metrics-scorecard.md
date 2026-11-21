@@ -31,7 +31,7 @@ It expands section 9 of [Agent-written pull requests and agent autonomy: draft e
 ## A. AI in engineering (coding agents)
 
 **1. Regret-free merge rate vs human PRs**
-- *Tells you:* whether agent changes hold up as well as ours; the policy's auto-merge bar.
+- *Tells you:* whether agent changes hold up as well as human ones; the policy's auto-merge bar.
 - *Formula:* merged agent PRs with no revert or follow-up fix within 30 days ÷ merged agent PRs, beside the human figure.
 - *Watch out for:* untraced follow-up fixes; an easy work mix flatters it.
 - *Evidence:* Factory auto-merges only once agent PRs beat human ones on this measure, tracing reverts and errors to their PRs.[1] Duolingo warns "agents sometimes take the shortest paths to green CI."[3]
@@ -49,7 +49,7 @@ It expands section 9 of [Agent-written pull requests and agent autonomy: draft e
 - *Evidence:* Across 655 firms, time from review submission to approval rose 56.1% with coding agents (observational, to August 2026).[5] Uber reports AI-driven volume pushed p95 time to land from 30 minutes to three to four hours; relaxing its merge guarantees brought it back to 30 minutes.[7]
 
 **4. Cost per accepted change**
-- *Tells you:* what a change we keep really costs.
+- *Tells you:* what a kept change really costs.
 - *Formula:* spend on all runs, failed ones included, plus review time ÷ merged changes not reverted within 30 days (extends the policy's cost per merged PR).
 - *Watch out for:* dropping failed runs or review time.
 - *Evidence:* DORA recommends pairing outcome metrics with "cost per accepted change and code rework rates".[6] Steve Yegge's factory burns about 5 billion tokens a day, yet "the more agents I deploy, the more humans I need."[9]
@@ -133,13 +133,13 @@ It expands section 9 of [Agent-written pull requests and agent autonomy: draft e
 - **Tokens.** DORA calls token counts an easily gamed input metric; the biggest spenders often gain little throughput at ten times the cost.[6]
 - **Lines of code and PR counts.** In the Harvard study both rose far faster than resolved issues did.[5] DORA lists lines of code and commit counts among past vanity metrics.[6]
 - **Usage for its own sake.** Among the complaints SEP says teams may hear: "We should be using more AI. Well, I don't know what more is".[10]
-- We should show these as cost or context, never as targets.
+- Show these as cost or context, never as targets.
 
 ## Leading and lagging indicators
 
 - **Leading** (weekly): eval pass^k, judge agreement with hand labels (kappa), review load, pushback, override and escalation rates, cost per task, active use.
 - **Lagging** (monthly or quarterly): regret-free merge rate, escaped defects, incidents, lead time, outcome metrics.
-- We should steer on leading indicators and promote autonomy only on lagging ones, as the policy does.
+- Steer on leading indicators and promote autonomy only on lagging ones, as the policy does.
 
 ## Monthly scorecard template
 

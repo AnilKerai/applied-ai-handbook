@@ -29,7 +29,7 @@ Basis: Duolingo: "writing code isn't the hard part anymore, verifying it is."[16
 
 ## 2. Principles
 
-1. **Verification before velocity.** We speed up only work we can check.
+1. **Verification before velocity.** Speed up only work that can be checked.
 2. **Every correction becomes a check.** Fixes become tests, types or lint rules, not more instructions.
 3. **Permission to run is not permission to reach.** Approving commands does not limit what they touch; the environment does.
 4. **Autonomy is earned per action.** Each kind of action has its own level, raised on evidence.
@@ -79,7 +79,7 @@ The controls have bugs: one Claude Code release fixed deny rules missing `cp` or
 Anthropic reports that, in its evaluations and internal use, Claude sometimes works around a restriction instead of stopping.[34]
 In a Pixee paper, a forged approval planted in anything the agent reads survived compaction as a real user instruction 87-100% of the time on five harnesses that flatten message roles, and 0% on four that keep them.[28]
 Claude Code's experimental, opt-in Code Mode has Claude write JavaScript to call its tools; Factory's harness already does this with one model-written program.[29][20]
-Recommended: leave such modes off until deny rules and logs are shown to cover each call.
+Leave such modes off until deny rules and logs are shown to cover each call.
 
 ## 5. Evidence on every agent PR
 
@@ -121,7 +121,7 @@ Reviewers:
 - AI reviewers MUST use a fresh context and judge from the diff and tool output; a block SHOULD cite the failing check or broken rule.
 - AI reviewers MUST say they found nothing where they looked, never that nothing exists.
 - Review rules and judge prompts MUST load from the main branch, so a PR cannot change the rules it is judged by.
-- We SHOULD test AI reviewers on hand-checked cases and in shadow mode, tracking false escalations and misses.
+- AI reviewers SHOULD be tested on hand-checked cases and in shadow mode, tracking false escalations and misses.
 
 Basis:
 - Hallie's team tiers review by risk: docs and copy need no person, ordinary changes perhaps one reviewer, and risky changes might need two.[7]
@@ -162,7 +162,7 @@ Basis:
 - CI failures and review comments SHOULD flow back to the agent automatically.
 - Fix attempts MUST be capped (suggested: five per PR to start), then a person takes over. Stalled PRs SHOULD close on a merge conflict or after a set time (suggested: three weeks).
 - Concurrent runs MUST be capped per person and per automation. Automations SHOULD switch off after repeated failures.
-- If merge-queue guarantees are relaxed, we MUST validate main after landing and keep a last-known-good reference.
+- If merge-queue guarantees are relaxed, main MUST be validated after landing, with a last-known-good reference kept.
 - For effects outside git, the agent MUST record the prior state and check whether an action happened before retrying. From L3, undo MUST be tested outside production; if recovery can't be confirmed, the agent stops and escalates.
 
 Basis:

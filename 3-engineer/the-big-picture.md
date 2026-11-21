@@ -20,7 +20,7 @@ as_of: "November 2026"
 *Reading time: about 5 minutes · Best for: engineers and architects*
 
 This page draws the engineering around a model as nested layers, from the model at the centre out to the organisation that decides what it may do.
-In my view it is one useful way to divide the work; it is not an industry standard.
+It is not an industry standard, just one way of dividing the work that I find useful.
 It builds on public framings from Birgitta Böckeler, LangChain and Anthropic, cited layer by layer below, and it follows the division used across this section: harness engineering owns one run, loop engineering works across many runs, and eval engineering measures them.
 
 ## The map

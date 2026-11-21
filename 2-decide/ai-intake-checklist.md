@@ -55,7 +55,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** The International Mission Board (Don Barger) wrote its AI charter "before we ever write one line of code". Its never list includes AI posing as a human, AI-only final decisions about people, covert monitoring and counselling.[2]
 - **Red flags:** No list exists. *Something is better than nothing*; Barger's reply: "something can be worse than nothing if you're doing the wrong things".[2]
-- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] A more recent update: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute, so we should keep the list in policy and hard controls, not prompts.[12]
+- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] A more recent update: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute, so keep the list in policy and hard controls, not prompts.[12]
 
 ### 2. Will AI make the result better or the work more efficient?
 
@@ -73,7 +73,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Porter's test is whether the data is "good enough for the task you're doing": accurate, complete and consistent. Stale data will "quietly give you the wrong answers", so ground any LLM in the systems of record at runtime.[1]
 - **Red flags:** The design asks the model to "hold the data, be the system of record".[1] Nobody knows who owns the data or when it was last refreshed.
-- **What a good answer looks like (industry practice):** We should fetch facts live from the system of record, labelled with source and date. In one pre-registered working paper (not peer reviewed), a stale doc misled five models 68–100% of the time, because agents stop checking once any doc looks authoritative.[15]
+- **What a good answer looks like (industry practice):** Fetch facts live from the system of record, labelled with source and date. In one pre-registered working paper (not peer reviewed), a stale doc misled five models 68–100% of the time, because agents stop checking once any doc looks authoritative.[15]
 
 ### 5. Could rules or ordinary code do this step?
 
@@ -103,7 +103,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** "A rule written in a prompt is not deterministically enforced"; a real guardrail is a gate, a check, a human or a limit in code.[1] Cam Soper (Pulumi) found "a rule in an agent's instructions is just a suggestion", and Azure's AI Gateway runs guardrails in hooks outside the agent's reach.[7][8]
 - **Red flags:** Safety rules exist only in the prompt. The agent holds standing credentials, against Yvonne Carlson's call for least privilege and time-bound credentials.[9] Destructive actions run unconfirmed; in Gerald Versluis's (Microsoft) design, "every tool stages an action".[10]
-- **What a good answer looks like (industry practice):** Guardrails fail closed: Claude Code hooks can now be set to block an action when the check itself fails.[22] No agent session gets private data, untrusted input and an outbound channel together (Simon Willison's *lethal trifecta*), and we should assume a blocked agent will seek another route, as Anthropic found Claude doing.[23][24]
+- **What a good answer looks like (industry practice):** Guardrails fail closed: Claude Code hooks can now be set to block an action when the check itself fails.[22] No agent session gets private data, untrusted input and an outbound channel together (Simon Willison's *lethal trifecta*), and a blocked agent should be expected to seek another route, as Anthropic found Claude doing.[23][24]
 
 ### 10. Do we have evals on real cases, built with the users?
 
@@ -121,7 +121,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Lay asks what reversing a deployment would actually cost, and "do they have the capacity to keep running what they deployed?"[2]
 - **Red flags:** One enthusiast built it and nobody has agreed to run it. There is no rollback plan.
-- **What a good answer looks like (industry practice):** We should re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 under a different model.[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode ends on 30 November with no fallback.[29]
+- **What a good answer looks like (industry practice):** Re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 under a different model.[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode ends on 30 November with no fallback.[29]
 
 ## Outcomes
 
@@ -135,7 +135,7 @@ These are recommendations, following [Should this task use AI, and which kind?](
 - **Classic ML or a fine-tuned classifier:** yes to Q6, with stable labels and high volume.
 - **Decision model:** yes to Q6, but the labels change or the volume is modest.
 - **Fixed workflow, with an LLM for the fuzzy step only:** no to Q6, yes to Q7.
-- **Bounded agent:** no to Q6 and Q7. We should keep it inside deterministic orchestration with cost and time limits.
+- **Bounded agent:** no to Q6 and Q7. Keep it inside deterministic orchestration with cost and time limits.
 
 **Execution dial (from Q8)**
 
@@ -146,7 +146,7 @@ Porter's dial decides who acts:[1]
 - **Act with an undo window:** time-sensitive work; a person can veto or undo.
 - **Automate outright:** only what is cheap to undo.
 
-Meta grants autonomy per kind of action, on a track record for that exact action.[5] We should too, and treat any idea failing Q9 to Q12 as a proof of concept, whatever the dial says.
+Meta grants autonomy per kind of action, on a track record for that exact action.[5] Do the same, and treat any idea failing Q9 to Q12 as a proof of concept, whatever the dial says.
 
 ## Related
 

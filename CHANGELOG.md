@@ -11,8 +11,17 @@ Newest first. Every correction lists what changed and the evidence.
   - Where a page stated a judgement as if it were a finding, it is now marked as mine.
   - Templates, checklists, decision trees, the runbook, the PR policy, the scorecard and the talks
     stay neutral, so anyone can adopt or present them.
-  - "We" now means the reader's own team.
-  - No claim, figure, quote or citation changed.
+  - "We" now means the reader's own team. The runbook, PR policy, scorecard and intake checklist
+    now use plain imperatives instead of "we should".
+  - No cited claim, figure, quote or citation changed.
+  - Four lines that overstated were corrected in review:
+    - The maturity model cited AgentRun's own case study for "no independent replication" of
+      its figures; that is now my own statement.
+    - "A calibration set labelled entirely pass cannot measure a judge at all" now says what such a
+      set cannot show: whether a judge catches failures. It can still show false alarms.
+    - "The furthest-ahead teams rebuilt around it" now reads "One team", since only Cognition is
+      cited.
+    - The pattern catalogue's "proven" patterns are now patterns "seen in practice".
 
 ## 2026-11-21: humans at the helm
 

@@ -38,38 +38,38 @@ Tick every item before the first production run, and file the evidence with the 
 
 - **Trace the business journey, not the model call.** Shweta Iyer (Microsoft): "the unit that we want to investigate as an on call engineer is not just one agent invocation".[1] In her demo the agent call succeeded while the business write failed and rolled back.[1]
 - **Put the trace ID on the business record.** Iyer saves it with the business records, returns it with every response and records an explicit final status.[1] Girish Konda (Microsoft) gives every run a named end state, and treats a timeout as unknown.[2]
-- **Use one telemetry standard.** Claude Code now emits OpenTelemetry GenAI attributes and records whether its auto-mode classifier or a permission rule decided each tool call.[3] We should send AI spans to the same store as our other services.
-- **Track cost and tokens per outcome.** Cecil Phillip (Temporal) checkpoints each model and tool call so a crashed run resumes: "The last thing you want to do is to reissue that prompt and use those tokens again."[4] Microsoft's AI Gateway sets token and money budgets per client.[5] We should report cost per successful business outcome, failed runs included.
+- **Use one telemetry standard.** Claude Code now emits OpenTelemetry GenAI attributes and records whether its auto-mode classifier or a permission rule decided each tool call.[3] Send AI spans to the same store as the rest of the telemetry.
+- **Track cost and tokens per outcome.** Cecil Phillip (Temporal) checkpoints each model and tool call so a crashed run resumes: "The last thing you want to do is to reissue that prompt and use those tokens again."[4] Microsoft's AI Gateway sets token and money budgets per client.[5] Report cost per successful business outcome, failed runs included.
 - **Log what the agent did and who decided.** Yvonne Carlson's principles include logging what agents actually access and do.[6] Juergen Gutsch logs every message.[7] Microsoft's SRE Agent shows the queries it ran: "it's good to look at those queries and second guess the agent".[5]
 - **Keep sensitive data out of logs.**
   - Iyer keeps telemetry (where the time went) apart from the business audit (what was committed), protecting each for its purpose.[1]
   - Paul Yuknewicz's (Microsoft) sandboxed tool redacted social security numbers before the model saw them.[8] Gutsch: "the LLM should not know any credentials".[7]
   - *Newer evidence:* one coding agent started logging response text on upgrade wherever prompt logging was on, and a later release fixed telemetry recording a background agent's reply with response logging off.[3] Apiiro found passwords in 1,122 public GitHub files where saved permission rules stored whole commands (its count; the file was meant to stay local).[9]
-  - We should test redaction after every upgrade, and scan logs, traces and agent settings for secrets.
+  - Test redaction after every upgrade, and scan logs, traces and agent settings for secrets.
 
 ## 3. Ongoing quality
 
 - **Score live traffic.** Kevin Solorio (Focused): "an agent without evals is a proof of concept".[10] Once the agent is deployed, his data flywheel adds "online evaluators that are consistently going to look at a sample of traces and kind of score them"; flagged cases go to an annotation queue, and reviewed failures join the offline dataset.[10]
-- **Sample for human annotation.** Solorio has the workers themselves label outputs.[10] We should review a weekly random sample plus every flagged trace, with annotators from the business.
+- **Sample for human annotation.** Solorio has the workers themselves label outputs.[10] Review a weekly random sample plus every flagged trace, with annotators from the business.
 - **Watch the tail.** Heidi Porter (Moyer Group AI): "averages can hide a bad result".[10] Report worst cases beside averages.
 - **Check for drift and stale data.**
   - Porter's observability means "being able to recover and replay and catch drift before an incident"; one production-line system was monitored for 52 weeks.[10]
   - Stale data will "quietly give you the wrong answers".[10] Konda tags each fact with source version and time, and decisions use only facts within a freshness limit.[2]
-  - We should alert when input mix, refusals or tool errors shift, and when a source goes stale.
+  - Alert when input mix, refusals or tool errors shift, and when a source goes stale.
 - **Re-run evals on every model or prompt change.** Armin Ronacher tracks corrections, aborts and 90th-percentile run time across model upgrades.[11] The method, including when to re-run, is in [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md) (sections 6 and 8).
 
 ## 4. Control levers
 
 On-call should be able to pull each lever in minutes, without a deploy, and each should be rehearsed.
 
-- **Kill switch per capability.** Gutsch's agent has a kill switch.[7] Harvey's automations switch off after five consecutive failures and can carry a budget or expiry, "because when no one's watching, an agent can start thousands of tasks too."[12] We should be able to turn off one capability, such as sending email, without taking the feature down.
+- **Kill switch per capability.** Gutsch's agent has a kill switch.[7] Harvey's automations switch off after five consecutive failures and can carry a budget or expiry, "because when no one's watching, an agent can start thousands of tasks too."[12] Make it possible to turn off one capability, such as sending email, without taking the feature down.
 - **Rate and cost caps.**
   - Joey Wang (Harvey) advises capping what an agent or a person can start.[12] One engineer's ~950 tasks stalled everyone within about three hours, which led to a fair launch queue.[12]
   - Gateway budgets change without redeploys: "I'll never redeploy my back ends or my front ends to do it."[5]
   - *Newer evidence:* Simon Willison argues for hard caps that cut a service off, not warning emails, because coding agents make it easy to spin up services that cost money.[13]
-- **Fall back to rules or a person.** The gateway routes model aliases with priority fallback.[5] In Porter's production-line case, "The system withholds the answer and escalates."[10] We should keep the pre-AI path (rules or a manual queue) working and staffed.
+- **Fall back to rules or a person.** The gateway routes model aliases with priority fallback.[5] In Porter's production-line case, "The system withholds the answer and escalates."[10] Keep the pre-AI path (rules or a manual queue) working and staffed.
 - **Make guardrails fail closed.** Matt Soucoup and Paul Yuknewicz (Microsoft) run guardrails in gateway hooks outside the agent's reach.[5] *Newer evidence:* a coding-agent release added an option that makes a hook block the action when it can't start, times out or exits unexpectedly.[14] That sharpens the advice: a check that errors must stop the action.
-- **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident we should drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
+- **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident, drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
 
 ## 5. Incident response for AI
 
@@ -110,10 +110,10 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 - **Model upgrades and swaps are releases.**
   - Porter makes the model the easiest part to replace, then re-evaluates after a swap.[10] *Newer evidence:* HarnessDev found harness gains depend strongly on the model running them; one harness fell from 69.3 to 33.0 under a different model (the paper's numbers).[24] So the model is replaceable in the architecture, but prompts, skills and tools tuned to it may not transfer.
   - Vendors retire modes at short notice: one fast mode was deprecated on 30 October 2026 for removal on 30 November, with no fallback.[25]
-  - We should pin model versions, track retirement dates, and test a new model on the eval set and shadow live traffic before switching.
+  - Pin model versions, track retirement dates, and test a new model on the eval set and shadow live traffic before switching.
 - **Prompts and skills are code.** They live in version control, take Risky-tier review under [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and ship through the normal pipeline.
   - The Sahs warn that "an agent can become more capable while becoming less recoverable."[21] So a prompt, tool or skill change should also pass a recovery check.
-  - Zenity saw skills write reinstall-if-missing prompts into agent instruction files, and abuse hooks.[18] We should alert on both, and pin remote prompts.
+  - Zenity saw skills write reinstall-if-missing prompts into agent instruction files, and abuse hooks.[18] Alert on both, and pin remote prompts.
 - **Dependency and supply-chain hygiene.**
   - Jon Douglas (Microsoft, NuGet): "every package that you restore is code that you choose to trust."[26] He advises a cooldown on new versions, trusted publishing instead of long-lived keys, and checking packages that run install scripts.[26]
   - From .NET 11, NuGet packages can ship skills that agents load, so a package update can change agent behaviour.[26]
@@ -126,18 +126,18 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 - **Agent-assisted on-call ladder.** Meta puts an AI teammate on each rotation, so people on call approve rather than operate.[15]
   - L1 investigates and reports; L2 drafts the fix with root cause and test plan, shipping only with approval; L3 clears low-criticality work alone.[15]
   - It retries stuck runs, pages a person only when it can't fix them, and writes hand-over summaries.[15]
-  - We should start any on-call agent at L1 and promote it per action.
+  - Start any on-call agent at L1 and promote it per action.
 - **Human attention limits.**
   - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge: "the more agents I deploy, the more humans I need."[28]
   - Porter warns of "rubber stamping fatigue".[10] *Newer evidence:* Anthropic reports users accept 93% of permission prompts (vendor figure).[29]
   - Harvey stopped alert storms by joining new alerts to the open investigation.[12]
-  - We should cap review load per person and send digests, not pages, for routine items.
+  - Cap review load per person and send digests, not pages, for routine items.
 
 ## 8. The four verification loops
 
 Andrew Finch (Sonar) says the factory "runs dim, not dark": people stay in it, and safety comes from four loops.[22]
 
-1. **PR checks:** evidence recorded on each change, judged against criteria the team writes down.[22] Ours are in [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
+1. **PR checks:** evidence recorded on each change, judged against criteria the team writes down.[22] A draft set is in [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
 2. **Post-deploy verification:** AI reads logs, traces and metrics, and an automated rollout widens, rolls back or switches off a flag; Finch calls this loop early.[22] Sections 2 to 4 supply it.
 3. **Maintenance:** scheduled whole-codebase scans catch rules and vulnerabilities published after merge, and slow drift no single change shows.[22] Section 6 covers dependencies.
 4. **Knowledge:** docs, decisions and lessons from reviews and outages, curated and fed to the other loops.[22] Section 5's post-incident step feeds it.

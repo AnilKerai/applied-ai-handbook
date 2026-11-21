@@ -59,7 +59,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 ### E4: Dim factory
 
 - **Looks like:** standing workstreams auto-merge (L4) ordinary-tier changes for named actions and areas only; risky-tier work stays at L2 or below, as in the policy. "The owner gets to set the level, but the confidence to raise it comes from watching the work."[4] Humans audit risky code, handle incidents, review architecture and engineer the factory.[2]
-- **Prerequisites:** all six constraints relaxed (my reading; none of SEP's three example teams worked in this mode), plus post-deploy checks and rollback.[1] Finch says post-deploy verification is still early.[2] Justin McCarthy points factories at brownfield products, not uncertain greenfield ideas.[9]
+- **Prerequisites:** all six constraints relaxed, plus post-deploy checks and rollback (my reading). None of SEP's three example teams worked in this mode.[1] Finch says post-deploy verification is still early.[2] Justin McCarthy points factories at brownfield products, not uncertain greenfield ideas.[9]
 - **Exit criteria:** none upward; [the memo](should-we-build-a-software-factory.md) explains why. A traced incident or revert, or a month below the human regret-free baseline, moves an action down at least one rung, as in the policy.
 - **Risks:** no automatic brake. The Claude Code team does not yet have circuit breakers that tighten approval when reverts rise.[18]
 
@@ -132,12 +132,12 @@ A recommendation; swap in each team's own examples.
 - **Independent data tempers throughput expectations.**
   - Ars Technica reported that Fiona Chen and James Stratton's Harvard study of Jellyfish engineering data first covered over 700 firms to March 2026.[17] In that version agents raised lines of code 30% and pull requests 23%, with no significant change in resolved issues, while review time rose 49%.[17]
   - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 44.0% more lines (marginally insignificant), 35.7% more pull requests, a borderline-significant 13.7% rise in resolved issues, and 56.1% longer from review submission to approval.[16]
-  - The study is observational, based on adoption timing.[16] In my reading, the revision softens October's no-change finding, but code still far outruns delivered work, and both versions back SEP and Finch on review as the limit; we should treat SEP's six-fold and vendor figures as best cases, not plans.
+  - The study is observational, based on adoption timing.[16] In my reading, the revision softens October's no-change finding, but code still far outruns delivered work, and both versions back SEP and Finch on review as the limit. So we should treat SEP's six-fold and vendor figures as best cases, not plans.
 - **Risk-tiered review is documented practice.** The Claude Code team sets human approvals with a risk classifier, and reports merged PRs more than doubling over June–September as the revert share fell over 40% (vendor figures).[18]
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
 - **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and *none of these* cases.
-- **Learn-then-hand-off updates Porter's per-task choice.** In my reading, for repeated jobs the mechanism can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own, and no independent replication was found.[15]
+- **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).
 
