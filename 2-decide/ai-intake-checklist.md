@@ -125,7 +125,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 ## Outcomes
 
-These are our recommendations, following [Should this task use AI, and which kind?](should-this-task-use-ai.md), not findings from our sources.
+These are recommendations, following [Should this task use AI, and which kind?](should-this-task-use-ai.md), not findings from the sources.
 
 **Recommendation**
 

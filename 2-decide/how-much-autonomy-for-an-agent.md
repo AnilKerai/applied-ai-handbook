@@ -106,8 +106,8 @@ flowchart TD
   ([Software Factories: Escape from Trash Mountain](https://ai.engineer/code/2026/talks/steve-yegge)). AI "amplifies what's already there", and more
   AI won't fix a way of working that doesn't fit, so fix the fit before adding autonomy (SEP).
 - **Keep people at the helm.** For agent actions that aren't decisions about people, once their
-  results can be checked automatically, we recommend setting the limits in advance, having the agent
-  escalate judgement calls and anything outside those limits, and having people review the exceptions
+  results can be checked automatically, set the limits in advance, have the agent escalate
+  judgement calls and anything outside those limits, and have people review the exceptions
   rather than every step. Paula Goldman of Salesforce describes a similar practice (a vendor
   executive's view): with an agent doing complex work,
   "It’s practically impossible for a human to look through all of it", and people should look instead
@@ -122,8 +122,8 @@ flowchart TD
   consent.[2] The ICO's draft guidance (March 2026) gives credit applications, recruitment and benefits
   as examples of such decisions, and says that, for human involvement to count as meaningful, the
   person involved should review each decision, the review must come before the decision takes effect,
-  and spot-checks aren't enough.[3] For those decisions, we recommend either having a person genuinely
-  review every one, or treating the process as automated decision-making and meeting those legal
+  and spot-checks aren't enough.[3] For those decisions, either have a person genuinely review
+  every one, or treat the process as automated decision-making and meet those legal
   requirements.
 
 ## Related

@@ -17,15 +17,15 @@ as_of: "November 2026"
 > - Limit what AI agents (AI that takes actions) can reach, and require approval for anything that can't be undone.
 > - A named person is always accountable: AI can do the work, but people own the result.
 
-*Reading time: about 15 minutes · Best for: everyone*
+*Reading time: about 20 minutes · Best for: everyone*
 
-Short answers to the questions an in-house AI adviser hears most. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. Each short answer is our recommendation; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
+Short answers to the questions an in-house AI adviser hears most. They draw on practitioners' accounts and on industry developments, mostly from October and November 2026. Each short answer is my recommendation and each confidence level my assessment; the *Why* bullets are what the sources said. Figures a company reports about its own work are marked as its claim.
 
 ## For everyone at work
 
 ### Q: Will AI replace my job?
 
-**Short answer:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. We recommend letting AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
+**Short answer:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. I recommend letting AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
 
 **Why:**
 - A Stanford study of payroll data on millions of US workers, revised in August 2026 with data to June 2026, found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67] A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment".[68] Its analysis of exposure to AI also "does not yet clearly indicate an AI-related labor market footprint".[68]
@@ -196,7 +196,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **Why:**
 - Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16] SEP's client prototype stalled partly because the token budget covered only a couple of days' work.[1]
 - A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
-- This updates the many-agent designs practitioners showed. Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
+- In my reading, this updates the many-agent designs practitioners showed. Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim),[9] and one study found agent teams scored higher but cost 3-7 times a single agent.[18]
 - Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
 
 **Confidence:** medium. The direction is consistent, but most savings figures are vendors' own.

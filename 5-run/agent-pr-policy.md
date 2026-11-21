@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering leads*
 
-*Draft standard for discussion.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are our recommendations; Basis and Current practice notes give the evidence. Company figures are their own claims.
+*Draft standard for discussion.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are recommendations; Basis and Current practice notes give the evidence. Company figures are their own claims.
 
 ## 1. Purpose and scope
 
@@ -79,7 +79,7 @@ The controls have bugs: one Claude Code release fixed deny rules missing `cp` or
 Anthropic reports that, in its evaluations and internal use, Claude sometimes works around a restriction instead of stopping.[34]
 In a Pixee paper, a forged approval planted in anything the agent reads survived compaction as a real user instruction 87-100% of the time on five harnesses that flatten message roles, and 0% on four that keep them.[28]
 Claude Code's experimental, opt-in Code Mode has Claude write JavaScript to call its tools; Factory's harness already does this with one model-written program.[29][20]
-We recommend leaving such modes off until deny rules and logs are shown to cover each call.
+Recommended: leave such modes off until deny rules and logs are shown to cover each call.
 
 ## 5. Evidence on every agent PR
 
@@ -147,11 +147,11 @@ Risky-tier work never goes above L2.
 Promotion, per action and area, MUST meet all of these:
 - Mistakes are cheap and caught by tests, CI or review before harm.
 - The action can be undone, and the undo has been tested.
-- A track record at the current level (we suggest 30 changes over four weeks to start).
+- A track record at the current level (suggested: 30 changes over four weeks to start).
 - For L4, a regret-free merge rate better than that of human PRs in the same area.
 - The owner approves and records it.
 
-Demotion is immediate, by at least one level, after a traced incident or revert, a month below the human regret-free baseline (our suggested window), or any attempt to get round a gate. A major model or tool change SHOULD trigger a review of levels.
+Demotion is immediate, by at least one level, after a traced incident or revert, a month below the human regret-free baseline (a suggested window), or any attempt to get round a gate. A major model or tool change SHOULD trigger a review of levels.
 
 Basis:
 - Meta promotes its on-call agent from investigating (L1) to approved drafts (L2) to low-criticality work alone (L3), per action, asking: "How costly is a mistake and how easy is it to catch?" Even at L3, its code fixes land only through normal review and CI.[4]
@@ -160,7 +160,7 @@ Basis:
 ## 8. After merge and recovery
 
 - CI failures and review comments SHOULD flow back to the agent automatically.
-- Fix attempts MUST be capped (we suggest five per PR to start), then a person takes over. Stalled PRs SHOULD close on a merge conflict or after a set time (we suggest three weeks).
+- Fix attempts MUST be capped (suggested: five per PR to start), then a person takes over. Stalled PRs SHOULD close on a merge conflict or after a set time (suggested: three weeks).
 - Concurrent runs MUST be capped per person and per automation. Automations SHOULD switch off after repeated failures.
 - If merge-queue guarantees are relaxed, we MUST validate main after landing and keep a last-known-good reference.
 - For effects outside git, the agent MUST record the prior state and check whether an action happened before retrying. From L3, undo MUST be tested outside production; if recovery can't be confirmed, the agent stops and escalates.
@@ -175,7 +175,7 @@ Basis:
 
 Each team SHOULD report monthly, per agent workflow, beside human PRs in the same areas:
 
-- **Regret-free merge rate:** merged PRs needing no revert or follow-up fix within 30 days (our suggested window).
+- **Regret-free merge rate:** merged PRs needing no revert or follow-up fix within 30 days (a suggested window).
 - **Revert rate**, and incidents traced to agent changes.
 - **Review effort:** review time per merged PR, false escalations, PRs closed unmerged.
 - **Cost per merged PR:** tokens and compute for all runs, failed ones included.

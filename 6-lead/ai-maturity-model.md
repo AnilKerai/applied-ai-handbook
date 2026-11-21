@@ -19,18 +19,18 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: leaders planning adoption*
 
-Two ladders, for AI in engineering (coding agents) and AI in the business (features and operations), plus a roadmap template. It builds on [Should we aim for a fully automated software factory?](should-we-build-a-software-factory.md) and [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md) without repeating their arguments. Stages and risks are cited; exit criteria, questions and the roadmap are our advice.
+Two ladders, for AI in engineering (coding agents) and AI in the business (features and operations), plus a roadmap template. It builds on [Should we aim for a fully automated software factory?](should-we-build-a-software-factory.md) and [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md) without repeating their arguments. Stages and risks are cited; exit criteria, questions and the roadmap are my advice.
 
 ## 1. How to use it
 
 - **Assess per team or per workflow, never company-wide.** For SEP, a team's constraints decide its mode: "The mode is your fit."[1]
-- **Aim for fit, not the top stage.** SEP, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] A team that stops at E2 on purpose is mature, not behind.
+- **Aim for fit, not the top stage.** SEP, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] In my view, a team that stops at E2 on purpose is mature, not behind.
 - **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
 - **Promote on exit criteria, demote when they lapse,** and re-assess quarterly.
 
 ## 2. Engineering track: coding agents
 
-The stages follow SEP's four modes, which run along a scale of agent autonomy from individual, human-in-the-loop work to a *dark factory*; SEP names the individual and shared modes and the dark factory, and stresses that the goal is fit, not the last mode.[1] The E2 and E3 names, the prerequisites and exit criteria, the autonomy levels, and naming the last stage after Andrew Finch's line that the factory "runs dim, not dark", are our additions.[2]
+The stages follow SEP's four modes, which run along a scale of agent autonomy from individual, human-in-the-loop work to a *dark factory*; SEP names the individual and shared modes and the dark factory, and stresses that the goal is fit, not the last mode.[1] The E2 and E3 names, the prerequisites and exit criteria, the autonomy levels, and the last stage's name are my additions. That stage is named after Andrew Finch's line that the factory "runs dim, not dark".[2]
 
 ### E1: Individual
 
@@ -59,7 +59,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 ### E4: Dim factory
 
 - **Looks like:** standing workstreams auto-merge (L4) ordinary-tier changes for named actions and areas only; risky-tier work stays at L2 or below, as in the policy. "The owner gets to set the level, but the confidence to raise it comes from watching the work."[4] Humans audit risky code, handle incidents, review architecture and engineer the factory.[2]
-- **Prerequisites:** all six constraints relaxed (our reading; none of SEP's three example teams worked in this mode), plus post-deploy checks and rollback.[1] Finch says post-deploy verification is still early.[2] Justin McCarthy points factories at brownfield products, not uncertain greenfield ideas.[9]
+- **Prerequisites:** all six constraints relaxed (my reading; none of SEP's three example teams worked in this mode), plus post-deploy checks and rollback.[1] Finch says post-deploy verification is still early.[2] Justin McCarthy points factories at brownfield products, not uncertain greenfield ideas.[9]
 - **Exit criteria:** none upward; [the memo](should-we-build-a-software-factory.md) explains why. A traced incident or revert, or a month below the human regret-free baseline, moves an action down at least one rung, as in the policy.
 - **Risks:** no automatic brake. The Claude Code team does not yet have circuit breakers that tighten approval when reverts rise.[18]
 
@@ -132,12 +132,12 @@ A recommendation; swap in each team's own examples.
 - **Independent data tempers throughput expectations.**
   - Ars Technica reported that Fiona Chen and James Stratton's Harvard study of Jellyfish engineering data first covered over 700 firms to March 2026.[17] In that version agents raised lines of code 30% and pull requests 23%, with no significant change in resolved issues, while review time rose 49%.[17]
   - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 44.0% more lines (marginally insignificant), 35.7% more pull requests, a borderline-significant 13.7% rise in resolved issues, and 56.1% longer from review submission to approval.[16]
-  - The study is observational, based on adoption timing.[16] The revision softens October's no-change finding, but code still far outruns delivered work. Both back SEP and Finch on review as the limit; we should treat SEP's six-fold and vendor figures as best cases, not plans.
+  - The study is observational, based on adoption timing.[16] The revision softens October's no-change finding, but code still far outruns delivered work. In my reading, both back SEP and Finch on review as the limit; we should treat SEP's six-fold and vendor figures as best cases, not plans.
 - **Risk-tiered review is documented practice.** The Claude Code team sets human approvals with a risk classifier, and reports merged PRs more than doubling over June–September as the revert share fell over 40% (vendor figures).[18]
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
-- **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] That qualifies the vendor results above; at B5 we should test hand-backs and *none of these* cases.
-- **Learn-then-hand-off updates Porter's per-task choice.** For repeated jobs the mechanism can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own, and we found no independent replication.[15]
+- **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and *none of these* cases.
+- **Learn-then-hand-off updates Porter's per-task choice.** In my reading, for repeated jobs the mechanism can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own, and no independent replication was found.[15]
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).
 

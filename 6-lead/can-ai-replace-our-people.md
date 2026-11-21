@@ -23,7 +23,7 @@ Some chief executives say AI can already do people's jobs, or expect it to shrin
 
 ## Short answer
 
-A US study finds no evidence yet of economy-wide job displacement, though employment of young workers in AI-exposed jobs lags that of less-exposed peers, a pattern its authors call descriptive, not causal.[3] Two rulings held an airline responsible for its chatbot's answers and lawyers for checking AI research.[4][5] We recommend a [human at the helm](../1-understand/ai-glossary.md): AI takes over tasks; people set its limits, make judgement calls and own every outcome.
+A US study finds no evidence yet of economy-wide job displacement, though employment of young workers in AI-exposed jobs lags that of less-exposed peers, a pattern its authors call descriptive, not causal.[3] Two rulings held an airline responsible for its chatbot's answers and lawyers for checking AI research.[4][5] I recommend a [human at the helm](../1-understand/ai-glossary.md): AI takes over tasks; people set its limits, make judgement calls and own every outcome.
 
 ## Recommendation
 
@@ -35,9 +35,9 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 
 ## Options considered
 
-- **Replace roles where AI matches people.** Fastest savings, but risks ownerless outcomes and a thinner junior pipeline.
+- **Replace roles where AI matches people.** Fastest savings, but in my view it risks ownerless outcomes and a thinner junior pipeline.
 - **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] Significant decisions about people are the exception.
-- **A human at the helm (recommended).** Needs up-front work on limits and roles.
+- **A human at the helm (my recommendation).** Needs up-front work on limits and roles.
 
 ## What the evidence says
 
@@ -51,7 +51,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
   One, on Denmark, rules out chatbot effects on earnings or hours above 2% two years after ChatGPT's launch, and finds early-career job declines "are not driven by firms adopting AI chatbots".[8]
   The other, on US résumé data, finds junior employment falling at firms adopting generative AI, relative to others, mainly through slower hiring, "while senior employment trends remain largely unchanged".[9]
   Its authors say this "should be interpreted with caution".[10]
-  Our reasoning: firms that stop hiring juniors may later lack experienced people to own AI's work, a risk to manage.
+  My reasoning: firms that stop hiring juniors may later lack experienced people to own AI's work, a risk to manage.
 - **Rulings on responsibility.**
   British Columbia's Civil Resolution Tribunal said Air Canada is "responsible for all the information on its website", including its chatbot's.[4]
   The High Court of England and Wales said lawyers using or relying on AI legal research must check it.[5]
@@ -63,8 +63,8 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
   Combinations lost out in decision tasks and where the AI was better, and gained where the human was.[6]
   The authors' 2026 preprint finds the same overall pattern with generative AI (not peer-reviewed).[13]
   They do not think this makes combining "a bad idea", and suggest giving AI only the parts it is clearly better at, which only 3 experiments tested, inconclusively.[6]
-  Our reasoning: they measured task performance, not accountability, so people at the helm should own outcomes, not second-guess AI that is better, where the law allows.
-- **Trust: attitudes, not outcomes.** In a Pew survey of Americans, "just 5% are open to AI making these calls on its own, with no human review" for health insurance claims.[14] That shows preference, not better decisions (our reading).
+  My reasoning: they measured task performance, not accountability, so people at the helm should own outcomes, not second-guess AI that is better, where the law allows.
+- **Trust: attitudes, not outcomes.** In a Pew survey of Americans, "just 5% are open to AI making these calls on its own, with no human review" for health insurance claims.[14] That shows preference, not better decisions (my reading).
 - **UK decisions about people.** Under section 80 of the Data (Use and Access) Act 2025, a significant decision with "no meaningful human involvement" counts as solely automated, and the person can "obtain human intervention".[15] The ICO's draft guidance (March 2026) says spot-checks don't make involvement meaningful.[16]
 
 ### Company and practitioner voices

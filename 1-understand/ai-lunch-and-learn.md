@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 20 minutes · Best for: sharing with a team*
 
-A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for 30-45 minutes (about two minutes a slide, plus questions). This outline holds the slide text, the speaker notes and the sources; the deck itself is `ai-lunch-and-learn.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company figures are the companies' own claims, and the suggestions on slide 15 are advice, not findings from our sources.
+A lunch-and-learn for colleagues across engineering and the business: 16 slides, 16:9, for 30-45 minutes (about two minutes a slide, plus questions). This outline holds the slide text, the speaker notes and the sources; the deck itself is `ai-lunch-and-learn.pptx` in this folder. Numbers in square brackets point to the Sources list at the end. Company figures are the companies' own claims, and the suggestions on slide 15 are advice, not findings from the sources.
 
 ---
 
@@ -36,10 +36,10 @@ A lunch-and-learn for colleagues across engineering and the business: 16 slides,
 
 This deck pulls together practical lessons about putting AI to work, for engineers and non-engineers alike.
 One set of sources is ten practitioner talks for people who build, scale or govern AI systems.[1][2]
-We have transcripts for six of them; the other four we know only from their published abstracts.
+Six of them have transcripts; the other four are known only from their published abstracts.
 A second set, for AI engineers, covers themes including fighting slop in software factories and building with System One (fast decision) models.[3]
 A third set covers Microsoft's .NET 11 AI stack as presented in November 2026, starting from what's new in .NET 11.[4]
-We also checked these practitioner reports against industry research and vendor announcements, and where the two disagree the slides say so.
+These practitioner reports were also checked against industry research and vendor announcements, and where the two disagree the slides say so.
 
 ---
 
@@ -333,7 +333,7 @@ The study is observational, and its data ends in August 2026.[37]
 
 **Speaker notes**
 
-This is a simplified version of the decision tree in our toolkit; run it per task or workflow step, not per project, as Heidi Porter advised.[5]
+This is a simplified version of the decision tree in the handbook; run it per task or workflow step, not per project, as Heidi Porter advised.[5]
 Go down the questions until one sends you out.
 The never list comes from IMB's charter, and the better-or-more-efficient test from Mark Lay: if AI gives neither, don't use it.[6]
 Data has to be good enough for this task, because stale data quietly gives wrong answers.[5]
@@ -357,7 +357,7 @@ Whatever comes out, set who acts by the cost of a mistake, and don't ship withou
 
 **Speaker notes**
 
-These are suggestions for us, not findings from our sources, so they carry no citations.
+These are suggestions for us, not findings from the sources, so they carry no citations.
 We could start small: pick one workflow step someone has already proposed and walk it through the intake checklist together, in about fifteen minutes.
 In parallel, a few of us could draft a one-page charter, saying what we will use AI for and what we never will, so later decisions are quick.
 For any AI feature already in flight, we should agree who owns its eval set and sit with the people who do the job to build it from real cases.
@@ -378,7 +378,7 @@ Finally, we should measure review time and reverts now, so any decision to give 
 - Case-study transcripts: Practical AI podcast, episodes 378 and 379 [5][6]
 - Talk pages and agenda: ai.engineer/code · dotnetconf.com/agenda [3][4]
 - Industry: Chen & Stratton (Harvard, 2026) · DORA 2025 · Anthropic on code review [37][36][38]
-- Our toolkit: intake checklist, decision trees, agent PR policy, evals playbook
+- The handbook: intake checklist, decision trees, agent PR policy, evals playbook
 
 **Speaker notes**
 
@@ -387,7 +387,7 @@ Six of the case-study talks come from the Practical AI podcast's official transc
 The AI-engineering talks each have their own page under ai.engineer/code, and Microsoft's .NET 11 talks are listed on the agenda at dotnetconf.com.[3][4]
 For the independent view, start with the Harvard study and DORA's 2025 report.[37][36]
 Anthropic's write-up on how its Claude Code team reviews code describes a full review pipeline, though its numbers are its own.[38]
-Our toolkit has the longer versions: the intake checklist, the two decision trees, the agent PR policy and the evals playbook.
+The handbook has the longer versions: the intake checklist, the two decision trees, the agent PR policy and the evals playbook.
 
 ---
 

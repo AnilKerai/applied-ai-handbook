@@ -39,7 +39,7 @@ Start with narrow, repeated steps inside work people already do, where AI makes 
 
 - **A general chatbot or assistant first.** Visible and quick to demo, but broad, hard to evaluate and risky for trust; a poorly bounded tool can do more harm than none.[2]
 - **End-to-end autonomous agents for whole processes.** The largest prize on paper, but pilots stall when the LLM is asked to hold the data, act as the system of record, make the decision and check its own work.[1]
-- **Narrow, checkable steps inside existing workflows (recommended).** Less headline value at first, but measurable, low-risk and quick to adopt, and it builds the data, evals and trust larger uses need.
+- **Narrow, checkable steps inside existing workflows (my recommendation).** Less headline value at first, but measurable, low-risk and quick to adopt, and it builds the data, evals and trust larger uses need.
 
 ## What the evidence says
 
@@ -53,9 +53,9 @@ Start with narrow, repeated steps inside work people already do, where AI makes 
 
 ### Newer evidence
 
-- **Decision models are entering production, checked on live traffic.** Amazon engineers replaced Sonnet 4.6 for labelling internal tickets with Strands Decider, Amazon's own decision model, which they say performed as well at 98% less cost. They ran both on real traffic, judged every disagreement, and could switch back with a 45-second configuration change.[8] This supports Goyal and UiPath and shows how to cut over safely.
-- **Accuracy is not reliability.** The SO-Arena benchmark tested 21 models across 11 domains and found the best-performing decision model ranked only seventh for reliability, meaning answers that hold when the options change and that say when none fits.[9] This qualifies the vendor results above, including Glean's: a valid answer can still be wrong, so we should test with reshuffled options and a *none of these* case.
-- **Learn on the expensive model, then hand off.** AgentRun had Opus classify merchants, told the right answer each time, until it wrote its path down as a workflow; a cheap model now runs it, and a judge sends answers whose quoted evidence isn't on a page the agent read back to Opus. It reports cost per merchant falling from $0.89 to about $0.12, with 96% correct against 93% for Opus alone (its own claims).[10] This updates Porter's per-task choice: for repeated jobs the mechanism can start expensive and get cheaper, as long as a check controls the hand-back.
+- **Decision models are entering production, checked on live traffic.** Amazon engineers replaced Sonnet 4.6 for labelling internal tickets with Strands Decider, Amazon's own decision model, which they say performed as well at 98% less cost. They ran both on real traffic, judged every disagreement, and could switch back with a 45-second configuration change.[8] In my reading, this supports Goyal and UiPath and shows how to cut over safely.
+- **Accuracy is not reliability.** The SO-Arena benchmark tested 21 models across 11 domains and found the best-performing decision model ranked only seventh for reliability, meaning answers that hold when the options change and that say when none fits.[9] In my reading, this qualifies the vendor results above, including Glean's: a valid answer can still be wrong, so we should test with reshuffled options and a *none of these* case.
+- **Learn on the expensive model, then hand off.** AgentRun had Opus classify merchants, told the right answer each time, until it wrote its path down as a workflow; a cheap model now runs it, and a judge sends answers whose quoted evidence isn't on a page the agent read back to Opus. It reports cost per merchant falling from $0.89 to about $0.12, with 96% correct against 93% for Opus alone (its own claims).[10] In my reading, this updates Porter's per-task choice: for repeated jobs the mechanism can start expensive and get cheaper, as long as a check controls the hand-back.
 
 ## Risks and what would change this advice
 

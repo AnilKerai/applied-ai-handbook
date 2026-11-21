@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: project teams before kick-off or launch*
 
-Use this checklist to run a pre-mortem on an AI project. Each failure mode is a way AI projects went wrong, or nearly did, in practitioners' accounts or in industry developments from October–November 2026. Company figures are their own claims; warning signs and prevention steps are our advice.
+Use this checklist to run a pre-mortem on an AI project. Each failure mode is a way AI projects went wrong, or nearly did, in practitioners' accounts or in industry developments from October–November 2026. Company figures are their own claims; warning signs and prevention steps are advice.
 
 ## How to run the pre-mortem
 

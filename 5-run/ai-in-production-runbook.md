@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering and operations*
 
-*Draft runbook* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md). Steps are our recommendations; cited lines are the evidence. Company figures are the companies' own claims.
+*Draft runbook* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md). Steps are recommendations; cited lines are the evidence. Company figures are the companies' own claims.
 
 ## 1. Go-live readiness check
 
@@ -144,7 +144,7 @@ Andrew Finch (Sonar) says the factory "runs dim, not dark": people stay in it, a
 
 ## 9. Review cadence
 
-*Our recommendation, uncited.*
+*A recommendation, uncited.*
 
 - **Every shift:** on-call digest, open incidents, spend against caps.
 - **Weekly:** annotation queue, new eval cases, alert noise.

@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: everyone*
 
-Plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions, each with a practitioner or industry source that uses it. *Why it matters* lines are our advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
+Plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions, each with a practitioner or industry source that uses it. *Why it matters* lines are my advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
 
 ## A
 
@@ -117,7 +117,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Human at the helm**
 - As used here: a way of working with AI in which people set its limits in advance and the system passes them anything that needs judgement or goes beyond those limits. For an agent doing many steps, the aim is that people review the exceptions rather than approve every step, and that the AI extends their judgement. Paula Goldman of Salesforce gives one definition in three parts (a vendor executive's view): people "should be able to set parameters in advance"; "the system should escalate something when it requires judgment or goes outside those parameters"; and it should be "extending your agency, creativity and judgment".[42] The phrase is older than this definition: Cosmos magazine quoted Cécile Paris of CSIRO in January 2022 saying "I want the human at the helm",[43] and Holly Prouty used it in a Salesforce research blog in December 2023.[44]
-- *Why it matters:* we recommend it as the way to work with AI: let AI take over tasks, keep the accountability, judgement and trust with people, and name the person who owns each outcome. It is not a reason to check less. Check what an AI tool gives you; until an agent's work can be checked automatically, a person checks each result; and for significant decisions about a person, we recommend a genuine review of each one or meeting the legal requirements for automated decisions (see [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)). Mark Lay (Noblis) argues that "accountability can't be delegated" to AI.[1] See [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
+- *Why it matters:* I recommend it as the way to work with AI: let AI take over tasks, keep the accountability, judgement and trust with people, and name the person who owns each outcome. It is not a reason to check less. Check what an AI tool gives you; until an agent's work can be checked automatically, a person checks each result; and for significant decisions about a person, I recommend a genuine review of each one or meeting the legal requirements for automated decisions (see [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)). Mark Lay (Noblis) argues that "accountability can't be delegated" to AI.[1] See [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
 
 **Human in the loop**
 - A design in which a person checks or approves the AI's work before it takes effect.[8]
