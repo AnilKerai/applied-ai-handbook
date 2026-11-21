@@ -494,6 +494,10 @@
         {
           "text": "Since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months in the Epoch Capabilities Index (ECI), our aggregate measure of model capability.",
           "added": "2026-11-21"
+        },
+        {
+          "text": "ECI is a composite measure that captures performance across many benchmarks.",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -513,6 +517,10 @@
         },
         {
           "text": "When performance variance is taken into consideration, the number of required labels increases on average by 100 - 200%.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "use a small number of labelled samples to tune a specialised smaller model",
           "added": "2026-11-21"
         }
       ]
@@ -538,6 +546,14 @@
         {
           "text": "The gap is widest on HLE-Diamond and Terminal-Bench-Science",
           "added": "2026-11-21"
+        },
+        {
+          "text": "Claude Opus 5.5 (max) leads at 58",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The best, Kimi K3.1 Pro (weights not yet released), scores 46, 12 points behind the leader, compared with a 3-point gap in v4.3.",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -549,6 +565,10 @@
       "quotes": [
         {
           "text": "While self-hosting may reduce usage costs at scale, organisations should assess the total cost of ownership associated with securely operating the model, including infrastructure, energy consumption, cyber security controls, monitoring, maintenance and access to appropriately skilled personnel.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Self-hosting open-weight models enables greater customisation and control, supporting research, innovation and operational resilience.",
           "added": "2026-11-21"
         }
       ]
@@ -626,6 +646,10 @@
         {
           "text": "METR is a non-profit (funded by donations)",
           "added": "2026-11-21"
+        },
+        {
+          "text": "we feel it’s important to forestall potential misunderstandings or over-generalizations of our results",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -677,6 +701,14 @@
         },
         {
           "text": "we believe it is likely a bad proxy for the real productivity impact of AI tools on these developers",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Based on conversations with study participants, we believe it is likely that developers are more sped up from AI tools now",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The primary reason is that we have observed a significant increase in developers choosing not to participate in the study because they do not wish to work without AI",
           "added": "2026-11-21"
         }
       ]

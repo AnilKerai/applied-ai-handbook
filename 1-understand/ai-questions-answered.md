@@ -64,7 +64,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** Build it with the people who will use it, inside the tools they already use. Make a good shared tool the easy default, rather than ordering people to use it.
 
 **Why:**
-- Kevin Solorio (Focused) builds *with* frontline workers, not *for* them through proxies, and finds that people who helped build a tool become its champions.[1]
+- Kevin Solorio (Focused) builds *with* frontline workers, not *for* them through proxies (go-betweens such as a product owner), and finds that people who helped build a tool become its champions.[1]
 - AeroCore's data agent took off once it moved into Microsoft Teams: "No one likes an extra login."[2]
 - Ramp says it never had to mandate use of its shared coding agent,[5] and Jason Beutler (Robosource) called team buy-in the hardest part of any AI project (abstract only).[6]
 
@@ -89,7 +89,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **Why:**
 - A Stanford study of US payroll data, revised in August 2026, finds that employment has "declined substantially for early-career workers in the occupations most exposed to AI, including but not limited to software development and customer support".[70]
   Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
-- A study of 655 firms (revised November 2026; data to August 2026) found no detectable effect on employment, though its model projects long-run declines.[11]
+- A study of coding agents in 655 firms (revised November 2026; data to August 2026) found no detectable effect on employment, though its model projects long-run declines.[11]
 - Meta says about three quarters of its new code is now written with AI, yet its on-call work (responding to problems in live systems) did not get faster.[10]
 - Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests (accepted code changes) up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
 - **For software teams:** in the 655-firm study, coding agents raised pull requests opened by 35.7% but resolved issues by only 13.7% (borderline significant).[11]
@@ -102,33 +102,30 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** Decide what *better* means before you start: for example, time saved, fewer mistakes or better results for customers. Then check it on real work, with what each task costs alongside. Judge the outcome, not how much AI was used or how much it produced. Don't trust the feeling that it's faster: measure it.
 
 **Why:**
-- METR, a non-profit, ran one randomised trial of experienced open-source developers in early 2025: 16 of them, from large projects they had contributed to for years.[76]
-  They brought 246 real tasks, such as bug fixes and new features, averaging two hours each, and each task was randomly assigned to allow or disallow AI.[76]
+- METR, a non-profit that studies AI, ran one randomised trial in early 2025 with 16 experienced open-source developers.[76]
+  They worked on 246 real tasks in large projects they had contributed to for years, and each task was randomly assigned to allow or disallow AI.[76]
   METR found that "When developers are allowed to use AI tools, they take 19% longer to complete issues".[76]
   Yet "developers expected AI to speed them up by 24%, and even after experiencing the slowdown, they still believed AI had sped them up by 20%."[76]
-- METR sets out the limits itself: "We do not claim that our developers or repositories represent a majority or plurality of software development work", and "We only study software development".[76]
-  Its page on the trial now says: "These results are out of date."[76]
-  In a follow-up begun in August 2025, with 57 developers, 143 repositories and more than 800 tasks, METR's raw results "show some evidence for speedup".[77]
-  But METR calls that data "an unreliable signal".[77]
-  More developers declined to take part because they did not want to work without AI.[77]
-  And 30% to 50% of those surveyed said they held back some tasks for the same reason.[77]
-  A lower pay rate also affected who took part, and its timings are unreliable for developers who run several AI agents at once.[77]
-  METR believes developers are likely "more sped up from AI tools now" than its early-2025 estimates, but calls its data "only very weak evidence for the size of this increase".[77]
-  It adds that developers' own estimates of their speed-up "can be quite unreliable", as its earlier study showed.[77]
+- METR warns against reading too much into this: "We only study software development", and it doesn't claim its developers represent most software work.[76]
+  It has since marked these results as out of date.[76]
+  In February 2026, METR said that, from talking to participants, developers are likely "more sped up from AI tools now" than in its trial.[77]
+  But it called its newer data "only very weak evidence for the size of this increase".[77]
+  That is mainly because more developers who didn't want to work without AI stayed out of its follow-up study.[77]
+  It adds that developers' own estimates of their speed-up "can be quite unreliable".[77]
 - Kevin Solorio: "an agent without evals is a proof of concept". Heidi Porter warns that "averages can hide a bad result".[1]
 - The 655-firm study shows output rising far faster than completed work.[11]
 - **For software teams:** I'd track failure rates on real cases and cost per task, not lines of code, pull-request counts or tokens: those are not measures of success.
   DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14]
   Factory tracks a *regret-free merge rate*, the share of changes that never need a revert or follow-up fix,[15] and Philipp Schmid (Google DeepMind) tells teams to report cost per task next to accuracy.[16]
 
-**How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial shows that people's sense of speed does too. What to measure instead rests on practitioners' practice.
+**How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial found that developers' sense of their own speed misled them too. What to measure instead rests on practitioners' practice.
 
 ### Q: How do we keep costs under control?
 
 **My recommendation:** Track cost per task and cap spending. Cut usage with simpler set-ups, fewer agents and cheaper models for routine steps.
 
 **Why:**
-- Simon Willison argues that pay-per-use services and APIs should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
+- Simon Willison argues that pay-per-use services and APIs (services other software calls directly) should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
 - SEP's client prototype stalled partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
 - One newer study found that teams of AI agents scored higher but cost 3-7 times as much as a single agent.[18]
 - **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done.
@@ -146,26 +143,27 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 **Why:**
 - Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
-- Open-weight models trail the best closed ones by months, not years.[71]
-  Epoch AI finds that since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months, on its composite capabilities index.[71]
-  On narrow tasks, small models can catch up.[72]
+- On one broad measure, open-weight models trail the best closed ones by months, not years.[71]
+  Epoch AI finds that since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months, on its index that combines many standard tests.[71]
+  On a narrow task, small models tuned on a modest number of examples can catch up.[72]
   In a peer-reviewed study of text classification (sorting text into categories), specialised small models often needed only about 100 labelled examples on average to match or beat general large models.[72]
-  The number depended strongly on the task, and rose by 100–200% once variance in performance was allowed for.[72]
-- Against that, frontier models lead clearly on harder tests.[73]
-  Artificial Analysis rebuilt its index in October 2026 with harder tests, 60% of it now private or held out.[73]
-  The gap between the leader and the best open-weight model widened from 3 points to 12, and to 26 among models whose weights had been released.[73]
+  The number depended strongly on the task, and on average rose by 100–200% once the spread in results was allowed for.[72]
+- Against that, frontier models lead clearly on one benchmarker's harder tests.[73]
+  Artificial Analysis rebuilt its index in October 2026 with harder tests, 60% of it now on tests whose questions or answers are kept private.[73]
+  The leader then scored 58 and the best open-weight model 46: a 12-point gap, up from 3 points before.[73]
+  That model's weights were not yet released for download; the best model whose weights had been released was 26 points behind the leader.[73]
   The gaps were widest on hard reasoning and knowledge questions and on science tasks carried out by AI agents.[73]
 - Running a model ourselves has its own costs.[74]
-  Australia's cyber security centre says self-hosting may cut usage costs at scale, but that organisations should assess the total cost of running it securely.[74]
-  That includes monitoring, maintenance and skilled staff.[74]
+  In security guidance, Australia's cyber security centre says self-hosting (running the model on an organisation's own systems) may cut usage costs at scale.[74]
+  But it says organisations should assess the total cost of running it securely, including monitoring, maintenance and skilled staff.[74]
 - **For software teams:** Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
   In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18]
   Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
-  One developer compared two coding set-ups over two four-week periods (a preprint).[75]
+  One developer compared two coding set-ups over two four-week periods, without randomising (a preprint).[75]
   A self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%).[75]
   Even so, it still cost less in total on shared GPUs, and more on dedicated ones.[75]
 
-**How sure I am:** Fairly sure about testing on our own tasks, not very sure about the open-weight default. Open models lag more on harder tests, the cost evidence is thin, and a comparison on business tasks is still missing (see the open questions).
+**How sure I am:** Fairly sure about testing on our own tasks, not very sure about the open-weight default. Open models lag more on harder tests, the cost evidence is thin, and a comparison on business tasks is still missing (see the [open questions](#open-questions-evidence-thin)).
 
 ### Q: Should we fine-tune a model, use retrieval (RAG), or neither?
 
@@ -189,7 +187,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   Rule checks tested whether the LLM's explanation stayed within the evidence.[1]
 - The closest independent study (synthetic health records) found SQL ahead on lookup, multi-hop (chained) and reasoning questions, and a graph ahead only on time-based ones.[30]
   The graph agent cost about 3.5 times one with no retrieval.[30]
-- Graph retrieval over text has been reported to underperform plain retrieval on many real tasks.[31]
+- Graph retrieval over text (looking things up through a graph) has been reported to underperform plain document retrieval on many real tasks.[31]
 - **For software teams:** model-written graph queries need checking: on one benchmark a strong model's were right about 72% of the time unaided and about 95% with automatic repair.[32]
 
 **How sure I am:** Fairly sure. There is little research, and most of it uses made-up (synthetic) data.
@@ -226,7 +224,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** Assume anything an AI agent reads could carry hidden instructions: that is prompt injection. Treat skills, plugins and packages like any other software we depend on, because they can carry harmful code too (supply-chain risk). Vet them, pin them to a known version, and sandbox them: run them where they can't reach our real systems.
 
 **Why:**
-- The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards that constrain what the system can do.[63]
+- The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards, ones that don't rely on an AI model's judgement, to constrain what the system can do.[63]
 - **For software teams:** Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
   Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
   Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
@@ -307,11 +305,11 @@ These questions are for teams building AI features or working with coding agents
 
 ## Open questions (evidence thin)
 
-- **What will it cost in total, and when does it pay back?** The sources give per-task savings, mostly vendors' own, but no total cost of ownership.
+- **What will it cost in total, and when does it pay back?** The sources give per-task savings, mostly vendors' own, and one developer's comparison of two coding set-ups,[75] but no total cost of ownership for a team or company.
 - **Which vendor, on what terms?** Nothing compared providers on data handling, sub-processors or international transfers.
 - **What does regulation require of us?** Not covered beyond practical UK GDPR guidance, which is not legal advice.
 - **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
-- **Are local, open-weight models good enough?** Partly settled. On Epoch AI's composite index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on narrow tasks such as text classification.[72] But the gap widens on harder, mostly private tests.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
+- **Are local, open-weight models good enough?** Partly settled. On Epoch AI's combined index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on one narrow task, text classification.[72] But on one benchmarker's harder, mostly private tests, the gap is much wider.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
 
 **Read next:** [Talk: using AI well at work](talk-using-ai-at-work.md), or go back to the [handbook home](../README.md).
 

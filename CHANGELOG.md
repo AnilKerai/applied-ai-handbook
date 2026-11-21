@@ -12,18 +12,20 @@ Newest first. Every correction lists what changed and the evidence.
     fairly sure or not very sure, each with a plain reason.
   - Questions only engineers ask (reviewing AI-written code, AGENTS.md, stopping agents breaking
     things, decision models and MCP) are grouped in *For teams building with AI*.
-  - No claim, quote or citation was removed.
-- **New: METR's randomised trial in the measurement answer.** In early 2025, experienced
-  open-source developers took 19% longer with AI tools while believing they had been sped up by
-  20%. The answer adds METR's own limits and its February 2026 update. That update thinks
-  developers are likely faster with AI now, but calls its data "only very weak evidence for the
-  size of this increase".
+  - No existing claim, quote or citation was removed.
+- **New: METR's randomised trial in the measurement answer.** In METR's early-2025 trial, 16
+  experienced open-source developers took 19% longer with AI tools, yet believed AI had sped them
+  up by 20%. The answer adds METR's own limits (one trial, software development only, results
+  since marked out of date) and its February 2026 update. That update says developers are likely
+  sped up more by AI tools now, but calls its newer data "only very weak evidence for the size of
+  this increase".
 - **Model choice:**
   - I now recommend defaulting to open-weight models we can run ourselves, behind a good harness
     and evals. Step up to a frontier model only where evals show the open model failing and the
     step is worth the cost.
-  - The evidence on both sides is in the answer: how far open models lag, the cost of
-    self-hosting and what running a model yourself means for your data.
+  - The evidence on both sides is in the answer: how far open models lag on a broad index and on
+    harder tests, how small tuned models did on one narrow task, and the costs of running a model
+    yourself.
   - The same line is in the [.NET guide](4-build/dotnet-ai-engineering-guide.md).
 - **"Buy the models" now reads "use existing models rather than making our own",** because
   open-weight models are free to download. This covers the FAQ and the glossary.
