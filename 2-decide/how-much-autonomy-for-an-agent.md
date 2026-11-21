@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Start it reporting only, then drafting for approval; promote it only with a track record on that exact action.
 > - At every stage, match review to risk, cap what it can start, test the undo and turn corrections into automatic checks.
 
-*Reading time: about 4 minutes · Best for: anyone deploying agents*
+*Reading time: about 5 minutes · Best for: anyone deploying agents*
 
 A decision tree for setting an agent's autonomy, **per kind of action** (open a PR, merge,
 deploy, page a human), not per agent. Start at the top for each kind of action, and come back to it before

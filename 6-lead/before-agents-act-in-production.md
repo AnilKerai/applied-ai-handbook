@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Make every action traceable, and test the undo before go-live, so mistakes can be found and reversed.
 > - Check the instructions and software packages agents load, as you would any outside code, and fix them to known versions.
 
-*Reading time: about 5 minutes · Best for: leaders*
+*Reading time: about 10 minutes · Best for: leaders*
 
 ## Question
 

@@ -105,7 +105,7 @@ Not for jobs as a whole so far, though a US study finds employment of young work
 [15] https://www.legislation.gov.uk/ukpga/2025/18/section/80 — Data (Use and Access) Act 2025, section 80: automated decision-making (legislation.gov.uk; in force in full from 5 February 2026)
 [16] https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-does-the-uk-gdpr-say-about-adm — Information Commissioner's Office (ICO), What does the UK GDPR say about ADM? (draft guidance, updated 31 March 2026)
 [17] https://www.klarna.com/international/press/klarna-ai-assistant-handles-two-thirds-of-customer-service-chats-in-its-first-month — Klarna, Klarna AI assistant handles two-thirds of customer service chats in its first month (press release, 27 February 2024)
-[18] https://x.com/klarnaseb/status/1876093526280171699 — Sebastian Siemiatkowski (@klarnaseb), post on X, 6 January 2025
+[18] https://x.com/klarnaseb/status/1876093526280171699 — Sebastian Siemiatkowski, post on X (account klarnaseb), 6 January 2025
 [19] https://www.bloomberg.com/news/articles/2025-05-08/klarna-turns-from-ai-to-real-person-customer-service — Charles Daly (Bloomberg), Klarna Slows AI-Driven Job Cuts With Call for Real People (8 May 2025; paywalled, read through its Wayback Machine copy of 20 November 2026)
 [20] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)
 [21] https://practicalai.show/381/transcript — Gautham Pallapa (Scotiabank) with Chris Benson, Building Human-Centered AI (Practical AI E381 transcript, 19 November 2026)

@@ -2,6 +2,34 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-21: humans at the helm
+
+- **New: [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)**, a leadership memo.
+  - It sets out the evidence on both sides:
+    - payroll and administrative studies of jobs;
+    - rulings on who answers for AI's mistakes;
+    - studies of people working with AI;
+    - a meta-analysis in which people and AI together did worse on average than the better of the
+      two alone;
+    - leaders' own words claiming AI can do people's jobs.
+  - It recommends a human at the helm: people set the limits, the system hands them the judgement
+    calls, and a named person owns every outcome.
+- **New question for everyone at work:**
+  [Will AI replace my job?](1-understand/ai-questions-answered.md#q-will-ai-replace-my-job),
+  in a new first section of *AI questions answered*.
+- **Glossary:** a new entry, *Human at the helm*. *Human in the loop* now explains how per-item
+  approval turns into rubber-stamping.
+- **[Talk: using AI well at work](1-understand/talk-using-ai-at-work.md):** slide 10 is now "Three
+  habits that keep you at the helm", and the reading slide adds the new question. The slides are
+  rebuilt.
+- **[How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
+  and [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md):**
+  - Each gains a helm point: limits set in advance, escalation, and review of the exceptions.
+  - Each adds that decisions about people are different. Under UK law, a decision with legal or
+    similarly significant effects on a person, made without meaningful human involvement, needs
+    the legal safeguards. The ICO's draft guidance (March 2026) says meaningful involvement means
+    a person reviewing each decision.
+
 ## 2026-11-19: website links load as normal pages
 
 - **The website now behaves like an ordinary website.** Pages use the device's own fonts rather

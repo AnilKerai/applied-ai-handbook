@@ -63,7 +63,7 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 - **False confidence.** Most figures above are the companies' own claims, without controlled baselines. Our own revert, incident and regret-free merge data should outweigh them.
 - **What would change it.** If a team's agent changes break things less often than human ones on our own metrics for a sustained period, with verification automated end to end, its low-risk work can get wider autonomy. Rising reverts or incidents should move an action back down a rung.
 
-**Read next:** [AI maturity model and roadmap](ai-maturity-model.md), or go back to the [handbook home](../README.md).
+**Read next:** [Can AI replace our people?](can-ai-replace-our-people.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

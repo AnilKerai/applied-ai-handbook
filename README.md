@@ -33,14 +33,15 @@ Skim the questions you care about and the map of how an AI system fits together,
 
 Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth. To give the two talks, the slides are `4-build/talk-working-with-coding-agents.pptx` and `4-build/talk-building-ai-features.pptx`; the outlines have the speaker notes and sources.
 
-**Leader planning AI adoption** (about 40 minutes)
+**Leader planning AI adoption** (about 50 minutes)
 
 1. [Where should AI go in our product or operations first?](2-decide/where-ai-goes-first.md)
 2. [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md)
 3. [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md)
-4. [AI maturity model and roadmap](6-lead/ai-maturity-model.md)
-5. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
-6. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
+4. [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)
+5. [AI maturity model and roadmap](6-lead/ai-maturity-model.md)
+6. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
+7. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
 
 **Presenting to your team** (about 35 minutes)
 
@@ -56,7 +57,7 @@ For colleagues new to AI, the slides are `1-understand/talk-using-ai-at-work.ppt
 - **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: prompt, context, harness, loop and eval engineering, how they fit together, when they arrived, and first-hand lessons from building them.
 - **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, how developers should work with coding agents, and two talks you can give to engineers.
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
-- **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents and automation, and a maturity model for planning adoption.
+- **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents, automation and people, and a maturity model for planning adoption.
 
 Reading everything takes about 5 hours. Nobody needs to; pick a route.
 
