@@ -4,7 +4,7 @@ type: guide
 created: 2026-11-14
 audience: '.NET teams (any IDE) building AI features and agents'
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
@@ -36,6 +36,7 @@ This guide sets out the stack and practices I recommend for AI work on .NET 11. 
   - *Use it* from day one for anything with more than one service.
 - **Foundry and Foundry Local: hosting and small local models.** Hosted agents run our own Agent Framework code locally or as containers, with versions, Entra agent identity, guardrails and traces: "it's only going to change where it runs, not the code".[10] Foundry Local offers only models our hardware can run.[11]
   - *Use it* for small task models and data that must stay local.
+  - *I recommend* open-weight models we run ourselves as the default, behind `IChatClient` and evals, stepping up to a frontier model only where those evals show the open model failing and the step is worth the cost ([the evidence](../1-understand/ai-questions-answered.md#q-which-model-should-we-use-and-do-we-need-the-biggest-one)).
 - **Decision models: fixed-choice steps.** They return a choice and a confidence score without generating output tokens; Extensions.AI support is *in progress* and Foundry Local support *coming soon*, so neither has shipped.[11] Capuano: "there is no standard on how the decision is going to be the input and output."[11]
   - *Industry update:* Google has since launched Gemini Decision 1, after OpenAI's Decisions API,[13] and a Strands case study says Amazon cut labelling costs by about 98% (its claim).[14] But in a 21-model benchmark the best-performing decision model ranked only seventh for reliability.[15]
   - *Use them* behind our own interface, tested with shuffled options and a none-fits case.
@@ -196,4 +197,3 @@ Exit criteria: evals pass an agreed bar, every request traces from business reco
 [44] https://www.youtube.com/watch?v=FYGBT08-N48&t=5 — Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, .NET Conf 2026
 [45] https://ai.engineer/code/2026/talks/online-skills-knowledge — Nikolay Petrov, Your SKILL.md is 70% of Things the Model Already Knows, AIE CODE 2026
 [46] https://martinfowler.com/articles/harness-engineering.html — Birgitta Böckeler (Thoughtworks), Harness engineering, martinfowler.com
-

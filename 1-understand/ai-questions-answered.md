@@ -12,7 +12,7 @@ as_of: "November 2026"
 
 > **In one minute**
 > - Start small: one well-understood task with sound data and easy-to-check results, after agreeing what AI must never be used for.
-> - Buy the AI models and tools, and build what is ours: access to our data, tests and safety limits.
+> - Use existing AI models and tools rather than making our own, and build what is ours: access to our data, tests and safety limits.
 > - Judge success by business results and failure rates on real cases, not by lines of code or volume of output.
 > - Limit what AI agents (AI that takes actions) can reach, and require approval for anything that can't be undone.
 > - A named person is always accountable: AI can do the work, but people own the result.
@@ -63,7 +63,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Should we build or buy?
 
-**Short answer:** Buy the models and agent tooling, and build what is ours: data access, evals, checks and guardrails. Before building anything bespoke, ask what reversing it would cost and who will run it.
+**Short answer:** Use existing models and agent tooling rather than making our own, and build what is ours: data access, evals, checks and guardrails. Before building anything bespoke, ask what reversing it would cost and who will run it.
 
 **Why:**
 - Harvey runs off-the-shelf coding agents and invests in the harness around them: "We don't compete with it. We run them."[7]
@@ -99,14 +99,16 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Which model should we use, and do we need the biggest one?
 
-**Short answer:** Treat the model as a replaceable part, chosen by testing on our own tasks: strong models for hard, open-ended steps and cheaper ones for routine work. Re-test whenever we swap.
+**Short answer:** Treat the model as a replaceable part, chosen by testing on our own tasks. I recommend defaulting, for domain agents especially, to open-weight models we can run ourselves, behind a good harness and evals, and moving a step up to a frontier model only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
 
 **Why:**
 - Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
 - In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
 - Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
+- Open-weight models trail the best closed ones by months, not years: Epoch AI finds that the most capable open-weight models have lagged frontier closed models by an average of four months on its composite capabilities index since January 2026.[71] On narrow tasks, small models can catch up: in a peer-reviewed study of text classification, specialised small models often needed only about 100 labelled examples on average to match or beat general large models, though the number depended strongly on the task and rose by 100–200% once variance in performance was allowed for.[72]
+- Against that, frontier models lead clearly on harder tests: when Artificial Analysis rebuilt its index in October 2026 with harder tests, 60% of it now private or held out, the gap between the leader and the best open-weight model widened from 3 points to 12, and to 26 among models whose weights had been released, with the widest gaps on hard reasoning and knowledge questions and on agentic science tasks.[73] Running a model ourselves has its own costs: Australia's cyber security centre says self-hosting may cut usage costs at scale, but that organisations should assess the total cost of running it securely, including monitoring, maintenance and skilled staff,[74] and in one developer's coding comparison over two four-week periods (a preprint), a self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%), though it still cost less in total on shared GPUs, and more on dedicated ones.[75]
 
-**Confidence:** medium. The direction is consistent, but the figures are single studies or vendor claims.
+**Confidence:** medium for testing on our own tasks, low-medium for the open-weight default. An independent benchmark puts open-weight models months behind and a peer-reviewed study favours small tuned models on a narrow task, but the gap widens on harder tests, the cost evidence is one developer's case study and guidance that lists costs without pricing them, and the comparison that matters, on business agent tasks, is still missing (see the open questions).
 
 ### Q: Should we fine-tune a model, use retrieval (RAG), or neither?
 
@@ -254,7 +256,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - **Which vendor, on what terms?** Nothing compared providers on data handling, sub-processors or international transfers.
 - **What does regulation require of us?** Not covered beyond practical UK GDPR guidance, which is not legal advice.
 - **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
-- **Are local, open-weight models good enough?** A few demos ran local models, but nobody measured them against hosted models on business tasks.
+- **Are local, open-weight models good enough?** Partly settled. On Epoch AI's composite index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on narrow tasks such as text classification.[72] But the gap widens on harder, mostly private tests.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
 
 **Read next:** [Talk: using AI well at work](talk-using-ai-at-work.md), or go back to the [handbook home](../README.md).
 
@@ -330,3 +332,8 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 [68] https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market — The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market (14 October 2026)
 [69] https://paulagoldman.ai — Paula Goldman, Manage the Machine (author's book site)
 [70] https://digitaleconomy.stanford.edu/app/uploads/2026/08/Canaries_August2026.pdf — Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised August 2026, full paper PDF)
+[71] https://epoch.ai/data-insights/open-closed-eci-gap — Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)
+[72] https://aclanthology.org/2025.emnlp-main.9 — Branislav Pecher, Ivan Srba & Maria Bielikova, Comparing Specialised Small and General Large Language Models on Text Classification: 100 Labelled Samples to Achieve Break-Even Performance (EMNLP 2025)
+[73] https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5 — Artificial Analysis, Announcing Artificial Analysis Intelligence Index v5 (27 October 2026)
+[74] https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf — ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)
+[75] https://arxiv.org/abs/2607.13080 — Sheng-Wei Peng, Yi-Hsun Lin & Yi-Pei Lee (arXiv 2607.13080, preprint), Inference Economics of Enterprise Coding Agents: A Case Study of Cloud vs. On-Premise LLMs

@@ -484,6 +484,94 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 71,
+      "url": "https://epoch.ai/data-insights/open-closed-eci-gap",
+      "title": "Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "Since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months in the Epoch Capabilities Index (ECI), our aggregate measure of model capability.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "url": "https://aclanthology.org/2025.emnlp-main.9",
+      "title": "Branislav Pecher, Ivan Srba & Maria Bielikova, Comparing Specialised Small and General Large Language Models on Text Classification: 100 Labelled Samples to Achieve Break-Even Performance (EMNLP 2025)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "We show that the specialised models often need only few samples (on average 100) to be on par or better than the general ones.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "the number of required labels strongly depends on the dataset or task characteristics",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "When performance variance is taken into consideration, the number of required labels increases on average by 100 - 200%.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5",
+      "title": "Artificial Analysis, Announcing Artificial Analysis Intelligence Index v5 (27 October 2026)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "The open weights gap widens from 3 points to 12: Kimi K3.1 Pro (weights not yet released) is the top open weights model at 46.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Among released weights, DeepSeek V4.1 Flash 1017 (max) and GLM-5.3 (max) lead at 32 - 26 points behind the leader",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "With v5, 60% of the Index is now based on evaluations with private test sets or held-out answers.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The gap is widest on HLE-Diamond and Terminal-Bench-Science",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "url": "https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf",
+      "title": "ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "While self-hosting may reduce usage costs at scale, organisations should assess the total cost of ownership associated with securely operating the model, including infrastructure, energy consumption, cyber security controls, monitoring, maintenance and access to appropriately skilled personnel.",
+          "added": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "url": "https://arxiv.org/abs/2607.13080",
+      "title": "Sheng-Wei Peng, Yi-Hsun Lin & Yi-Pei Lee (arXiv 2607.13080, preprint), Inference Economics of Enterprise Coding Agents: A Case Study of Cloud vs. On-Premise LLMs",
+      "accessed": "2026-11-21",
+      "quotes": [
+        {
+          "text": "At comparable gross code churn, the local configuration was associated with a far higher defect-repair burden: a Fix Commit Ratio (FCR) of 74.9% versus 45.9%",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "single-developer, non-randomized longitudinal case study over two contiguous 28-day periods on a production monorepo",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "an API-based Claude Opus 4.7/4.8 configuration using Claude Code versus an on-premise GLM-5.1/5.2 configuration using Opencode",
+          "added": "2026-11-21"
+        }
+      ]
     }
   ]
 }
