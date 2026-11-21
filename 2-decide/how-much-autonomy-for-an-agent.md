@@ -21,7 +21,7 @@ as_of: "November 2026"
 
 A decision tree for setting an agent's autonomy, **per kind of action** (open a PR, merge,
 deploy, page a human), not per agent. Start at the top for each kind of action, and come back to it before
-each promotion. Every rule cites a practitioner, and the company results are their own claims. The goal
+each promotion. Every rule cites its source (mostly practitioners), and the company results are their own claims. The goal
 is the right fit for your
 constraints, not a "dark factory" (SEP). Companion page: [Should this task use AI, and which kind?](should-this-task-use-ai.md).
 
@@ -105,24 +105,26 @@ flowchart TD
 - **Keep humans in.** "The more agents I deploy, the more humans I need"
   ([Software Factories: Escape from Trash Mountain](https://ai.engineer/code/2026/talks/steve-yegge)). AI "amplifies what's already there", and more
   AI won't fix a way of working that doesn't fit, so fix the fit before adding autonomy (SEP).
-- **Keep people at the helm.** For agent actions that aren't decisions about people, we recommend
-  setting the limits in advance, having the agent escalate judgement calls and anything outside those
-  limits, and having people review the exceptions rather than every step. Paula Goldman of Salesforce
-  describes a similar practice (a vendor executive's view): with an agent doing complex work,
+- **Keep people at the helm.** For agent actions that aren't decisions about people, once their
+  results can be checked automatically, we recommend setting the limits in advance, having the agent
+  escalate judgement calls and anything outside those limits, and having people review the exceptions
+  rather than every step. Paula Goldman of Salesforce describes a similar practice (a vendor
+  executive's view): with an agent doing complex work,
   "It’s practically impossible for a human to look through all of it", and people should look instead
   at whether the system meets a quality bar "and whether there are outliers or anomalies".[1] See
   [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
 - **Decisions about people are different.** Under the UK GDPR's rules on automated decision-making,
-  rewritten by section 80 of the Data (Use and Access) Act 2025 and in force since 5 February 2026, a
-  decision with legal or similarly significant effects for a person is
-  "based solely on automated processing if there is no meaningful human involvement in the taking of the decision";
-  the person must then be able to "obtain human intervention" and contest it, and such decisions that
-  use special category data are restricted further.[2] The ICO's draft guidance (March 2026) gives
-  credit applications, recruitment and benefits as examples of such decisions, and says the person
-  involved should review each decision before it takes effect, and that spot-checks aren't enough.[3] For those
-  decisions, we recommend either having a person genuinely review every one, or treating the process
-  as automated decision-making and putting the legal safeguards in place: telling people about the
-  decision, and letting them make representations, have a person look at it again, and contest it.[2]
+  rewritten by section 80 of the Data (Use and Access) Act 2025 and in force since 5 February 2026,
+  a decision is "based solely on automated processing if there is no meaningful human involvement in the taking of the decision".[2]
+  If such a decision has legal or similarly significant effects for a person, they must be told about
+  it and be able to make representations, "obtain human intervention" and contest it; and if it uses
+  special category data, it is allowed only in limited cases, such as with the person's explicit
+  consent.[2] The ICO's draft guidance (March 2026) gives credit applications, recruitment and benefits
+  as examples of such decisions, and says that, for human involvement to count as meaningful, the
+  person involved should review each decision, the review must come before the decision takes effect,
+  and spot-checks aren't enough.[3] For those decisions, we recommend either having a person genuinely
+  review every one, or treating the process as automated decision-making and meeting those legal
+  requirements.
 
 ## Related
 
@@ -135,6 +137,8 @@ flowchart TD
 [1] https://www.ibm.com/think/news/why-ai-needs-human-at-helm-salesforce-paula-goldman — Sascha Brodsky (IBM Think), Salesforce's Paula Goldman on why AI needs a human at the helm (interview, November 2026)
 [2] https://www.legislation.gov.uk/ukpga/2025/18/section/80 — Data (Use and Access) Act 2025, section 80: automated decision-making (legislation.gov.uk; in force in full from 5 February 2026)
 [3] https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/automated-decision-making/what-does-the-uk-gdpr-say-about-adm — Information Commissioner's Office (ICO), What does the UK GDPR say about ADM? (draft guidance, updated 31 March 2026)
+
+The talks linked in the steps above, by event:
 
 - [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap) (SEP: Shinkle & Dunlap)
 - [AIE CODE Summit 2026](https://ai.engineer/code) talk notes linked above: Hallie, Sumner, McCarthy, Meta on-call,

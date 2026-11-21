@@ -58,6 +58,18 @@
         {
           "text": "in force at 5.2.2026 in so far as not already in force",
           "added": "2026-11-21"
+        },
+        {
+          "text": "provide the data subject with information about decisions described in paragraph 1 taken in relation to the data subject;",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "enable the data subject to make representations about such decisions;",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "The first condition is that the decision is based entirely on processing of personal data to which the data subject has given explicit consent.",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -93,6 +105,14 @@
         },
         {
           "text": "ensure that the involvement comes before you apply the decision to a person",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "However, for human involvement to be “meaningful” in the context of the UK GDPR, you must ensure it is active and not just a token gesture.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "You must ensure that the involvement comes before you apply the decision to a person",
           "added": "2026-11-21"
         }
       ]
