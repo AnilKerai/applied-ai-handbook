@@ -160,7 +160,7 @@ If the evals aren't passing, the system doesn't get promoted.[5]
 
 **On the slide**
 
-- Reviewers facing thousands of items get "rubber stamping fatigue" [5]
+- Reviewers facing thousands of items can get "rubber stamping fatigue" [5]
 - Faithbot's human takeovers worked at 5,000 users, not at 2,500,000 [6]
 - In an Anthropic study, about 14% of people caught a clearly dangerous command [23]
 - Design for it: over-flag, a person decides, review by risk [5][23]
@@ -170,7 +170,7 @@ If the evals aren't passing, the system doesn't get promoted.[5]
 **Speaker notes**
 
 Several practitioners warned that a human reviewer is a weak guardrail at volume.[5][6]
-Heidi Porter, building on Jeff Schreiner's talk, said people facing thousands of items to review get tired and fall into "rubber stamping fatigue".[5]
+Heidi Porter, building on Jeff Schreiner's talk, said people facing thousands of items to review can get tired and fall into "rubber stamping fatigue".[5]
 Don Barger gets alerts on Faithbot's critical conversations and can take over, which was possible at 5,000 users but not at 2,500,000.[6]
 Lydia Hallie cited an Anthropic study in which about 14% of people caught a clearly dangerous command, while the automatic classifier blocked 89%; these are Anthropic's figures.[23]
 Stanford's tool over-flags by design and leaves every decision with the physician, who can confirm, decline or override each case; physicians agreed with its *no* answers 97% of the time.[5]

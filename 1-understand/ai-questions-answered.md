@@ -28,7 +28,7 @@ Short answers to the questions an in-house AI adviser hears most. They draw on p
 **Short answer:** Not on the evidence so far for jobs as a whole, though the early signs are worse for young people starting out in jobs exposed to AI. We recommend letting AI take over tasks while you keep the judgement, the accountability and the trust of the people you work with. To stay at the helm of your own work, tell AI tools what you want and where to stop, check what they give you, and own what you send.
 
 **Why:**
-- A Stanford study of payroll data on millions of US workers, revised in August 2026 with data to June 2026, found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67] A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment".[68] Its analysis also "does not yet clearly indicate an AI-related labor market footprint".[68]
+- A Stanford study of payroll data on millions of US workers, revised in August 2026 with data to June 2026, found "no evidence of widespread, economy-wide job displacement" since generative AI was widely adopted.[67] A separate tracker from the Budget Lab at Yale, dated 14 October 2026, finds that measures of AI use "show no connection to changes in employment or unemployment".[68] Its analysis of exposure to AI also "does not yet clearly indicate an AI-related labor market footprint".[68]
 - The exception is young workers aged 22–25 in jobs exposed to AI: their employment is 19% lower than if it had kept pace with that of young people in less-exposed jobs (a gap between the two groups, not a 19% fall in jobs).[67] It comes mainly through "reduced hiring of young workers rather than increased separations": fewer being taken on, rather than more being let go.[67] The authors call their findings "early, descriptive indicators" rather than causal estimates: they show a pattern, not proof that AI caused it.[67]
 - The same study finds declines concentrated in jobs where AI mainly does tasks instead of people; where it mainly helps people with their work, "employment is flat or rising, especially for experienced workers".[67]
 - Paula Goldman of Salesforce argues that "As AI gets more and more powerful, human leadership and judgment matter more, not less" (a vendor executive's view).[69]
@@ -74,7 +74,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Will AI replace our developers?
 
-**Short answer:** Not on the evidence so far. The work shifts from writing code to specifying, checking and owning it, and that still needs people.
+**Short answer:** Not for developers as a whole on the evidence so far, though early-career employment in AI-exposed jobs, software development among them, is lagging. The work shifts from writing code to specifying, checking and owning it, and that still needs people.
 
 **Why:**
 - Meta says about three quarters of its new code is now written with AI, yet its on-call work did not get faster.[10]
@@ -82,7 +82,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - A Stanford study of US payroll data, revised in August 2026, finds that employment has "declined substantially for early-career workers in the occupations most exposed to AI, including but not limited to software development and customer support".[70] Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
 - Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
 
-**Confidence:** medium. One large independent study finds no employment effect so far, but its model projects long-run declines, its data predate the newest models, and practitioners point both ways.
+**Confidence:** medium. One large independent study finds no employment effect so far, but its model projects long-run declines and its data predate the newest models. A payroll study finds early-career employment lagging, which its authors call descriptive, not causal, and practitioners point both ways.
 
 ### Q: How do we know it's working, and what should we measure?
 

@@ -36,7 +36,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 ## Options considered
 
 - **Replace roles where AI matches people.** Fastest savings, but risks ownerless outcomes and a thinner junior pipeline.
-- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6]
+- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] Significant decisions about people are the exception.
 - **A human at the helm (recommended).** Needs up-front work on limits and roles.
 
 ## What the evidence says
@@ -64,7 +64,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
   The authors' 2026 preprint finds the same overall pattern with generative AI (not peer-reviewed).[13]
   They do not think this makes combining "a bad idea", and suggest giving AI only the parts it is clearly better at, which only 3 experiments tested, inconclusively.[6]
   Our reasoning: they measured task performance, not accountability, so people at the helm should own outcomes, not second-guess AI that is better, where the law allows.
-- **Trust: attitudes, not outcomes.** In a Pew survey of Americans, "just 5% are open to AI making these calls on its own, with no human review" for health insurance claims.[14] That shows what people want, not that review decides better (our reading).
+- **Trust: attitudes, not outcomes.** In a Pew survey of Americans, "just 5% are open to AI making these calls on its own, with no human review" for health insurance claims.[14] That shows preference, not better decisions (our reading).
 - **UK decisions about people.** Under section 80 of the Data (Use and Access) Act 2025, a significant decision with "no meaningful human involvement" counts as solely automated, and the person can "obtain human intervention".[15] The ICO's draft guidance (March 2026) says spot-checks don't make involvement meaningful.[16]
 
 ### Company and practitioner voices
@@ -85,10 +85,10 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 
 ## Risks and what would change this advice
 
-- **Lasting displacement.** Causal evidence of lasting job losses would mean planning fewer roles.
+- **Lasting displacement.** Causal evidence of lasting job losses would mean fewer roles.
 - **AI alone doing better.** If human–AI combinations reliably underperform AI alone on our tasks, hand them to AI, still with an owner.
 - **A change in UK law** or final ICO guidance could change how decisions about people are reviewed.
-- **A causal junior gap.** If junior hiring keeps falling and studies show AI causes it, protect entry-level roles more firmly.
+- **A causal junior gap.** If junior hiring keeps falling and studies show AI causes it, protect entry-level roles.
 
 **Read next:** [AI maturity model and roadmap](ai-maturity-model.md), or go back to the [handbook home](../README.md).
 

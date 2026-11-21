@@ -96,7 +96,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 ### 8. What does a mistake cost, and how would we undo it?
 
 - **Why it matters:** Porter sets autonomy like a dial, by consequence, confidence and reversibility, and automates outright "only what is cheap to undo".[1] Meta's test for more autonomy is "How costly is a mistake and how easy is it to catch?"[5]
-- **Red flags:** *A person will check everything*, at volumes where reviewers fall into "rubber stamping fatigue".[1] Nobody has tested the undo, although "A timeout tells us that the response didn't arrive, not that the operation failed."[6]
+- **Red flags:** *A person will check everything*, at volumes where reviewers can fall into "rubber stamping fatigue".[1] Nobody has tested the undo, although "A timeout tells us that the response didn't arrive, not that the operation failed."[6]
 - **What a good answer looks like (industry practice):** The Claude Code team's PR template asks how to undo each change, and low, medium and high risk need none, one or two human approvals.[14] Porter's fatigue warning now has a number: Anthropic reports users approve 93% of permission prompts.[21]
 
 ### 9. Where do the guardrails live?

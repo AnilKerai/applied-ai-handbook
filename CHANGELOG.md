@@ -19,6 +19,14 @@ Newest first. Every correction lists what changed and the evidence.
 - **New question for everyone at work:**
   [Will AI replace my job?](1-understand/ai-questions-answered.md#q-will-ai-replace-my-job),
   in a new first section of *AI questions answered*.
+- **Heidi Porter's warning, on four more pages:** the feature spec, the pre-mortem, the intake
+  checklist and the lunch-and-learn deck now say reviewers facing thousands of items *can* fall
+  into rubber-stamping fatigue. They had said they do. Her talk's transcript says "They can just
+  have rubber stamping fatigue". The deck is rebuilt.
+- **[Will AI replace our developers?](1-understand/ai-questions-answered.md#q-will-ai-replace-our-developers)**
+  now adds that, in a Stanford payroll study revised in August 2026, employment fell for
+  early-career workers in the jobs most exposed to AI, software development among them. The
+  authors call this descriptive, not causal. The answer had said only "not on the evidence so far".
 - **Glossary:** a new entry, *Human at the helm*, which also says where checking each result still
   applies. *Human in the loop* now warns that approving each output can turn into a rubber stamp.
 - **[Talk: using AI well at work](1-understand/talk-using-ai-at-work.md):** slide 10 is now "Three

@@ -94,7 +94,7 @@ Blame the plan, not people.
 ### Verification and review
 
 **11. Rubber-stamp review**
-- **Looks like:** Porter warns that reviewers facing thousands of items get "rubber stamping fatigue".[2] Barger could take over Faithbot's crisis conversations himself at 5,000 users, but not at 2,500,000.[1]
+- **Looks like:** Porter warns that reviewers facing thousands of items can get "rubber stamping fatigue".[2] Barger could take over Faithbot's crisis conversations himself at 5,000 users, but not at 2,500,000.[1]
 - **Warning sign:** Approval rates near 100%; Anthropic reports users approve 93% of permission prompts.[14]
 - **Prevention:** Tier review by risk, and enforce limits in the environment. In Anthropic's own study, cited by Lydia Hallie, only about 14% of people caught a clearly dangerous command.[15] Justin Yoo (Microsoft) separates "the permission to run" from "the permission to reach".[16]
 
