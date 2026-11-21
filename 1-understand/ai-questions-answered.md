@@ -79,6 +79,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **Why:**
 - Meta says about three quarters of its new code is now written with AI, yet its on-call work did not get faster.[10]
 - Across 655 firms, coding agents raised pull requests opened by 35.7% but resolved issues by only 13.7% (borderline significant), while time from review submission to approval rose 56.1% (revised November 2026; data to August 2026).[11] It found no detectable effect on employment, though its model projects long-run declines.[11]
+- A Stanford study of US payroll data, revised in August 2026, finds that employment has "declined substantially for early-career workers in the occupations most exposed to AI, including but not limited to software development and customer support".[70] Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
 - Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
 
 **Confidence:** medium. One large independent study finds no employment effect so far, but its model projects long-run declines, its data predate the newest models, and practitioners point both ways.
@@ -328,3 +329,4 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 [67] https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence — Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised 12 August 2026)
 [68] https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market — The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market (14 October 2026)
 [69] https://paulagoldman.ai — Paula Goldman, Manage the Machine (author's book site)
+[70] https://digitaleconomy.stanford.edu/app/uploads/2026/08/Canaries_August2026.pdf — Erik Brynjolfsson, Bharat Chandar & Ruyu Chen (Stanford Digital Economy Lab), Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence (revised August 2026, full paper PDF)

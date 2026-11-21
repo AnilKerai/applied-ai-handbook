@@ -38,6 +38,10 @@
         {
           "text": "The message below was shared with Amazon employees earlier today.",
           "added": "2026-11-21"
+        },
+        {
+          "text": "As we roll out more Generative AI and agents, it should change the way our work is done.",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -73,6 +77,10 @@
         },
         {
           "text": "We interpret these facts as early, descriptive indicators—canaries in the coal mine—rather than causal estimates",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "it persists when excluding technology firms and computer occupations",
           "added": "2026-11-21"
         }
       ]
@@ -150,6 +158,10 @@
         {
           "text": "Only 3 of the 100+ experiments in our analysis explore such processes with a predetermined delegation of separate subtasks to humans and AI.",
           "added": "2026-11-21"
+        },
+        {
+          "text": "but the result was not statistically significant",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -168,7 +180,7 @@
     {
       "id": 8,
       "url": "https://www.nber.org/system/files/working_papers/w33777/w33777.pdf",
-      "title": "Anders Humlum (University of Chicago) & Emilie Vestergaard (University of Copenhagen), Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI, NBER Working Paper 33777 (May 2025, revised March 2026; a working paper, not peer-reviewed)",
+      "title": "Anders Humlum (University of Chicago) & Emilie Vestergaard (University of Copenhagen), Still Waters, Rapid Currents: Early Labor Market Transformation under Generative AI, NBER Working Paper 33777 (May 2025, revised March 2026; previously circulated as Large Language Models, Small Labor Market Effects; a working paper, not peer-reviewed)",
       "accessed": "2026-11-21",
       "quotes": [
         {
@@ -181,6 +193,10 @@
         },
         {
           "text": "While we replicate the pattern of declining early-career employment in exposed occupations in Denmark, our difference-in-differences analysis reveals that the declines are not driven by firms adopting AI chatbots.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "This paper was previously circulated under the title “Large Language Models, Small Labor Market Effects.”",
           "added": "2026-11-21"
         }
       ]
@@ -250,6 +266,10 @@
         {
           "text": "for a complex managerial task selected to be outside the frontier, subjects using AI were 19% less likely to produce correct solutions compared with those without AI",
           "added": "2026-11-21"
+        },
+        {
+          "text": "subjects using AI were 19 percentage points less likely to produce correct solutions",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -273,6 +293,10 @@
         },
         {
           "text": "may change as AutoAnalysis ingests new papers",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "These findings indicate that, on average, combining humans and AI improved human performance but did not result in human-AI synergy.",
           "added": "2026-11-21"
         }
       ]
@@ -390,6 +414,10 @@
         {
           "text": "In a year’s time he expects the natural attrition rate of 20% to continue, taking the workforce down to about 2,500 from the current level of 3,000.",
           "added": "2026-11-21"
+        },
+        {
+          "text": "The pilot has started small, with two of the new breed of customer-service agents live now",
+          "added": "2026-11-21"
         }
       ]
     },
@@ -413,6 +441,10 @@
         },
         {
           "text": "Even judgment is a little blurry.",
+          "added": "2026-11-21"
+        },
+        {
+          "text": "Still, as we hand increasingly sophisticated tasks to AI, human responsibility, wisdom and judgment become more important because the work becomes more consequential.",
           "added": "2026-11-21"
         }
       ]
