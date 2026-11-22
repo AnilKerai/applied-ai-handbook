@@ -259,7 +259,7 @@ Session 2 picks up from here with building AI features, and it opens with what y
 - Policy and autonomy: [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)
 - The disciplines behind it: [Context engineering](../3-engineer/context-engineering.md), [Harness engineering](../3-engineer/harness-engineering.md)
 
-**Read next:** [Talk: building AI features](talk-building-ai-features.md), or go back to the [handbook home](../README.md).
+**Read next:** [Building AI features in .NET](dotnet-ai-engineering-guide.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

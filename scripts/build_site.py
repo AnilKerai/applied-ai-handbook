@@ -5,8 +5,11 @@ The markdown in the numbered folders stays the source of truth and must keep rea
 GitHub. This script:
 
 1. copies the published files (the root README, CHANGELOG and LICENSE, and every tracked .md
-   and .pptx in the numbered folders) into `.site-build/docs/`, taking the file list from
-   `git ls-files`, so nothing untracked or git-ignored can reach the site;
+   in the numbered folders) into `.site-build/docs/`, taking the file list from `git ls-files`,
+   so nothing untracked or git-ignored can reach the site. Talk outlines (frontmatter
+   `type: deck`) and the .pptx decks are source-only: they stay in the repo but are left out of
+   the site. A folder README's "Talks you can give" block and any "As a talk:" line are dropped,
+   and any other link to a talk points at its page on GitHub instead;
 2. adapts the copies where Python-Markdown reads a file differently from GitHub: nested lists
    indented by two spaces, and lists that start straight after a line of text;
 3. writes the site navigation from the root README's section list and each folder README's
@@ -21,6 +24,7 @@ It needs `zensical` on the PATH (`pip install zensical==0.1.2`, the version the 
 pins), or `uv`, which it then uses to run that version.
 """
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -34,6 +38,45 @@ ROOT_FILES = ["README.md", "CHANGELOG.md", "LICENSE"]
 FOLDER_RE = re.compile(r"^\d-[a-z0-9-]+/")
 LIST_RE = re.compile(r"^( *)([-*+]|\d+[.)])( +|$)")
 FENCE_RE = re.compile(r"^ *(```|~~~)")
+REPO_BLOB = "https://github.com/AnilKerai/applied-ai-handbook/blob/main/"
+TALKS_HEADING = "Talks you can give"
+LINK_RE = re.compile(r"\]\(([^)\s#]+\.md)(#[^)\s]*)?\)")
+
+
+def is_deck(rel):
+    """Talk outlines are marked `type: deck` in their frontmatter."""
+    head = (ROOT / rel).read_text(encoding="utf-8").split("\n---\n", 1)[0]
+    return bool(re.search(r"^type:\s*deck\s*$", head, re.M))
+
+
+def source_only(rel):
+    """Files kept in the repo but left off the website: talk outlines and their slide decks."""
+    return rel.endswith(".pptx") or (FOLDER_RE.match(rel) is not None and rel.endswith(".md") and is_deck(rel))
+
+
+def drop_talks(rel, text, excluded):
+    """Remove talk material from a page's site copy (the source file is untouched)."""
+    lines, out, skipping = text.split("\n"), [], False
+    for line in lines:
+        if line.startswith(TALKS_HEADING):  # folder README block: heading, blank, bullets
+            skipping = True
+            continue
+        if skipping:
+            if line.startswith("- ") or not line.strip():
+                continue
+            skipping = False
+        if line.startswith("As a talk:"):
+            continue
+        out.append(line)
+    text = re.sub(r"\n{3,}", "\n\n", "\n".join(out))
+
+    def relink(m):
+        target = (Path(rel).parent / m.group(1)).as_posix()
+        target = str(Path(os.path.normpath(target)))
+        if target in excluded:
+            return f"]({REPO_BLOB}{target}{m.group(2) or ''})"
+        return m.group(0)
+    return LINK_RE.sub(relink, text)
 
 
 def published_files():
@@ -42,7 +85,12 @@ def published_files():
     for rel in out.stdout.splitlines():
         if rel in ROOT_FILES or (FOLDER_RE.match(rel) and rel.endswith((".md", ".pptx"))):
             files.append(rel)
-    return sorted(files)
+    return sorted(f for f in files if not source_only(f))
+
+
+def excluded_files():
+    out = subprocess.run(["git", "ls-files"], cwd=ROOT, capture_output=True, text=True, check=True)
+    return {r for r in out.stdout.splitlines() if FOLDER_RE.match(r) and r.endswith((".md", ".pptx")) and source_only(r)}
 
 
 def adapt_markdown(text):
@@ -132,7 +180,8 @@ def build_nav(files):
         title = re.sub(r"^\d+\.\s*", "", heading[0]) if heading else folder
         pages = [f"{folder}/README.md"]
         for page in readme_links(f"{folder}/README.md", r"^\d+\. \*\*\[[^\]]+\]\(([^)]+\.md)\)\*\*"):
-            pages.append(f"{folder}/{page}")
+            if f"{folder}/{page}" in files:
+                pages.append(f"{folder}/{page}")
         for rel in files:  # any page the README doesn't list goes at the end, never dropped
             if rel.startswith(folder + "/") and rel.endswith(".md") and rel not in pages:
                 print(f"note: {rel} is not in {folder}/README.md; adding it at the end of the section")
@@ -158,6 +207,7 @@ def toml_nav(nav):
 
 def main():
     files = published_files()
+    excluded = excluded_files()
     if BUILD.exists():
         shutil.rmtree(BUILD)
     DOCS.mkdir(parents=True)
@@ -170,7 +220,7 @@ def main():
             if text.startswith("---\n") and "\n---\n" in text[4:]:
                 end = text.index("\n---\n", 4) + 5
                 front, text = text[:end], text[end:]
-            dst.write_text(front + adapt_markdown(text), encoding="utf-8")
+            dst.write_text(front + adapt_markdown(drop_talks(rel, text, excluded)), encoding="utf-8")
         else:
             shutil.copy2(src, dst)
     (DOCS / "assets").mkdir()
@@ -182,7 +232,7 @@ def main():
         sys.exit("build_site: website/zensical.toml has lost its nav marker line")
     config = config.replace(marker, toml_nav(build_nav(files)))
     (BUILD / "zensical.toml").write_text(config, encoding="utf-8")
-    print(f"staged {len(files)} files into {DOCS.relative_to(ROOT)}")
+    print(f"staged {len(files)} files into {DOCS.relative_to(ROOT)} ({len(excluded)} source-only files left out)")
 
     zensical = shutil.which("zensical")
     cmd = [zensical] if zensical else ["uv", "tool", "run", "--from", "zensical==0.1.2", "zensical"]

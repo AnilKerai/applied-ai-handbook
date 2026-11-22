@@ -281,7 +281,7 @@ Should this task use AI? is a short decision tree to walk through for any task b
 - Before handing a task to AI: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
 - A broader talk on what works with AI: [What works with AI: practical lessons](ai-lunch-and-learn.md)
 
-**Read next:** [What works with AI: practical lessons](ai-lunch-and-learn.md), or go back to the [handbook home](../README.md).
+**Read next:** [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

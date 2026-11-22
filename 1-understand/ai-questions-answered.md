@@ -311,7 +311,7 @@ These questions are for teams building AI features or working with coding agents
 - **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
 - **Are local, open-weight models good enough?** Partly settled. On Epoch AI's combined index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on one narrow task, text classification.[72] But on one benchmarker's harder, mostly private tests, the gap is much wider.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
 
-**Read next:** [Talk: using AI well at work](talk-using-ai-at-work.md), or go back to the [handbook home](../README.md).
+**Read next:** [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md), or go back to the [handbook home](../README.md).
 
 ## Sources
 

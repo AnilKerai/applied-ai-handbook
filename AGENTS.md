@@ -136,6 +136,12 @@ with Zensical. The markdown in this repo stays the source of truth.
   - It renames the frontmatter `status` key, which the theme would show as a badge.
   - It writes the navigation from the root README's sections and each folder README's numbered
     reading order. So a page appears on the site where the READMEs list it.
+  - **Talks are source-only.** Talk outlines (frontmatter `type: deck`) and the `.pptx` decks stay
+    in the repo but are left off the site.
+    - Folder READMEs list them under "Talks you can give", which the site build drops, along with
+      any "As a talk:" line.
+    - Any other link to a talk points at its GitHub page on the site.
+    - The reading order (Read next), the routes and the reading-time total skip the talks.
 - **Publishing.** The `Website` workflow runs `scripts/check.py`, builds the site and deploys it to
   GitHub Pages on every push to `main`. A push that fails the check publishes nothing.
 - **Preview locally** with `python3 scripts/build_site.py --serve`. It needs `zensical==0.1.2`, or

@@ -2,6 +2,14 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-21: talks are in the repository only
+
+- **The four talks are no longer on the website.** They are the outlines, speaker notes and slide
+  decks for *Using AI well at work*, *What works with AI*, and the two engineer sessions. They stay
+  here in the repository, listed under "Talks you can give" in the Understand and Build sections.
+- **The reading order, the routes and the reading-time total now skip them.** The *Presenting to
+  your team* route is gone.
+
 ## 2026-11-21: questions for everyone, and model choice
 
 - **[AI questions answered](1-understand/ai-questions-answered.md) now works for everyone at

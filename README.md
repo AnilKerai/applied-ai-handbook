@@ -20,7 +20,7 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 Skim the questions you care about and the map of how an AI system fits together, then the tools you'll use most. Keep the glossary open.
 
-**Engineer building AI features or using coding agents** (about 105 minutes)
+**Engineer building AI features or using coding agents** (about 85 minutes)
 
 1. [The big picture](3-engineer/the-big-picture.md)
 2. [Harness engineering](3-engineer/harness-engineering.md)
@@ -28,12 +28,10 @@ Skim the questions you care about and the map of how an AI system fits together,
 4. [AI pattern catalogue](4-build/ai-pattern-catalogue.md)
 5. [Evals playbook](4-build/evals-playbook.md)
 6. [Working with coding agents](4-build/working-with-coding-agents.md)
-7. [Talk: working with coding agents](4-build/talk-working-with-coding-agents.md)
-8. [Talk: building AI features](4-build/talk-building-ai-features.md)
-9. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
-10. [Running AI in production](5-run/ai-in-production-runbook.md)
+7. [Agent-written pull requests and agent autonomy](5-run/agent-pr-policy.md)
+8. [Running AI in production](5-run/ai-in-production-runbook.md)
 
-Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth. To give the two talks, the slides are `4-build/talk-working-with-coding-agents.pptx` and `4-build/talk-building-ai-features.pptx`; the outlines have the speaker notes and sources.
+Add the .NET guide if you work in .NET, and the rest of the Engineer section for each discipline in depth.
 
 **Leader planning AI adoption** (about 50 minutes)
 
@@ -45,23 +43,16 @@ Add the .NET guide if you work in .NET, and the rest of the Engineer section for
 6. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
 7. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
 
-**Presenting to your team** (about 35 minutes)
-
-1. [Talk: using AI well at work](1-understand/talk-using-ai-at-work.md)
-2. [What works with AI: practical lessons](1-understand/ai-lunch-and-learn.md)
-
-For colleagues new to AI, the slides are `1-understand/talk-using-ai-at-work.pptx`; for a general lunch-and-learn, `1-understand/ai-lunch-and-learn.pptx`. Each outline has the speaker notes and sources.
-
 ## The six sections
 
-- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you. The words, the common questions, a talk for colleagues new to using AI, and a lunch-and-learn on what works in practice.
+- **[1. Understand](1-understand/README.md)**: Start here if AI is new to you: the words you will hear and the questions people keep asking.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
 - **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: prompt, context, harness, loop and eval engineering, how they fit together, when they arrived, and first-hand lessons from building them.
-- **[4. Build](4-build/README.md)**: How to build AI features well: proven patterns, how to test them, how developers should work with coding agents, and two talks you can give to engineers.
+- **[4. Build](4-build/README.md)**: How to build AI features well: patterns seen in practice, how to test them, and how developers should work with coding agents.
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 - **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents, automation and people, and a maturity model for planning adoption.
 
-Reading everything takes about 5 hours. Nobody needs to; pick a route.
+Reading everything takes about 4 hours. Nobody needs to; pick a route.
 
 ## How to read it
 
