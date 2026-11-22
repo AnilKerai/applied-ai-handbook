@@ -20,7 +20,7 @@ as_of: "November 2026"
 
 ## The kinds of AI you'll meet
 
-- **Chat assistants**, such as ChatGPT, Google Gemini and Meta AI, simulate a conversation.[1]
+- **Chat assistants** simulate a conversation. The judges' guidance gives ChatGPT, Google Gemini and Meta AI as examples,[1] and Anthropic's Claude is another.[15]
   They run on [large language models (LLMs)](ai-glossary.md).
 - **Reasoning models** write out their steps before answering; in Anthropic's words, they "show their working".[2]
 - **Image, voice and video generators** make pictures, speech and video; OpenAI calls Sora 2 its "flagship video and audio generation model".[3]
@@ -99,3 +99,4 @@ I recommend three habits:
 [12] https://arxiv.org/abs/2308.08708v3 — Patrick Butlin, Robert Long et al., Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (report, arXiv 2308.08708v3, 22 August 2023; first posted 17 August 2023)
 [13] https://researchonline.lse.ac.uk/id/eprint/130322/1/1-s2.0-S1364661325002864-main.pdf — Patrick Butlin, Robert Long et al., Identifying indicators of consciousness in AI systems, Trends in Cognitive Sciences 30(6), 488–501 (peer-reviewed; published online 10 November 2025; open-access copy in LSE Research Online)
 [14] https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do — Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)
+[15] https://www.anthropic.com/claude — Anthropic, Claude: The AI assistant for work (product page)

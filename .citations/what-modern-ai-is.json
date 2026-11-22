@@ -320,6 +320,18 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 15,
+      "url": "https://www.anthropic.com/claude",
+      "title": "Anthropic, Claude: The AI assistant for work (product page)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Claude is more than an AI assistant",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }
