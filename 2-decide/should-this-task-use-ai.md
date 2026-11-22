@@ -35,7 +35,7 @@ flowchart TD
     Q2 -- no --> X2["Fix the data first"]
     Q2 -- yes --> Q3{"Can rules or<br/>code do it?"}
     Q3 -- yes --> M1["Rules / code"]
-    Q3 -- no --> Q4{"Output listable<br/>in advance?"}
+    Q3 -- no --> Q4{"Is the answer a pick<br/>from a fixed list?"}
     Q4 -- yes --> Q5{"Labels stable,<br/>volume high?"}
     Q5 -- yes --> M2["Fine-tuned classifier<br/>(classic ML)"]
     Q5 -- no --> M3["Decision model<br/>(System One)"]
@@ -66,13 +66,16 @@ flowchart TD
 - **Rules or code.** Keep the control flow deterministic, and use a model only for the fuzzy
   part ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath),
   [The.NET AI Stack: What's New, What's Next, and How It Fits Together](https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450)).
-- **Can the output be listed in advance?** This is Glean's test. If yes, use a decision model
-  that returns choices with probabilities and no text. Fine-tune only when the labels are
-  stable and volume is high. If you also need text, go hybrid
+- **Is the answer a pick from a fixed list?** Ask whether every possible answer could be written
+  down before the task runs: which team gets a ticket, which label an email gets, approve or
+  reject. This is Glean's test, "can the output be listed in advance?". If yes, use a
+  [decision model](../1-understand/ai-glossary.md), which picks from the list and says how sure it
+  is instead of writing text. If the answer has to be written fresh each time, such as a reply or
+  a summary, it needs an LLM. Fine-tune only when the labels are stable and volume is high. If
+  you also need text, go hybrid
   ([Beyond Generation: Fast, Structured AI Decisions with Jev at Glean](https://ai.engineer/code/2026/talks/chinmay-goyal)). Put fast decision and extraction
   models in front of LLMs to prune tools and context
-  ([cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen)). Background: decision models.
-  Vendor numbers are [vendor].
+  ([cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen)).
 - **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a
   narrow job: interface, router, explainer, "compare and flag" (Porter's Syngenta and
   Stanford cases; Taillie, [From Photos to Queries: Practical AI Agents for Real Workflows](https://midwestaisummit.com/2026-recap)). If you don't, use an agent bounded
