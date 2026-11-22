@@ -4,7 +4,7 @@ type: concept
 created: 2026-11-15
 audience: "Engineers and product owners"
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 

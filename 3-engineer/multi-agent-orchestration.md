@@ -4,7 +4,7 @@ type: concept
 created: 2026-11-15
 audience: "Engineers building agent systems"
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -55,11 +55,12 @@ flowchart TD
 ## When it arrived
 
 Google launched A2A on 9 April 2025 as an open protocol, with more than 50 technology partners by Google's count.[4]
-On 23 June 2025 Google donated A2A to the Linux Foundation, and on 17 August 2026 the Agentic AI Foundation, which the Linux Foundation hosts, announced that A2A was joining it as a hosted project.[13][14]
 Two posts a day apart in June 2025 took contrasting positions: Cognition's Walden Yan published *Don't Build Multi-Agents* on 12 June, and Anthropic described its multi-agent research system on 13 June.[5][2]
+On 23 June 2025 Google donated A2A to the Linux Foundation.[13]
 On 18 July 2026 (UTC) Peter Steinberger asked "Are we still talking loops or did we shift to graphs yet?"[6]
 Hamel Husain's article "Loop Engineering Is Dead. Enter Graph Engineering" followed within hours, by Lulla et al.'s account, and is the earliest use of "graph engineering" found in the agent sense.[7][8]
 DZone later wrote that within a couple of days the debate had a name: graph engineering.[3]
+On 17 August 2026 the Agentic AI Foundation, which the Linux Foundation hosts, announced that A2A was joining it as a hosted project.[14]
 Two later pieces are covered below: a Microsoft Research preprint on orchestrator limits in September 2026, and Anthropic's Applied AI team on folding subagents back in October 2026.[9][10]
 
 ## Core principles
