@@ -169,7 +169,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 - McKenna Barlow (Microsoft) makes the written requirement the oracle, because a misread requirement "can actually show up in both places", code and tests.[26]
 
 **Keep the checks out of the agent's reach.**
-- Duolingo closes any PR touching a non-test file, because "agents sometimes take the shortest paths to green CI."[3]
+- Duolingo closes any PR touching a non-test file, because "agents sometimes take the shortest path to green CI."[3]
 - Factory's risk judge "reads its policy from our mainline branch so that the change can't rewrite the rules that it's being judged by."[25]
 - Johnson's graders hide the tests and git history until the agent submits, because agents had peeked at tests and resubmitted.[7]
 - Google's /teamwork checks agents' results against unmodified test suites, with critics working from a clean context (Google's account).[24]

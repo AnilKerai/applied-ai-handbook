@@ -236,7 +236,7 @@ He also asked what it would really cost to reverse a deployment, and "do they ha
 **Speaker notes**
 
 Kush Agrawal of Duolingo said "writing code isn't the hard part anymore, verifying it is."[27]
-Duolingo's test-writing agent has any PR that touches non-test files closed, because "agents sometimes take the shortest paths to green CI."[27]
+Duolingo's test-writing agent has any PR that touches non-test files closed, because "agents sometimes take the shortest path to green CI."[27]
 Jarred Sumner chose a project he could check against test suites that predate it, warning that once you rewrite the tests "you can't really trust the tests anymore."[28]
 McKenna Barlow showed that an agent writing both code and tests can repeat one misunderstanding in both, so tests should be anchored to written requirements.[29]
 Gerald Versluis's advice was "for every session, start from a running app, ask for proof".[30]

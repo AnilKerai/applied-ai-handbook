@@ -95,7 +95,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 **Recovery**
 
-- Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[21] He reported that in the trials he ran with Dolly Sah, "naive retries produced duplicate effects in 54% of these kind of trials."[21]
+- Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[21] He reported that in the trials he ran with Dolly Sah, naive retries produced duplicate effects in 54% of the relevant trials.[21]
 - Their ladder: nothing changed, retry; prior state known, restore; external action committed, compensate; recovery unverifiable, stop and escalate.[21]
 - Give every write an identity and read its outcome back instead of replaying it.[2] Resume long runs from their last durable checkpoint.[4]
 

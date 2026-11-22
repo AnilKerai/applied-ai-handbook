@@ -98,7 +98,7 @@ Basis:
 - Andrew Finch (Sonar) argues for gating the merge on recorded evidence, checked against criteria the team sets, not on a test having run.[6]
 - Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[5]
 - Stephen and Cassandra Chin say an agent writing a PR description from its own session "gets more and more inaccurate as it goes along".[15]
-- Duolingo closes test-writing agent PRs touching any file that "isn't a test, a mock, a fake, or a stub", because "agents sometimes take the shortest paths to green CI."[16]
+- Duolingo closes test-writing agent PRs touching any file that "isn't a test, a mock, a fake, or a stub", because "agents sometimes take the shortest path to green CI."[16]
 - McKenna Barlow (Microsoft) warns that a misread requirement can "show up in both places", code and tests.[17]
 
 **Current practice notes.**

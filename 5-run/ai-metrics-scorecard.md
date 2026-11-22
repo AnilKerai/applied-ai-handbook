@@ -34,7 +34,7 @@ It expands section 9 of [Agent-written pull requests and agent autonomy: draft e
 - *Tells you:* whether agent changes hold up as well as human ones; the policy's auto-merge bar.
 - *Formula:* merged agent PRs with no revert or follow-up fix within 30 days ÷ merged agent PRs, beside the human figure.
 - *Watch out for:* untraced follow-up fixes; an easy work mix flatters it.
-- *Evidence:* Factory auto-merges only once agent PRs beat human ones on this measure, tracing reverts and errors to their PRs.[1] Duolingo warns "agents sometimes take the shortest paths to green CI."[3]
+- *Evidence:* Factory auto-merges only once agent PRs beat human ones on this measure, tracing reverts and errors to their PRs.[1] Duolingo warns "agents sometimes take the shortest path to green CI."[3]
 
 **2. Revert and rework rate**
 - *Tells you:* how much work had to be undone or redone.

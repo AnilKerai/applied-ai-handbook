@@ -137,7 +137,7 @@ Recommendations:
 
 Code and evidence come before the story.
 Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[28]
-Duolingo found "agents sometimes take the shortest paths to green CI.", so it closes any PR touching a file that isn't a test, mock, fake or stub.[2]
+Duolingo found that "agents sometimes take the shortest path to green CI", so it closes any PR touching a file that isn't a test, mock, fake or stub.[2]
 Barlow's assertion check asks what incorrect behaviour could still pass.[11]
 
 Depth follows risk.

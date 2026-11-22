@@ -24,6 +24,10 @@ Newest first. Every correction lists what changed and the evidence.
   - SEP's six constraints, which are about how automated a whole team should be, are in
     [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md).
   - Sources are now numbered.
+- **Two quotes corrected across the handbook.**
+  - Duolingo's line is "agents sometimes take the shortest path to green CI", not "paths".
+  - Tanmay and Dolly Sah's 54% duplicate-effects figure is now a paraphrase. The words quoted
+    before were a corrected reading of the talk's captions, not its exact words.
 - **Model + harness + evals:** my shorthand, model + harness = an agent and model + harness + evals
   = an agent you can trust in production, is now on [The big picture](3-engineer/the-big-picture.md),
   in the glossary's *Agent* entry and in my evals-framework lessons, with Kevin Solorio's "an agent
