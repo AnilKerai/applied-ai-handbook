@@ -39,7 +39,7 @@ flowchart TD
         I["Isolate:<br/>split it up"]
         W ~~~ S ~~~ C ~~~ I
     end
-    WIN["Context window:<br/>the smallest set<br/>of useful<br/>information"]
+    WIN["Context window:<br/>aim for the<br/>smallest set of<br/>useful information"]
     M(("Model"))
     SRC --> OPS --> WIN --> M
 ```
@@ -86,7 +86,7 @@ In Anthropic's account, a subagent (a helper agent given one sub-task) may use "
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) maps the four buckets onto one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness).
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#context-engineering) maps the four buckets onto one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness), whose *guide* pattern decides what goes into the model's context window at each step.
 Its [decision record on compaction](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md) explains why it summarises only newly dropped steps on top of the previous summary.
 
 **Read next:** [Harness engineering](harness-engineering.md), or go back to the [handbook home](../README.md).

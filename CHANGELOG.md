@@ -14,7 +14,7 @@ Newest first. Every correction lists what changed and the evidence.
   - [Multi-agent orchestration](3-engineer/multi-agent-orchestration.md): the shapes, including
     agents built by different teams talking over A2A, which I treat as one option, not the only
     one. That page now adds that Google donated A2A to the Linux Foundation in June 2025, and that
-    it joined the Agentic AI Foundation in August 2026.
+    in August 2026 the Agentic AI Foundation announced A2A was joining it as a hosted project.
 - **[Prompt engineering](3-engineer/prompt-engineering.md)** now opens with my view.
   - I no longer treat it as its own discipline: writing the text is one part of context
     engineering, and anything that must hold belongs in deterministic checks.

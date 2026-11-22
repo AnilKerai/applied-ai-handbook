@@ -38,12 +38,12 @@ flowchart TD
     R --> GR
     subgraph GR["Graders"]
         direction TB
-        G1["Code-based:<br/>deterministic,<br/>used first"]
-        G2["Model-based:<br/>tested against<br/>human marks"]
+        G1["Code-based:<br/>deterministic;<br/>use first"]
+        G2["Model-based:<br/>test against<br/>human marks"]
         G3["Human"]
         G1 ~~~ G2 ~~~ G3
     end
-    GR --> S["Score: pass^k<br/>across k trials,<br/>and what the<br/>eval reveals"]
+    GR --> S["Score, such as<br/>pass^k across<br/>k trials, and<br/>what the eval<br/>reveals"]
     S --> CH["Refine the eval,<br/>or change the<br/>model, the<br/>instructions,<br/>tools or code"]
     CH --> RR["Re-run<br/>the evals"]
 ```

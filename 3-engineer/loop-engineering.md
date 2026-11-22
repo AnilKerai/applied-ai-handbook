@@ -31,7 +31,7 @@ The diagram shows the four loops as a stack, from the agent loop inside one run 
 flowchart TD
     L1["1 · Agent loop,<br/>inside one run:<br/>the model calls<br/>tools until the<br/>task is complete"]
     L2["2 · Verification<br/>loop: checks<br/>the output and<br/>sends feedback<br/>when it<br/>falls short"]
-    L3["3 · Runs started<br/>by events:<br/>a new document,<br/>a schedule or<br/>a webhook<br/>starts the agent"]
+    L3["3 · Event-driven<br/>loop: a new<br/>document,<br/>a schedule or<br/>a webhook<br/>starts the agent"]
     L4["4 · Hill-climbing<br/>loop: uses<br/>traces of past<br/>runs to rewrite<br/>the harness with<br/>improved<br/>configuration"]
     L1 -- "wrapped in" --> L2 -- "wrapped in" --> L3 -- "wrapped in" --> L4
 ```
@@ -58,7 +58,7 @@ LangChain's second loop "checks the output and sends feedback back to the model 
 I recommend making that check deterministic, such as tests, wherever the task allows; see [Eval engineering](eval-engineering.md).
 
 **Start runs from events, not by hand.**
-In the third loop, "An event fires — a new document lands, a schedule triggers, a webhook arrives — and the agent runs."[4]
+In the third, event-driven loop, "An event fires — a new document lands, a schedule triggers, a webhook arrives — and the agent runs."[4]
 
 **Keep progress outside the context window.**
 In Lulla et al.'s description, the Ralph technique "works around the finite context window by restarting the agent with a fresh context in every iteration while persisting progress to the file system", the context window being the text a model can see at once.[3]

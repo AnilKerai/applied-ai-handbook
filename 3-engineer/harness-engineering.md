@@ -34,7 +34,7 @@ Lulla et al., citing Böckeler, name the two parts of a coding agent's harness: 
 
 This page covers one reliable run; running an agent many times is [loop engineering](loop-engineering.md), and measuring runs is [eval engineering](eval-engineering.md).
 
-The diagram shows one run: guides steer the model before it acts, sensors check the result of each tool call, and exit checks either feed back into the next step or end the run, as a final answer checked against its schema or as an unfinished result.
+The diagram shows one run: guides steer the model before it acts, sensors check its work after it acts, and exit checks either feed back into the next step or end the run, as a final answer checked against its schema or as an unfinished result.
 
 ```mermaid
 flowchart TD
@@ -46,8 +46,8 @@ flowchart TD
     SEN --> X{"Exit<br/>checks"}
     R -- "ended or<br/>cut off" --> X
     X -- "carry on: feedback<br/>for the next step" --> M
-    X -- "ended normally<br/>or goal verified" --> O["Final answer:<br/>structured<br/>output checked<br/>against the<br/>schema"]
-    X -- "cut off, budget hit<br/>or no progress" --> U["Unfinished:<br/>not a final<br/>answer"]
+    X -- "ended normally<br/>or goal met" --> O["Final answer:<br/>structured<br/>output checked<br/>against the<br/>schema"]
+    X -- "cut off or a<br/>hard limit hit" --> U["Unfinished:<br/>not a final<br/>answer"]
 ```
 
 ## When it arrived
