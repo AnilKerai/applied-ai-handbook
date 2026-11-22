@@ -42,6 +42,10 @@
         {
           "text": "It is not necessarily the most accurate answer.",
           "added": "2026-11-22"
+        },
+        {
+          "text": "A software programme that uses AI to become aware of its environment, process information, and take actions to achieve its goals, based on the inputted information.",
+          "added": "2026-11-22"
         }
       ]
     },
@@ -61,6 +65,14 @@
         },
         {
           "text": "On average across all the different hint types, Claude 3.7 Sonnet mentioned the hint 25% of the time, and DeepSeek R1 mentioned it 39% of the time.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "we subtly fed a model a hint about the answer to an evaluation question we asked it",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "We evaluated on multiple-choice quizzes, which are unlike real-world tasks",
           "added": "2026-11-22"
         }
       ]
@@ -226,6 +238,26 @@
         {
           "text": "Even though it does claim to have run a calculation, our interpretability techniques reveal no evidence at all of that calculation having occurred.",
           "added": "2026-11-22"
+        },
+        {
+          "text": "In the second, we look inside Claude 3.5 Haiku, performing deep studies of simple tasks representative of ten crucial model behaviors, including the three described above.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Claude will plan what it will say many words ahead, and write to get to that destination.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Instead, we found that Claude plans ahead.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Even on short, simple prompts, our method only captures a fraction of the total computation performed by Claude",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "But when asked to compute the cosine of a large number it can't easily calculate, Claude sometimes engages in what the philosopher Harry Frankfurt would call bullshitting—just coming up with an answer, any answer, without caring whether it is true or false.",
+          "added": "2026-11-22"
         }
       ]
     },
@@ -262,6 +294,10 @@
         {
           "text": "Which of the indicator properties listed in Table 1 are displayed by existing AI systems, including frontier generative language or multimodal models, language agents, and deep reinforcement learning agents?",
           "added": "2026-11-22"
+        },
+        {
+          "text": "Investigating in detail whether a representative sample of existing AI systems possess potential indicator properties – a project that has been begun [11] but is far from being completed",
+          "added": "2026-11-22"
         }
       ]
     },
@@ -277,6 +313,10 @@
         },
         {
           "text": "It should be obvious to Air Canada that it is responsible for all the information on its website. It makes no difference whether the information comes from a static page or a chatbot.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Air Canada argues it cannot be held liable for information provided by one of its agents, servants, or representatives – including a chatbot.",
           "added": "2026-11-22"
         }
       ]

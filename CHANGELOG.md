@@ -8,11 +8,13 @@ Newest first. Every correction lists what changed and the evidence.
   page of Understand and of the *New to AI* route.
   - It covers the kinds of AI you'll meet and how a chat assistant works: it predicts likely
     next words and doesn't look things up unless it's connected to search or your documents.
-  - It explains why it sounds sure when it's wrong, and what it is and isn't: not a person, no
-    reliable sense of when it's wrong, and the reasoning it shows isn't always how it got there.
+  - It explains why it sounds sure when it's wrong, and what it is and isn't: not a person, not
+    shown to be conscious and not accountable for its work. The reasoning it shows isn't always how
+    it got there.
   - It ends with three habits: brief it, check it, own it.
 - **[Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md):** the box
-  "Output listable in advance?" now asks "Is the answer a pick from a fixed list?", with examples.
+  "Output listable in advance?" now asks "Is the answer a pick from a fixed list?", and the bullet
+  below it explains the test with examples.
 
 ## 2026-11-21: talks are in the repository only
 
