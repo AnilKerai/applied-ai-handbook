@@ -342,6 +342,14 @@
         {
           "text": "can the output be listed in advance if no then it's a free form gener generative text problem statement go back to something that can generate free form text if yes then use jev",
           "added": "2026-11-22"
+        },
+        {
+          "text": "It must identify the kind of query, choose the right expert, select a follow-up suggestion, or judge whether a citation supports a claim.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The model supplies a score; the application still decides what confidence is enough to show an action.",
+          "added": "2026-11-22"
         }
       ]
     },

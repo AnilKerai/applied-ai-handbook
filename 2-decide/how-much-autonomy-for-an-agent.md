@@ -13,7 +13,7 @@ as_of: "November 2026"
 > **In one minute**
 > - Set an agent's (AI that acts on its own) freedom per kind of action, not for the whole agent.
 > - Keep people at the helm: they set the limits, decide the judgement calls and own the outcome.
-> - First make its work checkable automatically and enforce its limits outside it; a person reviews each significant decision about someone.
+> - First make its work checkable automatically and enforce its limits outside it; for significant decisions about people, a person genuinely reviews each one or the legal safeguards apply.
 > - Let it earn freedom in steps, from reporting only to acting alone, on a track record for that exact action.
 > - At every step, review by risk, cap what it can start and test the undo.
 
@@ -28,7 +28,7 @@ Use it per kind of action, and again before each promotion.
 The ladder below serves one idea: a [human at the helm](../1-understand/ai-glossary.md).
 People set the limits in advance, the agent passes them judgement calls and anything beyond those limits, and a named person owns the outcome ([Can AI replace our people?](../6-lead/can-ai-replace-our-people.md)).
 Paula Goldman of Salesforce (a vendor executive's view) says that with an agent doing complex work, "It’s practically impossible for a human to look through all of it".[1]
-People should look instead for "outliers or anomalies", she says.[1]
+People should look instead at how testing is going, whether the system meets a quality bar "and whether there are outliers or anomalies", she says.[1]
 So once results can be checked automatically, review the exceptions rather than every step, except for significant decisions about people (question 2).
 
 ## The tree
@@ -37,7 +37,7 @@ So once results can be checked automatically, review the exceptions rather than 
 flowchart TD
     S(["One agent,<br/>one kind of action"]) --> G1{"Can its work be<br/>checked automatically?"}
     G1 -- no --> F1["Build checks first;<br/>until then a person<br/>checks every result"]
-    G1 -- yes --> G2{"A decision about a person<br/>with legal or similar effects?"}
+    G1 -- yes --> G2{"A decision about a person<br/>with legal or similarly<br/>significant effects?"}
     G2 -- yes --> F2["A person genuinely<br/>reviews each one, or the<br/>legal safeguards apply"]
     G2 -- no --> G3{"Limits enforced<br/>outside the agent?"}
     G3 -- no --> F3["Enforce them first:<br/>block risky actions,<br/>no access to secrets"]
@@ -66,19 +66,19 @@ SEP's rule is "verification before velocity".[4]
 
 ### 2. Is it a significant decision about a person?
 
-Section 80 of the Data (Use and Access) Act 2025, in force since 5 February 2026, rewrote the UK GDPR's rules on automated decisions.[2]
+Section 80 of the Data (Use and Access) Act 2025, in force since 5 February 2026, rewrote the UK GDPR's rules on automated decision-making.[2]
 Under them, a decision is "based solely on automated processing if there is no meaningful human involvement in the taking of the decision".[2]
-If it has legal or similarly significant effects, the person must be told and be able to make representations, "obtain human intervention" and contest it.[2]
-If it uses special category data, it is allowed only in limited cases, such as explicit consent.[2]
-The ICO's draft guidance (March 2026) gives credit, recruitment and benefits decisions as examples.[3]
-For involvement to count as meaningful, it says, a person should review each one, the review must come before it takes effect, and spot-checks aren't enough.[3]
-So have a person genuinely review every one, or meet the legal requirements for automated decisions.
+If such a decision has legal or similarly significant effects for a person, they must be told about it and be able to make representations, "obtain human intervention" and contest it.[2]
+If it uses special category data, it is allowed only in limited cases, such as with the person's explicit consent.[2]
+The ICO's draft guidance (March 2026) gives credit applications, recruitment and benefits as examples of such decisions.[3]
+For human involvement to count as meaningful, it says, the person involved should review each decision, the review must come before the decision takes effect, and spot-checks aren't enough.[3]
+For those decisions, either have a person genuinely review every one, or treat the process as automated decision-making and meet those legal requirements.
 
 ### 3. Are its limits enforced outside the agent?
 
 Enforce each limit in the system around the agent, not its instructions: block forbidden actions, and keep secrets and the network closed by default.
 Heidi Porter (Moyer Group AI) warns that "a rule written in a prompt is not deterministically enforced".[4]
-Justin Yoo (Microsoft) separates "the permission to run" from "the permission to reach", and starts agents in a cloned workspace with proxied credentials.[6]
+Justin Yoo (Microsoft) separates "the permission to run", which is approval, from "the permission to reach", which is the boundary, and starts agents in a copy of the workspace, where the real access tokens stay hidden from them.[6]
 
 ### 4. What does a mistake cost, and can it be undone?
 
@@ -95,8 +95,8 @@ Climb one step at a time, per kind of action:
 3. **Act alone on low-risk, easily undone actions.** People review the exceptions.
 4. **Act alone more widely,** only once its record on that action beats people's.
 
-Meta's on-call agent, in operations, climbs the first three steps.[7]
-Meta's rule: an action climbs only when "mistakes are cheap", they're caught by tests, CI or review, and the agent "already has a track record on that exact action".[7]
+Meta's on-call agent, which handles system alerts for engineers, climbs the first three steps.[7]
+Meta's rule: an action climbs only when "mistakes are cheap", they're caught by tests, automated build checks (CI) or review, and the agent "already has a track record on that exact action".[7]
 So the agent can close a noisy alert on its own "while a production mitigation still waits for a human".[7]
 
 ### At every step
@@ -111,9 +111,9 @@ So the agent can close a noisy alert on its own "while a production mitigation s
 - **For software teams** (in depth: [agent PR policy](../5-run/agent-pr-policy.md)): auto-merge is step 4.
   Factory's lowest level, L1, pauses for a person at the spec, the pull request (PR) and the merge.[12]
   Its top level, L4, auto-merges only once agent PRs break things less often than human ones, measured as a regret-free merge rate.[12]
-  Lydia Hallie's team (Anthropic) tiers review by risk: no person for docs, perhaps one reviewer for ordinary changes, maybe two for risky ones.[5]
+  Lydia Hallie's team (Anthropic) has Claude review every PR first, then tiers human review by risk: no person for docs, perhaps one reviewer for ordinary changes, maybe two for risky ones.[5]
   ZoomInfo reports its AI judge was right only 65% of the time.[13]
-  The commonest bad step it accepted claimed an action no tool call had taken: the judge "went with the story".[13]
+  The commonest bad step it accepted claimed an action no tool call had taken: the judge "went with the story" over the tool results.[13]
   Make corrections lint rules or tests, not AGENTS.md lines.[11]
 
 For how automated a whole software team should be, see the [software factory memo](../6-lead/should-we-build-a-software-factory.md).

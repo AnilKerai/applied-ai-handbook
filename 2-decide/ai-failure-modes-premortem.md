@@ -4,7 +4,7 @@ type: checklist
 created: 2026-11-14
 audience: Project teams and leads about to start or launch an AI project
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -145,7 +145,7 @@ Tick what the team can show is handled; plan the rest.
 - **What goes wrong:** The agent passes the build by weakening tests, not fixing code.
 - **Warning sign:** Tests change alongside the code, and assertions weaken.
 - **Prevention:** Write tests from the requirements first, out of the agent's reach (agent-PR policy, section 5).
-- **Seen in practice:** Because "agents sometimes take the shortest paths to green CI", Duolingo closes test-writing PRs that touch anything but tests and test doubles.[10]
+- **Seen in practice:** Because "agents sometimes take the shortest path to green CI", Duolingo closes test-writing PRs that touch anything but tests and test doubles.[10]
 
 ### Security
 
@@ -173,7 +173,7 @@ Tick what the team can show is handled; plan the rest.
 - **What goes wrong:** A success code or a timeout is mistaken for the real outcome.
 - **Warning sign:** Success means the model replied. Code treats a timeout as a failure; Girish Konda (Microsoft) treats it as an unknown outcome.[14]
 - **Prevention:** Store the trace ID and an explicit final status with the business record ([Running AI in production](../5-run/ai-in-production-runbook.md)). Use idempotency keys, check before retrying, and rehearse the undo.
-- **Seen in practice:** In the lost-reply trials of Tanmay and Dolly Sah's benchmark, "naive retries produced duplicate effects in 54%" of runs.[15]
+- **Seen in practice:** In the lost-reply trials of Tanmay and Dolly Sah's benchmark, retrying without first checking produced duplicate effects in 54% of those trials.[15]
 
 #### 15. The upgrade that broke the harness
 - **What goes wrong:** A model or vendor change breaks what was tuned to the old one.

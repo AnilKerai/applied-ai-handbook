@@ -20,14 +20,14 @@ as_of: "November 2026"
 
 ## The kinds of AI you'll meet
 
-- **Chat assistants** simulate a conversation. The judges' guidance gives ChatGPT, Google Gemini and Meta AI as examples,[1] and Anthropic's Claude is another.[15]
+- **Chat assistants** simulate a conversation.[1] Guidance for judges in England and Wales gives ChatGPT, Google Gemini and Meta AI as examples,[1] and Anthropic's Claude is another.[15]
   They run on [large language models (LLMs)](ai-glossary.md).
 - **Reasoning models** write out their steps before answering; in Anthropic's words, they "show their working".[2]
 - **Image, voice and video generators** make pictures, speech and video; OpenAI calls Sora 2 its "flagship video and audio generation model".[3]
 - **AI built into everyday tools** includes Microsoft's Copilot in Outlook, Teams, Word, Excel and PowerPoint, which can draw on the web and an organisation's own data (Microsoft's documentation).[4]
 - **[Agents](ai-glossary.md)** use AI to take actions towards a goal, not only to answer.[1]
-- **[Decision models](ai-glossary.md)** don't write text: they pick one answer from a fixed list, such as yes or no or which team gets a request, and say how sure they are.[16]
-  Glean uses one, Jev, whenever a step's answers can be listed in advance, and Simon Willison notes Google and OpenAI joining Jev "in the decision model category".[16][17]
+- **[Decision models](ai-glossary.md)** don't write text: they pick one answer from a fixed list, such as yes or no, or which expert should answer a question, and say how sure they are.[16]
+  Glean's rule is to use one, Jev, when a step's answers can be listed in advance, and Simon Willison notes Google joining Jev and OpenAI "in the decision model category".[16][17]
   See [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
 - **Classic machine learning** is the older kind, trained on data "to make classifications or predictions".[1]
   AI is already in general use in search engines' auto-fill, social media feeds and predictive text.[1]

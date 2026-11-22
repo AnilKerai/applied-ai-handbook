@@ -59,7 +59,13 @@
       "id": 10,
       "url": "https://ai.engineer/code/2026/talks/online-duolingo-tests",
       "title": "Kush Agrawal (Duolingo), Duolingo's Test-Writing Agent Is a Pull-Request Lifecycle, Not a Prompt, AI Engineer Code Summit 2026",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "But agents sometimes take the shortest path to green CI.",
+          "added": "2026-11-22"
+        }
+      ]
     },
     {
       "id": 11,
@@ -89,7 +95,17 @@
       "id": 15,
       "url": "https://ai.engineer/code/2026/talks/online-undo-button",
       "title": "Tanmay Sah & Dolly Sah (organisation not stated), An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AI Engineer Code Summit 2026",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "They also report duplicate effects in 54% of the relevant retry trials.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Retrying the same operation can create a duplicate.",
+          "added": "2026-11-22"
+        }
+      ]
     },
     {
       "id": 16,

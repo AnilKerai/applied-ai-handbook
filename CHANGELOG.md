@@ -9,9 +9,12 @@ Newest first. Every correction lists what changed and the evidence.
   - The tick-list now comes straight after "How to run the pre-mortem".
   - Failure modes are grouped into *Any AI project* and *If it's an agent that takes actions*,
     and overlapping ones are merged (23 became 17).
-  - Each mode has one shape: what goes wrong, a warning sign, a prevention and one example seen
-    in practice.
+  - Each mode has one shape: what goes wrong, a warning sign, a prevention and what was seen in
+    practice.
   - Examples that were dropped still appear on other pages of the handbook.
+  - Two quotes are corrected against the cited talks. Duolingo's now reads "shortest path to green
+    CI", and the UndoBench retry figure is paraphrased, because the talk's captions don't carry the
+    quoted words.
 - **[How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)**
   is rewritten for anyone about to let an AI agent act, not only software teams.
   - It has four gates: checkable work, decisions about people, limits enforced outside the
@@ -19,7 +22,7 @@ Newest first. Every correction lists what changed and the evidence.
   - Then a four-step ladder, from reporting only to acting alone, with people at the helm.
   - Coding specifics such as auto-merge and review tiers are in one *For software teams* point.
   - SEP's six constraints, which are about how automated a whole team should be, are in
-    [Should we build a software factory?](6-lead/should-we-build-a-software-factory.md).
+    [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md).
   - Sources are now numbered.
 - **Model + harness + evals:** my shorthand, model + harness = an agent and model + harness + evals
   = an agent you can trust in production, is now on [The big picture](3-engineer/the-big-picture.md),
@@ -36,7 +39,7 @@ Newest first. Every correction lists what changed and the evidence.
 - **New: [What modern AI is, in plain English](1-understand/what-modern-ai-is.md),** now the first
   page of Understand and of the *New to AI* route.
   - It covers the kinds of AI you'll meet and how a chat assistant works: it predicts likely
-    next words and doesn't look things up unless it's connected to web search or your documents.
+    next words and doesn't look things up unless it's connected to search or your documents.
   - It explains why it sounds sure when it's wrong, and what it is and isn't: not a person, not
     shown to be conscious and not accountable for its work. The reasoning it shows isn't always how
     it got there.
