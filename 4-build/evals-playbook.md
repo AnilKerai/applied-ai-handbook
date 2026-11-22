@@ -94,7 +94,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Decision models as graders.**
 - ZoomInfo's typed decision model (Jev) was confident on about 7 in 10 of the same steps; among those, it caught 74 of the 82 bad steps the LLM judge had accepted. Uncertain cases still go to the LLM (ZoomInfo's figures).[13]
 - Glean says its citation-checking decision model was consistent enough that repeat runs weren't needed: only one run differed across about 30 use cases (Glean's claim).[19]
-- Newer evidence cuts the other way: in SO-Arena the best-performing decision model was only seventh for reliability.[10] I'd give a decision-model grader the same calibration, including cases where no option is right.
+- Newer evidence cuts the other way: in SO-Arena (section 3), the best-scoring decision model was not the most reliable.[10] I'd give a decision-model grader the same calibration, including cases where no option is right.
 
 ## 5. Measurement rigour
 
@@ -197,7 +197,7 @@ Re-run the full set and compare against the last baseline whenever one of these 
 ## 9. Pitfalls
 
 - **Trusting the average.** It hides the bad result.[1]
-- **An unmeasured judge.** ZoomInfo's was right 65% of the time, which Kennedy likened to a coin flip.[13]
+- **An unmeasured judge.** Kennedy likened ZoomInfo's judge, once measured (section 4), to a coin flip.[13]
 - **Evals that cannot fail.** Barlow breaks something on purpose before trusting a green suite.[26] Sumner: "it's really easy to fool yourself that it's finding bugs when it's not finding bugs."[22]
 - **Letting the agent edit its checks.** It may take the shortest path to green.[3]
 - **Cases written by a proxy.** Developers or product owners guessing on users' behalf can miss what workers know.[1]

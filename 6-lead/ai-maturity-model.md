@@ -52,10 +52,10 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 - **Looks like:** agents take roles under an orchestrator, and the team supplies intent and context.[1] Autonomy rises per action from L2 to L3.
 - **Prerequisites:** SEP's six constraints (token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight) are loose enough; SEP ties more autonomy to looser constraints but sets no threshold.[1] SEP's team rebuilding a credit union's mobile banking app had no real token limit and strong backing, and reported a "six x reduction of effort" (SEP's figure).[1]
 - **Exit criteria, per action:**
-  - Meta's test: "How costly is a mistake and how easy is it to catch?"[3]
+  - Meta's test: what a mistake would cost, and how easily it would be caught ([How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)).[3]
   - Factory's L4 bar: agent changes break things less often than human ones, measured by "the regret-free merge rate, the share of changes that merge and never need a revert or a follow-up fix."[4]
   - The merge gate judges recorded evidence against written criteria.[2]
-- **Risks:** review becomes the bottleneck, and fixing it moves the bottleneck elsewhere.[1] Slop at scale: Lauren Tan warns that "if your inner coding loop produces slop, then automating that loop just produces more slop".[6] Steve Yegge found "the more agents I deploy, the more humans I need."[7]
+- **Risks:** review becomes the bottleneck, and fixing it moves the bottleneck elsewhere.[1] Slop at scale: Lauren Tan warns that "if your inner coding loop produces slop, then automating that loop just produces more slop".[6] Steve Yegge found that the more agents he deployed, the more people he needed.[7]
 
 ### E4: Dim factory
 
@@ -75,24 +75,24 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 
 ### B2: Governed pilots
 
-- **Looks like:** a few pilots, each with a charter, an owner and evals. Don Barger's charter came "before we ever write one line of code", and he asks "what will we never do?"[11] For Lay, "accountability can't be delegated" to AI, and data has named stewards.[11]
+- **Looks like:** a few pilots, each with a charter, an owner and evals. Don Barger's charter came "before we ever write one line of code", and he asks "what will we never do?"[11] For Lay, accountability can't be handed over to AI, and data has named stewards.[11]
 - **Prerequisites:** build *with* the people who do the job, from a deliberately rough version they can correct (Kevin Solorio).[1] Beutler's three phases cover buy-in, the right solution and production costs.[12]
-- **Exit criteria:** evals on real cases built with users, because, as Kevin Solorio puts it, "an agent without evals is a proof of concept".[1] A known cost to reverse, and an owner with what Mark Lay calls "the capacity to keep running what they deployed".[11]
+- **Exit criteria:** evals on real cases built with users, because, in Kevin Solorio's view, without evals an agent is still only a proof of concept.[1] A known cost to reverse, and an owner with what Mark Lay calls "the capacity to keep running what they deployed".[11]
 - **Risks:** a tool that crosses the never list; Barger turned down an AI counsellor because "Something can be worse than nothing if you're doing the wrong things."[11]
 
 ### B3: AI inside workflows
 
 - **Looks like:** fixed orchestration, with an LLM only for the fuzzy step.
   - Porter picks rules, ML, a decision model or an LLM per task. In Syngenta's seed tool the LLM is "the interface, the router, and the explainer, not the agronomist".[1]
-  - Chinmay Goyal asks "can the output be listed in advance?" If yes, Glean uses a decision model.[13] In UiPath's fraud demo, a decision model calls in an agent only when it lacks the evidence to decide.[14]
+  - Chinmay Goyal asks whether the output can be listed in advance. If yes, Glean uses a decision model.[13] In UiPath's fraud demo, a decision model calls in an agent only when it lacks the evidence to decide.[14]
   - AeroCore's agent took off once it was in Microsoft Teams ("No one likes an extra login.").[11]
-- **Prerequisites:** good enough data, plus guardrails, evals and observability. Guardrails go in code, since, as Porter warns, "a rule written in a prompt is not deterministically enforced".[1]
-- **Exit criteria:** live results are sampled and failures fed back into evals (Solorio's flywheel); worst cases are reviewed, because, as Porter says, "averages can hide a bad result".[1] Gains are measured against a baseline.
+- **Prerequisites:** good enough data, plus guardrails, evals and observability. Guardrails go in code, since Porter warns that a rule written in a prompt is not guaranteed to be enforced.[1]
+- **Exit criteria:** live results are sampled and failures fed back into evals (Solorio's flywheel); worst cases are reviewed, because Porter warns that averages can mask a bad result.[1] Gains are measured against a baseline.
 - **Risks:** vendor churn. At Noblis an upgrade broke every app built on the old version.[11]
 
 ### B4: Bounded agents under the execution dial
 
-- **Looks like:** each action is set on Porter's dial. A person approves consequential, uncertain actions; high-volume work acts above a confidence threshold; time-sensitive work gets an undo window. Porter's advice is to "automate outright only what is cheap to undo".[1] Meta's on-call ladder is the operations version.[3]
+- **Looks like:** each action is set on Porter's dial. A person approves consequential, uncertain actions; high-volume work acts above a confidence threshold; time-sensitive work gets an undo window. Porter's advice is to reserve full automation for actions that are cheap to undo.[1] Meta's on-call ladder is the operations version.[3]
 - **Prerequisites:** see [What must be true before AI agents can act in production?](before-agents-act-in-production.md). For Porter, failing evals block promotion.[1]
 - **Exit criteria:** a track record per action, a tested undo, and a review load people can sustain.
 - **Risks:** reviewers facing thousands of items can fall into what Porter calls "rubber stamping fatigue".[1] Barger's personal takeover of critical conversations stopped being practical as usage grew.[11]
@@ -132,12 +132,12 @@ A recommendation; swap in each team's own examples.
 
 - **Independent data tempers throughput expectations.**
   - Ars Technica reported that Fiona Chen and James Stratton's Harvard study of Jellyfish engineering data first covered over 700 firms to March 2026.[17] In that version agents raised lines of code 30% and pull requests 23%, with no significant change in resolved issues, while review time rose 49%.[17]
-  - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 44.0% more lines (marginally insignificant), 35.7% more pull requests, a borderline-significant 13.7% rise in resolved issues, and 56.1% longer from review submission to approval.[16]
+  - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 35.7% more pull requests and a borderline-significant 13.7% rise in resolved issues, with review approval taking longer ([the software factory memo](should-we-build-a-software-factory.md) has every figure).[16]
   - The study is observational, based on adoption timing.[16] In my reading, the revision softens October's no-change finding, but code still far outruns delivered work, and both versions back SEP and Finch on review as the limit. So we should treat SEP's six-fold and vendor figures as best cases, not plans.
 - **Risk-tiered review is documented practice.** The Claude Code team sets human approvals with a risk classifier, and reports merged PRs more than doubling over June–September as the revert share fell over 40% (vendor figures).[18]
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
-- **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and cases where none of the fixed answers fits.
+- **Accuracy is not reliability.** In SO-Arena, the best-performing decision model was not the most reliable ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and cases where none of the fixed answers fits.
 - **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism chosen for a task can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).

@@ -1,0 +1,339 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "And you pick that step per task, not per project.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "It's whether it's good enough for the task you're doing.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Is it accurate complete? There's a whole list here. Is it consistent?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "But, you know, if the data is stale, it'll throw an error and just quietly give you the wrong answers.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So when there's an LLM in the loop, you need to ground it in your data at runtime, and we talk about systems of records.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So if you know the steps, you probably just wanna use a fixed workflow with programming.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "or you can have an agentic architecture where the agent works and is constrained and bounded by your cost or time",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So the person asks the question in plain language, and then LLM interprets it.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The LLM does not do agronomy.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So in this case, the LM is the interface, the router, and the explainer, not the agronomist.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "the criteria it uses are a rubric that the institution owns",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So if it's consequential uncertain actions, a person approves it.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Time sensitive work, act now and give a person a window to veto or undo it, and automate outright only what is cheap to undo.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And so you should make actions reversible where you can and where you can't require approval before they run and be careful of that human fatigue.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "don't just look at the averages because averages can hide a bad result",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "a rule written in a prompt is not deterministically enforced.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "an agent without evals is a proof of concept. And this doesn't matter what infrastructure it's been deployed onto.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "if you have a dataset that you want them to label, give them a Google spreadsheet, they can go and label it on their own time",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So this is where you're gonna want to start creating those data flywheels.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The big thing here, keep the loop running.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows; Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Before we ever write one line of code, let's come up with a charter about what we believe AI is.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So the things that we said no to for us were really important, was AI presenting itself as a human in ministry.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Final decisions about people that would be made solely by AI, We don't ever want to see that.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Monitoring people without their knowledge, that's happening all around us.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Autonomous actions in high risk and high stakes context",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "I don't want it to do counseling because I really think that people need to be interacting with other people.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Can you help us build an AI chatbot that would basically become their counselor?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And my response was, Something can be worse than nothing if you're doing the wrong things.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "I would say that you should evaluate against trust, not just feasibility.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "On the reward side, you're trying to get something better or something more efficient. And if you don't get either of those, you really shouldn't put it in AI.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And what's the consequence of that error?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "But with AI, we should not be delegating accountability. So somewhere up the chain in the RACI chart for the A, there always needs to be a person.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And then the second piece of it is, once you know that, can you reverse it?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "What's the cost of reversing it?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "do they have the capacity to keep running what they deployed?",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Agent goes in, scans all the pictures, verifies it against the information put in into the app.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Compare and flag.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "That's the exact prompt that I wrote.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://ai.engineer/code/2026/talks/uipath",
+      "title": "Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "So you have deterministic calls and clear cognitive decision points where you would use an LLM to control the control flow rather than leaving it all in the hands of an agent.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "In parallel, another decision asks whether the available evidence is sufficient to resolve the main case.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "It is not. That answer activates the more expensive investigation path rather than forcing a premature conclusion.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450",
+      "title": "Luis Quintanilla (Microsoft), The .NET AI Stack: What's New, What's Next, and How It Fits Together, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "It stitches it together using standard code, right? So there's no AI at that point uh to produce the film.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "can the output be listed in advance if no then it's a free form gener generative text problem statement go back to something that can generate free form text if yes then use jev",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "with something like Jev we get no generated text output.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "We get like hey these were the five options and these are the probabilities of these five options.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "are labels stable and volume high if this is the case where the labels are stable which is rarely the case anymore uh you can also fine-tune a model",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Obviously if you need dynamic text we can like feel free to try out more hybrid approaches like jev along with uh free form text lms.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://ai.engineer/code/2026/talks/michelle-chen",
+      "title": "Michelle Chen (Cloudflare), cloudflare is a neolab, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Clef Flash prunes the available set from forty tools to ten.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Claric extracts values such as the pull-request number instead of spending a generative round trip on them.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Tool definitions and raw results repeatedly enter the context.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/diogo-almeida",
+      "title": "Diogo Almeida (TypeSafe AI), Beyond Better Assistants: Software That Can Make a Decision, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "his objection is to treating a good assistant as if it were already a dependable automation component.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "RHF in particular is why all AI today does require a human in the loop",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.youtube.com/watch?v=FYGBT08-N48&t=5",
+      "title": "Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, .NET Conf 2026",
+      "accessed": "2026-11-22"
+    },
+    {
+      "id": 9,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176",
+      "title": "Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "a rule in an agent's instructions is just a suggestion.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "I policy is code is enforced by the compiler.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809",
+      "title": "Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 2), .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "I can govern my models and my tools the same way",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "You put an alias in between your model and your tools.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://www.youtube.com/watch?v=TF6qzdKwl84&t=639",
+      "title": "Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "I can log it to telemetry as well as persist it in my database for to to have a durable correlation value.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Foundry call also gave me 200. So now I need to see why the recommendations were not persisted.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So the success condition for any workflow that we build, for any business requirement that we have is not that the the answer the agent has returned an answer. It's if the application actually committed",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558",
+      "title": "Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "so that whenever there's failures whenever there's crashes whenever there's restarts we don't lose where we are.",
+          "added": "2026-11-22"
+        }
+      ]
+    }
+  ]
+}

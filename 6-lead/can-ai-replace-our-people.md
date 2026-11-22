@@ -81,7 +81,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 - **A vendor executive's view.** Paula Goldman of Salesforce describes "human at the helm": people who "set parameters in advance" and a system that escalates what "requires judgment or goes outside those parameters".[20]
   She says "Even judgment is a little blurry", though human judgement matters more.[20]
 - **One bank's practice, in his words.** Gautham Pallapa of Scotiabank says he tells teams "we're not here to replace people".[21]
-- **Practitioners' views.** Mark Lay of Noblis argues "accountability can't be delegated" to AI; Steve Yegge says "the more agents I deploy, the more humans I need".[22][23]
+- **Practitioners' views.** Mark Lay of Noblis argues "accountability can't be delegated" to AI; Steve Yegge finds that the more agents he deploys, the more people he needs ([Should we aim for a fully automated software factory?](should-we-build-a-software-factory.md)).[22][23]
 
 ## Risks and what would change this advice
 

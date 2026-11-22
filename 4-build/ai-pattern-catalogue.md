@@ -123,8 +123,8 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Use when:** breaking the rule would matter. **Avoid when:** it is a style preference.
 - **Pitfalls:** guards that fail open; unreviewed guardrails written by an agent.[20]
 - **Seen at:**
-  - Porter: "a rule written in a prompt is not deterministically enforced".[1]
-  - Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion." He moved deploy policy into C# types and checks, so breaches fail before deployment.[20]
+  - Porter warns that a rule written in a prompt is not guaranteed to be enforced.[1]
+  - Cam Soper (Pulumi) concluded that a rule in an agent's instructions is no more than a suggestion. He moved deploy policy into C# types and checks, so breaches fail before deployment.[20]
   - Microsoft's AI Gateway applies per-client budgets, policies and hooks outside the agent's reach.[14] Nick Kuhn's (VMware Tanzu) abstract binds agents to tools through a governed MCP gateway.[21]
   - Newer evidence: Claude Code hooks can now fail closed.[22]
 
@@ -135,7 +135,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Use when:** the AI changes anything. **Avoid when:** it only reads and reports.
 - **Pitfalls:** approval on everything; thresholds never re-tuned.
 - **Seen at:**
-  - Porter's dial ends: "automate outright only what is cheap to undo".[1]
+  - Porter's dial ends by reserving full automation for actions that are cheap to undo.[1]
   - Gerald Versluis (Microsoft): "So every tool stages an action. It doesn't touch the UI itself." Tools act through the app's own code, and removals asked the user to confirm first.[23]
   - Yvonne Carlson (ExploreGod) calls for approval before anything destructive (abstract only).[24] Glean tunes decision thresholds per deployment.[3]
 
@@ -146,7 +146,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Use when:** agents run code, read untrusted documents or change a codebase. **Avoid when:** the agent only calls a few vetted, read-only APIs.
 - **Pitfalls:** trusting egress defaults: Yoo's cloud sandbox allowed all outbound traffic by default,[25] Yuknewicz's denied it;[26] assuming the sandbox is enough.
 - **Seen at:**
-  - Justin Yoo (Microsoft) separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". His sandbox saw only a proxied token.[25]
+  - Justin Yoo (Microsoft) separates the permission to run, on the approval side, from the permission to reach, on the boundary side. His sandbox saw only a proxied token.[25]
   - Paul Yuknewicz (Microsoft): "I'm actually going to sandbox the tool because the tool is dangerous."[26]
   - Newer evidence qualifies this: Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache,[27] and a Claude Code release fixed a sandbox bypass.[28]
 
@@ -191,7 +191,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Use when:** incidents recur and tests, CI or review can catch mistakes. **Avoid when:** nothing would catch them.
 - **Pitfalls:** promoting the agent wholesale; ops queries nobody audits.
 - **Seen at:**
-  - Meta's ladder runs L1 investigate, L2 draft with approval, L3 low-criticality work alone. Its test: "How costly is a mistake and how easy is it to catch?"[31]
+  - Meta's ladder runs L1 investigate, L2 draft with approval, L3 low-criticality work alone. Its test is how costly a mistake would be and how easy it would be to catch.[31]
   - Microsoft's SRE Agent shows its queries: "it's good to look at those queries and second guess the agent".[14]
 
 ### 16. Branchable infrastructure for agents

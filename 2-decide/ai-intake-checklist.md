@@ -61,7 +61,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Mark Lay (Noblis) starts with the reward: a better or more efficient result, "and if you don't get either of those, you really shouldn't put it in AI". Barger adds: judge ideas "against trust, not just feasibility".[2]
 - **Red flags:** No baseline for today's cost or quality, or the benefit is simply that it uses AI.
-- **What a good answer looks like (industry practice):** Measure the outcome, not activity. In a Harvard study of 655 firms, coding agents raised pull requests by 35.7% but resolved issues by only 13.7% (borderline significant), as time to review approval rose 56.1% (observational data to August 2026).[13]
+- **What a good answer looks like (industry practice):** Measure the outcome, not activity. In a Harvard study of 655 firms, coding agents raised pull requests far more than resolved issues, while reviews took longer to approve (observational data to August 2026; figures in [Working with coding agents](../4-build/working-with-coding-agents.md#1-the-mindset-you-own-the-outcome)).[13]
 
 ### 3. Which named person is accountable for every output?
 
@@ -85,7 +85,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** This is Glean's test: "can the output be listed in advance?" If so, use a decision model that returns choices with probabilities and no text, or a fine-tuned classifier when labels are stable and volume is high.[4]
 - **Red flags:** A chat model's yes, no or category is parsed from its text. The categories change often, yet the plan is to fine-tune.
-- **What a good answer looks like (industry practice):** Decision models have become mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: SO-Arena tested 21 models, and the best-performing decision model ranked only seventh for reliability, such as spotting when no option fits.[18]
+- **What a good answer looks like (industry practice):** Decision models have become mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: in SO-Arena's test of 21 models, the best-performing decision model was not the most reliable, for example at spotting when no option fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[18]
 
 ### 7. Do we know the steps in advance?
 
@@ -95,21 +95,21 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 ### 8. What does a mistake cost, and how would we undo it?
 
-- **Why it matters:** Porter sets autonomy like a dial, by consequence, confidence and reversibility, and automates outright "only what is cheap to undo".[1] Meta's test for more autonomy is "How costly is a mistake and how easy is it to catch?"[5]
+- **Why it matters:** Porter sets autonomy like a dial, by consequence, confidence and reversibility, and reserves full automation for actions that are cheap to undo.[1] Meta's test for more autonomy is how costly a mistake would be and how easy it would be to catch.[5]
 - **Red flags:** *A person will check everything*, at volumes where reviewers can fall into "rubber stamping fatigue".[1] Nobody has tested the undo, although "A timeout tells us that the response didn't arrive, not that the operation failed."[6]
 - **What a good answer looks like (industry practice):** The Claude Code team's PR template asks how to undo each change, and low, medium and high risk need none, one or two human approvals.[14] Porter's fatigue warning now has a number: Anthropic reports users approve 93% of permission prompts.[21]
 
 ### 9. Where do the guardrails live?
 
-- **Why it matters:** "A rule written in a prompt is not deterministically enforced"; a real guardrail is a gate, a check, a human or a limit in code.[1] Cam Soper (Pulumi) found "a rule in an agent's instructions is just a suggestion", and Azure's AI Gateway runs guardrails in hooks outside the agent's reach.[7][8]
+- **Why it matters:** "A rule written in a prompt is not deterministically enforced"; a real guardrail is a gate, a check, a human or a limit in code.[1] Cam Soper (Pulumi) found that a rule in an agent's instructions is no more than a suggestion, and Azure's AI Gateway runs guardrails in hooks outside the agent's reach.[7][8]
 - **Red flags:** Safety rules exist only in the prompt. The agent holds standing credentials, against Yvonne Carlson's call for least privilege and time-bound credentials.[9] Destructive actions run unconfirmed; in Gerald Versluis's (Microsoft) design, "every tool stages an action".[10]
 - **What a good answer looks like (industry practice):** Guardrails fail closed: Claude Code hooks can now be set to block an action when the check itself fails.[22] No agent session gets private data, untrusted input and an outbound channel together (Simon Willison's *lethal trifecta*), and a blocked agent should be expected to seek another route, as Anthropic found Claude doing.[23][24]
 
 ### 10. Do we have evals on real cases, built with the users?
 
-- **Why it matters:** Kevin Solorio (Focused): "an agent without evals is a proof of concept". He has workers label outputs themselves, not via a proxy, then after launch scores sampled live traces and feeds failures back into the test set.[1]
-- **Red flags:** *The demo looked good.* Developers or a product owner wrote the test cases. Only averages are reported, though Porter warns that "averages can hide a bad result".[1]
-- **What a good answer looks like (industry practice):** Evals grow from real failures: the Claude Code team runs its reviewer daily against past PRs that caused incidents, and NVIDIA's NeMo tools mine stored traces for failures and help a coding agent write evals for them, a tool-assisted version of Solorio's flywheel.[14][25] AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it had no way to check its results; with a spec and a test environment it took about two hours (AWS's account).[26]
+- **Why it matters:** Kevin Solorio (Focused) counts any agent without evals as a proof of concept. He has workers label outputs themselves, not via a proxy, then after launch scores sampled live traces and feeds failures back into the test set.[1]
+- **Red flags:** *The demo looked good.* Developers or a product owner wrote the test cases. Only averages are reported, though Porter warns that averages can mask a bad result.[1]
+- **What a good answer looks like (industry practice):** Evals grow from real failures: the Claude Code team runs its reviewer daily against past PRs that caused incidents, and NVIDIA's NeMo tools mine stored traces for failures and help a coding agent write evals for them, a tool-assisted version of Solorio's flywheel.[14][25] AWS's Swami Sivasubramanian reports an agent rebuilding a replication engine far faster once it had a spec and a test environment to check its results against (AWS's account).[26]
 
 ### 11. Can we trace a business outcome back to what the AI did?
 
@@ -121,7 +121,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Lay asks what reversing a deployment would actually cost, and "do they have the capacity to keep running what they deployed?"[2]
 - **Red flags:** One enthusiast built it and nobody has agreed to run it. There is no rollback plan.
-- **What a good answer looks like (industry practice):** Re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 under a different model.[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode was due to end on 30 November 2026, with no fallback.[29]
+- **What a good answer looks like (industry practice):** Re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness's score fell sharply under a different model ([Evals playbook](../4-build/evals-playbook.md#8-when-to-re-run)).[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode was due to end on 30 November 2026, with no fallback.[29]
 
 ## Outcomes
 

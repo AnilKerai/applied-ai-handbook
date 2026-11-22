@@ -4,7 +4,7 @@ created: 2026-11-14
 type: decision-tree
 audience: "Anyone proposing, building or reviewing AI work"
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -17,10 +17,10 @@ as_of: "November 2026"
 > - Let the cost of a mistake, and whether it can be undone, decide how closely a person stays involved.
 > - Ship only with tests on real cases built with users, a named owner and safety rules enforced in code.
 
-*Reading time: about 4 minutes · Best for: anyone proposing AI work*
+*Reading time: about 5 minutes · Best for: anyone proposing AI work*
 
 A decision tree for deciding whether a task should use AI and, if it should, which kind and how closely a person stays involved.
-Run it **per task or workflow step, not per project** (Porter).
+Run it **per task or workflow step, not per project**, the way Heidi Porter (Moyer Group AI) chooses how each step gets done.[1]
 Every rule cites a practitioner's talk, but none of the advice was tested as a whole, so treat the order as a strong default, not a law.
 Companion page: [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md).
 
@@ -53,53 +53,45 @@ flowchart TD
 
 ## The steps
 
-- **'Never' list.** Write a charter of what AI will never do *before* any code. The International
-  Mission Board's charter covers posing as a human, final decisions about people made solely by AI,
-  monitoring people without their knowledge, autonomous action in high-stakes settings, and
-  counselling. As Barger puts it, "Something can be worse than nothing." Check trust as well as feasibility (Barger, [Building AI Trust: What We Said Yes To, and What We Didn't](https://midwestaisummit.com/2026-recap)).
+- **'Never' list.** Write a charter of what AI will never do *before* any code; Don Barger (International Mission Board) says his organisation did.[2]
+  Its never list covers AI posing as a human, final decisions about people made solely by AI, monitoring people without their knowledge, autonomous action in high-stakes settings, and counselling.[2]
+  Pressed to build an AI counsellor, Barger refused: "Something can be worse than nothing if you're doing the wrong things."[2]
+  He advises judging each use on trust, not just feasibility.[2]
 - **Better or more efficient?** If AI gives neither a better outcome nor less effort, don't use it.
-  Then weigh the risk of error against the consequence (Lay, [AI Moves Fast: Four Decisions You Own](https://midwestaisummit.com/2026-recap)).
-- **Data first.** It must be accurate, complete, consistent and fresh enough *for this task*.
-  Stale data "quietly" gives wrong answers. Ground any LLM in the systems of record at
-  runtime (Porter).
-- **Rules or code.** Keep the control flow deterministic, and use a model only for the fuzzy
-  part ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath),
-  [The .NET AI Stack: What's New, What's Next, and How It Fits Together](https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450)).
-- **Is the answer a pick from a fixed list?** Ask whether every possible answer could be written
-  down before the task runs: which team gets a ticket, which label an email gets, approve or
-  reject. This is Glean's test, "can the output be listed in advance?". If yes, use a
-  [decision model](../1-understand/ai-glossary.md), which picks from the list and says how sure it
-  is instead of writing text. If the answer has to be written fresh each time, such as a reply or
-  a summary, it needs an LLM. Fine-tune only when the labels are stable and volume is high. If
-  you also need text, go hybrid
-  ([Beyond Generation: Fast, Structured AI Decisions with Jev at Glean](https://ai.engineer/code/2026/talks/chinmay-goyal)). Put fast decision and extraction
-  models in front of LLMs to prune tools and context
-  ([cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen)).
-- **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a
-  narrow job: interface, router, explainer, "compare and flag" (Porter's Syngenta and
-  Stanford cases; Taillie, [From Photos to Queries: Practical AI Agents for Real Workflows](https://midwestaisummit.com/2026-recap)). If you don't, use an agent bounded
-  by cost and time. In UiPath's fraud demo, a decision model asks whether there is enough
-  evidence and an agent starts only when there isn't
-  ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath)). LLMs make good assistants but unreliable automators, because RLHF (reinforcement learning from human feedback) assumes a human in the loop
-  ([Beyond Better Assistants: Software That Can Make a Decision](https://ai.engineer/code/2026/talks/diogo-almeida)).
-- **Execution dial.** Who acts depends on how costly a mistake is and whether it can be
-  undone. Make actions reversible where you can; where you can't, require approval and watch
-  for reviewer fatigue (Porter). Expose existing features as tools that act through the
-  app's own view models and services, not the UI, and confirm destructive
-  ones ([Less Chat, More Action: AI-Powered .NET MAUI Apps](https://www.youtube.com/watch?v=FYGBT08-N48&t=5)).
-  The dial sets a ceiling, not a starting point: each kind of action earns its way up to it on a track record ([How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md)).
-- **Evals.** "An agent without evals is a proof of concept." Build the eval set *with* the
-  people who do the job and keep the data flywheel running after release (Solorio,
-  [Building AI With Workers, Not For Them](https://midwestaisummit.com/2026-recap)). Look past averages to the worst cases (Porter).
-- **Ship.** A rule in a prompt isn't enforced. Put guardrails in code, types or a gateway
-  outside the agent's reach (Porter;
-  [Infrastructure as (Actual) Code with C# 15 and .NET 11](https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176),
-  [Azure's new lineup for .NET developers (Part 2)](https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809)).
-  Keep a named person accountable: accountability can't be delegated to AI (Lay). Store the
-  trace ID with the business record, because a 200 (success) response from the agent isn't a committed transaction
-  ([Beyond the Agent Trace: Operating Foundry Agents with Aspire](https://www.youtube.com/watch?v=TF6qzdKwl84&t=639)).
-  Make long runs durable ([Beyond Prototypes: Building Production Ready AI Workflows](https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558)).
-  Before you build, ask whether you can reverse it and who will maintain it (Lay).
+  Mark Lay (Noblis) starts with this test, then weighs the risk of an error against its consequence.[2]
+- **Data first.** Porter checks that the data is accurate, complete, consistent and fresh enough *for the task in hand*.[1]
+  She warns that stale data will "quietly give you the wrong answers", and grounds any [LLM](../1-understand/ai-glossary.md) in the official systems of record each time it runs.[1]
+- **Rules or code.** Keep the order of steps fixed in ordinary code, and use a model only for the fuzzy part.
+  Chibi Vikram and Kevin Bernstein (UiPath) call a model only at clear decision points in otherwise deterministic steps.[3]
+  Luis Quintanilla (Microsoft) has AI generate a film's parts, then stitches them together with standard code.[4]
+- **Is the answer a pick from a fixed list?** Ask whether every possible answer could be written down before the task runs: which team gets a ticket, which label an email gets, approve or reject.
+  Chinmay Goyal (Glean) puts it as a simple rule: "can the output be listed in advance?"[5]
+  If yes, use a [decision model](../1-understand/ai-glossary.md), which picks from the list and says how sure it is instead of writing text.[5]
+  If the answer has to be written fresh each time, such as a reply or a summary, it needs an LLM.[5]
+  [Fine-tune](../1-understand/ai-glossary.md) only when the labels are stable and volume is high, and go hybrid if you also need text.[5]
+  Michelle Chen (Cloudflare) puts fast decision and extraction models in front of an LLM, to prune its tools and context.[6]
+- **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a narrow job; if you don't, use an [agent](../1-understand/ai-glossary.md) bounded by cost and time, as Porter advises.[1]
+  In Porter's examples the LLM's job stays narrow: in Syngenta's seed tool it interprets, routes and explains while agronomy models predict, and in Stanford Health Care's screening tool it applies a rubric the institution owns.[1]
+  Darren Taillie (AeroCore Technologies) gave a daily vision check, which compares aircraft photos with work orders, the prompt "Compare and flag".[2]
+  In UiPath's fraud demo, a decision model asks whether there is enough evidence, and an agent starts only when there isn't.[3]
+  Diogo Almeida (TypeSafe AI) argues that LLMs make good assistants but unreliable automators, because RLHF (reinforcement learning from human feedback) builds a human into the loop.[7]
+- **Execution dial.** Who acts depends on how costly a mistake is and whether it can be undone.
+  The tree's four settings follow Porter's [execution dial](../1-understand/ai-glossary.md).[1]
+  She advises making actions reversible where possible and, where not, requiring approval while watching for reviewer fatigue.[1]
+  Gerald Versluis (Microsoft) turns an app's existing features into tools that act through its view models and services, not its screens, and confirms destructive ones.[8]
+  The dial sets a ceiling, not a starting point: each kind of action earns its way up to it on a track record (see the [companion page](how-much-autonomy-for-an-agent.md)).
+- **Evals.** Kevin Solorio (Focused) counts an agent without [evals](../1-understand/ai-glossary.md) as only a proof of concept, however it is deployed (more in the [evals playbook](../4-build/evals-playbook.md)).[1]
+  Build the eval set *with* the people who do the job, as he does, and keep a [data flywheel](../1-understand/ai-glossary.md) running after release.[1]
+  Porter warns that averages can hide a bad result, so look past them to the worst cases.[1]
+- **Ship.** Put [guardrails](../1-understand/ai-glossary.md) in code, types or a gateway outside the agent's reach, not in the prompt.
+  Porter warns that a rule written in a prompt isn't enforced deterministically.[1]
+  Cam Soper (Pulumi) warns that an agent may ignore a rule in its instructions, so he has the compiler enforce policy instead.[9]
+  Matt Soucoup and Paul Yuknewicz (Microsoft) put an agent's models and tools behind a gateway, governed in one place.[10]
+  Keep a named person accountable: Lay argues that a person, never the AI, must hold accountability ([intake question 3](ai-intake-checklist.md#3-which-named-person-is-accountable-for-every-output); [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md)).[2]
+  Store the [trace](../1-understand/ai-glossary.md) ID with the business record, as Shweta Iyer (Microsoft) does.[11]
+  In her demo the agent returned a 200 (success) response, yet its results were never saved: success means the application committed the transaction.[11]
+  Make long runs durable: Cecil Phillip (Temporal) uses durable execution so a run survives crashes and restarts without losing its place.[12]
+  Before you build, Lay asks what reversing it would cost, and whether the team can keep running what it deploys.[2]
 
 ## Related
 
@@ -110,9 +102,15 @@ flowchart TD
 
 ## Sources
 
-- [Midwest AI Summit 2026](https://midwestaisummit.com/2026-recap) (Porter, Lay, Barger, Solorio, Taillie)
-- [AIE CODE Summit 2026](https://ai.engineer/code): [Beyond Generation: Fast, Structured AI Decisions with Jev at Glean](https://ai.engineer/code/2026/talks/chinmay-goyal),
-  [Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath), [cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen),
-  [Beyond Better Assistants: Software That Can Make a Decision](https://ai.engineer/code/2026/talks/diogo-almeida)
-- [.NET Conf 2026](https://dotnetconf.com/agenda): the .NET AI stack, Less Chat More Action, Infrastructure as (Actual)
-  Code, Azure lineup part 2, Beyond the Agent Trace and Beyond Prototypes talks (linked above)
+[1] https://practicalai.show/378/transcript — Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)
+[2] https://practicalai.show/379/transcript — Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows; Midwest AI Summit 2026 (Practical AI E379 transcript)
+[3] https://ai.engineer/code/2026/talks/uipath — Chibi Vikram & Kevin Bernstein (UiPath), Your Automation Is Overthinking It, AI Engineer Code Summit 2026
+[4] https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450 — Luis Quintanilla (Microsoft), The .NET AI Stack: What's New, What's Next, and How It Fits Together, .NET Conf 2026
+[5] https://ai.engineer/code/2026/talks/chinmay-goyal — Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026
+[6] https://ai.engineer/code/2026/talks/michelle-chen — Michelle Chen (Cloudflare), cloudflare is a neolab, AI Engineer Code Summit 2026
+[7] https://ai.engineer/code/2026/talks/diogo-almeida — Diogo Almeida (TypeSafe AI), Beyond Better Assistants: Software That Can Make a Decision, AI Engineer Code Summit 2026
+[8] https://www.youtube.com/watch?v=FYGBT08-N48&t=5 — Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, .NET Conf 2026
+[9] https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176 — Cam Soper (Pulumi), Infrastructure as (Actual) Code with C# 15 and .NET 11, .NET Conf 2026
+[10] https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809 — Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 2), .NET Conf 2026
+[11] https://www.youtube.com/watch?v=TF6qzdKwl84&t=639 — Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026
+[12] https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558 — Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026

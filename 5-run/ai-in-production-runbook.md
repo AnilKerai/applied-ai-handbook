@@ -49,7 +49,7 @@ Tick every item before the first production run, and file the evidence with the 
 
 ## 3. Ongoing quality
 
-- **Score live traffic.** Kevin Solorio (Focused): "an agent without evals is a proof of concept".[10] Once the agent is deployed, his data flywheel adds "online evaluators that are consistently going to look at a sample of traces and kind of score them"; flagged cases go to an annotation queue, and reviewed failures join the offline dataset.[10]
+- **Score live traffic.** Kevin Solorio (Focused) sees an agent without evals as no more than a proof of concept.[10] Once the agent is deployed, his data flywheel adds "online evaluators that are consistently going to look at a sample of traces and kind of score them"; flagged cases go to an annotation queue, and reviewed failures join the offline dataset.[10]
 - **Sample for human annotation.** Solorio has the workers themselves label outputs.[10] Review a weekly random sample plus every flagged trace, with annotators from the business.
 - **Watch the tail.** Heidi Porter (Moyer Group AI): "averages can hide a bad result".[10] Report worst cases beside averages.
 - **Check for drift and stale data.**
@@ -69,7 +69,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
   - *Newer evidence:* Simon Willison argues for hard caps that cut a service off, not warning emails, because coding agents make it easy to spin up services that cost money.[13]
 - **Fall back to rules or a person.** The gateway routes model aliases with priority fallback.[5] In Porter's production-line case, "The system withholds the answer and escalates."[10] Keep the pre-AI path (rules or a manual queue) working and staffed.
 - **Make guardrails fail closed.** Matt Soucoup and Paul Yuknewicz (Microsoft) run guardrails in gateway hooks outside the agent's reach.[5] *Newer evidence:* a coding-agent release added an option that makes a hook block the action when it can't start, times out or exits unexpectedly.[14] That sharpens the advice: a check that errors must stop the action.
-- **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident, drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy](agent-pr-policy.md).
+- **Demote autonomy.** Meta raises autonomy per action, asking how costly a mistake would be and how easy it would be to catch.[15] After an incident, drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy](agent-pr-policy.md).
 
 ## 5. Incident response for AI
 
@@ -121,14 +121,14 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 ## 7. Ownership and on-call
 
-- **Named owner.** Mark Lay (Noblis) holds that "accountability can't be delegated" to AI, and asks whether teams have "the capacity to keep running what they deployed".[27] The owner answers for outcomes, approves autonomy changes and holds the budget.
+- **Named owner.** Mark Lay (Noblis) holds that accountability can't be handed over to AI, and asks whether teams have "the capacity to keep running what they deployed".[27] The owner answers for outcomes, approves autonomy changes and holds the budget.
 - **Data steward.** Noblis narrowed over a thousand datasets to about 120 critical ones, with about 30 data stewards (its figures).[27] The steward owns section 3's freshness checks.
 - **Agent-assisted on-call ladder.** Meta puts an AI teammate on each rotation, so people on call approve rather than operate.[15]
   - L1 investigates and reports; L2 drafts the fix with root cause and test plan, shipping only with approval; L3 clears low-criticality work alone.[15]
   - It retries stuck runs, pages a person only when it can't fix them, and writes hand-over summaries.[15]
   - Start any on-call agent at L1 and promote it per action.
 - **Human attention limits.**
-  - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge: "the more agents I deploy, the more humans I need."[28]
+  - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge finds that the more agents he deploys, the more people he needs.[28]
   - Porter warns of "rubber stamping fatigue".[10] *Newer evidence:* Anthropic reports users accept 93% of permission prompts (vendor figure).[29]
   - Harvey stopped alert storms by joining new alerts to the open investigation.[12]
   - Cap review load per person and send digests, not pages, for routine items.

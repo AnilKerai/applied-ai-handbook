@@ -52,7 +52,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 - *Tells you:* what a kept change really costs.
 - *Formula:* spend on all runs, failed ones included, plus review time ÷ merged changes not reverted within 30 days (extends the policy's cost per merged PR).
 - *Watch out for:* dropping failed runs or review time.
-- *Evidence:* DORA recommends pairing outcome metrics with "cost per accepted change and code rework rates".[6] Steve Yegge's factory burns about 5 billion tokens a day, yet "the more agents I deploy, the more humans I need."[9]
+- *Evidence:* DORA recommends pairing outcome metrics with "cost per accepted change and code rework rates".[6] Steve Yegge's factory burns about 5 billion tokens a day, yet he finds that the more agents he deploys, the more people he needs.[9]
 
 **5. Lead time for real outcomes**
 - *Tells you:* whether requested work finishes sooner, not whether more code moves.
@@ -84,7 +84,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 - *Tells you:* whether it does the job on real cases, before and after launch.
 - *Formula:* on an eval set of real cases, the share passing all of at least three runs (pass^k), with a confidence interval, as in the evals playbook; successes ÷ sampled live tasks, checked against the business record.
 - *Watch out for:* unchecked LLM judges; an agent reporting success is not success.
-- *Evidence:* Kevin Solorio (Focused): "an agent without evals is a proof of concept"; he scores live traces too.[10] ZoomInfo's LLM judge proved right only 65% of the time against hand-checked labels.[16] Shweta Iyer (Microsoft) showed an agent call succeed while the business request failed.[17]
+- *Evidence:* Kevin Solorio (Focused) counts any agent without evals as a proof of concept, and he scores live traces too.[10] ZoomInfo's LLM judge proved right only 65% of the time against hand-checked labels.[16] Shweta Iyer (Microsoft) showed an agent call succeed while the business request failed.[17]
 
 **2. Worst-case error severity**
 - *Tells you:* how bad the bad results are.

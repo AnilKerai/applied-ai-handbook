@@ -53,6 +53,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - Deciding what information an AI model is given at each step (instructions, facts it has looked up, results from tools, the conversation so far) and what is left out, rather than polishing one perfect instruction.[7]
 - *Why it matters:* we should ask how a proposal gets the right information to the model, not only which model it uses. See [Context engineering](../3-engineer/context-engineering.md).
 
+**Context window**
+- The text an AI model can see at once: its instructions, descriptions of the tools it may use, any documents it has been given, the conversation so far and the results of its actions.[7] It has a limit, counted in tokens (see **Token**, below), so what goes into it has to be chosen.[7]
+- *Why it matters:* more is not better; Anthropic, citing benchmark studies, says that the more tokens a window holds, the less accurately a model recalls what is in it, and its advice is to aim for the smallest set of useful information.[7] For work too long to fit, Anthropic describes ways round the limit, such as summarising the conversation so far (see **Compaction**, above), keeping notes outside the window and handing parts of the job to helper agents.[7] See [Context engineering](../3-engineer/context-engineering.md).
+
 ## D
 
 **Dark factory**
@@ -68,8 +72,8 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* we should use one, or plain code, wherever the possible answers can be listed in advance.
 
 **Deterministic check**
-- A check made by ordinary software that gives the same answer every time, such as a test, a type check or a rule in the build, rather than an AI model's opinion. Lauren Tan advises making each correction to an agent "a deterministic check instead of adding another line to your rules".[11]
-- *Why it matters:* an instruction can be ignored, but a failing check blocks the change.
+- A check made by ordinary software that gives the same answer every time, such as a test, a type check or a rule in the build, rather than an AI model's opinion. Lauren Tan advises turning each correction to an agent into a deterministic check rather than another line in its rules.[11]
+- *Why it matters:* an instruction can be ignored, but a failing check blocks the change. See [Working with coding agents](../4-build/working-with-coding-agents.md#7-turning-corrections-into-checks), section 7.
 
 **Domain agent**
 - As used here: an agent built for one area of an organisation's work, such as answering one kind of customer request or checking one kind of document, rather than a general-purpose assistant.
@@ -111,7 +115,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Guardrail**
 - A limit that stops an AI system doing something it should not, such as an approval step, an automatic check, a permission or a spending cap.[8]
-- *Why it matters:* only limits built into the system reliably hold; Porter warns that "a rule written in a prompt is not deterministically enforced".[8]
+- *Why it matters:* only limits built into the system reliably hold; Porter warns that a rule written in a prompt is not guaranteed to be enforced.[8] See pattern 9 in the [AI pattern catalogue](../4-build/ai-pattern-catalogue.md#9-guardrails-outside-the-agents-reach).
 
 ## H
 
@@ -123,13 +127,17 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - All the software around an AI model that turns it into a working tool: its instructions, the tools it may use, its permissions, and the checks on its work.[14]
 - *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. An analogy I use: the model is the brain and the harness is the body, with tools handed to the body to use; the body's reflexes, the checks in code, can stop it whatever the brain decides. It's only an analogy: this brain predicts; it doesn't understand. See [Harness engineering](../3-engineer/harness-engineering.md).
 
+**Harness engineering**
+- Designing and improving the harness around an AI model so that an agent does its work more reliably.[14] Birgitta Böckeler (Thoughtworks), writing for users of coding agents, describes two kinds of control: guides, which steer the agent before it acts, and sensors, which check its work afterwards and help it correct itself.[14]
+- *Why it matters:* Böckeler argues that either kind alone fails: with only sensors an agent keeps repeating the same mistakes, and with only guides it never finds out whether its rules worked.[14] She sees the person's job as steering: whenever a problem happens more than once, the guides and sensors should be improved to make it less likely, or to prevent it.[14] See [Harness engineering](../3-engineer/harness-engineering.md).
+
 **Human at the helm**
 - As used here: a way of working with AI in which people set its limits in advance and the system passes them anything that needs judgement or goes beyond those limits. For an agent doing many steps, the aim is that people review the exceptions rather than approve every step, and that the AI extends their judgement. Paula Goldman of Salesforce gives one definition in three parts (a vendor executive's view): people "should be able to set parameters in advance"; "the system should escalate something when it requires judgment or goes outside those parameters"; and it should be "extending your agency, creativity and judgment".[42] The phrase is older than this definition: Cosmos magazine quoted Cécile Paris of CSIRO in January 2022 saying "I want the human at the helm",[43] and Holly Prouty used it in a Salesforce research blog in December 2023.[44]
-- *Why it matters:* I recommend it as the way to work with AI: let AI take over tasks, keep the accountability, judgement and trust with people, and name the person who owns each outcome. It is not a reason to check less. Check what an AI tool gives you; until an agent's work can be checked automatically, a person checks each result; and for significant decisions about a person, either review each one genuinely or meet the legal requirements for automated decisions (see [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)). Mark Lay (Noblis) argues that "accountability can't be delegated" to AI.[1] See [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
+- *Why it matters:* I recommend it as the way to work with AI: let AI take over tasks, keep the accountability, judgement and trust with people, and name the person who owns each outcome. It is not a reason to check less. Check what an AI tool gives you; until an agent's work can be checked automatically, a person checks each result; and for significant decisions about a person, either review each one genuinely or meet the legal requirements for automated decisions (see [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)). Mark Lay (Noblis) argues that accountability cannot be handed over to AI.[1] See [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
 
 **Human in the loop**
 - A design in which a person checks or approves the AI's work before it takes effect.[8]
-- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items can fall into "rubber stamping fatigue".[8] Paula Goldman of Salesforce also warns that "simply having a human in the loop can create false confidence" (a vendor executive's view).[42] For agents doing many steps, see **Human at the helm**, above.
+- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items can tire and start waving them through.[8] Paula Goldman of Salesforce also warns that "simply having a human in the loop can create false confidence" (a vendor executive's view).[42] For agents doing many steps, see **Human at the helm**, above.
 
 ## J
 
@@ -155,7 +163,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **LLM (large language model)**
 - The kind of AI model behind chat assistants and coding tools, trained on vast amounts of text to read and write language. Heidi Porter treats it as one option alongside rules, classic machine learning and decision models.[8]
-- *Why it matters:* we should give it the narrowest job we can; in Porter's Syngenta example it is "the interface, the router, and the explainer, not the agronomist".[8]
+- *Why it matters:* we should give it the narrowest job we can; in Porter's Syngenta example it talks to users, routes their requests and explains the results, but is not the crop expert.[8] See pattern 1 in the [AI pattern catalogue](../4-build/ai-pattern-catalogue.md#1-rules-first-an-llm-only-for-the-fuzzy-step).
 
 **Loop engineering**
 - Designing the system that sets an AI coding agent to work again and again, on a schedule or when something happens, with an automatic check that ends each run, instead of a person prompting every run.[36] Addy Osmani's post of 7 June 2026 is the earliest dated use of the term found: "Loop engineering is replacing yourself as the person who prompts the agent."[35]
@@ -209,7 +217,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Sandbox**
 - A sealed-off space, such as a cloned copy of the code, where an AI agent can work without reaching our real systems, files or passwords, so that its mistakes stay contained; outbound network access has to be limited separately.[24]
-- *Why it matters:* approving what an agent may run does not limit what it can reach; Justin Yoo (Microsoft) separates "the permission to run" from "the permission to reach".[24]
+- *Why it matters:* approving what an agent may run does not limit what it can reach; Justin Yoo (Microsoft) treats these as separate permissions, one an approval and the other a boundary.[24] See pattern 11 in the [AI pattern catalogue](../4-build/ai-pattern-catalogue.md#11-sandbox-with-default-deny-network-and-proxied-credentials).
 
 **Semantic layer**
 - A shared set of agreed business definitions, such as what counts as revenue or an active customer, which turns questions into correct database queries.[25]
@@ -228,8 +236,8 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* people make the key decisions on purpose; Michael Washington (Microsoft MVP) warns "if you don't decide, the AI will."[28]
 
 **Supply-chain risk**
-- The risk that something we bring in from outside, such as a software package, plug-in or AI skill, carries harmful code or instructions. Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust."[29]
-- *Why it matters:* agents install packages too, so their choices need vetting, pinning and a wait before brand-new versions, which NuGet is adding.[29]
+- The risk that something we bring in from outside, such as a software package, plug-in or AI skill, carries harmful code or instructions. Jon Douglas (Microsoft) points out that every package a project pulls in is code its team has chosen to trust.[29]
+- *Why it matters:* agents install packages too, so their choices need vetting, pinning and a wait before brand-new versions, which NuGet is adding.[29] See [Building AI features in .NET](../4-build/dotnet-ai-engineering-guide.md#supply-chain-cooldown-audit-skills-as-dependencies).
 
 ## T
 

@@ -47,7 +47,53 @@
       "id": 7,
       "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
       "title": "Anthropic, Effective context engineering for AI agents",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "Context refers to the set of tokens included when sampling from a large-language model (LLM).",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "we need strategies for managing the entire context state (system instructions, tools, Model Context Protocol (MCP), external data, message history, etc).",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "An example of low-hanging superfluous content is clearing tool calls and results",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Context engineering is the art and science of curating what will go into the limited context window from that constantly evolving universe of possible information.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "as the number of tokens in the context window increases, the model’s ability to accurately recall information from that context decreases.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "good context engineering means finding the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Long-horizon tasks require agents to maintain coherence, context, and goal-directed behavior over sequences of actions where the token count exceeds the LLM’s context window.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "agents require specialized techniques to work around the context window size limitation.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Compaction is the practice of taking a conversation nearing the context window limit, summarizing its contents, and reinitiating a new context window with the summary.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Structured note-taking, or agentic memory, is a technique where the agent regularly writes notes persisted to memory outside of the context window.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "specialized sub-agents can handle focused tasks with clean context windows.",
+          "added": "2026-11-22"
+        }
+      ]
     },
     {
       "id": 8,
@@ -61,6 +107,14 @@
         },
         {
           "text": "an agent without evals is a proof of concept",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "a rule written in a prompt is not deterministically enforced.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So in this case, the LM is the interface, the router, and the explainer, not the agronomist.",
           "added": "2026-11-22"
         }
       ]
@@ -99,7 +153,33 @@
       "id": 14,
       "url": "https://martinfowler.com/articles/harness-engineering.html",
       "title": "Birgitta Böckeler (Thoughtworks), Harness engineering, martinfowler.com",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "coding agents also provide us, their users, with many features to build an outer harness specifically for our use case and system",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "A well-built outer harness serves two goals: it increases the probability that the agent gets it right in the first place, and it provides a feedback loop that self-corrects as many issues as possible before they even reach human eyes.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Guides (feedforward controls) - anticipate the agent's behaviour and aim to steer it before it acts.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Sensors (feedback controls) - observe after the agent acts and help it self-correct.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Separately, you get either an agent that keeps repeating the same mistakes (feedback-only) or an agent that encodes rules but never finds out whether they worked (feed-forward-only).",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The human's job in this is to steer the agent by iterating on the harness. Whenever an issue happens multiple times, the feedforward and feedback controls should be improved to make the issue less probable to occur in the future, or even prevent it.",
+          "added": "2026-11-22"
+        }
+      ]
     },
     {
       "id": 15,

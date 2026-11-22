@@ -78,7 +78,7 @@ For those decisions, either have a person genuinely review every one, or treat t
 
 Enforce each limit in the system around the agent, not its instructions: block forbidden actions, and keep secrets and the network closed by default.
 Heidi Porter (Moyer Group AI) warns that "a rule written in a prompt is not deterministically enforced".[4]
-Justin Yoo (Microsoft) separates "the permission to run", which is approval, from "the permission to reach", which is the boundary, and starts agents in a copy of the workspace, where the real access tokens stay hidden from them.[6]
+Justin Yoo (Microsoft) separates the permission to run, which is approval, from the permission to reach, which is the boundary, and starts agents in a copy of the workspace, where the real access tokens stay hidden from them.[6]
 
 ### 4. What does a mistake cost, and can it be undone?
 
@@ -114,8 +114,7 @@ So the agent can close a noisy alert on its own "while a production mitigation s
   That is Factory's own scale: its L1 is close to step 2 on this ladder.
   Its top level, L4, auto-merges only once agent PRs break things less often than human ones, measured as a regret-free merge rate.[12]
   Lydia Hallie's team (Anthropic) has Claude review every PR first, then tiers human review by risk: no person for docs, perhaps one reviewer for ordinary changes, maybe two for risky ones.[5]
-  ZoomInfo reports its AI judge was right only 65% of the time.[13]
-  The commonest bad step it accepted claimed an action no tool call had taken: the judge "went with the story" over the tool results.[13]
+  ZoomInfo found its AI judge accepting bad steps; the commonest claimed an action no tool call had taken, and the judge "went with the story" over the tool results ([Evals playbook](../4-build/evals-playbook.md#4-graders)).[13]
   Make corrections lint rules or tests, not AGENTS.md lines.[11]
 
 For how automated a whole software team should be, see the [software factory memo](../6-lead/should-we-build-a-software-factory.md).

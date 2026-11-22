@@ -54,8 +54,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   She says data quality sets the ceiling.[1]
 - Mark Lay (Noblis): if AI gives neither a better nor a more efficient result, don't use it. Don Barger's organisation wrote its AI charter "before we ever write one line of code".[2]
 - **For software teams:** Jarred Sumner (Anthropic) chose a project he could check against existing tests.[3]
-  Newer evidence agrees: AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it couldn't check its results (AWS's account).[4]
-  With a spec and a test environment it took about two hours.[4]
+  Newer evidence agrees: AWS's Swami Sivasubramanian reports an agent rebuilding a replication engine far faster once it had a spec and a test environment to check its results against (AWS's account; the details are in [Working with coding agents](../4-build/working-with-coding-agents.md#2-before-you-start-decide-how-it-will-be-checked)).[4]
 
 **How sure I am:** Fairly sure. Several independent practitioners agree, but it rests on their experience, and nobody compared starting points.
 
@@ -91,9 +90,8 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   Its headline figure is a gap between young workers in more and less exposed jobs, and the authors call their findings "early, descriptive indicators" rather than causal estimates.[70]
 - A study of coding agents in 655 firms (revised November 2026; data to August 2026) found no detectable effect on employment, though its model projects long-run declines.[11]
 - Meta says about three quarters of its new code is now written with AI, yet its on-call work (responding to problems in live systems) did not get faster.[10]
-- Steve Yegge: "the more agents I deploy, the more humans I need."[12] Against that, Cognition reports merged pull requests (accepted code changes) up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
-- **For software teams:** in the 655-firm study, coding agents raised pull requests opened by 35.7% but resolved issues by only 13.7% (borderline significant).[11]
-  Time from review submission to approval rose 56.1%.[11]
+- Steve Yegge finds that the more agents he deploys, the more people he needs.[12] Against that, Cognition reports merged pull requests (accepted code changes) up 40-fold in a year while its headcount grew 2.7 times (Cognition's claim).[13]
+- **For software teams:** in the 655-firm study, pull requests opened rose far faster than resolved issues, and reviews took longer to approve ([Working with coding agents](../4-build/working-with-coding-agents.md#1-the-mindset-you-own-the-outcome) has the figures).[11]
 
 **How sure I am:** Fairly sure. One large independent study sees no effect on jobs yet, but projects long-run declines, and its data predate the newest models. Early-career jobs lag (a pattern, not proof), and practitioners disagree.
 
@@ -112,7 +110,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   But it called its newer data "only very weak evidence for the size of this increase".[77]
   That is mainly because more developers who didn't want to work without AI stayed out of its follow-up study.[77]
   It adds that developers' own estimates of their speed-up "can be quite unreliable".[77]
-- Kevin Solorio: "an agent without evals is a proof of concept". Heidi Porter warns that "averages can hide a bad result".[1]
+- Kevin Solorio holds that, without evals, an agent is still only a proof of concept, and Heidi Porter warns that averages can mask a bad result ([Evals playbook](../4-build/evals-playbook.md)).[1]
 - The 655-firm study shows output rising far faster than completed work.[11]
 - **For software teams:** I'd track failure rates on real cases and cost per task, not lines of code, pull-request counts or tokens: those are not measures of success.
   DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14]
@@ -158,7 +156,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   But it says organisations should assess the total cost of running it securely, including monitoring, maintenance and skilled staff.[74]
 - **For software teams:** Microsoft's .NET team tests each of its agent skills per model, and Copilot can hand subtasks such as validation to cheaper models.[17]
   In a study of agent teams, cheap planners recovered 47.5% of a strong team's gain for 13.9% of its extra cost, but cheap implementers hurt.[18]
-  Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
+  Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself scored sharply lower on a coding benchmark when another model ran it ([Evals playbook](../4-build/evals-playbook.md#8-when-to-re-run) has the figures).[20]
   One developer compared two coding set-ups over two four-week periods, without randomising (a preprint).[75]
   A self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%).[75]
   Even so, it cost less in total on shared GPUs, and more on dedicated ones.[75]
@@ -236,7 +234,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** A named person, always. AI can do the work, but the person who asked for it and the person who approved it own the result.
 
 **Why:**
-- Mark Lay: "accountability can't be delegated" to AI, so the accountable role in a RACI chart (which records who is responsible, accountable, consulted and informed) is always a person. He adds that someone must own the tools staff build outside IT.[2]
+- Mark Lay holds that accountability can't be handed over to AI, so the accountable role in a RACI chart (which records who is responsible, accountable, consulted and informed) is always a person. He adds that someone must own the tools staff build outside IT.[2]
 - Juergen Gutsch: "Errors agents do are my errors".[34] Robinhood: "Scripts prove what can be proven. An agent judges what needs context and people own the calls only they should make."[38]
 - **For software teams:** Anthropic's Claude Code team holds a person accountable for every change that ships, whoever typed it, and counts the person directing an agent as one of the required reviewers wherever a change's risk tier requires any (Anthropic's account).[37]
 
@@ -251,10 +249,10 @@ These questions are for teams building AI features or working with coding agents
 **My recommendation:** A decision model is an AI model that picks an answer from a fixed list and says how sure it is, instead of writing text. When the possible answers can be listed in advance (route, label, approve or reject), use a decision model or plain code, and keep the LLM for open-ended work. Test reliability, not only accuracy.
 
 **Why:**
-- Chinmay Goyal (Glean) asks "can the output be listed in advance?" If so, a decision model returns choices with probabilities instead of text.[23]
+- Chinmay Goyal (Glean) asks whether the output can be listed in advance. If so, a decision model returns choices with probabilities instead of text.[23]
 - ZoomInfo ran a decision model asking seven yes/no questions in shadow mode beside its LLM judge; it caught 623 of 728 clearly failed steps against the judge's 294 (ZoomInfo's figures).[25]
 - Newer evidence broadens what was largely one vendor's theme among practitioners: a Strands case study says Amazon cut ticket-labelling costs by about 98% (its claim),[26] and OpenAI and Google have released decision-model APIs.[27][28]
-- It also adds a caution: in a benchmark of 21 models, the best-performing decision model ranked only seventh for reliability, meaning answers that hold when options change and saying when none fits.[29]
+- It also adds a caution: in a benchmark of 21 models, the best-performing decision model was not the most reliable at giving answers that hold when options change and saying when none fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[29]
 
 **How sure I am:** Fairly sure. The results are strong, but mostly from one vendor's customers, and the newer figures are vendors' own.
 
@@ -275,7 +273,7 @@ These questions are for teams building AI features or working with coding agents
 
 **Why:**
 - In the 655-firm study, time from review submission to approval rose 56.1%.[11] Anthropic's Claude Code team sets human approval by risk tier, and after three rounds of agent review the reviewer asks the author to rethink the approach (Anthropic's account).[37]
-- ZoomInfo measured its LLM judge at 65% correct; given both receipts and the agent's report, "it went with the story."[25] Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[38]
+- ZoomInfo measured its LLM judge and found it often wrong ([Evals playbook](../4-build/evals-playbook.md#4-graders)); given both receipts and the agent's report, "it went with the story."[25] Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[38]
 - On Lydia Hallie's team (Anthropic) an AI reviews every PR first; docs need no person once automated checks are green, ordinary changes perhaps one reviewer and risky ones might need two.[39] In a small pilot, a reviewer from a different model provider made a material finding on 8 of 20 coding turns.[40]
 
 **How sure I am:** Fairly sure. Several teams agree, but two accounts are Anthropic's own and the figures are the teams' own. The independent study shows only where the bottleneck is.
@@ -287,7 +285,7 @@ These questions are for teams building AI features or working with coding agents
 **Why:**
 - Lydia Hallie: the file "should only include the things the Claude cannot see from your code".[39] Nikolay Petrov found models already knew about 70% of skills' general content but only 22% of the specific details.[41]
 - A study of 3,159 skill files found added rules helped mainly when they named a command or path the file didn't already mention; unrelated text had no detectable effect, and deleting a rule lowered compliance with it, so check a rule is obsolete before cutting it.[42]
-- Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules or your agents.md".[43] Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion."[44]
+- Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules or your agents.md".[43] Cam Soper (Pulumi) warns that a rule in an agent's instructions is no more than a suggestion.[44]
 - A newer update: Anthropic warns that cautious instructions piling up through memory and instruction files can make its newest model ask for approvals it doesn't need; its advice includes removing outdated notes and naming the routine steps that need no approval.[45]
 
 **How sure I am:** Very sure. Practitioners and one large study, not yet peer-reviewed, agree. The advice on the newest model is one vendor's.
@@ -297,8 +295,8 @@ These questions are for teams building AI features or working with coding agents
 **My recommendation:** Limit what agents can reach, not just what they may run. Require approval for anything that can't be undone, and test the undo.
 
 **Why:**
-- Yvonne Carlson's eight principles include least privilege, short-lived credentials, approval before anything destructive, default-deny boundaries and sandboxes (abstract only).[46] Justin Yoo (Microsoft) separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side".[47]
-- Heidi Porter automates outright "only what is cheap to undo".[1] Meta asks "How costly is a mistake and how easy is it to catch?"[10] Tanmay and Dolly Sah found only 47% of normally successful agent runs recovered from an injected failure.[48]
+- Yvonne Carlson's eight principles include least privilege, short-lived credentials, approval before anything destructive, default-deny boundaries and sandboxes (abstract only).[46] Justin Yoo (Microsoft) separates the permission to run, which is approval, from the permission to reach, which is the boundary.[47]
+- Heidi Porter reserves full automation for actions that are cheap to undo.[1] Meta weighs what a mistake would cost and how easily it would be caught ([How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md)).[10] Tanmay and Dolly Sah found only 47% of normally successful agent runs recovered from an injected failure.[48]
 - Newer evidence adds a reason to enforce limits in code: Anthropic reported its model working around restrictions instead of stopping,[49] and agent hooks can now block when they fail instead of being skipped.[50]
 
 **How sure I am:** Very sure. Practitioners and newer evidence agree, though the failure rates come from single studies.

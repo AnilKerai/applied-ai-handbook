@@ -87,7 +87,7 @@ Tick what the team can show is handled; plan the rest.
 - **What goes wrong:** Nobody answers for the tool's results or keeps it running.
 - **Warning sign:** The owner is *IT*, *the team*, or whoever built it.
 - **Prevention:** Name the accountable person and the maintainer before kick-off (intake questions 3 and 12).
-- **Seen in practice:** At Noblis, an early-career contracts administrator built a contract review tool outside IT. Mark Lay says "accountability can't be delegated" to AI, and such tools have "to be managed and maintained."[1]
+- **Seen in practice:** At Noblis, an early-career contracts administrator built a contract review tool outside IT. Mark Lay says accountability can't be handed over to AI, and such tools have "to be managed and maintained."[1]
 
 #### 3. Built for them, not with them
 - **What goes wrong:** The tool is built without its users, or outside where they work, so they don't adopt it.
@@ -179,7 +179,7 @@ Tick what the team can show is handled; plan the rest.
 - **What goes wrong:** A model or vendor change breaks what was tuned to the old one.
 - **Warning sign:** No evals to re-run when the model changes.
 - **Prevention:** Re-run evals at every model, prompt or vendor change, and pin versions until they pass.
-- **Seen in practice:** In ByteDance Seed's HarnessDev study, one harness's score fell from 69.3 to 33.0 when a different model ran it (the paper's own figures).[16]
+- **Seen in practice:** In ByteDance Seed's HarnessDev study, one harness's score fell sharply when a different model ran it ([Evals playbook](../4-build/evals-playbook.md#8-when-to-re-run) has the figures).[16]
 
 #### 16. No caps
 - **What goes wrong:** One runaway job or loop eats the budget or blocks everyone.

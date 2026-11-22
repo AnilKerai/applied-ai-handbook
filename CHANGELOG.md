@@ -19,6 +19,12 @@ Newest first. Every correction lists what changed and the evidence.
   - Factory's autonomy levels are marked as its own scale, since its L1 is close to the handbook's L2.
   - The decision tree's dial outcomes are now ceilings ("At most: …"); the autonomy page decides how far to go.
   - The .NET guide's NuGet cooldown advice now matches its source, and its starter eval set matches the playbook.
+- **Less repetition:** quotes that appeared on up to 11 pages are now quoted in full on at most three, their home
+  pages; elsewhere they're paraphrased, still cited, with a link.
+- **[Should this task use AI?](2-decide/should-this-task-use-ai.md)** is now in the standard format: numbered
+  sources, full names on first mention, and every quote checked against its transcript.
+- **Glossary:** new entries for *Context window* and *Harness engineering*; the *Agent* entry now credits Vivek
+  Trivedy for "model plus harness".
 - **Routes:** New to AI no longer sends newcomers into engineer pages, and the Leader route reads the autonomy page
   second, before the pages that rely on its levels.
 - **Licence:** the README now says that quotations from the cited sources stay their authors' copyright and

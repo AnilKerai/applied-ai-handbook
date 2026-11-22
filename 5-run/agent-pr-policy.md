@@ -48,7 +48,7 @@ Basis: Duolingo: "writing code isn't the hard part anymore, verifying it is."[16
 Basis:
 - Lydia Hallie (Anthropic) advises keeping CLAUDE.md to what the model cannot see in the code, without IMPORTANT-style rules.[7]
 - Lauren Tan, on correcting an agent: "think about how you can make that a deterministic check instead of adding another line to your rules".[2]
-- Cam Soper (Pulumi): "a rule in an agent's instructions is just a suggestion."[8]
+- Cam Soper (Pulumi) concluded that a rule in an agent's instructions is no more than a suggestion.[8]
 - Nikolay Petrov found larger frontier models already knew about 70% of skills' general ideas but only 22% of the details; Microsoft's .NET team scores each of its published skills with and without it, per model.[9][10]
 - Ayush Bhardwaj made a flag do nothing, yet agents passed it in 95 of 95 searches because a skill said to.[11]
 - Zenity treats skills as dependencies: "Everything that comes into the context is under risk."[12]
@@ -154,7 +154,7 @@ Promotion, per action and area, MUST meet all of these:
 Demotion is immediate, by at least one level, after a traced incident or revert, a month below the human regret-free baseline (a suggested window), or any attempt to get round a gate. A major model or tool change SHOULD trigger a review of levels.
 
 Basis:
-- Meta promotes its on-call agent from investigating (L1) to approved drafts (L2) to low-criticality work alone (L3), per action, asking: "How costly is a mistake and how easy is it to catch?" Even at L3, its code fixes land only through normal review and CI.[4]
+- Meta promotes its on-call agent from investigating (L1) to approved drafts (L2) to low-criticality work alone (L3), per action, asking how costly a mistake would be and how easy it would be to catch. Even at L3, its code fixes land only through normal review and CI.[4]
 - Factory sets levels per workstream: its L1 drafts specs and PRs but pauses for a human at the spec, the PR and the merge; its L4 auto-merges only once agent PRs break things less often than human ones, measured as "the regret-free merge rate, the share of changes that merge and never need a revert or a follow-up fix."[20]
   Factory's levels are its own scale: its L1 is close to L2 here, not this policy's read-only L1.
 

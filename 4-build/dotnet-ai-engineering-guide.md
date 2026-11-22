@@ -38,7 +38,7 @@ This guide sets out the stack and practices I recommend for AI work on .NET 11. 
   - *Use it* for small task models and data that must stay local.
   - *I recommend* open-weight models we run ourselves as the default, behind `IChatClient` and evals, stepping up to a frontier model only where those evals show the open model failing and the step is worth the cost ([the evidence](../1-understand/ai-questions-answered.md#q-which-model-should-we-use-and-do-we-need-the-biggest-one)).
 - **Decision models: fixed-choice steps.** They return a choice and a confidence score without generating output tokens; Extensions.AI support is *in progress* and Foundry Local support *coming soon*, so neither has shipped.[11] Capuano: "there is no standard on how the decision is going to be the input and output."[11]
-  - *Industry:* Google has since launched Gemini Decision 1, after OpenAI's Decisions API,[13] and a Strands case study says Amazon cut labelling costs by about 98% (its claim).[14] But in a 21-model benchmark the best-performing decision model ranked only seventh for reliability.[15]
+  - *Industry:* Google has since launched Gemini Decision 1, after OpenAI's Decisions API,[13] and a Strands case study says Amazon cut labelling costs by about 98% (its claim).[14] But in a 21-model benchmark the best-performing decision model was not the most reliable ([Evals playbook](evals-playbook.md#3-what-to-score)).[15]
   - *Use them* behind our own interface, tested with shuffled options and a none-fits case.
 - **Durable execution: Temporal for .NET.** Cecil Phillip's deterministic workflow runs model and tool calls as retriable activities, so a crash mid-run resumes without re-spending tokens; the Aspire integration is dev-only.[12] Azure's durable hosted skills are an alternative, release status not stated.[5]
   - *Use it* for long runs, waits on people, or side effects that must not repeat.
@@ -58,7 +58,7 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 
 ### Rules in types, tests and CI, not instructions
 
-- Cam Soper: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not." He had a rule against putting CloudFront in front of one of his servers, and Claude put it there anyway.[18]
+- Cam Soper had a rule against putting CloudFront in front of one of his servers, and Claude put it there anyway; he concluded that a rule in an agent's instructions is no more than a suggestion, which the agent might or might not follow ([Working with coding agents](working-with-coding-agents.md#7-turning-corrections-into-checks)).[18]
 - Lauren Tan: "think about how you can make that a deterministic check instead of adding another line to your rules".[19]
 - *Industry:* one study found instruction-file constraints were met 88.3% of the time as executable checks, against 67.0% in the prompt alone (single study, Python).[20]
 - *I recommend* turning every hard rule into an analyser, test, CI check or deny rule, with the instruction file naming the command that checks it.
@@ -68,13 +68,13 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - McKenna Barlow: when one agent writes code and tests, "if it misunderstands a requirement, that same misunderstanding can actually show up in both places."[22]
 - She ties generated tests to the README's requirements, forbids app edits made only to pass tests, and audits what assertions prove; a new test caught a `> 100` that should have been `>=`.[22]
 - Ask for runtime proof. Gerald Versluis: "for every session, start from a running app, ask for proof".[23] Michael Washington: "All the test cases pass green. Personally, that's worthless to me."[24]
-- *Industry:* the Claude Code team asks the agent to show the output of something it ran, so most review happens before a PR exists (vendor self-report).[25] An observational Harvard study of 655 firms found agents raised PRs by 35.7% but resolved issues by only 13.7% (borderline significant), as time to review approval rose 56.1%.[37]
+- *Industry:* the Claude Code team asks the agent to show the output of something it ran, so most review happens before a PR exists (vendor self-report).[25] An observational Harvard study of 655 firms found agents raised PRs far more than resolved issues, as reviews took longer to approve ([Working with coding agents](working-with-coding-agents.md#1-the-mindset-you-own-the-outcome)).[37]
 - Tools that stop agents weakening tests are early: in C# one checks only skips and placeholder assertions, and on repositories it was not tuned on, between a quarter and seven in eight of its blocks were false alarms (author's count).[26]
 - Evals for the AI feature itself: [Evals playbook: how to build and run evals for an AI feature or agent](evals-playbook.md).
 
 ### Sandboxing coding agents: no network, no credentials by default
 
-- Justin Yoo separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". He starts from a cloned workspace with a proxied token; Azure Container Apps sandboxes allow all outbound traffic until a policy is set.[27]
+- Justin Yoo separates the permission to run, on the approval side, from the permission to reach, on the boundary side. He starts from a cloned workspace with a proxied token; Azure Container Apps sandboxes allow all outbound traffic until a policy is set.[27]
 - Paul Yuknewicz sandboxes the tool, with egress and managed identity off by default in his demo,[16] unlike the allow-all default Yoo described,[27] so check the defaults before relying on either. Gutsch: "the LLM should not know any credentials".[4]
 - *Industry:* sandboxes have bugs; one coding-agent release fixed a shell case that skipped the sandbox.[28] Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache.[29]
 - *I recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md) section 4.
