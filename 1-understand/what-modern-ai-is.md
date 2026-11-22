@@ -26,6 +26,9 @@ as_of: "November 2026"
 - **Image, voice and video generators** make pictures, speech and video; OpenAI calls Sora 2 its "flagship video and audio generation model".[3]
 - **AI built into everyday tools** includes Microsoft's Copilot in Outlook, Teams, Word, Excel and PowerPoint, which can draw on the web and an organisation's own data (Microsoft's documentation).[4]
 - **[Agents](ai-glossary.md)** use AI to take actions towards a goal, not only to answer.[1]
+- **[Decision models](ai-glossary.md)** don't write text: they pick one answer from a fixed list, such as yes or no or which team gets a request, and say how sure they are.[16]
+  Glean uses one, Jev, whenever a step's answers can be listed in advance, and Simon Willison notes Google and OpenAI joining Jev "in the decision model category".[16][17]
+  See [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
 - **Classic machine learning** is the older kind, trained on data "to make classifications or predictions".[1]
   AI is already in general use in search engines' auto-fill, social media feeds and predictive text.[1]
 
@@ -100,3 +103,5 @@ I recommend three habits:
 [13] https://researchonline.lse.ac.uk/id/eprint/130322/1/1-s2.0-S1364661325002864-main.pdf — Patrick Butlin, Robert Long et al., Identifying indicators of consciousness in AI systems, Trends in Cognitive Sciences 30(6), 488–501 (peer-reviewed; published online 10 November 2025; open-access copy in LSE Research Online)
 [14] https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do — Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)
 [15] https://www.anthropic.com/claude — Anthropic, Claude: The AI assistant for work (product page)
+[16] https://ai.engineer/code/2026/talks/chinmay-goyal — Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026
+[17] https://simonwillison.net/2026/Nov/11 — Simon Willison, weblog for 11 Nov 2026 (Gemini Decisions API)

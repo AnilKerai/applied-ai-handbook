@@ -332,6 +332,30 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 16,
+      "url": "https://ai.engineer/code/2026/talks/chinmay-goyal",
+      "title": "Chinmay Goyal (Glean), Beyond Generation: Fast, Structured AI Decisions with Jev at Glean, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "can the output be listed in advance if no then it's a free form gener generative text problem statement go back to something that can generate free form text if yes then use jev",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://simonwillison.net/2026/Nov/11",
+      "title": "Simon Willison, weblog for 11 Nov 2026 (Gemini Decisions API)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Google join Jev and OpenAI in the decision model category with \"Gemini Decision 1\"",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }
