@@ -15,6 +15,8 @@ Newest first. Every correction lists what changed and the evidence.
 - **[Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md):** the box
   "Output listable in advance?" now asks "Is the answer a pick from a fixed list?", and the bullet
   below it explains the test with examples.
+- **The glossary is now "AI glossary",** not "AI glossary for leadership", because Understand is
+  for everyone.
 
 ## 2026-11-21: talks are in the repository only
 
