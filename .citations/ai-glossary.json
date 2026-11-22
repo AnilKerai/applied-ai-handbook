@@ -58,6 +58,10 @@
         {
           "text": "the human can get tired. Right? They can just have rubber stamping fatigue, and, you know, that's not a good guardrail.",
           "added": "2026-11-21"
+        },
+        {
+          "text": "an agent without evals is a proof of concept",
+          "added": "2026-11-22"
         }
       ]
     },

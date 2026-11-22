@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 5 minutes · Best for: engineers building evals*
 
-In May 2026 I started building an evals framework to answer one question: before an agent reaches its users, can I show with repeatable evidence that it works? The framework is private, so this page has no link to it and no examples from the skills it tests, only the principles. For the concept, see [Eval engineering](eval-engineering.md); for the practice, see the [Evals playbook](../4-build/evals-playbook.md).
+In May 2026 I started building an evals framework to answer one question: before an agent reaches its users, can I show with repeatable evidence that it works? I started it two weeks before [my harness](https://github.com/AnilKerai/model-harness), and the order says what I believe: model + harness = an agent, but model + harness + evals = an agent I'd trust in front of users. The framework is private, so this page has no link to it and no examples from the skills it tests, only the principles. For the concept, see [Eval engineering](eval-engineering.md); for the practice, see the [Evals playbook](../4-build/evals-playbook.md).
 
 ## The case is the unit, not the running system
 

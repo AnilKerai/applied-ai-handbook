@@ -25,7 +25,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Agent**
 - AI software that is given a goal and works towards it by choosing its own next steps and using tools, such as searching, editing files or updating records. Mark Lay (Noblis) likens it to delegation, "turning over to technology an objective".[1]
-- *Why it matters:* it acts rather than just answers, so it needs the limits, oversight and named owner we would give a new colleague.
+- *Why it matters:* it acts rather than just answers, so it needs the limits, oversight and named owner we would give a new colleague. My shorthand: model + harness = an agent; add evals and it's one you can trust in production. Kevin Solorio (Focused): "an agent without evals is a proof of concept".[8]
 
 **Agent worm**
 - Hidden instructions that take over one AI agent and then copy themselves to other agents through things they share, such as documents, email, chat or a shared package cache.[2]

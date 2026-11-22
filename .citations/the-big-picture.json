@@ -144,6 +144,18 @@
           "added": "2026-11-15"
         }
       ]
+    },
+    {
+      "id": 10,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "an agent without evals is a proof of concept",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }

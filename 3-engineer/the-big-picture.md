@@ -66,6 +66,8 @@ The pages for each part of the map:
 
 At the centre is the model, and everything else on the map is built around it.
 LangChain's Vivek Trivedy sums up an agent as model plus harness: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[1]
+My shorthand adds a third part: model + harness = an agent; model + harness + evals = an agent you can trust in production.
+Kevin Solorio (Focused) puts it more bluntly: "an agent without evals is a proof of concept".[10]
 Anthropic has gravitated towards a simple definition of an agent, "LLMs autonomously using tools in a loop", LLMs being large language models.[2]
 
 ### Context engineering
@@ -135,3 +137,4 @@ Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058
 [7] https://arxiv.org/html/2608.21884v3 — Lulla et al., Loop Engineering: Building Blocks, Adoption, and Impact (arXiv 2608.21884v3)
 [8] https://www.anthropic.com/engineering/building-effective-agents — Anthropic, Building effective agents
 [9] https://dzone.com/articles/understanding-graph-engineering — DZone, Graph Engineering: The Layer After Loop Engineering
+[10] https://practicalai.show/378/transcript — Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; Midwest AI Summit 2026 (Practical AI E378 transcript)
