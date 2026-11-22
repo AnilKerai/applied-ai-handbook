@@ -16,7 +16,7 @@ as_of: "November 2026"
 > - It can sound sure when it's wrong, and the reasoning it shows isn't always how it got there.
 > - It isn't a person and can't be held to account, so brief it, check it and own what you send.
 
-*Reading time: about 5 minutes · Best for: everyone new to AI*
+*Reading time: about 4 minutes · Best for: everyone*
 
 ## The kinds of AI you'll meet
 
