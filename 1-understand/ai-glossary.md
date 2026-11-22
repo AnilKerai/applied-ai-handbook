@@ -121,7 +121,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Harness**
 - All the software around an AI model that turns it into a working tool: its instructions, the tools it may use, its permissions, and the checks on its work.[14]
-- *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. See [Harness engineering](../3-engineer/harness-engineering.md).
+- *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. My analogy: the model is the brain and the harness is the body, with tools handed to the body to use; the body's reflexes, the checks in code, can stop it whatever the brain decides. See [Harness engineering](../3-engineer/harness-engineering.md).
 
 **Human at the helm**
 - As used here: a way of working with AI in which people set its limits in advance and the system passes them anything that needs judgement or goes beyond those limits. For an agent doing many steps, the aim is that people review the exceptions rather than approve every step, and that the AI extends their judgement. Paula Goldman of Salesforce gives one definition in three parts (a vendor executive's view): people "should be able to set parameters in advance"; "the system should escalate something when it requires judgment or goes outside those parameters"; and it should be "extending your agency, creativity and judgment".[42] The phrase is older than this definition: Cosmos magazine quoted Cécile Paris of CSIRO in January 2022 saying "I want the human at the helm",[43] and Holly Prouty used it in a Salesforce research blog in December 2023.[44]

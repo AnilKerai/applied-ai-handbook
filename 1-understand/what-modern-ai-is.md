@@ -26,6 +26,8 @@ as_of: "November 2026"
 - **Image, voice and video generators** make pictures, speech and video; OpenAI calls Sora 2 its "flagship video and audio generation model".[3]
 - **AI built into everyday tools** includes Microsoft's Copilot in Outlook, Teams, Word, Excel and PowerPoint, which can draw on the web and an organisation's own data (Microsoft's documentation).[4]
 - **[Agents](ai-glossary.md)** use AI to take actions towards a goal, not only to answer.[1]
+  An analogy I use: the model is the brain, the software around it (the [harness](ai-glossary.md)) is the body, and tools are what we give the body to use when the brain decides to.
+  It's only an analogy: this brain predicts; it doesn't understand.
 - **[Decision models](ai-glossary.md)** don't write text: they pick one answer from a fixed list, such as yes or no, or which expert should answer a question, and say how sure they are.[16]
   Glean's rule is to use one, Jev, when a step's answers can be listed in advance, and Simon Willison notes Google joining Jev and OpenAI "in the decision model category".[16][17]
   See [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).

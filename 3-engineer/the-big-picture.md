@@ -68,6 +68,10 @@ At the centre is the model, and everything else on the map is built around it.
 LangChain's Vivek Trivedy sums up an agent as model plus harness: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[1]
 My shorthand adds a third part: model + harness = an agent; model + harness + evals = an agent you can trust in production.
 Kevin Solorio (Focused) puts it more bluntly: "an agent without evals is a proof of concept".[10]
+An analogy I use: the model is the brain, the harness is the body, and tools are the things we give the body to use when the brain decides to.
+Brain and body work together towards the goal.
+The body also chooses what the brain sees, and its reflexes, the checks in code, can stop it whatever the brain decides.
+It's only an analogy: this brain predicts; it doesn't understand.
 Anthropic has gravitated towards a simple definition of an agent, "LLMs autonomously using tools in a loop", LLMs being large language models.[2]
 
 ### Context engineering
