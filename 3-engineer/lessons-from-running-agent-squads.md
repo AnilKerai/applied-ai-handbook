@@ -23,7 +23,7 @@ In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic
 
 ## The card is the prompt
 
-**What happened.** A worker can't see the cards beside its own, or the chat that produced its card, so the card body is its whole prompt. Anything a card leaves ambiguous gets settled by a guess, which spreads to every child card, or the worker blocks. Early on, the board's automatic task splitter also routed work by each role's one-line description, ignoring the lead's own instructions.
+**What happened.** A worker can't see the cards beside its own, or the chat that produced its card, so the card body is its whole prompt. Where a card is ambiguous, the worker either guesses, and the guess spreads to every child card, or it blocks. Early on, the board's automatic task splitter also routed work by each role's one-line description, ignoring the lead's own instructions.
 
 **What I changed.** Any decision two cards share is written into both, numbered so that the reviewer can audit against it, and product decisions are made with me before the card exists. I now assign work to the lead directly, and rough ideas wait for me instead of being split automatically. The lead also runs a ready check before work starts: the problem, the acceptance criteria, what is out of scope, the constraints, and no open product decision.
 
@@ -31,7 +31,7 @@ In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic
 
 ## Separate the writer from the checker
 
-**What happened.** The reviewer re-runs a card's verify commands itself, so the engineer never grades its own work. In my first five-day snapshot, 19 of the 20 implementation cards reviewed were approved first time, one was sent back for a real defect, and every approval cited checks the reviewer had run.[1] The gap showed where no reviewer stood. A lead with no terminal ran a bug hunt alone and filed sixteen fix cards from reading the code. An independent audit found fifteen of them real, but seven specified a fix narrower than the bug, and nobody had reviewed the hunt itself.
+**What happened.** The reviewer re-runs a card's verify commands itself, so the engineer never grades its own work. In my first five-day snapshot, 19 of the 20 implementation cards reviewed were approved first time, one was sent back for a real defect, and every approval cited checks the reviewer had run.[1] The gap showed up where no reviewer stood. A lead with no terminal ran a bug hunt alone and filed sixteen fix cards from reading the code. An independent audit found fifteen of them real, but seven specified a fix narrower than the bug, and nobody had reviewed the hunt itself.
 
 **What I changed.** A bug hunt now goes through the same lane as code. Engineers prove each finding with a probe that passes on the unmodified code, the reviewer re-runs the probes, and only then does the lead write fix cards. When an engineer once closed its own card and skipped review, the rule against it had lived only in the lead's memory, so I added it to the engineer's instructions.
 
@@ -55,7 +55,7 @@ In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic
 
 ## Handoffs and clones carry context, good and bad
 
-**What happened.** The next role receives only a handoff summary and some metadata, never the transcript, so a thin summary leaves it short. Cloning a role also copied more than I meant: three roles started with a stale copy of another profile's memory, which put wrong facts into every run.
+**What happened.** The next role receives only a handoff summary and some metadata, never the transcript, so a thin summary leaves it short of what it needs. Cloning a role also copied more than I meant: three roles started with a stale copy of another profile's memory, which put wrong facts into every run.
 
 **What I changed.** I cleared the inherited memory, and after cloning I now set each role's memory, thinking level and tools myself instead of trusting the copy.
 

@@ -26,9 +26,10 @@ as_of: "November 2026"
 Anthropic defines an eval as "a test for an AI system: give an AI an input, then apply grading logic to its output to measure success".[1]
 Eval engineering is the work of building and maintaining those tests, and the name is a label for an established practice rather than a coined discipline: its earliest use found is in the documentation of the ell library, which in December 2024 said "Updating and refining the eval in response to these insights is what we call eval engineering".[2]
 No source found coins the term.
-Anthropic defines two related terms. An evaluation harness is "the infrastructure that runs evals end-to-end".[1]
+Anthropic defines two related terms.
+An evaluation harness is "the infrastructure that runs evals end-to-end".[1]
 An agent harness is the system that lets a model act as an agent, so when evaluating "an agent", Anthropic says, "we’re evaluating the harness and the model working together".[1]
-The grading itself is done by graders, and, Anthropic says, "Agent evaluations typically combine three types of graders: code-based, model-based, and human."[1]
+The grading itself is done by graders, and Anthropic says that "Agent evaluations typically combine three types of graders: code-based, model-based, and human."[1]
 
 The diagram shows the eval cycle: a case is run through the model and harness, graded by the three types of grader and scored, then the eval or the system is changed and the evals are run again.
 

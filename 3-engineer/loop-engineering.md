@@ -11,7 +11,7 @@ as_of: "November 2026"
 # Loop engineering
 
 > **In one minute**
-> - An agent is a model using tools in a loop until a task is done. Loop engineering designs the system that starts, checks and improves those runs, in place of a person prompting each one.
+> - An agent is a model using tools in a loop until a task is done. Loop engineering designs the system that starts, checks and improves the agent's runs, in place of a person prompting each one.
 > - The usual layers are the agent's own loop, a checking loop around it, runs started by events, and a loop that learns from past runs.
 > - Every loop needs a stopping rule a machine can check, and a hard limit on turns or spend.
 > - The name is new and the claimed benefits are not yet backed by systematic evidence, so measure before scaling up.
@@ -40,7 +40,7 @@ flowchart TD
 
 Loops across runs are older than the name: Lulla et al. trace them to Geoffrey Huntley's "Ralph Wiggum" technique, published in July 2025.[3]
 By their account, which cites Gergely Orosz, agent tools then added loop features between March and May 2026, such as a recurring /loop command in Claude Code.[3]
-On 7 June 2026 (UTC) Peter Steinberger posted that "You should be designing loops that prompt your agents", without using the phrase itself.[5]
+On 7 June 2026 (UTC) Peter Steinberger posted that "You should be designing loops that prompt your agents", without using the term loop engineering.[5]
 Osmani's *Loop Engineering* post, the same day, is the earliest dated use of the term found, and he hedged that it was still early.[2]
 Lulla et al. say the term "was coined in early June 2026", when Steinberger's post, a remark by Boris Cherny and Osmani's post appeared within days of each other.[3]
 On 30 June Andrew Ng wrote that the term "is a hot buzzphrase" after mentions of it by Cherny and Steinberger went viral.[6]

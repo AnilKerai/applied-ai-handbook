@@ -47,7 +47,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Where do we start?
 
-**My recommendation:** Start with one well-understood task where AI would make the result better or more efficient, the data is sound and the output is easy to check. Agree first what we will never use AI for.
+**My recommendation:** Start with one well-understood task where AI would give a better or more efficient result, the data is sound and the output is easy to check. Agree first what we will never use AI for.
 
 **Why:**
 - Heidi Porter (Moyer Group AI) chooses a mechanism per task: rules, machine learning, a decision model (which picks from fixed answers) or an LLM (the AI behind chat assistants).[1]
@@ -99,7 +99,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: How do we know it's working, and what should we measure?
 
-**My recommendation:** Decide what *better* means before you start: for example, time saved, fewer mistakes or better results for customers. Then check it on real work, with what each task costs alongside. Judge the outcome, not how much AI was used or how much it produced. Don't trust the feeling that it's faster: measure it.
+**My recommendation:** Decide what *better* means before you start: for example, time saved, fewer mistakes or better results for customers. Then check it on real work, alongside what each task costs. Judge the outcome, not how much AI was used or how much it produced. Don't trust the feeling that it's faster: measure it.
 
 **Why:**
 - METR, a non-profit that studies AI, ran one randomised trial in early 2025 with 16 experienced open-source developers.[76]
@@ -118,7 +118,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14]
   Factory tracks a *regret-free merge rate*, the share of changes that never need a revert or follow-up fix,[15] and Philipp Schmid (Google DeepMind) tells teams to report cost per task next to accuracy.[16]
 
-**How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial found that developers' sense of their own speed misled them too. What to measure instead rests on practitioners' practice.
+**How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial found that developers' sense of their own speed misled them too. What to measure instead rests on what practitioners do.
 
 ### Q: How do we keep costs under control?
 
@@ -161,7 +161,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
   Newer evidence adds a caveat to practitioners' message that models are interchangeable: one study found that a harness one model built for itself fell from 69.3 to 33.0 on a coding benchmark when another model ran it.[20]
   One developer compared two coding set-ups over two four-week periods, without randomising (a preprint).[75]
   A self-hosted, quantised open-weight model, run in a different harness, was associated with a far higher share of fix commits than a frontier model behind an API (74.9% against 45.9%).[75]
-  Even so, it still cost less in total on shared GPUs, and more on dedicated ones.[75]
+  Even so, it cost less in total on shared GPUs, and more on dedicated ones.[75]
 
 **How sure I am:** Fairly sure about testing on our own tasks, not very sure about the open-weight default. Open models lag more on harder tests, the cost evidence is thin, and a comparison on business tasks is still missing (see the [open questions](#open-questions-evidence-thin)).
 
@@ -179,10 +179,10 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 ### Q: Do we need a knowledge graph?
 
-**My recommendation:** A knowledge graph stores facts as things and the links between them, such as customers and their contracts. Probably not as a starting point. For records kept in tables, well-written database queries (SQL) behind fixed tools are the baseline to beat. Test a graph only on relationship-heavy questions we can't answer today.
+**My recommendation:** A knowledge graph stores facts as things and the links between them, such as customers and their contracts. We probably don't need one as a starting point. For records kept in tables, well-written database queries (SQL) behind fixed tools are the baseline to beat. Test a graph only on relationship-heavy questions we can't answer today.
 
 **Why:**
-- In a peer-reviewed study Heidi Porter cited, of a hose production line, a vision model (AI that reads camera images) detected the defects.[1]
+- In a peer-reviewed study of a hose production line, which Heidi Porter cited, a vision model (AI that reads camera images) detected the defects.[1]
   The system drew evidence from a knowledge graph and separately searched procedures and maintenance history.[1]
   Rule checks tested whether the LLM's explanation stayed within the evidence.[1]
 - The closest independent study (synthetic health records) found SQL ahead on lookup, multi-hop (chained) and reasoning questions, and a graph ahead only on time-based ones.[30]
@@ -224,7 +224,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** Assume anything an AI agent reads could carry hidden instructions: that is prompt injection. Treat skills, plugins and packages like any other software we depend on, because they can carry harmful code too (supply-chain risk). Vet them, pin them to a known version, and sandbox them: run them where they can't reach our real systems.
 
 **Why:**
-- The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic (non-LLM) safeguards, ones that don't rely on an AI model's judgement, to constrain what the system can do.[63]
+- The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic safeguards, ones that don't rely on an AI model's judgement, to constrain what the system can do.[63]
 - **For software teams:** Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
   Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
   Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]

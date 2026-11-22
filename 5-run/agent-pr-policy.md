@@ -110,7 +110,7 @@ Simon Willison puts a short human-approved summary above the agent's write-up, l
 
 ## 6. Review by risk tier
 
-The gate sets the tier from the paths changed. An agent MAY raise a tier but MUST NOT lower one. At L1 or L2, a human approves every merge regardless.
+The gate sets the tier from the paths changed. An agent MAY raise a tier but MUST NOT lower one. At autonomy level L1 or L2 (section 7), a human approves every merge regardless.
 
 - **Docs:** documentation and copy only. Automated checks; no human reviewer required.
 - **Ordinary:** most code. Automated checks, an AI review and one human reviewer who knows the area.
@@ -148,7 +148,7 @@ Promotion, per action and area, MUST meet all of these:
 - Mistakes are cheap and caught by tests, CI or review before harm.
 - The action can be undone, and the undo has been tested.
 - A track record at the current level (suggested: 30 changes over four weeks to start).
-- For L4, a regret-free merge rate better than that of human PRs in the same area.
+- For L4, a regret-free merge rate (section 9) better than that of human PRs in the same area.
 - The owner approves and records it.
 
 Demotion is immediate, by at least one level, after a traced incident or revert, a month below the human regret-free baseline (a suggested window), or any attempt to get round a gate. A major model or tool change SHOULD trigger a review of levels.

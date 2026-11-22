@@ -71,7 +71,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 
 - **Problem:** Models, prices and versions change faster than the systems built on them.[13]
 - **Pattern:** Code against an abstraction or gateway alias, and keep prompts, data and evals in the system. Treat a model change as a release: re-run the evals, or run old and new side by side, before switching.
-- **Use when:** anything meant to outlive a pilot. **Avoid when:** no second model is needed yet; skip the router.
+- **Use when:** building anything meant to outlive a pilot. **Avoid when:** no second model is needed yet; in that case, skip the router.
 - **Pitfalls:** swapping without re-evaluating.[1]
 - **Seen at:**
   - Stanford tested five LLMs and chose a cheaper one that performed competitively. Porter: "The model is again the replaceable part, not the center of the system."[1]
@@ -131,7 +131,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 ### 10. The execution dial, with staged actions
 
 - **Problem:** Approval everywhere breeds rubber-stamping; no approval lets wrong actions through.[1]
-- **Pattern:** Per kind of action, decide who acts by what a mistake costs and whether it can be undone: a person approves, the system acts above a threshold and escalates the rest, acts with an undo window, or automates. For approval, tools stage the action for the user to confirm.
+- **Pattern:** Per kind of action, decide who acts by what a mistake costs and whether it can be undone: a person approves; the system acts above a threshold and escalates the rest; it acts with an undo window; or it automates outright. Where a person approves, tools stage the action for them to confirm.
 - **Use when:** the AI changes anything. **Avoid when:** it only reads and reports.
 - **Pitfalls:** approval on everything; thresholds never re-tuned.
 - **Seen at:**
@@ -160,7 +160,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Pitfalls:** clock reads or new GUIDs in the orchestrator;[29] assuming capable means recoverable: "an agent can become more capable while becoming less recoverable."[30]
 - **Seen at:**
   - Cecil Phillip (Temporal): "AI systems are really just distributed systems in disguise." His demo agent recovered after its ride service restarted.[29]
-  - Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed." In their UndoBench trials, naive retries produced duplicate effects in 54% of the relevant trials.[30]
+  - Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed." In the UndoBench trials the Sahs ran, naive retries produced duplicate effects in 54% of the relevant trials.[30]
 
 ### 13. The trace ID on the business record
 
@@ -187,7 +187,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 ### 15. One agent per on-call rotation, with an autonomy ladder
 
 - **Problem:** Separate bots each keep their own context, so the person on call becomes the glue.[31]
-- **Pattern:** Give each rotation one agent teammate with one loop across signals, its own identity and the team's memory. It investigates, then drafts fixes for approval, then clears low-criticality work alone, promoted per kind of action on its record.
+- **Pattern:** Give each rotation one agent teammate with one loop across signals, its own identity and the team's memory. It investigates, then drafts fixes for approval, then clears low-criticality work alone, and is promoted one kind of action at a time, on its track record.
 - **Use when:** incidents recur and tests, CI or review can catch mistakes. **Avoid when:** nothing would catch them.
 - **Pitfalls:** promoting the agent wholesale; ops queries nobody audits.
 - **Seen at:**

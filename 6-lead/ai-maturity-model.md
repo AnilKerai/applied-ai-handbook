@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: leaders planning adoption*
 
-Two ladders, for AI in engineering (coding agents) and AI in the business (features and operations), plus a roadmap template. It builds on [Should we aim for a fully automated software factory?](should-we-build-a-software-factory.md) and [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md) without repeating their arguments. Stages and risks are cited; exit criteria, questions and the roadmap are my advice.
+This page gives two ladders, for AI in engineering (coding agents) and AI in the business (features and operations), plus a roadmap template. It builds on [Should we aim for a fully automated software factory?](should-we-build-a-software-factory.md) and [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md) without repeating their arguments. Stages and risks are cited; exit criteria, questions and the roadmap are my advice.
 
 ## 1. How to use it
 
@@ -84,7 +84,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 - **Looks like:** fixed orchestration, with an LLM only for the fuzzy step.
   - Porter picks rules, ML, a decision model or an LLM per task. In Syngenta's seed tool the LLM is "the interface, the router, and the explainer, not the agronomist".[1]
   - Chinmay Goyal asks "can the output be listed in advance?" If yes, Glean uses a decision model.[13] In UiPath's fraud demo, a decision model calls in an agent only when it lacks the evidence to decide.[14]
-  - AeroCore's agent took off once in Microsoft Teams ("No one likes an extra login.").[11]
+  - AeroCore's agent took off once it was in Microsoft Teams ("No one likes an extra login.").[11]
 - **Prerequisites:** good enough data, plus guardrails, evals and observability. Guardrails go in code, since "a rule written in a prompt is not deterministically enforced".[1]
 - **Exit criteria:** live results are sampled and failures fed back into evals (Solorio's flywheel); worst cases are reviewed, because, as Porter says, "averages can hide a bad result".[1] Gains are measured against a baseline.
 - **Risks:** vendor churn. At Noblis an upgrade broke every app built on the old version.[11]
@@ -99,7 +99,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 ### B5: Learn, then hand off, at scale
 
 - **Looks like:** on repeated per-record jobs, an expensive model learns and a cheap one runs.
-  - At AgentRun, Opus wrote its path down as a workflow for a cheap model; a judge returns answers whose quote isn't on a page read.[15] It reports cost per merchant falling from $0.89 to $0.124, at 96% correct against 93% for Opus alone (its own claims).[15]
+  - At AgentRun, Opus wrote its path down as a workflow for a cheap model; a judge hands back answers whose quote isn't on a page that was read.[15] It reports cost per merchant falling from $0.89 to $0.124, at 96% correct against 93% for Opus alone (its own claims).[15]
   - UiPath designs categories with an LLM offline: "we basically removed the LLM completely from the picture on this one."[14]
 - **Prerequisites:** a stable, high-volume, checkable job, run side by side on live traffic before cut-over.
 - **Exit criteria:** top stage for fitting jobs; keep measuring hand-backs and reliability.
@@ -124,7 +124,7 @@ Answer per team or workflow; any no means stay.
 A recommendation; swap in each team's own examples.
 
 - **90 days, baseline:** place every team and two or three workflows, noting what blocks each. Agree the charter and owners ([AI intake checklist](../2-decide/ai-intake-checklist.md)). Engineering: shared repo context, [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) at L1–L2, and baselines for review time, reverts and regret-free merges. Business: one narrow, checkable step ([Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)) with user-built evals ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)).
-- **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly token and [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md) reviews.
+- **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly reviews of token spend and the [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md).
 - **12 months, scale where it fits:** E3 where constraints allow; L4 only for named actions whose regret-free merge rate beats our engineers'. B4 agents with tested undo, and one learn-then-hand-off trial alongside the current path. Re-assess every team, noting who stayed put by choice.
 
 ## 6. Newer evidence
@@ -137,7 +137,7 @@ A recommendation; swap in each team's own examples.
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
 - **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and *none of these* cases.
-- **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
+- **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism chosen for a task can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).
 

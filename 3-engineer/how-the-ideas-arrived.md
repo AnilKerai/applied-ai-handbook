@@ -18,8 +18,8 @@ as_of: "November 2026"
 
 *Reading time: about 5 minutes · Best for: anyone wanting the history*
 
-The author's own projects are marked as his path.
-Each field event uses one verb, never a stronger verb than its evidence supports:
+Entries labelled *My path* are the author's own projects.
+The other entries are events in the field, and each uses one verb, never a stronger one than its evidence supports:
 
 - **coined:** a source shows the naming, or a credible source says so;
 - **first seen:** the earliest use found, not proof it was the first;
@@ -78,7 +78,7 @@ timeline
                    : My path - started this handbook (Nov)
 ```
 
-More on each discipline:
+More on each discipline, and on how they fit together:
 
 - [Prompt engineering](prompt-engineering.md)
 - [Context engineering](context-engineering.md)
@@ -134,7 +134,7 @@ More on each discipline:
 - **Anthropic's evals guide, published January 2026.** It defines an eval as "a test for an AI system".[27]
 - **"Harness engineering", first seen February 2026.** On 5 February Mitchell Hashimoto had "grown to calling" his practice harness engineering, while unsure there was an accepted term.[28]
 - **OpenAI's harness engineering post, published February 2026.** Six days later, OpenAI's Ryan Lopopolo described engineers who "design environments, specify intent, and build feedback loops" for agents (OpenAI's account).[29]
-- **Guides and sensors, published April 2026.** Birgitta Böckeler's article introduced, in her words, "guides, sensors, computational and inferential elements, and harness templates".[30] She didn't coin the term: in February she called it "only 2 weeks old".[31]
+- **Guides and sensors, published April 2026.** Birgitta Böckeler's article introduced, in her words, "guides, sensors, computational and inferential elements, and harness templates".[30] She didn't coin the term harness engineering: in February she called it "only 2 weeks old".[31]
 - **"Loop engineering", first seen June 2026.** Addy Osmani's post of 7 June is the earliest dated use found.[32] Lulla et al. say the term "was coined in early June 2026".[26]
 - **LangChain's four loops, published June 2026.** Sydney Runkle stacked agent, verification, event-driven and hill-climbing loops.[33]
 - **"Loop engineering", popularised June 2026.** On 30 June Andrew Ng called it "a hot buzzphrase".[34]

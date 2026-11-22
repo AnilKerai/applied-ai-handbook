@@ -28,7 +28,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 ## 2. Build the eval set
 
 **Build it with the people who do the job.**
-- Solorio shows workers a deliberately rough version built on synthetic data, because people are quick to say what is wrong, and makes labelling cheap, such as a shared spreadsheet.[1]
+- Solorio shows workers a deliberately rough version built on synthetic data, because people are quick to say what is wrong, and makes labelling cheap, for example with a shared spreadsheet.[1]
 - He widens the circle once the first few experts have shaped it, because they "might not see every case".[1]
 
 **Use real cases.**
@@ -39,7 +39,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Include edge and worst cases.**
 - Anthropic's Claude Code team turns every incident into an eval case, with each bug confirmed by engineers who know the code, and runs its reviewer against the set daily.[6]
 - It also runs the reviewer on PRs known to be clean, to count false alarms (Anthropic's account).[6]
-- In RL training rather than evals, Melvin Johnson (Google DeepMind) turns failures from internal use into new training tasks and prunes tasks the model always solves, because "Easy task give you zero learning signal".[7]
+- In reinforcement learning (RL) training rather than evals, Melvin Johnson (Google DeepMind) turns failures from internal use into new training tasks and prunes tasks the model always solves, because "Easy task give you zero learning signal".[7]
 
 **How big to start.**
 - Solorio's sets are small and curated: "You're not gonna have millions of them."[1]
@@ -53,7 +53,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Worst cases, not averages.**
 - Porter: "averages can hide a bad result", and we need to know how bad the bad result is so we can fix it.[1]
 - Diogo Almeida (TypeSafe AI) puts the risk of automating with LLMs as "you get Einstein 95% of the time, but Mr. Bean 5% of the time."[9]
-- SO-Arena tested 21 models across 11 domains. The best-scoring decision model ranked only seventh for reliability, meaning answers that hold when the options change and noticing when no option is right.[10]
+- SO-Arena tested 21 models across 11 domains. The best-scoring decision model ranked only seventh for reliability, meaning giving answers that hold when the options change, and noticing when no option is right.[10]
 - I recommend reporting the pass rate, worst-case failures and the single worst result separately. Any failure in a *must never happen* case blocks release.
 
 **Cost and latency per case.**
@@ -158,7 +158,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 - Robinhood collects reasoned human replies daily; misses become new rules, and false escalations reveal missing context.[15]
 - Ara Khan (Cline) treats each human correction as a capability gap to cover, and buckets eval failures by type before fixing the harness.[11]
 
-**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but not his point that workers know cases no trace shows.[1] I recommend letting tooling fill the queue and keeping people deciding what enters the set. Live operation is in [Running AI in production](../5-run/ai-in-production-runbook.md).
+**Current practice: tools that help a coding agent write evals from traces.** NVIDIA's tooling reads stored traces against a short file of expected behaviour, ranks the issues, helps a coding agent write evals, and compares the fix on held-out tasks. It reports malformed tool calls falling from 142 to zero with accuracy unchanged (NVIDIA's claim).[21] That automates the triage Solorio runs with people, but it does not answer his point that workers know cases no trace shows.[1] I recommend letting tooling fill the queue and keeping people deciding what enters the set. Live operation is in [Running AI in production](../5-run/ai-in-production-runbook.md).
 
 ## 7. Evals for coding agents and their context
 

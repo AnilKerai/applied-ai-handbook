@@ -63,7 +63,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
   Combinations lost out in decision tasks and where the AI was better, and gained where the human was.[6]
   The authors' 2026 preprint finds the same overall pattern with generative AI (not peer-reviewed).[13]
   They do not think this makes combining "a bad idea", and suggest giving AI only the parts it is clearly better at, which only 3 experiments tested, inconclusively.[6]
-  My reasoning: they measured task performance, not accountability, so people at the helm should own outcomes, not second-guess AI that is better, where the law allows.
+  My reasoning: they measured task performance, not accountability, so people at the helm should own outcomes and, where the law allows, not second-guess AI that is better.
 - **Trust: attitudes, not outcomes.** In a Pew survey of Americans, "just 5% are open to AI making these calls on its own, with no human review" for health insurance claims.[14] That shows preference, not better decisions (my reading).
 - **UK decisions about people.** Under section 80 of the Data (Use and Access) Act 2025, a significant decision with "no meaningful human involvement" counts as solely automated, and the person can "obtain human intervention".[15] The ICO's draft guidance (March 2026) says spot-checks don't make involvement meaningful.[16]
 

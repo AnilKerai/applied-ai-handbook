@@ -54,10 +54,10 @@ flowchart TD
 
 ## The steps
 
-- **'Never' list.** Write a charter of what AI will never do *before* any code. IMB's covers
-  posing as a human, final decisions about people made solely by AI, monitoring people without
-  their knowledge, autonomous action in high-stakes settings, and counselling. "Something can be worse than
-  nothing." Check trust as well as feasibility (Barger, [Building AI Trust: What We Said Yes To, and What We Didn't](https://midwestaisummit.com/2026-recap)).
+- **'Never' list.** Write a charter of what AI will never do *before* any code. The International
+  Mission Board's charter covers posing as a human, final decisions about people made solely by AI,
+  monitoring people without their knowledge, autonomous action in high-stakes settings, and
+  counselling. As Barger puts it, "Something can be worse than nothing." Check trust as well as feasibility (Barger, [Building AI Trust: What We Said Yes To, and What We Didn't](https://midwestaisummit.com/2026-recap)).
 - **Better or more efficient?** If AI gives neither a better outcome nor less effort, don't use it.
   Then weigh the risk of error against the consequence (Lay, [AI Moves Fast: Four Decisions You Own](https://midwestaisummit.com/2026-recap)).
 - **Data first.** It must be accurate, complete, consistent and fresh enough *for this task*.
@@ -65,7 +65,7 @@ flowchart TD
   runtime (Porter).
 - **Rules or code.** Keep the control flow deterministic, and use a model only for the fuzzy
   part ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath),
-  [The.NET AI Stack: What's New, What's Next, and How It Fits Together](https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450)).
+  [The .NET AI Stack: What's New, What's Next, and How It Fits Together](https://www.youtube.com/watch?v=SIBdHRrk8os&t=11450)).
 - **Is the answer a pick from a fixed list?** Ask whether every possible answer could be written
   down before the task runs: which team gets a ticket, which label an email gets, approve or
   reject. This is Glean's test, "can the output be listed in advance?". If yes, use a
@@ -81,7 +81,7 @@ flowchart TD
   Stanford cases; Taillie, [From Photos to Queries: Practical AI Agents for Real Workflows](https://midwestaisummit.com/2026-recap)). If you don't, use an agent bounded
   by cost and time. In UiPath's fraud demo, a decision model asks whether there is enough
   evidence and an agent starts only when there isn't
-  ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath)). LLMs make good assistants but unreliable automators, because RLHF assumes a human in the loop
+  ([Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath)). LLMs make good assistants but unreliable automators, because RLHF (reinforcement learning from human feedback) assumes a human in the loop
   ([Beyond Better Assistants: Software That Can Make a Decision](https://ai.engineer/code/2026/talks/diogo-almeida)).
 - **Execution dial.** Who acts depends on how costly a mistake is and whether it can be
   undone. Make actions reversible where you can; where you can't, require approval and watch
@@ -96,7 +96,7 @@ flowchart TD
   [Infrastructure as (Actual) Code with C# 15 and .NET 11](https://www.youtube.com/watch?v=utUNTsYMkWs&t=24176),
   [Azure's new lineup for .NET developers (Part 2)](https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809)).
   Keep a named person accountable: accountability can't be delegated to AI (Lay). Store the
-  trace ID with the business record, because a 200 from the agent isn't a committed transaction
+  trace ID with the business record, because a 200 (success) response from the agent isn't a committed transaction
   ([Beyond the Agent Trace: Operating Foundry Agents with Aspire](https://www.youtube.com/watch?v=TF6qzdKwl84&t=639)).
   Make long runs durable ([Beyond Prototypes: Building Production Ready AI Workflows](https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558)).
   Before you build, ask whether you can reverse it and who will maintain it (Lay).
@@ -104,7 +104,7 @@ flowchart TD
 ## Related
 
 - [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md): once an agent is the answer, how far to trust it.
-- decision models, harness engineering, learn then hand off, agentic verification.
+- [AI glossary](../1-understand/ai-glossary.md): decision models, learn-then-hand-off and agentic verification; [Harness engineering](../3-engineer/harness-engineering.md) for the harness around an agent.
 
 **Read next:** [AI intake checklist](ai-intake-checklist.md), or go back to the [handbook home](../README.md).
 

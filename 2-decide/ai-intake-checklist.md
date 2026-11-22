@@ -55,7 +55,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** The International Mission Board (Don Barger) wrote its AI charter "before we ever write one line of code". Its never list includes AI posing as a human, AI-only final decisions about people, covert monitoring and counselling.[2]
 - **Red flags:** No list exists. *Something is better than nothing*; Barger's reply: "something can be worse than nothing if you're doing the wrong things".[2]
-- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] A more recent update: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute, so keep the list in policy and hard controls, not prompts.[12]
+- **What a good answer looks like (industry practice):** A short charter, agreed once; Barger finds "these clear limits are actually freeing me up".[2] Newer guidance: Anthropic's Claude Fable 5.2 guide says cautious rules piling up in memory and notes make the model ask for approvals it doesn't need or hold back routine work, and that it treats any *never* as absolute.[12] So keep the list in policy and hard controls, not prompts.
 
 ### 2. Will AI make the result better or the work more efficient?
 
@@ -85,7 +85,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** This is Glean's test: "can the output be listed in advance?" If so, use a decision model that returns choices with probabilities and no text, or a fine-tuned classifier when labels are stable and volume is high.[4]
 - **Red flags:** A chat model's yes, no or category is parsed from its text. The categories change often, yet the plan is to fine-tune.
-- **What a good answer looks like (industry practice):** Decision models are now mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: SO-Arena tested 21 models, and the best-performing decision model ranked only seventh for reliability, such as spotting when no option fits.[18]
+- **What a good answer looks like (industry practice):** Decision models have become mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: SO-Arena tested 21 models, and the best-performing decision model ranked only seventh for reliability, such as spotting when no option fits.[18]
 
 ### 7. Do we know the steps in advance?
 
@@ -108,7 +108,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 ### 10. Do we have evals on real cases, built with the users?
 
 - **Why it matters:** Kevin Solorio (Focused): "an agent without evals is a proof of concept". He has workers label outputs themselves, not via a proxy, then after launch scores sampled live traces and feeds failures back into the test set.[1]
-- **Red flags:** *The demo looked good.* Developers or a product owner wrote the test cases. Only averages are reported, though, as Porter warns, "averages can hide a bad result".[1]
+- **Red flags:** *The demo looked good.* Developers or a product owner wrote the test cases. Only averages are reported, though Porter warns that "averages can hide a bad result".[1]
 - **What a good answer looks like (industry practice):** Evals grow from real failures: the Claude Code team runs its reviewer daily against past PRs that caused incidents, and NVIDIA's NeMo tools mine stored traces for failures and help a coding agent write evals for them, a tool-assisted version of Solorio's flywheel.[14][25] AWS's Swami Sivasubramanian supervised an agent rebuilding a replication engine for four nights before seeing it had no way to check its results; with a spec and a test environment it took about two hours (AWS's account).[26]
 
 ### 11. Can we trace a business outcome back to what the AI did?

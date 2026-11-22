@@ -35,7 +35,7 @@ In May 2026 I started building an evals framework to answer one question: before
 
 **What I changed.** Every case is now scored on three separate layers. Did the agent notice that the task called for the skill? Were its steps right, calling the tools it needed and leaving alone the ones it shouldn't touch? Was the end result correct? The steps are checked as a partial order, such as looking something up before acting on it, not as one exact sequence, because a right answer can often be reached by more than one route.
 
-**The principle.** A case where the steps were right but the outcome was wrong locates the fault in the reasoning, not in the choice of tools, which one overall score never could. Testing an agent means testing the model and the code around it together ([Core principles](eval-engineering.md#core-principles)).
+**The principle.** A case where the steps were right but the outcome was wrong locates the fault in the reasoning, not in the choice of tools. One overall score can't do that. Testing an agent means testing the model and the code around it together ([Core principles](eval-engineering.md#core-principles)).
 
 ## The delta matters, not the score
 
@@ -47,9 +47,9 @@ In May 2026 I started building an evals framework to answer one question: before
 
 ## Exact checks first, and a judge only as a last resort
 
-**What happened.** The problem: many questions that seem to need a judge are really about the shape of the trace, such as whether a tool was called or the output has the expected fields, and a judge is slower, costs money and can vary between runs.
+**What happened.** The problem: many questions that seem to need an AI judge are really about the shape of the trace, such as whether a tool was called or the output has the expected fields. A judge is also slower, costs money and can vary between runs.
 
-**What I changed.** Those questions get exact checks, which are fast, free and give the same answer every time. An AI judge is the exception, kept for questions an exact check can't reach, such as whether a passage is supported by the evidence. I split two judges on purpose. One never sees the expected answer and asks only whether the output is backed by what the tools returned, so an output can't win points by parroting the answer key. The other compares the output with the expected answer. Keeping them apart means a fluent answer can't hide a wrong one inside a single score.
+**What I changed.** Those questions get exact checks, which are fast, free and give the same answer every time. An AI judge is the exception, kept for questions an exact check can't reach, such as whether a passage is supported by the evidence. I keep two separate judges on purpose. One never sees the expected answer and asks only whether the output is backed by what the tools returned, so an output can't win points by parroting the answer key. The other compares the output with the expected answer. Keeping them apart means a fluent answer can't hide a wrong one inside a single score.
 
 **The principle.** Use a code-based check wherever the right answer can be checked mechanically, and keep model graders for the rest ([Core principles](eval-engineering.md#core-principles)).
 
@@ -57,7 +57,7 @@ In May 2026 I started building an evals framework to answer one question: before
 
 **What happened.** The model doesn't give the same answer every time, so one passing run could mean that it always passes, or that it passed once.
 
-**What I changed.** Cases run several times, and each check reports two things: whether it passed at least once, which shows the agent can do it, and whether it passed every time, which shows it reliably does. The second is pass^k, which τ-bench's authors proposed "to evaluate the reliability of agent behavior over multiple trials".[1] Every pass rate also carries a 95% confidence interval, and three passes from three runs gives an interval of 44% to 100%. That is honest about how little three runs show. The difference between the runs with and without a skill gets the same treatment, marked either significant or within noise.
+**What I changed.** Cases run several times, and each check reports two things: whether it passed at least once, which shows the agent can do it, and whether it passed every time, which shows it reliably does. The second is pass^k, which τ-bench's authors proposed "to evaluate the reliability of agent behavior over multiple trials".[1] Every pass rate also carries a 95% confidence interval, and three passes from three runs gives an interval of 44% to 100%, which is honest about how little three runs show. The difference between the runs with and without a skill gets the same treatment, marked either significant or within noise.
 
 **The principle.** Run each case more than once, and report reliability with error bars instead of a single draw ([Core principles](eval-engineering.md#core-principles)).
 

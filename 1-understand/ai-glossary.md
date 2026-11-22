@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: everyone*
 
-Plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions, each with a practitioner or industry source that uses it. *Why it matters* lines are my advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
+Each term comes with a practitioner or industry source that uses it. *Why it matters* lines are my advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
 
 ## A
 
@@ -61,7 +61,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Data flywheel**
 - A loop that keeps an AI feature improving: a sample of real use is scored, people review the failures, and those cases join the test set that the next version is measured against.[8]
-- *Why it matters:* it turns live mistakes into lasting tests, so the feature gets better with use instead of quietly drifting.
+- *Why it matters:* it turns live mistakes into lasting tests, so the feature gets better with use instead of drifting unnoticed.
 
 **Decision model (System One model)**
 - An AI model that does not write text: it picks one answer from a fixed list, such as yes or no or one of several routes, and says how sure it is.[9] UiPath calls these quick calls *system one*; in its fraud demo they hand over to slower *system two* agents only when evidence is missing.[10]
@@ -99,11 +99,11 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 - Training an existing AI model further on our own examples so that it gets better at one narrow job.[13]
 - *Why it matters:* cheaper options usually come first; on training a specialist reviewer model, Brian Douglas says "My recommendation is probably write a skill first."[13]
 
-## G
-
 **Frontier model**
 - As used here: one of the most capable AI models available at the time. Epoch AI reports that since January 2026 the most capable open-weight models "have lagged frontier closed models by an average of four months" on its measure of capability.[46]
 - *Why it matters:* the most capable model isn't always needed. I recommend stepping up to one only where our evals show an open-weight model failing and the step is worth the cost.
+
+## G
 
 **Grounding**
 - Making an AI model answer from facts fetched from our own systems at the time of the question, with their sources shown, rather than from what it remembers.[8]
@@ -129,7 +129,7 @@ Plain-English meanings of AI terms that come up in proposals, supplier pitches a
 
 **Human in the loop**
 - A design in which a person checks or approves the AI's work before it takes effect.[8]
-- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items can fall into "rubber stamping fatigue".[8] Approving each output can turn into a rubber stamp: Paula Goldman of Salesforce warns that "simply having a human in the loop can create false confidence" (a vendor executive's view).[42] For agents doing many steps, see **Human at the helm**, above.
+- *Why it matters:* it only works at volumes people can handle with care; Porter warns that reviewers facing thousands of items can fall into "rubber stamping fatigue".[8] Paula Goldman of Salesforce also warns that "simply having a human in the loop can create false confidence" (a vendor executive's view).[42] For agents doing many steps, see **Human at the helm**, above.
 
 ## J
 

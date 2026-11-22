@@ -14,13 +14,14 @@ as_of: "November 2026"
 > - Prompt engineering is writing the text a model is given so that it does the task well; for agents, it is now one part of context engineering.
 > - Worked examples, and asking for the steps of reasoning, often help more than instructions alone.
 > - A prompt is only as good as its results on real cases, so test each change.
-> - Outside text that reaches a prompt can carry hostile instructions, so the defences belong in the code around the model.
+> - Outside text that reaches a prompt can carry hostile instructions, so treat it as data, never as orders to follow.
 > - Anything that must always hold belongs in checks in the code around the model, not in the prompt.
 
 *Reading time: about 4 minutes · Best for: engineers new to AI*
 
 I no longer treat prompt engineering as its own discipline.
-Writing the text is one part of choosing everything the model sees, which is [context engineering](context-engineering.md), and anything that must hold belongs in deterministic checks in the code around the model, not in the prompt.
+Writing the text is one part of choosing everything the model sees, which is [context engineering](context-engineering.md).
+Anything that must hold belongs in deterministic checks in the code around the model, not in the prompt.
 The skill still matters: someone has to write the system prompt, the tool descriptions and the worked examples well.
 This page covers that skill, where it came from and the principles that still hold.
 
@@ -79,7 +80,8 @@ I recommend putting any rule that must always hold into a deterministic check, s
 
 ## See it built
 
-In [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness), the instructions are one part of what its *guide* pattern assembles at each step, which makes it context engineering rather than prompt engineering. So it's shown on [Context engineering](context-engineering.md#see-it-built).
+In [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness), the instructions are one part of what its *guide* pattern assembles at each step.
+That assembly is context engineering rather than prompt engineering, so the harness is shown on [Context engineering](context-engineering.md#see-it-built).
 
 **Read next:** [Context engineering](context-engineering.md), or go back to the [handbook home](../README.md).
 

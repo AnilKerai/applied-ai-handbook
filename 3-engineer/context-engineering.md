@@ -20,7 +20,8 @@ as_of: "November 2026"
 
 ## What it is
 
-Context is everything a model sees when it runs, all of which must fit in its context window: instructions, tools, documents, and the conversation and results so far.
+Context is everything a model sees when it runs: instructions, tools, documents, and the conversation and results so far.
+All of it must fit in the model's context window, the text it can see at once.
 LangChain's Harrison Chase (23 June 2025) defines context engineering as "building dynamic systems to provide the right information and tools in the right format".[1]
 Anthropic defines it as "the set of strategies for curating and maintaining the optimal set of tokens (information) during LLM inference", tokens being the chunks of text, often parts of words, that a model reads.[2]
 Andrej Karpathy's version (25 June 2025) is shorter: "the delicate art and science of filling the context window with just the right information for the next step".[3]

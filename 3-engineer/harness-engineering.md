@@ -22,7 +22,7 @@ as_of: "November 2026"
 ## What it is
 
 The simple definition of an agent that Anthropic has adopted is "LLMs autonomously using tools in a loop", LLMs being large language models and tools being functions a model can call, such as a search.[1]
-LangChain's Vivek Trivedy (March 2026) defines the harness around it widely: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[2]
+LangChain's Vivek Trivedy (March 2026) defines the harness around it broadly: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[2]
 Anthropic's own definition is about what the harness does: an agent harness "is the system that enables a model to act as an agent: it processes inputs, orchestrates tool calls, and returns results."[3]
 
 On this page, harness engineering means building that code.
@@ -34,7 +34,8 @@ Lulla et al., citing Böckeler, name the two parts of a coding agent's harness: 
 
 This page covers one reliable run; running an agent many times is [loop engineering](loop-engineering.md), and measuring runs is [eval engineering](eval-engineering.md).
 
-The diagram shows one run: guides steer the model before it acts, sensors check its work after it acts, and exit checks either feed back into the next step or end the run, as a final answer checked against its schema or as an unfinished result.
+The diagram shows one run: guides steer the model before it acts, and sensors check its work after it acts.
+Exit checks then either feed back into the next step or end the run, as a final answer checked against its schema or as an unfinished result.
 
 ```mermaid
 flowchart TD
@@ -69,8 +70,8 @@ Steer the agent before it acts, and check its work after it acts, so that it can
 
 **The evidence.**
 In Böckeler's framing, guides are feedforward controls that "anticipate the agent's behaviour and aim to steer it before it acts", and sensors are feedback controls that "observe after the agent acts and help it self-correct".[6]
-Böckeler also splits controls by how they run: her computational controls are "deterministic and fast, run by the CPU", such as "Tests, linters, type checkers, structural analysis".[6]
-Böckeler's inferential controls, such as AI code review and "LLM as judge", are "Slower and more expensive; results are more non-deterministic."[6]
+She also splits controls by how they run: her computational controls are "deterministic and fast, run by the CPU", such as "Tests, linters, type checkers, structural analysis".[6]
+Her inferential controls, such as AI code review and "LLM as judge", are "Slower and more expensive; results are more non-deterministic."[6]
 Böckeler's split resembles two of the grader types in Anthropic's account of agent evaluations, which "typically combine three types of graders: code-based, model-based, and human".[3][6]
 
 **What can go wrong.**
@@ -82,7 +83,7 @@ I also recommend turning each repeated mistake into a guide or a computational c
 ## Budgets and stopping
 
 **The principle.**
-Give every run a stop condition that a machine can check and hard limits on turns, tokens, spend or time, and treat a run that hits a limit as unfinished.
+Give every run a machine-checkable stop condition and hard limits on turns, tokens, spend or time, and treat a run that hits a limit as unfinished.
 
 **The evidence.**
 Lulla et al. define the agent loop as the model's repeated cycle of calling tools and acting on the results "until a stop condition ends it, such as a final response, an achieved goal, or a time limit".[7]
@@ -175,7 +176,9 @@ I also recommend making that gate fail closed, so that an error in the check blo
 
 ## See it built
 
-The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering) describes one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness). Its loop-engineering section lists the exits inside one run (budgets, no-progress detection and verification) and places harness engineering as the tier that owns one reliable run. Four of the harness's decision records explain specific choices:
+The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#loop-engineering) describes one example implementation, [my open-source .NET agent harness](https://github.com/AnilKerai/model-harness).
+Its loop-engineering section lists the exits inside one run (budgets, no-progress detection and verification) and places harness engineering as the tier that owns one reliable run.
+Four of the harness's decision records explain specific choices:
 
 - [A collaborator's own timeout is not a cancelled run](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/001-collaborator-timeout-is-not-a-cancelled-run.md): why a timeout from something the loop calls, such as a tool, is a fault and not a cancelled run, and why the sensor that guards privileged actions fails closed.
 - [Compaction as an incremental fold](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/decisions/002-incremental-fold-compaction.md): why it summarises only newly dropped steps on top of the previous summary, and why that spend counts against the run's budget.

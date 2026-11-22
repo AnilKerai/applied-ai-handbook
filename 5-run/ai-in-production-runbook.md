@@ -26,7 +26,7 @@ as_of: "November 2026"
 Tick every item before the first production run, and file the evidence with the owner.
 
 - [ ] [AI intake checklist](../2-decide/ai-intake-checklist.md) answered, with real answers to questions 8 to 12.
-- [ ] The memo's minimum bar met in infrastructure, not in a prompt.
+- [ ] The minimum bar in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md) met in infrastructure, not in a prompt.
 - [ ] Named owner and data steward on the on-call sheet (section 7).
 - [ ] Traces flowing, with the trace ID on the business record (section 2).
 - [ ] Offline evals pass; online scoring is on (section 3).
@@ -135,7 +135,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 ## 8. The four verification loops
 
-Andrew Finch (Sonar) says the factory "runs dim, not dark": people stay in it, and safety comes from four loops.[22]
+Andrew Finch (Sonar) says the software factory "runs dim, not dark": people stay in it, and safety comes from four loops.[22]
 
 1. **PR checks:** evidence recorded on each change, judged against criteria the team writes down.[22] A draft set is in [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
 2. **Post-deploy verification:** AI reads logs, traces and metrics, and an automated rollout widens, rolls back or switches off a flag; Finch calls this loop early.[22] Sections 2 to 4 supply it.

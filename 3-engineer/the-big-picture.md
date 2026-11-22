@@ -21,7 +21,8 @@ as_of: "November 2026"
 
 This page draws the engineering around a model as nested layers, from the model at the centre out to the organisation that decides what it may do.
 It is not an industry standard, just one way of dividing the work that I find useful.
-It builds on public framings from Birgitta Böckeler, LangChain and Anthropic, cited layer by layer below, and it follows the division used across this section: harness engineering owns one run, loop engineering works across many runs, and eval engineering measures them.
+It builds on public framings from Birgitta Böckeler, LangChain and Anthropic, cited layer by layer below.
+It also follows the division used across this section: harness engineering owns one run, loop engineering works across many runs, and eval engineering measures them.
 
 ## The map
 
@@ -65,6 +66,7 @@ The pages for each part of the map:
 ### Model
 
 At the centre is the model, and everything else on the map is built around it.
+Anthropic has gravitated towards a simple definition of an agent, "LLMs autonomously using tools in a loop", LLMs being large language models.[2]
 LangChain's Vivek Trivedy sums up an agent as model plus harness: "A harness is every piece of code, configuration, and execution logic that isn't the model itself."[1]
 My shorthand adds a third part: model + harness = an agent; model + harness + evals = an agent you can trust in production.
 Kevin Solorio (Focused) puts it more bluntly: "an agent without evals is a proof of concept".[10]
@@ -72,7 +74,6 @@ An analogy I use: the model is the brain, the harness is the body, and tools are
 Brain and body work together towards the goal.
 The body also chooses what the brain sees, and its reflexes, the checks in code, can stop it whatever the brain decides.
 It's only an analogy: this brain predicts; it doesn't understand.
-Anthropic has gravitated towards a simple definition of an agent, "LLMs autonomously using tools in a loop", LLMs being large language models.[2]
 
 ### Context engineering
 
@@ -126,7 +127,8 @@ Anthropic's advice belongs at this level: "we recommend finding the simplest sol
 ## See it built
 
 My open-source .NET agent harness, [model-harness](https://github.com/AnilKerai/model-harness), is built on the same split.
-Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) divides the work three ways: the harness runs one episode, an eval measures it, and a loop acts on the measurement. The harness itself owns the single run, and leaves offline evals and the outer loops to the system around it.
+Its [primer](https://github.com/AnilKerai/model-harness/blob/7caff829f26912ff058b6205dc1c6d3053f0fcae/docs/PRIMER.md#how-it-relates-to-harness-and-eval-engineering) divides the work three ways: the harness runs one episode, an eval measures it, and a loop acts on the measurement.
+The harness itself owns the single run, and leaves offline evals and the outer loops to the system around it.
 
 **Read next:** [How the ideas arrived](how-the-ideas-arrived.md), or go back to the [handbook home](../README.md).
 

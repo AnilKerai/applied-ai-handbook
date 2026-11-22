@@ -61,7 +61,7 @@ On 18 July 2026 (UTC) Peter Steinberger asked "Are we still talking loops or did
 Hamel Husain's article "Loop Engineering Is Dead. Enter Graph Engineering" followed within hours, by Lulla et al.'s account, and is the earliest use of "graph engineering" found in the agent sense.[7][8]
 DZone later wrote that within a couple of days the debate had a name: graph engineering.[3]
 On 17 August 2026 the Agentic AI Foundation, which the Linux Foundation hosts, announced that A2A was joining it as a hosted project.[14]
-Two later pieces are covered below: a Microsoft Research preprint on orchestrator limits in September 2026, and Anthropic's Applied AI team on folding subagents back in October 2026.[9][10]
+Two later pieces are covered below: a Microsoft Research preprint on orchestrator limits in September 2026, and an October 2026 article from Anthropic's Applied AI team on folding subagents into the main agent loop.[9][10]
 
 ## Core principles
 
@@ -85,7 +85,7 @@ Cognition's first principle is "Share context, and share full agent traces, not 
 In Anthropic's account, each subagent may use "tens of thousands of tokens or more" exploring, but returns only "a condensed, distilled summary of its work (often 1,000-2,000 tokens)".[11]
 
 **Watch the orchestrator.**
-The Agensh preprint argues that the scalability of current multi-agent harnesses is "often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers", and its answer is a harness with no central orchestrator.[9]
+Microsoft Research's Agensh preprint argues that the scalability of current multi-agent harnesses is "often constrained by a central orchestrator's capacity to allocate tasks and coordinate workers", and its answer is a harness with no central orchestrator.[9]
 MarkTechPost's coverage calls this "the orchestrator ceiling", a phrase the paper itself does not use.[12]
 
 ## Where it shows up in this handbook

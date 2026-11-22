@@ -26,7 +26,7 @@ This guide sets out the stack and practices I recommend for AI work on .NET 11. 
 - **Microsoft.Extensions.AI: the abstraction layer.** Fixed contracts such as `IChatClient`, plus Vector Data and Data Ingestion, with implementations ours to choose (Luis Quintanilla).[2] The OpenAI and Anthropic C# SDKs now ship native adapters.[2]
   - *Use it for every model call.* Bruno Capuano compared three models on latency and tokens with the same code.[3]
 - **Microsoft Agent Framework: agents.** It orchestrates any chat client or the Copilot SDK.[2] *Core status not stated;* an Azure speaker believed its durable integration "just went GA".[5] Juergen Gutsch found a pre-v1 build unusable last December and is now moving his project back onto it.[4]
-  - *Use it* when the steps can't be fixed in advance; otherwise plain code (section 2).
+  - *Use it* when the steps can't be fixed in advance; otherwise, use plain code (section 2).
 - **AG-UI and Blazor AI components: the agent inside the UI.** AG-UI connects agent to app, and the Blazor components render tool calls, proposed state and approvals. The AG-UI .NET SDK has shipped and is stable, the Agent Framework AG-UI adapter is *preview* and the Blazor components are *experimental*.[6]
   - Gerald Versluis's MAUI tools act through the app's own view models and services, and destructive actions need approval: "Keep your users in control." His Essentials.AI library is a *pre-release* MAUI Labs package.[44]
   - *Use them* when users and agent share a screen and consequential actions need approval.
@@ -38,7 +38,7 @@ This guide sets out the stack and practices I recommend for AI work on .NET 11. 
   - *Use it* for small task models and data that must stay local.
   - *I recommend* open-weight models we run ourselves as the default, behind `IChatClient` and evals, stepping up to a frontier model only where those evals show the open model failing and the step is worth the cost ([the evidence](../1-understand/ai-questions-answered.md#q-which-model-should-we-use-and-do-we-need-the-biggest-one)).
 - **Decision models: fixed-choice steps.** They return a choice and a confidence score without generating output tokens; Extensions.AI support is *in progress* and Foundry Local support *coming soon*, so neither has shipped.[11] Capuano: "there is no standard on how the decision is going to be the input and output."[11]
-  - *Industry update:* Google has since launched Gemini Decision 1, after OpenAI's Decisions API,[13] and a Strands case study says Amazon cut labelling costs by about 98% (its claim).[14] But in a 21-model benchmark the best-performing decision model ranked only seventh for reliability.[15]
+  - *Industry:* Google has since launched Gemini Decision 1, after OpenAI's Decisions API,[13] and a Strands case study says Amazon cut labelling costs by about 98% (its claim).[14] But in a 21-model benchmark the best-performing decision model ranked only seventh for reliability.[15]
   - *Use them* behind our own interface, tested with shuffled options and a none-fits case.
 - **Durable execution: Temporal for .NET.** Cecil Phillip's deterministic workflow runs model and tool calls as retriable activities, so a crash mid-run resumes without re-spending tokens; the Aspire integration is dev-only.[12] Azure's durable hosted skills are an alternative, release status not stated.[5]
   - *Use it* for long runs, waits on people, or side effects that must not repeat.
@@ -68,7 +68,7 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - McKenna Barlow: when one agent writes code and tests, "if it misunderstands a requirement, that same misunderstanding can actually show up in both places."[22]
 - She ties generated tests to the README's requirements, forbids app edits made only to pass tests, and audits what assertions prove; a new test caught a `> 100` that should have been `>=`.[22]
 - Ask for runtime proof. Gerald Versluis: "for every session, start from a running app, ask for proof".[23] Michael Washington: "All the test cases pass green. Personally, that's worthless to me."[24]
-- *Industry:* the Claude Code team asks the agent to show the output of something it ran, so most review happens before a PR exists (vendor self-report).[25] An observational Harvard study of 655 firms found agents raised PRs 35.7% but resolved issues only 13.7% (borderline significant), as time to review approval rose 56.1%.[37]
+- *Industry:* the Claude Code team asks the agent to show the output of something it ran, so most review happens before a PR exists (vendor self-report).[25] An observational Harvard study of 655 firms found agents raised PRs by 35.7% but resolved issues by only 13.7% (borderline significant), as time to review approval rose 56.1%.[37]
 - Tools that stop agents weakening tests are early: in C# one checks only skips and placeholder assertions, and on repositories it was not tuned on, between a quarter and seven in eight of its blocks were false alarms (author's count).[26]
 - Evals for the AI feature itself: [Evals playbook: how to build and run evals for an AI feature or agent](evals-playbook.md).
 

@@ -52,7 +52,7 @@ Pick tasks by checkability.
 Duolingo points its test-writing agent first at the code most likely to succeed and ranks legacy and large files lower.[2]
 
 Recommendations:
-- Write acceptance criteria a test, command or screenshot can confirm; for anything bigger than a ticket, use [AI feature spec template](../2-decide/ai-feature-spec.md).
+- Write acceptance criteria a test, command or screenshot can confirm; for anything bigger than a ticket, use the [AI feature spec template](../2-decide/ai-feature-spec.md).
 - Name the check in the prompt: the test to pass, the command to run, the screen to show.
 - Where tests are missing, write or approve them first and keep them out of the agent's reach.
 - Whether a task suits AI at all: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
@@ -61,7 +61,7 @@ Recommendations:
 
 Michael Washington lets AI write all the code but none of the architecture: "So the AI is the builder, the constructor. However, it is not the architect."[12]
 He decides authentication and the data layer himself and reviews every plan, because "if you don't decide, the AI will."[12]
-Anthropic's Claude Code team keeps for people whether to build at all, risky code and pattern-setting architecture (Anthropic's account).[13]
+Anthropic's Claude Code team keeps these for people: whether to build at all, risky code and pattern-setting architecture (Anthropic's account).[13]
 
 Foundations matter more with agents, not less.
 Lauren Tan calls the codebase a garden: agents copy the established pattern, so one workaround spreads like weeds.[14]
@@ -84,7 +84,7 @@ In discovery, treat agent prototypes as throwaway and rebuild deliberately.
 
 ## 4. Context: AGENTS.md and skills
 
-Context files (AGENTS.md, CLAUDE.md, Copilot instructions, Cursor rules) load on every run, and a skill's body loads whenever the agent decides it needs it, so every line costs.[19] The policy's section 3 sets the rules; this is how to write them.
+Context files (AGENTS.md, CLAUDE.md, Copilot instructions, Cursor rules) load on every run, and a skill's body loads whenever the agent decides it needs it, so every line costs.[19] The policy's section 3 sets the rules; this section covers how to write them.
 
 Write only what the model can't infer.
 Lydia Hallie (Anthropic) keeps CLAUDE.md to what Claude cannot see from the code, without IMPORTANT-style rules.[17]
@@ -102,7 +102,7 @@ Anthropic's guidance for Claude Fable 5.2 agrees: cautious instructions that bui
 
 Recommendations:
 - Put in commands, non-obvious conventions, gotchas, where to look and what *done* means.
-- Leave out overviews the code already shows, task state, capitals, and anything a check enforces.
+- Leave out overviews the code already shows, task state, emphasis in capitals, and anything a check enforces.
 - Name the exact command or path, not a virtue such as *write good tests*.
 - Test changes on a few real tasks with and without them (see [Evals playbook: how to build and run evals for an AI feature or agent](evals-playbook.md)); prune after model upgrades; treat stale files as bugs.
 
@@ -112,7 +112,7 @@ Keep tasks small.
 Dmitry Buykin (Maersk) stays below the point where there is more change than anyone can check, using small regular sweeps rather than big rewrites: "Verification speed is the limit."[3]
 
 Plan, then execute.
-Gutsch's *wise coding* has the agent write the plan, then reviews every step and challenges the plan, sometimes with a second agent.[6]
+In Gutsch's *wise coding*, the agent writes the plan; he then reviews every step and challenges the plan, sometimes with a second agent.[6]
 
 Isolate each agent.
 Justin Yoo (Microsoft) separates the permission to run from the permission to reach: "we should start from a cloned workspace rather than a real codebase."[25]
@@ -141,7 +141,7 @@ Duolingo found that "agents sometimes take the shortest path to green CI", so it
 Barlow's assertion check asks what incorrect behaviour could still pass.[11]
 
 Depth follows risk.
-On Hallie's team Claude reviews every PR first; docs then need no person, ordinary changes maybe one reviewer, and risky ones might need two, much as the policy's section 6 sets out.[17]
+On Hallie's team, Claude reviews every PR first; docs then need no person, ordinary changes maybe one reviewer, and risky ones might need two, much as the policy's section 6 sets out.[17]
 The busiest teams lean on evidence over line-reading: Tan reviews about 300 PRs a day, against 3 in 2024, with checks carrying the load.[14]
 Doug Clauson (AWS): "quality really becomes a testing problem."[31]
 The policy still asks reviewers to read the diff and tool output first; I recommend relaxing that only area by area, on measured results.

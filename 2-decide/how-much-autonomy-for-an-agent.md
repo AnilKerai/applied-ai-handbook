@@ -11,7 +11,7 @@ as_of: "November 2026"
 # How much should an agent be trusted to do on its own?
 
 > **In one minute**
-> - Set an agent's (AI that acts on its own) freedom per kind of action, not for the whole agent.
+> - Set the freedom of an agent (AI that acts on its own) per kind of action, not for the whole agent.
 > - Keep people at the helm: they set the limits, decide the judgement calls and own the outcome.
 > - First make its work checkable automatically and enforce its limits outside it; for significant decisions about people, a person genuinely reviews each one or the legal safeguards apply.
 > - Let it earn freedom in steps, from reporting only to acting alone, on a track record for that exact action.
