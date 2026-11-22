@@ -1,14 +1,14 @@
 ---
-title: AI glossary for leadership
+title: AI glossary
 type: glossary
 created: 2026-11-14
-audience: Senior leadership and non-specialist colleagues
+audience: anyone at work, technical or not
 status: checked
 last_checked: 2026-11-21
 as_of: "November 2026"
 ---
 
-# AI glossary for leadership
+# AI glossary
 
 > **In one minute**
 > - This glossary gives plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions.

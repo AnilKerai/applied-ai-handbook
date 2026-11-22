@@ -69,7 +69,7 @@ That wider job is [context engineering](context-engineering.md).
 - [Working with coding agents](../4-build/working-with-coding-agents.md), section 4: the standing instructions (AGENTS.md files and skills) coding agents load.
 - [Evals playbook](../4-build/evals-playbook.md): the test cases a prompt change should be checked against.
 - [AI questions answered](../1-understand/ai-questions-answered.md): the question on prompt injection.
-- [AI glossary for leadership](../1-understand/ai-glossary.md): prompt injection and tokens in plain words.
+- [AI glossary](../1-understand/ai-glossary.md): prompt injection and tokens in plain words.
 
 ## See it built
 

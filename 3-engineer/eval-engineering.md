@@ -73,7 +73,7 @@ I recommend putting an eval gate in front of any such automatic change; [Loop en
 - [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md): why work must be checkable automatically before an agent gets more freedom.
 - [Running AI in production](../5-run/ai-in-production-runbook.md), section 3: scoring live traffic and re-running evals after go-live.
 - [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md): measuring whether AI is working once it is live.
-- [AI glossary for leadership](../1-understand/ai-glossary.md): eval, judge and deterministic check in plain words.
+- [AI glossary](../1-understand/ai-glossary.md): eval, judge and deterministic check in plain words.
 
 ## See it built
 

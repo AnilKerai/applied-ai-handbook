@@ -51,7 +51,7 @@ flowchart LR
 
 The pages for each part of the map:
 
-- **Model:** the [AI glossary for leadership](../1-understand/ai-glossary.md), for the basic terms.
+- **Model:** the [AI glossary](../1-understand/ai-glossary.md), for the basic terms.
 - **Context engineering:** [Context engineering](context-engineering.md#what-it-is), with [Prompt engineering](prompt-engineering.md#what-it-is) inside it.
 - **Harness engineering:** [Harness engineering](harness-engineering.md#what-it-is), starting with [guides and sensors](harness-engineering.md#guides-and-sensors).
 - **Loop engineering:** [Loop engineering](loop-engineering.md#what-it-is).

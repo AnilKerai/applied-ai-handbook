@@ -270,13 +270,13 @@ The handbook's AI glossary gives plain-English meanings of the terms you'll hear
 AI questions answered has short answers to common questions, including how safe data is, who is accountable when AI gets it wrong, and whether AI will replace your job.
 Should this task use AI? is a short decision tree to walk through for any task before handing it to AI.
 
-**Links:** [AI glossary for leadership](ai-glossary.md) · [AI questions answered](ai-questions-answered.md) · [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
+**Links:** [AI glossary](ai-glossary.md) · [AI questions answered](ai-questions-answered.md) · [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md).
 
 ---
 
 ## Related
 
-- Plain meanings of the terms: [AI glossary for leadership](ai-glossary.md)
+- Plain meanings of the terms: [AI glossary](ai-glossary.md)
 - Common questions, answered with the evidence: [AI questions answered](ai-questions-answered.md)
 - Before handing a task to AI: [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md)
 - A broader talk on what works with AI: [What works with AI: practical lessons](ai-lunch-and-learn.md)

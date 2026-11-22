@@ -63,7 +63,7 @@ In Anthropic's account, a subagent (a helper agent given one sub-task) may use "
 - [Working with coding agents](../4-build/working-with-coding-agents.md), section 4: what to put in AGENTS.md files (standing instructions kept with a code project) and skills (instructions an agent loads when needed).
 - [AI pattern catalogue](../4-build/ai-pattern-catalogue.md), pattern 6: giving the model only the facts fetched at runtime.
 - [AI questions answered](../1-understand/ai-questions-answered.md): the questions on RAG, the Model Context Protocol (MCP) and AGENTS.md files.
-- [AI glossary for leadership](../1-understand/ai-glossary.md): compaction, tokens and RAG in plain words.
+- [AI glossary](../1-understand/ai-glossary.md): compaction, tokens and RAG in plain words.
 - [Multi-agent orchestration](multi-agent-orchestration.md): isolating work across several agents.
 
 ## See it built
