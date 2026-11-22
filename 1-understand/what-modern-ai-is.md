@@ -12,7 +12,7 @@ as_of: "November 2026"
 
 > **In one minute**
 > - A chat assistant predicts likely next words, which makes it fluent but not necessarily right.
-> - It doesn't look things up unless it's connected to search or your documents, so treat its answers as drafts.
+> - It doesn't look things up unless it's connected to web search or your documents, so treat its answers as drafts.
 > - It can sound sure when it's wrong, and the reasoning it shows isn't always how it got there.
 > - It isn't a person and can't be held to account, so brief it, check it and own what you send.
 
@@ -37,7 +37,7 @@ At heart, it predicts likely next words: judges' guidance in England and Wales s
 Those pieces of text are called [tokens](ai-glossary.md).
 Chat assistants are then trained further, partly on people's rankings of their answers, to follow instructions and act as helpful assistants.[6][7]
 
-On its own, it doesn't look anything up: the judges' guidance says public chatbots "do not provide answers from authoritative databases" but generate text from prompts and training data.[1]
+On its own, without web search or access to your documents, it doesn't look anything up: the judges' guidance says public chatbots "do not provide answers from authoritative databases" but generate text from prompts and training data.[1]
 It adds that the likeliest combination of words "is not necessarily the most accurate answer".[1]
 The UK's National Cyber Security Centre (NCSC) says the model is typically fixed once trained, though it can be given context with the question.[8]
 

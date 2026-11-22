@@ -7,7 +7,7 @@ Newest first. Every correction lists what changed and the evidence.
 - **New: [What modern AI is, in plain English](1-understand/what-modern-ai-is.md),** now the first
   page of Understand and of the *New to AI* route.
   - It covers the kinds of AI you'll meet and how a chat assistant works: it predicts likely
-    next words and doesn't look things up unless it's connected to search or your documents.
+    next words and doesn't look things up unless it's connected to web search or your documents.
   - It explains why it sounds sure when it's wrong, and what it is and isn't: not a person, not
     shown to be conscious and not accountable for its work. The reasoning it shows isn't always how
     it got there.
