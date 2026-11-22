@@ -172,6 +172,42 @@
           "added": "2026-11-15"
         }
       ]
+    },
+    {
+      "id": 13,
+      "url": "https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation",
+      "title": "Google, Google Cloud donates A2A to Linux Foundation (Google Developers Blog, 23 June 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "The project will be hosted by the Linux Foundation and will be seeded with Google’s transfer of the groundbreaking Agent2Agent (A2A) protocol specification, accompanying SDKs, and developer tooling.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Google Cloud donates A2A to Linux Foundation",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://aaif.io/blog/a2a-joins-aaif",
+      "title": "Agentic AI Foundation (Linux Foundation), A2A joins AAIF’s open agentic stack (17 August 2026)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Agent2Agent (A2A), the open standard for inter-agent communication, is joining the Agentic AI Foundation (AAIF) as a hosted project.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The Agentic AI Foundation, hosted by the Linux Foundation, provides that structure.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Google launched A2A in April 2025 and donated it to the Linux Foundation",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }

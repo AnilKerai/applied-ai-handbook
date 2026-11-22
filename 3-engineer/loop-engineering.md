@@ -25,6 +25,17 @@ Loop engineering works one level up: Addy Osmani defines it as "replacing yourse
 Lulla et al.'s working definition is more precise: "designing automated control structures that repeatedly invoke coding agents, triggered on a schedule or by events, with each agent loop bounded by a machine-checkable stop condition".[3]
 LangChain's Sydney Runkle (16 June 2026) frames it as a stack of four loops, used below.[4]
 
+The diagram shows the four loops as a stack, from the agent loop inside one run out to the hill-climbing loop.
+
+```mermaid
+flowchart TD
+    L1["1 · Agent loop,<br/>inside one run:<br/>the model calls<br/>tools until the<br/>task is complete"]
+    L2["2 · Verification<br/>loop: checks<br/>the output and<br/>sends feedback<br/>when it<br/>falls short"]
+    L3["3 · Runs started<br/>by events:<br/>a new document,<br/>a schedule or<br/>a webhook<br/>starts the agent"]
+    L4["4 · Hill-climbing<br/>loop: uses<br/>traces of past<br/>runs to rewrite<br/>the harness with<br/>improved<br/>configuration"]
+    L1 -- "wrapped in" --> L2 -- "wrapped in" --> L3 -- "wrapped in" --> L4
+```
+
 ## When it arrived
 
 Loops across runs are older than the name: Lulla et al. trace them to Geoffrey Huntley's "Ralph Wiggum" technique, published in July 2025.[3]

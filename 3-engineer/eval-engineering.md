@@ -30,6 +30,24 @@ Anthropic defines two related terms. An evaluation harness is "the infrastructur
 An agent harness is the system that lets a model act as an agent, so when evaluating "an agent", Anthropic says, "we’re evaluating the harness and the model working together".[1]
 The grading itself is done by graders, and, Anthropic says, "Agent evaluations typically combine three types of graders: code-based, model-based, and human."[1]
 
+The diagram shows the eval cycle: a case is run through the model and harness, graded by the three types of grader and scored, then the eval or the system is changed and the evals are run again.
+
+```mermaid
+flowchart TD
+    C["Case: an input<br/>in the eval set"] --> R["Run: the model<br/>and harness<br/>together, more<br/>than once"]
+    R --> GR
+    subgraph GR["Graders"]
+        direction TB
+        G1["Code-based:<br/>deterministic,<br/>used first"]
+        G2["Model-based:<br/>tested against<br/>human marks"]
+        G3["Human"]
+        G1 ~~~ G2 ~~~ G3
+    end
+    GR --> S["Score: pass^k<br/>across k trials,<br/>and what the<br/>eval reveals"]
+    S --> CH["Refine the eval,<br/>or change the<br/>model, the<br/>instructions,<br/>tools or code"]
+    CH --> RR["Re-run<br/>the evals"]
+```
+
 ## When it arrived
 
 The practice is older than the label.

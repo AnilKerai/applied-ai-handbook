@@ -26,6 +26,24 @@ Anthropic defines it as "the set of strategies for curating and maintaining the 
 Andrej Karpathy's version (25 June 2025) is shorter: "the delicate art and science of filling the context window with just the right information for the next step".[3]
 Anthropic calls it "the natural progression of prompt engineering".[2]
 
+The diagram shows what goes into the window at each step: the sources at the top, the four buckets of techniques that decide what reaches the window, then the window and the model.
+
+```mermaid
+flowchart TD
+    SRC["For each step:<br/>instructions,<br/>tools, documents,<br/>the conversation<br/>and results<br/>so far"]
+    subgraph OPS["The four buckets"]
+        direction TB
+        W["Write: save it<br/>outside the<br/>window for later"]
+        S["Select: pull it in<br/>when a step<br/>needs it"]
+        C["Compress: keep<br/>only the tokens<br/>the task requires"]
+        I["Isolate:<br/>split it up"]
+        W ~~~ S ~~~ C ~~~ I
+    end
+    WIN["Context window:<br/>the smallest set<br/>of useful<br/>information"]
+    M(("Model"))
+    SRC --> OPS --> WIN --> M
+```
+
 ## When it arrived
 
 The term was in use by spring 2025, and caught on in June 2025.[4][5]

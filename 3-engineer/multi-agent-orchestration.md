@@ -26,10 +26,36 @@ The same post separates workflows, "orchestrated through predefined code paths",
 Anthropic's own research system uses an orchestrator-worker pattern: "a lead agent coordinates the process while delegating to specialized subagents that operate in parallel", a subagent being a helper agent given one sub-task.[2]
 A DZone article of August 2026 defines graph engineering as "the practice of designing how multiple specialized agents or steps connect, not the internal cycle any one of them runs".[3]
 For agents built by different teams to talk to each other, Google positions its Agent2Agent (A2A) protocol as complementing Anthropic's Model Context Protocol (MCP), "which provides helpful tools and context to agents".[4]
+I'd treat A2A as one option for connecting agents built by different teams, not the only one.
+
+The diagram compares the shapes: a workflow of fixed steps, a single agent using tools in a loop, an orchestrator handing work to workers, and agents built by different teams talking over a protocol such as A2A, with MCP for tools and context.
+
+```mermaid
+flowchart TD
+    subgraph WF["Workflow: predefined code paths"]
+        direction LR
+        S1["Fixed step"] --> S2["Fixed step"]
+    end
+    subgraph SA["Single agent"]
+        direction TB
+        M["Model"] <-- "in a loop" --> T["Tools"]
+    end
+    subgraph OW["Orchestrator-workers"]
+        direction TB
+        O["Central LLM:<br/>breaks down<br/>the task,<br/>delegates and<br/>synthesises<br/>the results"] <-- "sub-tasks<br/>and results" --> WK["Worker LLMs"]
+    end
+    subgraph X["Agents built by different teams"]
+        direction TB
+        TA["Team A's agent"] <-- "A2A (one option)" --> TB["Team B's agent"]
+        TB -- "MCP" --> TL["Tools and<br/>context"]
+    end
+    WF ~~~ SA ~~~ OW ~~~ X
+```
 
 ## When it arrived
 
 Google launched A2A on 9 April 2025 as an open protocol, with more than 50 technology partners by Google's count.[4]
+On 23 June 2025 Google donated A2A to the Linux Foundation, and on 17 August 2026 the Agentic AI Foundation, which the Linux Foundation hosts, announced that A2A was joining it as a hosted project.[13][14]
 Two posts a day apart in June 2025 took contrasting positions: Cognition's Walden Yan published *Don't Build Multi-Agents* on 12 June, and Anthropic described its multi-agent research system on 13 June.[5][2]
 On 18 July 2026 (UTC) Peter Steinberger asked "Are we still talking loops or did we shift to graphs yet?"[6]
 Hamel Husain's article "Loop Engineering Is Dead. Enter Graph Engineering" followed within hours, by Lulla et al.'s account, and is the earliest use of "graph engineering" found in the agent sense.[7][8]
@@ -89,3 +115,5 @@ The [model-harness primer](https://github.com/AnilKerai/model-harness/blob/7caff
 [10] https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop — Anthropic (Applied AI team), Building agents: When to fold subagents into your main agent loop
 [11] https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents — Anthropic, Effective context engineering for AI agents
 [12] https://www.marktechpost.com/2026/10/24/microsoft-agensh-multi-agent-harness-1024-agents — MarkTechPost, Microsoft Open-Sources Agensh: A Multi-Agent Harness for 1,024 Agents
+[13] https://developers.googleblog.com/en/google-cloud-donates-a2a-to-linux-foundation — Google, Google Cloud donates A2A to Linux Foundation (Google Developers Blog, 23 June 2025)
+[14] https://aaif.io/blog/a2a-joins-aaif — Agentic AI Foundation (Linux Foundation), A2A joins AAIF’s open agentic stack (17 August 2026)
