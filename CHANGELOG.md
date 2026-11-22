@@ -2,6 +2,35 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-22: two Decide pages rewritten, and model + harness + evals
+
+- **[AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)** is
+  restructured.
+  - The tick-list now comes straight after "How to run the pre-mortem".
+  - Failure modes are grouped into *Any AI project* and *If it's an agent that takes actions*,
+    and overlapping ones are merged (23 became 17).
+  - Each mode has one shape: what goes wrong, a warning sign, a prevention and one example seen
+    in practice.
+  - Examples that were dropped still appear on other pages of the handbook.
+- **[How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)**
+  is rewritten for anyone about to let an AI agent act, not only software teams.
+  - It has four gates: checkable work, decisions about people, limits enforced outside the
+    agent, and the cost of a mistake.
+  - Then a four-step ladder, from reporting only to acting alone, with people at the helm.
+  - Coding specifics such as auto-merge and review tiers are in one *For software teams* point.
+  - SEP's six constraints, which are about how automated a whole team should be, are in
+    [Should we build a software factory?](6-lead/should-we-build-a-software-factory.md).
+  - Sources are now numbered.
+- **Model + harness + evals:** my shorthand, model + harness = an agent and model + harness + evals
+  = an agent you can trust in production, is now on [The big picture](3-engineer/the-big-picture.md),
+  in the glossary's *Agent* entry and in my evals-framework lessons, with Kevin Solorio's "an agent
+  without evals is a proof of concept".
+- **[What modern AI is](1-understand/what-modern-ai-is.md):**
+  - Claude is now among the chat assistants, cited to Anthropic, because the judges' guidance
+    names only the other three.
+  - Decision models are added to the kinds of AI.
+  - Web search is named in the one-minute box.
+
 ## 2026-11-22: a plain-English start
 
 - **New: [What modern AI is, in plain English](1-understand/what-modern-ai-is.md),** now the first

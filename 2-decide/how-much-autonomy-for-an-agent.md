@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Let it earn freedom in steps, from reporting only to acting alone, on a track record for that exact action.
 > - At every step, review by risk, cap what it can start and test the undo.
 
-*Reading time: about 5 minutes · Best for: anyone deploying agents*
+*Reading time: about 5 minutes · Best for: anyone about to let an AI agent act*
 
 This page is for anyone about to let an AI [agent](../1-understand/ai-glossary.md) act: an operations lead, a product owner or an engineer.
 It answers one question: what may this agent do without asking, and when can that grow?
