@@ -19,11 +19,12 @@
   line-height: 1.65;
 }
 
-/* Diagrams in dark mode: draw them on a light card with the light-mode colours. Mermaid's
+/* The timeline in dark mode: draw it on a light card with the light-mode colours. Mermaid's
    timeline keeps its pastel boxes in dark mode but switches the text to light grey, which made
-   it unreadable. The theme draws diagrams in a closed shadow root, so only these custom
-   properties reach inside. */
-[data-md-color-scheme="slate"] .md-typeset .mermaid {
+   it unreadable. The flowcharts read well in dark mode, so only the diagram straight after the
+   "The timeline" heading (3-engineer/how-the-ideas-arrived.md) gets this. The theme draws
+   diagrams in a closed shadow root, so only these custom properties reach inside. */
+[data-md-color-scheme="slate"] .md-typeset #the-timeline + .mermaid {
   background-color: #fff;
   border-radius: 0.4rem;
   padding: 0.8rem;
