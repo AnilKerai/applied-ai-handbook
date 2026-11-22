@@ -14,11 +14,11 @@ as_of: "November 2026"
 > - The ideas arrived in a rough order: writing prompts, then choosing what the model sees, then the code around it, then loops that run it many times.
 > - Testing AI output and connecting several agents grew up alongside them.
 > - Many names came after the practice they describe, so each naming entry says whether a name was coined, first seen or caught on.
-> - The author's own projects are marked on the timeline, so it also reads as one engineer's path.
+> - My own projects are marked on the timeline, so it also reads as one engineer's path.
 
 *Reading time: about 5 minutes · Best for: anyone wanting the history*
 
-Entries labelled *My path* are the author's own projects.
+Entries labelled *My path* are my own projects.
 The other entries are events in the field, and each uses one verb, never a stronger one than its evidence supports:
 
 - **coined:** a source shows the naming, or a credible source says so;

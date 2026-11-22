@@ -2,6 +2,12 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-22: a final read, and the licence clarified
+
+- **Wording:** light readability fixes across the published pages. No quote, figure, date or citation changed.
+- **Licence:** the README now says that quotations from the cited sources stay their authors' copyright and
+  aren't covered by CC BY 4.0, and that the scripts in `scripts/` are under the MIT licence.
+
 ## 2026-11-22: diagrams for the Engineer pages, and prompt engineering reframed
 
 - **New diagrams:**
