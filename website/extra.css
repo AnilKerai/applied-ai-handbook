@@ -18,3 +18,27 @@
   font-size: 0.82rem;
   line-height: 1.65;
 }
+
+/* Diagrams in dark mode: draw them on a light card with the light-mode colours. Mermaid's
+   timeline keeps its pastel boxes in dark mode but switches the text to light grey, which made
+   it unreadable. The theme draws diagrams in a closed shadow root, so only these custom
+   properties reach inside. */
+[data-md-color-scheme="slate"] .md-typeset .mermaid {
+  background-color: #fff;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  --md-mermaid-edge-color: #36464e;
+  --md-mermaid-label-bg-color: #fff;
+  --md-mermaid-label-fg-color: #36464e;
+  --md-mermaid-sequence-actor-bg-color: #fff;
+  --md-mermaid-sequence-actor-fg-color: #36464e;
+  --md-mermaid-sequence-actor-line-color: #00000052;
+  --md-mermaid-sequence-actorman-bg-color: #fff;
+  --md-mermaid-sequence-box-fg-color: #36464e;
+  --md-mermaid-sequence-loop-fg-color: #36464e;
+  --md-mermaid-sequence-message-fg-color: #36464e;
+  --md-mermaid-sequence-message-line-color: #36464e;
+  --md-mermaid-sequence-note-bg-color: #fff;
+  --md-mermaid-sequence-note-fg-color: #36464e;
+  --md-mermaid-sequence-note-border-color: #36464e;
+}
