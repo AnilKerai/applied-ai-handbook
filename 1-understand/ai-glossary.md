@@ -40,7 +40,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* we should keep these files short and current, and turn rules that really matter into automated checks.
 
 **Autonomy level**
-- How much an AI agent may do without a person signing off, set separately for each kind of work or action. At Factory each workstream has its own level: at the lowest the agent pauses for a person at the spec, the pull request and the merge; at the highest it merges the work alone.[5] That is Factory's own scale: its lowest level already drafts the spec and pull request, close to step 2 on the handbook's ladder.
+- How much an AI agent may do without a person signing off, set separately for each kind of work or action. At Factory each workstream has its own level: at the lowest the agent pauses for a person at the spec, the pull request and the merge; at the highest it merges the work alone.[5] Factory's levels are its own scale: its lowest already drafts the spec and opens the pull request,[5] so in my reading it is close to step 2, *Draft; a person approves*, on the ladder linked below.
 - *Why it matters:* autonomy should be earned per action on a measured record; Factory's Luke Alvoeiro says "the confidence to raise it comes from watching the work."[5] See [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
 
 ## C
@@ -128,7 +128,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. An analogy I use: the model is the brain and the harness is the body, with tools handed to the body to use; the body's reflexes, the checks in code, can stop it whatever the brain decides. It's only an analogy: this brain predicts; it doesn't understand. See [Harness engineering](../3-engineer/harness-engineering.md).
 
 **Harness engineering**
-- Designing and improving the harness around an AI model so that an agent does its work more reliably.[14] Birgitta Böckeler (Thoughtworks), writing for users of coding agents, describes two kinds of control: guides, which steer the agent before it acts, and sensors, which check its work afterwards and help it correct itself.[14]
+- Designing and improving the harness around an AI model so that an agent does its work more reliably.[14][47] Birgitta Böckeler (Thoughtworks), writing for users of coding agents, describes two kinds of control: guides, which steer the agent before it acts, and sensors, which check its work afterwards and help it correct itself.[14]
 - *Why it matters:* Böckeler argues that either kind alone fails: with only sensors an agent keeps repeating the same mistakes, and with only guides it never finds out whether its rules worked.[14] She sees the person's job as steering: whenever a problem happens more than once, the guides and sensors should be improved to make it less likely, or to prevent it.[14] See [Harness engineering](../3-engineer/harness-engineering.md).
 
 **Human at the helm**

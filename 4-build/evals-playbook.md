@@ -23,7 +23,7 @@ as_of: "November 2026"
 
 ## 1. Why evals gate production
 
-Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of concept", however it is deployed.[1] Heidi Porter (Moyer Group AI) says evals tell us whether a system works and "they gate everything towards more autonomy", and SEP's matching principle is "verification before velocity".[1] So, in my view, a passing eval run is the ticket into production and onto each rung of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). As Duolingo puts it, "writing code isn't the hard part anymore, verifying it is."[3]
+Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of concept", however it is deployed.[1] Heidi Porter (Moyer Group AI) says evals tell us whether a system works and "they gate everything towards more autonomy", and the matching principle at SEP, a firm that builds software for clients, is "verification before velocity".[1] So, in my view, a passing eval run is the ticket into production and onto each rung of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md). As Duolingo puts it, "writing code isn't the hard part anymore, verifying it is."[3]
 
 ## 2. Build the eval set
 

@@ -85,7 +85,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** This is Glean's test: "can the output be listed in advance?" If so, use a decision model that returns choices with probabilities and no text, or a fine-tuned classifier when labels are stable and volume is high.[4]
 - **Red flags:** A chat model's yes, no or category is parsed from its text. The categories change often, yet the plan is to fine-tune.
-- **What a good answer looks like (industry practice):** Decision models have become mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: in SO-Arena's test of 21 models, the best-performing decision model was not the most reliable, for example at spotting when no option fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[18]
+- **What a good answer looks like (industry practice):** Decision models have become mainstream products: OpenAI's Decisions API is now generally available, and Google has launched Gemini Decision 1.[16][17] Test reliability too: in SO-Arena's test of 21 models, the best-performing decision model ranked only seventh for reliability, on measures that include spotting when no option fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[18]
 
 ### 7. Do we know the steps in advance?
 

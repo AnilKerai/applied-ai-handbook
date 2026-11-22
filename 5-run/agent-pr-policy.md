@@ -191,7 +191,7 @@ Basis: Tan reports her team's revert share steady at about half a percent, in a 
 - **Rhythm:** a monthly session turning the month's agent corrections into checks.
 - **Review:** the owner reviews this standard quarterly against metrics and incidents. Changes to it are Risky-tier.
 
-Basis: SEP's principles include "verification before velocity", deliberate iteration (scheduled time to discuss the tools) and chasing bottlenecks.[1]
+Basis: the principles of SEP, a firm that builds software for clients, include "verification before velocity", deliberate iteration (scheduled time to discuss the tools) and chasing bottlenecks.[1]
 
 ## 11. Rationale and sources
 

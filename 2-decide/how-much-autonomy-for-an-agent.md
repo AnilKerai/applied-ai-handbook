@@ -62,7 +62,7 @@ flowchart TD
 If nothing can check its results automatically, build the checks first; until then, a person checks every result.
 Kevin Solorio (Focused) warns that without [evals](../1-understand/ai-glossary.md), repeatable tests on real cases, "you cannot confirm for sure that the agent is behaving as expected".[4]
 Lydia Hallie (Anthropic) has agents check their work at points along the way, using anything that passes or fails, such as tests, a build or a screenshot.[5]
-SEP's rule is "verification before velocity".[4]
+For SEP, a firm that builds software for clients, the rule is "verification before velocity".[4]
 
 ### 2. Is it a significant decision about a person?
 

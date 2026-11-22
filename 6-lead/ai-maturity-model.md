@@ -23,7 +23,7 @@ This page gives two ladders, for AI in engineering (coding agents) and AI in the
 
 ## 1. How to use it
 
-- **Assess per team or per workflow, never company-wide.** SEP, a firm that builds software for clients, finds its teams working in four modes, ways of working with AI agents set by how much autonomy the agents have (section 2).[1]
+- **Assess per team or per workflow, never company-wide.** SEP, a firm that builds software for clients, finds its teams working in four modes, ways of working with AI agents that differ in how much autonomy the agents have (section 2).[1]
   Its Andrew Dunlap says a team's constraints decide its mode: "The mode is your fit."[1]
 - **Aim for fit, not the top stage.** SEP's Chris Shinkle, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] In my view, a team that stops at E2 on purpose is mature, not behind.
 - **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
@@ -38,14 +38,14 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 - **Looks like:** each developer uses an agent their own way, and a human reads every line. L1–L2.
 - **Prerequisites:** none. SEP puts the most constrained work here, such as prototypes or code where every line must be right.[1]
 - **Exit criteria:** conventions are in the repo, and the team regularly reviews how the tooling works (SEP's *deliberate iteration*, one of five principles SEP applies in every mode).[1] Corrections to agents become lint rules or tests rather than more instructions, as Lauren Tan advises for every correction.[6]
-- **Risks:** small gains (Doug Clauson saw 10–20% at Amazon while teams bolted AI onto an unchanged process).[8] Review overload ("All I do all day is review code", one of SEP's signs of a team in the wrong mode), and prototypes that stall at scale.[1]
+- **Risks:** small gains (Doug Clauson saw 10–20% at Amazon while teams bolted AI onto an unchanged process).[8] Review overload ("All I do all day is review code", one of the signs Chris Shinkle gives of a team in the wrong mode), and prototypes that stall at scale.[1]
 
 ### E2: Shared knowledge base
 
 - **Looks like:** one body of domain rules, architecture and workflows that every developer and agent uses.[1] Mostly L2.
 - **Prerequisites:** the domain-knowledge constraint eased: rules pulled into one shared body of knowledge (SEP's *shared infrastructure* principle), with subject-matter experts brought in where knowledge sits in people's heads.[1] Finch adds a loop that feeds review and outage lessons back to agents.[2]
 - **Exit criteria:** verification runs against tests that predate the work; Jarred Sumner trusts such suites because the agent couldn't have changed them, and warns that rewritten tests can't be trusted.[10] Review is tiered by risk (Lydia Hallie: after an AI review, no person for docs, maybe one reviewer normally, and perhaps two for risky changes).[5] Budget and sponsor are agreed.
-- **Risks:** knowledge left as prose nobody enforces.[6] Stopping here can be right: SEP's building-components team stayed because verifiability mattered more ("Buildings don't fall down.").[1]
+- **Risks:** knowledge left as prose nobody enforces.[6] Stopping here can be right: Andrew Dunlap's building-components team at SEP stayed because verifiability mattered more ("Buildings don't fall down.").[1]
 
 ### E3: Orchestrated agent team
 
@@ -132,12 +132,12 @@ A recommendation; swap in each team's own examples.
 
 - **Independent data tempers throughput expectations.**
   - Ars Technica reported that Fiona Chen and James Stratton's Harvard study of Jellyfish engineering data first covered over 700 firms to March 2026.[17] In that version agents raised lines of code 30% and pull requests 23%, with no significant change in resolved issues, while review time rose 49%.[17]
-  - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 35.7% more pull requests and a borderline-significant 13.7% rise in resolved issues, with review approval taking longer ([the software factory memo](should-we-build-a-software-factory.md) has every figure).[16]
+  - The November revision (the current copy is dated 14 November 2026) covers 655 firms to August 2026: 35.7% more pull requests, a borderline-significant 13.7% rise in resolved issues, and 56.1% longer from review submission to approval ([the software factory memo](should-we-build-a-software-factory.md) has every figure).[16]
   - The study is observational, based on adoption timing.[16] In my reading, the revision softens October's no-change finding, but code still far outruns delivered work, and both versions back SEP and Finch on review as the limit. So we should treat SEP's six-fold and vendor figures as best cases, not plans.
 - **Risk-tiered review is documented practice.** The Claude Code team sets human approvals with a risk classifier, and reports merged PRs more than doubling over June–September as the revert share fell over 40% (vendor figures).[18]
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
-- **Accuracy is not reliability.** In SO-Arena, the best-performing decision model was not the most reliable ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and cases where none of the fixed answers fits.
+- **Accuracy is not reliability.** In SO-Arena, the best-performing decision model ranked only seventh for reliability ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and cases where none of the fixed answers fits.
 - **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism chosen for a task can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).

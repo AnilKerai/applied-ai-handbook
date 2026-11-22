@@ -213,7 +213,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Terms vary by plan. As read in October 2026, Anthropic's docs said commercial data isn't used for training without opt-in, and that retention is 30 days.[57][58]
   They said zero retention covers only qualifying enterprise accounts and excludes MCP (a standard way to connect AI to other tools).[57][58]
 - Tools leak too: a user reported a coding agent putting their email address in the headers of its web requests.[59] A security firm found passwords in 1,122 public agent settings files (the firm's count).[60]
-- **For software teams:** Barbara, of Microsoft's Visual Studio team, said that in regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
+- **For software teams:** Barbara, a software engineer at Microsoft, said that in regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
 
 **How sure I am:** Fairly sure. The engineering advice is consistent, but providers' terms change and need checking against our contract.
 
@@ -252,7 +252,7 @@ These questions are for teams building AI features or working with coding agents
 - Chinmay Goyal (Glean) asks whether the output can be listed in advance. If so, a decision model returns choices with probabilities instead of text.[23]
 - ZoomInfo ran a decision model asking seven yes/no questions in shadow mode beside its LLM judge; it caught 623 of 728 clearly failed steps against the judge's 294 (ZoomInfo's figures).[25]
 - Newer evidence broadens what was largely one vendor's theme among practitioners: a Strands case study says Amazon cut ticket-labelling costs by about 98% (its claim),[26] and OpenAI and Google have released decision-model APIs.[27][28]
-- It also adds a caution: in a benchmark of 21 models, the best-performing decision model was not the most reliable at giving answers that hold when options change and saying when none fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[29]
+- It also adds a caution: in a benchmark of 21 models, the best-performing decision model ranked only seventh for reliability, meaning giving answers that hold when options change and saying when none fits ([Evals playbook](../4-build/evals-playbook.md#3-what-to-score)).[29]
 
 **How sure I am:** Fairly sure. The results are strong, but mostly from one vendor's customers, and the newer figures are vendors' own.
 
@@ -285,7 +285,7 @@ These questions are for teams building AI features or working with coding agents
 **Why:**
 - Lydia Hallie: the file "should only include the things the Claude cannot see from your code".[39] Nikolay Petrov found models already knew about 70% of skills' general content but only 22% of the specific details.[41]
 - A study of 3,159 skill files found added rules helped mainly when they named a command or path the file didn't already mention; unrelated text had no detectable effect, and deleting a rule lowered compliance with it, so check a rule is obsolete before cutting it.[42]
-- Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules or your agents.md".[43] Cam Soper (Pulumi) warns that a rule in an agent's instructions is no more than a suggestion.[44]
+- Lauren Tan: make each correction "a deterministic check instead of adding another line to your rules" or to AGENTS.md.[43] Cam Soper (Pulumi) warns that a rule in an agent's instructions is no more than a suggestion.[44]
 - A newer update: Anthropic warns that cautious instructions piling up through memory and instruction files can make its newest model ask for approvals it doesn't need; its advice includes removing outdated notes and naming the routine steps that need no approval.[45]
 
 **How sure I am:** Very sure. Practitioners and one large study, not yet peer-reviewed, agree. The advice on the newest model is one vendor's.

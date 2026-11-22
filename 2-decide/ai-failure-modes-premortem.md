@@ -97,7 +97,7 @@ Tick what the team can show is handled; plan the rest.
 
 #### 4. Scaling what isn't ready
 - **What goes wrong:** AI is scaled onto a process, knowledge or checks that aren't ready.
-- **Warning sign:** SEP's tell: "We should be using more AI. Well, I don't know what more is".[2] Success means one person looked over the output.
+- **Warning sign:** SEP, a firm that builds software for clients, gives the tell: "We should be using more AI. Well, I don't know what more is".[2] Success means one person looked over the output.
 - **Prevention:** Fix the process and its checks first ([AI maturity model and roadmap](../6-lead/ai-maturity-model.md)). Before scaling, cost the tokens, write the domain rules down and decide how every output will be checked ([Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md)).
 - **Seen in practice:** An SEP client's two-day, agent-built prototype stalled before production: the token budget ran out within days, domain knowledge lived in people's heads, and nobody could verify every output across millions of input parameters.[2]
 

@@ -70,6 +70,6 @@ Every correction is logged in [CHANGELOG.md](CHANGELOG.md). If you spot somethin
 
 [CC BY 4.0](LICENSE). Share and adapt it, with credit: *Applied AI Handbook by Anil Kerai, CC BY 4.0*.
 
-Quotations from the cited sources remain their authors' copyright and aren't covered by this licence.
+Quotations from the cited sources remain their authors' or publishers' copyright and aren't covered by this licence.
 
 The scripts in `scripts/` are under the [MIT licence](https://github.com/AnilKerai/applied-ai-handbook/blob/main/scripts/LICENSE).

@@ -60,7 +60,7 @@ flowchart TD
 - **Better or more efficient?** If AI gives neither a better outcome nor less effort, don't use it.
   Mark Lay (Noblis) starts with this test, then weighs the risk of an error against its consequence.[2]
 - **Data first.** Porter checks that the data is accurate, complete, consistent and fresh enough *for the task in hand*.[1]
-  She warns that stale data will "quietly give you the wrong answers", and grounds any [LLM](../1-understand/ai-glossary.md) in the official systems of record each time it runs.[1]
+  She warns that stale data will "quietly give you the wrong answers", and advises grounding any [LLM](../1-understand/ai-glossary.md) in the systems of record each time it runs.[1]
 - **Rules or code.** Keep the order of steps fixed in ordinary code, and use a model only for the fuzzy part.
   Chibi Vikram and Kevin Bernstein (UiPath) call a model only at clear decision points in otherwise deterministic steps.[3]
   Luis Quintanilla (Microsoft) has AI generate a film's parts, then stitches them together with standard code.[4]
@@ -70,19 +70,19 @@ flowchart TD
   If the answer has to be written fresh each time, such as a reply or a summary, it needs an LLM.[5]
   [Fine-tune](../1-understand/ai-glossary.md) only when the labels are stable and volume is high, and go hybrid if you also need text.[5]
   Michelle Chen (Cloudflare) puts fast decision and extraction models in front of an LLM, to prune its tools and context.[6]
-- **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a narrow job; if you don't, use an [agent](../1-understand/ai-glossary.md) bounded by cost and time, as Porter advises.[1]
+- **Known steps or not?** If you know the steps, use a fixed workflow and give the LLM a narrow job; if you don't, use an [agent](../1-understand/ai-glossary.md) bounded by limits such as cost or time, as Porter suggests.[1]
   In Porter's examples the LLM's job stays narrow: in Syngenta's seed tool it interprets, routes and explains while agronomy models predict, and in Stanford Health Care's screening tool it applies a rubric the institution owns.[1]
   Darren Taillie (AeroCore Technologies) gave a daily vision check, which compares aircraft photos with work orders, the prompt "Compare and flag".[2]
   In UiPath's fraud demo, a decision model asks whether there is enough evidence, and an agent starts only when there isn't.[3]
-  Diogo Almeida (TypeSafe AI) argues that LLMs make good assistants but unreliable automators, because RLHF (reinforcement learning from human feedback) builds a human into the loop.[7]
+  Diogo Almeida (TypeSafe AI) argues that LLMs make good assistants but unreliable automators, and that RLHF (reinforcement learning from human feedback) is why today's AI still needs a human in the loop.[7]
 - **Execution dial.** Who acts depends on how costly a mistake is and whether it can be undone.
   The tree's four settings follow Porter's [execution dial](../1-understand/ai-glossary.md).[1]
   She advises making actions reversible where possible and, where not, requiring approval while watching for reviewer fatigue.[1]
-  Gerald Versluis (Microsoft) turns an app's existing features into tools that act through its view models and services, not its screens, and confirms destructive ones.[8]
-  The dial sets a ceiling, not a starting point: each kind of action earns its way up to it on a track record (see the [companion page](how-much-autonomy-for-an-agent.md)).
+  Gerald Versluis (Microsoft) turns an existing app's features into tools that reuse its services and view models, and asks for confirmation before destructive actions.[8][13]
+  In this tree the dial's answer is a ceiling, not a starting point: each kind of action earns its way up to it on a track record (see the [companion page](how-much-autonomy-for-an-agent.md)).
 - **Evals.** Kevin Solorio (Focused) counts an agent without [evals](../1-understand/ai-glossary.md) as only a proof of concept, however it is deployed (more in the [evals playbook](../4-build/evals-playbook.md)).[1]
   Build the eval set *with* the people who do the job, as he does, and keep a [data flywheel](../1-understand/ai-glossary.md) running after release.[1]
-  Porter warns that averages can hide a bad result, so look past them to the worst cases.[1]
+  Porter warns that averages can mask a bad result, so look past them to the worst cases.[1]
 - **Ship.** Put [guardrails](../1-understand/ai-glossary.md) in code, types or a gateway outside the agent's reach, not in the prompt.
   Porter warns that a rule written in a prompt isn't enforced deterministically.[1]
   Cam Soper (Pulumi) warns that an agent may ignore a rule in its instructions, so he has the compiler enforce policy instead.[9]
@@ -114,3 +114,4 @@ flowchart TD
 [10] https://www.youtube.com/watch?v=2UpjQ01cBGE&t=25809 — Matt Soucoup & Paul Yuknewicz (Microsoft), Azure's new lineup for .NET developers (Part 2), .NET Conf 2026
 [11] https://www.youtube.com/watch?v=TF6qzdKwl84&t=639 — Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026
 [12] https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558 — Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026
+[13] https://dotnet.microsoft.com/en-us/conf/2026/agenda/brk033 — Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, session abstract, .NET Conf 2026

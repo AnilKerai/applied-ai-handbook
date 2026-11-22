@@ -334,6 +334,22 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 13,
+      "url": "https://dotnet.microsoft.com/en-us/conf/2026/agenda/brk033",
+      "title": "Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, session abstract, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "We'll expose application actions as AI-callable tools, reuse services and view models, and keep the conversation and the UI working with the same application state.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "We'll also look at where to draw the line: validating requests, asking for confirmation before destructive actions, and handling requests the assistant cannot fulfill.",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }

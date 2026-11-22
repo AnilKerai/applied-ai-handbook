@@ -57,7 +57,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 **5. Lead time for real outcomes**
 - *Tells you:* whether requested work finishes sooner, not whether more code moves.
 - *Formula:* median time from issue or alert to fix live in production; resolved issues per month.
-- *Watch out for:* issue-splitting; the bottleneck moving elsewhere, as SEP warns.[10]
+- *Watch out for:* issue-splitting; the bottleneck moving elsewhere, as SEP, a firm that builds software for clients, warns.[10]
 - *Evidence:* In the Harvard study, agents raised PRs by 35.7% but resolved issues by only 13.7%, a borderline-significant rise.[5] Meta says about three quarters of its new code is now written with AI, yet on-call did not speed up.[20]
 
 **6. Escaped defects**
@@ -131,7 +131,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 ## Vanity metrics to avoid
 
 - **Tokens.** DORA calls token counts an easily gamed input metric; the biggest spenders often gain little throughput at ten times the cost.[6]
-- **Lines of code and PR counts.** In the Harvard study both rose far faster than resolved issues did.[5] DORA lists lines of code and commit counts among past vanity metrics.[6]
+- **Lines of code and PR counts.** In the Harvard study pull requests rose 35.7% against 13.7% for resolved issues, and lines of code rose 44.0%, though the paper puts that estimate just short of statistical significance.[5] DORA lists lines of code and commit counts among past vanity metrics.[6]
 - **Usage for its own sake.** Among the complaints SEP says teams may hear: "We should be using more AI. Well, I don't know what more is".[10]
 - Show these as cost or context, never as targets.
 

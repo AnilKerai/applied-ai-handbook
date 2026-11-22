@@ -7,24 +7,37 @@ Newest first. Every correction lists what changed and the evidence.
 - **Wording:** light readability fixes across the published pages. No quote, figure, date or citation changed.
 - **Corrections found on the final read:**
   - Anthropic's Claude Code team counts the person directing an agent as *one of* the required reviewers, where a
-    change's risk tier calls for any; the Q&A and intake checklist had made it *the* required reviewer.
+    change's risk tier calls for any; the Q&A and intake checklist had read as if every change needed that person's
+    review.
   - AgentRun's cost figure is $0.124, as its case study gives it, not "about $0.12" or "$0.12".
   - The fast mode's end date now has its year: it was due to end on 30 November 2026.
-  - The runbook's Pixee line now says "five harnesses that flatten message roles", as the paper does.
-  - Quotes on the maturity model and the Q&A now name their speakers; SEP is introduced, and its team is described
-    the same way on both pages that mention it.
+  - The runbook's Pixee line now limits the 87–100% figure to the five harnesses that flatten message roles, as the
+    paper does.
+  - More quotes on the maturity model, the software factory memo and the Q&A now name their speakers. SEP is
+    introduced on first mention, and its credit-union team is described the same way on both pages that mention it.
   - The people memo now matches the other pages on when to approve every output: until results can be checked
-    automatically and for actions that can't be undone; for significant decisions about people, keep it or meet the
-    legal requirements for automated decisions.
+    automatically and for actions that can't be undone; for significant decisions about people, either a person
+    genuinely reviews each one or the legal requirements for automated decisions are met.
   - Factory's autonomy levels are marked as its own scale, since its L1 is close to the handbook's L2.
   - The decision tree's dial outcomes are now ceilings ("At most: …"); the autonomy page decides how far to go.
   - The .NET guide's NuGet cooldown advice now matches its source, and its starter eval set matches the playbook.
+- **Labels:** checked pages no longer call themselves drafts. The PR policy, runbook and scorecard are starting points
+  to adapt, and the PR policy's title is now *Agent-written pull requests and agent autonomy*.
 - **Less repetition:** quotes that appeared on up to 11 pages are now quoted in full on at most three, their home
-  pages; elsewhere they're paraphrased, still cited, with a link.
+  pages; elsewhere they're paraphrased and still cited, with a link to the home where a detail was dropped. Figures
+  repeated on up to seven pages keep their full detail on their home pages and are summarised elsewhere.
 - **[Should this task use AI?](2-decide/should-this-task-use-ai.md)** is now in the standard format: numbered
   sources, full names on first mention, and every quote checked against its transcript.
 - **Glossary:** new entries for *Context window* and *Harness engineering*; the *Agent* entry now credits Vivek
-  Trivedy for "model plus harness".
+  Trivedy with summing up an agent as model plus harness.
+- **Found by the final review:**
+  - Gerald Versluis's line on *Should this task use AI?* now matches his official session page, added as a source,
+    because his captions couldn't be fetched.
+  - Heidi Porter's advice is no longer written as her own practice, and "official" is gone, as it isn't hers.
+  - SO-Arena's result keeps its figure (the best decision model ranked only seventh for reliability).
+  - The scorecard now says the Harvard study's lines-of-code rise falls just short of statistical significance.
+  - Lauren Tan's quote now stops where the cited page's wording stops.
+  - The site footer and README now say quotations from cited sources aren't covered by the licence.
 - **Routes:** New to AI no longer sends newcomers into engineer pages, and the Leader route reads the autonomy page
   second, before the pages that rely on its levels.
 - **Licence:** the README now says that quotations from the cited sources stay their authors' copyright and

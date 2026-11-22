@@ -30,7 +30,7 @@ Juergen Gutsch: "Errors agents do are my errors".[6]
 Writing code is no longer the slow part. Checking it is.
 Duolingo: "writing code isn't the hard part anymore, verifying it is."[2]
 A Harvard study of 655 firms (revised November 2026; observational data to August 2026) found coding agents raised pull requests by 35.7% but resolved issues by only 13.7% (borderline significant), while time from review submission to approval rose 56.1%.[4]
-SEP treats "the joy's all gone. All I do all day is review code." as a sign a team is working in the wrong mode; its principles include "verification before velocity" and chasing review bottlenecks.[1]
+Chris Shinkle of SEP, a firm that builds software for clients, treats "the joy's all gone. All I do all day is review code." as a sign a team is working in the wrong mode; SEP's principles include "verification before velocity" and chasing review bottlenecks.[1]
 Dexter Horthy (Factory): "AI cannot replace human judgment. It can only amplify our judgment".[7]
 
 So speed up only the work you can check, and put your effort into defining *right* and proving it, not into typing.
@@ -164,7 +164,7 @@ Anthropic's Claude Code team caps agent author-reviewer loops at three rounds, t
 
 ## 7. Turning corrections into checks
 
-Tan: "whenever you're correcting your agent, think about how you can make that a deterministic check instead of adding another line to your rules or your agents.md".[14]
+Tan: "whenever you're correcting your agent, think about how you can make that a deterministic check instead of adding another line to your rules".[14]
 In her inverse pyramid of where to spend time on an agent's environment, the first two layers are deterministic: the code itself (API design, architecture), then lint, types and tests; runtime and formal verification come next, with a little prose last.[14]
 Cam Soper (Pulumi) had a rule that one of his home-lab MCP servers be reached only through its own auth, with no CloudFront in front of it, and Claude put CloudFront in front of it anyway.[24]
 His conclusion: "a rule in an agent's instructions is just a suggestion. It might follow it, it might not."[24]

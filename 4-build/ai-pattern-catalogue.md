@@ -160,7 +160,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Pitfalls:** clock reads or new GUIDs in the orchestrator;[29] assuming capable means recoverable: "an agent can become more capable while becoming less recoverable."[30]
 - **Seen at:**
   - Cecil Phillip (Temporal): "AI systems are really just distributed systems in disguise." His demo agent recovered after its ride service restarted.[29]
-  - Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed." In the UndoBench trials the Sahs ran, naive retries produced duplicate effects in 54% of the relevant trials.[30]
+  - Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed." In the UndoBench trials he ran with Dolly Sah, naive retries produced duplicate effects in 54% of the relevant trials.[30]
 
 ### 13. The trace ID on the business record
 
