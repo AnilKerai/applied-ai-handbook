@@ -1,5 +1,5 @@
 ---
-title: "Agent-written pull requests and agent autonomy: draft engineering standard"
+title: "Agent-written pull requests and agent autonomy"
 type: policy
 created: 2026-11-14
 audience: "Engineering leads, senior engineers and senior management"
@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering leads*
 
-*Draft standard for discussion.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are recommendations; Basis and Current practice notes give the evidence. Company figures are their own claims.
+*A starting standard: adapt it to your team.* MUST: required before a change merges or an action runs. SHOULD: expected unless the team records why not. MAY: optional. Rules are recommendations; Basis and Current practice notes give the evidence. Company figures are their own claims.
 
 ## 1. Purpose and scope
 
@@ -131,7 +131,7 @@ Basis:
 - Brian Douglas's agent-written Rust scored five out of five in AI review, then drew heavy pushback from human reviewers; when his colleague Matt pushes back, he "has knowledge that the agent does not."[21]
 
 **Current practice notes.**
-A 2026 paper let reviewers overrule only with a mechanically valid violation and a compliant repair, sharply cutting wrongly replaced correct proposals; it used two locally run open-weight models on non-coding tasks, hence a SHOULD.[33]
+A 2026 paper let reviewers overrule only with a mechanically valid violation and a compliant repair, sharply cutting wrongly replaced correct proposals; it used two locally run open-weight models on non-coding tasks, so the rule that a block cites the failing check or broken rule is a SHOULD, not a MUST.[33]
 
 ## 7. Autonomy levels
 
@@ -156,6 +156,7 @@ Demotion is immediate, by at least one level, after a traced incident or revert,
 Basis:
 - Meta promotes its on-call agent from investigating (L1) to approved drafts (L2) to low-criticality work alone (L3), per action, asking: "How costly is a mistake and how easy is it to catch?" Even at L3, its code fixes land only through normal review and CI.[4]
 - Factory sets levels per workstream: its L1 drafts specs and PRs but pauses for a human at the spec, the PR and the merge; its L4 auto-merges only once agent PRs break things less often than human ones, measured as "the regret-free merge rate, the share of changes that merge and never need a revert or a follow-up fix."[20]
+  Factory's levels are its own scale: its L1 is close to L2 here, not this policy's read-only L1.
 
 ## 8. After merge and recovery
 

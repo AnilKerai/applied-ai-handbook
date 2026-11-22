@@ -4,7 +4,7 @@ type: faq
 created: 2026-11-14
 audience: colleagues, engineering leads, senior leadership
 status: checked
-last_checked: 2026-11-21
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -126,7 +126,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 **Why:**
 - Simon Willison argues that pay-per-use services and APIs (services other software calls directly) should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
-- SEP's client prototype stalled partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
+- SEP, a firm that builds software for clients (Chris Shinkle and Andrew Dunlap), saw one client's prototype stall partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
 - One newer study found that teams of AI agents scored higher but cost 3-7 times as much as a single agent.[18]
 - **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done.
   Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16]
@@ -142,7 +142,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **My recommendation:** Treat the model as a replaceable part, chosen by testing on our own tasks. By default, especially for [domain agents](ai-glossary.md), use [open-weight models](ai-glossary.md) we can run ourselves, behind a good [harness](ai-glossary.md) and evals. Move a step up to a [frontier model](ai-glossary.md) only where our evals show the open model failing and the step is worth the cost. Expect hard, open-ended steps to need a frontier model more often than routine ones, and re-test whenever we swap.
 
 **Why:**
-- Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] AgentRun cut cost per item from $0.89 to $0.12 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
+- Stanford Health Care tested five LLMs and chose a cheaper one that performed competitively.[1] AgentRun cut cost per item from $0.89 to $0.124 by having a cheap model run a job an expensive one had learned (AgentRun's claim).[19]
 - On one broad measure, open-weight models trail the best closed ones by months, not years.[71]
   Epoch AI finds that since January 2026, the most capable open-weight models have lagged frontier closed models by an average of four months, on its index that combines many standard tests.[71]
   On a narrow task, small models tuned on a modest number of examples can catch up.[72]
@@ -215,7 +215,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Terms vary by plan. As read in October 2026, Anthropic's docs said commercial data isn't used for training without opt-in, and that retention is 30 days.[57][58]
   They said zero retention covers only qualifying enterprise accounts and excludes MCP (a standard way to connect AI to other tools).[57][58]
 - Tools leak too: a user reported a coding agent putting their email address in the headers of its web requests.[59] A security firm found passwords in 1,122 public agent settings files (the firm's count).[60]
-- **For software teams:** in regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
+- **For software teams:** Barbara, of Microsoft's Visual Studio team, said that in regulated industries, bringing your own model "can be what enables the usage of AI coding tools",[56] and Kuhn's abstract promises a demo with a self-hosted model in which no data leaves the environment.[8]
 
 **How sure I am:** Fairly sure. The engineering advice is consistent, but providers' terms change and need checking against our contract.
 
@@ -238,7 +238,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 **Why:**
 - Mark Lay: "accountability can't be delegated" to AI, so the accountable role in a RACI chart (which records who is responsible, accountable, consulted and informed) is always a person. He adds that someone must own the tools staff build outside IT.[2]
 - Juergen Gutsch: "Errors agents do are my errors".[34] Robinhood: "Scripts prove what can be proven. An agent judges what needs context and people own the calls only they should make."[38]
-- **For software teams:** Anthropic's Claude Code team counts the person prompting an agent as a required reviewer (Anthropic's account).[37]
+- **For software teams:** Anthropic's Claude Code team holds a person accountable for every change that ships, whoever typed it, and counts the person directing an agent as one of the required reviewers wherever a change's risk tier requires any (Anthropic's account).[37]
 
 **How sure I am:** Very sure as a principle, though it is a stance on how to govern AI rather than a measured finding.
 
@@ -276,7 +276,7 @@ These questions are for teams building AI features or working with coding agents
 **Why:**
 - In the 655-firm study, time from review submission to approval rose 56.1%.[11] Anthropic's Claude Code team sets human approval by risk tier, and after three rounds of agent review the reviewer asks the author to rethink the approach (Anthropic's account).[37]
 - ZoomInfo measured its LLM judge at 65% correct; given both receipts and the agent's report, "it went with the story."[25] Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[38]
-- On Lydia Hallie's team (Anthropic) an AI reviews every PR first; docs then need no person, ordinary changes perhaps one reviewer and risky ones might need two.[39] In a small pilot, a reviewer from a different model provider made a material finding on 8 of 20 coding turns.[40]
+- On Lydia Hallie's team (Anthropic) an AI reviews every PR first; docs need no person once automated checks are green, ordinary changes perhaps one reviewer and risky ones might need two.[39] In a small pilot, a reviewer from a different model provider made a material finding on 8 of 20 coding turns.[40]
 
 **How sure I am:** Fairly sure. Several teams agree, but two accounts are Anthropic's own and the figures are the teams' own. The independent study shows only where the bottleneck is.
 
@@ -307,8 +307,11 @@ These questions are for teams building AI features or working with coding agents
 
 - **What will it cost in total, and when does it pay back?** The sources give per-task savings, mostly vendors' own, and one developer's comparison of two coding set-ups,[75] but no total cost of ownership for a team or company.
 - **Which vendor, on what terms?** Nothing compared providers on data handling, sub-processors or international transfers.
-- **What does regulation require of us?** Not covered beyond practical UK GDPR guidance, which is not legal advice.
-- **How do we train our people, and how do junior roles change?** Practitioners' accounts covered adoption and culture, not training or career paths.
+- **What does regulation require of us?** Partly covered.
+  For UK rules on automated decisions about people, see question 2 of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md#2-is-it-a-significant-decision-about-a-person) and [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
+  Beyond those rules, what regulation requires of us is still open, and nothing in the handbook is legal advice.
+- **How do we train our people, and how do junior roles change?** Partly covered: the evidence on junior hiring is in [Will AI replace my job?](#q-will-ai-replace-my-job) and [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
+  Training remains open: practitioners' accounts covered adoption and culture, not training or career paths.
 - **Are local, open-weight models good enough?** Partly settled. On Epoch AI's combined index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on one narrow task, text classification.[72] But on one benchmarker's harder, mostly private tests, the gap is much wider.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
 
 **Read next:** [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md), or go back to the [handbook home](../README.md).

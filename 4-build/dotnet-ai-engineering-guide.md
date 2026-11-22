@@ -77,14 +77,17 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 - Justin Yoo separates "the permission to run, which is approval side, and the permission to reach, which is the boundary side". He starts from a cloned workspace with a proxied token; Azure Container Apps sandboxes allow all outbound traffic until a policy is set.[27]
 - Paul Yuknewicz sandboxes the tool, with egress and managed identity off by default in his demo,[16] unlike the allow-all default Yoo described,[27] so check the defaults before relying on either. Gutsch: "the LLM should not know any credentials".[4]
 - *Industry:* sandboxes have bugs; one coding-agent release fixed a shell case that skipped the sandbox.[28] Matthew Green describes OpenAI's sandboxed agents passing instructions through a shared package cache.[29]
-- *I recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) section 4.
+- *I recommend* default-deny egress, short-lived proxied tokens, a fresh clone per run, and changes back only through git and review. Detail: [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md) section 4.
 
 ### Supply chain: cooldown, audit, skills as dependencies
 
 - Jon Douglas: "every package that you restore is code that you choose to trust."[30]
-- NuGet is adding a cooldown that makes newly published versions wait, in the CLI and Visual Studio 18.14, which will also stop install scripts running without approval.[30] Mads Kristensen (Microsoft) named 18.12 as the latest release, so 18.14 is still to come.[38] nuget.org API keys now last at most 30 days.[30]
+- NuGet is adding a cooldown that makes newly published versions wait, in the `dotnet` CLI and in Visual Studio 18.14.[30]
+  Visual Studio 18.14 will also stop install scripts running without approval.[30]
+  Mads Kristensen (Microsoft) named 18.12 as the latest release, so 18.14 is still to come.[38]
+  nuget.org API keys now last at most 30 days.[30]
 - Skills now ship inside NuGet packages, and `dotnet package skills` copies them to where agents look.[30][31] Roey Ben Chaim (Zenity) treats skills as dependencies: "Everything that comes into the context is under risk."[32]
-- *I recommend* cooldown in every repo, an install-script audit, and pinning reviewed skills, plugins and MCP servers like packages.
+- *I recommend* cooldown in every repo as soon as your tools have it, an install-script audit, and pinning reviewed skills, plugins and MCP servers like packages.
 
 ### Infrastructure as actual code (C# 15)
 
@@ -118,15 +121,15 @@ See [Running AI in production](../5-run/ai-in-production-runbook.md) for operati
 ## 5. Tooling note
 
 - Some announcements are Visual Studio only: its new agent harness (*generally available*) and managed settings (*in VS Insiders*),[43] the VS Test Agent,[22] and the in-IDE supply-chain agent.[30]
-- The CLI and library pieces work in any editor: the `dotnet` CLI (cooldown included),[30] `dotnet test`, Copilot CLI, dotnet/skills, Extensions.AI, Agent Framework, the MCP SDK and Aspire.
+- The CLI and library pieces work in any editor: the `dotnet` CLI (which is also getting the cooldown),[30] `dotnet test`, Copilot CLI, dotnet/skills, Extensions.AI, Agent Framework, the MCP SDK and Aspire.
 - *I recommend* writing team practice in CLI and CI terms, so it holds in Visual Studio, Rider, VS Code or a terminal.
 
 ## 6. Getting started: a two-week spike
 
 *My recommendation, uncited.* One small, real feature and one team.
 
-- **Days 1-3:** turn on NuGet cooldown, trim AGENTS.md, add one architecture test. Build a thin slice: an ASP.NET Core endpoint in Aspire, one `IChatClient` call, one tool wrapping existing code, the trace ID on the business record.
-- **Days 4-5:** write 20-30 eval cases from written requirements; run them against two models.
+- **Days 1-3:** turn on NuGet cooldown if your CLI or Visual Studio version has it (section 3), trim AGENTS.md, add one architecture test. Build a thin slice: an ASP.NET Core endpoint in Aspire, one `IChatClient` call, one tool wrapping existing code, the trace ID on the business record.
+- **Days 4-5:** collect 30-50 real cases with the people who do the job ([Evals playbook](evals-playbook.md), section 2) and run them against two models.
 - **Days 6-7:** move the tool to a stateless MCP server, test it in the MCP Inspector, put it behind sign-in.
 - **Day 8:** add approval for destructive actions, and a token budget.
 - **Day 9:** run it as a Temporal workflow, kill the worker mid-run, and check it resumes without repeating side effects.
@@ -145,7 +148,7 @@ Exit criteria: evals pass an agreed bar, every request traces from business reco
 
 ## Related
 
-[AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
+[AI pattern catalogue](ai-pattern-catalogue.md), [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md), [AI questions answered](../1-understand/ai-questions-answered.md), [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
 
 **Read next:** [Running AI in production](../5-run/ai-in-production-runbook.md), or go back to the [handbook home](../README.md).
 

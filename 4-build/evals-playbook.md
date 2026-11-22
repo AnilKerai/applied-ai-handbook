@@ -173,7 +173,7 @@ The practitioner sources in this playbook say little about statistics, so this s
 - Factory's risk judge "reads its policy from our mainline branch so that the change can't rewrite the rules that it's being judged by."[25]
 - Johnson's graders hide the tests and git history until the agent submits, because agents had peeked at tests and resubmitted.[7]
 - Google's /teamwork checks agents' results against unmodified test suites, with critics working from a clean context (Google's account).[24]
-- The [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) turns these into merge rules.
+- The agent PR policy, [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md), turns these into merge rules.
 
 **Test skills and AGENTS.md with and without, per model.**
 - Petrov runs each skill's tasks with and without it, comparing solves, tokens and time; larger models already knew about 70% of skills' general ideas but only 22% of the details.[17]
@@ -215,7 +215,7 @@ Re-run the full set and compare against the last baseline whenever one of these 
 Week 1:
 
 1. **Day 1.** Pick one feature or workflow step and name an owner. Write down what a correct result is, and the outcomes that must never happen.
-2. **Days 2-3.** With two or three people who do the job, collect 30-50 real cases, including past failures and at least ten worst cases, and have them label the expected results.
+2. **Days 2-3.** With two or three people who do the job, collect 30-50 real cases, including past failures, at least a quarter of them edge or worst cases (section 2), and have them label the expected results.
 3. **Day 4.** Write deterministic checks first: format, required fields, post-conditions on the business record.
 4. **Day 5.** Build a runner recording pass or fail, cost and latency per case across at least three runs, and baseline the current system or human process.
 

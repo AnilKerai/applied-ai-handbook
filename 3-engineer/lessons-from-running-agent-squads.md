@@ -4,7 +4,7 @@ type: lessons
 created: 2026-11-15
 audience: "Engineers running several agents"
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 5 minutes · Best for: engineers running several agents*
 
-In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic's Claude models. The dev team has a lead, an engineer, an ops role and a reviewer. The research team turns an idea into questions, researches them and writes up a brief. Both work from kanban boards, where each task is a card, and each worker that picks up a card is a new process with an empty context window. The setup and its records are public in my hermes-squad repo; this page is what running it taught me.
+In October 2026 I set up two teams of AI agents on Hermes Agent, using Anthropic's Claude models. The dev team has a lead, an engineer, an ops role and a reviewer. The research team has a pm role that turns an idea into questions, researchers who investigate them, and an analyst who spot-checks the key claims and writes up a brief. Both work from kanban boards, where each task is a card, and each worker that picks up a card is a new process with an empty context window. The setup and its records are public in my hermes-squad repo; this page is what running it taught me.
 
 ## The card is the prompt
 

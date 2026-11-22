@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 15 minutes · Best for: software engineers*
 
-*Draft guide.* The day-to-day companion to the [agent PR and autonomy policy](../5-run/agent-pr-policy.md): the policy says what must hold before agent work merges; this says how to work so that it does. It applies to any coding agent. Advice is mine and uncited; cited lines are the evidence. Company figures are their own claims.
+The day-to-day companion to the [agent PR policy](../5-run/agent-pr-policy.md): the policy says what must hold before agent work merges; this says how to work so that it does. It applies to any coding agent. Advice is mine and uncited; cited lines are the evidence. Company figures are their own claims.
 
 ## 1. The mindset: you own the outcome
 
@@ -229,7 +229,7 @@ Recommendations:
 - Push back on weakened tests, scope creep and workaround comments.
 - Corrected twice? Make it a skill. Still happening? Make it a check.
 - Two or three agents at most; track cost per task and set a cap.
-- What must hold before merge: [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md).
+- What must hold before merge: [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md).
 
 As a talk: [Talk: working with coding agents](talk-working-with-coding-agents.md), slides and speaker notes for presenting this guide's main ideas to engineers.
 

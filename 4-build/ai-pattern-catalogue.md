@@ -63,7 +63,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Use when:** a checkable job repeats over many records. **Avoid when:** the work is one-off.
 - **Pitfalls:** a weak hand-back check. Measure how reliably the cheap side hands back (card 2).
 - **Seen at** (mostly a November 2026 trend; vendor claims):
-  - AgentRun reports $0.89 falling to $0.12 per merchant; a judge hands an answer back to the expensive model when its quoted evidence isn't on a page the agent read.[11]
+  - AgentRun reports $0.89 falling to $0.124 per merchant; a judge hands an answer back to the expensive model when its quoted evidence isn't on a page the agent read.[11]
   - Google's Antigravity has a strong model plan and a cheaper one edit, handing back when stuck, with near-equal success on 24% less quota.[12]
   - UiPath had an LLM design email categories offline, then "we basically removed the LLM completely from the picture on this one."[9]
 

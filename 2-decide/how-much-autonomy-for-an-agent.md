@@ -105,11 +105,13 @@ So the agent can close a noisy alert on its own "while a production mitigation s
   Personal review stops scaling: Don Barger (International Mission Board) could take over his chatbot's critical conversations at 5,000 users, but not at 2,500,000.[8]
 - **Cap what it can start,** and switch it off after repeated failures.
   Harvey's automations switch off after five failures in a row and can carry a budget or expiry date.[9]
+  Where a team's token budget falls short, SEP advises raising it with the organisation.[4]
 - **Test the undo** before an action runs alone.
   Tanmay and Dolly Sah warn that a timeout doesn't mean an action failed, so a blind retry can repeat it.[10]
 - **Turn corrections into checks.** Lauren Tan advises making each correction "a deterministic check instead of adding another line to your rules".[11]
 - **For software teams** (in depth: [agent PR policy](../5-run/agent-pr-policy.md)): auto-merge is step 4.
-  Factory's lowest level, L1, pauses for a person at the spec, the pull request (PR) and the merge.[12]
+  Factory's lowest level, L1, already drafts the spec and opens the pull request (PR), but pauses for a person at the spec, the PR and the merge.[12]
+  That is Factory's own scale: its L1 is close to step 2 on this ladder.
   Its top level, L4, auto-merges only once agent PRs break things less often than human ones, measured as a regret-free merge rate.[12]
   Lydia Hallie's team (Anthropic) has Claude review every PR first, then tiers human review by risk: no person for docs, perhaps one reviewer for ordinary changes, maybe two for risky ones.[5]
   ZoomInfo reports its AI judge was right only 65% of the time.[13]
@@ -117,7 +119,6 @@ So the agent can close a noisy alert on its own "while a production mitigation s
   Make corrections lint rules or tests, not AGENTS.md lines.[11]
 
 For how automated a whole software team should be, see the [software factory memo](../6-lead/should-we-build-a-software-factory.md).
-Where a team's token budget falls short, SEP advises raising it with the organisation.[4]
 
 ## Related
 

@@ -4,7 +4,7 @@ type: memo
 created: 2026-11-21
 audience: senior leadership and engineering leads
 status: checked
-last_checked: 2026-11-21
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -36,7 +36,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 ## Options considered
 
 - **Replace roles where AI matches people.** Fastest savings, but in my view it risks ownerless outcomes and a thinner junior pipeline.
-- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] I'd keep it only for significant decisions about people.
+- **Approve every output.** Slow, and where AI alone is better, experiments suggest people deciding with its advice do worse than AI alone.[6] I'd keep it until results can be checked automatically and for actions that can't be undone; for significant decisions about people, either keep it or meet the legal requirements for automated decisions.
 - **A human at the helm (my recommendation).** Needs up-front work on limits and roles.
 
 ## What the evidence says

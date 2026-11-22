@@ -346,6 +346,18 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 47,
+      "url": "https://blog.langchain.com/the-anatomy-of-an-agent-harness",
+      "title": "Vivek Trivedy (LangChain), The Anatomy of an Agent Harness",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Agent = Model + Harness. Harness engineering is how we build systems around models to turn them into work engines.",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }

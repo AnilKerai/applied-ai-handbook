@@ -13,13 +13,12 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 **New to AI** (about 60 minutes)
 
 1. [What modern AI is, in plain English](1-understand/what-modern-ai-is.md)
-2. [AI questions answered](1-understand/ai-questions-answered.md)
-3. [The big picture](3-engineer/the-big-picture.md)
-4. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
-5. [AI intake checklist](2-decide/ai-intake-checklist.md)
-6. [AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)
+2. [AI glossary](1-understand/ai-glossary.md)
+3. [AI questions answered](1-understand/ai-questions-answered.md)
+4. [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)
+5. [Should this task use AI, and which kind?](2-decide/should-this-task-use-ai.md)
 
-Skim the questions you care about and the map of how an AI system fits together, then the tools you'll use most. Keep the glossary open.
+Skim the glossary and keep it open. In the questions, start with the ones for everyone, then strategy and risk. If you're proposing an AI project, add [The big picture](3-engineer/the-big-picture.md), the [intake checklist](2-decide/ai-intake-checklist.md) and the [pre-mortem](2-decide/ai-failure-modes-premortem.md).
 
 **Engineer building AI features or using coding agents** (about 85 minutes)
 
@@ -37,18 +36,18 @@ Add the .NET guide if you work in .NET, and the rest of the Engineer section for
 **Leader planning AI adoption** (about 50 minutes)
 
 1. [Where should AI go in our product or operations first?](2-decide/where-ai-goes-first.md)
-2. [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md)
-3. [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md)
-4. [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)
-5. [AI maturity model and roadmap](6-lead/ai-maturity-model.md)
-6. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
-7. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
+2. [How much should an agent be trusted to do on its own?](2-decide/how-much-autonomy-for-an-agent.md)
+3. [What must be true before AI agents can act in production?](6-lead/before-agents-act-in-production.md)
+4. [Should we aim for a fully automated software factory?](6-lead/should-we-build-a-software-factory.md)
+5. [Can AI replace our people?](6-lead/can-ai-replace-our-people.md)
+6. [AI maturity model and roadmap](6-lead/ai-maturity-model.md)
+7. [What to measure: AI metrics scorecard](5-run/ai-metrics-scorecard.md)
 
 ## The six sections
 
 - **[1. Understand](1-understand/README.md)**: Start here if AI is new to you: what modern AI is and isn't, the words you will hear, and the questions people keep asking.
 - **[2. Decide](2-decide/README.md)**: Before anything gets built: is this a job for AI, which kind, how could it fail, and how much should it be trusted to do alone?
-- **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: context, harness, loop and eval engineering, with prompting as part of context engineering; how they fit together, when they arrived, and first-hand lessons from building them.
+- **[3. Engineer](3-engineer/README.md)**: The disciplines under every AI system: context engineering (prompts included), harness, loop and eval engineering, and multi-agent orchestration; how they fit together, when they arrived, and first-hand lessons from building them.
 - **[4. Build](4-build/README.md)**: How to build AI features well: patterns seen in practice, how to test them, and how developers should work with coding agents.
 - **[5. Run](5-run/README.md)**: Once it's live: operating AI safely, governing agent-written code, and measuring whether it's working.
 - **[6. Lead](6-lead/README.md)**: For leaders: the big decisions about agents, automation and people, and a maturity model for planning adoption.

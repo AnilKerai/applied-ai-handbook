@@ -5,7 +5,7 @@ Start here if AI is new to you: what modern AI is and isn't, the words you will 
 Read in this order:
 
 1. **[What modern AI is, in plain English](what-modern-ai-is.md)** (5 min): A plain-English start: the kinds of AI you'll meet, how chat assistants work, why they sound sure when they're wrong, and three habits for using them well.
-2. **[AI glossary](ai-glossary.md)** (15 min): Plain-English definitions of the terms you'll hear, each with why it matters.
+2. **[AI glossary](ai-glossary.md)** (20 min): Plain-English definitions of the terms you'll hear, each with why it matters.
 3. **[AI questions answered](ai-questions-answered.md)** (25 min): My answers to the questions people keep asking, each with its evidence and how sure I am.
 
 Talks you can give (outline and speaker notes, with the slides alongside):

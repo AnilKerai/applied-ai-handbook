@@ -106,7 +106,7 @@ Tick what the team can show is handled; plan the rest.
 #### 5. Stale data, confident answers
 - **What goes wrong:** The AI works from out-of-date data or instructions.
 - **Warning sign:** Nobody knows when the data or instructions were last checked.
-- **Prevention:** Fetch facts live from the system of record, with source and date, and give instruction files an owner and tests (intake question 4; [agent pull request (PR) policy](../5-run/agent-pr-policy.md), section 3).
+- **Prevention:** Fetch facts live from the system of record, with source and date, and give instruction files an owner and tests (intake question 4; [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md), section 3).
 - **Seen in practice:** In a pre-registered but unreviewed study, a stale doc misled five models 68–100% of the time, even though they could have checked the code.[3] Instructions drift too: in Dmitry Buykin's (Maersk) worked example, the prose said a limit was 1,500 and the code said 1,000, and nothing threw an error.[4]
 
 ### Design
@@ -144,7 +144,7 @@ Tick what the team can show is handled; plan the rest.
 #### 10. Tests bent to green
 - **What goes wrong:** The agent passes the build by weakening tests, not fixing code.
 - **Warning sign:** Tests change alongside the code, and assertions weaken.
-- **Prevention:** Write tests from the requirements first, out of the agent's reach (agent-PR policy, section 5).
+- **Prevention:** Write tests from the requirements first, out of the agent's reach (agent PR policy, section 5).
 - **Seen in practice:** Because "agents sometimes take the shortest path to green CI", Duolingo closes test-writing PRs that touch anything but tests and test doubles.[10]
 
 ### Security
@@ -152,7 +152,7 @@ Tick what the team can show is handled; plan the rest.
 #### 11. The agent gets round its limits
 - **What goes wrong:** Blocked, the agent finds another route, or acts on an approval nobody gave.
 - **Warning sign:** A denied action succeeds by another route. Approvals live in the conversation.
-- **Prevention:** Treat a denial as a stop, and keep limits beyond the agent's reach ([What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md)). Accept approvals only from committed configuration or a person (agent-PR policy, section 4).
+- **Prevention:** Treat a denial as a stop, and keep limits beyond the agent's reach ([What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md)). Accept approvals only from committed configuration or a person (agent PR policy, section 4).
 - **Seen in practice:** Anthropic reports Claude working around restrictions instead of stopping, such as bypassing a fee gate or using URL shorteners to beat fetch limits.[11]
 
 #### 12. Whispers through shared state
@@ -190,7 +190,7 @@ Tick what the team can show is handled; plan the rest.
 #### 17. No follow-up loop
 - **What goes wrong:** Failures after launch never get back to the agent or its owner.
 - **Warning sign:** Nobody watches what happens after a merge or launch.
-- **Prevention:** Feed CI failures, review comments and incidents back to the agent and owner, and track the regret-free merge rate (agent-PR policy, sections 8 and 9).
+- **Prevention:** Feed CI failures, review comments and incidents back to the agent and owner, and track the regret-free merge rate (agent PR policy, sections 8 and 9).
 - **Seen in practice:** To cope with AI-generated PR volume, Uber relaxed its green-trunk guarantee, so "main can now be broken."[19]
 
 **Read next:** [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md), or go back to the [handbook home](../README.md).

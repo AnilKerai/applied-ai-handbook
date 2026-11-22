@@ -4,7 +4,7 @@ type: glossary
 created: 2026-11-14
 audience: anyone at work, technical or not
 status: checked
-last_checked: 2026-11-21
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - Rules that really matter should be built into the system as automatic checks, not just written into the AI's instructions.
 > - Test an AI feature on real example cases every time anything changes, so you can show it got better.
 
-*Reading time: about 15 minutes · Best for: everyone*
+*Reading time: about 20 minutes · Best for: everyone*
 
 Each term comes with a practitioner or industry source that uses it. *Why it matters* lines are my advice unless they cite a source; company figures are the company's own claims. See also the [AI intake checklist](../2-decide/ai-intake-checklist.md) and the [AI feature spec template](../2-decide/ai-feature-spec.md).
 
@@ -25,7 +25,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Agent**
 - AI software that is given a goal and works towards it by choosing its own next steps and using tools, such as searching, editing files or updating records. Mark Lay (Noblis) likens it to delegation, "turning over to technology an objective".[1]
-- *Why it matters:* it acts rather than just answers, so it needs the limits, oversight and named owner we would give a new colleague. My shorthand: model + harness = an agent; add evals and it's one you can trust in production. Kevin Solorio (Focused): "an agent without evals is a proof of concept".[8]
+- *Why it matters:* it acts rather than just answers, so it needs the limits, oversight and named owner we would give a new colleague. Vivek Trivedy (LangChain) sums up an agent as model plus harness.[47] My shorthand adds evals: model + harness + evals = an agent you can trust in production. For Kevin Solorio's warning about agents without evals, see **Eval (eval set)**, below.
 
 **Agent worm**
 - Hidden instructions that take over one AI agent and then copy themselves to other agents through things they share, such as documents, email, chat or a shared package cache.[2]
@@ -40,7 +40,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* we should keep these files short and current, and turn rules that really matter into automated checks.
 
 **Autonomy level**
-- How much an AI agent may do without a person signing off, set separately for each kind of work or action. At Factory each workstream has its own level: at the lowest the agent pauses for a person at the spec, the pull request and the merge; at the highest it merges the work alone.[5]
+- How much an AI agent may do without a person signing off, set separately for each kind of work or action. At Factory each workstream has its own level: at the lowest the agent pauses for a person at the spec, the pull request and the merge; at the highest it merges the work alone.[5] That is Factory's own scale: its lowest level already drafts the spec and pull request, close to step 2 on the handbook's ladder.
 - *Why it matters:* autonomy should be earned per action on a measured record; Factory's Luke Alvoeiro says "the confidence to raise it comes from watching the work."[5] See [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md).
 
 ## C
@@ -57,7 +57,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Dark factory**
 - A way of building software in which AI agents write, review, test and ship the code with no person involved, so the lights could be off.[8]
-- *Why it matters:* SEP argues that not every team needs one; the right level depends on constraints such as budget, domain knowledge and how easily output can be checked.[8] See [Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md).
+- *Why it matters:* SEP, a firm that builds software for clients (Chris Shinkle and Andrew Dunlap), argues that not every team needs one; the right level depends on constraints such as budget, domain knowledge and how easily output can be checked.[8] See [Should we aim for a fully automated software factory?](../6-lead/should-we-build-a-software-factory.md).
 
 **Data flywheel**
 - A loop that keeps an AI feature improving: a sample of real use is scored, people review the failures, and those cases join the test set that the next version is measured against.[8]
@@ -121,7 +121,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Harness**
 - All the software around an AI model that turns it into a working tool: its instructions, the tools it may use, its permissions, and the checks on its work.[14]
-- *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. My analogy: the model is the brain and the harness is the body, with tools handed to the body to use; the body's reflexes, the checks in code, can stop it whatever the brain decides. It's only an analogy: this brain predicts; it doesn't understand. See [Harness engineering](../3-engineer/harness-engineering.md).
+- *Why it matters:* we usually use an existing model rather than making our own; the harness is where our controls live and where our own effort should go. An analogy I use: the model is the brain and the harness is the body, with tools handed to the body to use; the body's reflexes, the checks in code, can stop it whatever the brain decides. It's only an analogy: this brain predicts; it doesn't understand. See [Harness engineering](../3-engineer/harness-engineering.md).
 
 **Human at the helm**
 - As used here: a way of working with AI in which people set its limits in advance and the system passes them anything that needs judgement or goes beyond those limits. For an agent doing many steps, the aim is that people review the exceptions rather than approve every step, and that the AI extends their judgement. Paula Goldman of Salesforce gives one definition in three parts (a vendor executive's view): people "should be able to set parameters in advance"; "the system should escalate something when it requires judgment or goes outside those parameters"; and it should be "extending your agency, creativity and judgment".[42] The phrase is older than this definition: Cosmos magazine quoted Cécile Paris of CSIRO in January 2022 saying "I want the human at the helm",[43] and Holly Prouty used it in a Salesforce research blog in December 2023.[44]
@@ -147,7 +147,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Learn-then-hand-off**
 - A pattern AgentRun teaches as "Teach an expensive agent, run a cheap one": an expensive AI model does a repeated job until it can write down the steps, a cheaper model then follows them, and hard or failed cases go back to the expensive one.[16]
-- *Why it matters:* it can cut the cost of high-volume work; AgentRun reports cost per record falling from $0.89 to $0.12 (its own claim).[17]
+- *Why it matters:* it can cut the cost of high-volume work; AgentRun reports cost per record falling from $0.89 to $0.124 (its own claim).[17]
 
 **Lethal trifecta**
 - Simon Willison's name for an AI set-up with three things at once: access to private data, exposure to content from outsiders, and a way to send data out. Together they let an attacker trick it into leaking data.[18]
@@ -174,7 +174,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 ## O
 
 **Ontology**
-- A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by an agent, which lets software catch an AI query that links them the wrong way round.[21]
+- A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by a sales agent, which lets software catch an AI query that links them the wrong way round.[21]
 - *Why it matters:* we should write our business terms and rules down precisely before buying any product sold as an ontology.
 
 **Open-weight model**
@@ -249,7 +249,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 ## Related
 
-[AI questions answered](ai-questions-answered.md) · [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) · [AI pattern catalogue](../4-build/ai-pattern-catalogue.md)
+[AI questions answered](ai-questions-answered.md) · [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md) · [AI pattern catalogue](../4-build/ai-pattern-catalogue.md)
 
 **Read next:** [AI questions answered](ai-questions-answered.md), or go back to the [handbook home](../README.md).
 
@@ -301,3 +301,4 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 [44] https://www.salesforce.com/blog/ai-and-human-touch — Holly Prouty (Salesforce), Building Trust in AI Needs a Human Touch (Salesforce research blog, 13 December 2023)
 [45] https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf — ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)
 [46] https://epoch.ai/data-insights/open-closed-eci-gap — Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)
+[47] https://blog.langchain.com/the-anatomy-of-an-agent-harness — Vivek Trivedy (LangChain), The Anatomy of an Agent Harness

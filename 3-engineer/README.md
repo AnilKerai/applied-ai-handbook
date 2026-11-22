@@ -1,6 +1,6 @@
 # 3. Engineer
 
-The disciplines under every AI system: context, harness, loop and eval engineering, with prompting as part of context engineering; how they fit together, when they arrived, and first-hand lessons from building them.
+The disciplines under every AI system: context engineering (prompts included), harness, loop and eval engineering, and multi-agent orchestration; how they fit together, when they arrived, and first-hand lessons from building them.
 
 Read in this order:
 

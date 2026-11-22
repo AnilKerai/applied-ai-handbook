@@ -19,11 +19,10 @@ as_of: "November 2026"
 
 *Reading time: about 4 minutes · Best for: anyone proposing AI work*
 
-A decision tree for deciding whether a task should use AI and, if it should, which kind and how closely a
-person stays involved. Run it **per task or workflow step, not per project** (Porter). Every rule cites a
-practitioner, and a few also cite published studies, but none of the advice was tested as a whole, so treat
-the order as a strong default, not a law. Companion page:
-[How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md).
+A decision tree for deciding whether a task should use AI and, if it should, which kind and how closely a person stays involved.
+Run it **per task or workflow step, not per project** (Porter).
+Every rule cites a practitioner's talk, but none of the advice was tested as a whole, so treat the order as a strong default, not a law.
+Companion page: [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md).
 
 ```mermaid
 flowchart TD
@@ -43,10 +42,10 @@ flowchart TD
     Q6 -- yes --> M4["Fixed workflow;<br/>LLM for the fuzzy step only"]
     Q6 -- no --> M5["Bounded agent inside<br/>deterministic orchestration"]
     M1 & M2 & M3 & M4 & M5 --> G{"Cost of a mistake?<br/>Can it be undone?"}
-    G -- "consequential,<br/>uncertain" --> D1["Human approves first"]
-    G -- "high volume,<br/>mixed confidence" --> D2["Act above a threshold,<br/>escalate the rest"]
-    G -- "time-sensitive" --> D3["Act now;<br/>human can undo"]
-    G -- "cheap to undo" --> D4["Automate outright"]
+    G -- "consequential,<br/>uncertain" --> D1["At most: human<br/>approves first"]
+    G -- "high volume,<br/>mixed confidence" --> D2["At most: act above<br/>a threshold,<br/>escalate the rest"]
+    G -- "time-sensitive" --> D3["At most: act now;<br/>human can undo"]
+    G -- "cheap to undo" --> D4["At most: automate<br/>outright"]
     D1 & D2 & D3 & D4 --> E{"Evals on<br/>real cases?"}
     E -- no --> P["Still a proof of concept:<br/>build evals with the users"]
     E -- yes --> R["Ship: guardrails in code,<br/>a named owner, trace ID<br/>on the business record"]
@@ -88,6 +87,7 @@ flowchart TD
   for reviewer fatigue (Porter). Expose existing features as tools that act through the
   app's own view models and services, not the UI, and confirm destructive
   ones ([Less Chat, More Action: AI-Powered .NET MAUI Apps](https://www.youtube.com/watch?v=FYGBT08-N48&t=5)).
+  The dial sets a ceiling, not a starting point: each kind of action earns its way up to it on a track record ([How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md)).
 - **Evals.** "An agent without evals is a proof of concept." Build the eval set *with* the
   people who do the job and keep the data flywheel running after release (Solorio,
   [Building AI With Workers, Not For Them](https://midwestaisummit.com/2026-recap)). Look past averages to the worst cases (Porter).
@@ -115,4 +115,4 @@ flowchart TD
   [Your Automation Is Overthinking It](https://ai.engineer/code/2026/talks/uipath), [cloudflare is a neolab](https://ai.engineer/code/2026/talks/michelle-chen),
   [Beyond Better Assistants: Software That Can Make a Decision](https://ai.engineer/code/2026/talks/diogo-almeida)
 - [.NET Conf 2026](https://dotnetconf.com/agenda): the .NET AI stack, Less Chat More Action, Infrastructure as (Actual)
-  Code, Azure lineup part 2, Beyond the Agent Trace and Beyond Prototypes notes (linked above)
+  Code, Azure lineup part 2, Beyond the Agent Trace and Beyond Prototypes talks (linked above)

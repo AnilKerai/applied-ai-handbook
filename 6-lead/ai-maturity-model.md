@@ -4,7 +4,7 @@ type: model
 created: 2026-11-14
 audience: senior leadership and engineering leads planning AI adoption
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -23,9 +23,10 @@ This page gives two ladders, for AI in engineering (coding agents) and AI in the
 
 ## 1. How to use it
 
-- **Assess per team or per workflow, never company-wide.** For SEP, a team's constraints decide its mode: "The mode is your fit."[1]
-- **Aim for fit, not the top stage.** SEP, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] In my view, a team that stops at E2 on purpose is mature, not behind.
-- **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
+- **Assess per team or per workflow, never company-wide.** SEP, a firm that builds software for clients, finds its teams working in four modes, ways of working with AI agents set by how much autonomy the agents have (section 2).[1]
+  Its Andrew Dunlap says a team's constraints decide its mode: "The mode is your fit."[1]
+- **Aim for fit, not the top stage.** SEP's Chris Shinkle, summing up recent studies, says AI "amplifies what's already there", and "More AI won't fix the AI fit."[1] In my view, a team that stops at E2 on purpose is mature, not behind.
+- **Set autonomy per kind of action.** The levels adapt Meta's and Factory's ladders.[3][4] Definitions follow [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md): L1 investigate, L2 draft with approval, L3 act alone on low-risk work, L4 auto-merge.
 - **Promote on exit criteria, demote when they lapse,** and re-assess quarterly.
 
 ## 2. Engineering track: coding agents
@@ -49,16 +50,16 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 ### E3: Orchestrated agent team
 
 - **Looks like:** agents take roles under an orchestrator, and the team supplies intent and context.[1] Autonomy rises per action from L2 to L3.
-- **Prerequisites:** SEP's six constraints (token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight) are loose enough; SEP ties more autonomy to looser constraints but sets no threshold.[1] SEP's mobile banking team had no real token limit and strong backing, and reported a "six x reduction of effort" (SEP's figure).[1]
+- **Prerequisites:** SEP's six constraints (token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight) are loose enough; SEP ties more autonomy to looser constraints but sets no threshold.[1] SEP's team rebuilding a credit union's mobile banking app had no real token limit and strong backing, and reported a "six x reduction of effort" (SEP's figure).[1]
 - **Exit criteria, per action:**
   - Meta's test: "How costly is a mistake and how easy is it to catch?"[3]
   - Factory's L4 bar: agent changes break things less often than human ones, measured by "the regret-free merge rate, the share of changes that merge and never need a revert or a follow-up fix."[4]
   - The merge gate judges recorded evidence against written criteria.[2]
-- **Risks:** review becomes the bottleneck, and fixing it moves the bottleneck elsewhere.[1] Slop at scale: "if your inner coding loop produces slop, then automating that loop just produces more slop".[6] Steve Yegge found "the more agents I deploy, the more humans I need."[7]
+- **Risks:** review becomes the bottleneck, and fixing it moves the bottleneck elsewhere.[1] Slop at scale: Lauren Tan warns that "if your inner coding loop produces slop, then automating that loop just produces more slop".[6] Steve Yegge found "the more agents I deploy, the more humans I need."[7]
 
 ### E4: Dim factory
 
-- **Looks like:** standing workstreams auto-merge (L4) ordinary-tier changes for named actions and areas only; risky-tier work stays at L2 or below, as in the policy. "The owner gets to set the level, but the confidence to raise it comes from watching the work."[4] Humans audit risky code, handle incidents, review architecture and engineer the factory.[2]
+- **Looks like:** standing workstreams auto-merge (L4) ordinary-tier changes for named actions and areas only; risky-tier work stays at L2 or below, as in the policy. Factory's Luke Alvoeiro: "The owner gets to set the level, but the confidence to raise it comes from watching the work."[4] Humans audit risky code, handle incidents, review architecture and engineer the factory.[2]
 - **Prerequisites:** all six constraints relaxed, plus post-deploy checks and rollback (my reading). None of SEP's three example teams worked in this mode.[1] Finch says post-deploy verification is still early.[2] Justin McCarthy points factories at brownfield products, not uncertain greenfield ideas.[9]
 - **Exit criteria:** none upward; [the memo](should-we-build-a-software-factory.md) explains why. A traced incident or revert, or a month below the human regret-free baseline, moves an action down at least one rung, as in the policy.
 - **Risks:** no automatic brake. The Claude Code team does not yet have circuit breakers that tighten approval when reverts rise.[18]
@@ -76,7 +77,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
 
 - **Looks like:** a few pilots, each with a charter, an owner and evals. Don Barger's charter came "before we ever write one line of code", and he asks "what will we never do?"[11] For Lay, "accountability can't be delegated" to AI, and data has named stewards.[11]
 - **Prerequisites:** build *with* the people who do the job, from a deliberately rough version they can correct (Kevin Solorio).[1] Beutler's three phases cover buy-in, the right solution and production costs.[12]
-- **Exit criteria:** evals on real cases built with users, because "an agent without evals is a proof of concept".[1] A known cost to reverse, and an owner with "the capacity to keep running what they deployed".[11]
+- **Exit criteria:** evals on real cases built with users, because, as Kevin Solorio puts it, "an agent without evals is a proof of concept".[1] A known cost to reverse, and an owner with what Mark Lay calls "the capacity to keep running what they deployed".[11]
 - **Risks:** a tool that crosses the never list; Barger turned down an AI counsellor because "Something can be worse than nothing if you're doing the wrong things."[11]
 
 ### B3: AI inside workflows
@@ -85,16 +86,16 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
   - Porter picks rules, ML, a decision model or an LLM per task. In Syngenta's seed tool the LLM is "the interface, the router, and the explainer, not the agronomist".[1]
   - Chinmay Goyal asks "can the output be listed in advance?" If yes, Glean uses a decision model.[13] In UiPath's fraud demo, a decision model calls in an agent only when it lacks the evidence to decide.[14]
   - AeroCore's agent took off once it was in Microsoft Teams ("No one likes an extra login.").[11]
-- **Prerequisites:** good enough data, plus guardrails, evals and observability. Guardrails go in code, since "a rule written in a prompt is not deterministically enforced".[1]
+- **Prerequisites:** good enough data, plus guardrails, evals and observability. Guardrails go in code, since, as Porter warns, "a rule written in a prompt is not deterministically enforced".[1]
 - **Exit criteria:** live results are sampled and failures fed back into evals (Solorio's flywheel); worst cases are reviewed, because, as Porter says, "averages can hide a bad result".[1] Gains are measured against a baseline.
 - **Risks:** vendor churn. At Noblis an upgrade broke every app built on the old version.[11]
 
 ### B4: Bounded agents under the execution dial
 
-- **Looks like:** each action is set on Porter's dial. A person approves consequential, uncertain actions; high-volume work acts above a confidence threshold; time-sensitive work gets an undo window. Teams "automate outright only what is cheap to undo".[1] Meta's on-call ladder is the operations version.[3]
+- **Looks like:** each action is set on Porter's dial. A person approves consequential, uncertain actions; high-volume work acts above a confidence threshold; time-sensitive work gets an undo window. Porter's advice is to "automate outright only what is cheap to undo".[1] Meta's on-call ladder is the operations version.[3]
 - **Prerequisites:** see [What must be true before AI agents can act in production?](before-agents-act-in-production.md). For Porter, failing evals block promotion.[1]
 - **Exit criteria:** a track record per action, a tested undo, and a review load people can sustain.
-- **Risks:** "rubber stamping fatigue".[1] Barger's personal takeover of critical conversations stopped being practical as usage grew.[11]
+- **Risks:** reviewers facing thousands of items can fall into what Porter calls "rubber stamping fatigue".[1] Barger's personal takeover of critical conversations stopped being practical as usage grew.[11]
 
 ### B5: Learn, then hand off, at scale
 
@@ -102,7 +103,7 @@ The stages follow SEP's four modes, which run along a scale of agent autonomy fr
   - At AgentRun, Opus wrote its path down as a workflow for a cheap model; a judge hands back answers whose quote isn't on a page that was read.[15] It reports cost per merchant falling from $0.89 to $0.124, at 96% correct against 93% for Opus alone (its own claims).[15]
   - UiPath designs categories with an LLM offline: "we basically removed the LLM completely from the picture on this one."[14]
 - **Prerequisites:** a stable, high-volume, checkable job, run side by side on live traffic before cut-over.
-- **Exit criteria:** top stage for fitting jobs; keep measuring hand-backs and reliability.
+- **Exit criteria:** top stage for fitting jobs; keep measuring hand-backs (answers passed back to the expensive model) and reliability.
 - **Risks:** a weak check, and technical debt while the stack keeps changing.[11]
 
 ## 4. Self-assessment
@@ -123,7 +124,7 @@ Answer per team or workflow; any no means stay.
 
 A recommendation; swap in each team's own examples.
 
-- **90 days, baseline:** place every team and two or three workflows, noting what blocks each. Agree the charter and owners ([AI intake checklist](../2-decide/ai-intake-checklist.md)). Engineering: shared repo context, [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) at L1–L2, and baselines for review time, reverts and regret-free merges. Business: one narrow, checkable step ([Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)) with user-built evals ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)).
+- **90 days, baseline:** place every team and two or three workflows, noting what blocks each. Agree the charter and owners ([AI intake checklist](../2-decide/ai-intake-checklist.md)). Engineering: shared repo context, [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md) at L1–L2, and baselines for review time, reverts and regret-free merges. Business: one narrow, checkable step ([Where should AI go in our product or operations first?](../2-decide/where-ai-goes-first.md)) with user-built evals ([Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md)).
 - **6 months, first promotions:** one or two teams at E2; one brownfield workstream (flaky-test fixes, test-only PRs) at L3. The first pilot live as a B3 workflow, and one operations agent at L1–L2. Monthly reviews of token spend and the [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md).
 - **12 months, scale where it fits:** E3 where constraints allow; L4 only for named actions whose regret-free merge rate beats our engineers'. B4 agents with tested undo, and one learn-then-hand-off trial alongside the current path. Re-assess every team, noting who stayed put by choice.
 
@@ -136,7 +137,7 @@ A recommendation; swap in each team's own examples.
 - **Risk-tiered review is documented practice.** The Claude Code team sets human approvals with a risk classifier, and reports merged PRs more than doubling over June–September as the revert share fell over 40% (vendor figures).[18]
 - **More agents cost more.** One preprint found agent teams beat solo agents at three to seven times the cost.[19]
 - **Decision models are checked on live traffic.** Amazon engineers ran Sonnet 4.6 and Strands Decider side by side, judging every disagreement, with a 45-second switch back. They report equal results at 98% less cost (their claim).[20]
-- **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and *none of these* cases.
+- **Accuracy is not reliability.** SO-Arena's best-performing decision model ranked only seventh for reliability.[21] In my reading, that qualifies the vendor results above; at B5 we should test hand-backs and cases where none of the fixed answers fits.
 - **Learn-then-hand-off updates Porter's per-task choice.** I think that, for repeated jobs, the mechanism chosen for a task can start expensive and get cheaper if a check controls the hand-back. AgentRun's figures are its own.[15] I know of no independent replication.
 
 **Read next:** you've reached the end of the path. Go back to the [handbook home](../README.md).

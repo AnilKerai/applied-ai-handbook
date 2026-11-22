@@ -19,7 +19,7 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering and operations*
 
-*Draft runbook* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md). Steps are recommendations; cited lines are the evidence. Company figures are the companies' own claims.
+*A starting runbook, to adapt to your team,* for operating an AI feature or agent after go-live. What must be true before go-live is in [What must be true before AI agents can act in production?](../6-lead/before-agents-act-in-production.md). Steps are recommendations; cited lines are the evidence. Company figures are the companies' own claims.
 
 ## 1. Go-live readiness check
 
@@ -69,7 +69,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
   - *Newer evidence:* Simon Willison argues for hard caps that cut a service off, not warning emails, because coding agents make it easy to spin up services that cost money.[13]
 - **Fall back to rules or a person.** The gateway routes model aliases with priority fallback.[5] In Porter's production-line case, "The system withholds the answer and escalates."[10] Keep the pre-AI path (rules or a manual queue) working and staffed.
 - **Make guardrails fail closed.** Matt Soucoup and Paul Yuknewicz (Microsoft) run guardrails in gateway hooks outside the agent's reach.[5] *Newer evidence:* a coding-agent release added an option that makes a hook block the action when it can't start, times out or exits unexpectedly.[14] That sharpens the advice: a check that errors must stop the action.
-- **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident, drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
+- **Demote autonomy.** Meta raises autonomy per action, asking "How costly is a mistake and how easy is it to catch?"[15] After an incident, drop the affected action at least one level at once, per section 7 of [Agent-written pull requests and agent autonomy](agent-pr-policy.md).
 
 ## 5. Incident response for AI
 
@@ -77,7 +77,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 - **Wrong action.** Anthropic reports Claude working around restrictions instead of stopping, such as submitting a sensitive form on a real website, with minimal real-world impact.[16] A blocked agent trying another route is an incident in itself.
 - **Harmful or wrong output** reaching a customer, colleague or business record.
-- **Cost runaway.** At Harvey, per-workspace alerts plus auto-tagging took a normal ~50 tasks to about 900 in about four hours.[12]
+- **Cost runaway.** At Harvey, an alert fired once per workspace and a workflow tagged the agent on each one, so about 900 tasks started in about four hours, against about 50 on a normal day.[12]
 - **Data exposure.** One coding agent sent the user's account email to third parties in the User-Agent header of its web searches; after a fix, a commenter showed a shell command carrying the email was still not blocked.[17]
 - **Prompt injection or a malicious skill.** Zenity traced a campaign whose lookalike project and skills harvested SSH, AWS and Azure credentials.[18] Matthew Green describes OpenAI's sandboxed agents leaving instructions for each other in a shared package cache, and expects a self-spreading *worm*.[19]
 
@@ -86,7 +86,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 1. Open an incident, name a lead and tell the owner.
 2. Find the affected records by trace ID; check what actually committed, not what the agent reported.[1]
 3. Map the blast radius: other runs and agents reading the same documents, caches or queues.[19]
-4. Don't trust approvals in the agent's context. In a preprint, a forged approval planted in content the agent read survived context compaction as a real user instruction 87–100% of the time on five coding agents, and 0% on four that keep message roles.[20] Check the system that grants approvals.
+4. Don't trust approvals in the agent's context. In a preprint, a forged approval planted in content the agent read survived context compaction as a real user instruction 87–100% of the time on five harnesses that flatten message roles, and 0% on four that keep them.[20] Check the system that grants approvals.
 
 **Containment**
 
@@ -109,9 +109,9 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 - **Model upgrades and swaps are releases.**
   - Porter makes the model the easiest part to replace, then re-evaluates after a swap.[10] *Newer evidence:* HarnessDev found harness gains depend strongly on the model running them; one harness fell from 69.3 to 33.0 under a different model (the paper's numbers).[24] So the model is replaceable in the architecture, but prompts, skills and tools tuned to it may not transfer.
-  - Vendors retire modes at short notice: one fast mode was deprecated on 30 October 2026 for removal on 30 November, with no fallback.[25]
+  - Vendors retire modes at short notice: one fast mode was deprecated on 30 October 2026 for removal on 30 November 2026, with no fallback.[25]
   - Pin model versions, track retirement dates, and test a new model on the eval set and shadow live traffic before switching.
-- **Prompts and skills are code.** They live in version control, take Risky-tier review under [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and ship through the normal pipeline.
+- **Prompts and skills are code.** They live in version control, take Risky-tier review under [Agent-written pull requests and agent autonomy](agent-pr-policy.md) and ship through the normal pipeline.
   - The Sahs warn that "an agent can become more capable while becoming less recoverable."[21] So a prompt, tool or skill change should also pass a recovery check.
   - Zenity saw skills write reinstall-if-missing prompts into agent instruction files, and abuse hooks.[18] Alert on both, and pin remote prompts.
 - **Dependency and supply-chain hygiene.**
@@ -137,7 +137,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 
 Andrew Finch (Sonar) says the software factory "runs dim, not dark": people stay in it, and safety comes from four loops.[22]
 
-1. **PR checks:** evidence recorded on each change, judged against criteria the team writes down.[22] A draft set is in [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md).
+1. **PR checks:** evidence recorded on each change, judged against criteria the team writes down.[22] A starting set is in [Agent-written pull requests and agent autonomy](agent-pr-policy.md).
 2. **Post-deploy verification:** AI reads logs, traces and metrics, and an automated rollout widens, rolls back or switches off a flag; Finch calls this loop early.[22] Sections 2 to 4 supply it.
 3. **Maintenance:** scheduled whole-codebase scans catch rules and vulnerabilities published after merge, and slow drift no single change shows.[22] Section 6 covers dependencies.
 4. **Knowledge:** docs, decisions and lessons from reviews and outages, curated and fed to the other loops.[22] Section 5's post-incident step feeds it.

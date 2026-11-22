@@ -19,9 +19,9 @@ as_of: "November 2026"
 
 *Reading time: about 10 minutes · Best for: engineering leads and leadership*
 
-*Draft for discussion.* How to tell whether AI is working: (A) coding agents in engineering, (B) AI features and agents in the business. The formulas and the template are recommendations; Evidence lines report sources, and company figures are their own, mostly unbaselined, claims.
+*A starting scorecard: adapt it to your team.* How to tell whether AI is working: (A) coding agents in engineering, (B) AI features and agents in the business. The formulas and the template are recommendations; Evidence lines report sources, and company figures are their own, mostly unbaselined, claims.
 
-This scorecard expands section 9 of [Agent-written pull requests and agent autonomy: draft engineering standard](agent-pr-policy.md) and the measurement answer in [AI questions answered](../1-understand/ai-questions-answered.md); evals are in [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md).
+This scorecard expands section 9 of [Agent-written pull requests and agent autonomy](agent-pr-policy.md) and the measurement answer in [AI questions answered](../1-understand/ai-questions-answered.md); evals are in [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md).
 
 ## Ground rules
 

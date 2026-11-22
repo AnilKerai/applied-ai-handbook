@@ -4,7 +4,7 @@ type: memo
 created: 2026-11-14
 audience: senior leadership and engineering leads
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-22
 as_of: "November 2026"
 ---
 
@@ -29,10 +29,11 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 
 ## Recommendation
 
-1. **Choose a mode per team, not one target for the whole organisation.** Score each team against the six constraints below; regulated or safety-critical work will stay closer to individual, human-checked use.
+1. **Choose a mode per team, not one target for the whole organisation.** A mode is how a team works with agents, from each developer working with their own agent up to a fully automated factory.
+   Score each team against the six constraints below; regulated or safety-critical work will stay closer to individual, human-checked use.
 2. **Fix verification and review before adding autonomy.** Make every change checkable by machine, with tests that predate the work and that agents can't edit. Turn repeated agent corrections into lint rules or tests, and gate merges on recorded evidence.
 3. **Grant autonomy per kind of action, on a ladder.** Agents investigate and report (L1), then draft changes for approval (L2), then act alone on low-risk work (L3), and only then auto-merge (L4). Promote an action when its mistakes are cheap and caught early, and a track record backs it; allow auto-merge only once its regret-free merge rate (changes that never need a revert or follow-up fix) beats our engineers'.
-4. **Point early factory-style automation at brownfield work.** Good first targets are flaky tests and small bug fixes on products we already run. Agents can draft dependency updates too, but the [agent-PR policy](../5-run/agent-pr-policy.md) makes those Risky-tier: two human reviewers, and never above L2. Keep new-product discovery human-led.
+4. **Point early factory-style automation at brownfield work.** Good first targets are flaky tests and small bug fixes on products we already run. Agents can draft dependency updates too, but the [agent PR policy](../5-run/agent-pr-policy.md) makes those Risky-tier: two human reviewers, and never beyond drafting for a person to approve (L2). Keep new-product discovery human-led.
 5. **Budget for people and tokens, not just licences.** Name an owner for each automated workstream, keep humans on architecture and high-risk review, and review token spend monthly.
 
 ## Options considered
@@ -43,8 +44,13 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 
 ## What the evidence says
 
-- **Fit beats maximum autonomy.** SEP sums up three recent studies as "AI is not gonna fix your team. It amplifies what's already there." Six constraints set a team's mode: token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight.[1] A two-day prototype stalled on the way to production because tokens ran out, knowledge sat in people's heads and millions of input parameters left outputs unverifiable at scale. A building-components team chose to stop part-way ("Buildings don't fall down"), while a credit-union app team with no token limit reported a "six x reduction of effort".[1]
+- **Fit beats maximum autonomy.** SEP, a firm that builds software for clients, finds its teams working in four modes, spread along a scale of agent autonomy from individual agentic coding to a dark factory (Chris Shinkle and Andrew Dunlap).[1]
+  Shinkle sums up three recent studies as "AI is not gonna fix your team. It amplifies what's already there."[1]
+  Six constraints set a team's mode: token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight.[1]
+  A two-day prototype stalled on the way to production because tokens ran out, knowledge sat in people's heads and millions of input parameters left outputs unverifiable at scale.[1]
+  Dunlap's own building-components team chose to stop part-way ("Buildings don't fall down"), while a team rebuilding a credit union's mobile banking app, with no token limit, reported a "six x reduction of effort".[1]
 - **Autonomy is earned per action.** Meta's on-call agent climbs from investigating and reporting, to drafting fixes that ship only with approval, to clearing low-criticality work alone. Promotion turns on "How costly is a mistake and how easy is it to catch?"[3] Factory's workstreams run from L1, which pauses for a human at the spec, the PR and the merge, to L4 auto-merge, reached only when agent PRs break things less often than human ones, measured as "the regret-free merge rate".[2]
+  These are Factory's own levels: in my reading, its L1 is close to L2 on the ladder in recommendation 3, since it already drafts work for a person to approve.
 - **Review moves; it doesn't vanish.** Andrew Finch argues that once coding is automated the bottleneck moves to review, so the merge gate should judge recorded evidence against criteria the team writes down, letting low-risk PRs be auto-approved.[4] Lydia Hallie says her Anthropic team tiers human review by risk: no person for docs or copy, perhaps one reviewer for ordinary changes, and maybe two for risky ones.[5] Kiro's team uses six specialised agent reviewers and says "we've stopped reviewing code a long time ago", but people own the review record and fix the process.[6]
 - **Unattended automation multiplies slop.** Dexter Horthy describes a factory as the existing delivery pipeline with an agent doing the build, plus forward pressure (what starts work) and back pressure (agent review and testing, CI, linters) that improves quality without humans.[7] Lauren Tan: "if your inner coding loop produces slop, then automating that loop just produces more slop".[8] Jarred Sumner picked work he could check against test suites that predate it, and warns that once a project means rewriting its tests, you can no longer trust them.[9]
 - **Start with brownfield.** Justin McCarthy advises against pushing uncertain greenfield ideas through a factory. Point it at existing products instead, and write their *promises* (features, performance, cost, security) as loops that agents keep continuously.[10]
@@ -55,7 +61,8 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 
 - **Independent data tempers the throughput claims.** A Harvard study of engineering data from 655 firms (revised November 2026) found coding agents raised output (44.0% more lines of code, an estimate the paper calls marginally insignificant, and 35.7% more pull requests) but resolved issues by only 13.7%, a borderline-significant rise, while time from review submission to approval rose 56.1%.[14] In my reading, this supports SEP and Finch on review as the bottleneck, and contradicts any claim that Cognition's or Kiro's figures are typical: on average, the extra code has not turned into proportional gains in shipped software. The data is observational and ends in August 2026.[14]
 - **Risk-tiered review is now documented practice.** Anthropic's Claude Code team moves most reading to machines and uses a risk classifier to set how many people must approve (none, one or two). It reports merged PRs more than doubling from June to September while the revert share fell by over 40%, but admits it has no automatic brake yet that tightens approval when reverts rise.[15] These are vendor figures, from a team with unusual tooling.
-- **Autonomous agents lean on checks they can't edit.** AWS's agents build its emulator against fidelity tests first corrected until real AWS passes them, behind security-agent merge gates and deterministic checks that stop agents touching code they shouldn't. Swami Sivasubramanian supervised a Kiro agent rebuilding a replication engine for four nights before seeing it had no way to check its results; with a spec and a test environment it took about two hours (AWS's account).[16] DeepMind had Lean check every agent proof about Signal's protocol code, while the agents flagged about 1% of the codebase for human review, and Google's /teamwork filters parallel attempts through falsifiers such as unmodified test suites (both their own claims).[17][18] In my reading, both support Sumner and Tan.
+- **Autonomous agents lean on checks they can't edit.** AWS's agents build its emulator against fidelity tests first corrected until real AWS passes them, behind security-agent merge gates and deterministic checks that stop agents touching code they shouldn't. Swami Sivasubramanian supervised a Kiro agent rebuilding a replication engine for four nights before seeing it had no way to check its results; with a spec and a test environment it took about two hours (AWS's account).[16] DeepMind had Lean check every agent proof about Signal's protocol code, while the agents flagged about 1% of the codebase for human review, and Google's /teamwork filters parallel attempts through falsifiers such as unmodified test suites (both their own claims).[17][18]
+  In my reading, all three cases, AWS's, DeepMind's and Google's, support Sumner and Tan.
 
 ## Risks and what would change this advice
 

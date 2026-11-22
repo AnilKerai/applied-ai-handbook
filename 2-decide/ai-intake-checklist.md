@@ -67,7 +67,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Lay's premise is that "accountability can't be delegated" to AI, so a person always holds the A in the RACI chart. Someone must validate and own the output, even of tools a department builds outside IT.[2]
 - **Red flags:** *The model decides.* The owner is a committee, or just IT, or nobody.
-- **What a good answer looks like (industry practice):** Anthropic's Claude Code team counts whoever prompted the agent as a required reviewer, and an agent's approval never fills a human slot (its own account).[14]
+- **What a good answer looks like (industry practice):** Anthropic's Claude Code team holds whoever prompted an agent-written change on the hook for it: that person counts as one of the required human reviewers wherever the change's risk tier calls for any, and an agent's approval never fills a human slot (its own account).[14]
 
 ### 4. Is the data good enough for this task?
 
@@ -91,7 +91,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** If we do, a fixed workflow with the LLM in one narrow job is enough; Darren Taillie's photo check at AeroCore ended with the prompt "Compare and flag".[2] In UiPath's fraud demo, the decision model escalates to a slower agent only when the evidence is missing.[3]
 - **Red flags:** *An agent will work out the process.* Nobody can describe how the job is done today.
-- **What a good answer looks like (industry practice):** For unknown steps, use one agent loop that loads tools on demand, not a team of agents; Anthropic reports it often won on quality, cost and latency.[19] Newer practice goes further: once a repeated job settles, a cheaper model runs its path as a workflow and sends hard cases back; AgentRun reports $0.89 falling to $0.12 per record.[20]
+- **What a good answer looks like (industry practice):** For unknown steps, use one agent loop that loads tools on demand, not a team of agents; Anthropic reports it often won on quality, cost and latency.[19] Newer practice goes further: once a repeated job settles, a cheaper model runs its path as a workflow and sends hard cases back; AgentRun reports $0.89 falling to $0.124 per record.[20]
 
 ### 8. What does a mistake cost, and how would we undo it?
 
@@ -121,7 +121,7 @@ Run it per task or workflow step, not per project, as Heidi Porter (Moyer Group 
 
 - **Why it matters:** Lay asks what reversing a deployment would actually cost, and "do they have the capacity to keep running what they deployed?"[2]
 - **Red flags:** One enthusiast built it and nobody has agreed to run it. There is no rollback plan.
-- **What a good answer looks like (industry practice):** Re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 under a different model.[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode ends on 30 November with no fallback.[29]
+- **What a good answer looks like (industry practice):** Re-run evals at every model change: in ByteDance Seed's HarnessDev study, one harness fell from 69.3 to 33.0 under a different model.[28] Track vendor retirement dates too; Anthropic's Opus 4.8 fast mode was due to end on 30 November 2026, with no fallback.[29]
 
 ## Outcomes
 
@@ -146,7 +146,9 @@ Porter's dial decides who acts:[1]
 - **Act with an undo window:** time-sensitive work; a person can veto or undo.
 - **Automate outright:** only what is cheap to undo.
 
-Meta grants autonomy per kind of action, on a track record for that exact action.[5] Do the same, and treat any idea failing Q9 to Q12 as a proof of concept, whatever the dial says.
+Meta grants autonomy per kind of action, on a track record for that exact action.[5]
+Do the same: treat the dial's answer as a ceiling that each kind of action climbs to step by step ([How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md)).
+Treat any idea failing Q9 to Q12 as a proof of concept, whatever the dial says.
 
 ## Related
 

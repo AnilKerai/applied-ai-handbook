@@ -19,7 +19,8 @@ as_of: "November 2026"
 
 *Reading time: about 5 minutes · Best for: product owners and engineers*
 
-Use this for any feature in which AI drafts, decides or acts. Run the [AI intake checklist](ai-intake-checklist.md) first; this spec turns its answers into commitments the team builds and tests against. Write it before any code, with the people who will use the feature, and keep it short: a line or two per section suits a small feature. Put unknowns under Open questions rather than guessing.
+Run the [AI intake checklist](ai-intake-checklist.md) first.
+A line or two per section suits a small feature, and unknowns go under Open questions (section 16).
 
 ## The template
 
@@ -112,14 +113,16 @@ A written spec matters more when AI does the building or the deciding. Michael W
 12. **Failure and undo:** Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[12]
 13. **Cost:** SEP saw a prototype stall partly because the token budget covered only a couple of days' work.[4] Harvey lets automations carry a budget or expiry date "because when no one's watching, an agent can start thousands of tasks too."[13] Willison argues pay-per-use services should ship with hard budget caps switched on.[14]
 14. **Rollout:** Darren Taillie's data agent at AeroCore took off once it moved into Microsoft Teams: "No one likes an extra login."[5] Solorio finds that people who helped build a tool become its champions.[4]
-15. **Maintenance:** Lay asks "do they have the capacity to keep running what they deployed?"[5] This tempers practitioners' view that the model is the replaceable part: ByteDance Seed's HarnessDev study found one model-built harness fell from 69.3 to 33.0 when a different model ran it, though others improved (the paper's figures).[15]
+15. **Maintenance:** Lay asks "do they have the capacity to keep running what they deployed?"[5]
+    Porter designs systems so that the model is the replaceable part, and re-evaluates after a swap.[4]
+    That re-evaluation matters: ByteDance Seed's HarnessDev study found one model-built harness fell from 69.3 to 33.0 when a different model ran it, though others improved (the paper's figures).[15]
 16. **Open questions:** Washington keeps accepted and rejected decisions in his master plan, and when something breaks he fixes the spec files and regenerates.[1] Rajath Kotyal (AWS): "Check the spec always before you pass it down to the agent."[16]
 
 ## Related
 
 - Start with [AI intake checklist](ai-intake-checklist.md); [Should this task use AI, and which kind?](should-this-task-use-ai.md) and [How much should an agent be trusted to do on its own?](how-much-autonomy-for-an-agent.md) help with sections 6 and 8.
 - [Evals playbook: how to build and run evals for an AI feature or agent](../4-build/evals-playbook.md) helps with section 7 and [Running AI in production](../5-run/ai-in-production-runbook.md) with sections 11 to 13; use [AI failure modes: a pre-mortem checklist](ai-failure-modes-premortem.md) to test a finished spec.
-- [Agent-written pull requests and agent autonomy: draft engineering standard](../5-run/agent-pr-policy.md) if coding agents will build it; [AI glossary](../1-understand/ai-glossary.md) for terms.
+- [Agent-written pull requests and agent autonomy](../5-run/agent-pr-policy.md) if coding agents will build it; [AI glossary](../1-understand/ai-glossary.md) for terms.
 
 **Read next:** [AI failure modes: a pre-mortem checklist](ai-failure-modes-premortem.md), or go back to the [handbook home](../README.md).
 

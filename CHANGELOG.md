@@ -5,6 +5,22 @@ Newest first. Every correction lists what changed and the evidence.
 ## 2026-11-22: a final read, and the licence clarified
 
 - **Wording:** light readability fixes across the published pages. No quote, figure, date or citation changed.
+- **Corrections found on the final read:**
+  - Anthropic's Claude Code team counts the person directing an agent as *one of* the required reviewers, where a
+    change's risk tier calls for any; the Q&A and intake checklist had made it *the* required reviewer.
+  - AgentRun's cost figure is $0.124, as its case study gives it, not "about $0.12" or "$0.12".
+  - The fast mode's end date now has its year: it was due to end on 30 November 2026.
+  - The runbook's Pixee line now says "five harnesses that flatten message roles", as the paper does.
+  - Quotes on the maturity model and the Q&A now name their speakers; SEP is introduced, and its team is described
+    the same way on both pages that mention it.
+  - The people memo now matches the other pages on when to approve every output: until results can be checked
+    automatically and for actions that can't be undone; for significant decisions about people, keep it or meet the
+    legal requirements for automated decisions.
+  - Factory's autonomy levels are marked as its own scale, since its L1 is close to the handbook's L2.
+  - The decision tree's dial outcomes are now ceilings ("At most: …"); the autonomy page decides how far to go.
+  - The .NET guide's NuGet cooldown advice now matches its source, and its starter eval set matches the playbook.
+- **Routes:** New to AI no longer sends newcomers into engineer pages, and the Leader route reads the autonomy page
+  second, before the pages that rely on its levels.
 - **Licence:** the README now says that quotations from the cited sources stay their authors' copyright and
   aren't covered by CC BY 4.0, and that the scripts in `scripts/` are under the MIT licence.
 
