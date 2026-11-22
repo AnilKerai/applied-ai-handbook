@@ -116,6 +116,210 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 4,
+      "url": "https://practicalai.show/378/transcript",
+      "title": "Heidi Porter (Moyer Group AI), Rules, Machine Learning, or LLMs: Building Durable AI-Augmented Workflows; Kevin Solorio (Focused), Building AI With Workers, Not For Them; and Chris Shinkle & Andrew Dunlap (SEP), Not Every Team Needs a Dark Factory, Midwest AI Summit 2026 (Practical AI E378 transcript)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "a rule written in a prompt is not deterministically enforced.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "an agent without evals is a proof of concept. And this doesn't matter what infrastructure it's been deployed onto. If you do not have evaluations, you cannot confirm for sure that the agent is behaving as expected.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Next is making it safe, which is verification before velocity.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So if it's consequential uncertain actions, a person approves it.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Time sensitive work, act now and give a person a window to veto or undo it, and automate outright only what is cheap to undo.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "highlight it to the organization that this is something that they need to weigh in on.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://ai.engineer/code/2026/talks/lydia-hallie",
+      "title": "Lydia Hallie (Anthropic), Rethinking Claude Code Best Practices, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "And then how much we review ourselves just depends on the risk. So smaller changes like docs or copy, they don't need a person.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So for example, on our team, every PR gets reviewed by Claude first.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "maybe ordinary product changes just need one reviewer and then risky changes might need two.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And those can be anything that comes back as a pass or fail. So tests, a build, a screenshot, whatever you have.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://www.youtube.com/watch?v=OoALkRag2tY&t=6",
+      "title": "Justin Yoo (Microsoft), Protect your PC from AI coding agents while modernising legacy .NET apps, .NET Conf 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Therefore, we should distinguish the permission to run, which is approval side, and the permission to reach, which is the boundary side.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "That's why we should start from a cloned workspace rather than a real codebase.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So it's a proxied value.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://ai.engineer/code/2026/talks/online-meta-oncall",
+      "title": "Chinmay Gandhi, Swaapnika Motapothula and Vlad (Meta), From answering the page to sharing the on-call rotation, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "At level one, it investigates and tells you what it found. It changes nothing. At level two, it acts with approval. It drafts the fix, but nothing reaches production until a human approves.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "At level three, it clears lower criticality work on its own and only interrupts you for what matters. High criticality work stays with humans.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "How costly is a mistake and how easy is it to catch? So an action climbs only when mistakes are cheap. They're caught by tests, CI or review. and the agent already has a track record on that exact action.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "That's why the agent can close a noisy alert on its own while a production mitigation still waits for a human.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://practicalai.show/379/transcript",
+      "title": "Don Barger (International Mission Board), Building AI Trust: What We Said Yes To, and What We Didn't; Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own; and Darren Taillie (AeroCore Technologies), From Photos to Queries: Practical AI Agents for Real Workflows, Midwest AI Summit 2026 (Practical AI E379 transcript)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "I'm also notified of anything that is critical, and I can hop into the conversation and take over for the AI.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "That was very possible when we had 5,000 users. It is not possible when you have 2,500,000 users.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://ai.engineer/code/2026/talks/online-harvey-agent-platform",
+      "title": "Joey Wang (Harvey), The harness has to finish the job, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "If one fails five times in a row, it switch itself off and it can carry a budget or expiry date because when no one's watching, an agent can start thousands of tasks, too.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://ai.engineer/code/2026/talks/online-undo-button",
+      "title": "Tanmay Sah & Dolly Sah, An Agent's Change Is Not Safe Until Its Recovery Has Been Tested, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "A timeout tells us that the response didn't arrive, not that the operation failed.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "So the agent tries the request without checking whether the oper whether the first operation committed and now we have two tickets even though the agent intended to create only one.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://ai.engineer/code/2026/talks/lauren-tan",
+      "title": "Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "So whenever you're correcting your agent, think about how you can make that a deterministic check instead of adding another line to your rules",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The first two layers are deterministic. So using your code itself. So things like good API design, architecture, refactoring or using lint rules, type systems, compilers or you know different kinds of testing.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://ai.engineer/code/2026/talks/luke-alvoeiro",
+      "title": "Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "At L1, the workstream posits for human review at the spec creation, at the PR, and before hitting merge.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "you can get to L4 where you're automerging everything by default.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And so once AI written changes break things less often than human ones and you can actually measure that then you can let them merge and that's the bar for turning a workstream to L4.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "What we're really hell climbing on here is the regretfree merge rate, the share of changes that merge and never need a revert or a follow-up fix.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://ai.engineer/code/2026/talks/brian-kennedy",
+      "title": "Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "This gave us a reference label for all 500 steps. And it turned out the judge was right 65% of the time. So more or less a coin flip. It accepted 118 steps that it should have sent back.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Now the judge had both of these and it went with the story.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "And when we read through those, the most common problem was that similar to the email at the start, the agent reported that it did something like send a message and no tool call had ever done that.",
+          "added": "2026-11-22"
+        }
+      ]
     }
   ]
 }
