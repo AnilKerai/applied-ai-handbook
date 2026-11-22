@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.judiciary.uk/wp-content/uploads/2025/10/Artificial-Intelligence-AI-Guidance-for-Judicial-Office-Holders-2.pdf",
+      "title": "Courts and Tribunals Judiciary (England and Wales), Artificial Intelligence (AI) Guidance for Judicial Office Holders (October 2025 update; this copy dated 31 October 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "A computer program which simulates an online human conversation using generative AI.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Publicly available examples are ChatGPT, Google Gemini and Meta AI.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Some generative AI tools are designed to take actions.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Through the use of statistical methods, algorithms are trained to make classifications or predictions",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "many aspects of AI are already in general use: for example, in search engines to auto-fill questions, in social media to select content to be delivered, and in image recognition and predictive text.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "LLMs are AI models which learn to predict the next best word or part of a word in a sentence having been trained on enormous quantities of text.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Public AI chatbots do not provide answers from authoritative databases. They generate new text using an algorithm based on the prompts they receive and the data they have been trained upon.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "This means the output which AI chatbots generate is what the model predicts to be the most likely combination of words",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "It is not necessarily the most accurate answer.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://www.anthropic.com/research/reasoning-models-dont-say-think",
+      "title": "Anthropic, Reasoning models don't always say what they think (3 April 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "These are AI models—such as Claude 3.7 Sonnet—that show their working",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "After checking that the models really did use the hints to aid in their answers, we tested how often they mentioned them in their Chain-of-Thought.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "On average across all the different hint types, Claude 3.7 Sonnet mentioned the hint 25% of the time, and DeepSeek R1 mentioned it 39% of the time.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://openai.com/index/sora-2",
+      "title": "OpenAI, Sora 2 is here (30 September 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Today we’re releasing Sora 2, our flagship video and audio generation model.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://learn.microsoft.com/en-us/copilot/microsoft-365/microsoft-365-copilot-overview",
+      "title": "Microsoft, Microsoft Copilot overview (Microsoft Learn documentation, dated 17 November 2026)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Grounding in web and/or organizational data",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "In-product labels are displayed in Microsoft 365 apps like Word, Excel, PowerPoint, and OneNote",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Use Copilot Chat in select Microsoft 365 apps like Teams and Outlook with content you have open. In this context, Copilot Chat is aware of your open content and can use it instead of requiring you to copy and paste information or upload a file.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf",
+      "title": "ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Open-weight models are AI models whose underlying parameters, or ‘weights’, are publicly released which allows organisations to download, modify and operate them on their own infrastructure.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://openai.com/index/chatgpt",
+      "title": "OpenAI, Introducing ChatGPT (30 November 2022)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "ChatGPT is a sibling model to InstructGPT⁠, which is trained to follow an instruction in a prompt and provide a detailed response.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "We trained this model using Reinforcement Learning from Human Feedback (RLHF), using the same methods as",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "which consisted of two or more model responses ranked by quality.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "url": "https://arxiv.org/abs/2204.05862v1",
+      "title": "Yuntao Bai et al. (Anthropic), Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback (arXiv 2204.05862v1, 12 April 2022)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "We apply preference modeling and reinforcement learning from human feedback (RLHF) to finetune language models to act as helpful and harmless assistants.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "url": "https://www.ncsc.gov.uk/blog-post/chatgpt-and-large-language-models-whats-the-risk",
+      "title": "National Cyber Security Centre (NCSC), ChatGPT and large language models: what's the risk? (blog, 14 March 2023)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "The algorithms analyse the relationships between different words and turn that into a probability model.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Typically, the data in its model is static after it has been trained, although it can be refined by 'fine-tuning' (which is training on additional data) and 'prompt augmentation' (which is providing context information about the question).",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "However, the query will be visible to the organisation providing the LLM",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://openai.com/index/why-language-models-hallucinate",
+      "title": "OpenAI, Why language models hallucinate (5 September 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Hallucinations are plausible but false statements generated by language models.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "argues that language models hallucinate because standard training and evaluation procedures reward guessing over acknowledging uncertainty.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Think about it like a multiple-choice test. If you do not know the answer but take a wild guess, you might get lucky and be right. Leaving it blank guarantees a zero.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://caselaw.nationalarchives.gov.uk/ewhc/admin/2025/1383",
+      "title": "High Court of England and Wales (Divisional Court), R (Ayinde) v London Borough of Haringey [2025] EWHC 1383 (Admin), judgment of 6 June 2025 on two referred cases (Find Case Law, The National Archives)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Freely available generative artificial intelligence tools, trained on a large language model such as ChatGPT are not capable of conducting reliable legal research.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "The responses may make confident assertions that are simply untrue.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Those who use artificial intelligence to conduct legal research notwithstanding these risks have a professional duty therefore to check the accuracy of such research by reference to authoritative sources, before using it in the course of their professional work",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "url": "https://www.anthropic.com/research/tracing-thoughts-language-model",
+      "title": "Anthropic, Tracing the thoughts of a large language model (27 March 2025)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Before starting the second line, it began \"thinking\" of potential on-topic words that would rhyme with \"grab it\". Then, with these plans in mind, it writes a line to end with the planned word.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "This is powerful evidence that even though models are trained to output one word at a time, they may think on much longer horizons to do so.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "such misfires can occur when Claude recognizes a name but doesn't know anything else about that person.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Once the model has decided that it needs to answer the question, it proceeds to confabulate: to generate a plausible—but unfortunately untrue—response.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Even though it does claim to have run a calculation, our interpretability techniques reveal no evidence at all of that calculation having occurred.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "url": "https://arxiv.org/abs/2308.08708v3",
+      "title": "Patrick Butlin, Robert Long et al., Consciousness in Artificial Intelligence: Insights from the Science of Consciousness (report, arXiv 2308.08708v3, 22 August 2023; first posted 17 August 2023)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "From these theories we derive \"indicator properties\" of consciousness, elucidated in computational terms that allow us to assess AI systems for these properties.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "We use these indicator properties to assess several recent AI systems",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Our analysis suggests that no current AI systems are conscious, but also suggests that there are no obvious technical barriers to building AI systems which satisfy these indicators.",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "url": "https://researchonline.lse.ac.uk/id/eprint/130322/1/1-s2.0-S1364661325002864-main.pdf",
+      "title": "Patrick Butlin, Robert Long et al., Identifying indicators of consciousness in AI systems, Trends in Cognitive Sciences 30(6), 488–501 (peer-reviewed; published online 10 November 2025; open-access copy in LSE Research Online)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "Furthermore, modern AI systems are likely to give users the impression that they are conscious.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "Which of the indicator properties listed in Table 1 are displayed by existing AI systems, including frontier generative language or multimodal models, language agents, and deep reinforcement learning agents?",
+          "added": "2026-11-22"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "url": "https://decisions.civilresolutionbc.ca/crt/crtd/en/525448/1/document.do",
+      "title": "Civil Resolution Tribunal (British Columbia), Moffatt v. Air Canada, 2024 BCCRT 149 (14 February 2024)",
+      "accessed": "2026-11-22",
+      "quotes": [
+        {
+          "text": "In effect, Air Canada suggests the chatbot is a separate legal entity that is responsible for its own actions. This is a remarkable submission.",
+          "added": "2026-11-22"
+        },
+        {
+          "text": "It should be obvious to Air Canada that it is responsible for all the information on its website. It makes no difference whether the information comes from a static page or a chatbot.",
+          "added": "2026-11-22"
+        }
+      ]
+    }
+  ]
+}
