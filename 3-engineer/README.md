@@ -6,7 +6,7 @@ Read in this order:
 
 1. **[The big picture](the-big-picture.md)** (5 min): A map of the engineering disciplines around a model, what each one is for, and where each part of this handbook sits on it.
 2. **[How the ideas arrived](how-the-ideas-arrived.md)** (5 min): A timeline of when each engineering idea was named or caught on, with my own path through them alongside.
-3. **[Prompt engineering](prompt-engineering.md)** (4 min): What prompt engineering is, when it arrived, and the principles that still hold.
+3. **[Prompt engineering](prompt-engineering.md)** (4 min): What prompt engineering is, why I now treat it as part of context engineering, and the principles that still hold.
 4. **[Context engineering](context-engineering.md)** (4 min): What context engineering is: deciding what the model sees at each step, and the principles for doing it well.
 5. **[Harness engineering](harness-engineering.md)** (10 min): The deep page: the code around a model that makes one run reliable, from budgets and stopping rules to structured output and prompt-injection defences.
 6. **[Loop engineering](loop-engineering.md)** (4 min): What loop engineering is: running an agent many times and improving it from one run to the next.

@@ -2,6 +2,27 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-22: diagrams for the Engineer pages, and prompt engineering reframed
+
+- **New diagrams:**
+  - [Context engineering](3-engineer/context-engineering.md): what goes into the window at each
+    step.
+  - [Harness engineering](3-engineer/harness-engineering.md): one run, from guides to sensors and
+    exits.
+  - [Loop engineering](3-engineer/loop-engineering.md): Sydney Runkle's stack of four loops.
+  - [Eval engineering](3-engineer/eval-engineering.md): the eval cycle.
+  - [Multi-agent orchestration](3-engineer/multi-agent-orchestration.md): the shapes, including
+    agents built by different teams talking over A2A, which I treat as one option, not the only
+    one. That page now adds that Google donated A2A to the Linux Foundation in June 2025, and that
+    it joined the Agentic AI Foundation in August 2026.
+- **[Prompt engineering](3-engineer/prompt-engineering.md)** now opens with my view.
+  - I no longer treat it as its own discipline: writing the text is one part of context
+    engineering, and anything that must hold belongs in deterministic checks.
+  - The link to my harness's guide pattern moved to context engineering, where it belongs.
+- **Brain and body:** my analogy for how a model, its harness and its tools fit together is on
+  [The big picture](3-engineer/the-big-picture.md), [What modern AI is](1-understand/what-modern-ai-is.md)
+  and the glossary's *Harness* entry.
+
 ## 2026-11-22: two Decide pages rewritten, and model + harness + evals
 
 - **[AI failure modes: a pre-mortem checklist](2-decide/ai-failure-modes-premortem.md)** is
