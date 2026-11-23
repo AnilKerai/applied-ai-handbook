@@ -438,6 +438,38 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 48,
+      "url": "https://jekyllrb.com/docs/front-matter",
+      "title": "Jekyll, Front Matter (Jekyll documentation)",
+      "accessed": "2026-11-23",
+      "quotes": [
+        {
+          "text": "The front matter must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines.",
+          "added": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "url": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+      "title": "Anthropic, Equipping agents for the real world with Agent Skills",
+      "accessed": "2026-11-23",
+      "quotes": [
+        {
+          "text": "This file must start with YAML frontmatter that contains some required metadata: name and description.",
+          "added": "2026-11-23"
+        },
+        {
+          "text": "At startup, the agent pre-loads the name and description of every installed skill into its system prompt.",
+          "added": "2026-11-23"
+        },
+        {
+          "text": "it provides just enough information for Claude to know when each skill should be used without loading all of it into context",
+          "added": "2026-11-23"
+        }
+      ]
     }
   ]
 }

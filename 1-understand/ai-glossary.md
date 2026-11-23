@@ -105,6 +105,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - As used here: one of the most capable AI models available at the time. Epoch AI reports that since January 2026 the most capable open-weight models "have lagged frontier closed models by an average of four months" on its measure of capability.[46]
 - *Why it matters:* the most capable model isn't always needed. I recommend stepping up to one only where our evals show an open-weight model failing and the step is worth the cost.
 
+**Frontmatter (front matter)**
+- A short block of settings at the very top of a text file, for software to read rather than people, written in a plain-text format called YAML with one setting per line, such as `title: AI glossary`. Jekyll's documentation says it "must be the first thing in the file and must take the form of valid YAML set between triple-dashed lines".[48]
+- *Why it matters:* AI tools read it. A skill's main file (see **Skill**, below) must start with frontmatter giving its `name` and `description`, and Anthropic says that "At startup, the agent pre-loads the `name` and `description` of every installed skill into its system prompt", which is how the agent knows when to use each skill.[49] So I'd write a skill's description as carefully as its instructions. Every page in this handbook starts with frontmatter too; it holds the page's `last_checked` date.
+
 ## G
 
 **Grounding**
@@ -308,3 +312,5 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 [45] https://cyber.gov.au/sites/default/files/2026-11/Open-weight%20AI%20models%20Opportunities%20and%20cyber%20security%20risks.pdf — ASD's ACSC (Australian Cyber Security Centre), Open-weight AI models: Opportunities and cyber security risks (5 November 2026, PDF)
 [46] https://epoch.ai/data-insights/open-closed-eci-gap — Epoch AI, Open models lag state-of-the-art closed models by 4 months (Data Insight, 29 May 2026)
 [47] https://blog.langchain.com/the-anatomy-of-an-agent-harness — Vivek Trivedy (LangChain), The Anatomy of an Agent Harness
+[48] https://jekyllrb.com/docs/front-matter — Jekyll, Front Matter (Jekyll documentation)
+[49] https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills — Anthropic, Equipping agents for the real world with Agent Skills

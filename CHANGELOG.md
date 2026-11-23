@@ -28,7 +28,7 @@ Newest first. Every correction lists what changed and the evidence.
   repeated on up to seven pages keep their full detail on their home pages and are summarised elsewhere.
 - **[Should this task use AI?](2-decide/should-this-task-use-ai.md)** is now in the standard format: numbered
   sources, full names on first mention, and every quote checked against its transcript.
-- **Glossary:** new entries for *Context window* and *Harness engineering*; the *Agent* entry now credits Vivek
+- **Glossary:** new entries for *Context window*, *Frontmatter* and *Harness engineering*; the *Agent* entry now credits Vivek
   Trivedy with summing up an agent as model plus harness.
 - **Found by the final review:**
   - Gerald Versluis's line on *Should this task use AI?* now matches his official session page, added as a source,
