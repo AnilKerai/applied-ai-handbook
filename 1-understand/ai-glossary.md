@@ -13,9 +13,7 @@ as_of: "November 2026"
 > **In one minute**
 > - This glossary gives plain-English meanings of AI terms that come up in proposals, supplier pitches and engineering discussions.
 > - Look up terms as you meet them; each entry explains the term, then says why it matters to us.
-> - An AI agent (AI that takes actions, not just answers) needs limits, oversight and a named owner, like a new colleague.
-> - Rules that really matter should be built into the system as automatic checks, not just written into the AI's instructions.
-> - Test an AI feature on real example cases every time anything changes, so you can show it got better.
+> - New to AI? Start with *Agent*, *Harness*, *Eval* and *Human at the helm*: most of the handbook builds on them.
 
 *Reading time: about 20 minutes · Best for: everyone*
 
