@@ -29,7 +29,7 @@ BUILTIN_PATTERNS = [
 
 FRAMING_PATTERNS = [
     r"\bmidwest\b", r"\bsummits?\b", r"\.net conf\b", r"\bconferences?\b", r"\bkeynotes?\b",
-    r"\bon stage\b", r"\bthe talks\b", r"\bno talk\b",
+    r"\bon stage\b", r"\bthe talks\b", r"\bno talk\b", r"\bqcon\b",
 ]
 
 
