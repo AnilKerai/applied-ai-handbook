@@ -115,6 +115,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 - *Formula:* spend plus human review time ÷ completed tasks; median and p95 time per task.
 - *Watch out for:* cost reported apart from success rate.
 - *Evidence:* Philipp Schmid (Google DeepMind) measures efficiency, not just scores: harnesses scoring about the same differed almost twofold in cost.[19]
+  Erik Peterson (CloudZero) puts unit economics, what it costs to do the thing you do, ahead of cost per token as the primary measure.[22]
 
 **7. Outcome metrics**
 - *Tells you:* whether the business is better off, on a measure agreed before building.
@@ -131,6 +132,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 ## Vanity metrics to avoid
 
 - **Tokens.** DORA calls token counts an easily gamed input metric; the biggest spenders often gain little throughput at ten times the cost.[6]
+  Lizzie Matusov (Quotient) argues that using tokens as a proxy for AI's impact on productivity is a much more dangerous measure than lines of code.[23]
 - **Lines of code and PR counts.** In the Harvard study pull requests rose 35.7% against 13.7% for resolved issues, and lines of code rose 44.0%, though the paper puts that estimate just short of statistical significance.[5] DORA lists lines of code and commit counts among past vanity metrics.[6]
 - **Usage for its own sake.** Among the complaints SEP says teams may hear: "We should be using more AI. Well, I don't know what more is".[10]
 - Show these as cost or context, never as targets.
@@ -194,4 +196,5 @@ Related: [Running AI in production](ai-in-production-runbook.md) · [AI maturity
 [19] https://ai.engineer/code/2026/talks/philipp-schmid — Philipp Schmid (Google DeepMind), I deleted 90% of my harness (And It Got Better), AIE CODE 2026
 [20] https://ai.engineer/code/2026/talks/online-meta-oncall — Chinmay Gandhi, Swaapnika Motapothula & Vlad (Meta), From answering the page to sharing the on-call rotation, AIE CODE 2026
 [21] https://intelligentartifact.com/posts/practical-ai-midwest-summit-boundaries-and-accountability — Intelligent Artifact, review of Practical AI's Midwest AI Summit Part 2
-
+[22] https://www.infoq.com/presentations/ai-cloud-cost-economics — Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026
+[23] https://www.infoq.com/presentations/ai-sdlc-maturity-framework-bottlenecks — Lizzie Matusov (Quotient), The Five Stages of AI Maturity in Engineering Organizations - Where and Why Teams Get Stuck, QCon AI Boston 2026

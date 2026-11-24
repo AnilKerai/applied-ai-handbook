@@ -712,6 +712,174 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 78,
+      "url": "https://www.infoq.com/presentations/ai-sdlc-maturity-framework-bottlenecks",
+      "title": "Lizzie Matusov (Quotient), The Five Stages of AI Maturity in Engineering Organizations - Where and Why Teams Get Stuck, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "I would argue that token maxing or using tokens as a proxy for AI's impact on productivity is a much more dangerous measure than lines of code.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The thing is that each token has a literal dollar value associated to it.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "url": "https://www.infoq.com/presentations/ai-cloud-cost-economics",
+      "title": "Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "They had budget alerts, but nobody was paying attention to them.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "start to think about how important a limit actually is.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Get out of this cost per token as your primary KPI. Don't waste time. Don't forget to think about the unit economics. What is the cost of the thing that it is that you do?",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "url": "https://www.infoq.com/presentations/ai-security-kubernetes-gpu-threats",
+      "title": "Andrew Martin (ControlPlane), Exploding GPUs and the AI Infrastructure Challenge, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "Your supply chain now includes your email, or a GitHub pull request title.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "We saw five repos get taken down by OpenClaw, one of which was a security tool called Trivy.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "This GlassWorm attack is causing a lot of problems at the moment, let's say, because it's attacking transitive dependencies.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "title": "Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "In a randomized controlled trial, we examined 1) how quickly software developers picked up a new skill (in this case, a Python library) with and without AI assistance",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "We recruited 52 (mostly junior) software engineers, each of whom had been using Python at least once a week for over a year.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "the AI group averaged 50% on the quiz, compared to 67% in the hand-coding group—or the equivalent of nearly two letter grades (Cohen's d =0.738, p =0.01)",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "On average, participants in the AI group finished about two minutes faster, although the difference was not statistically significant.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Our qualitative analysis does not draw a causal link between interaction patterns and learning outcomes, but it does point to behaviors associated with different learning outcomes.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Our sample was relatively small, and our assessment measured comprehension shortly after the coding task.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "for example the effects of AI on tasks beyond coding, whether this effect dissipates longitudinally as engineers develop greater fluency, and whether AI assistance differs from human assistance while learning.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "In our qualitative analysis, we manually annotated screen recordings to identify how much time participants spent composing queries, what types of questions they asked, the types of errors they made, and how much time they spent actively coding.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "url": "https://arxiv.org/html/2601.20245v3",
+      "title": "Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "There is a 4.15 point difference between the means of the treatment and control groups. For a 27-point quiz, this translates into a 15.4% score difference or 2 grade points.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "is significantly reduced (Cohen d=0.738, p=0.01)",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "All participants were not allowed to use AI in the comprehension check.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "In exploratory data analysis (not pre-registered), the quiz score was decomposed into subareas and question types",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Among the different types of questions, the largest score gap occurs in the debugging questions and the smallest score gap in the code reading questions.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "humans may not possess the necessary skills to validate and debug AI-written code if their skill formation was inhibited by using AI in the first place.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Among participants who use AI, we find a stark divide in skill formation outcomes between high-scoring interaction patterns (65%-86% quiz score) vs low-scoring interaction patterns (24%-39% quiz score).",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The high scorers only asked AI conceptual questions instead of code generation or asked for explanations to accompany generated code",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Although each behavior pattern cluster is small, the difference between low-scoring clusters and high-scoring clusters is stark.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "This study focuses on a single task using a chat-based interface.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Low-scoring patterns generally involved a heavy reliance on AI, either through code generation or debugging.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "url": "https://www.infoq.com/presentations/ai-software-engineering-pipeline",
+      "title": "Alasdair Allan (organisation not stated), The Ladder is Missing Rungs: Engineering Progression When AI Ate the Middle, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "The scut work that built engineering teams, bugs, boilerplate, glue code, documentation, is now handled before juniors ever see it.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Structured learning paths, deliberate rotation through fundamental work, even if the AI could do it faster, like medical residencies.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "If you come here hoping for me to hear an answer to this, I'm really sorry to disappoint you because I don't have one.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

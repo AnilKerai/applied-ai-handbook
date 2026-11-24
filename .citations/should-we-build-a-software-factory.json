@@ -108,6 +108,26 @@
       "url": "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature",
       "title": "Google Research, Advancing science & engineering with Antigravity's /teamwork",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 19,
+      "url": "https://www.infoq.com/presentations/dora-ai-adoption-engineering-performance",
+      "title": "Nathen Harvey (DORA), AI is an Amplifier: Scale High Performance, Not Dysfunction, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "AI's primary role in software development is that of an amplifier.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Without that foundation, AI has a tendency to create localized pockets of productivity that are often lost to downstream chaos.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "If I summarize that entire 2025 report for you in three slides",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

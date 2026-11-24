@@ -222,6 +222,26 @@
       "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps",
       "title": "Simon Willison, Default hard budget caps",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 38,
+      "url": "https://www.infoq.com/presentations/spotify-ai-codebase-migration-agent",
+      "title": "Aleksandar Mitic & Jo Kelly-Fenton (Spotify), Rewriting All of Spotify's Code Base, All the Time, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "We realize that the thing that Honk is getting good at is not necessarily running a migration, but it's getting the build to pass.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "This is it downgrading a Java version in order to get something to work, because that was just the easiest way to get the build to pass.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "the agent would be forced to then uncomment the test and actually fix the underlying issue",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

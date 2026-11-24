@@ -126,6 +126,38 @@
       "url": "https://intelligentartifact.com/posts/practical-ai-midwest-summit-boundaries-and-accountability",
       "title": "Intelligent Artifact, review of Practical AI's Midwest AI Summit Part 2",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 22,
+      "url": "https://www.infoq.com/presentations/ai-cloud-cost-economics",
+      "title": "Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "What does it cost to do the thing that it is that you do?",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Get out of this cost per token as your primary KPI.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "url": "https://www.infoq.com/presentations/ai-sdlc-maturity-framework-bottlenecks",
+      "title": "Lizzie Matusov (Quotient), The Five Stages of AI Maturity in Engineering Organizations - Where and Why Teams Get Stuck, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "I would argue that token maxing or using tokens as a proxy for AI's impact on productivity is a much more dangerous measure than lines of code.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Measure impact, not activity.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

@@ -88,7 +88,7 @@ I recommend putting an eval gate in front of any such automatic change; [Loop en
 
 ## Where it shows up in this handbook
 
-- [Evals playbook](../4-build/evals-playbook.md): the practice end to end, including graders (section 4), repeated runs (section 5) and when to re-run (section 8).
+- [Evals playbook](../4-build/evals-playbook.md): the practice end to end, including simulated users for agents that hold a conversation (section 3), graders (section 4), repeated runs (section 5) and when to re-run (section 8).
 - [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md): why work must be checkable automatically before an agent gets more freedom.
 - [Running AI in production](../5-run/ai-in-production-runbook.md), section 3: scoring live traffic and re-running evals after go-live.
 - [What to measure: AI metrics scorecard](../5-run/ai-metrics-scorecard.md): measuring whether AI is working once it is live.

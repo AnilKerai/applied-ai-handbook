@@ -2,6 +2,19 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-24: newer evidence from practitioners, learning with AI, and simulated users
+
+- **New evidence for existing advice** (no new claims), from practitioners' accounts with full transcripts:
+  - Spotify on checks the agent can't touch ([autonomy page](2-decide/how-much-autonomy-for-an-agent.md), [Working with coding agents](4-build/working-with-coding-agents.md)).
+  - OpenAI's Vinoth Govindarajan on scoped approvals and runs that always end in a recorded state ([pattern catalogue](4-build/ai-pattern-catalogue.md), [pre-mortem](2-decide/ai-failure-modes-premortem.md)).
+  - Cost: CloudZero and Quotient ([scorecard](5-run/ai-metrics-scorecard.md), [feature spec](2-decide/ai-feature-spec.md), [Q&A](1-understand/ai-questions-answered.md)).
+  - Security: Broadcom's Advait Patel on agents as identities (feature spec), ControlPlane's Andrew Martin on prompt injection (Q&A).
+  - LinkedIn and Redis on small context ([Context engineering](3-engineer/context-engineering.md)); Anthropic's Alex Palcuie on AI in incident response ([runbook](5-run/ai-in-production-runbook.md)).
+  - Rules engines for the tree's rules-or-code step ([Should this task use AI?](2-decide/should-this-task-use-ai.md)); DORA's Nathen Harvey on AI as an amplifier ([factory memo](6-lead/should-we-build-a-software-factory.md)); Netflix on ontologies (glossary).
+  - Elastic and Patrick Debois on judges, calibration and testing context ([evals playbook](4-build/evals-playbook.md)).
+- **Learning with AI:** Anthropic's randomised trial of 52 mostly junior engineers found those using AI learned a new library less well, by about two grade points, and weren't significantly faster. It's in the Q&A's question on training people and in [Can AI replace our people?](6-lead/can-ai-replace-our-people.md), with its limits, and with my advice for people learning a skill.
+- **Simulated users:** the evals playbook now covers agents that hold a conversation: a simulated user plays a scenario and the grade checks what changed in the system, not just the reply.
+
 ## 2026-11-22: a final read, and the licence clarified
 
 - **Wording:** light readability fixes across the published pages. No quote, figure, date or citation changed.

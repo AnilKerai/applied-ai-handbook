@@ -96,6 +96,42 @@
       "url": "https://ai.engineer/code/2026/talks/online-aws-specification-analyzer",
       "title": "Rajath Kotyal (AWS), Specs have bugs too, AI Engineer Code Summit 2026",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 17,
+      "url": "https://www.infoq.com/presentations/zero-trust-ai-agents-production-security",
+      "title": "Advait Patel (Broadcom), Zero Trust Agent Systems that Pass Audits and Still Ship, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "Every agent gets its own identity. Every agent gets short-lived tokens not the long-lived tokens.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "the tool layer is where you enforce what the agent is actually allowed to do",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "structured trace per action is needed, and those traces are tied per identity and per session",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://www.infoq.com/presentations/ai-cloud-cost-economics",
+      "title": "Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "They had budget alerts, but nobody was paying attention to them.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "There's no per call, per user, per anything limit out there.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

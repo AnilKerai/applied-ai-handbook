@@ -174,6 +174,8 @@ Tick what the team can show is handled; plan the rest.
 - **Warning sign:** Success means the model replied. Code treats a timeout as a failure; Girish Konda (Microsoft) treats it as an unknown outcome.[14]
 - **Prevention:** Store the trace ID and an explicit final status with the business record ([Running AI in production](../5-run/ai-in-production-runbook.md)). Use idempotency keys, check before retrying, and rehearse the undo.
 - **Seen in practice:** In the lost-reply trials of Tanmay and Dolly Sah's benchmark, retrying without first checking produced duplicate effects in 54% of those trials.[15]
+  Vinoth Govindarajan (OpenAI) cites OpenClaw bug reports of an agent reply that reached the user but was never saved, and of a tool that reported success while the user saw nothing.[20]
+  He says every tool call needs an ending: success, failure, timeout or max attempts.[20]
 
 #### 15. The upgrade that broke the harness
 - **What goes wrong:** A model or vendor change breaks what was tuned to the old one.
@@ -216,3 +218,4 @@ Tick what the team can show is handled; plan the rest.
 [17] https://ai.engineer/code/2026/talks/online-harvey-agent-platform — Joey Wang (Harvey), The harness has to finish the job, AI Engineer Code Summit 2026
 [18] https://claude.dev/blog/solving-code-review-at-anthropic — Anthropic (Claude Code team), How the Claude Code team does code review
 [19] https://ai.engineer/code/2026/talks/online-uber-merging — Preetam Dwivedi & Manjari Akella (Uber), Green Pull Requests Can Still Break the Trunk, AI Engineer Code Summit 2026
+[20] https://www.infoq.com/presentations/ai-agent-harness — Vinoth Govindarajan (OpenAI), The Agent Harness: Control Planes, Invariants, and Approval Boundaries for Production AI Agents, QCon AI Boston 2026

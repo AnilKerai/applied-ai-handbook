@@ -470,6 +470,26 @@
           "added": "2026-11-23"
         }
       ]
+    },
+    {
+      "id": 50,
+      "url": "https://www.infoq.com/presentations/netflix-observability-aiops-ontology-scale",
+      "title": "Prasanna Vijayanathan & Renzo Sanchez-Silva (Netflix), Ontology-Driven Observability: Building the E2E Knowledge Graph at Netflix Scale, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "Let's call that the operational ontology.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Everything is typed and linked.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Taps into the ontology, so in the knowledge graph",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

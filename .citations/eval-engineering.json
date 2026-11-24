@@ -76,6 +76,10 @@
         {
           "text": "succeed on <50% of the tasks, and are quite inconsistent",
           "added": "2026-11-15"
+        },
+        {
+          "text": "a benchmark emulating dynamic conversations between a user (simulated by language models) and a language agent",
+          "added": "2026-11-24"
         }
       ]
     },

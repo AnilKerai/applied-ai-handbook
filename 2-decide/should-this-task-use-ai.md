@@ -64,6 +64,7 @@ flowchart TD
 - **Rules or code.** Keep the order of steps fixed in ordinary code, and use a model only for the fuzzy part.
   Chibi Vikram and Kevin Bernstein (UiPath) call a model only at clear decision points in otherwise deterministic steps.[3]
   Luis Quintanilla (Microsoft) has AI generate a film's parts, then stitches them together with standard code.[4]
+  Alex Porcelli, co-founder of Aletyx (a vendor executive's view), argues for keeping high-stakes business rules in decision tables written in DMN, an open standard, run by a deterministic rules engine that an agent calls as a tool instead of deciding itself.[14]
 - **Is the answer a pick from a fixed list?** Ask whether every possible answer could be written down before the task runs: which team gets a ticket, which label an email gets, approve or reject.
   Chinmay Goyal (Glean) puts it as a simple rule: "can the output be listed in advance?"[5]
   If yes, use a [decision model](../1-understand/ai-glossary.md), which picks from the list and says how sure it is instead of writing text.[5]
@@ -115,3 +116,4 @@ flowchart TD
 [11] https://www.youtube.com/watch?v=TF6qzdKwl84&t=639 — Shweta Iyer (Microsoft), Beyond the Agent Trace: Operating Foundry Agents with Aspire, .NET Conf 2026
 [12] https://www.youtube.com/watch?v=utUNTsYMkWs&t=18558 — Cecil Phillip (Temporal), Beyond Prototypes: Building Production Ready AI Workflows, .NET Conf 2026
 [13] https://dotnet.microsoft.com/en-us/conf/2026/agenda/brk033 — Gerald Versluis (Microsoft), Less Chat, More Action: AI-Powered .NET MAUI Apps, session abstract, .NET Conf 2026
+[14] https://www.infoq.com/presentations/decision-models-agentic-ai — Alex Porcelli (Aletyx), Decision Models in Agentic Architectures: from Production to Agent Skills, QCon AI Boston 2026

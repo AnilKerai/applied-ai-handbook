@@ -46,6 +46,7 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 
 - **Fit beats maximum autonomy.** SEP, a firm that builds software for clients, finds its teams working in four modes, spread along a scale of agent autonomy from individual agentic coding to a dark factory (Chris Shinkle and Andrew Dunlap).[1]
   Shinkle sums up three recent studies as "AI is not gonna fix your team. It amplifies what's already there."[1]
+  Nathen Harvey (DORA) summarises DORA's 2025 report as AI acting mainly as an amplifier: without a strong organisational foundation, its local productivity gains are often lost downstream.[19]
   Six constraints set a team's mode: token budget, organisational readiness, goal definition, domain knowledge, verifiability and code oversight.[1]
   A two-day prototype stalled on the way to production because tokens ran out, knowledge sat in people's heads and millions of input parameters left outputs unverifiable at scale.[1]
   Dunlap's own building-components team chose to stop part-way ("Buildings don't fall down"), while a team rebuilding a credit union's mobile banking app, with no token limit, reported a "six x reduction of effort".[1]
@@ -92,4 +93,4 @@ No: a fully automated factory should not be a goal in itself. The evidence says 
 [16] https://www.allthingsdistributed.com/2026/11/aws-emulator-and-the-engineers-job-when-agents-write-the-code.html — Swami Sivasubramanian (AWS, All Things Distributed), AWS Emulator and the engineer's job when agents write the code
 [17] https://deepmind.google/blog/introducing-alphaproof-code — Google DeepMind, Introducing AlphaProof Code: a breakthrough in verifying complex software at depth
 [18] https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature — Google Research, Advancing science & engineering with Antigravity's /teamwork
-
+[19] https://www.infoq.com/presentations/dora-ai-adoption-engineering-performance — Nathen Harvey (DORA), AI is an Amplifier: Scale High Performance, Not Dysfunction, QCon London 2026

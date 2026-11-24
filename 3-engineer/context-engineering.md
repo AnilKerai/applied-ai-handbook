@@ -61,6 +61,8 @@ Horthy's own account is that it "started to become a pretty popular term" about 
 Anthropic says context "must be treated as a finite resource with diminishing marginal returns", because models lose focus as it grows.[2]
 A Chroma report of July 2025 tested 18 models and found that performance "degrades as input length increases, often in surprising and non-uniform ways", even on deliberately simple tasks.[11]
 Anthropic cites such studies under the name "context rot", and its guiding rule is to find "the smallest possible set of high-signal tokens that maximize the likelihood of some desired outcome".[2]
+Ajay Prakash (LinkedIn) says that beyond 30 tools agents generally slow down and perform worse, so LinkedIn replaced its full tool list with three tools: search for a tool or playbook, get its schema, then execute it.[17]
+Ricardo Ferreira (Redis) names context distraction (too much information) and context confusion (irrelevant data) among the problems he ran into building an Alexa skill.[18]
 
 **Write, select, compress and isolate.**
 Lance Martin groups the techniques into four buckets, in a post LangChain also published: writing context (saving it outside the window for later), selecting it (pulling it in when a step needs it), compressing it (keeping only the tokens the task requires) and isolating it (splitting it up).[12][13]
@@ -110,3 +112,5 @@ Its [decision record on compaction](https://github.com/AnilKerai/model-harness/b
 [14] https://arxiv.org/abs/2005.11401 — Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (arXiv 2005.11401)
 [15] https://www.anthropic.com/news/context-management — Anthropic, Managing context on the Claude Developer Platform
 [16] https://platform.claude.com/docs/en/build-with-claude/context-editing — Anthropic, Context editing (Claude API docs)
+[17] https://www.infoq.com/presentations/linkedin-context-engineering — Ajay Prakash (LinkedIn), Context Engineering at LinkedIn: How We Built an Organizational Context Layer for AI Agents with MCP, QCon AI Boston 2026
+[18] https://www.infoq.com/presentations/context-engineering-redis-llm-architecture — Ricardo Ferreira (Redis), Beyond Prompting: Context Engineering for Production-Grade AI, QCon AI Boston 2026

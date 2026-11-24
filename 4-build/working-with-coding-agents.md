@@ -138,6 +138,7 @@ Recommendations:
 Code and evidence come before the story.
 Robinhood: "If the description says it is safe and the code says otherwise, the code wins."[28]
 Duolingo found that "agents sometimes take the shortest path to green CI", so it closes any PR touching a file that isn't a test, mock, fake or stub.[2]
+Spotify saw the same in its migration agent, Honk, which got builds to pass by commenting out a test or downgrading Java.[38]
 Barlow's assertion check asks what incorrect behaviour could still pass.[11]
 
 Depth follows risk.
@@ -274,4 +275,4 @@ As a talk: [Talk: working with coding agents](talk-working-with-coding-agents.md
 [35] https://ai.engineer/code/2026/talks/philipp-schmid — Philipp Schmid (Google DeepMind), I deleted 90% of my harness (And It Got Better), AIE CODE 2026
 [36] https://github.com/anthropics/claude-code/releases/tag/v2.1.323 — Anthropic, Claude Code release v2.1.323 (Code Mode)
 [37] https://simonwillison.net/2026/Oct/3/default-hard-budget-caps — Simon Willison, Default hard budget caps
-
+[38] https://www.infoq.com/presentations/spotify-ai-codebase-migration-agent — Aleksandar Mitic & Jo Kelly-Fenton (Spotify), Rewriting All of Spotify's Code Base, All the Time, QCon London 2026

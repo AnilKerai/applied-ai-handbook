@@ -350,6 +350,26 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 14,
+      "url": "https://www.infoq.com/presentations/decision-models-agentic-ai",
+      "title": "Alex Porcelli (Aletyx), Decision Models in Agentic Architectures: from Production to Agent Skills, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "I'm co-founder and CEO of Aletyx. I've been working the last 20 years on making policy executable.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "This is a decision table where on the left-hand side, you have the input columns, what defines the conditions.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The skill will invoke the engine that executes the DMN. The model will not execute the decision itself.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

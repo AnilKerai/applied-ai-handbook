@@ -20,7 +20,7 @@ Practical, evidence-backed guidance for bringing AI into a business or an engine
 
 Skim the glossary and keep it open. In the questions, start with the ones for everyone, then strategy and risk. If you're proposing an AI project, add [The big picture](3-engineer/the-big-picture.md), the [intake checklist](2-decide/ai-intake-checklist.md) and the [pre-mortem](2-decide/ai-failure-modes-premortem.md).
 
-**Engineer building AI features or using coding agents** (about 85 minutes)
+**Engineer building AI features or using coding agents** (about 90 minutes)
 
 1. [The big picture](3-engineer/the-big-picture.md)
 2. [Harness engineering](3-engineer/harness-engineering.md)

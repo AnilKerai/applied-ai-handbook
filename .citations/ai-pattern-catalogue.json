@@ -216,6 +216,26 @@
       "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work",
       "title": "GitHub, GitHub Intelligence puts your code context and history to work (changelog, Copilot dreaming)",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 37,
+      "url": "https://www.infoq.com/presentations/ai-agent-harness",
+      "title": "Vinoth Govindarajan (OpenAI), The Agent Harness: Control Planes, Invariants, and Approval Boundaries for Production AI Agents, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "Approval needs shape. It needs actor, session, tools, argument, lifetime, and outcome.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Expiry should terminate, not loop.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Every boundary needs an ending, success, failure, timeouts, and max attempts.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

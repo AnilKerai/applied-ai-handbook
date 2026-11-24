@@ -320,6 +320,26 @@
           "added": "2026-11-22"
         }
       ]
+    },
+    {
+      "id": 14,
+      "url": "https://www.infoq.com/presentations/spotify-ai-codebase-migration-agent",
+      "title": "Aleksandar Mitic & Jo Kelly-Fenton (Spotify), Rewriting All of Spotify's Code Base, All the Time, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "if we could separate out our verification runtime from our agent runtime, then we could leverage the pre-existing CI system that's already set up",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "If it's incorrect, the agent goes again, but if it's correct, it'll create a PR.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "you know that the PRs are going to have a correct CI build, because you've already validated it before you'd even created the PR",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

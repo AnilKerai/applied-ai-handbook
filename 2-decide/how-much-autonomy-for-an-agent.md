@@ -79,6 +79,7 @@ For those decisions, either have a person genuinely review every one, or treat t
 Enforce each limit in the system around the agent, not its instructions: block forbidden actions, and keep secrets and the network closed by default.
 Heidi Porter (Moyer Group AI) warns that "a rule written in a prompt is not deterministically enforced".[4]
 Justin Yoo (Microsoft) separates the permission to run, which is approval, from the permission to reach, which is the boundary, and starts agents in a copy of the workspace, where the real access tokens stay hidden from them.[6]
+Spotify runs each change from its migration agent, Honk, through the real CI system, using a verification service kept separate from the agent's runtime, and only a passing build becomes a pull request.[14]
 
 ### 4. What does a mistake cost, and can it be undone?
 
@@ -143,3 +144,4 @@ For how automated a whole software team should be, see the [software factory mem
 [11] https://ai.engineer/code/2026/talks/lauren-tan — Lauren Tan, All Code Is Slop (Except Mine), AI Engineer Code Summit 2026
 [12] https://ai.engineer/code/2026/talks/luke-alvoeiro — Luke Alvoeiro (Factory), Earning Autonomy: From Missions to Workstreams, AI Engineer Code Summit 2026
 [13] https://ai.engineer/code/2026/talks/brian-kennedy — Brian Kennedy (ZoomInfo), Your Judge Is Hallucinating Too, AI Engineer Code Summit 2026
+[14] https://www.infoq.com/presentations/spotify-ai-codebase-migration-agent — Aleksandar Mitic & Jo Kelly-Fenton (Spotify), Rewriting All of Spotify's Code Base, All the Time, QCon London 2026

@@ -197,7 +197,17 @@
       "id": 33,
       "url": "https://arxiv.org/abs/2406.12045",
       "title": "Yao, Shinn, Razavi & Narasimhan (Sierra), τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains (arXiv 2406.12045)",
-      "accessed": "2026-11-14"
+      "accessed": "2026-11-14",
+      "quotes": [
+        {
+          "text": "compares the database state at the end of a conversation with the annotated goal state",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "a benchmark emulating dynamic conversations between a user (simulated by language models) and a language agent",
+          "added": "2026-11-24"
+        }
+      ]
     },
     {
       "id": 34,
@@ -216,6 +226,66 @@
       "url": "https://arxiv.org/abs/2603.29231",
       "title": "Khanal, Tao & Zhou, Beyond pass@1: A Reliability Science Framework for Long-Horizon LLM Agents (arXiv 2603.29231)",
       "accessed": "2026-11-14"
+    },
+    {
+      "id": 37,
+      "url": "https://www.infoq.com/presentations/elastic-ai-agent-evaluations",
+      "title": "Susan Chang (Elastic), Building Reusable Evaluation Frameworks for Agentic AI Products, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "if we're using the same family of models, in this case, like Llama to evaluate Llama, then they would think the Llama models perform better",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The shared evaluation framework cannot be responsible for calibration.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "just starting with a sample of 20 records for your test dataset, to 50, and then you can later scale it up",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "url": "https://www.infoq.com/presentations/ai-agent-testing-evaluation",
+      "title": "Zhou Yu (Arklex AI; Columbia University), From AI Agent Demo to Production: Automated Testing and Evaluation, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "You can't just look at the agent saying the product is returned. You have to look at the behind databases and the environments to look at whether the action was performed correctly or not",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "you can actually evolve your CI/CD pipeline's golden scenarios",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "For example, you always simulate 10,000 conversations every time, and then every time you go through your CI/CD pipeline, you're costing a couple thousand dollars",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "url": "https://www.infoq.com/presentations/context-as-code-devops-agents",
+      "title": "Patrick Debois (Tessl), Context is the New Code, QCon London 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "this is without the context, this is with the context, this is with the old context, this is with the new context",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "I'm going to run the test, let's say, five times.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "There's evals you care about that must pass, and other pieces can be a little bit more erratic.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

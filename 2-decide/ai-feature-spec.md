@@ -109,9 +109,11 @@ A written spec matters more when AI does the building or the deciding. Michael W
 8. **Execution dial:** Porter sets autonomy like a dial and reserves full automation for actions that are cheap to undo; people reviewing thousands of items can fall into "rubber stamping fatigue".[4]
 9. **Guardrails:** Porter warns that a rule written in a prompt is not guaranteed to be enforced.[4] Cam Soper (Pulumi) concluded that a rule in an agent's instructions is no more than a suggestion.[8]
 10. **Security:** Yvonne Carlson (ExploreGod) calls for least privilege, time-bound credentials, default-deny boundaries and sandboxes (abstract only).[9] Simon Willison's *lethal trifecta* is private data, untrusted content and a way to send data out in one agent.[10]
+    Advait Patel (Broadcom) argues that each agent is a new identity that needs its own short-lived, scoped tokens, that its limits belong at the tool layer rather than the prompt, and that a structured trace of every action should serve as audit evidence.[17]
 11. **Observability:** Shweta Iyer (Microsoft) showed an agent call succeeding while the business write rolled back; her API returns a trace ID with each business request ID, she persists the trace ID in her database as a durable correlation value, and she says to "make any completions explicit".[11]
 12. **Failure and undo:** Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[12]
 13. **Cost:** SEP, a firm that builds software for clients, saw a client's prototype stall partly because the token budget covered only a couple of days' work.[4] Harvey lets automations carry a budget or expiry date "because when no one's watching, an agent can start thousands of tasks too."[13] Willison argues pay-per-use services should ship with hard budget caps switched on.[14]
+    Erik Peterson (CloudZero) says the companies CloudZero looked at had budget alerts that nobody paid attention to, and warns that there is no per-call or per-user limit on AI spend.[18]
 14. **Rollout:** Darren Taillie's data agent at AeroCore took off once it moved into Microsoft Teams: "No one likes an extra login."[5] Solorio finds that people who helped build a tool become its champions.[4]
 15. **Maintenance:** Lay asks "do they have the capacity to keep running what they deployed?"[5]
     Porter advises designing systems so that the model is the easiest part to replace, and re-evaluating after a swap.[4]
@@ -144,4 +146,5 @@ A written spec matters more when AI does the building or the deciding. Michael W
 [14] https://simonwillison.net/2026/Oct/3/default-hard-budget-caps — Simon Willison, Default hard budget caps
 [15] https://arxiv.org/abs/2609.01437 — ByteDance Seed, HarnessDev (arXiv 2609.01437)
 [16] https://ai.engineer/code/2026/talks/online-aws-specification-analyzer — Rajath Kotyal (AWS), Specs have bugs too, AI Engineer Code Summit 2026
-
+[17] https://www.infoq.com/presentations/zero-trust-ai-agents-production-security — Advait Patel (Broadcom), Zero Trust Agent Systems that Pass Audits and Still Ship, QCon AI Boston 2026
+[18] https://www.infoq.com/presentations/ai-cloud-cost-economics — Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026

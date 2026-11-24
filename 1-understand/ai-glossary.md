@@ -185,6 +185,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Ontology**
 - A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by a sales agent, which lets software catch an AI query that links them the wrong way round.[21]
+  Prasanna Vijayanathan and Renzo Sanchez-Silva (Netflix) describe an operational ontology, a typed knowledge graph of Netflix's infrastructure and incidents, which their AI tool for site reliability, AutoSRE, draws on.[50]
 - *Why it matters:* we should write our business terms and rules down precisely before buying any product sold as an ontology.
 
 **Open-weight model**
@@ -314,3 +315,4 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 [47] https://blog.langchain.com/the-anatomy-of-an-agent-harness — Vivek Trivedy (LangChain), The Anatomy of an Agent Harness
 [48] https://jekyllrb.com/docs/front-matter — Jekyll, Front Matter (Jekyll documentation)
 [49] https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills — Anthropic, Equipping agents for the real world with Agent Skills
+[50] https://www.infoq.com/presentations/netflix-observability-aiops-ontology-scale — Prasanna Vijayanathan & Renzo Sanchez-Silva (Netflix), Ontology-Driven Observability: Building the E2E Knowledge Graph at Netflix Scale, QCon London 2026

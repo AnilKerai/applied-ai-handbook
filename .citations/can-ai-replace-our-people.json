@@ -488,6 +488,90 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 24,
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "title": "Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "In a randomized controlled trial, we examined 1) how quickly software developers picked up a new skill (in this case, a Python library) with and without AI assistance",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "We recruited 52 (mostly junior) software engineers, each of whom had been using Python at least once a week for over a year.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "or the equivalent of nearly two letter grades (Cohen's d =0.738, p =0.01)",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The largest gap in scores between the two groups was on debugging questions",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Using AI sped up the task slightly, but this didn’t reach the threshold of statistical significance.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Our qualitative analysis does not draw a causal link between interaction patterns and learning outcomes, but it does point to behaviors associated with different learning outcomes.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Our sample was relatively small, and our assessment measured comprehension shortly after the coding task.",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "url": "https://arxiv.org/html/2601.20245v3",
+      "title": "Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "For a 27-point quiz, this translates into a 15.4% score difference or 2 grade points.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "is significantly reduced (Cohen d=0.738, p=0.01)",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "All participants were not allowed to use AI in the comprehension check.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "In exploratory data analysis (not pre-registered), the quiz score was decomposed into subareas and question types",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Among the different types of questions, the largest score gap occurs in the debugging questions and the smallest score gap in the code reading questions.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Among participants who use AI, we find a stark divide in skill formation outcomes between high-scoring interaction patterns (65%-86% quiz score) vs low-scoring interaction patterns (24%-39% quiz score).",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "The high scorers only asked AI conceptual questions instead of code generation or asked for explanations to accompany generated code",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Low-scoring patterns generally involved a heavy reliance on AI, either through code generation or debugging.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Although each behavior pattern cluster is small, the difference between low-scoring clusters and high-scoring clusters is stark.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "This study focuses on a single task using a chat-based interface.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }

@@ -138,6 +138,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
   - Porter's dial ends by reserving full automation for actions that are cheap to undo.[1]
   - Gerald Versluis (Microsoft): "So every tool stages an action. It doesn't touch the UI itself." Tools act through the app's own code, and removals asked the user to confirm first.[23]
   - Yvonne Carlson (ExploreGod) calls for approval before anything destructive (abstract only).[24] Glean tunes decision thresholds per deployment.[3]
+  - Vinoth Govindarajan (OpenAI) treats an approval as scoped to its actor, session, tool, arguments, lifetime and outcome; when one expires, the system should record that and move on, not keep retrying.[37]
 
 ### 11. Sandbox with default-deny network and proxied credentials
 
@@ -161,6 +162,7 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 - **Seen at:**
   - Cecil Phillip (Temporal): "AI systems are really just distributed systems in disguise." His demo agent recovered after its ride service restarted.[29]
   - Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed." In the UndoBench trials he ran with Dolly Sah, naive retries produced duplicate effects in 54% of the relevant trials.[30]
+  - Govindarajan says every boundary, such as a tool call or a run, needs an ending (success, failure, timeout or max attempts), backed by a lease, a watchdog and an interrupt.[37]
 
 ### 13. The trace ID on the business record
 
@@ -264,4 +266,4 @@ One card per pattern seen in practice, in design-patterns style. *Seen at* entri
 [34] https://deepmind.google/blog/introducing-alphaproof-code — Google DeepMind, Introducing AlphaProof Code
 [35] https://www.anthropic.com/research/components-of-agent-memory — Anthropic, The components of agent memory
 [36] https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work — GitHub, GitHub Intelligence puts your code context and history to work (changelog, Copilot dreaming)
-
+[37] https://www.infoq.com/presentations/ai-agent-harness — Vinoth Govindarajan (OpenAI), The Agent Harness: Control Planes, Invariants, and Approval Boundaries for Production AI Agents, QCon AI Boston 2026

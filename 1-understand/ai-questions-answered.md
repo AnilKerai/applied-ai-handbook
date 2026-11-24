@@ -4,7 +4,7 @@ type: faq
 created: 2026-11-14
 audience: colleagues, engineering leads, senior leadership
 status: checked
-last_checked: 2026-11-22
+last_checked: 2026-11-24
 as_of: "November 2026"
 ---
 
@@ -114,6 +114,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - The 655-firm study shows output rising far faster than completed work.[11]
 - **For software teams:** I'd track failure rates on real cases and cost per task, not lines of code, pull-request counts or tokens: those are not measures of success.
   DORA warns that token counts invite gaming and recommends tracking cost per accepted change and rework rates.[14]
+  Lizzie Matusov (Quotient) goes further: she calls tokens, used as a proxy for AI's impact on productivity, a more dangerous measure than lines of code, because each token costs real money.[78]
   Factory tracks a *regret-free merge rate*, the share of changes that never need a revert or follow-up fix,[15] and Philipp Schmid (Google DeepMind) tells teams to report cost per task next to accuracy.[16]
 
 **How sure I am:** Very sure. Two research sources show that counting output misleads, and one trial found that developers' sense of their own speed misled them too. What to measure instead rests on what practitioners do.
@@ -124,6 +125,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 
 **Why:**
 - Simon Willison argues that pay-per-use services and APIs (services other software calls directly) should ship with hard spending caps on by default, since agents make runaway bills easier.[53]
+- Erik Peterson (CloudZero) also argues for limits, having seen budget alerts go unheeded, and for tracking unit economics, what it costs to do the thing you do, rather than making cost per token the main measure.[79]
 - SEP, a firm that builds software for clients (Chris Shinkle and Andrew Dunlap), saw one client's prototype stall partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
 - One newer study found that teams of AI agents scored higher but cost 3-7 times as much as a single agent.[18]
 - **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done.
@@ -225,6 +227,8 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic safeguards, ones that don't rely on an AI model's judgement, to constrain what the system can do.[63]
 - **For software teams:** Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
   Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
+  Andrew Martin (ControlPlane) says the supply chain now includes email and pull-request titles: he reports injection through GitHub issues and pull-request titles taking down five repositories, one of them the security tool Trivy (his account).[80]
+  He also describes GlassWorm, an attack that hides its payload in invisible characters and targets indirect dependencies.[80]
   Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
 
 **How sure I am:** Very sure. Practitioners, a government agency and research papers agree, though the attack rates come from single studies.
@@ -309,7 +313,17 @@ These questions are for teams building AI features or working with coding agents
   For UK rules on automated decisions about people, see question 2 of [How much should an agent be trusted to do on its own?](../2-decide/how-much-autonomy-for-an-agent.md#2-is-it-a-significant-decision-about-a-person) and [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
   Beyond those rules, what regulation requires of us is still open, and nothing in the handbook is legal advice.
 - **How do we train our people, and how do junior roles change?** Partly covered: the evidence on junior hiring is in [Will AI replace my job?](#q-will-ai-replace-my-job) and [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
-  Training remains open: practitioners' accounts covered adoption and culture, not training or career paths.
+  On training, one small trial with software engineers found that those who used AI while learning a new skill scored lower on a test of it straight afterwards, and that how they used AI seemed to matter.[81][82]
+  In that randomised trial, Anthropic researchers had 52 mostly junior software engineers learn an unfamiliar Python library, Trio, with or without an AI assistant, then take a quiz without AI (Anthropic's own study).[81][82]
+  The AI group scored about two grade points lower (Cohen's d = 0.738, p = 0.01), and finished about two minutes faster on average, a difference that was not statistically significant.[81][82]
+  The paper's latest version (November 2026) puts the gap at 4.15 points on a 27-point quiz, a 15.4% score difference; Anthropic's write-up gives average scores of 50% against 67%.[81][82]
+  Those who used AI only for conceptual questions, or asked for explanations with its code, scored 65–86%, against 24–39% for those who relied on it to write or debug their code.[82]
+  But the researchers identified those patterns afterwards from screen recordings, in small groups, and draw no causal link.[81][82]
+  It was also one short task, tested straight afterwards, on a small sample.[81][82]
+  Still open: whether the effect lasts, holds beyond coding, or differs from learning with a person's help, which the researchers leave to future studies.[81]
+  Also open: which training and career paths work in practice.
+  - **For software teams:** in an exploratory breakdown, the largest gap was on debugging questions, which the authors suggest could leave people less able to check and debug AI-written code.[82]
+    Alasdair Allan argues that AI now does the junior work that used to train engineers, such as bugs, boilerplate and glue code, and suggests stopgaps such as rotating people through basic work, as in medical residencies, while saying he has no full answer.[83]
 - **Are local, open-weight models good enough?** Partly settled. On Epoch AI's combined index the best open-weight models trail frontier ones by about four months,[71] and specialised small models can match large ones on one narrow task, text classification.[72] But on one benchmarker's harder, mostly private tests, the gap is much wider.[73] I know of no study that measures open-weight against frontier models on business tasks, so for now our own evals have to decide.
 
 **Read next:** [Should this task use AI, and which kind?](../2-decide/should-this-task-use-ai.md), or go back to the [handbook home](../README.md).
@@ -393,3 +407,9 @@ These questions are for teams building AI features or working with coding agents
 [75] https://arxiv.org/abs/2607.13080 — Sheng-Wei Peng, Yi-Hsun Lin & Yi-Pei Lee (arXiv 2607.13080, preprint), Inference Economics of Enterprise Coding Agents: A Case Study of Cloud vs. On-Premise LLMs
 [76] https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study — METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity (blog post, 10 July 2025; since marked out of date by METR)
 [77] https://metr.org/blog/2026-02-24-uplift-update — METR, We are Changing our Developer Productivity Experiment Design (blog post, 24 February 2026)
+[78] https://www.infoq.com/presentations/ai-sdlc-maturity-framework-bottlenecks — Lizzie Matusov (Quotient), The Five Stages of AI Maturity in Engineering Organizations - Where and Why Teams Get Stuck, QCon AI Boston 2026
+[79] https://www.infoq.com/presentations/ai-cloud-cost-economics — Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026
+[80] https://www.infoq.com/presentations/ai-security-kubernetes-gpu-threats — Andrew Martin (ControlPlane), Exploding GPUs and the AI Infrastructure Challenge, QCon London 2026
+[81] https://www.anthropic.com/research/AI-assistance-coding-skills — Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)
+[82] https://arxiv.org/html/2601.20245v3 — Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)
+[83] https://www.infoq.com/presentations/ai-software-engineering-pipeline — Alasdair Allan (organisation not stated), The Ladder is Missing Rungs: Engineering Progression When AI Ate the Middle, QCon London 2026

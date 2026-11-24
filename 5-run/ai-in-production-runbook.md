@@ -126,6 +126,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 - **Agent-assisted on-call ladder.** Meta puts an AI teammate on each rotation, so people on call approve rather than operate.[15]
   - L1 investigates and reports; L2 drafts the fix with root cause and test plan, shipping only with approval; L3 clears low-criticality work alone.[15]
   - It retries stuck runs, pages a person only when it can't fix them, and writes hand-over summaries.[15]
+  - Alex Palcuie (Anthropic) finds LLMs superhuman at gathering signal during an incident but liable to confuse correlation with causation; in his account, incident response today has people and AI responding together.[30]
   - Start any on-call agent at L1 and promote it per action.
 - **Human attention limits.**
   - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge finds that the more agents he deploys, the more people he needs.[28]
@@ -185,4 +186,4 @@ Andrew Finch (Sonar) says the software factory "runs dim, not dark": people stay
 [27] https://practicalai.show/379/transcript — Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own, Midwest AI Summit 2026 (Practical AI E379 transcript)
 [28] https://ai.engineer/code/2026/talks/steve-yegge — Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026
 [29] https://www.anthropic.com/engineering/claude-code-auto-mode — Anthropic, Claude Code auto mode
-
+[30] https://www.infoq.com/presentations/claude-sre-incidents — Alex Palcuie (Anthropic), Can Claude Fix Itself? Using LLMs for Incident Response, QCon London 2026

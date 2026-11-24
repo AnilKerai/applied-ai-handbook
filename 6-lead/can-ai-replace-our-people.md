@@ -4,7 +4,7 @@ type: memo
 created: 2026-11-21
 audience: senior leadership and engineering leads
 status: checked
-last_checked: 2026-11-22
+last_checked: 2026-11-24
 as_of: "November 2026"
 ---
 
@@ -31,7 +31,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 2. **Set limits in advance;** the system escalates judgement calls and anything beyond them. Genuinely review each significant decision about a person, or meet the legal requirements ([autonomy guide](../2-decide/how-much-autonomy-for-an-agent.md)).
 3. **Name an owner for every outcome.**
 4. **Redesign jobs around checking and judgement.**
-5. **Keep hiring and growing juniors.**
+5. **Keep hiring and growing juniors.** While someone is learning a skill, I'd have them use AI to explain things rather than to do the work, and to check their own understanding.
 
 ## Options considered
 
@@ -58,6 +58,11 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 - **AI helps people unevenly.**
   In a Stanford-MIT study, an AI assistant improved less experienced support agents' speed and quality, but gave the most experienced small speed gains and small quality declines.[11]
   In a Harvard experiment, consultants using AI did more, better work on tasks within AI's capabilities, but were 19 percentage points less likely to be correct on one selected to be beyond them.[12]
+- **Learning with AI: one small trial.**
+  In a randomised trial by Anthropic researchers (Anthropic's own study), 52 mostly junior software engineers learned an unfamiliar Python library with or without an AI assistant, then took a quiz without it.[24][25]
+  The AI group scored about two grade points lower (Cohen's d = 0.738, p = 0.01), with the widest gap on debugging questions in an exploratory breakdown, and was not significantly faster.[24][25]
+  Those who used AI only for conceptual questions, or asked for explanations with its code, scored 65–86%, against 24–39% for those who relied on it to write or debug their code.[25]
+  The researchers identified those patterns afterwards, in small groups, and draw no causal link; it was also one short task, tested straight afterwards, on a small sample.[24][25]
 - **Adding a person doesn't always help.**
   A Nature Human Behaviour meta-analysis pooling 106 experiments found human–AI combinations on average "performed significantly worse than the best of humans or AI alone", though better than humans alone.[6]
   Combinations lost out in decision tasks and where the AI was better, and gained where the human was.[6]
@@ -89,6 +94,7 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 - **AI alone doing better.** If human–AI combinations reliably underperform AI alone on our tasks, hand them to AI, still with an owner.
 - **A change in UK law** or final ICO guidance could change how decisions about people are reviewed.
 - **A causal junior gap.** If junior hiring keeps falling and studies show AI causes it, protect entry-level roles.
+- **Longer studies of learning with AI.** If they find the learning gap fades as people gain fluency, juniors can lean on AI sooner.
 
 **Read next:** [AI maturity model and roadmap](ai-maturity-model.md), or go back to the [handbook home](../README.md).
 
@@ -117,3 +123,5 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
 [21] https://practicalai.show/381/transcript — Gautham Pallapa (Scotiabank) with Chris Benson, Building Human-Centered AI (Practical AI E381 transcript, 19 November 2026)
 [22] https://practicalai.show/379/transcript — Mark Lay (Noblis), AI Moves Fast: Four Decisions You Own, Midwest AI Summit 2026 (Practical AI E379 transcript)
 [23] https://ai.engineer/code/2026/talks/steve-yegge — Steve Yegge (independent), Software Factories: Escape from Trash Mountain, AI Engineer Code Summit 2026
+[24] https://www.anthropic.com/research/AI-assistance-coding-skills — Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)
+[25] https://arxiv.org/html/2601.20245v3 — Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)

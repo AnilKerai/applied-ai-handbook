@@ -5,7 +5,7 @@ How to build AI features well: patterns seen in practice, how to test them, and 
 Read in this order:
 
 1. **[AI pattern catalogue](ai-pattern-catalogue.md)** (15 min): Ways to build AI features seen in practice, each with when to use it, when not to and the pitfalls.
-2. **[Evals playbook](evals-playbook.md)** (15 min): How to test whether an AI feature works (evals), from building the test set to the statistics.
+2. **[Evals playbook](evals-playbook.md)** (20 min): How to test whether an AI feature works (evals), from building the test set to the statistics.
 3. **[Working with coding agents](working-with-coding-agents.md)** (15 min): The day-to-day guide for developers using AI coding agents.
 4. **[Building AI features in .NET](dotnet-ai-engineering-guide.md)** (10 min): The .NET 11 stack and practices I recommend for AI features.
 

@@ -228,6 +228,42 @@
           "added": "2026-11-15"
         }
       ]
+    },
+    {
+      "id": 17,
+      "url": "https://www.infoq.com/presentations/linkedin-context-engineering",
+      "title": "Ajay Prakash (LinkedIn), Context Engineering at LinkedIn: How We Built an Organizational Context Layer for AI Agents with MCP, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "Generally, beyond 30 tools, it makes the agents slow down and also degrades their performance as I said.",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "instead of exposing all of these tools and playbooks directly to the MCP, we replace them with three tools",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "then it can get the schema of the tool",
+          "added": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://www.infoq.com/presentations/context-engineering-redis-llm-architecture",
+      "title": "Ricardo Ferreira (Redis), Beyond Prompting: Context Engineering for Production-Grade AI, QCon AI Boston 2026",
+      "accessed": "2026-11-24",
+      "quotes": [
+        {
+          "text": "context distraction, too much data, too much information",
+          "added": "2026-11-24"
+        },
+        {
+          "text": "Context confusion, which is a bunch of irrelevant data that was a mix and match.",
+          "added": "2026-11-24"
+        }
+      ]
     }
   ]
 }
