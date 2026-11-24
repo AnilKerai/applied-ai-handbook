@@ -59,10 +59,10 @@ A US study finds no evidence yet of economy-wide job displacement, though employ
   In a Stanford-MIT study, an AI assistant improved less experienced support agents' speed and quality, but gave the most experienced small speed gains and small quality declines.[11]
   In a Harvard experiment, consultants using AI did more, better work on tasks within AI's capabilities, but were 19 percentage points less likely to be correct on one selected to be beyond them.[12]
 - **Learning with AI: one small trial.**
-  In a randomised trial by Anthropic researchers (Anthropic's own study), 52 mostly junior software engineers learned an unfamiliar Python library with or without an AI assistant, then took a quiz without it.[24][25]
+  In Anthropic's own randomised trial (a preprint), 52 mostly junior software engineers learned an unfamiliar Python library with or without an AI assistant, then took a quiz without it.[24][25]
   The AI group scored about two grade points lower (Cohen's d = 0.738, p = 0.01), with the widest gap on debugging questions in an exploratory breakdown, and was not significantly faster.[24][25]
-  Those who used AI only for conceptual questions, or asked for explanations with its code, scored 65–86%, against 24–39% for those who relied on it to write or debug their code.[25]
-  The researchers identified those patterns afterwards, in small groups, and draw no causal link; it was also one short task, tested straight afterwards, on a small sample.[24][25]
+  Groups who used AI only for conceptual questions, or asked for explanations with its code, averaged 65–86%, against 24–39% for groups who relied on it to write or debug their code.[25]
+  The researchers identified those patterns afterwards, each in only two to seven people, and draw no causal link; it was also one short task, tested straight afterwards, on a small sample.[24][25]
 - **Adding a person doesn't always help.**
   A Nature Human Behaviour meta-analysis pooling 106 experiments found human–AI combinations on average "performed significantly worse than the best of humans or AI alone", though better than humans alone.[6]
   Combinations lost out in decision tasks and where the AI was better, and gained where the human was.[6]

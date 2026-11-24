@@ -174,7 +174,7 @@ Tick what the team can show is handled; plan the rest.
 - **Warning sign:** Success means the model replied. Code treats a timeout as a failure; Girish Konda (Microsoft) treats it as an unknown outcome.[14]
 - **Prevention:** Store the trace ID and an explicit final status with the business record ([Running AI in production](../5-run/ai-in-production-runbook.md)). Use idempotency keys, check before retrying, and rehearse the undo.
 - **Seen in practice:** In the lost-reply trials of Tanmay and Dolly Sah's benchmark, retrying without first checking produced duplicate effects in 54% of those trials.[15]
-  Vinoth Govindarajan (OpenAI) cites OpenClaw bug reports of an agent reply that reached the user but was never saved, and of a tool that reported success while the user saw nothing.[20]
+  Vinoth Govindarajan (OpenAI) cites bug reports from OpenClaw, an open-source AI agent, of a reply that reached the user but was not saved to its session record, and of a tool that reported success while the user saw nothing.[20]
   He says every tool call needs an ending: success, failure, timeout or max attempts.[20]
 
 #### 15. The upgrade that broke the harness

@@ -78,7 +78,7 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 - She grows the fixed set from production logs, adding scenarios for the kinds of user, goal and context the simulation missed.[38]
 - In her example, simulating 10,000 conversations on every CI run would cost a couple of thousand dollars each time (her figure), so she aims for the fewest scenarios that give the most coverage.[38]
 - τ-bench (section 5) also has language models play the user, and grades by comparing the database state at the end of the conversation with the annotated goal state.[33]
-- I'd reserve simulated-user runs for agents that hold a conversation, and run them nightly or before a release rather than on every change, because of the cost.
+- I'd reserve simulated-user runs for agents that hold a conversation, and run them nightly or before a release rather than on every commit, because of the cost.
   I'd still grade them on the end state with deterministic checks first, and keep judges for what code can't check.
 
 ## 4. Graders
@@ -102,8 +102,8 @@ Kevin Solorio (Focused) puts it bluntly: "an agent without evals is a proof of c
 **Calibrate judges against people.**
 - Brian Kennedy (ZoomInfo): "We had trusted our judge until we measured it."[13]
 - Nikolay Petrov uses a judge or panel, ideally from a different model family, and checks that questions don't leak their answers.[17]
-- Susan Chang (Elastic) reports that a judge from the same model family, such as Llama grading Llama, rated that family's models higher, as Meta and CrowdStrike also found.[37]
-- Chang leaves calibration to each team rather than Elastic's shared eval framework, because checking that judges agree with human evaluators, and give a repeated scenario roughly the same score, rests on domain expertise and each team's own expertise.[37]
+- Susan Chang (Elastic) reports that in cybersecurity evals a judge from the same model family, such as Llama grading Llama, rated that family's models higher, as Meta and CrowdStrike also found.[37]
+- Chang says Elastic leaves calibration to each team rather than its shared eval framework, because checking that judges agree with human evaluators, and give a repeated scenario roughly the same score, depends on each team's domain expertise.[37]
 - A small, agent-authored pilot of cross-provider review found a material finding in 8 of 20 coding turns (95% interval about 19-64%).[18]
 - It also found plumbing bugs: a false pass on truncated input, and a reviewer that exited with an error but a valid verdict counted as complete.[18]
 - I recommend hand-labelling at least 50 cases and measuring the judge's chance-corrected agreement with people (section 5) before it gates anything, then re-checking monthly and logging each grader's input size and exit status.

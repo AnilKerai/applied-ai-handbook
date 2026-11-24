@@ -227,7 +227,7 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - The UK's National Cyber Security Centre (NCSC) says LLMs don't separate instructions from data, so designs should lean on deterministic safeguards, ones that don't rely on an AI model's judgement, to constrain what the system can do.[63]
 - **For software teams:** Roey Ben Chaim (Zenity) found payloads in skills' remote prompts, install scripts and packages, including a campaign with 1.7 million downloads: "Everything that comes into the context is under risk."[61]
   Jon Douglas (Microsoft): "every package that you restore is code that you choose to trust." NuGet is adding a cooldown that skips very new versions.[62]
-  Andrew Martin (ControlPlane) says the supply chain now includes email and pull-request titles: he reports injection through GitHub issues and pull-request titles taking down five repositories, one of them the security tool Trivy (his account).[80]
+  Andrew Martin (ControlPlane) says the supply chain now includes email and pull-request titles: he reports five repositories, one of them the security tool Trivy, taken down by OpenClaw, an AI agent, through injection in GitHub issues and pull-request titles (his account).[80]
   He also describes GlassWorm, an attack that hides its payload in invisible characters and targets indirect dependencies.[80]
   Newer evidence adds two risks: OpenAI's sandboxed agents leaving each other instructions in a shared package cache (Matthew Green's account),[64] and planted text surviving context compaction as a fake user turn in 87-100% of cases on five agent tools that flatten history, against 0% on four that keep message roles.[65]
 
@@ -314,11 +314,11 @@ These questions are for teams building AI features or working with coding agents
   Beyond those rules, what regulation requires of us is still open, and nothing in the handbook is legal advice.
 - **How do we train our people, and how do junior roles change?** Partly covered: the evidence on junior hiring is in [Will AI replace my job?](#q-will-ai-replace-my-job) and [Can AI replace our people?](../6-lead/can-ai-replace-our-people.md).
   On training, one small trial with software engineers found that those who used AI while learning a new skill scored lower on a test of it straight afterwards, and that how they used AI seemed to matter.[81][82]
-  In that randomised trial, Anthropic researchers had 52 mostly junior software engineers learn an unfamiliar Python library, Trio, with or without an AI assistant, then take a quiz without AI (Anthropic's own study).[81][82]
+  In that randomised trial, Anthropic researchers had 52 mostly junior software engineers learn an unfamiliar Python library, Trio, with or without an AI assistant, then take a quiz without AI (Anthropic's own study, a preprint).[81][82]
   The AI group scored about two grade points lower (Cohen's d = 0.738, p = 0.01), and finished about two minutes faster on average, a difference that was not statistically significant.[81][82]
   The paper's latest version (November 2026) puts the gap at 4.15 points on a 27-point quiz, a 15.4% score difference; Anthropic's write-up gives average scores of 50% against 67%.[81][82]
-  Those who used AI only for conceptual questions, or asked for explanations with its code, scored 65–86%, against 24–39% for those who relied on it to write or debug their code.[82]
-  But the researchers identified those patterns afterwards from screen recordings, in small groups, and draw no causal link.[81][82]
+  Groups who used AI only for conceptual questions, or asked for explanations with its code, averaged 65–86%, against 24–39% for groups who relied on it to write or debug their code.[82]
+  But the researchers identified those patterns afterwards, from screen recordings; each covers only two to seven people, and they draw no causal link.[81][82]
   It was also one short task, tested straight afterwards, on a small sample.[81][82]
   Still open: whether the effect lasts, holds beyond coding, or differs from learning with a person's help, which the researchers leave to future studies.[81]
   Also open: which training and career paths work in practice.

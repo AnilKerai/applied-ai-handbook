@@ -126,7 +126,7 @@ On-call should be able to pull each lever in minutes, without a deploy, and each
 - **Agent-assisted on-call ladder.** Meta puts an AI teammate on each rotation, so people on call approve rather than operate.[15]
   - L1 investigates and reports; L2 drafts the fix with root cause and test plan, shipping only with approval; L3 clears low-criticality work alone.[15]
   - It retries stuck runs, pages a person only when it can't fix them, and writes hand-over summaries.[15]
-  - Alex Palcuie (Anthropic) finds LLMs superhuman at gathering signal during an incident but liable to confuse correlation with causation; in his account, incident response today has people and AI responding together.[30]
+  - Alex Palcuie (Anthropic) calls LLMs superhuman at gathering signal during an incident but liable to confuse correlation with causation; in his account, incident response today has people and AI responding together.[30]
   - Start any on-call agent at L1 and promote it per action.
 - **Human attention limits.**
   - Ronacher: "human attention is for me at least the limiting factor."[11] Steve Yegge finds that the more agents he deploys, the more people he needs.[28]

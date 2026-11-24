@@ -185,7 +185,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Ontology**
 - A precise, agreed description of the kinds of thing in our business, how they relate and which rules follow, for example that a policy is sold by a sales agent, which lets software catch an AI query that links them the wrong way round.[21]
-  Prasanna Vijayanathan and Renzo Sanchez-Silva (Netflix) describe an operational ontology, a typed knowledge graph of Netflix's infrastructure and incidents, which their AI tool for site reliability, AutoSRE, draws on.[50]
+  Prasanna Vijayanathan and Renzo Sanchez-Silva (Netflix) describe the operational ontology they are building, a typed knowledge graph of Netflix's infrastructure and incidents, which their AI tool for site reliability, AutoSRE, draws on.[50]
 - *Why it matters:* we should write our business terms and rules down precisely before buying any product sold as an ontology.
 
 **Open-weight model**
