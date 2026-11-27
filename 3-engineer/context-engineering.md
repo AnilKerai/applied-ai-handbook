@@ -81,11 +81,11 @@ Its context editing, launched in public beta on 29 September 2025 and still in b
 In Anthropic's account, a subagent (a helper agent given one sub-task) may use "tens of thousands of tokens or more" exploring, but returns only "a condensed, distilled summary of its work (often 1,000-2,000 tokens)".[2]
 
 **Keep the start of the window stable.**
-Providers can reuse the work they have already done on the opening of a prompt when the next request starts with exactly the same text, which they call prompt caching.[19]
-OpenAI says "Cache reuse requires the entire rendered prefix to match", and Anthropic's documentation says a change to its tools, system instructions or messages invalidates that level of the cache and every level after it.[19][20]
+Providers can reuse the work they have already done on the opening of a prompt when the next request starts with exactly the same text, which they call prompt caching.[19][20]
+OpenAI says "Cache reuse requires the entire rendered prefix to match", and Anthropic's documentation says a change to the tools, system instructions or messages invalidates that level of the cache and every level after it.[19][20]
 Anthropic advises placing "static content (tool definitions, system instructions, context, examples) at the beginning of your prompt" and analysing cache hit rates regularly.[20]
-Lance Martin (Anthropic) orders a prompt from the most stable part to the least: system instructions and tools, then project memory, then session state, then each turn's messages.[21]
-He says the Claude Code team tracks its prompt cache hit rate "very very religiously", because it matters to the economics of the application.[21]
+Lance Martin (Anthropic) suggests ordering a prompt from the most stable part to the least: system instructions and tools, then project memory, then session state, then each turn's messages.[21]
+He says that for Claude Code, Anthropic tracks the prompt cache hit rate "very very religiously", because it matters to the economics of the application.[21]
 
 ## Where it shows up in this handbook
 

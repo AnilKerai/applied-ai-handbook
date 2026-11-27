@@ -208,7 +208,7 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 
 **Prompt caching**
 - A provider reusing the work it has already done on the start of a prompt when the next request begins with exactly the same text, so that part costs less and comes back faster. OpenAI describes it as reusing work "when requests share the same prompt prefix".[55] At Anthropic, cache hits cost between a fortieth and a tenth of the normal input price, depending on the model.[56]
-- *Why it matters:* agents resend much of the same context on every step, and a change near the start, such as a timestamp, stops the rest from being reused.[57][56] We should keep the parts that don't change first and track how often the cache is hit. See [Context engineering](../3-engineer/context-engineering.md#core-principles).
+- *Why it matters:* agents resend much of the same context on every step, and a change near the start, even of a single byte, stops the rest from being reused.[57][56] We should keep the parts that don't change first and track how often the cache is hit. See [Context engineering](../3-engineer/context-engineering.md#core-principles).
 
 **Prompt engineering**
 - Writing the text an AI model is given, such as its instructions, worked examples and the task itself, so that it does the job well. Anthropic describes the main focus of prompt engineering as "how to write effective prompts, particularly system prompts", the standing instructions behind every request.[7] The term was in academic use by 2021, but no source found shows who coined it.[41]

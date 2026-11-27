@@ -883,28 +883,12 @@
     },
     {
       "id": 84,
-      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340",
+      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=440",
       "title": "Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel",
       "accessed": "2026-11-26",
       "quotes": [
         {
-          "text": "Much of kind of context is repeated across turns.",
-          "added": "2026-11-27"
-        },
-        {
-          "text": "Now, the problem is prompt cache are a strict prefix match.",
-          "added": "2026-11-27"
-        },
-        {
-          "text": "you can think about basically, um system instructions, tools, things that are globally cached across all of your sessions.",
-          "added": "2026-11-27"
-        },
-        {
-          "text": "Session state is kind of per session, and then messages kind of incremented each turn.",
-          "added": "2026-11-27"
-        },
-        {
-          "text": "For example, with Claude code, we track the prompt cache hit rate very very religiously. It's very important for the economics of the application, obviously.",
+          "text": "It'll run diagnostics to make sure that you're using the prompt cache effectively.",
           "added": "2026-11-27"
         },
         {

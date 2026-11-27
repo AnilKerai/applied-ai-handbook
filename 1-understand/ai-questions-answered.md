@@ -417,5 +417,5 @@ These questions are for teams building AI features or working with coding agents
 [81] https://www.anthropic.com/research/AI-assistance-coding-skills — Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)
 [82] https://arxiv.org/html/2601.20245v3 — Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)
 [83] https://www.infoq.com/presentations/ai-software-engineering-pipeline — Alasdair Allan (organisation not stated), The Ladder is Missing Rungs: Engineering Progression When AI Ate the Middle, QCon London 2026
-[84] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel
+[84] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=440 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel
 [85] https://www.infoq.com/presentations/fine-tune-enterprise-rag-embeddings — Rachel Shalom (Dell), Finetuning Your Embedding Model for Better Search: Learning from Agentic Search at Dell, QCon AI Boston 2026

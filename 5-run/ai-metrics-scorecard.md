@@ -116,7 +116,7 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 - *Watch out for:* cost reported apart from success rate; a falling prompt-cache hit rate, which raises cost when the work hasn't changed.
 - *Evidence:* Philipp Schmid (Google DeepMind) measures efficiency, not just scores: harnesses scoring about the same differed almost twofold in cost.[19]
   Erik Peterson (CloudZero) puts unit economics, what it costs to do the thing you do, ahead of cost per token as the primary measure.[22]
-  Anthropic advises analysing cache hit rates regularly, and Lance Martin (Anthropic) says the Claude Code team tracks its hit rate closely because it matters to the economics of the application.[24][25]
+  Anthropic advises analysing cache hit rates regularly, and Lance Martin (Anthropic) says Anthropic tracks Claude Code's hit rate closely because it matters to the economics of the application.[24][25]
 
 **7. Outcome metrics**
 - *Tells you:* whether the business is better off, on a measure agreed before building.
