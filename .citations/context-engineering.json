@@ -264,6 +264,90 @@
           "added": "2026-11-24"
         }
       ]
+    },
+    {
+      "id": 19,
+      "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+      "title": "OpenAI, Prompt caching (API guide)",
+      "accessed": "2026-11-27",
+      "quotes": [
+        {
+          "text": "Prompt caching reuses work when requests share the same prompt prefix.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Cache reuse requires the entire rendered prefix to match.",
+          "added": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+      "title": "Anthropic, Prompt caching (Claude API documentation)",
+      "accessed": "2026-11-27",
+      "quotes": [
+        {
+          "text": "Place static content (tool definitions, system instructions, context, examples) at the beginning of your prompt.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Changes at each level invalidate that level and all subsequent levels.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Regularly analyze cache hit rates and adjust your strategy as needed.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Cache hits and refreshes on Claude Fable 5.2, Claude Mythos 5.2, Claude Fable 5.1, and Claude Mythos 5.1 are priced at 0.025x the base input price.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "All other models use the standard 0.1x multiplier.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Long multi-turn conversations",
+          "added": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340",
+      "title": "Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel",
+      "accessed": "2026-11-26",
+      "quotes": [
+        {
+          "text": "Much of kind of context is repeated across turns.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Now, the problem is prompt cache are a strict prefix match.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "you can think about basically, um system instructions, tools, things that are globally cached across all of your sessions.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Session state is kind of per session, and then messages kind of incremented each turn.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "For example, with Claude code, we track the prompt cache hit rate very very religiously. It's very important for the economics of the application, obviously.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "myself and some folks on our Claude AI team ran um ran this command on a bunch of internal benchmarks that had kind of default harnesses.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "We found opportunities to reduce costs by up to 72% with no meaningful change in performance, just by running this command, because some of the harnesses",
+          "added": "2026-11-27"
+        }
+      ]
     }
   ]
 }

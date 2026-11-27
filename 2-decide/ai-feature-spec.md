@@ -4,7 +4,7 @@ type: template
 created: 2026-11-14
 audience: Product owners and engineers proposing an AI feature
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-27
 as_of: "November 2026"
 ---
 
@@ -17,7 +17,7 @@ as_of: "November 2026"
 > - It covers a named owner, data, tests, human checks, safety rules in code, costs, rollout and reversing it.
 > - Keep it short, especially for a small feature, and list unknowns as open questions rather than guessing.
 
-*Reading time: about 5 minutes · Best for: product owners and engineers*
+*Reading time: about 10 minutes · Best for: product owners and engineers*
 
 Run the [AI intake checklist](ai-intake-checklist.md) first.
 A line or two per section suits a small feature, and unknowns go under Open questions (section 16).
@@ -69,7 +69,7 @@ A line or two per section suits a small feature, and unknowns go under Open ques
 
 ### 10. Security and data handling
 
-*What the AI can reach, with which credentials and for how long. What data leaves our environment and under which contract terms. Confirm that no session combines private data, untrusted input and a way to send data out.*
+*What the AI can reach, with which credentials and for how long. If it acts for a person, how that person's identity and consent are checked, and whether the records name both the AI and the person. What data leaves our environment and under which contract terms. Confirm that no session combines private data, untrusted input and a way to send data out.*
 
 ### 11. Observability (trace ID on the business record)
 
@@ -110,6 +110,9 @@ A written spec matters more when AI does the building or the deciding. Michael W
 9. **Guardrails:** Porter warns that a rule written in a prompt is not guaranteed to be enforced.[4] Cam Soper (Pulumi) concluded that a rule in an agent's instructions is no more than a suggestion.[8]
 10. **Security:** Yvonne Carlson (ExploreGod) calls for least privilege, time-bound credentials, default-deny boundaries and sandboxes (abstract only).[9] Simon Willison's *lethal trifecta* is private data, untrusted content and a way to send data out in one agent.[10]
     Advait Patel (Broadcom) argues that each agent is a new identity that needs its own short-lived, scoped tokens, that its limits belong at the tool layer rather than the prompt, and that a structured trace of every action should serve as audit evidence.[17]
+    Kim Maida (Keycard) shows why the person behind the agent matters too, in a vendor demo: an agent asked to file an expense on her behalf named her in the memo, but she hadn't signed in, so the system recorded the agent as the filer.[19]
+    In her fix, the person signs in and consents to delegate a subset of their permissions to the agent,[20] and each tool call gets a token scoped to that call.[21]
+    The OAuth 2.0 Token Exchange standard describes delegation as the actor keeping "its own identity separate from" the person it acts for ([delegation](../1-understand/ai-glossary.md)).[22]
 11. **Observability:** Shweta Iyer (Microsoft) showed an agent call succeeding while the business write rolled back; her API returns a trace ID with each business request ID, she persists the trace ID in her database as a durable correlation value, and she says to "make any completions explicit".[11]
 12. **Failure and undo:** Tanmay Sah: "A timeout tells us that the response didn't arrive, not that the operation failed."[12]
 13. **Cost:** SEP, a firm that builds software for clients, saw a client's prototype stall partly because the token budget covered only a couple of days' work.[4] Harvey lets automations carry a budget or expiry date "because when no one's watching, an agent can start thousands of tasks too."[13] Willison argues pay-per-use services should ship with hard budget caps switched on.[14]
@@ -148,3 +151,7 @@ A written spec matters more when AI does the building or the deciding. Michael W
 [16] https://ai.engineer/code/2026/talks/online-aws-specification-analyzer — Rajath Kotyal (AWS), Specs have bugs too, AI Engineer Code Summit 2026
 [17] https://www.infoq.com/presentations/zero-trust-ai-agents-production-security — Advait Patel (Broadcom), Zero Trust Agent Systems that Pass Audits and Still Ship, QCon AI Boston 2026
 [18] https://www.infoq.com/presentations/ai-cloud-cost-economics — Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026
+[19] https://www.youtube.com/watch?v=YqJ4asgj1R8&t=1602 — Kim Maida (Keycard) and Mason Egger (Temporal), Stop Giving Your AI Agents API Keys (workshop), AI Engineer YouTube channel
+[20] https://www.youtube.com/watch?v=YqJ4asgj1R8&t=136 — Kim Maida (Keycard) and Mason Egger (Temporal), Stop Giving Your AI Agents API Keys (workshop), AI Engineer YouTube channel
+[21] https://www.youtube.com/watch?v=YqJ4asgj1R8&t=1424 — Kim Maida (Keycard) and Mason Egger (Temporal), Stop Giving Your AI Agents API Keys (workshop), AI Engineer YouTube channel
+[22] https://www.rfc-editor.org/rfc/rfc8693 — IETF (M. Jones, A. Nadalin, B. Campbell, J. Bradley and C. Mortimore), RFC 8693: OAuth 2.0 Token Exchange

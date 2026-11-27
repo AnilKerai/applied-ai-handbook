@@ -2,6 +2,22 @@
 
 Newest first. Every correction lists what changed and the evidence.
 
+## 2026-11-27: embeddings, delegated identity and prompt caching
+
+- **Glossary:** three new terms.
+  - *Delegation (acting on someone's behalf)*, defined from the OAuth 2.0 Token Exchange standard (RFC 8693).
+  - *Embedding*, defined from OpenAI's embeddings guide.
+  - *Prompt caching*, defined from OpenAI's and Anthropic's documentation.
+- **Fine-tuning the retrieval model:** the Q&A's question on fine-tuning or RAG now adds Rachel Shalom's (Dell) account, with Dell's own figures and their limits. She fine-tuned an open embedding model when Dell's internal search kept failing on Dell's own products, acronyms and workflows. On 300 expert-checked questions, the right sources came back "at least" 12% more often and answer scores rose a little over 4%.
+- **An agent acting for a person:**
+  - Section 10 of the [AI feature spec](2-decide/ai-feature-spec.md) now asks how that person's identity and consent are checked, and whether the records name both the AI and the person. Its notes add Kim Maida's (Keycard) vendor demo of an agent claiming to act for her, and the token exchange standard's definition of delegation.
+  - [Before agents act in production](6-lead/before-agents-act-in-production.md) adds that a claim to act for someone is not proof, with my view that limits should follow the identity the system has checked.
+- **Prompt caching:**
+  - [Context engineering](3-engineer/context-engineering.md) gains a principle, *Keep the start of the window stable*, from OpenAI's and Anthropic's documentation and Lance Martin (Anthropic).
+  - The Q&A's question on cost adds Martin's figure of up to 72% in possible savings, as Anthropic's own claim.
+  - The [scorecard](5-run/ai-metrics-scorecard.md) adds the prompt-cache hit rate to cost per task.
+- **Checks:** `check.py` now also keeps AI Engineer event names out of body text.
+
 ## 2026-11-24: newer evidence from practitioners, learning with AI, and simulated users
 
 - **New evidence for existing advice** (no new claims), from practitioners' accounts with full transcripts:

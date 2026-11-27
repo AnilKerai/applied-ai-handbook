@@ -4,7 +4,7 @@ type: glossary
 created: 2026-11-14
 audience: anyone at work, technical or not
 status: checked
-last_checked: 2026-11-22
+last_checked: 2026-11-27
 as_of: "November 2026"
 ---
 
@@ -69,6 +69,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - An AI model that does not write text: it picks one answer from a fixed list, such as yes or no or one of several routes, and says how sure it is.[9] UiPath calls these quick calls *system one*; in its fraud demo they hand over to slower *system two* agents only when evidence is missing.[10]
 - *Why it matters:* we should use one, or plain code, wherever the possible answers can be listed in advance.
 
+**Delegation (acting on someone's behalf)**
+- Giving an AI agent part of a person's access so that it can act for them while keeping its own identity, so records show the agent acting for that person, not as them. In the OAuth 2.0 Token Exchange standard's terms, an actor with delegation "still has its own identity separate from" the person it represents, while one that impersonates them is treated as that person.[51]
+- *Why it matters:* without it, an agent's claim to act for someone is only text. In a vendor demo, Kim Maida (Keycard) asked an agent to file an expense on her behalf; its memo named her, but she hadn't signed in, so the system recorded the agent as the filer.[52] We should tie an agent's limits to the identity the system has checked, and log both the agent and the person it acts for.
+
 **Deterministic check**
 - A check made by ordinary software that gives the same answer every time, such as a test, a type check or a rule in the build, rather than an AI model's opinion. Lauren Tan advises turning each correction to an agent into a deterministic check rather than another line in its rules.[11]
 - *Why it matters:* an instruction can be ignored, but a failing check blocks the change. See [Working with coding agents](../4-build/working-with-coding-agents.md#7-turning-corrections-into-checks), section 7.
@@ -82,6 +86,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* AI jobs often fail part-way; as Cecil Phillip (Temporal) put it, "The last thing you want to do is to reissue that prompt and use those tokens again."[12]
 
 ## E
+
+**Embedding**
+- A list of numbers that stands for a piece of text, so software can find related text by comparing the numbers. OpenAI: "An embedding is a vector (list) of floating point numbers. The distance between two vectors measures their relatedness." It lists search, with results ranked by relevance to a query, among the common uses.[53]
+- *Why it matters:* retrieval (RAG) often finds documents this way, and a general embedding model can miss an organisation's own words.[54] Rachel Shalom (Dell) fine-tuned one because Dell's internal search kept failing on questions about Dell's own products, acronyms and workflows (see [AI questions answered](ai-questions-answered.md#q-should-we-fine-tune-a-model-use-retrieval-rag-or-neither)).[54]
 
 **Eval (eval set)**
 - A repeatable test of an AI feature: a set of real example cases with agreed right answers, scored every time anything changes. Kevin Solorio (Focused): "an agent without evals is a proof of concept".[8]
@@ -197,6 +205,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 - *Why it matters:* more agents cost more and are harder to keep in step; in Anthropic's data, multi-agent systems use about 15 times the tokens of a chat (its own figure).[40] We should start with one agent and add more only when a test shows the split does better. See [Multi-agent orchestration](../3-engineer/multi-agent-orchestration.md).
 
 ## P
+
+**Prompt caching**
+- A provider reusing the work it has already done on the start of a prompt when the next request begins with exactly the same text, so that part costs less and comes back faster. OpenAI describes it as reusing work "when requests share the same prompt prefix".[55] At Anthropic, cache hits cost between a fortieth and a tenth of the normal input price, depending on the model.[56]
+- *Why it matters:* agents resend much of the same context on every step, and a change near the start, such as a timestamp, stops the rest from being reused.[57][56] We should keep the parts that don't change first and track how often the cache is hit. See [Context engineering](../3-engineer/context-engineering.md#core-principles).
 
 **Prompt engineering**
 - Writing the text an AI model is given, such as its instructions, worked examples and the task itself, so that it does the job well. Anthropic describes the main focus of prompt engineering as "how to write effective prompts, particularly system prompts", the standing instructions behind every request.[7] The term was in academic use by 2021, but no source found shows who coined it.[41]
@@ -316,3 +328,10 @@ Each term comes with a practitioner or industry source that uses it. *Why it mat
 [48] https://jekyllrb.com/docs/front-matter — Jekyll, Front Matter (Jekyll documentation)
 [49] https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills — Anthropic, Equipping agents for the real world with Agent Skills
 [50] https://www.infoq.com/presentations/netflix-observability-aiops-ontology-scale — Prasanna Vijayanathan & Renzo Sanchez-Silva (Netflix), Ontology-Driven Observability: Building the E2E Knowledge Graph at Netflix Scale, QCon London 2026
+[51] https://www.rfc-editor.org/rfc/rfc8693 — IETF (M. Jones, A. Nadalin, B. Campbell, J. Bradley and C. Mortimore), RFC 8693: OAuth 2.0 Token Exchange
+[52] https://www.youtube.com/watch?v=YqJ4asgj1R8&t=1602 — Kim Maida (Keycard) and Mason Egger (Temporal), Stop Giving Your AI Agents API Keys (workshop), AI Engineer YouTube channel
+[53] https://developers.openai.com/api/docs/guides/embeddings — OpenAI, Vector embeddings (API guide)
+[54] https://www.infoq.com/presentations/fine-tune-enterprise-rag-embeddings — Rachel Shalom (Dell), Finetuning Your Embedding Model for Better Search: Learning from Agentic Search at Dell, QCon AI Boston 2026
+[55] https://developers.openai.com/api/docs/guides/prompt-caching — OpenAI, Prompt caching (API guide)
+[56] https://platform.claude.com/docs/en/build-with-claude/prompt-caching — Anthropic, Prompt caching (Claude API documentation)
+[57] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel

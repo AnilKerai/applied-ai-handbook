@@ -4,7 +4,7 @@ type: scorecard
 created: 2026-11-14
 audience: "Engineering leads and senior leadership"
 status: checked
-last_checked: 2026-11-15
+last_checked: 2026-11-27
 as_of: "November 2026"
 ---
 
@@ -113,9 +113,10 @@ This scorecard expands section 9 of [Agent-written pull requests and agent auton
 **6. Cost per task and latency**
 - *Tells you:* whether it is affordable and fast enough.
 - *Formula:* spend plus human review time ÷ completed tasks; median and p95 time per task.
-- *Watch out for:* cost reported apart from success rate.
+- *Watch out for:* cost reported apart from success rate; a falling prompt-cache hit rate, which raises cost when the work hasn't changed.
 - *Evidence:* Philipp Schmid (Google DeepMind) measures efficiency, not just scores: harnesses scoring about the same differed almost twofold in cost.[19]
   Erik Peterson (CloudZero) puts unit economics, what it costs to do the thing you do, ahead of cost per token as the primary measure.[22]
+  Anthropic advises analysing cache hit rates regularly, and Lance Martin (Anthropic) says the Claude Code team tracks its hit rate closely because it matters to the economics of the application.[24][25]
 
 **7. Outcome metrics**
 - *Tells you:* whether the business is better off, on a measure agreed before building.
@@ -162,7 +163,7 @@ B. Business
 - Worst-severity errors per 1,000 tasks: __
 - Escalation __% | override __% | time to dismiss a flag __
 - Weekly active users: __ of __
-- Cost per task £__ | latency p50/p95 __ / __ s
+- Cost per task £__ | latency p50/p95 __ / __ s | prompt-cache hit rate __%
 - Outcome vs baseline: <measure> __ -> __
 - Incidents: __ (worst severity __)
 
@@ -198,3 +199,5 @@ Related: [Running AI in production](ai-in-production-runbook.md) · [AI maturity
 [21] https://intelligentartifact.com/posts/practical-ai-midwest-summit-boundaries-and-accountability — Intelligent Artifact, review of Practical AI's Midwest AI Summit Part 2
 [22] https://www.infoq.com/presentations/ai-cloud-cost-economics — Erik Peterson (CloudZero), You Can't Trust Your AI Bill. And Neither Can I, QCon AI Boston 2026
 [23] https://www.infoq.com/presentations/ai-sdlc-maturity-framework-bottlenecks — Lizzie Matusov (Quotient), The Five Stages of AI Maturity in Engineering Organizations - Where and Why Teams Get Stuck, QCon AI Boston 2026
+[24] https://platform.claude.com/docs/en/build-with-claude/prompt-caching — Anthropic, Prompt caching (Claude API documentation)
+[25] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel

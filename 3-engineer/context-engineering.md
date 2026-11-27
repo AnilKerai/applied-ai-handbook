@@ -4,7 +4,7 @@ type: concept
 created: 2026-11-15
 audience: "Engineers building agents and AI features"
 status: checked
-last_checked: 2026-11-22
+last_checked: 2026-11-27
 as_of: "November 2026"
 ---
 
@@ -15,8 +15,9 @@ as_of: "November 2026"
 > - More is not better: models get worse as their input grows, so aim for the smallest set of useful information.
 > - The main moves are to save information outside the model's view, pull in only what is needed, shrink what is there, and split the work up.
 > - Summaries save space but can drop something that only matters later, so compress with care.
+> - Keep the start of each request the same from one call to the next, so the provider can reuse work it has already done.
 
-*Reading time: about 4 minutes · Best for: engineers building agents*
+*Reading time: about 5 minutes · Best for: engineers building agents*
 
 ## What it is
 
@@ -79,12 +80,19 @@ Its context editing, launched in public beta on 29 September 2025 and still in b
 **Isolate work, and hand back summaries.**
 In Anthropic's account, a subagent (a helper agent given one sub-task) may use "tens of thousands of tokens or more" exploring, but returns only "a condensed, distilled summary of its work (often 1,000-2,000 tokens)".[2]
 
+**Keep the start of the window stable.**
+Providers can reuse the work they have already done on the opening of a prompt when the next request starts with exactly the same text, which they call prompt caching.[19]
+OpenAI says "Cache reuse requires the entire rendered prefix to match", and Anthropic's documentation says a change to its tools, system instructions or messages invalidates that level of the cache and every level after it.[19][20]
+Anthropic advises placing "static content (tool definitions, system instructions, context, examples) at the beginning of your prompt" and analysing cache hit rates regularly.[20]
+Lance Martin (Anthropic) orders a prompt from the most stable part to the least: system instructions and tools, then project memory, then session state, then each turn's messages.[21]
+He says the Claude Code team tracks its prompt cache hit rate "very very religiously", because it matters to the economics of the application.[21]
+
 ## Where it shows up in this handbook
 
 - [Working with coding agents](../4-build/working-with-coding-agents.md), section 4: what to put in AGENTS.md files (standing instructions kept with a code project) and skills (instructions an agent loads when needed).
 - [AI pattern catalogue](../4-build/ai-pattern-catalogue.md), pattern 6: giving the model only the facts fetched at runtime.
 - [AI questions answered](../1-understand/ai-questions-answered.md): the questions on RAG, the Model Context Protocol (MCP) and AGENTS.md files.
-- [AI glossary](../1-understand/ai-glossary.md): compaction, tokens and RAG in plain words.
+- [AI glossary](../1-understand/ai-glossary.md): compaction, prompt caching, tokens and RAG in plain words.
 - [Multi-agent orchestration](multi-agent-orchestration.md): isolating work across several agents.
 
 ## See it built
@@ -114,3 +122,6 @@ Its [decision record on compaction](https://github.com/AnilKerai/model-harness/b
 [16] https://platform.claude.com/docs/en/build-with-claude/context-editing — Anthropic, Context editing (Claude API docs)
 [17] https://www.infoq.com/presentations/linkedin-context-engineering — Ajay Prakash (LinkedIn), Context Engineering at LinkedIn: How We Built an Organizational Context Layer for AI Agents with MCP, QCon AI Boston 2026
 [18] https://www.infoq.com/presentations/context-engineering-redis-llm-architecture — Ricardo Ferreira (Redis), Beyond Prompting: Context Engineering for Production-Grade AI, QCon AI Boston 2026
+[19] https://developers.openai.com/api/docs/guides/prompt-caching — OpenAI, Prompt caching (API guide)
+[20] https://platform.claude.com/docs/en/build-with-claude/prompt-caching — Anthropic, Prompt caching (Claude API documentation)
+[21] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel

@@ -880,6 +880,74 @@
           "added": "2026-11-24"
         }
       ]
+    },
+    {
+      "id": 84,
+      "url": "https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340",
+      "title": "Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel",
+      "accessed": "2026-11-26",
+      "quotes": [
+        {
+          "text": "Much of kind of context is repeated across turns.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Now, the problem is prompt cache are a strict prefix match.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "you can think about basically, um system instructions, tools, things that are globally cached across all of your sessions.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Session state is kind of per session, and then messages kind of incremented each turn.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "For example, with Claude code, we track the prompt cache hit rate very very religiously. It's very important for the economics of the application, obviously.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "myself and some folks on our Claude AI team ran um ran this command on a bunch of internal benchmarks that had kind of default harnesses.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "We found opportunities to reduce costs by up to 72% with no meaningful change in performance, just by running this command, because some of the harnesses",
+          "added": "2026-11-27"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "url": "https://www.infoq.com/presentations/fine-tune-enterprise-rag-embeddings",
+      "title": "Rachel Shalom (Dell), Finetuning Your Embedding Model for Better Search: Learning from Agentic Search at Dell, QCon AI Boston 2026",
+      "accessed": "2026-11-26",
+      "quotes": [
+        {
+          "text": "Most of the companies or at least in the enterprise, you use RAG, Retrieval-Augmented Generation to retrieve information from a vector database.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "the gaps were mainly about questions on internal products, on abbreviations and acronyms that are specific to Dell, and workflows and processes",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "They are both open, even though I must say that comparing to Google, Nomic Embed by Nomic, they released it all.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "We have gathered what we call a golden dataset of 300 SME-verified questions, answers, and sources.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "It seems like I did manage, at least in 12%, to get more resources right.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "Here we saw an increase of a little bit more than 4%. It seems like, I would call it a good improvement, yes? Not a great success, but a very good improvement.",
+          "added": "2026-11-27"
+        }
+      ]
     }
   ]
 }

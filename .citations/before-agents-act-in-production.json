@@ -212,6 +212,22 @@
           "added": "2026-11-21"
         }
       ]
+    },
+    {
+      "id": 20,
+      "url": "https://www.youtube.com/watch?v=YqJ4asgj1R8&t=1602",
+      "title": "Kim Maida (Keycard) and Mason Egger (Temporal), Stop Giving Your AI Agents API Keys (workshop), AI Engineer YouTube channel",
+      "accessed": "2026-11-26",
+      "quotes": [
+        {
+          "text": "The memo says it was it filed on behalf of Kim but the actual activity details indicate that this was filed by this specific agent.",
+          "added": "2026-11-27"
+        },
+        {
+          "text": "So the on behalf of Kim is just something I told it. It doesn't necessarily actually have any to verify that because I as a user have not signed in it created this expense under its own identity.",
+          "added": "2026-11-27"
+        }
+      ]
     }
   ]
 }

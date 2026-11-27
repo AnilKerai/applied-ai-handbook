@@ -4,7 +4,7 @@ type: faq
 created: 2026-11-14
 audience: colleagues, engineering leads, senior leadership
 status: checked
-last_checked: 2026-11-24
+last_checked: 2026-11-27
 as_of: "November 2026"
 ---
 
@@ -128,9 +128,10 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Erik Peterson (CloudZero) also argues for limits, having seen budget alerts go unheeded, and for tracking unit economics, what it costs to do the thing you do, rather than making cost per token the main measure.[79]
 - SEP, a firm that builds software for clients (Chris Shinkle and Andrew Dunlap), saw one client's prototype stall partly because the token budget, its allowance for AI use, covered only a couple of days' work.[1]
 - One newer study found that teams of AI agents scored higher but cost 3-7 times as much as a single agent.[18]
-- **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done.
+- **For software teams:** I'd also keep prompts cache-friendly, so the provider can reuse work it has already done ([Context engineering](../3-engineer/context-engineering.md#core-principles) explains how).
   Philipp Schmid's single-tool harness roughly matched richer ones on accuracy with fewer tokens.[16]
   A second-hand write-up of one inference provider's data says falling from 97% to 92% cached means about 2.7 times the prompt-processing work, and notes that some providers price cached input at a twentieth of normal.[51]
+  Lance Martin (Anthropic) says that when he and colleagues ran Anthropic's cache diagnostics on internal benchmarks with default harnesses, they found opportunities to cut costs by up to 72% with no meaningful change in performance, because some harnesses weren't using the cache properly (Anthropic's claim).[84]
   Newer evidence tempers the many-agent designs practitioners showed: Anthropic finds one agent loop often beats subagents on quality, cost and speed,[52] and Warp went from about $80 to $15-20 per pull request partly by using fewer subagents (Warp's claim).[9]
 
 **How sure I am:** Fairly sure. The advice points the same way, but most savings figures are vendors' own.
@@ -174,6 +175,9 @@ See also [Will AI replace our developers?](#q-will-ai-replace-our-developers) fo
 - Brian Douglas, on training a specialised reviewer model: "My recommendation is probably write a skill first."[22]
 - Anthropic reports that a maintained wiki plus search beat search alone, 61% against 53%, on 25 questions (Anthropic's claim).[24]
 - **For software teams:** Glean re-prompts its decision model, rather than retraining it, when labels change.[23]
+  Rachel Shalom (Dell) fine-tuned an open [embedding](ai-glossary.md) model, the part of a search system that matches a question to documents, because Dell's internal search kept failing on questions about Dell's own products, acronyms and workflows.[85]
+  On 300 questions checked by subject experts, the right sources came back more often, by "at least" 12% in her words, and answers scored a little over 4% higher with an LLM judge (Dell's own measurement; she doesn't say whether the 12% is a relative or absolute rise).[85]
+  She called it "Not a great success, but a very good improvement".[85] When search misses our own vocabulary, I'd test tuning the embedding model before fine-tuning the main model.
 
 **How sure I am:** Not very sure. No practitioner compared fine-tuning with retrieval directly.
 
@@ -413,3 +417,5 @@ These questions are for teams building AI features or working with coding agents
 [81] https://www.anthropic.com/research/AI-assistance-coding-skills — Anthropic, How AI assistance impacts the formation of coding skills (29 January 2026)
 [82] https://arxiv.org/html/2601.20245v3 — Judy Hanwen Shen & Alex Tamkin (Anthropic Safety Fellows Program), How AI Impacts Skill Formation (arXiv 2601.20245v3, 23 November 2026; first posted 28 January 2026; a preprint, not peer-reviewed)
 [83] https://www.infoq.com/presentations/ai-software-engineering-pipeline — Alasdair Allan (organisation not stated), The Ladder is Missing Rungs: Engineering Progression When AI Ate the Middle, QCon London 2026
+[84] https://www.youtube.com/watch?v=ys6YQ2yfBpM&t=340 — Lance Martin (Anthropic), Your Old Prompts Are Making Claude Worse, AI Engineer YouTube channel
+[85] https://www.infoq.com/presentations/fine-tune-enterprise-rag-embeddings — Rachel Shalom (Dell), Finetuning Your Embedding Model for Better Search: Learning from Agentic Search at Dell, QCon AI Boston 2026
